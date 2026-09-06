@@ -1,0 +1,429 @@
+<title>propOG Competitor Pipeline</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ink: #1b2540;
+    --ink-2: #4a5470;
+    --ink-3: #7d869e;
+    --paper: #f5f6f4;
+    --surface: #ffffff;
+    --line: #d8dce4;
+    --line-strong: #aeb5c4;
+    --claude: #4a56c4;
+    --claude-soft: #e9ebfa;
+    --verified: #2e7d5b;
+    --verified-soft: #e3f1ea;
+    --conflict: #b7791f;
+    --conflict-soft: #fbf0d9;
+    --drop: #a33d3d;
+    --drop-soft: #f9e5e5;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --display: "Bricolage Grotesque", "IBM Plex Sans", -apple-system, Helvetica, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e8eaf1; --ink-2: #b4bacb; --ink-3: #7f879c;
+      --paper: #12151d; --surface: #1a1e29; --line: #2c3242; --line-strong: #454c60;
+      --claude: #8f98e8; --claude-soft: #262b4a;
+      --verified: #63b88f; --verified-soft: #1c3329;
+      --conflict: #d9a24a; --conflict-soft: #3a2e17;
+      --drop: #e07777; --drop-soft: #3d2222;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e8eaf1; --ink-2: #b4bacb; --ink-3: #7f879c;
+    --paper: #12151d; --surface: #1a1e29; --line: #2c3242; --line-strong: #454c60;
+    --claude: #8f98e8; --claude-soft: #262b4a;
+    --verified: #63b88f; --verified-soft: #1c3329;
+    --conflict: #d9a24a; --conflict-soft: #3a2e17;
+    --drop: #e07777; --drop-soft: #3d2222;
+  }
+
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.55; margin: 0; }
+  main { max-width: 1180px; margin: 0 auto; padding: 48px 28px 80px; display: flex; flex-direction: column; gap: 56px; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: 40px; font-weight: 700; line-height: 1.1; }
+  h2 { font-size: 24px; font-weight: 700; }
+  h3 { font-size: 16px; font-weight: 700; }
+  p { margin: 0; max-width: 68ch; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+  .lede { font-size: 17px; color: var(--ink-2); max-width: 66ch; }
+  header { display: flex; flex-direction: column; gap: 14px; }
+  section { display: flex; flex-direction: column; gap: 18px; }
+  code, .mono { font-family: var(--mono); font-size: 0.92em; }
+
+  figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 18px 12px; overflow-x: auto; }
+  figure svg { display: block; min-width: 900px; width: 100%; height: auto; color: var(--ink); }
+  figcaption { font-size: 13px; color: var(--ink-2); margin-top: 10px; max-width: none; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .sw { width: 22px; height: 14px; border-radius: 3px; border: 1.5px solid var(--line-strong); background: var(--surface); }
+  .sw.claude { border-color: var(--claude); background: var(--claude-soft); }
+  .sw.dash { border-style: dashed; }
+
+  /* journey */
+  .journey { display: grid; grid-template-columns: repeat(6, minmax(170px, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); overflow-x: auto; }
+  .step { padding: 16px 16px 18px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 170px; }
+  .step:last-child { border-right: 0; }
+  .step .eyebrow { color: var(--ink-3); }
+  .step h3 { font-size: 15px; }
+  .step.claude h3 { color: var(--claude); }
+  .step ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+  .step li { display: flex; flex-direction: column; gap: 2px; }
+  .step li .k { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+  .step li .v { font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+  .pill.ver { background: var(--verified-soft); color: var(--verified); }
+  .pill.con { background: var(--conflict-soft); color: var(--conflict); }
+  .pill.cl { background: var(--claude-soft); color: var(--claude); }
+  .pill.drop { background: var(--drop-soft); color: var(--drop); }
+  .pill.src { background: var(--paper); color: var(--ink-2); border: 1px solid var(--line); text-transform: none; letter-spacing: 0; }
+
+  /* tables */
+  table { border-collapse: collapse; width: 100%; font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; background: var(--paper); }
+  tr:last-child td { border-bottom: 0; }
+  td .k { font-family: var(--mono); font-size: 13px; }
+  .tablewrap { overflow-x: auto; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .panel.claude { border-color: var(--claude); }
+  .panel ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+  .panel li { max-width: 60ch; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } h1 { font-size: 32px; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">propOG · competitor analysis agent · architecture</div>
+    <h1>From "who is building near Marina64?" to six verified fields per competitor</h1>
+    <p class="lede">One scan is a straight pipeline with a single loop. Plain code draws the circle, throws out what doesn't qualify, counts the facts and scores. Claude touches the data in exactly three places, and never decides a number.</p>
+  </header>
+
+  <section>
+    <h2>The pipeline</h2>
+    <figure>
+      <svg viewBox="0 0 1260 600" role="img" aria-label="Nine stages left to right: geocode, discover, resolve, extract, filter, score, narrate, persist. Four discovery sources feed discover from above; five page sources feed extract from below; a dashed retry loop returns from score to extract for thin projects. Resolve, extract and narrate are the stages where Claude works.">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+          <marker id="arr-claude" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--claude)"/>
+          </marker>
+        </defs>
+
+        <!-- ===== discovery sources (top) ===== -->
+        <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor">
+          <text x="40" y="34" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="var(--ink-3)">WHERE CANDIDATE NAMES COME FROM</text>
+          <g>
+            <rect x="40" y="48" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="115" y="67" text-anchor="middle" font-weight="600">MahaRERA register</text>
+            <text x="115" y="84" text-anchor="middle" font-size="11" fill="var(--ink-2)">district list, ~49k projects</text>
+          </g>
+          <g>
+            <rect x="205" y="48" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="280" y="67" text-anchor="middle" font-weight="600">Google Places</text>
+            <text x="280" y="84" text-anchor="middle" font-size="11" fill="var(--ink-2)">apartment_complex etc.</text>
+          </g>
+          <g>
+            <rect x="370" y="48" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="445" y="67" text-anchor="middle" font-weight="600">Tavily web search</text>
+            <text x="445" y="84" text-anchor="middle" font-size="11" fill="var(--ink-2)">"new launch Malad West"</text>
+          </g>
+          <g>
+            <rect x="535" y="48" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="610" y="67" text-anchor="middle" font-weight="600">propOG projects</text>
+            <text x="610" y="84" text-anchor="middle" font-size="11" fill="var(--ink-2)">builder-declared, in radius</text>
+          </g>
+          <!-- funnel lines into discover -->
+          <path d="M115,94 L115,120 L330,120 L330,196" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M280,94 L280,120" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M445,94 L445,120" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M610,94 L610,120 L330,120" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M330,120 L330,196" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <text x="340" y="160" font-size="11" fill="var(--ink-2)">name, builder, rera no?, lat/lng?</text>
+        </g>
+
+        <!-- ===== main stages ===== -->
+        <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor">
+          <!-- own project input -->
+          <g>
+            <rect x="40" y="216" width="120" height="64" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <text x="100" y="242" text-anchor="middle" font-weight="600">Own project</text>
+            <text x="100" y="260" text-anchor="middle" font-size="11" fill="var(--ink-2)">Marina64 JSON</text>
+          </g>
+          <line x1="160" y1="248" x2="184" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- geocode -->
+          <rect x="186" y="200" width="100" height="96" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="236" y="230" text-anchor="middle" font-weight="600">geocode</text>
+          <text x="236" y="250" text-anchor="middle" font-size="11" fill="var(--ink-2)">lat/lng of own</text>
+          <text x="236" y="265" text-anchor="middle" font-size="11" fill="var(--ink-2)">site, 1.5 km circle</text>
+          <line x1="286" y1="248" x2="298" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- discover -->
+          <rect x="300" y="200" width="100" height="96" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="350" y="230" text-anchor="middle" font-weight="600">discover</text>
+          <text x="350" y="250" text-anchor="middle" font-size="11" fill="var(--ink-2)">4 sources</text>
+          <text x="350" y="265" text-anchor="middle" font-size="11" fill="var(--ink-2)">in parallel</text>
+          <line x1="400" y1="248" x2="412" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <text x="406" y="238" text-anchor="middle" font-size="10.5" fill="var(--ink-2)">10</text>
+
+          <!-- resolve (claude-assisted) -->
+          <rect x="414" y="200" width="112" height="96" rx="4" fill="var(--claude-soft)" stroke="var(--claude)" stroke-width="1.5"/>
+          <text x="470" y="230" text-anchor="middle" font-weight="600">resolve</text>
+          <text x="470" y="250" text-anchor="middle" font-size="11" fill="var(--ink-2)">same RERA no,</text>
+          <text x="470" y="265" text-anchor="middle" font-size="11" fill="var(--ink-2)">same name, &lt;150 m</text>
+          <text x="470" y="284" text-anchor="middle" font-size="10.5" fill="var(--claude)">Claude: unclear pairs only</text>
+          <line x1="526" y1="248" x2="552" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <text x="539" y="238" text-anchor="middle" font-size="10.5" fill="var(--ink-2)">9</text>
+
+          <!-- extract: stacked to show fan-out -->
+          <rect x="566" y="190" width="132" height="96" rx="4" fill="var(--claude-soft)" stroke="var(--claude)" stroke-width="1" opacity="0.55"/>
+          <rect x="560" y="195" width="132" height="96" rx="4" fill="var(--claude-soft)" stroke="var(--claude)" stroke-width="1" opacity="0.75"/>
+          <rect x="554" y="200" width="132" height="96" rx="4" fill="var(--claude-soft)" stroke="var(--claude)" stroke-width="1.5"/>
+          <text x="620" y="226" text-anchor="middle" font-weight="600">extract</text>
+          <text x="620" y="244" text-anchor="middle" font-size="11" fill="var(--ink-2)">one run per project,</text>
+          <text x="620" y="259" text-anchor="middle" font-size="11" fill="var(--ink-2)">all at once</text>
+          <text x="620" y="284" text-anchor="middle" font-size="10.5" fill="var(--claude)">Claude: page → fixed form</text>
+          <line x1="698" y1="248" x2="726" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- filter -->
+          <rect x="728" y="200" width="100" height="96" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="778" y="226" text-anchor="middle" font-weight="600">filter</text>
+          <text x="778" y="244" text-anchor="middle" font-size="11" fill="var(--ink-2)">in radius · new only</text>
+          <text x="778" y="259" text-anchor="middle" font-size="11" fill="var(--ink-2)">possession &gt; today</text>
+          <text x="778" y="274" text-anchor="middle" font-size="11" fill="var(--ink-2)">BHK overlap</text>
+          <line x1="828" y1="248" x2="840" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <text x="834" y="238" text-anchor="middle" font-size="10.5" fill="var(--ink-2)">6</text>
+
+          <!-- score -->
+          <rect x="842" y="200" width="112" height="96" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="898" y="226" text-anchor="middle" font-weight="600">score</text>
+          <text x="898" y="244" text-anchor="middle" font-size="11" fill="var(--ink-2)">fields found x/6</text>
+          <text x="898" y="259" text-anchor="middle" font-size="11" fill="var(--ink-2)">sources disagree?</text>
+          <text x="898" y="274" text-anchor="middle" font-size="11" fill="var(--ink-2)">match 0–100 if 6/6</text>
+          <line x1="954" y1="248" x2="982" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- narrate -->
+          <rect x="984" y="200" width="112" height="96" rx="4" fill="var(--claude-soft)" stroke="var(--claude)" stroke-width="1.5"/>
+          <text x="1040" y="230" text-anchor="middle" font-weight="600">narrate</text>
+          <text x="1040" y="250" text-anchor="middle" font-size="11" fill="var(--ink-2)">one sentence per card</text>
+          <text x="1040" y="265" text-anchor="middle" font-size="11" fill="var(--ink-2)">from numbers only</text>
+          <text x="1040" y="284" text-anchor="middle" font-size="10.5" fill="var(--claude)">Claude, template fallback</text>
+          <line x1="1096" y1="248" x2="1122" y2="248" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- persist -->
+          <rect x="1124" y="216" width="100" height="64" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="1174" y="242" text-anchor="middle" font-weight="600">persist</text>
+          <text x="1174" y="260" text-anchor="middle" font-size="11" fill="var(--ink-2)">SQLite → API</text>
+
+          <!-- retry loop -->
+          <path d="M898,200 L898,168 L640,168 L640,190" fill="none" stroke="var(--claude)" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arr-claude)"/>
+          <text x="769" y="160" text-anchor="middle" font-size="11" fill="var(--claude)">THIN (≤3/6)? one more search pass, then stop</text>
+        </g>
+
+        <!-- ===== page sources (bottom) ===== -->
+        <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor">
+          <text x="380" y="372" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="var(--ink-3)">WHERE THE FIELDS COME FROM · every value keeps its source, URL and date</text>
+
+          <path d="M620,296 L620,340" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M380,340 L860,340" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M455,340 L455,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <path d="M537,340 L537,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <path d="M620,340 L620,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <path d="M703,340 L703,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <path d="M785,340 L785,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <text x="632" y="322" font-size="10.5" fill="var(--ink-2)">fetch pages (live → cache, replay ← cache)</text>
+
+          <g>
+            <rect x="380" y="392" width="150" height="70" rx="4" fill="var(--verified-soft)" stroke="var(--verified)" stroke-width="1.2"/>
+            <text x="455" y="412" text-anchor="middle" font-weight="600">MahaRERA page</text>
+            <text x="455" y="428" text-anchor="middle" font-size="11" fill="var(--ink-2)">possession · carpet</text>
+            <text x="455" y="443" text-anchor="middle" font-size="11" fill="var(--ink-2)">towers · phase nos</text>
+            <text x="455" y="457" text-anchor="middle" font-size="10" fill="var(--verified)">the register = verified</text>
+          </g>
+          <g>
+            <rect x="545" y="392" width="150" height="70" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="620" y="412" text-anchor="middle" font-weight="600">Builder site</text>
+            <text x="620" y="428" text-anchor="middle" font-size="11" fill="var(--ink-2)">rate + basis</text>
+            <text x="620" y="443" text-anchor="middle" font-size="11" fill="var(--ink-2)">amenities · launch</text>
+          </g>
+          <g>
+            <rect x="710" y="392" width="150" height="70" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="785" y="412" text-anchor="middle" font-weight="600">Portals</text>
+            <text x="785" y="428" text-anchor="middle" font-size="11" fill="var(--ink-2)">SquareYards · Housing</text>
+            <text x="785" y="443" text-anchor="middle" font-size="11" fill="var(--ink-2)">99acres/MB via Tavily</text>
+          </g>
+          <g>
+            <rect x="875" y="392" width="150" height="70" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="950" y="412" text-anchor="middle" font-weight="600">Places</text>
+            <text x="950" y="428" text-anchor="middle" font-size="11" fill="var(--ink-2)">coordinates · pin</text>
+            <text x="950" y="443" text-anchor="middle" font-size="11" fill="var(--ink-2)">accuracy · nearest metro</text>
+          </g>
+          <g>
+            <rect x="215" y="392" width="150" height="70" rx="4" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1.2"/>
+            <text x="290" y="412" text-anchor="middle" font-weight="600">propOG record</text>
+            <text x="290" y="428" text-anchor="middle" font-size="11" fill="var(--ink-2)">everything, builder-</text>
+            <text x="290" y="443" text-anchor="middle" font-size="11" fill="var(--ink-2)">declared · "ON propOG"</text>
+          </g>
+          <path d="M380,340 L290,340 L290,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+          <path d="M860,340 L950,340 L950,388" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- the fixed form -->
+          <rect x="380" y="492" width="645" height="84" rx="4" fill="var(--surface)" stroke="var(--line-strong)" stroke-width="1.2"/>
+          <text x="396" y="514" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="var(--ink-3)">THE FIXED FORM · 6 fields decide COMPARABLE / PARTIAL / THIN</text>
+          <g font-family="IBM Plex Mono, monospace" font-size="12">
+            <text x="396" y="540">configurations</text>
+            <text x="396" y="560">carpet_sqft</text>
+            <text x="560" y="540">rate_psf + basis</text>
+            <text x="560" y="560">possession</text>
+            <text x="724" y="540">structure</text>
+            <text x="724" y="560">rera_phases</text>
+          </g>
+          <text x="870" y="540" font-size="11" fill="var(--ink-2)">+ amenities, timeline,</text>
+          <text x="870" y="556" font-size="11" fill="var(--ink-2)">location (not counted)</text>
+          <path d="M620,462 L620,490" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+        </g>
+      </svg>
+      <figcaption>One scan of Marina64 in the fixture set: 10 candidate names from 4 discovery sources become 9 projects after duplicates merge, 6 survive the filter, 3 reach 6/6 and get a match score. Numbers on the arrows are from that run.</figcaption>
+    </figure>
+    <div class="legend">
+      <span><i class="sw"></i> plain code, same answer every time</span>
+      <span><i class="sw claude"></i> Claude does the work here</span>
+      <span><i class="sw dash"></i> input the builder uploaded</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>One competitor, stage by stage</h2>
+    <p class="lede">Runwal Vertex as it moved through the fixture scan. Every value on the right carries the source it came from.</p>
+    <div class="journey">
+      <div class="step">
+        <div class="eyebrow">discover</div>
+        <h3>Two names appear</h3>
+        <ul>
+          <li><span class="k">from MahaRERA</span><span class="v">Runwal Vertex · P51800048221 · lat/lng</span></li>
+          <li><span class="k">from Tavily</span><span class="v">"Vertex by Runwal" · no RERA, no pin</span></li>
+        </ul>
+      </div>
+      <div class="step claude">
+        <div class="eyebrow">resolve</div>
+        <h3>They become one</h3>
+        <ul>
+          <li><span class="k">rule</span><span class="v">strip builder tokens → both read "vertex"</span></li>
+          <li><span class="k">id</span><span class="v mono">P51800048221</span></li>
+          <li><span class="k">distance</span><span class="v">0.40 km, inside 1.5 km</span></li>
+          <li><span class="pill cl">no LLM call needed</span></li>
+        </ul>
+      </div>
+      <div class="step claude">
+        <div class="eyebrow">extract</div>
+        <h3>Three pages, one form each</h3>
+        <ul>
+          <li><span class="k">maharera</span><span class="v">2 &amp; 3 BHK · 690–1,105 sq ft · Mar 2029 · 4 towers · 32–38 floors · P51800048221</span></li>
+          <li><span class="k">builder_site</span><span class="v">₹35,400 base · 19 amenities · 12 d old</span></li>
+          <li><span class="k">squareyards</span><span class="v">₹35,000–36,000 base · Mar 2029</span></li>
+        </ul>
+      </div>
+      <div class="step">
+        <div class="eyebrow">filter</div>
+        <h3>Passes every rule</h3>
+        <ul>
+          <li><span class="k">radius</span><span class="v">0.40 ≤ 1.5 km</span></li>
+          <li><span class="k">status</span><span class="v">under construction</span></li>
+          <li><span class="k">possession</span><span class="v">2029-03-31 &gt; today</span></li>
+          <li><span class="k">bhk overlap</span><span class="v">{2,3} ∩ {1,2,3,4}</span></li>
+        </ul>
+      </div>
+      <div class="step">
+        <div class="eyebrow">score</div>
+        <h3>6 of 6, no conflicts</h3>
+        <ul>
+          <li><span class="pill ver">COMPARABLE</span></li>
+          <li><span class="k">rate spread</span><span class="v">36,000 / 35,000 = 1.03, under 1.15</span></li>
+          <li><span class="k">match</span><span class="v">65 = config .5 · carpet .35 · rate .93 · possession .63 · distance .73 · structure 1</span></li>
+        </ul>
+      </div>
+      <div class="step claude">
+        <div class="eyebrow">narrate</div>
+        <h3>One sentence</h3>
+        <ul>
+          <li><span class="v">"Earliest handover in the set; priced 7% below Marina64 on base rate."</span></li>
+          <li><span class="k">input</span><span class="v">the numbers above, never the pages</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legend">
+      <span>Rustomjee Crest takes the same path and ends at <span class="pill con">PARTIAL 4/6</span> with <span class="pill con">3 sources disagree by 33%</span> on rate, so it is listed but not scored.</span>
+      <span>Evershine Cosmic leaves at filter: <span class="pill drop">status is ready</span>.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>What each field is and who usually fills it</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Field</th><th>Counts toward 6/6</th><th>Best source</th><th>What "not on file" means</th></tr></thead>
+        <tbody>
+          <tr><td><span class="k">configurations</span></td><td>yes</td><td>MahaRERA, builder site</td><td>No page listed BHK types. Card shows "Configurations not disclosed".</td></tr>
+          <tr><td><span class="k">carpet_sqft</span></td><td>yes</td><td>MahaRERA (only carpet, never built-up)</td><td>Only built-up area was published, or nothing. Never converted.</td></tr>
+          <tr><td><span class="k">rate_psf</span> + basis</td><td>yes</td><td>Builder site, then portals</td><td>No per-sq-ft rate found. A flat's total price is not turned into a rate.</td></tr>
+          <tr><td><span class="k">possession</span></td><td>yes</td><td>MahaRERA proposed date</td><td>Project cannot be placed on the timeline; it is still listed if status qualifies.</td></tr>
+          <tr><td><span class="k">structure</span></td><td>yes</td><td>MahaRERA (towers, floors, land)</td><td>Single / multi-tower / complex unknown.</td></tr>
+          <tr><td><span class="k">rera_phases</span></td><td>yes</td><td>MahaRERA; a number seen on the register is marked verified</td><td>No registration number anywhere. A rep can add one from a site visit.</td></tr>
+          <tr><td><span class="k">amenities</span></td><td>no</td><td>Builder site</td><td>Amenity matrix shows a blank column, with the source's age noted.</td></tr>
+          <tr><td><span class="k">timeline</span></td><td>no</td><td>MahaRERA (launch, extensions, stage)</td><td>Progress bar is not drawn.</td></tr>
+          <tr><td><span class="k">location</span></td><td>no</td><td>Places (pin accuracy, nearest metro)</td><td>Without coordinates the project is dropped at filter, since distance cannot be checked.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Who decides what</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Plain code, every time</h3>
+        <ul>
+          <li>Distance from the own site (haversine) and the radius cut.</li>
+          <li>Eligibility: new launch or under construction only, possession after today, at least one BHK in common.</li>
+          <li>Merging by RERA number, normalised name, or two pins under 150 m apart.</li>
+          <li>The 6/6 count and the COMPARABLE / PARTIAL / THIN label.</li>
+          <li>Conflicts: rate spread over 15%, mixed basis, possession dates more than 3 months apart.</li>
+          <li>Match score weights: configuration 25, carpet 20, rate 20, possession 15, distance 10, structure 10.</li>
+          <li>Which value to display when sources agree: manual → MahaRERA → propOG → builder site → portals → web.</li>
+        </ul>
+      </div>
+      <div class="panel claude">
+        <h3>Claude, with a fixed schema</h3>
+        <ul>
+          <li><strong>Extract.</strong> Reads one page, returns the form with nulls for anything not stated. Told to keep carpet separate from built-up and to record the rate's basis.</li>
+          <li><strong>Same building?</strong> Only for pairs the rules could not settle, such as one shared distinctive word and no pins.</li>
+          <li><strong>Narrate.</strong> Receives the computed numbers, returns one sentence per card and per comparison section. Falls back to a template sentence if the call fails or no key is set.</li>
+        </ul>
+        <p style="font-size:13px;color:var(--ink-2)">Model <code>claude-opus-5</code> through langchain-anthropic with JSON-schema structured output, so every answer is a validated Pydantic object.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Three ways to run the same pipeline</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Mode</th><th>Network</th><th>Claude</th><th>Use it for</th></tr></thead>
+        <tbody>
+          <tr><td><span class="k">fixture</span></td><td>none</td><td>not needed</td><td>The Malad West demo set. Discovery and pages come from JSON; every stage after that runs for real.</td></tr>
+          <tr><td><span class="k">replay</span></td><td>none</td><td>needed</td><td>Every HTTP call answered from <span class="k">data/cache</span>. A missing page is a loud per-source error, never a silent blank.</td></tr>
+          <tr><td><span class="k">live</span></td><td>MahaRERA, Places, Tavily, portals</td><td>needed</td><td>Real scan; writes the cache so the next demo can replay it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

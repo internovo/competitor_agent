@@ -1,0 +1,652 @@
+{
+  "candidates": [
+    {
+      "name": "Runwal Vertex",
+      "builder": "Runwal Group",
+      "rera_no": "P51800048221",
+      "lat": 19.189597,
+      "lng": 72.84,
+      "source": "maharera",
+      "locality": "Malad West",
+      "address": "Marve Road, Malad West",
+      "nearest_metro": "Kurar \u00b7 1.2 km",
+      "source_url": "https://maharera.maharashtra.gov.in/project-summary-report-detail?registration_no=P51800048221"
+    },
+    {
+      "name": "Vertex by Runwal",
+      "builder": null,
+      "rera_no": null,
+      "lat": null,
+      "lng": null,
+      "source": "tavily",
+      "locality": "Malad West",
+      "source_url": "https://www.squareyards.com/mumbai-residential-property/runwal-vertex-malad-west-npd-1"
+    },
+    {
+      "name": "Rustomjee Crest",
+      "builder": "Rustomjee",
+      "rera_no": null,
+      "lat": 19.186,
+      "lng": 72.848568,
+      "source": "places",
+      "locality": "Malad West",
+      "address": "Link Road, Malad West",
+      "nearest_metro": "Malad \u00b7 0.8 km"
+    },
+    {
+      "name": "Ajmera Skyline West",
+      "builder": "Ajmera Realty",
+      "rera_no": null,
+      "lat": 19.176108,
+      "lng": 72.84,
+      "source": "places",
+      "locality": "Malad West",
+      "address": "Chincholi Bunder, Malad West"
+    },
+    {
+      "name": "Sheth Nova",
+      "builder": "Sheth Creators",
+      "rera_no": null,
+      "lat": 19.186,
+      "lng": 72.827624,
+      "source": "places",
+      "locality": "Malad West",
+      "address": "Orlem, Malad West"
+    },
+    {
+      "name": "Chandak Highscape",
+      "builder": "Chandak Group",
+      "rera_no": "P51800049880",
+      "lat": 19.19859,
+      "lng": 72.84,
+      "source": "maharera",
+      "locality": "Malad West",
+      "address": "Kanchpada, Malad West",
+      "source_url": "https://maharera.maharashtra.gov.in/project-summary-report-detail?registration_no=P51800049880"
+    },
+    {
+      "name": "Oberoi Sky City",
+      "builder": "Oberoi Realty",
+      "rera_no": "P51800012000",
+      "lat": 19.214778,
+      "lng": 72.84,
+      "source": "maharera",
+      "locality": "Malad West",
+      "address": "Borivali East"
+    },
+    {
+      "name": "Evershine Cosmic",
+      "builder": "Evershine Builders",
+      "rera_no": null,
+      "lat": 19.186,
+      "lng": 72.845712,
+      "source": "places",
+      "locality": "Malad West",
+      "address": "Malad West"
+    },
+    {
+      "name": "Lodha Marquee",
+      "builder": "Lodha",
+      "rera_no": "P51800031111",
+      "lat": 19.178806,
+      "lng": 72.84,
+      "source": "maharera",
+      "locality": "Malad West",
+      "address": "Malad West"
+    }
+  ],
+  "facts": {
+    "P51800048221": [
+      {
+        "source": "maharera",
+        "url": "https://maharera.maharashtra.gov.in/project-summary-report-detail?registration_no=P51800048221",
+        "fetched_at": "2026-08-30T06:00:00+00:00",
+        "facts": {
+          "name": "Runwal Vertex",
+          "builder": "Runwal Group",
+          "status": "under_construction",
+          "configurations": [
+            2,
+            3
+          ],
+          "carpet_min_sqft": 690,
+          "carpet_max_sqft": 1105,
+          "possession": "2029-03-31",
+          "building_type": "multi_tower",
+          "towers": 4,
+          "floors_min": 32,
+          "floors_max": 38,
+          "land_acres": 2.1,
+          "rera_numbers": [
+            "P51800048221"
+          ],
+          "launched": "2024-08-01",
+          "extensions_filed": 0
+        }
+      },
+      {
+        "source": "builder_site",
+        "url": "https://www.runwal.com/vertex",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Runwal Vertex",
+          "rate_min_psf": 35400,
+          "rate_max_psf": 35400,
+          "rate_basis": "base",
+          "configurations": [
+            2,
+            3
+          ],
+          "amenities": [
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Jogging Track",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Cricket Net",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Yoga Deck",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Clubhouse",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Sky Deck",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Multipurpose Hall",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Kids Play Area",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Senior Citizen Corner",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "EV Charging Bay",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "CCTV Surveillance",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Power Backup",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Rain Water Harvesting",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Visitor Parking",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "24x7 Security",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Intercom",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "High Speed Lifts",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Fire Fighting System",
+              "category": "convenience_safety",
+              "scope": "project"
+            }
+          ]
+        }
+      },
+      {
+        "source": "squareyards",
+        "url": "https://www.squareyards.com/mumbai-residential-property/runwal-vertex-malad-west-npd-1",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Runwal Vertex",
+          "configurations": [
+            2,
+            3
+          ],
+          "rate_min_psf": 35000,
+          "rate_max_psf": 36000,
+          "rate_basis": "base",
+          "possession": "2029-03"
+        }
+      }
+    ],
+    "Rustomjee Crest": [
+      {
+        "source": "squareyards",
+        "url": "https://www.squareyards.com/mumbai-residential-property/rustomjee-crest-npd-2",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Rustomjee Crest",
+          "builder": "Rustomjee",
+          "status": "under_construction",
+          "configurations": [
+            2,
+            3
+          ],
+          "rate_min_psf": 29100,
+          "rate_max_psf": 29100,
+          "rate_basis": "undisclosed",
+          "possession": "2029-06",
+          "towers": 2,
+          "building_type": "multi_tower"
+        }
+      },
+      {
+        "source": "housing",
+        "url": "https://housing.com/in/buy/projects/page/rustomjee-crest",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Rustomjee Crest",
+          "configurations": [
+            2,
+            3
+          ],
+          "rate_min_psf": 33500,
+          "rate_max_psf": 33500,
+          "rate_basis": "undisclosed",
+          "possession": "2029-06"
+        }
+      },
+      {
+        "source": "tavily",
+        "url": "https://www.99acres.com/rustomjee-crest-malad-west",
+        "fetched_at": "2026-05-02T09:00:00+00:00",
+        "facts": {
+          "name": "Rustomjee Crest",
+          "rate_min_psf": 38700,
+          "rate_max_psf": 38700,
+          "rate_basis": "undisclosed",
+          "amenities": [
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Clubhouse",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Kids Play Area",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Landscaped Garden",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Yoga Deck",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Indoor Games",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Multipurpose Hall",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "CCTV Surveillance",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Power Backup",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Visitor Parking",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "24x7 Security",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Intercom",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "High Speed Lifts",
+              "category": "convenience_safety",
+              "scope": "project"
+            }
+          ]
+        }
+      }
+    ],
+    "Ajmera Skyline West": [
+      {
+        "source": "builder_site",
+        "url": "https://www.ajmera.com/skyline-west",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Ajmera Skyline West",
+          "builder": "Ajmera Realty",
+          "status": "new_launch",
+          "configurations": [
+            1,
+            2,
+            3
+          ],
+          "carpet_min_sqft": 452,
+          "carpet_max_sqft": 940,
+          "possession": "2031-12",
+          "building_type": "single",
+          "towers": 1,
+          "floors_min": 40,
+          "floors_max": 40,
+          "launched": "2026-06-01",
+          "amenities": [
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Clubhouse",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Kids Play Area",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Sky Deck",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "EV Charging Bay",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "CCTV Surveillance",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Power Backup",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Rain Water Harvesting",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "24x7 Security",
+              "category": "convenience_safety",
+              "scope": "project"
+            }
+          ]
+        }
+      }
+    ],
+    "Sheth Nova": [
+      {
+        "source": "housing",
+        "url": "https://housing.com/in/buy/projects/page/sheth-nova",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Sheth Nova",
+          "builder": "Sheth Creators",
+          "status": "under_construction",
+          "possession": "2030-03",
+          "towers": 2,
+          "building_type": "multi_tower"
+        }
+      }
+    ],
+    "P51800049880": [
+      {
+        "source": "maharera",
+        "url": "https://maharera.maharashtra.gov.in/project-summary-report-detail?registration_no=P51800049880",
+        "fetched_at": "2026-08-30T06:00:00+00:00",
+        "facts": {
+          "name": "Chandak Highscape",
+          "builder": "Chandak Group",
+          "status": "under_construction",
+          "configurations": [
+            1,
+            2,
+            3
+          ],
+          "carpet_min_sqft": 430,
+          "carpet_max_sqft": 1010,
+          "possession": "2029-09-30",
+          "building_type": "multi_tower",
+          "towers": 2,
+          "floors_min": 24,
+          "floors_max": 28,
+          "land_acres": 1.2,
+          "rera_numbers": [
+            "P51800049880"
+          ],
+          "launched": "2025-01-01",
+          "extensions_filed": 1
+        }
+      },
+      {
+        "source": "squareyards",
+        "url": "https://www.squareyards.com/mumbai-residential-property/chandak-highscape-npd-3",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Chandak Highscape",
+          "rate_min_psf": 33800,
+          "rate_max_psf": 34600,
+          "rate_basis": "base",
+          "amenities": [
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Jogging Track",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Clubhouse",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Kids Play Area",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Landscaped Garden",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Multipurpose Hall",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "CCTV Surveillance",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Power Backup",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Rain Water Harvesting",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Visitor Parking",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "24x7 Security",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "High Speed Lifts",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Fire Fighting System",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Sewage Treatment Plant",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Intercom",
+              "category": "convenience_safety",
+              "scope": "project"
+            }
+          ]
+        }
+      }
+    ],
+    "P51800012000": [
+      {
+        "source": "maharera",
+        "url": "https://example.test/maharera",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Oberoi Sky City",
+          "status": "under_construction",
+          "configurations": [
+            3,
+            4
+          ],
+          "possession": "2029-12"
+        }
+      }
+    ],
+    "Evershine Cosmic": [
+      {
+        "source": "squareyards",
+        "url": "https://example.test/squareyards",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Evershine Cosmic",
+          "status": "ready",
+          "configurations": [
+            1,
+            2
+          ],
+          "carpet_min_sqft": 380,
+          "carpet_max_sqft": 620,
+          "possession": "2024-06",
+          "towers": 1,
+          "building_type": "single"
+        }
+      }
+    ],
+    "P51800031111": [
+      {
+        "source": "maharera",
+        "url": "https://example.test/maharera",
+        "fetched_at": "2026-08-22T09:00:00+00:00",
+        "facts": {
+          "name": "Lodha Marquee",
+          "status": "under_construction",
+          "configurations": [
+            2,
+            3
+          ],
+          "carpet_min_sqft": 600,
+          "carpet_max_sqft": 950,
+          "possession": "2025-06-30",
+          "towers": 3,
+          "building_type": "multi_tower",
+          "rera_numbers": [
+            "P51800031111"
+          ]
+        }
+      }
+    ]
+  }
+}

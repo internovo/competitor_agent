@@ -1,0 +1,6 @@
+{
+  "url": "https://nominatim.openstreetmap.org/search?q=Walkeshwar+Road%2C+Malabar+Hill%2C+Mumbai+400006&format=jsonv2&limit=1&countrycodes=in",
+  "status": 200,
+  "fetched_at": "2026-09-06T09:03:47.171362+00:00",
+  "fetcher": "httpx"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "lodha-malabar",
+  "name": "Lodha Malabar",
+  "builder": "Lodha",
+  "address": "Lodha Malabar, Krishanaraj Society, Sea Face, Walkeshwar, Malabar Hill, Mumbai, Maharashtra, India",
+  "locality": "Malabar Hill",
+  "lat": 18.9525838,
+  "lng": 72.804077,
+  "configurations": [
+    4,
+    5
+  ],
+  "carpet_sqft": {
+    "min_sqft": 3826,
+    "max_sqft": 4036
+  },
+  "rate_psf": {
+    "min_psf": 170000,
+    "max_psf": 170000,
+    "basis": "undisclosed"
+  },
+  "possession": "2028-08-01",
+  "structure": {
+    "building_type": "single",
+    "towers": 1,
+    "floors_min": 33,
+    "floors_max": 36,
+    "land_acres": null,
+    "total_units": null
+  },
+  "rera_phases": [
+    {
+      "number": "P51900034949",
+      "verified": false,
+      "label": "Phase 1"
+    },
+    {
+      "number": "P51900055626",
+      "verified": false,
+      "label": "Phase 2"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Fire Safety System",
+      "category": "other",
+      "scope": "project"
+    },
+    {
+      "name": "Security",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Clubhouse",
+      "category": "social_leisure",
+      "scope": "project"
+    },
+    {
+      "name": "Security Guards 24 7",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Water Supply 24X7",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Cctv Surveillance",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Dg Backup",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Lounge Area",
+      "category": "social_leisure",
+      "scope": "project"
+    },
+    {
+      "name": "Deck",
+      "category": "social_leisure",
+      "scope": "project"
+    },
+    {
+      "name": "Cab Pickup And Dropoff Point",
+      "category": "convenience_safety",
+      "scope": "project"
+    },
+    {
+      "name": "Balcony",
+      "category": "social_leisure",
+      "scope": "project"
+    },
+    {
+      "name": "Designer Bathroom Tiles",
+      "category": "other",
+      "scope": "project"
+    },
+    {
+      "name": "Glass Partitions In Bathrooms",
+      "category": "other",
+      "scope": "project"
+    }
+  ]
+}

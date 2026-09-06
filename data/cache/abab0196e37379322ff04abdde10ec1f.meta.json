@@ -1,0 +1,6 @@
+{
+  "url": "https://nominatim.openstreetmap.org/search?q=Lodha+Malabar+Walkeshwar+Mumbai&format=jsonv2&limit=1&countrycodes=in",
+  "status": 200,
+  "fetched_at": "2026-09-06T09:03:36.770155+00:00",
+  "fetcher": "httpx"
+}

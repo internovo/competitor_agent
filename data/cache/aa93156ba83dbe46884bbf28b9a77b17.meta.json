@@ -1,0 +1,6 @@
+{
+  "url": "https://nominatim.openstreetmap.org/search?q=B.+G.+Kher+Marg%2C+Ridge+Road%2C+Malabar+Hill%2C+Mumbai&format=jsonv2&limit=1&countrycodes=in",
+  "status": 200,
+  "fetched_at": "2026-09-06T09:03:48.586068+00:00",
+  "fetcher": "httpx"
+}

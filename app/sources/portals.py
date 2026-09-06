@@ -1,0 +1,85 @@
+"""Direct portal fetchers. SquareYards is plain HTML; Housing.com needs Chrome TLS impersonation.
+Both are 'find the project page via a site search, then hand the page text to Claude'."""
+from __future__ import annotations
+
+import re
+from urllib.parse import quote_plus
+
+from app.config import settings
+from app.models.schema import Page, Project
+from app.sources.base import NullSource, ScanContext
+from app.sources.fetch import html_to_text
+
+
+def _slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+class SquareYardsSource(NullSource):
+    name = "squareyards"
+
+    async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
+        from bs4 import BeautifulSoup
+
+        q = f"{project.name} {ctx.own.locality or 'Mumbai'}"
+        res = await ctx.fetcher.get(f"https://www.squareyards.com/search?q={quote_plus(q)}", impersonate=True)
+        if not res.ok:
+            return []
+        soup = BeautifulSoup(res.text, "lxml")
+        want = _slug(project.name).split("-")[0]
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if "-npd-" in href and want in href:
+                url = href if href.startswith("http") else "https://www.squareyards.com" + href
+                page = await ctx.fetcher.get(url, impersonate=True)
+                if page.ok:
+                    return [Page(url=url, source="squareyards", text=html_to_text(page.text, settings.max_page_chars), fetched_at=page.fetched_at)]
+        return []
+
+
+class HousingSource(NullSource):
+    name = "housing"
+
+    async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
+        from bs4 import BeautifulSoup
+
+        q = f"{project.name} {ctx.own.locality or 'Mumbai'}"
+        res = await ctx.fetcher.get(f"https://housing.com/in/buy/searches/{_slug(q)}", impersonate=True)
+        if not res.ok:
+            return []
+        soup = BeautifulSoup(res.text, "lxml")
+        want = _slug(project.name).split("-")[0]
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if "/in/buy/projects/page/" in href and want in href:
+                url = href if href.startswith("http") else "https://housing.com" + href
+                page = await ctx.fetcher.get(url, impersonate=True)
+                if page.ok:
+                    return [Page(url=url, source="housing", text=html_to_text(page.text, settings.max_page_chars), fetched_at=page.fetched_at)]
+        return []
+
+
+class BuilderSiteSource(NullSource):
+    """Finds the builder's own project page through Tavily (excluding portals) and fetches it."""
+    name = "builder_site"
+
+    def __init__(self, tavily):
+        self.tavily = tavily
+
+    async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
+        if not settings.tavily_api_key:
+            return []
+        q = f"{project.name} {project.builder or ''} official site amenities".strip()
+        from app.sources.tavily_web import PORTAL_DOMAINS
+
+        results = await self.tavily.search(ctx, q, max_results=8)
+        for r in results:
+            url = r.get("url", "")
+            if not url or any(d in url for d in PORTAL_DOMAINS + ["wikipedia.org", "youtube.com", "facebook.com", "instagram.com"]):
+                continue
+            builder_tok = _slug(project.builder or "").split("-")[0]
+            if builder_tok and builder_tok in url or _slug(project.name).split("-")[0] in url:
+                res = await ctx.fetcher.get(url, impersonate=True)
+                if res.ok and len(res.text) > 500:
+                    return [Page(url=url, source="builder_site", text=html_to_text(res.text, settings.max_page_chars), fetched_at=res.fetched_at)]
+        return []

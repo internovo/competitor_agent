@@ -1,0 +1,6 @@
+{
+  "url": "https://places.googleapis.com/v1/places:searchText",
+  "status": 400,
+  "fetched_at": "2026-09-06T07:55:35.446997+00:00",
+  "fetcher": "httpx"
+}

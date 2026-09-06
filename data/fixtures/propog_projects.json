@@ -1,0 +1,301 @@
+[
+  {
+    "id": "marina64",
+    "name": "Marina64",
+    "builder": "Mahindra Lifespaces",
+    "address": "Marve Road, Malad West, Mumbai 400064",
+    "locality": "Malad West",
+    "lat": 19.186,
+    "lng": 72.84,
+    "configurations": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "carpet_sqft": {
+      "min_sqft": 450,
+      "max_sqft": 1650
+    },
+    "rate_psf": {
+      "min_psf": 37500,
+      "max_psf": 38500,
+      "basis": "base"
+    },
+    "possession": "2029-12-01",
+    "structure": {
+      "building_type": "multi_tower",
+      "towers": 3,
+      "floors_min": 30,
+      "floors_max": 35,
+      "land_acres": 2.5,
+      "total_units": 640
+    },
+    "rera_phases": [
+      {
+        "number": "P51800055512",
+        "verified": true,
+        "label": "Phase 1"
+      }
+    ],
+    "amenities": [
+      {
+        "name": "Swimming Pool",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Gymnasium",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Jogging Track",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Yoga Deck",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Kids Pool",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Clubhouse",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Sky Deck",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Multipurpose Hall",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Kids Play Area",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Landscaped Garden",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Co-Working Lounge",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Mini Theatre",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "EV Charging Bay",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "CCTV Surveillance",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Power Backup",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Rain Water Harvesting",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Visitor Parking",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "24x7 Security",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "High Speed Lifts",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Solar Panels",
+        "category": "convenience_safety",
+        "scope": "project"
+      }
+    ],
+    "launched": "2025-03-01"
+  },
+  {
+    "id": "kalpataru-aurum",
+    "name": "Kalpataru Aurum",
+    "builder": "Kalpataru Ltd",
+    "address": "Mamlatdar Wadi, Malad West, Mumbai 400064",
+    "locality": "Malad West",
+    "lat": 19.192295,
+    "lng": 72.84,
+    "configurations": [
+      3,
+      4
+    ],
+    "carpet_sqft": {
+      "min_sqft": 980,
+      "max_sqft": 1420
+    },
+    "rate_psf": {
+      "min_psf": 41200,
+      "max_psf": 41200,
+      "basis": "base"
+    },
+    "possession": "2030-09-01",
+    "structure": {
+      "building_type": "multi_tower",
+      "towers": 3,
+      "floors_min": 28,
+      "floors_max": 34,
+      "land_acres": 1.8,
+      "total_units": 420
+    },
+    "rera_phases": [
+      {
+        "number": "P51800051004",
+        "verified": true,
+        "label": "Phase 1"
+      },
+      {
+        "number": "P51800053377",
+        "verified": true,
+        "label": "Phase 2"
+      }
+    ],
+    "amenities": [
+      {
+        "name": "Swimming Pool",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Gymnasium",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Jogging Track",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Squash Court",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Badminton Court",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Yoga Deck",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Tennis Court",
+        "category": "sport_fitness",
+        "scope": "project"
+      },
+      {
+        "name": "Clubhouse",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Kids Play Area",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Co-Working Lounge",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Amphitheatre",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Landscaped Garden",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Party Lawn",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Library",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "Barbecue Deck",
+        "category": "social_leisure",
+        "scope": "project"
+      },
+      {
+        "name": "EV Charging Bay",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "CCTV Surveillance",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Power Backup",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Rain Water Harvesting",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Visitor Parking",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "24x7 Security",
+        "category": "convenience_safety",
+        "scope": "project"
+      },
+      {
+        "name": "Intercom",
+        "category": "convenience_safety",
+        "scope": "project"
+      }
+    ],
+    "launched": "2024-11-01"
+  }
+]
