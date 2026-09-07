@@ -13,6 +13,10 @@ def merge_by_id(left: list[Project], right: list[Project]) -> list[Project]:
     return list(d.values())
 
 
+def add_counts(left: dict[str, int], right: dict[str, int]) -> dict[str, int]:
+    return {k: left.get(k, 0) + right.get(k, 0) for k in set(left) | set(right)}
+
+
 class GraphState(TypedDict, total=False):
     own: OwnProject
     radius_km: float
@@ -24,6 +28,7 @@ class GraphState(TypedDict, total=False):
     retry_done: bool
     nearest_metro: str | None
     log: Annotated[list[str], operator.add]
+    extraction: Annotated[dict[str, int], add_counts]
 
 
 class ExtractInput(TypedDict):

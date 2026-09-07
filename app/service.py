@@ -30,7 +30,8 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, db: Database | 
         config={"configurable": deps, "recursion_limit": 50},
     )
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
-    meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls)}
+    meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls),
+            "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0})}
     return rec, meta
 
 
@@ -95,6 +96,7 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
         "counts": {"candidates_seen": len(rec.projects) + len(rec.dropped), "eligible": len(ranked),
                    "comparable": sum(1 for p in ranked if p.label == "COMPARABLE"), "partial": sum(1 for p in ranked if p.label == "PARTIAL"),
                    "thin": sum(1 for p in ranked if p.label == "THIN")},
+        "extraction": meta.get("extraction", {}),
         "competitors": [card(p, i + 1) for i, p in enumerate(ranked)],
         "dropped": [{"id": p.id, "name": p.name, "reason": p.drop_reason} for p in rec.projects if not p.eligible] + rec.dropped,
         "log": meta.get("log", []),

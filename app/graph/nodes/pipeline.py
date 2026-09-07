@@ -14,8 +14,11 @@ from app.graph.state import ExtractInput, GraphState
 from app.llm import templates
 from app.logic import completeness, conflicts, eligibility, match_score, resolve
 from app.logic.geo import haversine_km
+from app.extract import deterministic
 from app.logic.merge import consolidate_rera, merge_facts
-from app.models.schema import Candidate, ExtractedFacts, FieldValue, Project, Provenance, ReraPhase, ScanRecord
+from app.models.schema import (
+    REPORTED_FIELDS, Candidate, ExtractedFacts, FieldValue, Project, Provenance, ReraPhase, ScanRecord,
+)
 from app.sources.base import ScanContext
 from app.sources.fetch import CacheMiss
 
@@ -154,6 +157,55 @@ def fan_out_extract(state: GraphState):
 
 
 # ---------------------------------------------------------------- extract
+# Every field of the form a page can fill.
+FILLABLE = REPORTED_FIELDS + ("builder", "status")
+
+# Which keys of ExtractedFacts feed each field of the form.
+FACT_KEYS: dict[str, tuple[str, ...]] = {
+    "configurations": ("configurations",),
+    "carpet_sqft": ("carpet_min_sqft", "carpet_max_sqft"),
+    "rate_psf": ("rate_min_psf", "rate_max_psf", "rate_basis"),
+    "possession": ("possession",),
+    "structure": ("building_type", "towers", "floors_min", "floors_max", "land_acres",
+                  "total_units", "open_space_pct"),
+    "rera_phases": ("rera_numbers",),
+    "amenities": ("amenities",),
+    "timeline": ("launched", "extensions_filed", "construction_stage"),
+    "builder": ("builder",),
+    "status": ("status",),
+}
+
+
+def _has(project: Project, field: str) -> bool:
+    if field == "builder":
+        return bool(project.builder)
+    if field == "status":
+        return project.status != "unknown"
+    return bool(project.report(field).observations)
+
+
+def _still_missing(project: Project) -> list[str]:
+    """What the regexes could not answer. Only this goes to Claude -- do not ask a
+    model for an answer you already have."""
+    return [f for f in FILLABLE if not _has(project, f)]
+
+
+def _fills(facts: ExtractedFacts) -> set[str]:
+    return {f for f, keys in FACT_KEYS.items() if any(getattr(facts, k, None) is not None for k in keys)}
+
+
+def _only(facts: ExtractedFacts, want: set[str]) -> ExtractedFacts:
+    """Drop anything the model answered that we did not ask for.
+
+    Deterministic wins on conflict, and this is where it says so: a field the
+    regexes already filled is never overwritten by a model's second opinion.
+    """
+    allowed = {k for f in want for k in FACT_KEYS.get(f, ())}
+    # Location is never read deterministically, so it always passes.
+    allowed |= {"name", "address", "locality", "lat", "lng"}
+    return ExtractedFacts(**{k: v for k, v in facts.model_dump().items() if k in allowed})
+
+
 async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     d = _deps(config)
     llm = d.get("llm")
@@ -174,27 +226,60 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         else:
             pages.extend(pg for pg in r if pg.url not in project.pages_seen)
 
-    sem = asyncio.Semaphore(settings.extract_concurrency)
-
-    async def one(page):
+    # --- 1. deterministic first: pure, no network, microseconds -------------
+    prose = [p for p in pages if p.kind == "html"]
+    # Pages that never name the project are about a neighbour, and with twenty
+    # pages per project those foreign pages decide the answer.
+    keep = {p.url for p in deterministic.relevant_pages(prose, project.name)}
+    n_det = 0
+    for page in pages:
         if page.kind == "json_facts":
-            return page, ExtractedFacts(**json.loads(page.text))
-        if llm is None:
-            return page, None
-        async with sem:
-            try:
-                return page, await llm.extract_facts(page, project, ctx.own.locality)
-            except Exception as e:  # noqa: BLE001
-                log.append(f"extract[{project.id}]: LLM failed on {page.url} ({type(e).__name__})")
-                return page, None
-
-    for page, facts in await asyncio.gather(*(one(pg) for pg in pages)):
-        if facts is None:
-            if page.source not in project.sources_consulted:
-                project.sources_consulted.append(page.source)
+            # A fixture or a propOG record is already the form, not prose.
+            facts = ExtractedFacts(**json.loads(page.text))
+            merge_facts(project, facts, page, method="deterministic")
+            n_det += len(_fills(facts))
             continue
-        merge_facts(project, facts, page)
+        if page.url not in keep:
+            log.append(f"extract[{project.id}]: {page.url} never names the project; not read")
+            continue
+        facts, confidence, evidence, filled, _ = deterministic.read(page, project.name)
+        merge_facts(project, facts, page, method="deterministic", confidence=confidence, evidence=evidence)
+        n_det += len(filled)
+
+    # Lifecycle across ALL pages, never taken from the first one that matched.
+    read_pages = [p for p in prose if p.url in keep]
+    if read_pages and project.status == "unknown":
+        lifecycle, evidence, _ = deterministic.vote_lifecycle(
+            [deterministic.focus_on_project(p.text, project.name) for p in read_pages])
+        if lifecycle not in deterministic.UNMAPPED_LIFECYCLES | {"unknown"}:
+            project.status = lifecycle
+            log.append(f"extract[{project.id}]: status {lifecycle} by majority ({evidence})")
+
+    # --- 2. only what is still missing goes to Claude -----------------------
+    want = set(_still_missing(project))
+    n_llm = 0
+    if want and llm is not None and read_pages:
+        sem = asyncio.Semaphore(settings.extract_concurrency)
+
+        async def one(page):
+            async with sem:
+                try:
+                    return page, await llm.extract_facts(page, project, ctx.own.locality, sorted(want))
+                except Exception as e:  # noqa: BLE001
+                    log.append(f"extract[{project.id}]: LLM failed on {page.url} ({type(e).__name__})")
+                    return page, None
+
+        for page, facts in await asyncio.gather(*(one(pg) for pg in read_pages)):
+            if facts is None:
+                continue
+            before = {f for f in FILLABLE if _has(project, f)}
+            merge_facts(project, _only(facts, want), page, method="llm")
+            n_llm += len({f for f in FILLABLE if _has(project, f)} - before)
+
     consolidate_rera(project)
+    for page in pages:
+        if page.source not in project.sources_consulted:
+            project.sources_consulted.append(page.source)
 
     places = next((s for s in d["sources"] if s.name == "places"), None)
     if project.lat is None:
@@ -214,8 +299,9 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             project.nearest_metro = await places.nearest_metro(ctx, project.lat, project.lng)
         except (CacheMiss, Exception):  # noqa: BLE001
             pass
-    log.append(f"extract[{project.id}]: {len(pages)} pages, sources {project.sources_consulted}")
-    return {"projects": [project], "log": log}
+    log.append(f"extract[{project.id}]: {len(pages)} pages, {n_det} fields deterministic, "
+               f"{n_llm} from Claude, sources {project.sources_consulted}")
+    return {"projects": [project], "log": log, "extraction": {"deterministic_fields": n_det, "llm_fields": n_llm}}
 
 
 # ----------------------------------------------------------------- filter

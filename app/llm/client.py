@@ -63,9 +63,15 @@ class LLM:
         self._cards = self.chat.with_structured_output(CardInsights, method="json_schema")
         self._sections = self.chat.with_structured_output(SectionInsights, method="json_schema")
 
-    async def extract_facts(self, page: Page, project: Project, locality: str | None) -> ExtractedFacts:
+    async def extract_facts(self, page: Page, project: Project, locality: str | None,
+                            wanted: list[str] | None = None) -> ExtractedFacts:
+        from app.models.schema import REPORTED_FIELDS
+
+        wanted = wanted if wanted is not None else list(REPORTED_FIELDS) + ["builder", "status"]
+        known = [f for f in list(REPORTED_FIELDS) + ["builder", "status"] if f not in wanted]
         user = prompts.EXTRACT_USER.format(name=project.name, builder=project.builder or "unknown builder", locality=locality or "Mumbai",
-                                           source=page.source, url=page.url, text=page.text[: settings.max_page_chars])
+                                           source=page.source, url=page.url, text=page.text[: settings.max_page_chars],
+                                           known=", ".join(known) or "nothing", wanted=", ".join(wanted))
         out = await self._extract.ainvoke([("system", prompts.EXTRACT_SYSTEM), ("human", user)])
         return out if isinstance(out, ExtractedFacts) else ExtractedFacts(**out)
 

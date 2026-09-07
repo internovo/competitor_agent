@@ -1,5 +1,9 @@
 EXTRACT_SYSTEM = """You read one web page about a residential real-estate project in Mumbai and fill a fixed form.
 
+Regex extractors have already read this page and filled everything they could prove. You are asked ONLY for the
+fields they could not answer. Leave every other field null: an answer we already have is not wanted, and a second
+opinion on it would be discarded anyway.
+
 Rules:
 - Only record what the page states. If a field is not stated, leave it null. Never estimate or infer numbers.
 - Carpet area only. If the page gives built-up or super built-up area and not carpet, leave carpet null.
@@ -17,6 +21,9 @@ Rules:
 EXTRACT_USER = """Project hint: {name} by {builder}, near {locality}.
 Page source: {source}
 Page URL: {url}
+
+Already known, do not answer: {known}
+Fill only these fields: {wanted}
 
 Page text:
 {text}
