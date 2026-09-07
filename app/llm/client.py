@@ -14,6 +14,51 @@ from app.llm import prompts
 from app.models.schema import Candidate, ExtractedFacts, OwnProject, Page, Project
 
 
+class FatalLLMError(RuntimeError):
+    """A failure that makes the whole run wrong, not one page thin.
+
+    If the key is bad or we are throttled, extraction fails on EVERY page and the
+    scan otherwise succeeds with every field unknown. To a sales rep that reads as
+    "there is no data on these competitors". It is not: it is a broken run wearing
+    the costume of an empty one.
+    """
+    type = "llm_failed"
+
+    def __init__(self, message: str, stage: str = "extract"):
+        super().__init__(message)
+        self.stage = stage
+
+
+class LLMAuthError(FatalLLMError):
+    """401/403. A misconfiguration, and no amount of retrying fixes it."""
+    type = "llm_auth"
+
+
+class LLMRateLimitError(FatalLLMError):
+    """429 after the SDK's own retries were exhausted. Capacity, not absence."""
+    type = "llm_rate_limited"
+
+
+class ExtractionDegraded(FatalLLMError):
+    """Too many pages failed for the result to be presented as a complete run."""
+    type = "extraction_degraded"
+
+
+def fatal_for(e: Exception) -> FatalLLMError | None:
+    """Which SDK exceptions must end the run.
+
+    Read off the HTTP status and the class name rather than importing either
+    provider's exception tree, so this works for Anthropic and Groq alike.
+    """
+    status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
+    name = type(e).__name__.lower()
+    if status in (401, 403) or "authentication" in name or "permissiondenied" in name:
+        return LLMAuthError(f"the LLM rejected our credentials ({type(e).__name__}: {e})")
+    if status == 429 or "ratelimit" in name:
+        return LLMRateLimitError(f"rate limited after retries were exhausted ({type(e).__name__}: {e})")
+    return None
+
+
 class MatchVerdict(BaseModel):
     same_project: bool
     confidence: float = Field(ge=0, le=1)
@@ -57,11 +102,30 @@ def build_chat(provider: str | None = None, model: str | None = None):
 class LLM:
     def __init__(self, model: str | None = None, provider: str | None = None):
         self.chat, self.provider = build_chat(provider, model)
+        # Per run. narrate reads these before anything is presented as complete.
+        self.calls_attempted = 0
+        self.calls_failed = 0
         self.model = getattr(self.chat, "model_name", None) or getattr(self.chat, "model", "")
         self._extract = self.chat.with_structured_output(ExtractedFacts, method="json_schema")
         self._match = self.chat.with_structured_output(MatchVerdict, method="json_schema")
         self._cards = self.chat.with_structured_output(CardInsights, method="json_schema")
         self._sections = self.chat.with_structured_output(SectionInsights, method="json_schema")
+
+    async def _call(self, runnable, messages):
+        """Every model call goes through here, so nothing can fail quietly."""
+        self.calls_attempted += 1
+        try:
+            return await runnable.ainvoke(messages)
+        except Exception as e:  # noqa: BLE001
+            self.calls_failed += 1
+            fatal = fatal_for(e)
+            if fatal is not None:
+                raise fatal from e
+            raise
+
+    @property
+    def failure_rate(self) -> float:
+        return self.calls_failed / self.calls_attempted if self.calls_attempted else 0.0
 
     async def extract_facts(self, page: Page, project: Project, locality: str | None,
                             wanted: list[str] | None = None) -> ExtractedFacts:
@@ -72,19 +136,19 @@ class LLM:
         user = prompts.EXTRACT_USER.format(name=project.name, builder=project.builder or "unknown builder", locality=locality or "Mumbai",
                                            source=page.source, url=page.url, text=page.text[: settings.max_page_chars],
                                            known=", ".join(known) or "nothing", wanted=", ".join(wanted))
-        out = await self._extract.ainvoke([("system", prompts.EXTRACT_SYSTEM), ("human", user)])
+        out = await self._call(self._extract, [("system", prompts.EXTRACT_SYSTEM), ("human", user)])
         return out if isinstance(out, ExtractedFacts) else ExtractedFacts(**out)
 
     async def same_project(self, a: Candidate, b: Candidate) -> MatchVerdict:
         user = prompts.SAME_PROJECT_USER.format(a_name=a.name, a_builder=a.builder or "", a_rera=a.rera_no or "", a_address=a.address or "",
                                                 b_name=b.name, b_builder=b.builder or "", b_rera=b.rera_no or "", b_address=b.address or "")
-        out = await self._match.ainvoke([("system", prompts.SAME_PROJECT_SYSTEM), ("human", user)])
+        out = await self._call(self._match, [("system", prompts.SAME_PROJECT_SYSTEM), ("human", user)])
         return out if isinstance(out, MatchVerdict) else MatchVerdict(**out)
 
     async def narrate_cards(self, own: OwnProject, projects: list[Project], radius_km: float, set_summary: dict) -> dict[str, str]:
         items = "\n".join(json.dumps(card_facts(p)) for p in projects)
         user = prompts.NARRATE_CARDS_USER.format(own=json.dumps(own_facts(own)), radius_km=radius_km, set_summary=json.dumps(set_summary), items=items)
-        out = await self._cards.ainvoke([("system", prompts.NARRATE_SYSTEM), ("human", user)])
+        out = await self._call(self._cards, [("system", prompts.NARRATE_SYSTEM), ("human", user)])
         out = out if isinstance(out, CardInsights) else CardInsights(**out)
         return {i.id: i.sentence for i in out.insights}
 
@@ -92,7 +156,7 @@ class LLM:
         slim = {k: payload[k] for k in ("headline", "common_bhk", "rate_axis", "possession", "carpet", "config_matrix", "structure", "amenities")}
         slim["amenities"] = {k: v for k, v in slim["amenities"].items() if k != "rows"} | {"top_rows": payload["amenities"]["rows"][:12]}
         user = prompts.NARRATE_COMPARE_USER.format(own=json.dumps(own_facts(own)), payload=json.dumps(slim, default=str))
-        out = await self._sections.ainvoke([("system", prompts.NARRATE_SYSTEM), ("human", user)])
+        out = await self._call(self._sections, [("system", prompts.NARRATE_SYSTEM), ("human", user)])
         out = out if isinstance(out, SectionInsights) else SectionInsights(**out)
         return out.model_dump()
 

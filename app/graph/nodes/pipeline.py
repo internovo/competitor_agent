@@ -12,6 +12,7 @@ from langgraph.types import Send
 from app.config import settings
 from app.graph.state import ExtractInput, GraphState
 from app.llm import templates
+from app.llm.client import ExtractionDegraded, FatalLLMError
 from app.logic import completeness, conflicts, eligibility, match_score, resolve
 from app.logic.geo import haversine_km
 from app.extract import deterministic
@@ -107,6 +108,8 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
                     v = await llm.same_project(rep, c)
                     verdict = v.same_project and v.confidence >= 0.6
                     log.append(f"resolve: LLM says {'same' if verdict else 'different'} for '{rep.name}' vs '{c.name}' ({v.reason})")
+                except FatalLLMError:
+                    raise
                 except Exception as e:  # noqa: BLE001
                     log.append(f"resolve: LLM match failed ({type(e).__name__}); treating as different")
                     verdict = False
@@ -265,6 +268,8 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             async with sem:
                 try:
                     return page, await llm.extract_facts(page, project, ctx.own.locality, sorted(want))
+                except FatalLLMError:
+                    raise            # a bad key fails every page; that is a broken run, not a thin one
                 except Exception as e:  # noqa: BLE001
                     log.append(f"extract[{project.id}]: LLM failed on {page.url} ({type(e).__name__})")
                     return page, None
@@ -341,9 +346,19 @@ def fan_out_retry(state: GraphState):
 
 
 # ---------------------------------------------------------------- narrate
+# Above this share of failed model calls the run is not thin, it is broken.
+MAX_LLM_FAILURE_RATE = 0.25
+
+
 async def narrate(state: GraphState, config: RunnableConfig) -> dict:
     llm = _deps(config).get("llm")
     own = state["own"]
+    if llm is not None and llm.calls_failed and llm.failure_rate > MAX_LLM_FAILURE_RATE:
+        # Never let a partially-extracted run present itself as a complete one.
+        raise ExtractionDegraded(
+            f"{llm.calls_failed} of {llm.calls_attempted} model calls failed "
+            f"({llm.failure_rate:.0%}); the competitor set would read as empty rather than broken",
+            stage="narrate")
     eligible = [p for p in state["projects"] if p.eligible]
     for p in eligible:
         p.insight, p.insight_source = templates.card_insight(p, own, eligible), "template"
@@ -362,6 +377,8 @@ async def narrate(state: GraphState, config: RunnableConfig) -> dict:
                 if p.id in sentences and sentences[p.id].strip():
                     p.insight, p.insight_source = sentences[p.id].strip(), "llm"
             log.append("narrate: LLM insights applied")
+        except FatalLLMError:
+            raise
         except Exception as e:  # noqa: BLE001
             log.append(f"narrate: LLM failed ({type(e).__name__}); template sentences kept")
     return {"projects": state["projects"], "log": log}
