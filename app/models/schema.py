@@ -65,6 +65,10 @@ def field_label(field: str | None) -> str:
     return FIELD_LABELS.get(field, field.replace("_", " "))
 
 
+def _a(name: str) -> str:
+    return f"an {name}" if name[:1].lower() in "aeiou" else f"a {name}"
+
+
 def absence_label(field: str | None, reason: AbsenceReason, span: list[Any] | None = None) -> str:
     """The one place absence is put into words, so the wording cannot drift between fields."""
     name = field_label(field)
@@ -76,7 +80,7 @@ def absence_label(field: str | None, reason: AbsenceReason, span: list[Any] | No
         "NO_RERA_ON_FILE": f"The {name} comes off the RERA register and no registration number is on file.",
         "RATE_NOT_PUBLISHED": "Pages were found for this project; none quotes a per-sq-ft rate.",
         "UNPARSEABLE_DATE": "A possession phrase was found but it does not state a date.",
-        "NOT_FOUND": f"No source produced a {name} for this project.",
+        "NOT_FOUND": f"No source produced {_a(name)} for this project.",
     }[reason]
 
 

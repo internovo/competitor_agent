@@ -111,3 +111,60 @@ def test_a_thin_project_names_a_reason_on_every_empty_field(full_project):
     for f in COMPLETENESS_FIELDS:
         assert p.report(f).absent == "NOT_FOUND"
         assert p.report(f).label
+
+
+# --- the reason reflects what the sources actually said ---------------------
+
+def test_a_page_that_quotes_no_rate_says_so_rather_than_not_found(own):
+    """Three different facts used to collapse into one 'Not on file'."""
+    from tests.test_deterministic_first import run_extract
+
+    project, _ = run_extract("Ajmera Skyline, Malad West. 2 and 3 BHK homes. Book a site visit.",
+                             own, llm=None, name="Ajmera Skyline")
+    assert project.rate_psf.absent == "RATE_NOT_PUBLISHED"
+    assert project.carpet_sqft.absent == "NO_RERA_ON_FILE"
+    assert project.possession.absent == "UNPARSEABLE_DATE"
+    assert project.rera_phases.absent == "NO_RERA_ON_FILE"
+
+
+def test_a_project_no_source_ever_produced_a_page_for_stays_not_found(own):
+    from tests.test_deterministic_first import run_extract
+
+    class Nothing:
+        name = "squareyards"
+
+        async def discover(self, ctx):
+            return []
+
+        async def pages_for(self, project, ctx):
+            return []
+
+    from app.graph.nodes import pipeline
+    from app.graph.state import ExtractInput
+    from app.models.schema import Project
+    import asyncio
+
+    project = Project(id="ghost", name="Ghost Tower")
+    out = asyncio.run(pipeline.extract(
+        ExtractInput(own=own, radius_km=1.5, project=project, retry=False, extra_queries=[]),
+        {"configurable": {"sources": [Nothing()], "fetcher": None, "llm": None}}))
+    assert all(out["projects"][0].report(f).absent == "NOT_FOUND"
+               for f in ("configurations", "rate_psf", "possession"))
+
+
+def test_a_page_whose_configurations_cannot_be_trusted_keeps_its_spread(own):
+    from tests.test_deterministic_first import run_extract
+
+    project, _ = run_extract("Metro Excellency offers 1 BHK, 2 BHK, 3 BHK, 4 BHK and 5 BHK homes.",
+                             own, llm=None, name="Metro Excellency")
+    assert project.configurations.absent == "SOURCES_DISAGREE"
+    assert project.configurations.span == [1, 5]
+
+
+def test_the_label_reads_as_a_sentence_a_rep_could_be_shown():
+    from app.models.schema import FieldReport
+
+    assert FieldReport(field="amenities", absent="NOT_FOUND").label == \
+        "No source produced an amenity list for this project."
+    assert FieldReport(field="configurations", absent="NOT_FOUND").label == \
+        "No source produced a configuration mix for this project."

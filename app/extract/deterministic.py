@@ -891,15 +891,19 @@ def _spec_reports(spec: dict[str, str], source: Source, url: str | None) -> dict
 
 
 def extract_page(text: str, *, source: Source = "tavily", url: str | None = None,
-                 project_name: str | None = None, first_party: bool | None = None
+                 project_name: str | None = None, first_party: bool = False
                  ) -> tuple[dict[str, FieldReport], str, str | None]:
     """(fields, lifecycle, lifecycle_evidence) read off ONE page.
 
     A portal's own spec table outranks anything read out of prose, so it is
     consulted first and the regex extractors fill only what it did not publish.
+
+    `first_party` means THE PROJECT DECLARED THIS, not "this is a portal". Being on
+    housing.com does not make a sentence in a marketing blurb a declaration, and
+    treating it as one hands the undeclared-configuration guard a free pass on
+    exactly the pages that carry "similar projects" blocks. Only the spec table
+    reader sets it.
     """
-    if first_party is None:
-        first_party = portals.is_first_party(url or "")
     spec = portals.specs(text or "")
     # Only the parts of the page that are about THIS project.
     focused = focus_on_project(text or "", project_name) if project_name else (text or "")
@@ -1022,9 +1026,48 @@ def to_facts(fields: dict[str, FieldReport], lifecycle: str
 
 
 def read(page: Page, project_name: str | None = None
-         ) -> tuple[ExtractedFacts, dict[str, Confidence], dict[str, str], set[str], str]:
-    """One page -> (facts, confidence, evidence, fields filled, lifecycle)."""
+         ) -> tuple[ExtractedFacts, dict[str, Confidence], dict[str, str], set[str], str,
+                    dict[str, tuple[AbsenceReason, list | None]]]:
+    """One page -> (facts, confidence, evidence, filled, lifecycle, why the rest are empty)."""
     fields, lifecycle, _ = extract_page(page.text, source=page.source, url=page.url,
                                         project_name=project_name)
     facts, confidence, evidence, filled = to_facts(fields, lifecycle)
-    return facts, confidence, evidence, filled, lifecycle
+    return facts, confidence, evidence, filled, lifecycle, absences(fields, filled)
+
+
+# The reason a target field is empty, taken from whichever donor field feeds it.
+# A page that does not print a rate and a page with no RERA number on file are
+# different facts, and the UI says so.
+ABSENCE_OF = {
+    "configurations": "NOT_PUBLISHED",
+    "carpet_sqft": "NO_RERA_ON_FILE",
+    "rate_psf": "RATE_NOT_PUBLISHED",
+    "possession": "UNPARSEABLE_DATE",
+    "structure": "NOT_PUBLISHED",
+    "rera_phases": "NO_RERA_ON_FILE",
+    "amenities": "NOT_PUBLISHED",
+    "timeline": "NOT_PUBLISHED",
+    "builder": "NOT_PUBLISHED",
+    "status": "NOT_PUBLISHED",
+}
+
+
+def absences(fields: dict[str, FieldReport], filled: set[str]
+             ) -> dict[str, tuple[AbsenceReason, list | None]]:
+    """(reason, span) for each target field this page could not fill.
+
+    A disagreement seen on the page itself outranks the generic reason: it is the
+    more specific fact, and it carries the spread it disagreed across.
+    """
+    out: dict[str, tuple[AbsenceReason, list | None]] = {}
+    for donor, target in TARGET_OF.items():
+        if target in filled:
+            continue
+        report = fields.get(donor)
+        if report is not None and report.absent == "SOURCES_DISAGREE" and report.span:
+            out[target] = ("SOURCES_DISAGREE", report.span)
+        else:
+            out.setdefault(target, (ABSENCE_OF[target], None))
+    if "status" not in filled:
+        out["status"] = (ABSENCE_OF["status"], None)
+    return out

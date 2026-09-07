@@ -231,6 +231,9 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
 
     # --- 1. deterministic first: pure, no network, microseconds -------------
     prose = [p for p in pages if p.kind == "html"]
+    # Why a field is empty, from whatever the pages we read did say. "We read four
+    # pages and none quoted a rate" is not the same fact as "we never found a page".
+    why: dict[str, tuple[str, list | None]] = {}
     # Pages that never name the project are about a neighbour, and with twenty
     # pages per project those foreign pages decide the answer.
     keep = {p.url for p in deterministic.relevant_pages(prose, project.name)}
@@ -240,14 +243,18 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             # A fixture or a propOG record is already the form, not prose.
             facts = ExtractedFacts(**json.loads(page.text))
             merge_facts(project, facts, page, method="deterministic")
-            n_det += len(_fills(facts))
+            filled = _fills(facts)
+            n_det += len(filled)
+            # A form that does not state a field is a source that did not publish it.
+            why |= {f: ("NOT_PUBLISHED", None) for f in FILLABLE if f not in filled}
             continue
         if page.url not in keep:
             log.append(f"extract[{project.id}]: {page.url} never names the project; not read")
             continue
-        facts, confidence, evidence, filled, _ = deterministic.read(page, project.name)
+        facts, confidence, evidence, filled, _, page_why = deterministic.read(page, project.name)
         merge_facts(project, facts, page, method="deterministic", confidence=confidence, evidence=evidence)
         n_det += len(filled)
+        why |= page_why
 
     # Lifecycle across ALL pages, never taken from the first one that matched.
     read_pages = [p for p in prose if p.url in keep]
@@ -282,6 +289,11 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             n_llm += len({f for f in FILLABLE if _has(project, f)} - before)
 
     consolidate_rera(project)
+    # An absence keeps the most specific reason any source gave it.
+    for f in REPORTED_FIELDS:
+        report = project.report(f)
+        if not report.observations and f in why:
+            report.mark_absent(*why[f])
     for page in pages:
         if page.source not in project.sources_consulted:
             project.sources_consulted.append(page.source)
