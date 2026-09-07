@@ -22,12 +22,18 @@ def client():
 def run_id(client):
     r = client.post("/scans", json=REQUEST)
     assert r.status_code == 202, r.text
-    rid = r.json()["run_id"]
-    for _ in range(200):
+    return _poll(client, r.json()["run_id"])
+
+
+def _poll(client, rid, want="done"):
+    import time
+
+    for _ in range(300):
         body = client.get(f"/scans/{rid}").json()
         if body["status"] in ("done", "failed"):
             break
-    assert body["status"] == "done", body.get("error")
+        time.sleep(0.02)
+    assert body["status"] == want, body.get("error")
     return rid
 
 
@@ -36,10 +42,48 @@ def test_health_says_what_it_is(client):
     assert body["ok"] is True and body["provider"] == "anthropic"
 
 
-def test_a_scan_is_accepted_with_a_run_id(client):
+def test_a_scan_is_accepted_immediately_with_a_run_id(client):
+    """A live scan takes minutes. The endpoint must not be the thing that waits."""
+    import time
+
+    start = time.perf_counter()
     r = client.post("/scans", json=REQUEST)
     assert r.status_code == 202
+    assert (time.perf_counter() - start) < 0.2
     assert len(r.json()["run_id"]) == 12
+    assert r.json()["status"] in ("queued", "running")
+
+
+def test_a_running_scan_reports_the_stage_it_is_in(client):
+    r = client.post("/scans", json=REQUEST)
+    rid = r.json()["run_id"]
+    seen = set()
+    for _ in range(300):
+        body = client.get(f"/scans/{rid}").json()
+        seen.add(body["stage"])
+        if body["status"] in ("done", "failed"):
+            break
+    assert body["status"] == "done"
+    # The node names are already meaningful, so the loading screen shows real work.
+    assert any("discover" in s or "extract" in s for s in body["stages_done"][0:1] + body["stages_done"])
+
+
+def test_a_failed_run_ends_failed_and_names_the_cause(client, monkeypatch):
+    """A broken run must never present itself as an empty one."""
+    from app import service
+    from app.llm.client import LLMAuthError
+
+    async def boom(own, radius_km, mode, **kw):
+        raise LLMAuthError("the LLM rejected our credentials (AuthenticationError: 401)")
+
+    monkeypatch.setattr(service, "run_scan", boom)
+    rid = client.post("/scans", json=REQUEST).json()["run_id"]
+    _poll(client, rid, want="failed")
+    body = client.get(f"/scans/{rid}").json()
+    assert body["error"]["type"] == "llm_auth"
+    assert "credentials" in body["error"]["message"]
+    assert body["error"]["stage"] == "extract"
+    assert "competitors" not in body
 
 
 def test_the_subject_arrives_in_the_request_not_from_a_lookup(client):

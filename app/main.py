@@ -6,6 +6,7 @@ only long enough to be polled.
 """
 from __future__ import annotations
 
+import asyncio
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
@@ -19,6 +20,9 @@ from app.storage.runs import RunRecord, RunStore
 
 app = FastAPI(title="propOG Competitor Analysis Agent", version="0.2.0")
 runs = RunStore()
+# asyncio only holds a weak reference to a task, so a scan would be collected
+# mid-run without this.
+_tasks: set[asyncio.Task] = set()
 
 
 @app.get("/health")
@@ -40,7 +44,11 @@ async def start_scan(body: ScanRequest) -> dict:
     if mode == "live" and not settings.has_llm:
         raise HTTPException(400, f"live mode needs an API key for provider '{settings.llm_provider}' (ANTHROPIC_API_KEY or GROQ_API_KEY)")
     run = runs.create(body.own, radius_km, mode)
-    await service.execute(run)
+    # A live scan takes minutes; Azure App Service and the browser both time out
+    # long before. The client polls GET /scans/{run_id} instead.
+    task = asyncio.create_task(service.execute(run))
+    _tasks.add(task)
+    task.add_done_callback(_tasks.discard)
     return {"run_id": run.run_id, "status": run.status}
 
 
