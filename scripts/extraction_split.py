@@ -101,14 +101,10 @@ def report_raw(texts: list[str]) -> None:
     for label, fn in checks.items():
         hits = sum(1 for t in texts if fn(t))
         print(f"    {label:<16} {hits:>4}/{len(texts)}  ({hits / len(texts):.0%})")
-    print("
-  configurations reads 0 because these ARE listing pages: a whole page
-"
-          "  offering 1-5 BHK across many projects is refused as SOURCES_DISAGREE
-"
-          "  rather than published as one building's inventory. That is the guard
-"
-          "  working, not the extractor failing.")
+    print("\n  configurations reads 0 because these ARE listing pages: a whole page"
+          "\n  offering 1-5 BHK across many projects is refused as SOURCES_DISAGREE"
+          "\n  rather than published as one building's inventory. That is the guard"
+          "\n  working, not the extractor failing.")
 
 
 def main() -> None:
