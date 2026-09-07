@@ -66,6 +66,15 @@ class Settings(BaseSettings):
     w_structure: int = 10
     possession_horizon_months: int = 24
 
+    # Unit prices for the run-cost ESTIMATE. Not a bill: the agent never sees an
+    # invoice, so these are list prices at the time of writing and are meant to be
+    # edited when they move.
+    inr_per_usd: float = 88.0
+    llm_input_usd_per_mtok: float = 15.0     # claude-opus-5
+    llm_output_usd_per_mtok: float = 75.0
+    search_usd_per_call: float = 0.008       # Tavily search / extract
+    places_usd_per_call: float = 0.032       # Places API (New)
+
     # Extraction
     max_page_chars: int = 40_000
     extract_concurrency: int = 4

@@ -306,7 +306,8 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             pass
     log.append(f"extract[{project.id}]: {len(pages)} pages, {n_det} fields deterministic, "
                f"{n_llm} from Claude, sources {project.sources_consulted}")
-    return {"projects": [project], "log": log, "extraction": {"deterministic_fields": n_det, "llm_fields": n_llm}}
+    return {"projects": [project], "log": log, "pages_fetched": len(pages),
+            "extraction": {"deterministic_fields": n_det, "llm_fields": n_llm}}
 
 
 # ----------------------------------------------------------------- filter

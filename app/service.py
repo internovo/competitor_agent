@@ -1,6 +1,7 @@
 """Orchestration used by both the API and the tests: run a scan, shape list / detail / compare payloads."""
 from __future__ import annotations
 
+import time
 import uuid
 from datetime import date
 from collections.abc import Callable
@@ -12,7 +13,7 @@ from app.llm import templates
 from app.llm.client import LLM, get_llm
 from app.logic import compare as compare_logic
 from app.logic import completeness, conflicts, match_score
-from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord
+from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord, now_utc
 from app.sources.fetch import Fetcher
 from app.sources.registry import build_sources
 
@@ -38,6 +39,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
         final = await graph.ainvoke(state, config=config)
     else:
         final = dict(state)
+        on_stage("", {})   # start the clock after setup, so the first node is not billed for it
         async for mode, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
             if mode == "values":
                 final = chunk
@@ -46,6 +48,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
                     on_stage(node, update or {})
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
     meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls),
+            "urls": list(fetcher.calls), "pages_fetched": final.get("pages_fetched", 0),
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0})}
     return rec, meta
 
@@ -53,20 +56,29 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
 async def execute(run) -> "RunRecord":
     """Run one scan into its RunRecord. Failure ends the run failed, never done."""
     run.begin("geocode")
-    run.started_at = run.started_at or run.created_at
+    run.started_at = now_utc()
     llm = get_llm()
     run.llm = llm
+    last = time.perf_counter()
 
     def on_stage(node: str, update: dict) -> None:
+        # Wall clock, partitioned across the stages: each update closes the slice
+        # that ran up to it, so the per-stage seconds sum to the run's duration.
+        nonlocal last
+        now = time.perf_counter()
         if node:
+            run.stage_seconds[node] = round(run.stage_seconds.get(node, 0.0) + now - last, 2)
             run.begin(node)
+        last = now
         run.note(update.get("log", []) or [])
 
     try:
         rec, meta = await run_scan(run.own, run.radius_km, run.mode, llm=llm, on_stage=on_stage)
     except Exception as e:  # noqa: BLE001 - the record is the only place this can be reported
+        run.tally(llm, {})
         run.fail(e)
         return run
+    run.tally(llm, meta)
     run.finish(rec, meta, list_payload(rec, run.own, meta))
     return run
 

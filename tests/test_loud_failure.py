@@ -107,12 +107,15 @@ def test_no_llm_configured_is_not_a_failure(own, full_project):
 def test_every_model_call_is_counted_and_a_fatal_one_stops_the_run():
     from app.llm.client import LLM
 
+    from app.cost import UsageCounter
+
     class Chat:
-        async def ainvoke(self, messages):
+        async def ainvoke(self, messages, config=None):
             raise Boom(401)
 
     llm = LLM.__new__(LLM)
     llm.calls_attempted = llm.calls_failed = 0
+    llm.usage = UsageCounter()
     with pytest.raises(LLMAuthError):
         asyncio.run(llm._call(Chat(), []))
     assert (llm.calls_attempted, llm.calls_failed) == (1, 1)
@@ -121,12 +124,15 @@ def test_every_model_call_is_counted_and_a_fatal_one_stops_the_run():
 def test_a_page_failure_is_counted_and_re_raised_for_the_caller_to_absorb():
     from app.llm.client import LLM
 
+    from app.cost import UsageCounter
+
     class Chat:
-        async def ainvoke(self, messages):
+        async def ainvoke(self, messages, config=None):
             raise ValueError("could not parse")
 
     llm = LLM.__new__(LLM)
     llm.calls_attempted = llm.calls_failed = 0
+    llm.usage = UsageCounter()
     with pytest.raises(ValueError):
         asyncio.run(llm._call(Chat(), []))
     assert llm.failure_rate == 1.0

@@ -29,6 +29,7 @@ class GraphState(TypedDict, total=False):
     nearest_metro: str | None
     log: Annotated[list[str], operator.add]
     extraction: Annotated[dict[str, int], add_counts]
+    pages_fetched: Annotated[int, operator.add]
 
 
 class ExtractInput(TypedDict):

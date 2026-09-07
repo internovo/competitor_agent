@@ -10,6 +10,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from app.config import settings
+from app.cost import UsageCounter
 from app.llm import prompts
 from app.models.schema import Candidate, ExtractedFacts, OwnProject, Page, Project
 
@@ -105,6 +106,7 @@ class LLM:
         # Per run. narrate reads these before anything is presented as complete.
         self.calls_attempted = 0
         self.calls_failed = 0
+        self.usage = UsageCounter()
         self.model = getattr(self.chat, "model_name", None) or getattr(self.chat, "model", "")
         self._extract = self.chat.with_structured_output(ExtractedFacts, method="json_schema")
         self._match = self.chat.with_structured_output(MatchVerdict, method="json_schema")
@@ -115,7 +117,7 @@ class LLM:
         """Every model call goes through here, so nothing can fail quietly."""
         self.calls_attempted += 1
         try:
-            return await runnable.ainvoke(messages)
+            return await runnable.ainvoke(messages, config={"callbacks": [self.usage]})
         except Exception as e:  # noqa: BLE001
             self.calls_failed += 1
             fatal = fatal_for(e)

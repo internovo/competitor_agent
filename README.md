@@ -78,6 +78,25 @@ uv run python scripts/extraction_split.py    # how much of the form the regexes 
 Match score weights (in `app/config.py`): configuration overlap 25, carpet overlap 20, rate proximity 20 (base rates
 only), possession proximity 15, distance 10, structure 10.
 
+## What a run cost
+
+Every completed run reports it, alongside the scan payload:
+
+```json
+"cost":    {"llm_calls": 14, "input_tokens": 41200, "output_tokens": 3100,
+            "searches": 22, "pages_fetched": 47, "places_calls": 3, "estimated_inr": 112.40,
+            "note": "estimated from call counts and configured unit prices, not a bill"},
+"extraction": {"deterministic_fields": 31, "llm_fields": 9},
+"timing":  {"started_at": "...", "finished_at": "...", "duration_s": 89,
+            "per_stage_s": {"extract": 71.3, "discover": 4.1, ...}}
+```
+
+`estimated_inr` is local arithmetic from call counts and the unit prices in `app/config.py`. **It is an estimate, not a
+bill** - the agent never sees an invoice, so it cannot know about cached-token discounts or a call that was charged for
+and then failed. Edit the prices when they move. `timing.started_at` is also what dates a stored analysis: search
+results vary between runs, and two scans returning different competitors reads as a broken product unless the report
+says when it was taken.
+
 ## Layout
 
 ```
