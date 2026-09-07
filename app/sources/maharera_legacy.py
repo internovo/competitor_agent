@@ -96,7 +96,7 @@ class MahaReraSource(NullSource):
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
         pages: list[Page] = []
-        numbers = {ph.number for fv in project.rera_phases for ph in fv.value}
+        numbers = {ph.number for fv in project.rera_phases.values for ph in fv.value}
         urls = [u for u in project.pages_seen if u.startswith(BASE) and u != MAP]
         for n in list(numbers)[:3]:
             res = await ctx.fetcher.get(DETAIL, params={"registration_no": n})

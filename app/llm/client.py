@@ -107,7 +107,7 @@ def card_facts(p: Project) -> dict:
         "configurations": p.value("configurations"), "carpet_sqft": [c.min_sqft, c.max_sqft] if c else None,
         "rate_psf": [r.min_psf, r.max_psf, r.basis] if r else None, "possession": poss.isoformat() if poss else None,
         "towers": s.towers if s else None, "building_type": s.building_type if s else None,
-        "rera_verified": any(ph.verified for fv in p.rera_phases for ph in fv.value),
+        "rera_verified": any(ph.verified for fv in p.rera_phases.values for ph in fv.value),
         "conflicts": [f"{x.field}: {x.detail}" for x in p.conflicts], "could_not_verify": p.could_not_verify,
     }
 

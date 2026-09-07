@@ -27,13 +27,16 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
 
     b: dict[str, float] = {}
 
-    b["config"] = _jaccard(set(own.configurations), set(project.value("configurations")))
+    # A field counted for coverage can still have no reported value when its sources
+    # disagreed. It scores zero: there is nothing to compare against.
+    cfg = project.value("configurations")
+    b["config"] = _jaccard(set(own.configurations), set(cfg)) if cfg else 0.0
 
     c = project.value("carpet_sqft")
-    b["carpet"] = _range_overlap(own.carpet_sqft.min_sqft, own.carpet_sqft.max_sqft, c.min_sqft, c.max_sqft)
+    b["carpet"] = _range_overlap(own.carpet_sqft.min_sqft, own.carpet_sqft.max_sqft, c.min_sqft, c.max_sqft) if c else 0.0
 
     r = project.value("rate_psf")
-    if r.basis == "base" and own.rate_psf.basis == "base":
+    if r and r.basis == "base" and own.rate_psf.basis == "base":
         own_mid = (own.rate_psf.min_psf + own.rate_psf.max_psf) / 2
         their_mid = (r.min_psf + r.max_psf) / 2
         b["rate"] = 1 - min(1.0, abs(their_mid - own_mid) / own_mid)
@@ -41,13 +44,13 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
         b["rate"] = 0.0
 
     p = project.value("possession")
-    b["possession"] = 1 - min(1.0, _months_between(p, own.possession) / settings.possession_horizon_months)
+    b["possession"] = 1 - min(1.0, _months_between(p, own.possession) / settings.possession_horizon_months) if p else 0.0
 
     d = project.distance_km if project.distance_km is not None else radius_km
     b["distance"] = max(0.0, 1 - d / radius_km)
 
     s = project.value("structure")
-    own_t, their_t = own.structure.building_type, s.building_type
+    own_t, their_t = own.structure.building_type, (s.building_type if s else None)
     if own_t and their_t and own_t == their_t:
         b["structure"] = 1.0
     elif own_t in ("multi_tower", "complex") and their_t in ("multi_tower", "complex"):

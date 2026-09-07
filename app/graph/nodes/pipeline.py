@@ -139,8 +139,9 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
         rera_members = [m for m in members if m.rera_no and m.source == "maharera"]
         if rera_members:
             m = rera_members[0]
-            p.rera_phases.append(FieldValue(value=[ReraPhase(number=m.rera_no, verified=True, label="Phase 1")],
-                                            prov=Provenance(source="maharera", url=m.source_url)))
+            p.rera_phases.observe(FieldValue(value=[ReraPhase(number=m.rera_no, verified=True, label="Phase 1")],
+                                             prov=Provenance(source="maharera", url=m.source_url),
+                                             method="deterministic", confidence="high"))
         projects.append(p)
     log.append(f"resolve: {len(state['candidates'])} candidates -> {len(groups)} projects, {len(dropped)} dropped early")
     return {"projects": projects, "dropped": dropped, "log": log}

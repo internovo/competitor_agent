@@ -5,7 +5,7 @@ import pytest
 
 from app.config import FIXTURE_DIR
 from app.models.schema import (
-    Amenity, CarpetRange, FieldValue, OwnProject, Project, Provenance, RateValue, ReraPhase, Structure,
+    Amenity, CarpetRange, FieldReport, FieldValue, OwnProject, Project, Provenance, RateValue, ReraPhase, Structure,
 )
 
 
@@ -16,6 +16,11 @@ def own() -> OwnProject:
 
 def fv(value, source="maharera", url=None):
     return FieldValue(value=value, prov=Provenance(source=source, url=url))
+
+
+def fr(field, *values):
+    """A FieldReport holding these observations, or NOT_FOUND when given none."""
+    return FieldReport(field=field, values=list(values)) if values else FieldReport(field=field, absent="NOT_FOUND")
 
 
 @pytest.fixture

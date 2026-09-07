@@ -11,7 +11,7 @@ from app.llm import templates
 from app.llm.client import LLM, get_llm
 from app.logic import compare as compare_logic
 from app.logic import completeness, conflicts, match_score
-from app.models.schema import FieldValue, OwnProject, Project, Provenance, ScanRecord
+from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord
 from app.sources.fetch import Fetcher
 from app.sources.registry import build_sources
 from app.storage.db import Database
@@ -45,13 +45,25 @@ def _status_label(p: Project) -> str:
 
 
 def _rate_block(p: Project, conflict) -> dict[str, Any] | None:
-    if not p.rate_psf:
+    seen = p.rate_psf.observations
+    if not seen:
         return None
     if conflict:
         lo, hi, basis = p.rate_span()
-        return {"min": lo, "max": hi, "basis": basis, "conflict": conflict.detail, "sources": len(p.rate_psf)}
+        return {"min": lo, "max": hi, "basis": basis, "conflict": conflict.detail, "sources": len(seen)}
     fv = p.display("rate_psf")
-    return {"min": fv.value.min_psf, "max": fv.value.max_psf, "basis": fv.value.basis, "conflict": None, "sources": len(p.rate_psf)}
+    return {"min": fv.value.min_psf, "max": fv.value.max_psf, "basis": fv.value.basis, "conflict": None, "sources": len(seen)}
+
+
+def absence_block(p: Project) -> dict[str, dict[str, Any]]:
+    """Why each empty field is empty. Three different facts used to render as one
+    'Not on file', which made every gap read as a guess."""
+    out = {}
+    for f in REPORTED_FIELDS:
+        r = p.report(f)
+        if r.absent:
+            out[f] = {"reason": r.absent, "label": r.label, "span": r.span}
+    return out
 
 
 def card(p: Project, rank_no: int) -> dict[str, Any]:
@@ -70,6 +82,7 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
         "possession": poss.value.isoformat() if poss else None,
         "towers": struct.value.towers if struct else None, "building_type": struct.value.building_type if struct else None,
         "insight": p.insight, "insight_source": p.insight_source,
+        "absent": absence_block(p),
         "data_note": "builder-declared data" if p.on_propog else ("RERA verified" if rera_verified else None),
     }
 
@@ -115,7 +128,7 @@ def detail_payload(p: Project, own: OwnProject, rec: ScanRecord) -> dict[str, An
 
     field_sources: dict[str, list[str]] = {}
     for f in ("possession", "carpet_sqft", "structure", "rera_phases", "rate_psf", "configurations", "amenities", "timeline"):
-        for fv in getattr(p, f):
+        for fv in p.report(f).observations:
             if f not in field_sources.setdefault(fv.prov.source, []):
                 field_sources[fv.prov.source].append(f)
     if p.lat is not None:
@@ -158,9 +171,10 @@ def detail_payload(p: Project, own: OwnProject, rec: ScanRecord) -> dict[str, An
             "could_not_verify": p.could_not_verify,
             "note": "Shown as empty rather than estimated. A rep who learns any of these from a site visit can record it here.",
         },
+        "absent": absence_block(p),
         "values": {
             f: [{"value": fv.value if not hasattr(fv.value, "model_dump") else fv.value.model_dump(), "source": fv.prov.source,
-                 "url": fv.prov.url, "fetched_at": fv.prov.fetched_at.isoformat()} for fv in getattr(p, f)]
+                 "url": fv.prov.url, "fetched_at": fv.prov.fetched_at.isoformat(), "method": fv.method} for fv in p.report(f).observations]
             for f in ("configurations", "carpet_sqft", "rate_psf", "possession", "structure", "rera_phases")
         },
     }
@@ -183,7 +197,7 @@ def apply_override(p: Project, own: OwnProject, radius_km: float, field: str, va
         "structure": lambda v: Structure(**v),
         "rera_phases": lambda v: [ReraPhase(number=x, verified=False, label=f"Phase {i + 1}") if isinstance(x, str) else ReraPhase(**x) for i, x in enumerate(v)],
     }[field](value)
-    getattr(p, field).append(FieldValue(value=parsed, prov=Provenance(source="manual", url=None)))
+    getattr(p, field).observe(FieldValue(value=parsed, prov=Provenance(source="manual", url=None), method="manual", confidence="high"))
     completeness.apply(p)
     conflicts.apply(p)
     match_score.apply(p, own, radius_km)
