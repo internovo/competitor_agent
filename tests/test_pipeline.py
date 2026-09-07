@@ -3,20 +3,17 @@ import pytest
 
 from app import service
 from app.logic import compare
-from app.storage.db import Database
 
 
 @pytest.fixture(scope="module")
-def scan(tmp_path_factory):
+def scan():
     import asyncio, json
     from app.config import FIXTURE_DIR
     from app.models.schema import OwnProject
 
     own = OwnProject(**json.loads((FIXTURE_DIR / "marina64.json").read_text()))
-    db = Database(tmp_path_factory.mktemp("db") / "t.sqlite3")
-    db.save_own(own)
-    rec, meta = asyncio.run(service.run_scan(own, 1.5, "fixture", db, llm=None))
-    return own, rec, meta, db
+    rec, meta = asyncio.run(service.run_scan(own, 1.5, "fixture", llm=None))
+    return own, rec, meta, None
 
 
 def test_counts_and_labels(scan):
@@ -120,8 +117,12 @@ def test_manual_override_lifts_completeness(scan):
         service.apply_override(nova, own, 1.5, "amenities", [])
 
 
-def test_persisted_and_readable(scan):
-    own, rec, _, db = scan
-    latest = db.latest_scan(own.id)
-    assert latest is not None and latest[0].scan_id == rec.scan_id
-    assert db.find_project("P51800048221")[1].name == "Runwal Vertex"
+def test_the_agent_stores_nothing(scan):
+    """The canonical copy lives in Postgres, behind the API's tenancy check in one
+    function. The agent must never learn what a builder is."""
+    from app.config import ROOT
+
+    offenders = [p for p in (ROOT / "app").rglob("*.py") if "sqlite3" in p.read_text(encoding="utf-8")]
+    assert offenders == [], f"the agent still owns a database: {offenders}"
+    _, rec, meta, _ = scan
+    assert rec.scan_id and any("persist:" in line for line in meta["log"])

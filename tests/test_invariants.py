@@ -23,7 +23,7 @@ BASES = {"base", "all_in", "undisclosed"}
 @pytest.fixture(scope="module")
 def scanned():
     own = OwnProject(**json.loads((FIXTURE_DIR / "marina64.json").read_text()))
-    rec, meta = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", db=None, llm=None))
+    rec, meta = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", llm=None))
     return own, rec, meta
 
 
@@ -183,14 +183,14 @@ def test_could_not_verify_lists_exactly_the_fields_never_seen(scanned):
 
 def test_the_same_fixtures_produce_the_same_projects(scanned):
     own, rec, _ = scanned
-    again, _ = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", db=None, llm=None))
+    again, _ = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", llm=None))
     assert [(p.id, p.completeness, p.match_score) for p in service.rank(rec.projects)] == \
            [(p.id, p.completeness, p.match_score) for p in service.rank(again.projects)]
 
 
 def test_a_smaller_radius_returns_fewer_projects(scanned):
     own, rec, _ = scanned
-    tight, _ = asyncio.run(service.run_scan(own, 0.5, "fixture", db=None, llm=None))
+    tight, _ = asyncio.run(service.run_scan(own, 0.5, "fixture", llm=None))
     assert len(service.rank(tight.projects)) <= len(service.rank(rec.projects))
 
 

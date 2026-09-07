@@ -38,7 +38,11 @@ class Settings(BaseSettings):
     # rejects every request on its own. The extraction form is a few hundred tokens; 2k is headroom.
     groq_max_output_tokens: int = 2048
     default_radius_km: float = 1.5
-    db_path: Path = DATA_DIR / "propog.sqlite3"
+
+    # Runs are held in memory only. The canonical copy of a scan is written by the
+    # Node API, against Postgres, where tenancy is enforced in one place.
+    max_runs_held: int = 50
+    run_ttl_hours: float = 2.0
 
     # Discovery
     rera_district: str = "Mumbai Suburban"

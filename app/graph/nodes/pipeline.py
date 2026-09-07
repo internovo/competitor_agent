@@ -386,10 +386,7 @@ async def narrate(state: GraphState, config: RunnableConfig) -> dict:
 
 # ---------------------------------------------------------------- persist
 async def persist(state: GraphState, config: RunnableConfig) -> dict:
-    db = _deps(config).get("db")
-    if db is None:
-        return {}
-    record = ScanRecord(scan_id=state["scan_id"], own_id=state["own"].id, radius_km=state["radius_km"], mode=state["mode"],
-                        projects=state["projects"], dropped=state.get("dropped", []))
-    db.save_scan(record, nearest_metro=state.get("nearest_metro"), log=state.get("log", []))
-    return {"log": [f"persist: scan {state['scan_id']} saved with {len(state['projects'])} projects"]}
+    """The agent stores nothing. This stage exists to stamp the answer as finished
+    and hand it back; the canonical copy is written by the API, against Postgres,
+    where tenancy is enforced in one place."""
+    return {"log": [f"persist: scan {state['scan_id']} complete with {len(state['projects'])} projects"]}

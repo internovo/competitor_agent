@@ -53,14 +53,27 @@ geocode -> discover -> resolve -> [extract per project, in parallel] -> filter -
 |---|---|---|
 | discover | MahaRERA register, Places, Tavily, propOG | Candidate names inside the circle (plus a margin) |
 | resolve | code, Claude only for ambiguous pairs | "Runwal Vertex" and "Vertex by Runwal" become one project |
-| extract | Claude structured output | Each page -> `ExtractedFacts`; each fact -> `FieldValue{value, source, url, fetched_at}` |
+| extract | regex extractors first, Claude for the rest | Each page -> `ExtractedFacts`; each fact -> `FieldValue{value, source, url, fetched_at, method}` |
 | filter | code | inside radius, new launch / under construction only, possession after today, some BHK overlap |
 | score | code | completeness x/6 -> COMPARABLE / PARTIAL / THIN; conflicts; match score for 6/6 only |
 | narrate | Claude, template fallback | One sentence per card and per comparison section, from computed numbers only |
 
 The six fields that make a project COMPARABLE: configurations, carpet area, rate per sq ft (with basis), possession,
-structure, RERA phase numbers. A field is a **list** of values, one per source; when sources disagree the card shows the
-whole span and a "N sources disagree" flag. Missing means "not on file", never estimated.
+structure, RERA phase numbers. A field is a `FieldReport`: a **list** of observations, one per source, **or** a reason
+there are none. A cell cannot be constructed as unknown without carrying which reason - `NOT_PUBLISHED`,
+`NO_RERA_ON_FILE`, `RATE_NOT_PUBLISHED`, `UNPARSEABLE_DATE`, `SOURCES_DISAGREE`, `NOT_FOUND` - so the UI never has to
+print one "Not on file" for three different facts. Missing means missing, never estimated.
+
+## Extraction: regexes first, Claude second
+
+An LLM prompt that says "never estimate" is a request. A regex with a test is a guarantee, so `app/extract/` reads every
+page first - a portal's own spec table before its prose - and only the fields it could not prove are sent to Claude,
+with the known ones named in the prompt. Anything the model answers outside that set is dropped: deterministic wins on
+conflict. `FieldValue.method` records which reader produced each value, and every scan reports the split.
+
+```bash
+uv run python scripts/extraction_split.py    # how much of the form the regexes fill, per field
+```
 
 Match score weights (in `app/config.py`): configuration overlap 25, carpet overlap 20, rate proximity 20 (base rates
 only), possession proximity 15, distance 10, structure 10.
@@ -75,8 +88,10 @@ app/
   sources/           one adapter per source + fetch.py (live/replay cache)
   llm/               Claude client, prompts, template fallbacks
   logic/             geo, eligibility, completeness, conflicts, match_score, resolve, merge, compare
-  storage/db.py      SQLite (JSON blobs)
-data/fixtures/       marina64.json, competitors_malad_west.json, propog_projects.json (+ build_fixtures.py)
+  extract/           deterministic.py (regex extractors), portals.py (spec tables)
+  storage/runs.py    in-memory run store: bounded, TTL, lost on restart
+data/fixtures/       marina64.json, competitors_malad_west.json, propog_projects.json, scan_request.json,
+                     pages/ (prose pages the extractors are measured on)
 docs/                reference screenshots
 tests/
 ```

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import uuid
 from datetime import date
+from collections.abc import Callable
 from typing import Any
 
 from app.config import settings
@@ -14,25 +15,60 @@ from app.logic import completeness, conflicts, match_score
 from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord
 from app.sources.fetch import Fetcher
 from app.sources.registry import build_sources
-from app.storage.db import Database
 
 LABEL_ORDER = {"COMPARABLE": 0, "PARTIAL": 1, "THIN": 2}
 CATEGORY_LABELS = compare_logic.CATEGORY_LABELS
 
 
-async def run_scan(own: OwnProject, radius_km: float, mode: str, db: Database | None, llm: LLM | None = None,
-                   sources: list[str] | None = None) -> tuple[ScanRecord, dict]:
+async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None = None,
+                   sources: list[str] | None = None, on_stage: Callable[[str, dict], None] | None = None,
+                   ) -> tuple[ScanRecord, dict]:
+    """Run the graph. Nothing is persisted here -- the caller owns the answer.
+
+    `on_stage(node, update)` is called as each node finishes, so a polling client
+    sees real progress rather than a spinner.
+    """
     fetcher = Fetcher(mode)
-    deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm if llm is not None else get_llm(), "db": db}
+    deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm if llm is not None else get_llm()}
     scan_id = uuid.uuid4().hex[:12]
-    final = await graph.ainvoke(
-        {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [], "projects": [], "dropped": [], "retry_done": False, "log": []},
-        config={"configurable": deps, "recursion_limit": 50},
-    )
+    state = {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [],
+             "projects": [], "dropped": [], "retry_done": False, "log": []}
+    config = {"configurable": deps, "recursion_limit": 50}
+    if on_stage is None:
+        final = await graph.ainvoke(state, config=config)
+    else:
+        final = dict(state)
+        async for mode, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
+            if mode == "values":
+                final = chunk
+            else:
+                for node, update in chunk.items():
+                    on_stage(node, update or {})
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
     meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls),
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0})}
     return rec, meta
+
+
+async def execute(run) -> "RunRecord":
+    """Run one scan into its RunRecord. Failure ends the run failed, never done."""
+    run.begin("geocode")
+    run.started_at = run.started_at or run.created_at
+    llm = get_llm()
+    run.llm = llm
+
+    def on_stage(node: str, update: dict) -> None:
+        if node:
+            run.begin(node)
+        run.note(update.get("log", []) or [])
+
+    try:
+        rec, meta = await run_scan(run.own, run.radius_km, run.mode, llm=llm, on_stage=on_stage)
+    except Exception as e:  # noqa: BLE001 - the record is the only place this can be reported
+        run.fail(e)
+        return run
+    run.finish(rec, meta, list_payload(rec, run.own, meta))
+    return run
 
 
 def rank(projects: list[Project]) -> list[Project]:

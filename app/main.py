@@ -1,83 +1,79 @@
-"""FastAPI surface. Run: uvicorn app.main:app --reload"""
+"""FastAPI surface. Run: uvicorn app.main:app --reload
+
+The agent owns no storage. The subject arrives in the request, the answer goes
+back in the response, and the Node API decides who may see it. Runs live in memory
+only long enough to be polled.
+"""
 from __future__ import annotations
 
-import json
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
 
 from app import service
-from app.config import FIXTURE_DIR, settings
+from app.config import settings
 from app.llm.client import get_llm
-from app.models.schema import OwnProject
-from app.storage.db import Database
+from app.models.schema import OwnProject, Project
+from app.storage.runs import RunRecord, RunStore
 
-app = FastAPI(title="propOG Competitor Analysis Agent", version="0.1.0")
-db = Database(settings.db_path)
-
-
-@app.on_event("startup")
-def _seed() -> None:
-    p = FIXTURE_DIR / "marina64.json"
-    if p.exists() and db.get_own("marina64") is None:
-        db.save_own(OwnProject(**json.loads(p.read_text())))
+app = FastAPI(title="propOG Competitor Analysis Agent", version="0.2.0")
+runs = RunStore()
 
 
 @app.get("/health")
 def health() -> dict:
-    return {"ok": True, "mode": settings.fetch_mode, "llm": settings.has_llm, "provider": settings.llm_provider, "model": settings.llm_model}
+    return {"ok": True, "mode": settings.fetch_mode, "llm": settings.has_llm,
+            "provider": settings.llm_provider, "model": settings.llm_model, "runs_held": len(runs)}
 
 
-@app.get("/own-projects")
-def list_own() -> list[dict]:
-    return [{"id": o.id, "name": o.name, "builder": o.builder, "locality": o.locality} for o in db.list_own()]
+class ScanRequest(BaseModel):
+    own: OwnProject
+    radius_km: float | None = Field(default=None, gt=0, le=10)
+    mode: str | None = Field(default=None, pattern="^(fixture|replay|live)$")
 
 
-@app.post("/own-projects", status_code=201)
-def create_own(own: OwnProject) -> dict:
-    db.save_own(own)
-    return {"id": own.id}
-
-
-def _own(own_id: str) -> OwnProject:
-    own = db.get_own(own_id)
-    if own is None:
-        raise HTTPException(404, f"own project '{own_id}' not found")
-    return own
-
-
-@app.post("/own-projects/{own_id}/scan")
-async def scan(own_id: str, radius_km: float = Query(None, gt=0, le=10), mode: str = Query(None, pattern="^(fixture|replay|live)$")) -> dict:
-    own = _own(own_id)
-    radius_km = radius_km or settings.default_radius_km
-    mode = mode or settings.fetch_mode
+@app.post("/scans", status_code=202)
+async def start_scan(body: ScanRequest) -> dict:
+    radius_km = body.radius_km or settings.default_radius_km
+    mode = body.mode or settings.fetch_mode
     if mode == "live" and not settings.has_llm:
         raise HTTPException(400, f"live mode needs an API key for provider '{settings.llm_provider}' (ANTHROPIC_API_KEY or GROQ_API_KEY)")
-    try:
-        rec, meta = await service.run_scan(own, radius_km, mode, db)
-    except Exception as e:  # noqa: BLE001
-        raise HTTPException(500, f"scan failed: {type(e).__name__}: {e}") from e
-    return service.list_payload(rec, own, meta)
+    run = runs.create(body.own, radius_km, mode)
+    await service.execute(run)
+    return {"run_id": run.run_id, "status": run.status}
 
 
-@app.get("/own-projects/{own_id}/competitors")
-def competitors(own_id: str) -> dict:
-    own = _own(own_id)
-    found = db.latest_scan(own_id)
-    if found is None:
-        raise HTTPException(404, "no scan yet; POST /own-projects/{id}/scan first")
-    rec, meta = found
-    return service.list_payload(rec, own, meta)
+def _run(run_id: str) -> RunRecord:
+    run = runs.get(run_id)
+    if run is None:
+        raise HTTPException(404, f"run '{run_id}' not found; runs are held in memory only and are lost on restart")
+    return run
 
 
-@app.get("/competitors/{cid}")
-def competitor(cid: str, own_id: str | None = None) -> dict:
-    found = db.find_project(cid, own_id)
-    if found is None:
-        raise HTTPException(404, f"competitor '{cid}' not found in any scan")
-    rec, p, _ = found
-    return service.detail_payload(p, _own(rec.own_id), rec)
+def _finished(run_id: str) -> RunRecord:
+    run = _run(run_id)
+    if run.status != "done":
+        raise HTTPException(409, f"run '{run_id}' is {run.status}; poll GET /scans/{run_id} until it is done")
+    return run
+
+
+@app.get("/scans/{run_id}")
+def scan_status(run_id: str) -> dict:
+    return _run(run_id).body()
+
+
+def _project(run: RunRecord, cid: str) -> Project:
+    p = next((x for x in run.rec.projects if x.id == cid), None)
+    if p is None:
+        raise HTTPException(404, f"competitor '{cid}' not in run '{run.run_id}'")
+    return p
+
+
+@app.get("/scans/{run_id}/competitors/{cid}")
+def competitor(run_id: str, cid: str) -> dict:
+    run = _finished(run_id)
+    return service.detail_payload(_project(run, cid), run.own, run.rec)
 
 
 class Override(BaseModel):
@@ -85,42 +81,32 @@ class Override(BaseModel):
     value: Any
 
 
-@app.post("/competitors/{cid}/fields")
-def override(cid: str, body: Override) -> dict:
-    found = db.find_project(cid)
-    if found is None:
-        raise HTTPException(404, f"competitor '{cid}' not found")
-    rec, p, meta = found
-    own = _own(rec.own_id)
+@app.post("/scans/{run_id}/competitors/{cid}/fields")
+def override(run_id: str, cid: str, body: Override) -> dict:
+    """A rep records a fact from a site visit. It never leaves this run."""
+    run = _finished(run_id)
+    p = _project(run, cid)
     try:
-        p = service.apply_override(p, own, rec.radius_km, body.field, body.value)
+        p = service.apply_override(p, run.own, run.radius_km, body.field, body.value)
     except (ValueError, TypeError) as e:
         raise HTTPException(422, str(e)) from e
-    db.update_project(rec, p, meta)
-    return service.detail_payload(p, own, rec)
+    run.payload = service.list_payload(run.rec, run.own, run.meta)
+    return service.detail_payload(p, run.own, run.rec)
 
 
 class CompareRequest(BaseModel):
-    own_id: str
     competitor_ids: list[str]
 
 
-@app.post("/compare")
-async def compare(body: CompareRequest) -> dict:
+@app.post("/scans/{run_id}/compare")
+async def compare(run_id: str, body: CompareRequest) -> dict:
+    run = _finished(run_id)
     if not 1 <= len(body.competitor_ids) <= 2:
         raise HTTPException(422, "choose one or two competitors")
-    own = _own(body.own_id)
-    found = db.latest_scan(body.own_id)
-    if found is None:
-        raise HTTPException(404, "no scan yet")
-    rec, _ = found
-    by_id = {p.id: p for p in rec.projects}
     comps = []
     for cid in body.competitor_ids:
-        p = by_id.get(cid)
-        if p is None:
-            raise HTTPException(404, f"competitor '{cid}' not in latest scan")
+        p = _project(run, cid)
         if p.label == "THIN":
             raise HTTPException(422, f"'{p.name}' is THIN ({p.completeness}/6) and cannot be analysed")
         comps.append(p)
-    return await service.compare_payload(own, comps, rec.radius_km, get_llm())
+    return await service.compare_payload(run.own, comps, run.radius_km, get_llm())
