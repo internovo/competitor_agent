@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJV8X9yzO35zsRVgcd_cpWHrc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Food Corporation of India Warehouse, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.217356,
+        "longitude": 72.866678
+      },
+      "displayName": {
+        "text": "Magathane Metro Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJydaFzjO35zsRqHyt00A1vss",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Food Corporation of India Warehouse, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.217178999999998,
+        "longitude": 72.866723
+      },
+      "displayName": {
+        "text": "Magathane",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJuXW82TO35zsR_o3MrLilJLc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.216548,
+        "longitude": 72.867178
+      },
+      "displayName": {
+        "text": "Magathane Metro Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJNYeil8Kw5zsRn3__Gx-LOaE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ashok Van, Borivali East, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.24403,
+        "longitude": 72.864989999999992
+      },
+      "displayName": {
+        "text": "Ganesh Nagar (Dahisar) or Gokul Anand Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJAb9Ll8Kw5zsR2L2iKKool68",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shreenath Nagar, Ashok Van, Dahisar East, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.244,
+        "longitude": 72.86525
+      },
+      "displayName": {
+        "text": "Gokulanand Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJh1cmvcKw5zsRnNnKOZbkv1w",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shankheshwar Nagar, Borivali, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.244783899999998,
+        "longitude": 72.86489850000001
+      },
+      "displayName": {
+        "text": "Gokulanand Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJwVGUwsK25zsR0NE0H9olexg",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5RXQ+897, Orlem Tank Rd, Malad, Orlem, Lourdes Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1982826,
+        "longitude": 72.8384365
+      },
+      "displayName": {
+        "text": "Suman Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

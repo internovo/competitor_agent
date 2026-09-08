@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJb5GgQc-25zsRyo9o6QgO8Hc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2088507,
+        "longitude": 72.8352908
+      },
+      "displayName": {
+        "text": "Kamraj Nagar (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ0_UXQc-25zsR1GiFYe7y8jg",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2086805,
+        "longitude": 72.835028
+      },
+      "displayName": {
+        "text": "Kamraj Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJ40xHQc-25zsR0MAoM43IpCI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20863,
+        "longitude": 72.835
+      },
+      "displayName": {
+        "text": "Kamraj Nagar (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

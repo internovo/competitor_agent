@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJEyLEytu25zsReZBEwEePqMg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kamala Nagar, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2053807,
+        "longitude": 72.8442168
+      },
+      "displayName": {
+        "text": "Mahatma Gandhi Swimming Pool (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ3cIY-9q25zsRbO9zj3ty54A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Amrut Nagar, Patel Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2057467,
+        "longitude": 72.842138699999992
+      },
+      "displayName": {
+        "text": "Kandivali Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJX4B7-9q25zsRb7wehAJ7SWQ",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Amrut Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.205654499999998,
+        "longitude": 72.842098
+      },
+      "displayName": {
+        "text": "Kandivali Village",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

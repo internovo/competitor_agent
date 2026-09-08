@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJEYGGHMS25zsRv7KE5Jv4XCA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.202350799999998,
+        "longitude": 72.8341958
+      },
+      "displayName": {
+        "text": "Laljipada",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ1bA4_cO25zsRfYjjc79daco",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2010181,
+        "longitude": 72.8338201
+      },
+      "displayName": {
+        "text": "Laljipada",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJp4u238O25zsRrbsCC2cqlUc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Irani Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2000734,
+        "longitude": 72.8341294
+      },
+      "displayName": {
+        "text": "Janta Colony or Shiv Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

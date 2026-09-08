@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJd-7PBTG35zsR5Y2wqEv5Rns",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Asha Nagar, Borivali East, Mumbai, Maharashtra 400101, India",
+      "location": {
+        "latitude": 19.213964,
+        "longitude": 72.866737
+      },
+      "displayName": {
+        "text": "Shree Sai Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJSb3pGjG35zsRITXlSjURgj8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "90 Feet Rd, Kandivali, Asha Nagar, Kandivali East, Mumbai, Maharashtra 400101, India",
+      "location": {
+        "latitude": 19.2137939,
+        "longitude": 72.8669389
+      },
+      "displayName": {
+        "text": "Shree Sai Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOwyXfDG35zsRfYpzmPw-2p8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Asha Nagar, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2161858,
+        "longitude": 72.866975
+      },
+      "displayName": {
+        "text": "Magathane Tel Exchange",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

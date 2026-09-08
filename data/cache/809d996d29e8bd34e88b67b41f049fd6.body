@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJTS7AIM625zsRsbst7cmEdnQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Panchsheel Garden, Siddhivinayak Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2118824,
+        "longitude": 72.839727
+      },
+      "displayName": {
+        "text": "Mahavir Nagar (Kandivli-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJufxJ89G25zsRDKICt6ANuOw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21333,
+        "longitude": 72.84137
+      },
+      "displayName": {
+        "text": "Punchasheel Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJRx_zjNG25zsRN4RFHjNhHU8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2134,
+        "longitude": 72.84138
+      },
+      "displayName": {
+        "text": "Punchasheel Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

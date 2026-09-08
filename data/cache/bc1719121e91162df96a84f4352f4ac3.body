@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJT6ObRre25zsROlZJXZyQjrY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Charkop Industrial Estate, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20742,
+        "longitude": 72.82298999999999
+      },
+      "displayName": {
+        "text": "Brimco",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJlaYeR7e25zsRicOOvT72Ozs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Charkop Industrial Estate, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20759,
+        "longitude": 72.823
+      },
+      "displayName": {
+        "text": "Brimco",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJH3NF2bC25zsRwlaq_QR_RyA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Charkop Gaon, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208714,
+        "longitude": 72.821088
+      },
+      "displayName": {
+        "text": "Charkop Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

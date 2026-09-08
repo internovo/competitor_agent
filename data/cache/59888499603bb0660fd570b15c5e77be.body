@@ -1,0 +1,394 @@
+{
+  "places": [
+    {
+      "id": "ChIJgycoLLu25zsRdlWYkiuJc2U",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "GURUKRUPA MARINA ENCLAVE, Marina Enclave Rd, Near Bilabong School, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.202101,
+        "longitude": 72.8150436
+      },
+      "displayName": {
+        "text": "Gurukrupa Marina Enclave",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJW79tyzOx5zsRzul_8jKWhB4",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kanti Park Rd, Chikoowadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.223807,
+        "longitude": 72.8361817
+      },
+      "displayName": {
+        "text": "Utopia Garden Grove Phase 2",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJWymMisS35zsRfNQRSaXOTII",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, New Link Rd, opp. landmark Restaurant, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.191909,
+        "longitude": 72.835933
+      },
+      "displayName": {
+        "text": "Auris Serenity",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJ7fFfv9C35zsRnvTPK1gzfPc",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sundar Cross Ln, Malad, Orlem, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1918669,
+        "longitude": 72.8353439
+      },
+      "displayName": {
+        "text": "Auris Serenity Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJQaNn0MW25zsR6TrbkIqnJcg",
+      "types": [
+        "apartment_building",
+        "corporate_office",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shiv Shankar Nagar, Link Road, Lalji Pada, Kandivali (West), Shop No.1, Lalji Pada, New Link Rd, Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203754,
+        "longitude": 72.8345873
+      },
+      "displayName": {
+        "text": "Siddha Seabrook",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJgycoLLu25zsRNkyjytbeZL8",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Marina Enclave Rd, Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.2017728,
+        "longitude": 72.8150848
+      },
+      "displayName": {
+        "text": "Marina Enclave A Wing",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJmUZXJc-25zsR7ixtUw_k-BE",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali Link Road, Off, Mahatma Gandhi Rd, Kandivali, Shravan Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2091119,
+        "longitude": 72.834976400000016
+      },
+      "displayName": {
+        "text": "Orchid Suburbia",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJo_5qJ0C35zsRah2DVMvqhos",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bhagwan Gautam Buddha Rd, Malad, Orlem, Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1966833,
+        "longitude": 72.8367852
+      },
+      "displayName": {
+        "text": "Shreeji Atlantis by Shreeji Group",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJNXf21Z-35zsRhuJQe8C1Lw0",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Number 1, Ambedkar Rd, Kandivali, Charkop, Ambedkar Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2053632,
+        "longitude": 72.823750199999992
+      },
+      "displayName": {
+        "text": "Parinee Essence",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJrYkVJDOx5zsR9jpZhTiTF1M",
+      "types": [
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "RDP 10, Chikoowadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2199667,
+        "longitude": 72.8360233
+      },
+      "displayName": {
+        "text": "Garden Grove Complex",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJC3c3mee25zsRDNDah2d5vPs",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Adarsh Dairy Rd, Malad, Adarsh Dugdhalaya, Dominic Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1954313,
+        "longitude": 72.8421329
+      },
+      "displayName": {
+        "text": "RUSTOMJEE ADARSH REGAL B",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJi3lsXc-25zsRwWqctk3b8LY",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, opp. Orchid Suburbia, Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2083496,
+        "longitude": 72.8353755
+      },
+      "displayName": {
+        "text": "Login chs",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJuQV2juS35zsRS3gFuY0GOfs",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RWV+P86, Adarsh Dairy Rd, Malad, Adarsh Dugdhalaya, Kailash Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.196795599999998,
+        "longitude": 72.8432746
+      },
+      "displayName": {
+        "text": "Agarwal Residency",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJEczgM9C35zsRzre3ufaaEVo",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "VeenaSmartHomes, Ambedkar Rd, Kandivali, Charkop, Charkop Gaon, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2064313,
+        "longitude": 72.821334999999991
+      },
+      "displayName": {
+        "text": "Veena Smart Homes Sales Office",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJExwa5s-25zsRON_TL2t9K68",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ekta Bhoomi Classic Ananth Bhoomi, 31, Damu Anna Date Marg, Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2087961,
+        "longitude": 72.8391571
+      },
+      "displayName": {
+        "text": "Anant Bhoomi",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJbU1r_9y25zsRaFpbmRhkTQA",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Vishwa Milan Society, Captain Sameer Chandavarkar Rd, Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2079442,
+        "longitude": 72.8386398
+      },
+      "displayName": {
+        "text": "Vishwa Milan CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJWQA_ktG25zsRmgnZpERESrw",
+      "types": [
+        "apartment_building",
+        "finance",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "A-WING, Boraspada Rd, Kandivali, Panchsheel Garden, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.213017999999998,
+        "longitude": 72.8414966
+      },
+      "displayName": {
+        "text": "Raj Arcade",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJjW8sYuq25zsRryYIHSFUZsQ",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Nxt. to, Ryan International School, Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.194167099999998,
+        "longitude": 72.8308199
+      },
+      "displayName": {
+        "text": "Abrol Vastu Park",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJjUwXr9q25zsR0gUujbo34YI",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sunder Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208126999999998,
+        "longitude": 72.841528099999991
+      },
+      "displayName": {
+        "text": "Neelyog Aashiyana Co-op Hsg Soc.",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJk0YVWN625zsRVE4cz4EkB8s",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RXX+X4W, Ram Ln, Kandivali, Irani Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.1999787,
+        "longitude": 72.8478343
+      },
+      "displayName": {
+        "text": "Shreeji Kutir Chs Ltd.",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    }
+  ]
+}

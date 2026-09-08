@@ -1,0 +1,382 @@
+{
+  "places": [
+    {
+      "id": "ChIJdU5q8Jax5zsREDGfg664He4",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "6VJ3+H5H, RC Patel Rd, Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2314251,
+        "longitude": 72.8529757
+      },
+      "displayName": {
+        "text": "New Tashkent Terrace CHSL",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJK6nMlOex5zsRtNxDu6gJmKY",
+      "types": [
+        "housing_complex",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Devi Das Ln, LIC Colony, Borivali, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2408401,
+        "longitude": 72.848672999999991
+      },
+      "displayName": {
+        "text": "H. Rishabraj Phoenix",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJA0AbwNew5zsR9I9QBTQTYoo",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "6VJ3+75Q, Chandavarkar Rd, Manek Nagar, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.230722,
+        "longitude": 72.852972999999992
+      },
+      "displayName": {
+        "text": "ANUJA CO-OP HSG SOCIETY",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJ0cJI79S25zsRDKdxerqLM9c",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "sealord building, 1, Sai Baba Nagar Ln, Om Shree Geetanjali Nagar, Ram Nagar, Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2184061,
+        "longitude": 72.8477805
+      },
+      "displayName": {
+        "text": "Sealord Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ8wo5ZJ2x5zsRBmjTvcTKtNw",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Cross Rd, behind Reliance Mall, Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.224268,
+        "longitude": 72.8504273
+      },
+      "displayName": {
+        "text": "Aura by DSD GROUP",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJI5DLc7Gx5zsR3hxnwORjats",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Amann Solitaire society, Chandavarkar Rd, near food loads, Kamdhenu Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2305307,
+        "longitude": 72.8487305
+      },
+      "displayName": {
+        "text": "Amann Solitaire",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJMaRBKWyx5zsRZls8Oc0epbs",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "formattedAddress": "Shop No. 14, Madhav Kunj Apartment A-Wing, Chamunda Circle, Sardar Vallabhbhai Patel Rd, Mandapeshwar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.234085399999998,
+        "longitude": 72.8547956
+      },
+      "displayName": {
+        "text": "The Pant Project Store - Borivali, Mumbai",
+        "languageCode": "en"
+      },
+      "primaryType": "clothing_store"
+    },
+    {
+      "id": "ChIJ62cAt42x5zsRtWC8oYf9bG4",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Neelkanth Nagar, Neelkanth Nagar, CHSL, Swami Vivekanand Rd, Meghdoot, Hari Om Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2217409,
+        "longitude": 72.85387879999999
+      },
+      "displayName": {
+        "text": "Neelkanth Nagar CHSL",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJjZAAHdW25zsRRW2iBmp42no",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Dlh Kesely, Ram Nagar Rd, Geetanjali Nagar, Sheetal Co-op Housing Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2178584,
+        "longitude": 72.8488347
+      },
+      "displayName": {
+        "text": "DLH - Kesley",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJbR2gv6qx5zsRFSDcW3W5olw",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Neelkamal, near MCF Joggers Park, opp. Yogi Nagar, Gandhi Nagar, Govind Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.234441,
+        "longitude": 72.847792
+      },
+      "displayName": {
+        "text": "Avyukta Neelkamal",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJKeozziax5zsRy0RSfs5qIts",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "New Gagangiri, 6RPX+Q47, Van Udyan Rd, Govind Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2369187,
+        "longitude": 72.847791399999991
+      },
+      "displayName": {
+        "text": "New Gagangiri Society",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJ9ZB_ex6x5zsRxRMxaMcljxY",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "formattedAddress": "6RXX+9JR Jamuna Apartment, IC Colony Cross Road No. 6, I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.248709599999998,
+        "longitude": 72.848989899999992
+      },
+      "displayName": {
+        "text": "Jamuna Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "premise"
+    },
+    {
+      "id": "ChIJuRgLSwC35zsRvXjAHjkT4O0",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Lodha Altus, off Swami Vivekanand Road, Om Shree Geetanjali Nagar, Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2172925,
+        "longitude": 72.847278199999991
+      },
+      "displayName": {
+        "text": "Lodha Altus, Borivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJHSgnM76x5zsRl3hCkJmOXSU",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ground, Paradigm Anantaara Experience Centre, next to Shimpoli, Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.222628399999998,
+        "longitude": 72.842791699999992
+      },
+      "displayName": {
+        "text": "Paradigm Anantaara - Shimpoli, Borivali (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJe67vlJax5zsRBVUPMPn0_mk",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shiv Tapasya, opp. Sushrut Hospital, off Eksar Road, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2348829,
+        "longitude": 72.8468844
+      },
+      "displayName": {
+        "text": "Shiv Tapasya",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJBSR8k9ew5zsRAJASazM8vWg",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "formattedAddress": "New Tashkent Terrace, Chandavarkar Rd, Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2311232,
+        "longitude": 72.8531488
+      },
+      "displayName": {
+        "text": "New Tashkent Terrace",
+        "languageCode": "en"
+      },
+      "primaryType": "premise"
+    },
+    {
+      "id": "ChIJxTQM5Fux5zsRsUaOCJYR218",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "A/004, Prathamesh Horizon, New MHB Colony, New Link Rd, opposite DON Bosco School, New MHB Colony, Ashtavinayak Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2277736,
+        "longitude": 72.840586700000017
+      },
+      "displayName": {
+        "text": "SAILEE DEVELOPERS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJhbxO3NS25zsRPFckPBeVut0",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Sindhi Colony, Ram Nagar, Sheetal Co-op Housing Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.219065399999998,
+        "longitude": 72.8480995
+      },
+      "displayName": {
+        "text": "Parwana Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ16WA-iqx5zsRJXUkfdwhTOE",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli Rd, opp. Rayanigram, Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2227721,
+        "longitude": 72.8494025
+      },
+      "displayName": {
+        "text": "Mayfair Shyam Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJg0hhGyGx5zsROML0f-ryW5s",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Devidas Rd, Near St. Lawerence High School, LIC Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2393946,
+        "longitude": 72.8484721
+      },
+      "displayName": {
+        "text": "Aquaria Grande - The Wadhwa Group,Tower A",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

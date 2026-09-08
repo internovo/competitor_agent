@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJIRokJsS25zsRQ67lfSja_kY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Link Road, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203758999999998,
+        "longitude": 72.834073
+      },
+      "displayName": {
+        "text": "Laljipada Police Chowky",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJAWFKL8S25zsRdVe4SO7_uFk",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2038815,
+        "longitude": 72.834205
+      },
+      "displayName": {
+        "text": "Laljipada Police Chowki",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJ4en8LsS25zsRogj0U2mM5l4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203566199999997,
+        "longitude": 72.8344736
+      },
+      "displayName": {
+        "text": "Laljipada Police Chowky",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

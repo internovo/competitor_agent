@@ -1,0 +1,2144 @@
+
+<!DOCTYPE html>
+<html class="h-100" lang="en-US">
+    <head>
+        <title>Krishna heritage - Guest Reservations</title>
+        <script type="97907f1624b6be851fb15967-text/javascript">
+    function isProduction(){ return true; }
+    var abTests = [];
+    window.dataLayer = window.dataLayer || []; 
+    var abTestsObject = [];
+    abTests.forEach(abTest => {
+        abTestsObject[abTest.test_name] = abTest.variant_id;
+    });
+    dataLayer.push({'event':'abTests', ...abTestsObject});
+</script>
+
+    <link rel="canonical" href="https://www.guestreservations.com/krishna-heritage/booking" />        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="As an independent booking service offering over 100,000 hotels worldwide, we can get you the same deals you expect with a bigger travel agency or direct from the hotel.">
+        <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#202027">
+<meta name="msapplication-TileColor" content="#202027">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">                    <script type="97907f1624b6be851fb15967-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        const gtmId = 'GTM-M53QD54C';
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('set', 'url_passthrough', true);
+
+        // Set GTM required
+        window.GR = window.GR || {};
+        window.GR.consentMode = 'default';
+        window.GR.env = 'production';
+        window.GR.gtmDebug = false;
+
+        window.dataLayer.push({
+            'event': 'DataLayer Set',
+            'consentMode': 'default',
+            'environment': 'production',
+            'gtmDebug': false,
+            'language': 'en-US',
+            'iubenda_language': 'en',
+            'page_type': 'LP',
+            'yii_controller_id': 'booking',
+            'yii_action_id': 'landing',
+            'mp_api_url': 'https://mpl.guestreservations.com',
+            'mp_debug_enabled': false,
+            'mixpanel_project_id': '941529',
+            'mixpanel_project_token': 'c5491a995ed9e9ee29ba488d355afed9',
+            'facebook_pixel_id': '256876330774315',
+            'ga4_measurement_id': 'G-WF186HV3S4',
+            'rokt_account_id': '3194195305928391141',
+            'bing_uet_tag_id': '5267870',
+            'clicktripz_publisher_id': '39fab4bfcefd4694ba169f99733afe55',
+            'criteo_account_id': '57373',
+            'klaviyo_account_id': 'VHVDfn',
+        });
+    </script>
+
+    <!-- Google Tag Manager [GTM-M53QD54C][default] -->
+    <script type="97907f1624b6be851fb15967-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                "/metrics/?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M53QD54C');
+    </script>
+    <!-- End Google Tag Manager [GTM-M53QD54C][default] -->
+                                <script type="97907f1624b6be851fb15967-text/javascript">
+  (function (d, a, s, h, z) {
+    d[a] ||
+      ((z = d[a] =
+        function () {
+          h.push(arguments);
+        }),
+      (z._t = new Date()),
+      (z._v = 1),
+      (h = z._q = []));
+  })(window, "dash0");
+  window.isDash0Debug = function() {
+    return window.location.hostname === 'localhost' ||
+           window.location.hostname.indexOf('dev') !== -1 ||
+           window.location.search.indexOf('dash0_debug=1') !== -1;
+  };
+  try {
+    dash0("init", {"serviceName":"guestreservations","endpoint":{"url":"https://ingress.us-west-2.aws.dash0.com","authToken":"auth_LCyMgzAZtjE90Ijm8YNxAqkabYXB9rZK","dataset":"prod"},"environment":"production","enabledInstrumentations":[],"serviceVersion":"v202608B"});
+    window.isDash0Debug() ? console.log('[dash0] initialized') : null;
+  } catch (e) {}
+</script>
+<script defer crossorigin="anonymous" src="https://unpkg.com/@dash0/sdk-web@0.20.0/dist/dash0.iife.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+                                        <script type="97907f1624b6be851fb15967-text/javascript">
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+
+    var originalPush = window.dataLayer.push;
+
+    function sendClicktripzEvent(obj) {
+      if (!obj || obj.event !== 'launchTrigger') {
+        return;
+      }
+      window.isDash0Debug?.() ? console.log('[Dash0] [CT] sendClicktripzEvent', obj) : null;
+      if (typeof window.dash0 !== 'function') {
+        return;
+      }
+      try {
+        dash0('sendEvent', 'clicktripz.launch', { attributes: obj, severity: "INFO" });
+      } catch (e) {}
+    }
+
+    var snapshot = window.dataLayer.slice();
+    for (var i = 0; i < snapshot.length; i++) {
+      sendClicktripzEvent(snapshot[i]);
+    }
+
+    window.dataLayer.push = function () {
+      for (var i = 0; i < arguments.length; i++) {
+        try { sendClicktripzEvent(arguments[i]); } catch (e) {}
+      }
+      return originalPush.apply(this, arguments);
+    };
+  })();
+</script>
+                                <script type="97907f1624b6be851fb15967-text/javascript">
+    window.eppoConfig = {
+        eppoEnabled: true,
+        eppoClientSideEnabled: true,
+        apiKey: "5EOCvPx2OrQAkHV7FDN6B37LN.ZWg9Y2xjaTlzLmUuZXBwby5jbG91ZA",
+        experiments: [{"id":"CHECKOUT_SUCCESS_REVIEW_SYSTEM","test_name":"GR-XP-co-reviews"}],
+        subjectAttributes: {"device":"computer","country":"IN","region":"MH","source":"Direct","language":"en","botScore":"93","verifiedBot":"false","threatScore":"0","hostname":"web02","environment":"production","page":"LP"},
+        defaultAssignment: "no_assignment"
+    }
+
+    // Wait for Eppo SDK to be available
+    function waitForEppo(callback, maxAttempts = 25) {
+        if (typeof eppo !== 'undefined') {
+            callback();
+            return;
+        }
+        
+        if (maxAttempts <= 0) {
+            console.error('Eppo SDK failed to load');
+            return;
+        }
+
+        setTimeout(() => waitForEppo(callback, maxAttempts - 1), 100);
+    }
+</script>                <link rel="preconnect" href="https://adservice.google.com">
+        <link rel="preconnect" href="https://td.doubleclick.net">
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="preconnect" href="https://www.google.com">
+        
+        <link href="/boost/booking-compressed.e620fa7f.css" rel="stylesheet">
+<link href="/assets/4885b879/css/breadcrumb-list.ad360b8f.css" rel="stylesheet">
+<link href="/css/consent.1746199029.css" rel="stylesheet">
+<link href="/css/dist.1778599500.css" rel="stylesheet">
+<link href="/assets/14c07ef8/css/language.79e7c9f4.css" rel="stylesheet">
+<link href="/assets/3b774fc2/css/mobile-menu.2a4a6129.css" rel="stylesheet">
+<script src="/boost/booking-compressed.b18882e8.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.messagestore.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.fallbacks.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.parser.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.emitter.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/js/i18n/jquery.i18n.language.1730473753.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+<script src="/assets/3b774fc2/js/mobile-menu.906d65b6.js" type="97907f1624b6be851fb15967-text/javascript"></script>        <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="szrwGQFWbpebEQuVADSF4z6EayYjEYh6Typ_KqyAakPZCok0eGBeuuF8W-FNVs2RXLc8XkpAzDN5UzJQw-kkEA==">
+        <script async type="97907f1624b6be851fb15967-text/javascript">
+            var sid = 'd618f1e228f31e85b8e80418c1f5f4e1';
+            var Main = GR.loadPage('layouts.Main', {"isProduction":true,"isDevelopmentServer":false,"breadcrumbPhone":"","breadcrumbPhoneType":null,"mixpanelAdultsRoomChildrenData":[],"mixpanelProjectToken":"c5491a995ed9e9ee29ba488d355afed9","mixpanelAPIURL":"https:\/\/mpl.guestreservations.com","mixpanelDebug":false,"customerType":"Non-Member","feeType":"Fees","serverHost":"web02","userCountry":"IN","userRegion":"MH","device":"computer","sid":"d618f1e228f31e85b8e80418c1f5f4e1","botScore":"93","ja4":"t13d1516h2_8daaf6152771_806a8c22fdea","ja3":"66914aec74e462be5f35b13d6e9ce35e","verifiedBot":"false","threatScore":"0","currentPage":"LP","sessionId":"d618f1e228f31e85b8e80418c1f5f4e1","deviceUserId":"86636ca7-3a9f-4eeb-b2f8-4771e00699fb","trafficSource":"Direct","entryPage":"LP","ipAddress":"103.54.188.234","sendingForterTokenBreadcrumbEnabled":false,"breadcrumbPropertyUuid":"f91c4171-9aba-5b5c-bb19-c57a7e701c09","userAttributionEnabled":true,"proxyMixpanelEventsEnabled":true,"mixpanelRecordingEnabled":false,"sendBeaconTrackingBeforeNav":true,"dash0WebCtEnabled":true,"breadcrumbSystemType":"Enhanced","language":"en-US","languages":{"en-US":{"slug":"en","tag":"en-US","name":"English","active":true,"default":true},"es-419":{"slug":"es","tag":"es-419","name":"Espa\u00f1ol","active":true,"default":false},"es-ES":{"slug":"es-ES","tag":"es-ES","name":"Espa\u00f1ol (Espa\u00f1a)","active":true,"default":false},"de-DE":{"slug":"de","tag":"de-DE","name":"Deutsch","active":true,"default":false},"fr-FR":{"slug":"fr","tag":"fr-FR","name":"Fran\u00e7ais","active":true,"default":false},"pt-BR":{"slug":"pt","tag":"pt-PT","name":"Portugu\u00eas","active":true,"default":false},"it-IT":{"slug":"it","tag":"it-IT","name":"Italiano","active":true,"default":false},"nl-NL":{"slug":"nl","tag":"nl-NL","name":"Nederlands","active":true,"default":false},"pl-PL":{"slug":"pl","tag":"pl-PL","name":"Polski","active":true,"default":false},"tr-TR":{"slug":"tr","tag":"tr-TR","name":"T\u00fcrk\u00e7e","active":true,"default":false},"id-ID":{"slug":"id","tag":"id-ID","name":"Bahasa Indonesia","active":true,"default":false},"ms-MY":{"slug":"ms","tag":"ms-MY","name":"Bahasa Melayu","active":true,"default":false},"sv-SE":{"slug":"sv","tag":"sv-SE","name":"Svenska","active":true,"default":false}},"languageSlugs":["en","es","es-ES","de","fr","pt","it","nl","pl","tr","id","ms","sv"],"appVersion":"v202608B","gtmContainerId":"GTM-M53QD54C","gtmSetupVersion":"consolidated","gtmLoadedEventEnabled":false,"gtmOverrideRule":null,"gtmDefaultConsentMode":"default"});
+        </script>
+                <script type="97907f1624b6be851fb15967-text/javascript" async>
+            window.criteo_q = window.criteo_q || [];
+            window.criteo_q.push({
+                event: "setAccount",
+                account: "57373"
+            });
+        </script>
+        <!-- Begin Criteo Asynchronous Code -->
+        <script type="97907f1624b6be851fb15967-text/javascript" async>
+            window.criteo_q = window.criteo_q || [];
+            var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+            window.criteo_q.push({
+                    event: "setAccount",
+                    account: "57373"
+                }, {
+                    event: "setSiteType",
+                    type: deviceType
+                }
+                , {"event":"viewItem","item":"f91c4171-9aba-5b5c-bb19-c57a7e701c09"}, {"event":"setData","ui_target":"yes"}            );
+        </script>
+        <!-- End Criteo Asynchronous Code -->
+            <script type="97907f1624b6be851fb15967-text/javascript">
+    (function(w, d, s, v, f, a, m) {
+        w[f] = w[f] || {};
+        w[f].init = w[f].init || function() {
+            (w[f]._q = w[f]._q || []).push(arguments);
+        }
+        a = d.createElement(s);
+        a.type = 'text/javascript';
+        a.async = true;
+        a.src = v;
+        m = d.getElementsByTagName(s)[0];
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', 'https://sdk.pps.priceline.com/v1/client.js', 'ppsOne');
+</script>        <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.guestreservations.com"},{"@type":"ListItem","position":2,"name":"Countries","item":"https://www.guestreservations.com/hotels"},{"@type":"ListItem","position":3,"name":"India","item":"https://www.guestreservations.com/hotels-India"},{"@type":"ListItem","position":4,"name":"Badami","item":"/hotels/in/badami"},{"@type":"ListItem","position":5,"name":"Krishna heritage","item":"/krishna-heritage/booking"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Hotel","name":"Krishna heritage","description":"Experience an abundance of unparalleled facilities and features at Krishna heritage.Maintain seamless communication using the complimentary Wi-Fi at hotel. Effortlessly arrange transportation to and from the airport using the hotel's airport transfer services. Discovering Badami becomes even more accessible, thanks to the taxi amenities provided at the hotel. For visitors traveling by automobile, complimentary parking is available. Reception assistance is offered at the hotel featuring express check-in or check-out. For extended visits or whenever required, the laundry service ensures your preferred travel garments remain fresh and accessible.Craving relaxation? Make the most of your stay at the Krishna heritage with convenient amenities like room service and daily housekeeping at your disposal. Kindly note that smoking is prohibited in the hotel to ensure fresher air for all visitors.At Krishna heritage, every guestroom is provided with convenient amenities and fittings to ensure a comfortable stay. Enhance your experience at hotel with the knowledge that certain rooms are equipped with linen service and air conditioning for your convenience.A few accommodations within Krishna heritage offer unique design elements such as a balcony or terrace. Certain rooms offer in-room amusement features such as the television for your enjoyment. It is worth noting that certain guest bathrooms feature a hair dryer and toiletries for your convenience. At the hotel, an assortment of easily accessible and delicious meal choices are available to satisfy your appetite whenever it strikes.","address":{"@type":"PostalAddress","addressCountry":"IN","addressLocality":"Badami","addressRegion":"","postalCode":"587201","streetAddress":"Krishna Heritage Hotel"},"photo":"https://images.getaroom-cdn.com/image/upload/s--sONPVi8N--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1737471715/2ba51f596fc2676bc68e9f0bcfb4510213822c39?_a=BACAEuEv&atc=e7cd1cfa"}</script><script type="97907f1624b6be851fb15967-application/javascript">window._CTZ = {"enabled":true,"verticals":{"hotel":{"active":true,"property":{"id":"f91c4171-9aba-5b5c-bb19-c57a7e701c09","name":"Krishna heritage","address":"Krishna Heritage Hotel","latitude":"15.91633415","longitude":"75.66459656"},"search":{"city":"Badami","province":"","countryCode":"IN","checkInDate":"09/08/2026","checkOutDate":"09/09/2026","rooms":[{"adults":2,"children":0,"infants":0}]}}},"extra":{"hotel_url":"/krishna-heritage/booking","hotel_name":"Krishna heritage","hotel_image_url":"https://images.getaroom-cdn.com/image/upload/s--r4jmAlke--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1737471715/2ba51f596fc2676bc68e9f0bcfb4510213822c39?_a=BACAEuEv&atc=e7cd1cfa"}};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the address for Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"The property is located at Krishna Heritage Hotel in Badami."}},{"@type":"Question","name":"How much does it cost per night to stay at Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"Prices vary based on dates and availability. Select the dates of your stay above to find the best price on all available rooms."}},{"@type":"Question","name":"What times are check-in and check-out at Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"Check-in begins at 12:00 and check-out is at 11:00 at Krishna heritage. Early check-in or late check-out may be available at an additional cost."}},{"@type":"Question","name":"Does Krishna heritage have a pool?","acceptedAnswer":{"@type":"Answer","text":"No, this hotel does not have a pool, but it has other amenities for guests to enjoy. Please see the hotel description above for more information."}},{"@type":"Question","name":"Is there a restaurant at Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"Yes, this hotel does have at least one on-site restaurant to enjoy during your stay. Room service is also available should you prefer meals from the comfort of your room. Check out the hotel description above to learn more about the dining options available at Krishna heritage."}},{"@type":"Question","name":"Is there free breakfast available at Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"Breakfast may be available at Krishna heritage, and may come free with your room, depending on your selection. Please check for dates and room availability above to see what's included with your stay."}},{"@type":"Question","name":"What is there to do at Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"Guests at Krishna heritage can enjoy amenities such as a restaurant during their stay. Check out the hotel description to learn more about the amenities available during your stay."}},{"@type":"Question","name":"Are there any discounts or deals for Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"We offer a wide variety of rates on Krishna heritage. Discounted rates are available throughout the year, depending on your travel dates. Search for your dates above and we'll show you our lowest prices."}},{"@type":"Question","name":"Are there promo or coupon codes available for Krishna heritage?","acceptedAnswer":{"@type":"Answer","text":"By logging into our site using the login banner above, you'll receive an instant discount of 5% on your booking today with no limit to how much you can save. Log in, claim your promo code, select your dates and room and apply your code at checkout."}}]}</script>        <link rel="alternate" type="text/html" hreflang="x-default" href="https://www.guestreservations.com/krishna-heritage/booking" title="English"/><link rel="alternate" type="text/html" hreflang="en-US" href="https://www.guestreservations.com/krishna-heritage/booking" title="English"/><link rel="alternate" type="text/html" hreflang="es-419" href="https://www.guestreservations.com/es/krishna-heritage/booking" title="Español"/><link rel="alternate" type="text/html" hreflang="es-ES" href="https://www.guestreservations.com/es-ES/krishna-heritage/booking" title="Español (España)"/><link rel="alternate" type="text/html" hreflang="de-DE" href="https://www.guestreservations.com/de/krishna-heritage/booking" title="Deutsch"/><link rel="alternate" type="text/html" hreflang="fr-FR" href="https://www.guestreservations.com/fr/krishna-heritage/booking" title="Français"/><link rel="alternate" type="text/html" hreflang="pt-PT" href="https://www.guestreservations.com/pt/krishna-heritage/booking" title="Português"/><link rel="alternate" type="text/html" hreflang="it-IT" href="https://www.guestreservations.com/it/krishna-heritage/booking" title="Italiano"/><link rel="alternate" type="text/html" hreflang="nl-NL" href="https://www.guestreservations.com/nl/krishna-heritage/booking" title="Nederlands"/><link rel="alternate" type="text/html" hreflang="pl-PL" href="https://www.guestreservations.com/pl/krishna-heritage/booking" title="Polski"/><link rel="alternate" type="text/html" hreflang="tr-TR" href="https://www.guestreservations.com/tr/krishna-heritage/booking" title="Türkçe"/><link rel="alternate" type="text/html" hreflang="id-ID" href="https://www.guestreservations.com/id/krishna-heritage/booking" title="Bahasa Indonesia"/><link rel="alternate" type="text/html" hreflang="ms-MY" href="https://www.guestreservations.com/ms/krishna-heritage/booking" title="Bahasa Melayu"/><link rel="alternate" type="text/html" hreflang="sv-SE" href="https://www.guestreservations.com/sv/krishna-heritage/booking" title="Svenska"/>    </head>
+
+    <body class="booking-landing-page d-flex flex-column h-100">
+                <!-- Google Tag Manager (noscript) [GTM-M53QD54C][default] -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M53QD54C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) [GTM-M53QD54C][default] -->
+        
+        <div class="flex-shrink-0">
+
+            <header>
+                
+<div class="header navbar navbar-dark bg-dark header-social">
+    <div class="container container-1280 d-flex align-content-around">
+        <div class="logo flex-grow-1">
+            <a href="https://www.guestreservations.com" class="navbar-brand" title="Guest Reservations">
+                <img title="Guest Reservations - Logo"
+                     alt="Guest Reservations - Logo"
+                     src="/assets/c80159f/images/logo/logo-bell-dark.svg"><br>
+                <small>An independent travel network</small>
+            </a>
+        </div>
+            <div class="menu for-desktop ">
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a title="Groups (9+ Rooms)" class="js-hl-groups-link" rel="nofollow" href="https://groups.guestreservations.com/Group-Rate/?PreferredHotels=Krishna+heritage&city=Badami">Groups (9+ Rooms)</a>
+            <a title="My Booking" class="js-hl-my-booking " href="https://book.guestreservations.com/trips/gar/lookup?traffic_source=grMyBooking">My Booking</a>
+        </nav>
+    </div>
+
+        <div class="border-left align-self-stretch changing-language for-desktop for-tablet">
+    
+<div class="dropdown scroll-bar js-language d-flex">
+    <button type="button" class="dropdown-toggle btn" id="header-language" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="language" value="en" type="hidden" id="language">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-left" aria-labelledby="header-language">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="en" data-short-label="en-US" class="dropdown-item">English</button>
+                                <button type="button"
+                     data-option="es" data-short-label="es-419" class="dropdown-item">Español</button>
+                                <button type="button"
+                     data-option="es-ES" data-short-label="es-ES" class="dropdown-item">Español (España)</button>
+                                <button type="button"
+                     data-option="de" data-short-label="de-DE" class="dropdown-item">Deutsch</button>
+                                <button type="button"
+                     data-option="fr" data-short-label="fr-FR" class="dropdown-item">Français</button>
+                                <button type="button"
+                     data-option="pt" data-short-label="pt-BR" class="dropdown-item">Português</button>
+                                <button type="button"
+                     data-option="it" data-short-label="it-IT" class="dropdown-item">Italiano</button>
+                                <button type="button"
+                     data-option="nl" data-short-label="nl-NL" class="dropdown-item">Nederlands</button>
+                                <button type="button"
+                     data-option="pl" data-short-label="pl-PL" class="dropdown-item">Polski</button>
+                                <button type="button"
+                     data-option="tr" data-short-label="tr-TR" class="dropdown-item">Türkçe</button>
+                                <button type="button"
+                     data-option="id" data-short-label="id-ID" class="dropdown-item">Bahasa Indonesia</button>
+                                <button type="button"
+                     data-option="ms" data-short-label="ms-MY" class="dropdown-item">Bahasa Melayu</button>
+                                <button type="button"
+                     data-option="sv" data-short-label="sv-SE" class="dropdown-item">Svenska</button>
+                        </div>
+    </div>
+</div>
+</div>
+
+        
+        <div class="for-mobile">
+            <nav class="navbar-block for-tablet for-mobile">
+    <div class="mobile-menu">
+        <button class="navbar-burger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 12">
+                <line x1="19" y1="1" y2="1" stroke="white" stroke-width="2"/>
+                <line x1="19" y1="6" y2="6" stroke="white" stroke-width="2"/>
+                <line x1="19" y1="11" y2="11" stroke="white" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<div class="navbar-menu hidden">
+    <div class="navbar-backdrop"></div>
+    <nav>
+        <div class="close-button">
+            <button class="navbar-close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div>
+            <div class="align-self-stretch changing-language for-mobile">
+                <div class="d-flex mobile-language-dropdown">
+                    <svg class="icon-globe inline align-sub mr-[10px]" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M8.99976 16.5C7.97476 16.5 7.00601 16.3031 6.09351 15.9094C5.18101 15.5156 4.38413 14.9781 3.70288 14.2969C3.02163 13.6156 2.48413 12.8187 2.09038 11.9062C1.69663 10.9937 1.49976 10.025 1.49976 9C1.49976 7.9625 1.69663 6.99062 2.09038 6.08437C2.48413 5.17812 3.02163 4.38437 3.70288 3.70312C4.38413 3.02187 5.18101 2.48437 6.09351 2.09062C7.00601 1.69687 7.97476 1.5 8.99976 1.5C10.0373 1.5 11.0091 1.69687 11.9154 2.09062C12.8216 2.48437 13.6154 3.02187 14.2966 3.70312C14.9779 4.38437 15.5154 5.17812 15.9091 6.08437C16.3029 6.99062 16.4998 7.9625 16.4998 9C16.4998 10.025 16.3029 10.9937 15.9091 11.9062C15.5154 12.8187 14.9779 13.6156 14.2966 14.2969C13.6154 14.9781 12.8216 15.5156 11.9154 15.9094C11.0091 16.3031 10.0373 16.5 8.99976 16.5ZM8.99976 14.9625C9.32476 14.5125 9.60601 14.0437 9.8435 13.5562C10.081 13.0687 10.2748 12.55 10.4248 12H7.57476C7.72476 12.55 7.91851 13.0687 8.15601 13.5562C8.39351 14.0437 8.67476 14.5125 8.99976 14.9625ZM7.04976 14.6625C6.82476 14.25 6.62788 13.8219 6.45913 13.3781C6.29038 12.9344 6.14976 12.475 6.03726 12H3.82476C4.18726 12.625 4.64038 13.1687 5.18413 13.6312C5.72788 14.0937 6.34976 14.4375 7.04976 14.6625ZM10.9498 14.6625C11.6498 14.4375 12.2716 14.0937 12.8154 13.6312C13.3591 13.1687 13.8123 12.625 14.1748 12H11.9623C11.8498 12.475 11.7091 12.9344 11.5404 13.3781C11.3716 13.8219 11.1748 14.25 10.9498 14.6625ZM3.18726 10.5H5.73726C5.69976 10.25 5.67163 10.0031 5.65288 9.75937C5.63413 9.51562 5.62476 9.2625 5.62476 9C5.62476 8.7375 5.63413 8.48437 5.65288 8.24062C5.67163 7.99687 5.69976 7.75 5.73726 7.5H3.18726C3.12476 7.75 3.07788 7.99687 3.04663 8.24062C3.01538 8.48437 2.99976 8.7375 2.99976 9C2.99976 9.2625 3.01538 9.51562 3.04663 9.75937C3.07788 10.0031 3.12476 10.25 3.18726 10.5ZM7.23726 10.5H10.7623C10.7998 10.25 10.8279 10.0031 10.8466 9.75937C10.8654 9.51562 10.8748 9.2625 10.8748 9C10.8748 8.7375 10.8654 8.48437 10.8466 8.24062C10.8279 7.99687 10.7998 7.75 10.7623 7.5H7.23726C7.19976 7.75 7.17163 7.99687 7.15288 8.24062C7.13413 8.48437 7.12476 8.7375 7.12476 9C7.12476 9.2625 7.13413 9.51562 7.15288 9.75937C7.17163 10.0031 7.19976 10.25 7.23726 10.5ZM12.2623 10.5H14.8123C14.8748 10.25 14.9216 10.0031 14.9529 9.75937C14.9841 9.51562 14.9998 9.2625 14.9998 9C14.9998 8.7375 14.9841 8.48437 14.9529 8.24062C14.9216 7.99687 14.8748 7.75 14.8123 7.5H12.2623C12.2998 7.75 12.3279 7.99687 12.3466 8.24062C12.3654 8.48437 12.3748 8.7375 12.3748 9C12.3748 9.2625 12.3654 9.51562 12.3466 9.75937C12.3279 10.0031 12.2998 10.25 12.2623 10.5ZM11.9623 6H14.1748C13.8123 5.375 13.3591 4.83125 12.8154 4.36875C12.2716 3.90625 11.6498 3.5625 10.9498 3.3375C11.1748 3.75 11.3716 4.17812 11.5404 4.62187C11.7091 5.06562 11.8498 5.525 11.9623 6ZM7.57476 6H10.4248C10.2748 5.45 10.081 4.93125 9.8435 4.44375C9.60601 3.95625 9.32476 3.4875 8.99976 3.0375C8.67476 3.4875 8.39351 3.95625 8.15601 4.44375C7.91851 4.93125 7.72476 5.45 7.57476 6ZM3.82476 6H6.03726C6.14976 5.525 6.29038 5.06562 6.45913 4.62187C6.62788 4.17812 6.82476 3.75 7.04976 3.3375C6.34976 3.5625 5.72788 3.90625 5.18413 4.36875C4.64038 4.83125 4.18726 5.375 3.82476 6Z" fill="#1F1F1F"/>
+                    </svg>
+                    <svg class="icon-dropdown-arrow inline" width="12" height="12" viewBox="0 0 492 492" fill="#c9cac3">
+                        <path class="st0" d="M484.1,125L468,108.8c-5.1-5.1-11.8-7.9-19-7.9s-14,2.8-19,7.9L246.1,292.6l-184-184
+                        c-5.1-5.1-11.8-7.9-19-7.9s-14,2.8-19,7.9L7.9,124.7c-10.5,10.5-10.5,27.6,0,38.1L227,382.7c5.1,5.1,11.8,8.6,19.1,8.6h0.1
+                        c7.2,0,14-3.6,19-8.6l218.9-219.3c5.1-5.1,7.9-12,7.9-19.2C492,136.9,489.2,130,484.1,125z"/>
+                    </svg>
+                    
+<div class="dropdown scroll-bar js-language d-flex">
+    <button type="button" class="dropdown-toggle btn" id="header-language" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="language" value="" type="hidden" id="language">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="header-language">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     class="dropdown-item js-default-hidden" data-option="">Change Language</button>
+                                <button type="button"
+                     data-option="en" data-short-label="en-US" class="dropdown-item current-language" data-process-dropdown="no-but-close">English</button>
+                                <button type="button"
+                     data-option="es" data-short-label="es-419" class="dropdown-item">Español</button>
+                                <button type="button"
+                     data-option="es-ES" data-short-label="es-ES" class="dropdown-item">Español (España)</button>
+                                <button type="button"
+                     data-option="de" data-short-label="de-DE" class="dropdown-item">Deutsch</button>
+                                <button type="button"
+                     data-option="fr" data-short-label="fr-FR" class="dropdown-item">Français</button>
+                                <button type="button"
+                     data-option="pt" data-short-label="pt-BR" class="dropdown-item">Português</button>
+                                <button type="button"
+                     data-option="it" data-short-label="it-IT" class="dropdown-item">Italiano</button>
+                                <button type="button"
+                     data-option="nl" data-short-label="nl-NL" class="dropdown-item">Nederlands</button>
+                                <button type="button"
+                     data-option="pl" data-short-label="pl-PL" class="dropdown-item">Polski</button>
+                                <button type="button"
+                     data-option="tr" data-short-label="tr-TR" class="dropdown-item">Türkçe</button>
+                                <button type="button"
+                     data-option="id" data-short-label="id-ID" class="dropdown-item">Bahasa Indonesia</button>
+                                <button type="button"
+                     data-option="ms" data-short-label="ms-MY" class="dropdown-item">Bahasa Melayu</button>
+                                <button type="button"
+                     data-option="sv" data-short-label="sv-SE" class="dropdown-item">Svenska</button>
+                        </div>
+    </div>
+</div>
+                </div>
+            </div>
+            <ul>
+                            </ul>
+            <div class="divider"></div>
+            <ul class="additional-links">
+                <li><a href="https://www.guestreservations.com/about/page">About Us</a></li>
+                <li><a href="https://www.guestreservations.com/about/faq">FAQs</a></li>
+                <li><a href="https://www.guestreservations.com/about/termsofuse">Terms of Service</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+        </div>
+        
+                    <div class="phone border-left js-mp-track-phone">
+                                    
+<div class="for-desktop">
+    <a class="d-flex flex-column js-phone-tel-number" href="tel:(866) 238-4218" ><span class="text-warning">
+            <img alt="" aria-hidden="true" width="13" height="13"
+                src="/assets/c80159f/images/phone-yellow.svg">Call now</span>
+        <span class="js-phone-number">(866) 238-4218</span>
+    </a>
+</div>                    
+<div class="for-tablet">
+    <a class="d-flex flex-column js-phone-tel-number" href="tel:(866) 238-4218" ><span class="text-warning">
+            <img alt="" aria-hidden="true" width="13" height="13"
+                src="/assets/c80159f/images/phone-yellow.svg">Call now</span>
+        <span class="js-phone-number">(866) 238-4218</span>
+    </a>
+</div>                    
+<div class="for-mobile">
+    <a class="d-flex flex-column js-phone-tel-number" href="tel:(866) 238-4218" ><span class="text-warning">
+            <img alt="" aria-hidden="true" width="13" height="13"
+                src="/assets/c80159f/images/phone-yellow.svg">Call now</span>
+        <span class="js-phone-number">(866) 238-4218</span>
+    </a>
+</div>                                </div>
+                <div class="for-tablet">
+            <nav class="navbar-block for-tablet for-mobile">
+    <div class="mobile-menu">
+        <button class="navbar-burger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 12">
+                <line x1="19" y1="1" y2="1" stroke="white" stroke-width="2"/>
+                <line x1="19" y1="6" y2="6" stroke="white" stroke-width="2"/>
+                <line x1="19" y1="11" y2="11" stroke="white" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<div class="navbar-menu hidden">
+    <div class="navbar-backdrop"></div>
+    <nav>
+        <div class="close-button">
+            <button class="navbar-close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div>
+            <div class="align-self-stretch changing-language for-mobile">
+                <div class="d-flex mobile-language-dropdown">
+                    <svg class="icon-globe inline align-sub mr-[10px]" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M8.99976 16.5C7.97476 16.5 7.00601 16.3031 6.09351 15.9094C5.18101 15.5156 4.38413 14.9781 3.70288 14.2969C3.02163 13.6156 2.48413 12.8187 2.09038 11.9062C1.69663 10.9937 1.49976 10.025 1.49976 9C1.49976 7.9625 1.69663 6.99062 2.09038 6.08437C2.48413 5.17812 3.02163 4.38437 3.70288 3.70312C4.38413 3.02187 5.18101 2.48437 6.09351 2.09062C7.00601 1.69687 7.97476 1.5 8.99976 1.5C10.0373 1.5 11.0091 1.69687 11.9154 2.09062C12.8216 2.48437 13.6154 3.02187 14.2966 3.70312C14.9779 4.38437 15.5154 5.17812 15.9091 6.08437C16.3029 6.99062 16.4998 7.9625 16.4998 9C16.4998 10.025 16.3029 10.9937 15.9091 11.9062C15.5154 12.8187 14.9779 13.6156 14.2966 14.2969C13.6154 14.9781 12.8216 15.5156 11.9154 15.9094C11.0091 16.3031 10.0373 16.5 8.99976 16.5ZM8.99976 14.9625C9.32476 14.5125 9.60601 14.0437 9.8435 13.5562C10.081 13.0687 10.2748 12.55 10.4248 12H7.57476C7.72476 12.55 7.91851 13.0687 8.15601 13.5562C8.39351 14.0437 8.67476 14.5125 8.99976 14.9625ZM7.04976 14.6625C6.82476 14.25 6.62788 13.8219 6.45913 13.3781C6.29038 12.9344 6.14976 12.475 6.03726 12H3.82476C4.18726 12.625 4.64038 13.1687 5.18413 13.6312C5.72788 14.0937 6.34976 14.4375 7.04976 14.6625ZM10.9498 14.6625C11.6498 14.4375 12.2716 14.0937 12.8154 13.6312C13.3591 13.1687 13.8123 12.625 14.1748 12H11.9623C11.8498 12.475 11.7091 12.9344 11.5404 13.3781C11.3716 13.8219 11.1748 14.25 10.9498 14.6625ZM3.18726 10.5H5.73726C5.69976 10.25 5.67163 10.0031 5.65288 9.75937C5.63413 9.51562 5.62476 9.2625 5.62476 9C5.62476 8.7375 5.63413 8.48437 5.65288 8.24062C5.67163 7.99687 5.69976 7.75 5.73726 7.5H3.18726C3.12476 7.75 3.07788 7.99687 3.04663 8.24062C3.01538 8.48437 2.99976 8.7375 2.99976 9C2.99976 9.2625 3.01538 9.51562 3.04663 9.75937C3.07788 10.0031 3.12476 10.25 3.18726 10.5ZM7.23726 10.5H10.7623C10.7998 10.25 10.8279 10.0031 10.8466 9.75937C10.8654 9.51562 10.8748 9.2625 10.8748 9C10.8748 8.7375 10.8654 8.48437 10.8466 8.24062C10.8279 7.99687 10.7998 7.75 10.7623 7.5H7.23726C7.19976 7.75 7.17163 7.99687 7.15288 8.24062C7.13413 8.48437 7.12476 8.7375 7.12476 9C7.12476 9.2625 7.13413 9.51562 7.15288 9.75937C7.17163 10.0031 7.19976 10.25 7.23726 10.5ZM12.2623 10.5H14.8123C14.8748 10.25 14.9216 10.0031 14.9529 9.75937C14.9841 9.51562 14.9998 9.2625 14.9998 9C14.9998 8.7375 14.9841 8.48437 14.9529 8.24062C14.9216 7.99687 14.8748 7.75 14.8123 7.5H12.2623C12.2998 7.75 12.3279 7.99687 12.3466 8.24062C12.3654 8.48437 12.3748 8.7375 12.3748 9C12.3748 9.2625 12.3654 9.51562 12.3466 9.75937C12.3279 10.0031 12.2998 10.25 12.2623 10.5ZM11.9623 6H14.1748C13.8123 5.375 13.3591 4.83125 12.8154 4.36875C12.2716 3.90625 11.6498 3.5625 10.9498 3.3375C11.1748 3.75 11.3716 4.17812 11.5404 4.62187C11.7091 5.06562 11.8498 5.525 11.9623 6ZM7.57476 6H10.4248C10.2748 5.45 10.081 4.93125 9.8435 4.44375C9.60601 3.95625 9.32476 3.4875 8.99976 3.0375C8.67476 3.4875 8.39351 3.95625 8.15601 4.44375C7.91851 4.93125 7.72476 5.45 7.57476 6ZM3.82476 6H6.03726C6.14976 5.525 6.29038 5.06562 6.45913 4.62187C6.62788 4.17812 6.82476 3.75 7.04976 3.3375C6.34976 3.5625 5.72788 3.90625 5.18413 4.36875C4.64038 4.83125 4.18726 5.375 3.82476 6Z" fill="#1F1F1F"/>
+                    </svg>
+                    <svg class="icon-dropdown-arrow inline" width="12" height="12" viewBox="0 0 492 492" fill="#c9cac3">
+                        <path class="st0" d="M484.1,125L468,108.8c-5.1-5.1-11.8-7.9-19-7.9s-14,2.8-19,7.9L246.1,292.6l-184-184
+                        c-5.1-5.1-11.8-7.9-19-7.9s-14,2.8-19,7.9L7.9,124.7c-10.5,10.5-10.5,27.6,0,38.1L227,382.7c5.1,5.1,11.8,8.6,19.1,8.6h0.1
+                        c7.2,0,14-3.6,19-8.6l218.9-219.3c5.1-5.1,7.9-12,7.9-19.2C492,136.9,489.2,130,484.1,125z"/>
+                    </svg>
+                    
+<div class="dropdown scroll-bar js-language d-flex">
+    <button type="button" class="dropdown-toggle btn" id="header-language" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="language" value="" type="hidden" id="language">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="header-language">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     class="dropdown-item js-default-hidden" data-option="">Change Language</button>
+                                <button type="button"
+                     data-option="en" data-short-label="en-US" class="dropdown-item current-language" data-process-dropdown="no-but-close">English</button>
+                                <button type="button"
+                     data-option="es" data-short-label="es-419" class="dropdown-item">Español</button>
+                                <button type="button"
+                     data-option="es-ES" data-short-label="es-ES" class="dropdown-item">Español (España)</button>
+                                <button type="button"
+                     data-option="de" data-short-label="de-DE" class="dropdown-item">Deutsch</button>
+                                <button type="button"
+                     data-option="fr" data-short-label="fr-FR" class="dropdown-item">Français</button>
+                                <button type="button"
+                     data-option="pt" data-short-label="pt-BR" class="dropdown-item">Português</button>
+                                <button type="button"
+                     data-option="it" data-short-label="it-IT" class="dropdown-item">Italiano</button>
+                                <button type="button"
+                     data-option="nl" data-short-label="nl-NL" class="dropdown-item">Nederlands</button>
+                                <button type="button"
+                     data-option="pl" data-short-label="pl-PL" class="dropdown-item">Polski</button>
+                                <button type="button"
+                     data-option="tr" data-short-label="tr-TR" class="dropdown-item">Türkçe</button>
+                                <button type="button"
+                     data-option="id" data-short-label="id-ID" class="dropdown-item">Bahasa Indonesia</button>
+                                <button type="button"
+                     data-option="ms" data-short-label="ms-MY" class="dropdown-item">Bahasa Melayu</button>
+                                <button type="button"
+                     data-option="sv" data-short-label="sv-SE" class="dropdown-item">Svenska</button>
+                        </div>
+    </div>
+</div>
+                </div>
+            </div>
+            <ul>
+                            </ul>
+            <div class="divider"></div>
+            <ul class="additional-links">
+                <li><a href="https://www.guestreservations.com/about/page">About Us</a></li>
+                <li><a href="https://www.guestreservations.com/about/faq">FAQs</a></li>
+                <li><a href="https://www.guestreservations.com/about/termsofuse">Terms of Service</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+        </div>
+    </div>
+</div>            </header>
+
+            <main role="main">
+                
+
+<div class="hotel-info-block">
+
+    <div class="breadcrumb-block for-desktop for-tablet">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+    <ol class="breadcrumb js-lp-breadcrumbs">
+                        <li class="breadcrumb-item"><a href="https://www.guestreservations.com">Home</a></li>
+                        <li class="breadcrumb-item"><a href="https://www.guestreservations.com/hotels">Countries</a></li>
+                        <li class="breadcrumb-item"><a href="https://www.guestreservations.com/hotels-India">India</a></li>
+                        <li class="breadcrumb-item"><a href="/hotels/in/badami">Badami</a></li>
+                        <li class="breadcrumb-item active">Krishna heritage</li>
+                </ol>
+</nav>        </div>
+    </div>
+
+    <div class="slider-bg js-slider-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col slider-hotel">
+                    
+<div class="js-hotel-slider-wrap hotel-slider-wrap slider-loading">
+    <div class="slider-loader js-slider-loader"><div class="loader-fon">
+    <div class="loader">Loading...</div>
+</div></div>
+    <div class="slider-images images-count-5">
+        <div class="fotorama js-hotels-images" data-auto="false">
+            <img class="preload-carousel" alt="" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNi42IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIvPg=="></div>
+        <div class="small-hotels-images js-small-hotels-images"></div>
+        <div class="show-all-photos js-show-all-photos">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 4.5835H4.99992C4.7698 4.5835 4.58325 4.77005 4.58325 5.00016V11.2286L7.25338 8.73641C7.50951 8.49741 7.90699 8.49741 8.16314 8.73641L10.8827 11.2747L12.7328 9.92916C12.9666 9.75916 13.2833 9.75916 13.517 9.92916L15.4166 11.3107V5.00016C15.4166 4.77005 15.23 4.5835 14.9999 4.5835ZM4.58325 15.0002V12.9384L7.70825 10.0217L10.3817 12.5169C10.6152 12.7348 10.9703 12.7566 11.2287 12.5687L13.1249 11.1897L15.4166 12.8562V15.0002C15.4166 15.2302 15.23 15.4168 14.9999 15.4168H4.99992C4.7698 15.4168 4.58325 15.2302 4.58325 15.0002ZM4.99992 3.3335C4.07944 3.3335 3.33325 4.07969 3.33325 5.00016V15.0002C3.33325 15.9207 4.07944 16.6668 4.99992 16.6668H14.9999C15.9204 16.6668 16.6666 15.9207 16.6666 15.0002V5.00016C16.6666 4.07969 15.9204 3.3335 14.9999 3.3335H4.99992ZM12.9166 8.3335C13.6069 8.3335 14.1666 7.77385 14.1666 7.0835C14.1666 6.39314 13.6069 5.8335 12.9166 5.8335C12.2263 5.8335 11.6666 6.39314 11.6666 7.0835C11.6666 7.77385 12.2263 8.3335 12.9166 8.3335Z" fill="white"/>
+            </svg>
+            <span>Show all photos</span>
+        </div>
+    </div>
+    <script type="97907f1624b6be851fb15967-text/javascript">
+        let hotelImagesList = [{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--sONPVi8N--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/2ba51f596fc2676bc68e9f0bcfb4510213822c39?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--r4jmAlke--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/2ba51f596fc2676bc68e9f0bcfb4510213822c39?_a=BACAEuEv&atc=e7cd1cfa","caption":"1\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--5n8DlL61--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471717\/dd2ac999185cd9231b632bddd0bb298f684ddc7b?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--swewXY-B--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471717\/dd2ac999185cd9231b632bddd0bb298f684ddc7b?_a=BACAEuEv&atc=e7cd1cfa","caption":"2\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--7QM26p5M--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471716\/4facf5111588938ec7c91354c2d8fb7bed7fe0a0?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--p0D8g13l--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471716\/4facf5111588938ec7c91354c2d8fb7bed7fe0a0?_a=BACAEuEv&atc=e7cd1cfa","caption":"3\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ULJUOVbI--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1747913006\/edcdfe02a6ff9313c9dcde86f62e170a2c7ed562?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--aqWSpcqq--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1747913006\/edcdfe02a6ff9313c9dcde86f62e170a2c7ed562?_a=BACAEuEv&atc=e7cd1cfa","caption":"4\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--VNxVZ-NA--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1747913006\/757f47a0d7c426a7c4ab378c4a5f6cd778526799?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ZoLKmwbW--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1747913006\/757f47a0d7c426a7c4ab378c4a5f6cd778526799?_a=BACAEuEv&atc=e7cd1cfa","caption":"5\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--QLqCgRNB--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/e4f93fe64d6a7a413b65979e36394d6c2f78479e?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--xcySHehk--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/e4f93fe64d6a7a413b65979e36394d6c2f78479e?_a=BACAEuEv&atc=e7cd1cfa","caption":"6\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--myxKu7cA--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1749959014\/42ada656309280af8a04fa035d88195410a6d3f4?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--RIqf9_Dh--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1749959014\/42ada656309280af8a04fa035d88195410a6d3f4?_a=BACAEuEv&atc=e7cd1cfa","caption":"7\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--IOUfFUw9--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/6656196adb6078af1b8764f8e4be76ca53eb04ca?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ucN7Bgat--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/6656196adb6078af1b8764f8e4be76ca53eb04ca?_a=BACAEuEv&atc=e7cd1cfa","caption":"8\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--QXSNzG6Y--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1747913006\/d9f992a66569bd421d759f771922f90176bec522?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--WqWr-lt6--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1747913006\/d9f992a66569bd421d759f771922f90176bec522?_a=BACAEuEv&atc=e7cd1cfa","caption":"9\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--SuEP6Grk--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1753004101\/811d779c397d46f716d47f9ad541b556d506e355?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--UK7Tvkzj--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1753004101\/811d779c397d46f716d47f9ad541b556d506e355?_a=BACAEuEv&atc=e7cd1cfa","caption":"10\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--3Ui5oeyQ--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/5fff6ab51877a06e30eb1d244dd4d04131e03886?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--iiIN9_Sp--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/5fff6ab51877a06e30eb1d244dd4d04131e03886?_a=BACAEuEv&atc=e7cd1cfa","caption":"11\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--bVJvD1h5--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/5e0ed9a32ea16ccef283dbdead0ae1d3601834ff?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--nCGrXROh--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/5e0ed9a32ea16ccef283dbdead0ae1d3601834ff?_a=BACAEuEv&atc=e7cd1cfa","caption":"12\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--I4dJI_s4--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1743817554\/f8a6bc2957aa0622d3249e5141c4ad899e94388d?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--gDAVsLOG--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1743817554\/f8a6bc2957aa0622d3249e5141c4ad899e94388d?_a=BACAEuEv&atc=e7cd1cfa","caption":"13\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--cJ7XzivS--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/2fd3adef8f064dcc4056151d58a960b20b4e74f3?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--2sHrU-jM--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/2fd3adef8f064dcc4056151d58a960b20b4e74f3?_a=BACAEuEv&atc=e7cd1cfa","caption":"14\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--0QOWhTCA--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432254\/f30d1576942d6f13cf9d78b8946a24135304044c?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--KQNEpVej--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432254\/f30d1576942d6f13cf9d78b8946a24135304044c?_a=BACAEuEv&atc=e7cd1cfa","caption":"15\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--D7mWxhVr--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1747913006\/9407a5093f4df02a920cf104a18e4f9e68227fb6?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--Inypn-2v--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1747913006\/9407a5093f4df02a920cf104a18e4f9e68227fb6?_a=BACAEuEv&atc=e7cd1cfa","caption":"16\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--4IR9LrKl--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471717\/ddd4955d9ce065910ab6b8d25361279c89bffd28?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--fPWH6BQr--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471717\/ddd4955d9ce065910ab6b8d25361279c89bffd28?_a=BACAEuEv&atc=e7cd1cfa","caption":"17\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--Eeo3IXhL--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130441\/787a7daf9f61635d1661e5688fe3e21fd97130b3?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--y_cvlkK7--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130441\/787a7daf9f61635d1661e5688fe3e21fd97130b3?_a=BACAEuEv&atc=e7cd1cfa","caption":"18\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--1JrGvLTX--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432254\/89b9e006e7e274f8039a6a8c0b09d09bf63204be?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--nh-gspij--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432254\/89b9e006e7e274f8039a6a8c0b09d09bf63204be?_a=BACAEuEv&atc=e7cd1cfa","caption":"19\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--CIDPl6BI--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1747913006\/b71dfdbca00d1780b5b7c9ef726e3e03ca23ce90?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--K5Y7K9xv--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1747913006\/b71dfdbca00d1780b5b7c9ef726e3e03ca23ce90?_a=BACAEuEv&atc=e7cd1cfa","caption":"20\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--PYpG-RhZ--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130439\/d59bddbfc99f789dbea3ac52dde686a516e62d7a?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--hZ6K6nMF--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130439\/d59bddbfc99f789dbea3ac52dde686a516e62d7a?_a=BACAEuEv&atc=e7cd1cfa","caption":"21\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--n7u_LpbY--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432254\/dbd496f722dd12e694e9470264a3eff6d7d29322?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--TW2fX_9F--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432254\/dbd496f722dd12e694e9470264a3eff6d7d29322?_a=BACAEuEv&atc=e7cd1cfa","caption":"22\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--lDuWR1yQ--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/bd53117bd99fd68cf5648e38e8694ce5264cd773?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--lJLRmQg7--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/bd53117bd99fd68cf5648e38e8694ce5264cd773?_a=BACAEuEv&atc=e7cd1cfa","caption":"23\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--5LaQWpDs--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130442\/a84718be2509daf5ee97a9119b95b4181e4b6d2a?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--X-4uCWF5--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130442\/a84718be2509daf5ee97a9119b95b4181e4b6d2a?_a=BACAEuEv&atc=e7cd1cfa","caption":"24\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--2EvF8Bq4--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432254\/241df897d41d4229bc5cffef0cc28ee09047de42?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--pWZp3Dbl--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432254\/241df897d41d4229bc5cffef0cc28ee09047de42?_a=BACAEuEv&atc=e7cd1cfa","caption":"25\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--v3Q3PhNP--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/adb638d8fd5c53551acedcd8ab8816f7384b3b5d?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ZSQqOtNU--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/adb638d8fd5c53551acedcd8ab8816f7384b3b5d?_a=BACAEuEv&atc=e7cd1cfa","caption":"26\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--CkiqOJWT--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130442\/a764a80d87266ad4458cc251d975d53484b53ccf?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--8YKBZIIv--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130442\/a764a80d87266ad4458cc251d975d53484b53ccf?_a=BACAEuEv&atc=e7cd1cfa","caption":"27\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--rp_NGmXE--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1743817554\/d5374b44b38e76cc946690eb6366e24dc15e5cc6?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--EGU0Vpco--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1743817554\/d5374b44b38e76cc946690eb6366e24dc15e5cc6?_a=BACAEuEv&atc=e7cd1cfa","caption":"28\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--YjQqIVKP--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432254\/5960a238f8cfffd709bf8ca74aeb9f2792441c00?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--EpKtqbSD--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432254\/5960a238f8cfffd709bf8ca74aeb9f2792441c00?_a=BACAEuEv&atc=e7cd1cfa","caption":"29\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--1DBDJTz7--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1743817554\/72c2001ff061caf55196857e5f6cba5485392574?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--N2dPd6tN--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1743817554\/72c2001ff061caf55196857e5f6cba5485392574?_a=BACAEuEv&atc=e7cd1cfa","caption":"30\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--q99DdXOH--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/c3207d585775ff3732982705c306c0f869c0dc74?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--2Y3Y4tOP--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/c3207d585775ff3732982705c306c0f869c0dc74?_a=BACAEuEv&atc=e7cd1cfa","caption":"31\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--qoGFSJj5--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/4a1a2fc97b0e194a8927089a2064b82a40e7fca6?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--L-UbYLCT--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/4a1a2fc97b0e194a8927089a2064b82a40e7fca6?_a=BACAEuEv&atc=e7cd1cfa","caption":"32\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--57TbWaHx--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/19d57fb6dd73ec52b4646c1e2bbb7ad466d09948?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--_hePM7bk--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/19d57fb6dd73ec52b4646c1e2bbb7ad466d09948?_a=BACAEuEv&atc=e7cd1cfa","caption":"33\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--paj0-Rjt--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1743817554\/f168fa1188e76eba4a278934fc869519ff0698e1?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--TBkZPO5c--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1743817554\/f168fa1188e76eba4a278934fc869519ff0698e1?_a=BACAEuEv&atc=e7cd1cfa","caption":"34\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--M5QiqE2Q--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130441\/4268f59e45357ad552aacfc268d6eef5718c5a99?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--qseEoBRT--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130441\/4268f59e45357ad552aacfc268d6eef5718c5a99?_a=BACAEuEv&atc=e7cd1cfa","caption":"35\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--QOsYUsvY--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1753004101\/183427632f3b94b227788a52595ae8d28e177b3a?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--5Y7-WIY_--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1753004101\/183427632f3b94b227788a52595ae8d28e177b3a?_a=BACAEuEv&atc=e7cd1cfa","caption":"36\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--XUwTHIqy--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/e41c69fd5fcbe8e1a21bdf76946b9a5e6e709ea6?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--HttkUgW5--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/e41c69fd5fcbe8e1a21bdf76946b9a5e6e709ea6?_a=BACAEuEv&atc=e7cd1cfa","caption":"37\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--eWjmin2s--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432256\/ab4b6ccba00a6d89ad17d6cc69449b470021981f?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--uOZ3-wuk--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432256\/ab4b6ccba00a6d89ad17d6cc69449b470021981f?_a=BACAEuEv&atc=e7cd1cfa","caption":"38\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ophuAm4p--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432256\/24b1812c3b290009e74b57cf0e93292298ac7a39?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--4HMnM-NJ--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432256\/24b1812c3b290009e74b57cf0e93292298ac7a39?_a=BACAEuEv&atc=e7cd1cfa","caption":"39\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--mcNKMf5n--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432255\/a2ce6f6e348116a9c5aa7c20c5b3732ef61b7eb4?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--rzJVQC8G--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432255\/a2ce6f6e348116a9c5aa7c20c5b3732ef61b7eb4?_a=BACAEuEv&atc=e7cd1cfa","caption":"40\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--jYaz7stY--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432256\/3e72516fc1ec22bc0ee699b3592835167e19b078?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--SvM3Okz7--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432256\/3e72516fc1ec22bc0ee699b3592835167e19b078?_a=BACAEuEv&atc=e7cd1cfa","caption":"41\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--r9O_V1EC--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130442\/af8637a3989cce735105f0543d919e2435f58aa4?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--9uZ9JyO_--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130442\/af8637a3989cce735105f0543d919e2435f58aa4?_a=BACAEuEv&atc=e7cd1cfa","caption":"42\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--cXGq9RD4--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130441\/46c3147b23cf97a251bd771bad25ec1db22f814e?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--fXG3KZp2--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130441\/46c3147b23cf97a251bd771bad25ec1db22f814e?_a=BACAEuEv&atc=e7cd1cfa","caption":"43\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--0afOSTPT--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1743817554\/fee939e89b2161ddd959d311408decb55d331b07?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--xZn5ei7K--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1743817554\/fee939e89b2161ddd959d311408decb55d331b07?_a=BACAEuEv&atc=e7cd1cfa","caption":"44\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--MSu5G7nR--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432256\/ed9d9aa41cc0de0486109d947dfddd6cb104bf6c?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--Yhm8jzOf--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432256\/ed9d9aa41cc0de0486109d947dfddd6cb104bf6c?_a=BACAEuEv&atc=e7cd1cfa","caption":"45\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--j3v-QXmj--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1762432256\/d09fc9e3052fefcf4646cb1f0e6adf7742415a3b?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--EP-u9IWE--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1762432256\/d09fc9e3052fefcf4646cb1f0e6adf7742415a3b?_a=BACAEuEv&atc=e7cd1cfa","caption":"46\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--1pZqIZoH--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1737471715\/fba53337ddf37b5852a2aae4cd3cb4b9679454f2?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--vnXB9gg1--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1737471715\/fba53337ddf37b5852a2aae4cd3cb4b9679454f2?_a=BACAEuEv&atc=e7cd1cfa","caption":"47\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--XnWAjg57--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1758357277\/026636d8ac350787351575cd8dfb45fef5e9be14?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--CZVUAvpY--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1758357277\/026636d8ac350787351575cd8dfb45fef5e9be14?_a=BACAEuEv&atc=e7cd1cfa","caption":"48\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ujwwguq4--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1739130443\/5140db1464e717b8fa2ce69e20fff519aecf15e9?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--7ZNZLCYy--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1739130443\/5140db1464e717b8fa2ce69e20fff519aecf15e9?_a=BACAEuEv&atc=e7cd1cfa","caption":"49\/50"},{"img":"\/\/images.getaroom-cdn.com\/image\/upload\/s--Wk1RLJug--\/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940\/v1749959014\/9ada3416940e5426eaaf61442ae79975115fff73?_a=BACAEuEv&atc=e7cd1cfa","thumb":"\/\/images.getaroom-cdn.com\/image\/upload\/s--ZvXHd0vT--\/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460\/v1749959014\/9ada3416940e5426eaaf61442ae79975115fff73?_a=BACAEuEv&atc=e7cd1cfa","caption":"50\/50"}];
+    </script>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hotel-title">
+        <div class="container">
+            <div class="bg-title-hotel d-flex position-relative">
+                <div class="block-info">
+                                            <h1 class="hotel-name">Krishna heritage</h1>
+                                        <!-- Class "hotel-adress" required for ClickTripz-->
+                    <p class="hotel-adress">Krishna Heritage Hotel, Badami, 587201, India</p>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="block-search-form bg-gray-2 js-wrap-booking-form js-form-block">
+    <div class="container">
+        <form class="js-searching" name="searching" action="/krishna-heritage/booking" method="GET" autocomplete="off">
+<div class="form-search-hotels js-booking-form ">
+    <input value="INR" name="currency" type="hidden">
+    <div class="row no-gutters js-first-room js-room-block " data-room_block="1">
+                        <div class="row line-row no-gutters col">
+            <div id="date-info" class="date-info col row no-gutters"
+                 data-mindate="09/08/2026"
+                 data-maxdate="10/31/2027"
+                 data-lastdayofpenultimatemonth="09/30/2027">
+                <div class="check-in col js-check-date-block">
+                    <div class="form-group">
+                        <label for="check_in_view">Check-in: </label>
+                        <div class="js-check_date_wrap check_date_wrap">
+                            <input readonly="readonly" value="09/08/2026" name="checkIn" autocomplete="off"
+                                   id="check_in" class="form-control js-check_date check_date unvisible" type="text"
+                                   ct-datepicker="true" placeholder="Check In:"
+                                   data-startdate="09/08/2026">
+                            <input readonly="readonly" value="Tue, Sep 8" autocomplete="off" id="check_in_view" class="form-control js-check_date_view check_date_view" type="text" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.blur();" ct-datepicker="true" placeholder="Check In:" data-cf-modified-97907f1624b6be851fb15967-="">
+                        </div>
+                    </div>
+                </div>
+                <div class="check-out col js-check-date-block">
+                    <div class="form-group">
+                        <label for="check_out_view">Check-out: </label>
+                        <div class="js-check_date_wrap check_date_wrap">
+                            <input readonly="readonly" value="09/09/2026" autocomplete="off" name="checkOut"
+                                   id="check_out" class="form-control js-check_date check_date unvisible" type="text"
+                                   ct-datepicker="true" placeholder="Check Out:"
+                                   data-startdate="09/09/2026">
+                            <input readonly="readonly" value="Wed, Sep 9" autocomplete="off" id="check_out_view" class="form-control js-check_date_view check_date_view" type="text" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.blur();" ct-datepicker="true" placeholder="Check Out:" data-cf-modified-97907f1624b6be851fb15967-="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rooms col">
+            <div class="form-group">
+                <label for="rooms">Rooms:</label>
+                
+<div class="dropdown js-rooms">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuRooms" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="rooms" value="1" type="hidden" id="rooms">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuRooms">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" data-process-dropdown="no-but-close" data-callback="goToGroupRates" class="dropdown-item">9+</button>
+                        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="people col row no-gutters">
+            <div class="adults col">
+                <div class="form-group">
+                                        <label for="adults[1]">Adults</label>
+                    
+<div class="dropdown js-adults">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuAdults_1" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="adults[1]" value="2" type="hidden" id="adults[1]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuAdults_1">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                        </div>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="children col">
+                <div class="form-group">
+                                        <label for="children[1]">Kids</label>
+                    
+<div class="dropdown js-children">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_1" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  name="children[1]" value="0" type="hidden" id="children[1]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_1">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-button col d-flex align-content">
+            <button type="submit" class="btn btn-warning">
+                Find Rooms            </button>
+        </div>
+
+        <div class="bg-white drop-down-list js-more-rooms">
+                                            <div class="row no-gutters children-ages js-children-ages-block hidden"
+                     data-room_block="1">
+                    <div class="children-ages-title col">
+                        Children ages <br> (1-17, enter 0 for infants)                    </div>
+                    <div class="children-ages-body w-100 d-flex justify-content-end">
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_11" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][1]" value="0" data-childrenid="1" type="hidden" id="ages[1][1]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_11">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_12" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][2]" value="0" data-childrenid="2" type="hidden" id="ages[1][2]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_12">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_13" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][3]" value="0" data-childrenid="3" type="hidden" id="ages[1][3]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_13">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_14" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][4]" value="0" data-childrenid="4" type="hidden" id="ages[1][4]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_14">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_15" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][5]" value="0" data-childrenid="5" type="hidden" id="ages[1][5]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_15">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_16" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][6]" value="0" data-childrenid="6" type="hidden" id="ages[1][6]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_16">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_17" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][7]" value="0" data-childrenid="7" type="hidden" id="ages[1][7]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_17">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                                    <div class="child col">
+                                <div class="form-group">
+                                    
+<div class="dropdown scroll-bar js-children-ages no-auto-init">
+    <button type="button" class="dropdown-toggle btn" id="dropdownMenuChildren_18" data-toggle="dropdown" data-display="static"
+            aria-expanded="false" aria-haspopup="true"></button>
+    <input  disabled="disabled" name="ages[1][8]" value="0" data-childrenid="8" type="hidden" id="ages[1][8]">
+    <div class="dropdown-menu js-dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuChildren_18">
+        <div class="scroll-inner simple-scrollbar">
+                            <button type="button"
+                     data-option="0" class="dropdown-item">0</button>
+                                <button type="button"
+                     data-option="1" class="dropdown-item">1</button>
+                                <button type="button"
+                     data-option="2" class="dropdown-item">2</button>
+                                <button type="button"
+                     data-option="3" class="dropdown-item">3</button>
+                                <button type="button"
+                     data-option="4" class="dropdown-item">4</button>
+                                <button type="button"
+                     data-option="5" class="dropdown-item">5</button>
+                                <button type="button"
+                     data-option="6" class="dropdown-item">6</button>
+                                <button type="button"
+                     data-option="7" class="dropdown-item">7</button>
+                                <button type="button"
+                     data-option="8" class="dropdown-item">8</button>
+                                <button type="button"
+                     data-option="9" class="dropdown-item">9</button>
+                                <button type="button"
+                     data-option="10" class="dropdown-item">10</button>
+                                <button type="button"
+                     data-option="11" class="dropdown-item">11</button>
+                                <button type="button"
+                     data-option="12" class="dropdown-item">12</button>
+                                <button type="button"
+                     data-option="13" class="dropdown-item">13</button>
+                                <button type="button"
+                     data-option="14" class="dropdown-item">14</button>
+                                <button type="button"
+                     data-option="15" class="dropdown-item">15</button>
+                                <button type="button"
+                     data-option="16" class="dropdown-item">16</button>
+                                <button type="button"
+                     data-option="17" class="dropdown-item">17</button>
+                        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+                    </div>
+
+    </div>
+
+</div>
+
+</form>    </div>
+</div>
+
+<div class="for-mobile d-flex menu-nav">
+    <div class="container">
+        <nav>
+    <a href="#" title="Photos" class="js-link-photos">Photos</a><a href="#" title="Map" class="js-link-map">Map</a><a rel="nofollow" href="#" title="Groups(9+ Rooms)" class="js-groups-link" data-destination-page="groupRates" data-use-case="footer-groups">Groups(9+ Rooms)</a><a rel="nofollow"  href="#" title="Weddings" class="js-groups-link" data-destination-page="weddings" data-use-case="footer-weddings">Weddings</a></nav>
+    </div>
+    
+
+</div>
+
+<div class="bg-light-gray body-hotel">
+        <div class="block-room-rates">
+            <div class="container">
+                <div class="pr-block">
+                    
+<div class="travel network">
+    <img class="mr-3" title="Learn more" alt="Learn more" src="/images/parts/popup-learnmore/learn-more.svg">
+    <span class="for-desktop-inline"><b class="trademark-name">Guest Reservations<sup>TM</sup></b> is an independent travel network offering over 100,000 hotels worldwide. <a class="js-learn-more" title="Learn more" href="#">Learn more</a>    </span>
+    <span class="for-tablet-inline for-mobile-inline"><b class="trademark-name">Guest Reservations<sup>TM</sup></b> is an independent travel network. <a class="js-learn-more" title="Learn more" href="#">Learn more</a>    </span>
+</div>
+                </div>
+                                <div class="title-block js-hotel-rooms-list"><h4>Rooms & Rates</h4></div>
+                            </div>
+        </div>
+          <div class="hotel-rooms-types">
+            <div class="container">
+                <div class="position-relative">
+                    <div class="hotel-rooms">
+                        
+    <div class="d-flex flex-column about-room js-about-room">
+        <div class="d-flex room-info">
+            <div class="img-room position-relative js-room-photo-wrap">
+                                    
+    <div class="roomImages">
+        <a href="#" class="js-init-carousel"><img class="room-first-photo max-w-none" src="//images.getaroom-cdn.com/image/upload/s--P1sy8DU1--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa"></a>
+        <div class="fotorama js-rooms-images" data-auto="false">
+                            <a href="//images.getaroom-cdn.com/image/upload/s--fbE7LhGw--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa" data-thumb="//images.getaroom-cdn.com/image/upload/s--Cl8Jt17k--/c_thumb,e_improve,fl_lossy.immutable_cache,g_custom,h_64,q_auto:good,w_64/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa" data-caption="1/4"></a>
+                                <a href="//images.getaroom-cdn.com/image/upload/s--KQd3bTBw--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1753317078/963bacda3bcadfcb50f4da365a2777902896a31a?_a=BACAEuEv&atc=e7cd1cfa" data-thumb="//images.getaroom-cdn.com/image/upload/s--0WEsZkdf--/c_thumb,e_improve,fl_lossy.immutable_cache,g_custom,h_64,q_auto:good,w_64/v1753317078/963bacda3bcadfcb50f4da365a2777902896a31a?_a=BACAEuEv&atc=e7cd1cfa" data-caption="2/4"></a>
+                                <a href="//images.getaroom-cdn.com/image/upload/s--kTxDHhjA--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1737471710/46636cbe1ae1ce13b295aab690be05d0a9bea48b?_a=BACAEuEv&atc=e7cd1cfa" data-thumb="//images.getaroom-cdn.com/image/upload/s--DgBhba17--/c_thumb,e_improve,fl_lossy.immutable_cache,g_custom,h_64,q_auto:good,w_64/v1737471710/46636cbe1ae1ce13b295aab690be05d0a9bea48b?_a=BACAEuEv&atc=e7cd1cfa" data-caption="3/4"></a>
+                                <a href="//images.getaroom-cdn.com/image/upload/s--TqiboeCR--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1742689952/2c5737b3396d4a036b400f7c8e8126b102781462?_a=BACAEuEv&atc=e7cd1cfa" data-thumb="//images.getaroom-cdn.com/image/upload/s--aM1qnVfW--/c_thumb,e_improve,fl_lossy.immutable_cache,g_custom,h_64,q_auto:good,w_64/v1742689952/2c5737b3396d4a036b400f7c8e8126b102781462?_a=BACAEuEv&atc=e7cd1cfa" data-caption="4/4"></a>
+                        </div>
+                    <div class="rooms-images-caption js-init-carousel">
+                <a href="#">
+                    <img class="gallery-icon" src="/assets/1c9641f9/images/image.svg" alt="">
+                    <span class="gallery-count">4</span>
+                </a>
+            </div>
+            </div>
+                                </div>
+            <div class="body row no-gutters">
+                <div class="col room d-flex flex-column pt-2 pb-2">
+                    <p class="type-room">Deluxe Resort</p>
+                                            <p class="title-amenities for-mobile-small-big">With your stay:</p>
+                        <ul class="amenities d-flex for-mobile-small-big">
+                                                            <li><img src="/images/parts/amenities/icon/wifi.svg"> Free Internet</li>
+                                                    </ul>
+                                                                <p class="mt-auto detail for-mobile-small-big">
+                            <a title="Room details" class="js-toggle-details"
+                               href="#">Room amenities, details, and policies</a>
+                        </p>
+                                    </div>
+                <div class="col info d-flex align-items-center">
+                    <div class="bg-block">
+                        <div class="block-price">
+                            <a class="btn btn-warning js-link-stay js-mp-lp-checkrates-rc" href="#" style="display: block"
+                               role="button">Check Rates</a>
+                        </div>
+                        <p class="best-rate-certified img">
+                            <img src="/images/parts/amenities/chek-green.svg" title="Today’s Low Rate"
+                                 alt="Today’s Low Rate">
+                            <a class="js-learn-more" href="#" title="Today’s Low Rate">
+                                Today’s Low Rate                            </a>
+                        </p>
+                                                    <p class="mt-auto detail for-mobile-small">
+                                <a title="Room details" class="js-toggle-details"
+                                   href="#">Room amenities, details, and policies</a>
+                            </p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+                    <div class="room-details bg-light js-room-details" style="display: none">
+                <div class="text">
+                                                                <p class="amenities"><strong>Amenities:</strong></p>
+                        <ul class="amenities d-flex flex-wrap">
+                                                            <li>Room Service</li>
+                                                            <li>24 hour front desk</li>
+                                                            <li>Cable/Satellite TV</li>
+                                                            <li>Property is cleaned with disinfectant</li>
+                                                            <li>Restaurant</li>
+                                                            <li>Property confirms they are implementing guest safety measures</li>
+                                                            <li>Bed sheets and towels are washed at a temperature of at least 60°C/140°F</li>
+                                                            <li>Hair Dryer</li>
+                                                            <li>Property uses a professional cleaning service</li>
+                                                            <li>Masks are available to guests</li>
+                                                            <li>Contactless check-in and check-out are available</li>
+                                                            <li>Guests are provided with free hand sanitizer</li>
+                                                            <li>Social distancing measures are in place</li>
+                                                            <li>Internet Access - Free Public Access</li>
+                                                            <li>Acrylic shield between guests and staff in main contact areas</li>
+                                                            <li>Full Kitchen</li>
+                                                            <li>Laundry</li>
+                                                            <li>Non-Smoking Facility</li>
+                                                    </ul>
+                                    </div>
+            </div>
+            </div>
+        <div class="d-flex flex-column about-room js-about-room">
+        <div class="d-flex room-info">
+            <div class="img-room position-relative js-room-photo-wrap">
+                                    
+    <div class="roomImages">
+        <a href="#" class="js-init-carousel"><img class="room-first-photo max-w-none" src="//images.getaroom-cdn.com/image/upload/s--P1sy8DU1--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa"></a>
+        <div class="fotorama js-rooms-images" data-auto="false">
+                            <a href="//images.getaroom-cdn.com/image/upload/s--fbE7LhGw--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa" data-thumb="//images.getaroom-cdn.com/image/upload/s--Cl8Jt17k--/c_thumb,e_improve,fl_lossy.immutable_cache,g_custom,h_64,q_auto:good,w_64/v1737471709/0d64319d1d1afcd21eb43a0963e6756a6198f078?_a=BACAEuEv&atc=e7cd1cfa" data-caption="1/1"></a>
+                        </div>
+            </div>
+                                </div>
+            <div class="body row no-gutters">
+                <div class="col room d-flex flex-column pt-2 pb-2">
+                    <p class="type-room">Standard, Garden View</p>
+                                            <p class="title-amenities for-mobile-small-big">With your stay:</p>
+                        <ul class="amenities d-flex for-mobile-small-big">
+                                                            <li><img src="/images/parts/amenities/icon/wifi.svg"> Free Internet</li>
+                                                    </ul>
+                                                                <p class="mt-auto detail for-mobile-small-big">
+                            <a title="Room details" class="js-toggle-details"
+                               href="#">Room amenities, details, and policies</a>
+                        </p>
+                                    </div>
+                <div class="col info d-flex align-items-center">
+                    <div class="bg-block">
+                        <div class="block-price">
+                            <a class="btn btn-warning js-link-stay js-mp-lp-checkrates-rc" href="#" style="display: block"
+                               role="button">Check Rates</a>
+                        </div>
+                        <p class="best-rate-certified img">
+                            <img src="/images/parts/amenities/chek-green.svg" title="Today’s Low Rate"
+                                 alt="Today’s Low Rate">
+                            <a class="js-learn-more" href="#" title="Today’s Low Rate">
+                                Today’s Low Rate                            </a>
+                        </p>
+                                                    <p class="mt-auto detail for-mobile-small">
+                                <a title="Room details" class="js-toggle-details"
+                                   href="#">Room amenities, details, and policies</a>
+                            </p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+                    <div class="room-details bg-light js-room-details" style="display: none">
+                <div class="text">
+                                                                <p class="amenities"><strong>Amenities:</strong></p>
+                        <ul class="amenities d-flex flex-wrap">
+                                                            <li>Room Service</li>
+                                                            <li>24 hour front desk</li>
+                                                            <li>Cable/Satellite TV</li>
+                                                            <li>Property is cleaned with disinfectant</li>
+                                                            <li>Restaurant</li>
+                                                            <li>Property confirms they are implementing guest safety measures</li>
+                                                            <li>Bed sheets and towels are washed at a temperature of at least 60°C/140°F</li>
+                                                            <li>Hair Dryer</li>
+                                                            <li>Property uses a professional cleaning service</li>
+                                                            <li>Masks are available to guests</li>
+                                                            <li>Contactless check-in and check-out are available</li>
+                                                            <li>Guests are provided with free hand sanitizer</li>
+                                                            <li>Social distancing measures are in place</li>
+                                                            <li>Internet Access - Free Public Access</li>
+                                                            <li>Acrylic shield between guests and staff in main contact areas</li>
+                                                            <li>Full Kitchen</li>
+                                                            <li>Laundry</li>
+                                                            <li>Non-Smoking Facility</li>
+                                                    </ul>
+                                    </div>
+            </div>
+            </div>
+    
+
+                    </div>
+
+                    
+
+                </div>
+                <div class="bottom-rooms-list">
+                    <p class="bottom">
+                        <a class="btn btn-warning-br js-link-stay" title="find available rooms"
+                           href="#" role="button" target="_blank">find available rooms</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+<div class="about-hotel js-details">
+    <div class="container">
+        <h2>About Krishna heritage</h2>
+            <div class="readmore-text-wrap">
+        <div class="readmore-text-content">
+            <section class="text readmore-text-inner">
+                <div class="default-styles">
+                    <p>Experience an abundance of unparalleled facilities and features at Krishna heritage.Maintain seamless communication using the complimentary Wi-Fi at hotel. Effortlessly arrange transportation to and from the airport using the hotel's airport transfer services. Discovering Badami becomes even more accessible, thanks to the taxi amenities provided at the hotel. For visitors traveling by automobile, complimentary parking is available. Reception assistance is offered at the hotel featuring express check-in or check-out. For extended visits or whenever required, the laundry service ensures your preferred travel garments remain fresh and accessible.Craving relaxation? Make the most of your stay at the Krishna heritage with convenient amenities like room service and daily housekeeping at your disposal. Kindly note that smoking is prohibited in the hotel to ensure fresher air for all visitors.At Krishna heritage, every guestroom is provided with convenient amenities and fittings to ensure a comfortable stay. Enhance your experience at hotel with the knowledge that certain rooms are equipped with linen service and air conditioning for your convenience.A few accommodations within Krishna heritage offer unique design elements such as a balcony or terrace. Certain rooms offer in-room amusement features such as the television for your enjoyment. It is worth noting that certain guest bathrooms feature a hair dryer and toiletries for your convenience. At the hotel, an assortment of easily accessible and delicious meal choices are available to satisfy your appetite whenever it strikes.</p>                </div>
+            </section>
+        </div>
+        <span class="mt-2 readmore-button-wrap">
+            <a data-content-more="More" data-content-less="Less" href="#"></a>
+        </span>
+    </div>
+                        <h2 class="mt-6 ">Amenities</h2>
+                <section class="amenities mt-4">
+                    <ul class="d-flex flex-wrap">
+                                                    <li>Room Service</li>
+                                                        <li>24 hour front desk</li>
+                                                        <li>Cable/Satellite TV</li>
+                                                        <li>Property is cleaned with disinfectant</li>
+                                                        <li>Restaurant</li>
+                                                        <li>Property confirms they are implementing guest safety measures</li>
+                                                        <li>Bed sheets and towels are washed at a temperature of at least 60°C/140°F</li>
+                                                        <li>Hair Dryer</li>
+                                                        <li>Property uses a professional cleaning service</li>
+                                                        <li>Masks are available to guests</li>
+                                                        <li>Contactless check-in and check-out are available</li>
+                                                        <li>Guests are provided with free hand sanitizer</li>
+                                                        <li>Social distancing measures are in place</li>
+                                                        <li>Internet Access - Free Public Access</li>
+                                                        <li>Acrylic shield between guests and staff in main contact areas</li>
+                                                        <li>Full Kitchen</li>
+                                                        <li>Laundry</li>
+                                                        <li>Non-Smoking Facility</li>
+                                                </ul>
+                </section>
+                </div>
+</div>
+
+
+    <div class="hotel-faq js-hotel-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="hotelFaq">
+                                    <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left "
+                                        data-toggle="collapse" data-target="#collapse0"
+                                        data-mpvalue="Address" type="button">What is the address for Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse0" class="panel-collapse collapse show" data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    The property is located at Krishna Heritage Hotel in Badami.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse1"
+                                        data-mpvalue="Nightly Rate" type="button">How much does it cost per night to stay at Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    Prices vary based on dates and availability. Select the dates of your stay above to find the best price on all available rooms.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse2"
+                                        data-mpvalue="Check-in/out" type="button">What times are check-in and check-out at Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    Check-in begins at 12:00 and check-out is at 11:00 at Krishna heritage. Early check-in or late check-out may be available at an additional cost.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse3"
+                                        data-mpvalue="Pool" type="button">Does Krishna heritage have a pool?</button>
+                            </div>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    No, this hotel does not have a pool, but it has other amenities for guests to enjoy. Please see the hotel description above for more information.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse4"
+                                        data-mpvalue="Restaurant" type="button">Is there a restaurant at Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    Yes, this hotel does have at least one on-site restaurant to enjoy during your stay. Room service is also available should you prefer meals from the comfort of your room. Check out the hotel description above to learn more about the dining options available at Krishna heritage.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse5"
+                                        data-mpvalue="Breakfast" type="button">Is there free breakfast available at Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    Breakfast may be available at Krishna heritage, and may come free with your room, depending on your selection. Please check for dates and room availability above to see what's included with your stay.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse6"
+                                        data-mpvalue="What to do" type="button">What is there to do at Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    Guests at Krishna heritage can enjoy amenities such as a restaurant during their stay. Check out the hotel description to learn more about the amenities available during your stay.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse7"
+                                        data-mpvalue="Discounts" type="button">Are there any discounts or deals for Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    We offer a wide variety of rates on Krishna heritage. Discounted rates are available throughout the year, depending on your travel dates. Search for your dates above and we'll show you our lowest prices.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="card">
+                        <div class="card-header">
+                            <div class="panel-title">
+                                <button class="btn btn-link btn-block text-left collapsed"
+                                        data-toggle="collapse" data-target="#collapse8"
+                                        data-mpvalue="Promo Codes" type="button">Are there promo or coupon codes available for Krishna heritage?</button>
+                            </div>
+                        </div>
+                        <div id="collapse8" class="panel-collapse collapse " data-parent="#hotelFaq">
+                            <div class="card-body">
+                                <p>
+                                    By logging into our site using the login banner above, you'll receive an instant discount of 5% on your booking today with no limit to how much you can save. Log in, claim your promo code, select your dates and room and apply your code at checkout.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                </div>
+        </div>
+    </div>
+    
+
+<div class="map-hotel lazyload js-map-block map-loading">
+    <div class="container">
+
+        <div class="d-flex title">
+            <div class="bd-highlight"><h2 id="js-map-header">Location</h2></div>
+            <div class="ml-auto location-address">
+                <p>Krishna heritage<br>
+                                                Krishna Heritage Hotel,                                                        <a href="/hotels/in/badami" title="Badami">Badami</a>,                                                        587201,                                                        <a href="https://www.guestreservations.com/hotels-India" title="India">India</a>                            </p>
+            </div>
+        </div>
+        <section class="map mt-3">
+            <div class="hotel-map-position js-bottom-map">
+                <div class="hotel-map position-relative js-map-wrap">
+                    <!-- Map Loading Skeleton -->
+                    <div class="map-skeleton" aria-hidden="true">
+                        <div class="skeleton-pulse"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 2C13.383 2 8 7.383 8 14c0 8.5 12 22 12 22s12-13.5 12-22c0-6.617-5.383-12-12-12zm0 16c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z" fill="currentColor" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="skeleton-text">Loading map...</div>
+                        </div>
+                    </div>
+                    <!-- Map Content -->
+                    <div class="hotel-map-img">
+                        <div class="js-hotel-map">
+                            <div class="js-wrap-map wrap-map" data-map-width="960" data-map-height="360"
+                                 data-map-zoom="14"></div>
+                        </div>
+                    </div>
+                    <div class="hotel-map-button js-map-button position-absolute d-none">
+                        <a href="#"><img src="/images/parts/map/location.svg">
+                            <span>View Map</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<div class="slider-block lazyload js-nearby-block">
+    <div class="container">
+        <h2>Popular Hotels Nearby</h2>
+        <div class="wrap-slick-slider">
+            <div class="justify-content-center nearby-hotels-slider slick-slider" data-slades-count="6">
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/kstdc-hotel-mayura-chalukya-badami/booking" style="display: block"
+                           title="KSTDC Hotel Mayura Chalukya Badami" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="kstdc-hotel-mayura-chalukya-badami"
+                           data-target-hotel-name="KSTDC Hotel Mayura Chalukya Badami"
+                           data-target-hotel-uuid="77ab84f2-feae-57ca-bf68-173ee01d98a0"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="0"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name=""
+                           data-target-hotel-property-type=""
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="/assets/9846d813/images/hotelcloseup.png" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="KSTDC Hotel Mayura Chalukya Badami" alt="KSTDC Hotel Mayura Chalukya Badami">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">KSTDC Hotel Mayura Chalukya Badami</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/kanthi-resorts-badami/booking" style="display: block"
+                           title="Kanthi Resorts Badami" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="kanthi-resorts-badami"
+                           data-target-hotel-name="Kanthi Resorts Badami"
+                           data-target-hotel-uuid="e647d8cb-7829-5779-aa16-7210f0f90318"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="1"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name="Independent"
+                           data-target-hotel-property-type="HOTEL"
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="//images.getaroom-cdn.com/image/upload/s--iRndjBY---/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1709589524/cd2dad83cf37017f9ade37e7a5b05ce7bc59ebb1?_a=BACAEuEv&atc=e7cd1cfa" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="Kanthi Resorts Badami" alt="Kanthi Resorts Badami">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">Kanthi Resorts Badami</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/clarks-inn-bagalkot/booking" style="display: block"
+                           title="Clarks Inn, Bagalkot" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="clarks-inn-bagalkot"
+                           data-target-hotel-name="Clarks Inn, Bagalkot"
+                           data-target-hotel-uuid="15d8b55f-ace7-5795-9f4a-c16dd8416b76"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="1"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name="Independent"
+                           data-target-hotel-property-type="HOTEL"
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="//images.getaroom-cdn.com/image/upload/s--H6LyQvkp--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1737373834/78f66b5634274950d443205293e8680eb8860f85?_a=BACAEuEv&atc=e7cd1cfa" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="Clarks Inn, Bagalkot" alt="Clarks Inn, Bagalkot">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">Clarks Inn, Bagalkot</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/hotel-badami-court/booking" style="display: block"
+                           title="Hotel Badami Court" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="hotel-badami-court"
+                           data-target-hotel-name="Hotel Badami Court"
+                           data-target-hotel-uuid="c61470b9-a959-575b-9365-ae4c38b58472"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="1"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name="Independent"
+                           data-target-hotel-property-type="HOTEL"
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="//images.getaroom-cdn.com/image/upload/s--Ve73HwqF--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1743824409/b15740f4a6eaca06a7be1640a83c5d4e47f12783?_a=BACAEuEv&atc=e7cd1cfa" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="Hotel Badami Court" alt="Hotel Badami Court">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">Hotel Badami Court</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/sarvodaya-delux-lodge/booking" style="display: block"
+                           title="Sarvodaya Delux Lodge" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="sarvodaya-delux-lodge"
+                           data-target-hotel-name="Sarvodaya Delux Lodge"
+                           data-target-hotel-uuid="17a0e41a-9fe5-5058-ba0f-8be185120bb5"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="1"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name="Independent"
+                           data-target-hotel-property-type="HOTEL"
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="//images.getaroom-cdn.com/image/upload/s--iDZHijEm--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1754073381/da9c99dc1d5bb59772df2183507f58fd2b957861?_a=BACAEuEv&atc=e7cd1cfa" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="Sarvodaya Delux Lodge" alt="Sarvodaya Delux Lodge">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">Sarvodaya Delux Lodge</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                
+                    <div class="card position-relative text-white">
+
+                        <a href="/clarks-inn-badami/booking" style="display: block"
+                           title="Clarks Inn, Badami" 
+                           class="js-nearby-hotel-click"
+                           data-target-hotel="clarks-inn-badami"
+                           data-target-hotel-name="Clarks Inn, Badami"
+                           data-target-hotel-uuid="22a406e5-6190-5569-9984-17b1ec91d988"
+                           data-target-hotel-country="IN"
+                           data-target-hotel-images="1"
+                           data-target-hotel-seo-description="Yes"
+                           data-target-hotel-chain-name="Independent"
+                           data-target-hotel-property-type="HOTEL"
+                           data-target-hotel-locality="Badami">
+                            <figure class="figure">
+                                <img data-lazy="//images.getaroom-cdn.com/image/upload/s--CiN_jMbp--/c_limit,e_improve,fl_lossy.immutable_cache,h_460,q_auto:good,w_460/v1744318955/6ec629da0a30b7d3cb1a61980a579b50a344b5b0?_a=BACAEuEv&atc=e7cd1cfa" data-lazyerror="/assets/9846d813/images/hotelcloseup.png"
+                                     class="card-img" title="Clarks Inn, Badami" alt="Clarks Inn, Badami">
+                                <figcaption class="figure-caption d-flex align-items-end card-figure-bg position-absolute">
+                                    <section class="mt-auto card-text">
+                                        <p class="card-name">Clarks Inn, Badami</p>
+                                                                                    <p class="card-stars">
+                                                                                                    <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                        <img src="/assets/9846d813/images/star.svg" title="Hotel star">
+                                                                                                </p>
+                                                                                </section>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                    </div>
+
+                            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="about-gr lazyload">
+    <div class="d-flex align-items-center position-absolute">
+        <div class="about-gr-text">
+            <section class="container">
+                <p><img alt="Guest Reservations" src="/images/pages/p-lp/logo-white-tm.svg"
+                        title="Guest Reservations"></p>
+                <p> We are an independent travel network <br> offering over 100,000 hotels worldwide</p>
+                <p class="learn-more">
+                    <a class="js-learn-more" href="#"
+                       title="Learn more">Learn more                        <img alt="Learn more" class="ml-2" src="/images/pages/p-lp/next.svg"
+                             title="Learn more"> </a></p>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="container additional-footer">
+    <p>Guest Reservations™ is not owned or sponsored by any particular hotel or chain. The use of any hotel trademarks or information is solely for reference purposes in helping customers identify the travel destinations of their choice. All such property, brand, and company names are the registered trademarks or intellectual property of their respective owners. <a href="#" class="no-affiliation-popup-link" title="Hotel Non-Affiliation">Click here</a> for more information.</div>
+<!-- Hidden field for ClickTripz -->
+<input type="hidden" name="hotelId" value="f91c4171-9aba-5b5c-bb19-c57a7e701c09">
+
+
+<div class="modal fade modal-map-box js-modal-map-box" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"><div id="js-mapbox-map"></div></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade modal-learn-more reasons js-modal-learn-more" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>4 REASONS TO BOOK WITH <br> <b class="trademark-name">Guest Reservations<sup>TM</sup></b></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>As an independent travel network offering over 100,000 hotels worldwide, we can get you the same deals you expect with a bigger travel agency or direct from the hotel. We compile the best rates from several top suppliers to make it easy to book the perfect room. Combine these deals with our all-devices booking engine, strict privacy focus, and world-class support and you have the <b class="trademark-name">Guest Reservations<sup>TM</sup></b> difference. Learn more <a title="about us" href="https://www.guestreservations.com/about/page" 
+                               target="_blank"> about us</a>.</p>
+
+                <section class="reasons-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="media">
+                                <img src="/assets/9d20791c/images/reasons/exclusive-deals.svg"
+                                     class="mr-4" alt="Exclusive Deals">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Exclusive Deals</h5>
+                                    Deep Discounts And Popular Exclusives.                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="media">
+                                <img src="/assets/9d20791c/images/reasons/massive-selection.svg"
+                                     class="mr-4" alt="Massive selection">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Massive selection</h5>
+                                    100,000+ Hotels From All The Top Suppliers!                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-6">
+                            <div class="media">
+                                <img src="/assets/9d20791c/images/reasons/customer-service.svg"
+                                     class="mr-4" alt="Leading Customer Service">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Leading Customer Service</h5>
+                                    Our Agents Are Friendly And Available 24/7.                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="media">
+                                <img src="/assets/9d20791c/images/reasons/strict-privac.svg"
+                                     class="mr-4" alt="Strict Privacy Focus">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Strict Privacy Focus</h5>
+                                    All Bookings Are Secured And Protected.                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-booking-form js-modal-booking-form" tabindex="-1" role="dialog" data-ct-redirect="/krishna-heritage/booking">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-booking-form">
+                <p><img title="Booking Form" alt="Booking Form"
+                        src="/images/pages/p-lp/bell.svg"></p>
+                <h2>Select your dates</h2>
+                <p class="mb-2">Choose your dates to book today’s available rooms and rates</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" data-ct-redirect="/krishna-heritage/booking">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body hotel-booking js-modal-form-block"></div>
+        </div>
+    </div>
+</div><script async type="97907f1624b6be851fb15967-text/javascript">
+    Main.setOptGroupRates({"hotelName":"Krishna heritage","hotelCity":"Badami","latitude":"15.91633415","longitude":"75.66459656"});
+    var Booking = GR.loadPage('Booking', {"pageName":"LP","isLanding":true,"isModalBookingForm":false,"loggedIn":false,"propertyData":{"latitude":"15.91633415","longitude":"75.66459656","uuid":"f91c4171-9aba-5b5c-bb19-c57a7e701c09","name":"Krishna heritage","url":"krishna-heritage","locality":"Badami","region":"","country":"IN","roomsCount":2,"hotelImagesCount":50,"roomsWithImagesCount":2,"chain":"Independent","propertyType":"HOTEL","encodeName":"Krishna heritage"},"mapsData":{"mapboxToken":"pk.eyJ1IjoiZ3Vlc3RyZXNlcnZhdGlvbnMiLCJhIjoiY2p3dzRhbnQyMDBzcTQ0bnV1NzhmNXo1OCJ9.NFhf9HJg387AZD6VK8mtxg","mapboxJs":"https:\/\/api.mapbox.com\/mapbox.js\/v3.0.1\/mapbox.js","mapboxCss":"https:\/\/api.mapbox.com\/mapbox.js\/v3.0.1\/mapbox.css"},"currency":"INR","mpLPSEODescription":"No","clicktripzPopunderUrl":"https:\/\/www.clicktripz.com\/x\/pas?aid=d9cc95fa-adaa-447f-8605-1c5a669a0c7a&siteID=guestreservations.com&destination=Badami&destinationID=f91c4171-9aba-5b5c-bb19-c57a7e701c09&adults=1","dataLayer":[{"currency":null,"value":null,"tax":0,"transaction_id":"","coupon":"","items":[{"item_id":"f91c4171-9aba-5b5c-bb19-c57a7e701c09","item_name":"Deluxe Resort","item_brand":"Krishna heritage","item_category":"Hotel","price":null,"discount":null,"checkIn":null,"checkOut":null,"rooms":null,"adults":null,"children":null}]},{"currency":null,"value":null,"tax":0,"transaction_id":"","coupon":"","items":[{"item_id":"f91c4171-9aba-5b5c-bb19-c57a7e701c09","item_name":"Standard, Garden View","item_brand":"Krishna heritage","item_category":"Hotel","price":null,"discount":null,"checkIn":null,"checkOut":null,"rooms":null,"adults":null,"children":null}]}],"breadcrumbResult":{"success":true,"phone":"(866) 238-4218","errorMessage":null,"errorHttpCode":null},"mpNoFees":false,"breadcrumbApiResponseTime":null});
+</script>
+            </main>
+
+        </div>
+        <div class="footer mt-auto">
+            <footer>
+                
+<div class="w-100 footer-padding bg-light ">
+
+    <div class="container container-1280">
+        <div class="footer-nav w-100">
+            <div class="row ">
+                <div class="col logo-social d-flex flex-column">
+                    <span class="navbar-brand d-flex flex-column mb-auto">
+                        <img title="Guest Reservations - Logo"
+                             alt="Guest Reservations - Logo"
+                             src="/assets/b8171565/images/logo-dark-tm.svg">
+                        <small> An independent travel network</small>
+                    </span>
+                    <div class="social-networks">
+                        <a title="Guest Reservations on Facebook"
+                           href="https://www.facebook.com/guestreservations" target="_blank">
+                            <img title="Guest Reservations on Facebook"
+                                 alt="Guest Reservations on Facebook"
+                                 src="/assets/b8171565/images/social-networks/facebook.svg">
+                        </a>
+                        <a title="Guest Reservations on Twitter"
+                           href="https://twitter.com/guest_res" target="_blank">
+                            <img title="Guest Reservations on Twitter"
+                                 alt="Guest Reservations on Twitter"
+                                 src="/assets/b8171565/images/social-networks/twitter.svg">
+                        </a>
+                        <a title="Guest Reservations on Instagram"
+                           href="https://www.instagram.com/guestreservations/" target="_blank">
+                            <img title="Guest Reservations on Instagram"
+                                 alt="Guest Reservations on Instagram"
+                                 src="/assets/b8171565/images/social-networks/instagram.svg">
+                        </a>
+                        <a title="Guest Reservations on Pinterest"
+                           href="https://www.pinterest.com/guestreservations/" target="_blank">
+                            <img title="Guest Reservations on Pinterest"
+                                 alt="Guest Reservations on Pinterest"
+                                 src="/assets/b8171565/images/social-networks/pinterest.svg">
+                        </a>
+                        <a title="Guest Reservations on YouTube"
+                           href="https://www.youtube.com/@GuestReservations" target="_blank">
+                            <img title="Guest Reservations on YouTube"
+                                 alt="Guest Reservations on YouTube"
+                                 src="/assets/b8171565/images/social-networks/you-tube.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col nav-footer d-flex">
+                    <div class="styles">
+                        <h5>Learn more</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.guestreservations.com/about/page"
+                                   title="About Us">About Us</a></li>
+                            <li><a href="https://www.guestreservations.com/about/faq"
+                                   title="FAQs">FAQs</a></li>
+                            <li><a href="https://www.guestreservations.com/about/reviews"
+                                   title="Customer Reviews">Customer Reviews</a></li>
+                            <li><a href="https://www.guestreservations.com/about/termsofuse"
+                                   title="Terms of Service">Terms of Service</a></li>
+                            <li><a href="https://www.guestreservations.com/about/privacy"
+                                   title="Privacy Policy">Privacy Policy</a></li>
+                            <li><a href="https://www.guestreservations.com/hotels"
+                                   title="Sitemap">Sitemap</a></li>
+                                                            <li><a href="https://www.guestreservations.com/listyourproperty"
+                                    title="Property Listing">Property Listing</a></li>
+                                                        <li><a href="#" class="no-affiliation-popup-link"
+                                   title="Hotel Non-Affiliation">Hotel Non-Affiliation</a></li>
+                        </ul>
+                    </div>
+                    <div class="styles">
+                        <h5>Get in Touch</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.guestreservations.com/about/contact"
+                                   title="Contact Us">Contact Us</a></li>
+                            <li><a href="https://book.guestreservations.com/trips/gar/lookup?traffic_source=grMyBooking"
+                                   title="My Booking">My Booking</a></li>
+                            <li><a href="https://groups.guestreservations.com/Group-Rate/?PreferredHotels=Krishna+heritage&city=Badami" rel="nofollow" data-mp-track="Footer - Group Rates"
+                                   title="Group Rates">Group Rates</a></li>
+                            <li><a href="https://groups.guestreservations.com/Group-Rate/?PreferredHotels=Krishna+heritage&city=Badami&GroupType=150&sc=GRes_Weddings" rel="nofollow" data-mp-track="Footer - Weddings"
+                                   title="Weddings">Weddings</a></li>
+                            <li><a href="https://groups.guestreservations.com/Group-Rate/?PreferredHotels=Krishna+heritage&city=Badami&es=1" rel="nofollow" data-mp-track="Footer - Extended Stay"
+                                   title="Extended Stay">Extended Stay</a></li>
+                            <li class="privacy-choices">
+                                <a href="https://www.guestreservations.com/about/privacychoices"
+                                   title="Privacy Choices">Privacy Choices<svg class="inline-block" width="34" height="16" viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 8C0 3.58172 3.58172 0 8 0H26C30.4183 0 34 3.58172 34 8V8C34 12.4183 30.4183 16 26 16H8C3.58172 16 0 12.4183 0 8V8Z" fill="#B3B5BB"/>
+                                        <rect x="1" y="1" width="32" height="14" rx="7" fill="#FBFBFB"/>
+                                        <path d="M18.9807 1H26.1984C30.2301 1 33.4984 4.26832 33.4984 8.3V8.3C33.4984 12.3317 30.2301 15.6 26.1984 15.6H15L18.9807 1Z" fill="#B3B5BB"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5305 5.59131L27.8944 11.9553C28.1872 12.248 28.6626 12.248 28.9553 11.9553C29.2481 11.6625 29.2481 11.1871 28.9553 10.8944L22.5914 4.53044C22.2986 4.2377 21.8232 4.23769 21.5305 4.53044C21.2377 4.82318 21.2377 5.29857 21.5305 5.59131Z" fill="#FBFBFB"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8944 4.53059L21.5304 10.8945C21.2377 11.1873 21.2377 11.6627 21.5304 11.9554C21.8232 12.2482 22.2986 12.2482 22.5913 11.9554L28.9553 5.59146C29.248 5.29872 29.248 4.82333 28.9553 4.53058C28.6625 4.23784 28.1871 4.23784 27.8944 4.53059Z" fill="#FBFBFB"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74463 9.90894L13.4393 4.59227C13.7321 4.29945 14.2072 4.29945 14.5 4.59227C14.7928 4.88509 14.7928 5.36016 14.5 5.65298L9.27498 11.5C8.98216 11.7928 8.50709 11.7928 8.21427 11.5L5 8.28573C4.70718 7.99291 4.70718 7.51784 5 7.22502C5.29282 6.9322 5.76788 6.9322 6.0607 7.22502L8.74463 9.90894Z" fill="#B3B5BB"/>
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<div class="modal fade modal-admin" id="show-no-affiliation" tabindex="-1" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-log" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title trademark-name" id="myModalLabel">Guest Reservations<sup>TM</sup><br>
+                    Hotel Non-Affiliation – Proudly Independent Network</h4>
+            </div>
+            <div class="modal-body" id='modal-body'>
+
+                <div class="panel panel-default">
+                    We are an independent travel network for over 100,000 hotels worldwide. We are not owned or sponsored by any particular hotel, and the trademarks of all hotels in our network are owned by the respective hotels or licensors. We only use hotel trademarks or information to the extent necessary to assist our customers to book rooms in the travel destination of their choice.                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <b class="trademark-name">Guest Reservations<sup>TM</sup></b>
+                        Connects Travelers to Relevant Deals:                    </div>
+                    <div class="panel-body no-padding">
+                        <span class="row">
+                            <p class="icons icon-case">We are focused on connecting travelers to the most relevant deals.</p>
+                        </span>
+                        <span class="row">
+                            <p class="icons icon-bed">As an independent travel network and online travel agent (OTA), we can offer rooms through hotel room suppliers and through global distribution systems where hotels place their inventory for sale.</p>
+                        </span>
+                        <span class="row">
+                            <p class="icons icon-sale">This allows us, as an independent travel network, to get you the same deals you expect with larger travel agencies.</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="copyrighted-slogan w-100">
+            <div class="row">
+                <div class="col-md-auto copyrighted">
+                    <p>Copyright 2026 <b class="trademark-name">Guest Reservations<sup>TM</sup></b>.</p>
+                </div>
+                <div class="col slogan">
+                    <p> <span class="trademark-name"> <b class="trademark-name">Guest Reservations<sup>TM</sup></b> is an independent travel network <br class="for-mobile for-tablet"> offering over 100,000 hotels worldwide.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+            </footer>
+        </div>
+        
+                        <!-- Begin Clicktripz [default] -->
+    <script type="97907f1624b6be851fb15967-text/javascript">
+        window._CTZ = window._CTZ || {};
+        window._CTZ.consent = window._CTZ.consent || {};
+        window._CTZ.consent.allowed = true;
+                window._CTZ.events = window._CTZ.events || {};
+        window._CTZ.events.launch = function(product) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'launchTrigger', ad_type: product });
+        };
+            </script>
+    <script async charset="UTF-8" data-publisher="39fab4bfcefd4694ba169f99733afe55" src="https://compare-static.guestreservations.com/tag.js" type="97907f1624b6be851fb15967-text/javascript"></script>
+    <!-- End Clicktripz -->
+    <div id="mobile-indicator"></div>
+        <script type="97907f1624b6be851fb15967-text/javascript">
+                        if (typeof $.i18n === 'function') {
+                    $.i18n().load({
+  "main_text_before": "Before",
+  "main_text_all_amenities": "All amenities",
+  "main_text_from": "From",
+  "main_text_choose": "Choose",
+  "main_text_filter_results": "Filter Results",
+  "main_text_apply": "Apply",
+  "text_sold_out": "Sold out"
+}, 'en');
+                }
+                            if (typeof $.i18n === 'function') {
+                    $.i18n().load({}, 'en');
+                }
+                            if (typeof $.i18n === 'function') {
+                    $.i18n().load({
+  "grform_error_first_name": "Please enter a valid first name between $1-30 characters.",
+  "grform_error_last_name": "Please enter a valid first name between $1-30 characters.",
+  "grform_error_bill_name": "Please enter a valid first and last name between 3-60 characters.",
+  "grform_error_expiration_date": "Please enter a valid expiration date",
+  "grform_error_expiration_month": "Please choose a valid month",
+  "grform_error_expiration_year": "Please choose a valid year",
+  "grform_error_email_wrong": "Wrong email format",
+  "grform_error_email_one_at": "It can be only one @ symbol",
+  "grform_error_email_no_space": "It should be no space symbols",
+  "grform_error_too_short": "Field is too short",
+  "grform_error_no_all_caps": "Field can't be in ALL CAPS",
+  "grform_error_not_empty": "Can't be empty",
+  "grform_error_agree_terms": "Please agree to the terms.",
+  "grform_error_email_structure": "Please enter a valid email address.",
+  "grform_error_email_under_length": "Please enter a valid email address under 51 characters.",
+  "grform_error_email_typo": "The email address might have a typo. Did you mean $1?",
+  "grform_error_invalid_phone": "Please enter a valid phone number.",
+  "grform_error_invalid_us_ca_phone": "Please enter a valid ten digit phone number.",
+  "grform_error_invalid_address": "Please enter a valid address under 121 characters.",
+  "grform_error_city_invalid": "Please enter a town or city between 3-25 characters.",
+  "grform_error_card_number": "Please enter a valid 15-16 digit card number.",
+  "grform_error_card_number_empty": "Please enter your credit card number.",
+  "grform_error_card_number_invalid": "Please enter a valid credit card number.",
+  "grform_error_card_number_non_numeric": "Please enter a valid 15-16 digit card number.",
+  "grform_error_card_number_15_digits": "Please enter a valid 15 digit card number.",
+  "grform_error_card_number_16_digits": "Please enter a valid 16 digit card number.",
+  "grform_error_card_number_invalid_type": "Invalid $1 card number. Should be $2 digits.",
+  "grform_error_card_number_luhn": "Please check your card number; it appears invalid.",
+  "grform_error_card_number_type_mismatch": "Card number doesn't match the selected card type.",
+  "grform_error_card_number_unsupported": "The card type you entered is not supported. Please use a Visa, Mastercard, Discover or American Express card.",
+  "grform_error_card_number_too_short": "Card number is too short.",
+  "grform_error_card_number_too_long": "Card number is too long.",
+  "grform_error_cvv_code": "Please enter a valid CVV/CV2/CID card security code.",
+  "grform_error_card_brand": "Please enter a valid credit card brand.",
+  "grform_error_country": "Please enter a valid country.",
+  "grform_error_booking_checkbox": "Please accept the terms to continue."
+}, 'en');
+                }
+                            if (typeof $.i18n === 'function') {
+                    $.i18n().load({
+  "ratesbar_sold_out": "SOLD OUT"
+}, 'en');
+                }
+                            if (typeof $.i18n === 'function') {
+                    $.i18n().load({
+  "bfw_text_room": "Room",
+  "bfw_text_monday_min": "Mo",
+  "bfw_text_tuesday_min": "Tu",
+  "bfw_text_wednesday_min": "We",
+  "bfw_text_thursday_min": "Th",
+  "bfw_text_friday_min": "Fr",
+  "bfw_text_saturday_min": "Sa",
+  "bfw_text_sunday_min": "Su",
+  "bfw_text_monday_short": "Mon",
+  "bfw_text_tuesday_short": "Tue",
+  "bfw_text_wednesday_short": "Wed",
+  "bfw_text_thursday_short": "Thu",
+  "bfw_text_friday_short": "Fri",
+  "bfw_text_saturday_short": "Sat",
+  "bfw_text_sunday_short": "Sun",
+  "bfw_text_jan_short": "Jan",
+  "bfw_text_feb_short": "Feb",
+  "bfw_text_mar_short": "Mar",
+  "bfw_text_apr_short": "Apr",
+  "bfw_text_may_short": "May",
+  "bfw_text_jun_short": "Jun",
+  "bfw_text_jul_short": "Jul",
+  "bfw_text_aug_short": "Aug",
+  "bfw_text_sept_short": "Sept",
+  "bfw_text_oct_short": "Oct",
+  "bfw_text_nov_short": "Nov",
+  "bfw_text_dec_short": "Dec",
+  "bfw_text_jan": "January",
+  "bfw_text_feb": "February",
+  "bfw_text_mar": "March",
+  "bfw_text_apr": "April",
+  "bfw_text_may": "May",
+  "bfw_text_jun": "June",
+  "bfw_text_jul": "July",
+  "bfw_text_aug": "August",
+  "bfw_text_sept": "September",
+  "bfw_text_oct": "October",
+  "bfw_text_nov": "November",
+  "bfw_text_dec": "December",
+  "bfw_title_check_in_date": "Check-in dates",
+  "bfw_title_check_out_date": "Check-out dates",
+  "bfw_text_tonight": "Tonight",
+  "bfw_text_tomorrow_night": "Tomorrow Night",
+  "nda_avail_calendar_footer_loading": "Loading Availability...",
+  "nda_avail_calendar_footer_resolved": "Availability based on 1 night: {rooms}, {adults}",
+  "nda_avail_calendar_footer_resolved_with_kids": "Availability based on 1 night: {rooms}, {adults}, {kids}",
+  "nda_avail_calendar_footer_room_one": "1 Room",
+  "nda_avail_calendar_footer_room_many": "{count} Rooms",
+  "nda_avail_calendar_footer_adult_one": "1 Adult",
+  "nda_avail_calendar_footer_adult_many": "{count} Adults",
+  "nda_avail_calendar_footer_kid_one": "1 Kid",
+  "nda_avail_calendar_footer_kid_many": "{count} Kids",
+  "nda_avail_calendar_tooltip_check_in": "Check-In"
+}, 'en');
+                }
+                </script>
+    
+    <!-- serverHost: web02 -->
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="97907f1624b6be851fb15967-|49" defer></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"e85653badd5240f09f68b142d5c77286","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37dc36ec9fbcb6e',t:'MTc4ODg2ODUxOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+

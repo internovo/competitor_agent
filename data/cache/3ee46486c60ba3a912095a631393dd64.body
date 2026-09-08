@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJmWx2FsOw5zsR53rCGvR-oKc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Veer Savarkar Nagar, Ratan Nagar, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.24089,
+        "longitude": 72.864960000000011
+      },
+      "displayName": {
+        "text": "S.T.Depot (Borivali -E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ2cUcVMKw5zsRCwzSYOhXuNQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ashok Van, Borivali East, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.242423,
+        "longitude": 72.866681
+      },
+      "displayName": {
+        "text": "Ashok Van",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJF0PuU8Kw5zsReZRxJbDv-jI",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ashok Van, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.2424315,
+        "longitude": 72.866741
+      },
+      "displayName": {
+        "text": "Ashok Van",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

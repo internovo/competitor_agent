@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJN2MWz8m25zsRFI8M4UIlwV0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sahyadri Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210367299999998,
+        "longitude": 72.8292716
+      },
+      "displayName": {
+        "text": "Sahyadri Nagar (Charkop)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJIznoyMm25zsRhIrd13Xlmr4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sahyadri Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21035,
+        "longitude": 72.82925
+      },
+      "displayName": {
+        "text": "Sahyadri Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJd-wWz8m25zsRAjYIy7QvZU4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shri Hanuman Mandir Rd, Kandivali, Sahyadri Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210254,
+        "longitude": 72.82876499999999
+      },
+      "displayName": {
+        "text": "Sahyadri Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ_SEH2ci25zsR5xVMpzU4UFs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivalis Dharavi, Shravan Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2100032,
+        "longitude": 72.8330132
+      },
+      "displayName": {
+        "text": "Dyaneshwar Vidyalaya",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJbVRJ8m25zsR1Q8vxal4LHk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sai Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2108948,
+        "longitude": 72.8323286
+      },
+      "displayName": {
+        "text": "Dyaneshwar Vidyalaya",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJN7_LF8m25zsRm5hWZNehUeE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sai Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21096,
+        "longitude": 72.83227
+      },
+      "displayName": {
+        "text": "Bunder Pakhadi Fish Market",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

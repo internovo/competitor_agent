@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJrVmvsM-25zsRguvJ0wtMGtM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20992,
+        "longitude": 72.83784
+      },
+      "displayName": {
+        "text": "Datta Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLQFbfMW25zsRazwnjCfSEdg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.207224,
+        "longitude": 72.837747
+      },
+      "displayName": {
+        "text": "Dahanukar Wadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJfSUOfMW25zsRXJ47UTPeCvc",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.207361,
+        "longitude": 72.837207499999991
+      },
+      "displayName": {
+        "text": "Dahanukar Wadi",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

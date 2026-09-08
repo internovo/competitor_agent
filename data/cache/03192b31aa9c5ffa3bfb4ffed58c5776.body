@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<title>Group Profile | Kothari Group | Residential Projects | Commercial Projects | Hospitality</title>
+<meta name="Description" content="Kothari Group has been a name renowned for Residential and Commercial Projects which are noted for their Quality and Reliable Construction" >
+<meta name="Keywords" content="Kothari Group, Kothari Builders, Residential Projects, Commercial Projects, Residential Projects in Mumbai, Commercial Projects in Mumbai, Residential Projects in Pune, Commercial Projects in Pune, Hotel President Park Aurangabad, Hotel President Planet Indore, Lemon Tree Hotel Aurangabad, Lemon Tree Hotel Indore" >
+
+
+<link rel="stylesheet" type="text/css" href="../ds.css">
+
+<!-- Common Jquery -->
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<!-- Common Jquery -->
+
+<!--Menu Scripts Starts Here-->
+<link type="text/css" href="../menu/menu.css" rel="stylesheet" >
+<script type="text/javascript" src="../menu/menu.js"></script>
+<!--Menu Scripts Ends Here-->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../engine1/style.css">
+<!--<script type="text/javascript" src="engine1/jquery.js"></script>-->
+<!-- End WOWSlider.com HEAD section -->
+
+<!-- Start top-scroll -->
+<script type="text/javascript" src="../js/scrolltopcontrol.js"></script>
+<!-- Start top-scroll -->
+
+</head>
+
+<body class="innerbg">
+<div class="wrapper">
+  <div id="headerpan"> 
+    <script type="text/javascript" src="../includes/top.js"></script> 
+  </div>
+  <div class="clear"></div>
+  <div id="slider"><img src="../images/image-about.jpg" width="980" height="270" alt="About" title="About"></div>
+  <div id="inner-containerpan">
+    <div id="inner-container">
+      <div class="box">
+        <div class="inner-left-div"> 
+          <div class="nav">
+    <div align="right"><img src="../images/left-nav-devider-1.gif" alt=""></div>
+      <ul id="leftnav">
+        <li><a href="group-profile.htm" class="leftnav-current">Group Profile</a></li>
+        <li><a href="../csr/corporate-social-responsibility.htm"  class="leftnav">CSR</a></li>
+      </ul>
+      </div>
+        </div>
+        <div class="inner-right-div">
+          <ul class="breadcrumbs">
+            <li class="home"><a href="http://kothari-group.com"><img src="../images/icon-home.gif" alt="home" border="0"></a></li>
+            <li><img src="../images/breadcrumbs-arrow.gif" alt=""></li>
+            <li>About</li>
+            <li><img src="../images/breadcrumbs-arrow.gif" alt=""></li>
+            <li class="last"><span>Group Profile</span></li>
+          </ul>
+          <div class="clear"></div>
+          <h1>Group Profile</h1>
+          <div class="hr"></div>
+          <p style="padding-top:10px;"><img src="../images/image-seth.jpg" width="136" height="174" align="right" style="margin-left:10px;" class="imageborder" alt="Seth Shri Champalalji Kothari" title="Seth Shri Champalalji Kothari"><strong>The Kothari Group</strong>, founded in 1940 by <strong>Seth Shri Champalalji Kothari</strong>, who was a great visionary of his time and a pioneer of the builders community. The Kothari Group has diversified businesses and are into Construction, Hospitality and Entertainment with a number of projects in Mumbai, Thane & Pune.</p>
+          <h2>Construction</h2>
+          <p>For over 40 years the Kothari Group has been a name renowned for quality and reliability in the construction industry. The group has completed numerous residential and commercial projects in its long history which are noted for their quality construction and command a premium amongst others. The group has earned a reputation for well planned and aesthetically pleasing projects.</p>
+          <p>To own a home in a Kothari Group project is to own a masterpiece of design excellence and superb quality. To live in a home made by the Kothari Group is to enjoy all the good things in life to the fullest.</p>
+          <p>Only the most desired locations are considered for our projects. The most intensive and expensive landscaping ever developed transforms each new site into a lush garden community. As one of the most demanding builders in the industry, only top-notch contractors work on our sites. Furthermore, constant on-site supervision insures the finest quality and workmanship at every stage of construction.</p>
+          <p>Only the absolute best materials are used in our projects. Upgrade or ‘Extra’ features on other projects are standard features in our projects. Our team of talented Architects spends hundreds of hours creating dynamic yet practical floor plans.</p>
+          <p>And finally, the most meticulous after sales service gives you assurance of our commitment to our customers comfort, complete satisfaction and many happy care free years in their Kothari Group homes.</p>
+          <div class="clear"></div>
+          <h2>Hospitality</h2>
+          <div class="clear"></div>
+          <div class="inner-heading">Hotel President Park - Aurangabad, India</div>
+          <p ><img src="../images/about-h1.jpg" width="200" height="91" align="right" class="imageborder" style="margin-left:10px;" alt="Hotel President Park" title="Hotel President Park">The Kothari Group diversified into the Hotel & Hospitality business through its first venture in 1993 - Hotel President Park, Aurangabad. Aurangabad with its rich historical heritage is surrounded by the famous Ajanta and Ellora Caves, which draw tourists from all over the world. The hotel has 60 centrally air-conditioned rooms all luxuriously furnished and equipped with colour TVs and minibars. </p>
+          <div class="inner-heading">Hotel President Planet - Indore, India</div>
+          <p><img src="../images/about-h2.jpg" width="200" height="91" align="right" class="imageborder" style="margin-left:10px;" alt="Hotel President Planet" title="Hotel President Planet">In 2000, the group set up its second venture in the hospitality industry, Hotel President Planet, Indore. An 85 room all suite property, Hotel Planet, offers the latest amenities like colour tv’s, electronic safes and minibars in all rooms. A unique feature of this hotel are the large rooms which have separate living and working areas designed to meet the needs of the business traveler. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="push"></div>
+</div>
+<div class="footer">
+  <div id="footer-containerpan"> 
+    <script type="text/javascript" src="../includes/bottom.js"></script> 
+  </div>
+</div>
+</body>
+</html>

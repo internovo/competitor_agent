@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJjwZVAsa25zsRpaLymj0SHFw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Maharashtra Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2071,
+        "longitude": 72.83393
+      },
+      "displayName": {
+        "text": "Maharashtra Nagar (Kandivali-W) or Yadav Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJEzGoBsa25zsRrGra_9jnm3Y",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20697,
+        "longitude": 72.833379999999991
+      },
+      "displayName": {
+        "text": "Maharashtra Nagar or Yadav Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJMRnrA8a25zsRZLChT7dHX6s",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.207027,
+        "longitude": 72.833368499999992
+      },
+      "displayName": {
+        "text": "Yadav Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

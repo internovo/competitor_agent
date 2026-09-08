@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJdSUO_COx5zsRwJrK4eAD7-M",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Village, Eksar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2376203,
+        "longitude": 72.8453146
+      },
+      "displayName": {
+        "text": "Eksar Village",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJlf8J_COx5zsRVtOaJRO6c9A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.23779,
+        "longitude": 72.84532999999999
+      },
+      "displayName": {
+        "text": "Eksar Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJnw9Y_iOx5zsRLOXuhXy3UFw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Rd, Eksar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2376841,
+        "longitude": 72.8454362
+      },
+      "displayName": {
+        "text": "Eksar Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

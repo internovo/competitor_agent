@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJufxJ89G25zsRDKICt6ANuOw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21333,
+        "longitude": 72.84137
+      },
+      "displayName": {
+        "text": "Punchasheel Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJRx_zjNG25zsRN4RFHjNhHU8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2134,
+        "longitude": 72.84138
+      },
+      "displayName": {
+        "text": "Punchasheel Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJA9e9ctG25zsRGNvxOjCVrM0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21268,
+        "longitude": 72.843229999999991
+      },
+      "displayName": {
+        "text": "Kamala Vihar Sports Complex",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

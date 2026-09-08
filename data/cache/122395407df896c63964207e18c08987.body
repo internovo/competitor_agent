@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJze9C4bO25zsRSvgIV6kBjMw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "RDP Rd Number 1, Kandivali, Charkop, Sector 2 Charkop, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.211769999999998,
+        "longitude": 72.82078
+      },
+      "displayName": {
+        "text": "Jay Ganga",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJZwxj4bO25zsRxamc0x09so8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Sector 2 Charkop, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.21208,
+        "longitude": 72.82085
+      },
+      "displayName": {
+        "text": "Jay Ganga",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJpTjr2LC25zsR86akTd2pCTw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Sector 2 Charkop, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20889,
+        "longitude": 72.82101999999999
+      },
+      "displayName": {
+        "text": "Charkop Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

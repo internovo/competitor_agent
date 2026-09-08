@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJy3EY37u25zsR0naKFwn4k8A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Ambedkar Nagar, Kandivali West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.20216,
+        "longitude": 72.82186
+      },
+      "displayName": {
+        "text": "Shivajiraje Complex (Kandivali-W) (Extension)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJyxCC37u25zsRRLlB225d9Sc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Asmita Jyoti Housing Society, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.202015,
+        "longitude": 72.8219557
+      },
+      "displayName": {
+        "text": "Shivajiraje Complex (Kandivali-W) (Extension)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJz6iRvru25zsRYd1zQ2ITgjI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.20197,
+        "longitude": 72.820219999999992
+      },
+      "displayName": {
+        "text": "Bhoomi Park Play Ground",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

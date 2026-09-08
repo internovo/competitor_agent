@@ -1,0 +1,6 @@
+{
+  "url": "https://places.googleapis.com/v1/places:searchNearby",
+  "status": 200,
+  "fetched_at": "2026-09-08T11:57:50.601061+00:00",
+  "fetcher": "httpx"
+}

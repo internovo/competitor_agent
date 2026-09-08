@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ488K_7C25zsRJU5PIUg4a-g",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Charkop Gaon, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208654,
+        "longitude": 72.819225
+      },
+      "displayName": {
+        "text": "Charkop Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJH3NF2bC25zsRwlaq_QR_RyA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Charkop Gaon, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208714,
+        "longitude": 72.821088
+      },
+      "displayName": {
+        "text": "Charkop Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJpTjr2LC25zsR86akTd2pCTw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Sector 2 Charkop, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20889,
+        "longitude": 72.82101999999999
+      },
+      "displayName": {
+        "text": "Charkop Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

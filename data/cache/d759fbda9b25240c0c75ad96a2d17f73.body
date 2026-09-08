@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJPWXYJ8W25zsR2tR0iRDqTr4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2050801,
+        "longitude": 72.838969699999993
+      },
+      "displayName": {
+        "text": "Vaishali Bhavan (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJN0HR1cS25zsR21OV7-lcTks",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.204919999999998,
+        "longitude": 72.83941999999999
+      },
+      "displayName": {
+        "text": "Vaishali Bhavan (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLQFbfMW25zsRazwnjCfSEdg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.207224,
+        "longitude": 72.837747
+      },
+      "displayName": {
+        "text": "Dahanukar Wadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "places": [
+    {
+      "id": "ChIJQaNn0MW25zsR6TrbkIqnJcg",
+      "types": [
+        "apartment_building",
+        "corporate_office",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shiv Shankar Nagar, Link Road, Lalji Pada, Kandivali (West), Shop No.1, Lalji Pada, New Link Rd, Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203754,
+        "longitude": 72.8345873
+      },
+      "displayName": {
+        "text": "Siddha Seabrook",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJmUZXJc-25zsR7ixtUw_k-BE",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali Link Road, Off, Mahatma Gandhi Rd, Kandivali, Shravan Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2091119,
+        "longitude": 72.834976400000016
+      },
+      "displayName": {
+        "text": "Orchid Suburbia",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJNXf21Z-35zsRhuJQe8C1Lw0",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Number 1, Ambedkar Rd, Kandivali, Charkop, Ambedkar Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2053632,
+        "longitude": 72.823750199999992
+      },
+      "displayName": {
+        "text": "Parinee Essence",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJi3lsXc-25zsRwWqctk3b8LY",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, opp. Orchid Suburbia, Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2083496,
+        "longitude": 72.8353755
+      },
+      "displayName": {
+        "text": "Login chs",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJrYkVJDOx5zsR9jpZhTiTF1M",
+      "types": [
+        "housing_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "RDP 10, Chikoowadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2199667,
+        "longitude": 72.8360233
+      },
+      "displayName": {
+        "text": "Garden Grove Complex",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJEczgM9C35zsRzre3ufaaEVo",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "VeenaSmartHomes, Ambedkar Rd, Kandivali, Charkop, Charkop Gaon, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2064313,
+        "longitude": 72.821334999999991
+      },
+      "displayName": {
+        "text": "Veena Smart Homes Sales Office",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJExwa5s-25zsRON_TL2t9K68",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ekta Bhoomi Classic Ananth Bhoomi, 31, Damu Anna Date Marg, Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2087961,
+        "longitude": 72.8391571
+      },
+      "displayName": {
+        "text": "Anant Bhoomi",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJbU1r_9y25zsRaFpbmRhkTQA",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Vishwa Milan Society, Captain Sameer Chandavarkar Rd, Kandivali, Pushp Heritage, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2079442,
+        "longitude": 72.8386398
+      },
+      "displayName": {
+        "text": "Vishwa Milan CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJWQA_ktG25zsRmgnZpERESrw",
+      "types": [
+        "apartment_building",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "A-WING, Boraspada Rd, Kandivali, Panchsheel Garden, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.213017999999998,
+        "longitude": 72.8414966
+      },
+      "displayName": {
+        "text": "Raj Arcade",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJjUwXr9q25zsR0gUujbo34YI",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Sunder Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208126999999998,
+        "longitude": 72.841528099999991
+      },
+      "displayName": {
+        "text": "Neelyog Aashiyana Co-op Hsg Soc.",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJqc21w9G25zsRKv3zu52R5Pg",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Bhoomi Residency, Kandivali, Panchsheel Garden, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2119198,
+        "longitude": 72.840435
+      },
+      "displayName": {
+        "text": "Bhoomi Residency",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJQ9asfwC35zsRbpx5WZIvzdI",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "R&S Wing, Dotom Isle, Bhoomi Park Rd, opp Billabong International School, Kandivali, Kandivali, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2030165,
+        "longitude": 72.8219768
+      },
+      "displayName": {
+        "text": "Dotom Isle",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJq6oOUtC25zsRIPYllwiPG3Y",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Raj Residency 2, opp. RAJ RESIDENCY-1, Kandivali, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210814,
+        "longitude": 72.8416588
+      },
+      "displayName": {
+        "text": "Raj Residency 2",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJLSCgMAC35zsRHqkrbqML1pY",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Raj Bindu Apartments, Mathuradas Road, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2038102,
+        "longitude": 72.838271499999991
+      },
+      "displayName": {
+        "text": "Shree Abhirekha Heritage CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJX9TJr8i25zsRqdZvTrSgUNo",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "RNA REGENCY PARK Tower, Mahatma Gandhi Rd, Kandivali, Pushp Heritage, Maharashtra Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2073684,
+        "longitude": 72.8333748
+      },
+      "displayName": {
+        "text": "RNA Regency Park Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJBQjbZrC25zsR-0lLHMFbtXw",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "no 1, 5RXV+W2H Patil Compound, off, Mahatma Gandhi Rd, opposite RUSTOMJEE MERIDIAN, Kandivali, Charkop, Charkop Gaon, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2071293,
+        "longitude": 72.81861219999999
+      },
+      "displayName": {
+        "text": "Rustomjee Meridian",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJK0bGmW635zsRLn7Fwo1i4dA",
+      "types": [
+        "housing_complex",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Zen Garden by Konark Shakti, Mahatma Gandhi Rd, next to Lotus Multispecialty Hospital, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2042665,
+        "longitude": 72.8387164
+      },
+      "displayName": {
+        "text": "Zen Gardens by Konark Shakti Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJV17NbNG25zsRPTyaxbMlI1s",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Breezy corner, Boraspada Rd, Kandivali, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.214340699999997,
+        "longitude": 72.8405517
+      },
+      "displayName": {
+        "text": "Breezy Corner CHSL",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJV5d1_MO25zsRA_T9wSJkpBE",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kalpavruksh Heights, Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2016666,
+        "longitude": 72.8342487
+      },
+      "displayName": {
+        "text": "Kalpavruksh Heights Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJSYRRHdu25zsRE16h7Nf2Q5o",
+      "types": [
+        "apartment_complex",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "bus stop, Mahatma Gandhi Rd, opp. Nirmal College, Kandivali, Kamala Nagar, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2052242,
+        "longitude": 72.8419268
+      },
+      "displayName": {
+        "text": "Kailash Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

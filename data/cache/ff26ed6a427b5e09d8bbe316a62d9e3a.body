@@ -1,0 +1,392 @@
+{
+  "places": [
+    {
+      "id": "ChIJ31-4pJy35zsRyCnn5m67-W4",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "MG Cross Rd Number 4, next to Achija Restaurant, Amrut Nagar, Patel Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2061779,
+        "longitude": 72.8435458
+      },
+      "displayName": {
+        "text": "La Serena | Apartments In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJj4oegsW35zsRwK0gNMCcaYQ",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Road, Dahanukar Wadi Rd, Kandivali, Maharashtra Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2059322,
+        "longitude": 72.8334368
+      },
+      "displayName": {
+        "text": "Ruparel Westsky - Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJmfWWeqC35zsRSUCEgrpRI9c",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "M.G.Road, Off, New Link Rd, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2068668,
+        "longitude": 72.833731
+      },
+      "displayName": {
+        "text": "19 North",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ5_aDmmy35zsRP0kKgJaS_b8",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Off Link Rd, behind Symphony Towers, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206080099999998,
+        "longitude": 72.833362999999991
+      },
+      "displayName": {
+        "text": "Mumbai XL",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJJ5m2aIW35zsRLqzXhRsViS4",
+      "types": [
+        "apartment_building",
+        "housing_complex",
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "CTS no.1327A, Chatrapati Shivaji Maharaj Rd, off Mahatma Gandhi Road, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2048897,
+        "longitude": 72.8383667
+      },
+      "displayName": {
+        "text": "Jaswanti Jewel | Apartments In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJw7dEU8e25zsRWWy600vLBYo",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "finance",
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "3-72, Kandivali, Charkop, Ganesh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.204621799999998,
+        "longitude": 72.8338235
+      },
+      "displayName": {
+        "text": "Ruparel Codename West Park",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJq9HFBPS35zsR4fR9fG4mPCg",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Rock Highland, upper mahavir nagar next to SBI Bank, opp Joy Ice-Cream, Kandivali, Sahyadri Nagar, Kandivali, W, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210442399999998,
+        "longitude": 72.8296074
+      },
+      "displayName": {
+        "text": "Rock Highland By Origin Corp | 2 & 3 BHK Flats In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJGRRF36u35zsRG8lzfQdpmBk",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Sai Dham Complex, 90 Feet Rd, Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2028075,
+        "longitude": 72.8346334
+      },
+      "displayName": {
+        "text": "Sai Dham Complex",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJq8mFNFS35zsRSWq8_x2LK-g",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Mathuradas Road, off New Link Road, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2033876,
+        "longitude": 72.8358011
+      },
+      "displayName": {
+        "text": "PRATHAMESH ELITE",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJQfk8Gsa25zsR7StFNGJQNkk",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "73 East, Mahatma Gandhi Rd, off Link Road, Kandivali, Mahatma Gandhi Nagar, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206829199999998,
+        "longitude": 72.8327824
+      },
+      "displayName": {
+        "text": "73 East",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJV5d1_MO25zsRA_T9wSJkpBE",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kalpavruksh Heights, Kandivali, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2016666,
+        "longitude": 72.8342487
+      },
+      "displayName": {
+        "text": "Kalpavruksh Heights Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJfzJvp7i25zsRM4_H-trfZU4",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "6R2H+R4V, Shri Sevantilal Khandwala Marg, Kandivali, Nilkanth Nagar, Babrekar Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.201942799999998,
+        "longitude": 72.827965499999991
+      },
+      "displayName": {
+        "text": "Mitnayan Co-operative Housing Society",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJAQY_eca25zsR4WkKBOuEFx0",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Gandhi Nagar, Symphony Tower, New Link Rd, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20504,
+        "longitude": 72.833107
+      },
+      "displayName": {
+        "text": "Ruparel Sky Greens",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJX9TJr8i25zsRqdZvTrSgUNo",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "RNA REGENCY PARK Tower, Mahatma Gandhi Rd, Kandivali, Pushp Heritage, Maharashtra Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2073684,
+        "longitude": 72.8333748
+      },
+      "displayName": {
+        "text": "RNA Regency Park Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJQaNn0MW25zsR6TrbkIqnJcg",
+      "types": [
+        "apartment_building",
+        "corporate_office",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shiv Shankar Nagar, Link Road, Lalji Pada, Kandivali (West), Shop No.1, Lalji Pada, New Link Rd, Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203754,
+        "longitude": 72.8345873
+      },
+      "displayName": {
+        "text": "Siddha Seabrook",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJWcEKF7m25zsRRAS8zW0qSms",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Bldg no.57, New Mhada Towers, Ekta Nagar CSR, extension rd, Kandivali, Chatrapati Shivaji Raje Complex, Malad West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2023969,
+        "longitude": 72.8241093
+      },
+      "displayName": {
+        "text": "Galaxy Heights CHS Ltd",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJl_peEdi25zsRO3hV5NiYbig",
+      "types": [
+        "apartment_building",
+        "housing_complex",
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shreeji Skyrise, Swami Vivekanand Rd, opp. Fire Station, Kandivali, Parekh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2058905,
+        "longitude": 72.8497751
+      },
+      "displayName": {
+        "text": "Shreeji Skyrise | Apartments In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJgy7uRRm35zsR-8Qao3e_oPg",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ruparel Palacio, Metro Station, New Link Rd, near Dahanukar Wadi, Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206531899999998,
+        "longitude": 72.8350177
+      },
+      "displayName": {
+        "text": "Ruparel Palacio",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJIbIbCNq35zsRcvKb9puObus",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "SKYLONE SPACE, Cross Road No.4, Kandivali, Hemu Colony, Iraniwadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2007156,
+        "longitude": 72.841304400000013
+      },
+      "displayName": {
+        "text": "SKYLON SPACES C WING",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJj9XPbvu35zsRwAVa8grGeVY",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "WestWood, 90 Feet Rd, off Shri Sevantilal Khandwala Marg, opposite Lalji Pada Police Chowki, Kandivali, Ganesh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2033554,
+        "longitude": 72.8333808
+      },
+      "displayName": {
+        "text": "WestWood - Residential Real Estate Project in Mumbai",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

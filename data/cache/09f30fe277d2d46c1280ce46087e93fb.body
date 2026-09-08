@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJI0tmODOx5zsRF6u2HTU9utk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chikoowadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21986,
+        "longitude": 72.835381
+      },
+      "displayName": {
+        "text": "Mhada Colony (Shimpavali)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ58oOODOx5zsRj61L5PreECw",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2197745,
+        "longitude": 72.835324000000014
+      },
+      "displayName": {
+        "text": "Mhada Colony (Shimpoli)",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJFbjytjKx5zsR3M8mCLDILcc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Padma Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.219749999999998,
+        "longitude": 72.83847999999999
+      },
+      "displayName": {
+        "text": "Chikoowadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

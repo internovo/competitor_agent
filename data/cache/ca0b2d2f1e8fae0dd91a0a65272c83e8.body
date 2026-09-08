@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJIxgfLLu25zsR9hrr-OWgO4s",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.20237,
+        "longitude": 72.81645
+      },
+      "displayName": {
+        "text": "Marina Enclave",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJp0SnLru25zsRtmgI-YtyQtw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.202389999999998,
+        "longitude": 72.81647
+      },
+      "displayName": {
+        "text": "Marina Cnclave",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJr8rYO7u25zsRR6U6AiJtetU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.2018,
+        "longitude": 72.81709
+      },
+      "displayName": {
+        "text": "Veer Shahid Major Kaustubh Rane Maidan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

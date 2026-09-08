@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJD3FKbNm25zsR-HWG3Natrds",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2048138,
+        "longitude": 72.8468353
+      },
+      "displayName": {
+        "text": "Kaala Hanuman Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJDfjh9Ni25zsRkdoMCZ21wHg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Road, Parekh Nagar, Kandivali West, Kandivali, Parekh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20587,
+        "longitude": 72.849985
+      },
+      "displayName": {
+        "text": "Kandivali Station (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJpVwD89i25zsRztEtcwjA4LE",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Parekh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20575,
+        "longitude": 72.849897
+      },
+      "displayName": {
+        "text": "Kandivali",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ3UJ2zjOx5zsRQ9gkJLf2c0Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kanti Park, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22401,
+        "longitude": 72.8364
+      },
+      "displayName": {
+        "text": "Madhuban Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJMXB2TTGx5zsR7ZB2ZP5Io1g",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Gorai 1, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.22499,
+        "longitude": 72.8343
+      },
+      "displayName": {
+        "text": "Best Officer Quarters (Gorai)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJh0Ny9C2x5zsRelycbLUB4t8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chikoowadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22401,
+        "longitude": 72.84021
+      },
+      "displayName": {
+        "text": "Shimpavali Telephone Exchange",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

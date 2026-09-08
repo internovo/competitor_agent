@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJk2ez1DG35zsRC7653dz1Y1o",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Asha Nagar, Borivali East, Mumbai, Maharashtra 400101, India",
+      "location": {
+        "latitude": 19.21324,
+        "longitude": 72.86368
+      },
+      "displayName": {
+        "text": "Sanskriti Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJryk71TG35zsR8uzV5-k4TU4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Gayatri Nagar, Asha Nagar, Kandivali East, Mumbai, Maharashtra 400101, India",
+      "location": {
+        "latitude": 19.2130991,
+        "longitude": 72.8637157
+      },
+      "displayName": {
+        "text": "Sanskriti Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ8dRM1S-35zsR7WC6a8y6-qg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "90 Feet Rd, Kandivali, Gokul Garden VWX, Kandivali East, Mumbai, Maharashtra 400101, India",
+      "location": {
+        "latitude": 19.212877,
+        "longitude": 72.863294
+      },
+      "displayName": {
+        "text": "Sanskriti Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

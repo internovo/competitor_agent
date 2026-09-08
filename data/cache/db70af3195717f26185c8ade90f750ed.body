@@ -1,0 +1,385 @@
+{
+  "places": [
+    {
+      "id": "ChIJq9HFBPS35zsR4fR9fG4mPCg",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Rock Highland, upper mahavir nagar next to SBI Bank, opp Joy Ice-Cream, Kandivali, Sahyadri Nagar, Kandivali, W, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210442399999998,
+        "longitude": 72.8296074
+      },
+      "displayName": {
+        "text": "Rock Highland By Origin Corp | 2 & 3 BHK Flats In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJj4oegsW35zsRwK0gNMCcaYQ",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Road, Dahanukar Wadi Rd, Kandivali, Maharashtra Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2059322,
+        "longitude": 72.8334368
+      },
+      "displayName": {
+        "text": "Ruparel Westsky - Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJwV6vms-25zsRASRvN9zM7z8",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "30A, Mhatre Plaza, opp. Dr. RAICHURA CLINIC, Kandivali, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.208444399999998,
+        "longitude": 72.8375204
+      },
+      "displayName": {
+        "text": "Shree Ram Krushna Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJy-8Peca25zsROsczZh1OAKk",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Office no 5, 5, Old Link Rd, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2019113,
+        "longitude": 72.828249599999992
+      },
+      "displayName": {
+        "text": "Ruparel Optima Kandivali",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJCyLLyLm25zsRt3uOTnVx9jg",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "57-A, Ambedkar Rd, Kandivali, Charkop, Charkop Industrial Estate, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.205209699999997,
+        "longitude": 72.8246576
+      },
+      "displayName": {
+        "text": "Gauri Excellency",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJFxN_4T235zsR4HdaWkY5CrM",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Opposite Rock Enclave - Plot C, Sambath Estate, Bandar Pakhadi Rd, Kandivali, Sai Nagar, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.211223399999998,
+        "longitude": 72.8313357
+      },
+      "displayName": {
+        "text": "Dosti Oro 67 Kandivali",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJQfk8Gsa25zsR7StFNGJQNkk",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "73 East, Mahatma Gandhi Rd, off Link Road, Kandivali, Mahatma Gandhi Nagar, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206829199999998,
+        "longitude": 72.8327824
+      },
+      "displayName": {
+        "text": "73 East",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ5_aDmmy35zsRP0kKgJaS_b8",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Off Link Rd, behind Symphony Towers, Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206080099999998,
+        "longitude": 72.833362999999991
+      },
+      "displayName": {
+        "text": "Mumbai XL",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJj9XPbvu35zsRwAVa8grGeVY",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "WestWood, 90 Feet Rd, off Shri Sevantilal Khandwala Marg, opposite Lalji Pada Police Chowki, Kandivali, Ganesh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2033554,
+        "longitude": 72.8333808
+      },
+      "displayName": {
+        "text": "WestWood - Residential Real Estate Project in Mumbai",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJkUD3PNK25zsRSR-EN5hYct0",
+      "types": [
+        "corporate_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "1st & 2nd Floor, HUM Solaris, near Bharat Petrol Pump, off Mahavir Nagar Kandivali (W, Shivkrupa CHS, RDP 8, Charkop Sector 6, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2155697,
+        "longitude": 72.8355473
+      },
+      "displayName": {
+        "text": "Hum Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "corporate_office"
+    },
+    {
+      "id": "ChIJEYnBMgu35zsRHY3b8kkYLP8",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Chatrapati Shivaji Maharaj Rd, near Thakur International School, opposite Rasoi Hotel, New Saibaba Nagar, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.204996899999998,
+        "longitude": 72.8376657
+      },
+      "displayName": {
+        "text": "RUDRA HEIGHTS",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ2U5rvc-25zsRm91kr3q8IK4",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "49, Gokhale Rd, Kandivali, Veena Sitar, Dahanukar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2092429,
+        "longitude": 72.8376274
+      },
+      "displayName": {
+        "text": "Westin Sankalp Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ31-4pJy35zsRyCnn5m67-W4",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "MG Cross Rd Number 4, next to Achija Restaurant, Amrut Nagar, Patel Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2061779,
+        "longitude": 72.8435458
+      },
+      "displayName": {
+        "text": "La Serena | Apartments In Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJq8mFNFS35zsRSWq8_x2LK-g",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Mathuradas Road, off New Link Road, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2033876,
+        "longitude": 72.8358011
+      },
+      "displayName": {
+        "text": "PRATHAMESH ELITE",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJK5haDdu35zsRfgpETp7bax0",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Plot 236/237, 4, Hemukalani Rd Number 2, Kandivali, Paras Nagar, Irani Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2006725,
+        "longitude": 72.8394508
+      },
+      "displayName": {
+        "text": "Rajputana Paradise",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJC3CmcEe35zsRKsT8GYPWoe0",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Anant Tara, Mahatma Gandhi Rd, off New Link Road, Kandivali, Sai Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2093025,
+        "longitude": 72.8327549
+      },
+      "displayName": {
+        "text": "ANANT TARA",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJDcYb5rm25zsRlZ4Eprzo8NM",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ambedkar Rd, Kandivali, Charkop, Ambedkar Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206089499999997,
+        "longitude": 72.822425799999991
+      },
+      "displayName": {
+        "text": "Acme Avenue",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJx1RxFAK35zsRqk_LSV6Uq54",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Wisteria, Sector 3, RDP 8, Shivkrupa CHS, Charkop, Charkop Sector 3, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.215497499999998,
+        "longitude": 72.831677
+      },
+      "displayName": {
+        "text": "Modirealty Wisteria",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJe-PjqL235zsRMa5mfLVQxOY",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Charkop, Sector 2 Charkop, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.210686199999998,
+        "longitude": 72.820056
+      },
+      "displayName": {
+        "text": "EMPORIO TOWERS",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJK0bGmW635zsRLn7Fwo1i4dA",
+      "types": [
+        "housing_complex",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Zen Garden by Konark Shakti, Mahatma Gandhi Rd, next to Lotus Multispecialty Hospital, Kandivali, Hemu Colony, Bhagat Colony, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2042665,
+        "longitude": 72.8387164
+      },
+      "displayName": {
+        "text": "Zen Gardens by Konark Shakti Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    }
+  ]
+}

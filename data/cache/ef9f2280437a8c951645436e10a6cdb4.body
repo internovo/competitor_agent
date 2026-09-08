@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJx7KubBH-0goRDaEBCxDdx3s",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MG Cross Road No. 1, Sai Nagar, Tulaskar Wadi, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2076965,
+        "longitude": 72.847333
+      },
+      "displayName": {
+        "text": "Edmont by Ashwin Sheth Group & K Hemani",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

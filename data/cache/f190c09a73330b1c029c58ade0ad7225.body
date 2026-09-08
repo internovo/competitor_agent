@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJqYfKch6x5zsRPKyBdtAIMGE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24853,
+        "longitude": 72.85006
+      },
+      "displayName": {
+        "text": "Holy Cross Road (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJKem6DB6x5zsRkoxN-mnRt5w",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2487518,
+        "longitude": 72.850124999999991
+      },
+      "displayName": {
+        "text": "Holy Cross Road",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJj1bC4B2x5zsR8cYOJhymRNo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Holy Cross Road, I C Colony, Borivali West, I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2485544,
+        "longitude": 72.8502397
+      },
+      "displayName": {
+        "text": "Holy Cross Road",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

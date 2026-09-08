@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ2yI7VMe25zsRqxU2VfbFd0I",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Ekta Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2014389,
+        "longitude": 72.8282076
+      },
+      "displayName": {
+        "text": "Ekta Nagar (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJlXejqsC25zsRILKHBcY1iJs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Chatrapati Shivaji Raje Complex, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.200969999999998,
+        "longitude": 72.82795
+      },
+      "displayName": {
+        "text": "Ekta Nagar (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJceofbi25zsRYMJo6dUp_Ws",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Nilkanth Nagar, Ganesh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.203789999999998,
+        "longitude": 72.82767
+      },
+      "displayName": {
+        "text": "Kandivali Industrial Estate or Ganesh Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

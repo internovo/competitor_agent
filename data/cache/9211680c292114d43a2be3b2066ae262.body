@@ -1,0 +1,20 @@
+{
+  "places": [
+    {
+      "id": "ChIJBQjbZrC25zsR_d75ExHAp6U",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "formattedAddress": "5RXV+W2H RUSTOMJEE MERIDIAN, off, महात्मा गाँधी मार्ग, कांदिवली, चारकोप, चारकोप गांव, कांदिवली पश्चिम, मुंबई, महाराष्ट्र 400067, India",
+      "location": {
+        "latitude": 19.207107300000004,
+        "longitude": 72.818636599999991
+      },
+      "displayName": {
+        "text": "RUSTOMJEE MERIDIAN",
+        "languageCode": "hi"
+      }
+    }
+  ]
+}

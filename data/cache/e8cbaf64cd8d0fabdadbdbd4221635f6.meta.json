@@ -1,0 +1,6 @@
+{
+  "url": "https://www.99acres.com/load/verifycaptcha",
+  "status": 200,
+  "fetched_at": "2026-09-08T11:32:45.866274+00:00",
+  "fetcher": "curl_cffi"
+}
