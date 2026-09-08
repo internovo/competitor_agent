@@ -17,7 +17,7 @@ from app.llm.client import ExtractionDegraded, FatalLLMError
 from app.logic import completeness, conflicts, eligibility, match_score, resolve
 from app.logic.geo import haversine_km
 from app.extract import deterministic
-from app.logic.merge import consolidate_rera, merge_facts
+from app.logic.merge import consolidate_configurations, consolidate_rera, merge_facts
 from app.models.schema import (
     REPORTED_FIELDS, Candidate, ExtractedFacts, FieldValue, Page, Project, Provenance, ReraPhase, ScanRecord,
 )
@@ -364,6 +364,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             n_llm += len({f for f in FILLABLE if _has(project, f)} - before)
 
     consolidate_rera(project)
+    consolidate_configurations(project)
     # An absence keeps the most specific reason any source gave it.
     for f in REPORTED_FIELDS:
         report = project.report(f)

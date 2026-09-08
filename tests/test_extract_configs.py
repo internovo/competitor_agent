@@ -148,15 +148,34 @@ def test_two_sources_listing_different_bhk_subsets_are_both_kept(full_project):
     assert len(full_project.configurations.observations) == 2
 
 
-def test_sources_that_list_different_configurations_are_flagged(full_project):
+def test_partial_lists_from_two_sources_become_their_union(full_project):
+    """2,3 BHK from one source and 3,4 from another is one inventory listed twice, not
+    a contradiction. Refusing it left every filled row on the table with no BHK at all."""
     from app.logic import conflicts
+    from app.logic.merge import consolidate_configurations
     from tests.conftest import fv
 
     full_project.configurations.observe(fv([3, 4], source="housing"))
+    consolidate_configurations(full_project)
+    conflicts.apply(full_project)
+    assert full_project.configurations.absent is None
+    assert full_project.value("configurations") == [2, 3, 4]
+    assert "union of" in full_project.configurations.display().evidence
+    assert full_project.conflicts == []
+
+
+def test_a_span_too_wide_for_one_building_is_still_refused(full_project):
+    """1-5 BHK across sources is several projects' listings, the same signature the
+    single-page guard already refuses."""
+    from app.logic import conflicts
+    from app.logic.merge import consolidate_configurations
+    from tests.conftest import fv
+
+    full_project.configurations.observe(fv([1, 5], source="housing"))
+    consolidate_configurations(full_project)
     conflicts.apply(full_project)
     assert full_project.configurations.absent == "SOURCES_DISAGREE"
-    assert full_project.configurations.span == [2, 4]
-    assert [c.field for c in full_project.conflicts] == ["configurations"]
+    assert full_project.configurations.span == [1, 5]
 
 
 # --- developer --------------------------------------------------------------

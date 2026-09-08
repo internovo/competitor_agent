@@ -146,18 +146,18 @@ def test_a_wide_inversion_is_two_numbers_and_is_refused(full_project, own):
 def test_one_unresolved_dimension_still_scores_with_its_denominator_shown(full_project, own):
     """The score reports what it could evaluate, so one gap over-promises nothing.
     Capping here made COMPARABLE rarer the better the research got."""
-    full_project.configurations.observe(fv([1]))          # now {2,3} vs {1}: sources disagree
+    full_project.possession.observe(fv(date(2032, 1, 1)))   # 28 months apart: sources disagree
     conflicts.apply(full_project)
     completeness.apply(full_project)
     assert full_project.completeness == 6
-    assert full_project.unresolved == ["configurations"]
+    assert full_project.unresolved == ["possession"]
     assert full_project.label == "COMPARABLE"
     score, _, score_max, excluded = match_score.compute(full_project, own, 1.5)
-    assert score is not None and excluded == ["config"] and score_max == 100 - settings.w_config
+    assert score is not None and excluded == ["possession"] and score_max == 100 - settings.w_possession
 
 
 def test_two_unresolved_dimensions_are_not_comparable(full_project, own):
-    full_project.configurations.observe(fv([1]))
+    full_project.configurations.observe(fv([1, 5]))         # union 1-5: too wide for one building
     full_project.possession.observe(fv(date(2032, 1, 1)))   # 28 months apart: sources disagree
     conflicts.apply(full_project)
     completeness.apply(full_project)

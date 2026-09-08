@@ -71,10 +71,15 @@ def _detect_with_spans(project: Project) -> list[tuple[Conflict, list]]:
 
     configs = project.configurations.observations
     if len(configs) > 1:
-        sets = {tuple(sorted(fv.value)) for fv in configs}
-        if len(sets) > 1:
-            union = sorted({b for fv in configs for b in fv.value})
-            out.append((Conflict(field="configurations", n_sources=len(configs), detail=f"{len(configs)} sources list different configurations"),
+        from app.extract.deterministic import UNDECLARED_CONFIG_LIMIT
+
+        # Partial lists are merged into their union in logic/merge.py. What is left here
+        # is a span too wide to be one building's inventory -- the signature of several
+        # projects' listings read off one page.
+        union = sorted({b for fv in configs for b in fv.value})
+        if len(union) >= UNDECLARED_CONFIG_LIMIT:
+            out.append((Conflict(field="configurations", n_sources=len(configs),
+                                 detail=f"{len(configs)} sources span {union[0]}-{union[-1]} BHK, too wide for one building"),
                         [union[0], union[-1]]))
 
     return out

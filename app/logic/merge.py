@@ -92,6 +92,35 @@ def merge_facts(project: Project, facts: ExtractedFacts, page: Page, verified_so
     return project
 
 
+def consolidate_configurations(project: Project) -> Project:
+    """Two sources listing 2,3 BHK and 1,2 BHK are not contradicting each other.
+
+    They are each listing part of one inventory, so the building offers 1, 2 and 3.
+    Treating that as a disagreement withdrew the field, and configurations is the first
+    thing a rep looks at -- across four localities every filled row came back with no
+    BHK at all. Every number in the union was read from a source and none is inferred.
+
+    A union wide enough to be several projects' listings merged together is left alone
+    for conflicts.apply to refuse, exactly as a single page spanning that many sizes is.
+    """
+    from app.extract.deterministic import UNDECLARED_CONFIG_LIMIT
+
+    obs = project.configurations.values
+    sets = {tuple(sorted(fv.value)) for fv in obs}
+    if len(sets) < 2:
+        return project
+    union = sorted({b for fv in obs for b in fv.value})
+    if len(union) >= UNDECLARED_CONFIG_LIMIT or tuple(union) in sets:
+        return project
+    best = project.configurations.display()
+    evidence = "union of " + "; ".join(f"{fv.prov.source} {fv.value}" for fv in obs)
+    # First in the list so it wins the display tie against the source it borrows
+    # provenance from; the detail card still lists every source that contributed.
+    obs.insert(0, FieldValue(value=union, prov=best.prov, method=best.method,
+                             confidence=best.confidence, evidence=evidence))
+    return project
+
+
 def consolidate_rera(project: Project) -> Project:
     """If several sources mention RERA numbers, a number seen on MahaRERA counts as verified everywhere."""
     verified = {ph.number for v in project.rera_phases.values if v.prov.source == "maharera" for ph in v.value}
