@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJ05S1hc2w5zsRxdPZaYFeeos",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22516,
+        "longitude": 72.86383
+      },
+      "displayName": {
+        "text": "Mumbai - Borivali East (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ3x6DhM2w5zsRDt21fNR2t-8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224988,
+        "longitude": 72.863957
+      },
+      "displayName": {
+        "text": "Ambrosia Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJNYTPcM2w5zsR_KTXYJ4z7SQ",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224239999999998,
+        "longitude": 72.864231
+      },
+      "displayName": {
+        "text": "Devipada",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

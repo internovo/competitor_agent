@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJG5PyyO625zsRr3dJkniIy_E",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1895861,
+        "longitude": 72.8356227
+      },
+      "displayName": {
+        "text": "Kachpada",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJua-Kx-625zsRPhtcdwi3yj0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.189629999999998,
+        "longitude": 72.835240000000013
+      },
+      "displayName": {
+        "text": "Kachpada",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJqfx1yO625zsRZlf15h142tc",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1895435,
+        "longitude": 72.8354145
+      },
+      "displayName": {
+        "text": "Kachpada",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

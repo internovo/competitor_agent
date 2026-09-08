@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJocjcS5HO5zsRiehSWzjOf7I",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00464,
+        "longitude": 72.82079
+      },
+      "displayName": {
+        "text": "Comrade P.K.Kurne Chowk (Worli )",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJP8K6TJHO5zsRoHBD8BLbFDU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00505,
+        "longitude": 72.82097
+      },
+      "displayName": {
+        "text": "Comrade P.K.Kurne Chowk (Worli )",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ51jhN5HO5zsR-Au32d_jiXU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0042658,
+        "longitude": 72.820618799999991
+      },
+      "displayName": {
+        "text": "Comrade P.K.Kurne Chowk (Worli )",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

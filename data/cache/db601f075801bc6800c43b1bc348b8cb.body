@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ3QdRocDO5zsRwkbTRm_tlB8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "RBI Colony, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.01605,
+        "longitude": 72.82825
+      },
+      "displayName": {
+        "text": "Prabhadevi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJFcKP6MbO5zsR2RERvURZu5k",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prabhadevi, Mumbai, Maharashtra 400028, India",
+      "location": {
+        "latitude": 19.01914,
+        "longitude": 72.83166
+      },
+      "displayName": {
+        "text": "Siddhivinayak Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJvUT-yMbO5zsR0SXtnUR7fMY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prabhadevi, Mumbai, Maharashtra 400028, India",
+      "location": {
+        "latitude": 19.017760000000003,
+        "longitude": 72.83131
+      },
+      "displayName": {
+        "text": "Siddhivinayak Mandir (Prabhadevi)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

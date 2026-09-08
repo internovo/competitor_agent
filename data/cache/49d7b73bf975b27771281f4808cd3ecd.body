@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJG1tHsY_O5zsRp7txYbZtJdo",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shiv Shaila Metro Station Acharya Atre Chowk, Metro Station Acharya Atre Chowk, 1, Dr Elijah Moses Rd, Upper Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.9973235,
+        "longitude": 72.8205492
+      },
+      "displayName": {
+        "text": "Indiabulls Blu",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    }
+  ]
+}

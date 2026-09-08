@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJSdcO9em25zsR3a36MBnmWgU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Orlem, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.194592999999998,
+        "longitude": 72.834071999999992
+      },
+      "displayName": {
+        "text": "Mith Chowky Malad",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJtWlT4em25zsRUNca2jYTUWU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Mithchowki, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.195691,
+        "longitude": 72.834948
+      },
+      "displayName": {
+        "text": "Mith Chowky or Kavi.V.R.Kant Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJZf_qhum25zsRCDNIrijLQbA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193559,
+        "longitude": 72.83444
+      },
+      "displayName": {
+        "text": "Evershine Nagar (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJpb0As9ew5zsRjGPnI9gzvG8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sundar Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22948,
+        "longitude": 72.85365
+      },
+      "displayName": {
+        "text": "Vrundas Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOXr7Fiix5zsRnYE-5Jierec",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chandavarkar Rd, Lokmanya Tilak Nagar, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2308,
+        "longitude": 72.85076
+      },
+      "displayName": {
+        "text": "Dr. Shyamaprasad Mukherjee Udyan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJSd81Fyix5zsRiq9XErnHCCE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.23087,
+        "longitude": 72.850709999999992
+      },
+      "displayName": {
+        "text": "Dr. Shyamaprasad Mukherjee Chowk(Museum)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

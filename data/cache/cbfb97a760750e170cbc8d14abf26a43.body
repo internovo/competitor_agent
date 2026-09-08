@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJbxbFNPa25zsR6BpbQJHrhXU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.174362,
+        "longitude": 72.836749
+      },
+      "displayName": {
+        "text": "Vinay Industry (Subkuch Market)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJyf0my_e25zsRcmJwAtLfv-U",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.174395999999998,
+        "longitude": 72.836837
+      },
+      "displayName": {
+        "text": "Sabkuch Market",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJu7s3rve25zsRdKQH_AUySW8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.174740999999997,
+        "longitude": 72.83726
+      },
+      "displayName": {
+        "text": "Vinay Industry (Subkuch Market)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

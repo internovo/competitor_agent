@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJE4HZVSex5zsRAwRTJd7vW-4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prem Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.23745,
+        "longitude": 72.85141999999999
+      },
+      "displayName": {
+        "text": "Nildhara Building",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJdVhTVCex5zsRKzwIqmQBHc0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Govind Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.237579999999998,
+        "longitude": 72.85136
+      },
+      "displayName": {
+        "text": "Nildhara Building",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJwxs0Yyex5zsR_B7erldo74A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prem Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2355421,
+        "longitude": 72.8514312
+      },
+      "displayName": {
+        "text": "Shrimad Gokul",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

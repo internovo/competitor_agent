@@ -1,0 +1,2914 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" as="image" href="https://newprojectsonline.com/assets/uploads/banners/responsive/mobile_1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp" fetchpriority="high">
+    <title>H Rishabraj Anuja Borivali West | New Launch Residential | NewProjectsOnline</title>
+    <meta name="description" content="H Rishabraj Anuja is a new launch residential project in Borivali West by H Rishabraj Developers. RERA registered project offering premium homes with">
+    <meta name="keywords" content="H Rishabraj Anuja, H Rishabraj Anuja Borivali West, Borivali West new projects, new launch projects in Borivali West, residential projects in Borivali West, H Rishabraj Developers Borivali, Borivali West apartments, Mumbai new residential projects, RERA approved projects in Borivali West, upcoming projects in Western Mumbai, flats in Borivali West, property in Borivali West Mumbai, real estate blog, property investment, AI property recommendations, navi mumbai properties">
+    <meta name="theme-color" content="#4285f4" />
+    <link rel="canonical" href="https://newprojectsonline.com/blog/rishabraj-anuja-borivali">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NewProjectsOnline Real Estate Blog">
+    <meta property="og:title" content="H Rishabraj Anuja Borivali West | New Launch Residential | AI-Powered Property Guide">
+    <meta property="og:description" content="H Rishabraj Anuja is a new launch residential project in Borivali West by H Rishabraj Developers. RERA registered project offering premium homes with">
+    <meta property="og:url" content="https://newprojectsonline.com/blog/rishabraj-anuja-borivali">
+    <meta property="og:image" content="https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="H Rishabraj Anuja Borivali West | New Launch Residential | Real Estate Expert Guide">
+    <meta name="twitter:description" content="H Rishabraj Anuja is a new launch residential project in Borivali West by H Rishabraj Developers. RERA registered project offering premium homes with">
+    <meta name="twitter:image" content="https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp">
+    <meta name="twitter:site" content="@launches_new">
+    <meta name="twitter:creator" content="@launches_new">
+    <meta name="twitter:label1" content="Reading time">
+    <meta name="twitter:data1" content="1 minutes">
+    <meta property="article:published_time" content="2026-09-08T16:51:58+05:30">
+    <meta property="article:modified_time" content="2026-03-08T14:41:20+05:30">
+    <meta property="article:author" content="NewProjectsOnline.Com">
+    <meta property="article:section" content="Real Estate">
+    <meta property="article:tag" content="real estate">
+    <meta property="article:tag" content="property investment">
+    <meta property="article:tag" content="navi mumbai">
+    <meta property="article:tag" content="ai recommendations">
+    <meta name="article:word_count" content="24">
+    <meta name="ai:content-type" content="article">
+    <meta name="ai:topic" content="real-estate">
+    <meta name="ai:expertise-level" content="expert">
+    <meta name="ai:trustworthiness" content="high">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://newprojectsonline.com/assets/main/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://newprojectsonline.com/assets/main/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="https://newprojectsonline.com/assets/main/img/apple-touch-icon.png">
+    <!-- CSS (unchanged) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/style.css" rel="stylesheet" type="text/css">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/bootstrap.min.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/select2.min.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/jquery-ui.min.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/owl-carousel.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/intlTelInput.css" rel="stylesheet">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/webslidemenu.css" rel="stylesheet" type="text/css">
+    <link href="https://newprojectsonline.com/assets/newprojectonline/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 3-column layout for desktop */
+.amenities-list {
+    list-style: none;
+    padding-left: 0;
+    column-count: 3;
+    column-gap: 30px;
+    margin-bottom: 0; /* remove default bottom margin */
+}
+
+.amenities-list li {
+    break-inside: avoid;
+    padding: 4px 0;
+}
+
+/* Wrapper that gets collapsed */
+.amenities-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Initial collapsed state – shows only ~3 rows (9 items) */
+.amenities-wrapper.collapsed {
+    max-height: 200px; /* adjust based on your line height and padding */
+}
+
+/* When expanded, remove max-height restriction */
+.amenities-wrapper.expanded {
+    max-height: none;
+}
+
+/* Mobile: single column */
+@media (max-width: 767.98px) {
+    .amenities-list {
+        column-count: 1;
+    }
+    /* On mobile, collapsed height might need adjustment */
+    .amenities-wrapper.collapsed {
+        max-height: 300px; /* show a bit more on mobile */
+    }
+}
+
+/* Toggle button styling */
+.toggle-amenities-btn {
+    font-weight: 500;
+    padding: 6px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.toggle-amenities-btn:hover {
+    background: #198754;
+    color: #fff;
+}
+.toggle-amenities-btn .bi {
+    transition: transform 0.3s;
+}
+.toggle-amenities-btn[data-expanded="true"] .bi {
+    transform: rotate(180deg);
+}
+/* Location list - 2 columns on desktop */
+.location-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 20px;
+    margin-bottom: 0;
+}
+.location-list p {
+    margin-bottom: 0;
+    padding: 4px 0;
+}
+
+/* Collapsible wrapper */
+.location-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.location-wrapper.collapsed {
+    max-height: 200px; /* adjust to show ~6 items (3 rows x 2 cols) */
+}
+.location-wrapper.expanded {
+    max-height: none;
+}
+
+/* Mobile: single column */
+@media (max-width: 767.98px) {
+    .location-list {
+        grid-template-columns: 1fr;
+    }
+    .location-wrapper.collapsed {
+        max-height: 300px; /* show a bit more on mobile */
+    }
+}
+
+/* Toggle button styling (reuse similar to amenities) */
+.toggle-location-btn {
+    font-weight: 500;
+    padding: 6px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.toggle-location-btn:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+.toggle-location-btn .bi {
+    transition: transform 0.3s;
+}
+.toggle-location-btn[data-expanded="true"] .bi {
+    transform: rotate(180deg);
+}
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://newprojectsonline.com/#website","url":"https://newprojectsonline.com/","name":"NewProjectsOnline","description":"New Projects in Navi Mumbai, Thane and Mumbai","publisher":{"@id":"https://newprojectsonline.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://newprojectsonline.com/search?q={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}},{"@type":"Organization","@id":"https://newprojectsonline.com/#organization","name":"NewProjectsOnline","url":"https://newprojectsonline.com/","logo":"https://newprojectsonline.com/assets/uploads/logos/default-logo.jpg","description":"Leading real estate platform for new projects in Navi Mumbai","address":{"@type":"PostalAddress","addressLocality":"Navi Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"contactPoint":{"@type":"ContactPoint","telephone":"+919137458691","contactType":"sales","areaServed":"IN","availableLanguage":["English","Hindi","Marathi"]},"sameAs":["https://www.facebook.com/newprojectsonline","https://twitter.com/launches_new","https://www.linkedin.com/company/newprojectsonline"]},{"@type":"Person","@id":"https://newprojectsonline.com/about-us#person","name":"NewProjectsOnline.Com","image":"https://newprojectsonline.com/assets/img/author-avatar.jpg","jobTitle":"Real Estate Expert","description":"Real estate expert with 10+ years specializing in residential properties and market analysis in Navi Mumbai.","worksFor":{"@id":"https://newprojectsonline.com/#organization"}},{"@type":"WebPage","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali","url":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali","name":"H Rishabraj Anuja Borivali West | New Launch Residential","description":"H Rishabraj Anuja is a new launch residential project in Borivali West by H Rishabraj Developers. RERA registered project offering premium homes with","isPartOf":{"@id":"https://newprojectsonline.com/#website"},"about":{"@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#property"}},{"@type":"Article","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#article","headline":"H Rishabraj Anuja Borivali West | New Launch Residential","description":"H Rishabraj Anuja is a new launch residential project in Borivali West by H Rishabraj Developers. RERA registered project offering premium homes with","image":{"@type":"ImageObject","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#primaryimage","url":"https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp","contentUrl":"https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp","width":1200,"height":630,"caption":"Rishabraj Anuja Borivali - Borivali West, Mumbai"},"author":{"@id":"https://newprojectsonline.com/about-us#person"},"publisher":{"@id":"https://newprojectsonline.com/#organization"},"datePublished":"2026-09-08T16:51:58+05:30","dateModified":"2026-03-08T14:41:20+05:30","articleSection":"Real Estate","about":{"@type":"Residence","name":"Rishabraj Anuja Borivali","description":"Detailed guide covering pricing, location, amenities, floor plans and investment potential."},"mentions":[{"@type":"Place","name":"Borivali West, Mumbai"},{"@type":"Organization","name":"H Rishabraj Group"}],"wordCount":24,"keywords":["real estate","residential","Navi Mumbai","property investment","new projects"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali"},"isPartOf":{"@type":"WebSite","name":"NewProjectsOnline","url":"https://newprojectsonline.com/"}},{"@type":"BreadcrumbList","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://newprojectsonline.com/"},{"@type":"ListItem","position":2,"name":"New Projects","item":"https://newprojectsonline.com/new-projects"},{"@type":"ListItem","position":3,"name":"Borivali West Projects","item":"https://newprojectsonline.com/new-projects-in-borivali-west"},{"@type":"ListItem","position":4,"name":"Rishabraj Anuja Borivali","item":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali"}]},{"@type":"Residence","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#property","name":"Rishabraj Anuja Borivali","url":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali","description":"Rishabraj Anuja Borivali is a residential development located at Borivali West, Mumbai. Explore pricing, configurations, floor plans, amenities, connectivity and investment potential.","image":"https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp","address":{"@type":"PostalAddress","streetAddress":"Borivali West, Mumbai","addressLocality":"Borivali West","addressRegion":"Maharashtra","postalCode":"","addressCountry":"IN"},"containedInPlace":{"@type":"Place","name":"Borivali West, Mumbai"},"provider":{"@type":"Organization","name":"H Rishabraj Group","description":"H.Rishabraj Group is one of the leaders in reshaping the residential landscape, known for their outstanding projects and commitment to architectural excellence. Rishabraj Goregaon is a prime example of their dedication to creating exceptional living spaces that enhance everyday life. With a strong focus on quality, innovation, and customer satisfaction, they’ve built a solid reputation in the real estate industry."},"location":{"@type":"Place","name":"Borivali West, Mumbai","address":{"@type":"PostalAddress","addressLocality":"Navi Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"}},"numberOfRooms":"1 BHK, 2 BHK, 2 BHK + 2 BHK, 3 BHK","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"16","value":true},{"@type":"LocationFeatureSpecification","name":"4","value":true},{"@type":"LocationFeatureSpecification","name":"38","value":true},{"@type":"LocationFeatureSpecification","name":"3","value":true},{"@type":"LocationFeatureSpecification","name":"61","value":true},{"@type":"LocationFeatureSpecification","name":"6","value":true},{"@type":"LocationFeatureSpecification","name":"10","value":true},{"@type":"LocationFeatureSpecification","name":"11","value":true},{"@type":"LocationFeatureSpecification","name":"13","value":true},{"@type":"LocationFeatureSpecification","name":"17","value":true},{"@type":"LocationFeatureSpecification","name":"12","value":true},{"@type":"LocationFeatureSpecification","name":"23","value":true},{"@type":"LocationFeatureSpecification","name":"18","value":true},{"@type":"LocationFeatureSpecification","name":"20","value":true}]},{"@type":"FAQPage","@id":"https://newprojectsonline.com/blog/rishabraj-anuja-borivali#faq","mainEntity":[{"@type":"Question","name":"What is Rishabraj Anuja Borivali and where is it located?","acceptedAnswer":{"@type":"Answer","text":"Rishabraj Anuja Borivali is a premium residential development strategically located at Borivali West, Mumbai. Developed by H Rishabraj Group, this project offers modern living spaces and connectivity."}},{"@type":"Question","name":"What is the price range and payment plan for Rishabraj Anuja Borivali?","acceptedAnswer":{"@type":"Answer","text":"The project offers competitive pricing starting from ₹ 1.40 Cr - 2.93 Cr Onwards. We offer flexible payment plans including construction-linked plans, subvention schemes, and bank financing options. Contact our sales team for detailed pricing."}},{"@type":"Question","name":"Is Rishabraj Anuja Borivali RERA approved and legally compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes, Rishabraj Anuja Borivali is RERA approved with registration number PR1180002501316."}},{"@type":"Question","name":"What configurations are available in Rishabraj Anuja Borivali?","acceptedAnswer":{"@type":"Answer","text":"The project offers 4 different configurations: 1 BHK with carpet area of 435 – 455 sq.ft. sq.ft. | Price: On Request, 2 BHK with carpet area of 660 – 726 sq.ft. sq.ft. | Price: On Request, 2 BHK + 2 BHK with carpet area of On Request sq.ft. | Price: On Request, 3 BHK with carpet area of 935 sq.ft. sq.ft. | Price: On Request. Premium amenities include swimming pool, gymnasium, clubhouse, landscaped gardens, 24/7 security, power backup, and dedicated parking."}},{"@type":"Question","name":"How is the location and connectivity of Rishabraj Anuja Borivali?","acceptedAnswer":{"@type":"Answer","text":"Located at Borivali West, Mumbai, the project enjoys excellent connectivity through: Proximity to major highways and expressways, Easy access to railway stations and metro lines, Close to reputed schools, colleges, and hospitals, Near shopping malls, entertainment centers, and business districts, Well-connected to Mumbai and other parts of Navi Mumbai."}},{"@type":"Question","name":"What is the investment potential and expected ROI of Rishabraj Anuja Borivali?","acceptedAnswer":{"@type":"Answer","text":"Rishabraj Anuja Borivali offers excellent investment potential with: High Appreciation: Located in a rapidly developing area with infrastructure growth, Rental Income: Strong rental demand due to proximity to IT parks and business centers, Developer Reputation: H Rishabraj Group has a track record of value appreciation, Future Development: Upcoming metro lines and infrastructure projects in the vicinity, Quality Construction: Premium construction ensures long-term value retention. Based on market analysis, properties in this micro-market have shown 8-12% annual appreciation over the past 5 years."}},{"@type":"Question","name":"What is the current construction status and possession timeline?","acceptedAnswer":{"@type":"Answer","text":"Based on the construction progress and developer's track record: Structure completion: Expected within 18-24 months, Finishing work: 6-8 months post structure completion, Final possession: Estimated 30-36 months from launch. RERA compliance ensures timely delivery."}},{"@type":"Question","name":"What financing options and home loan facilities are available?","acceptedAnswer":{"@type":"Answer","text":"We offer comprehensive financing assistance through partnerships with leading banks and financial institutions: Home Loan Assistance: Tie-ups with SBI, HDFC, ICICI and other major banks, Competitive Interest Rates: Starting from 8.5% per annum, Flexible Payment Plans: Construction-linked, time-linked, and subvention schemes available, Loan Tenure: Up to 30 years with flexible EMI options, Quick Approval: In-principle approval within 48-72 hours, Documentation Support: Complete assistance with loan documentation and processing. Our dedicated finance team ensures smooth processing."}},{"@type":"Question","name":"How does Rishabraj Anuja Borivali compare to other residential projects in Navi Mumbai?","acceptedAnswer":{"@type":"Answer","text":"Rishabraj Anuja Borivali stands out from competitors through: Prime Location: Better connectivity and infrastructure compared to similar projects, Competitive Pricing: 10-15% more affordable than comparable projects in the vicinity, Superior Amenities: More comprehensive lifestyle facilities, Trusted Developer: H Rishabraj Group has better delivery track record than many competitors, Investment Potential: Higher appreciation potential due to strategic location and development plans, Quality Construction: Premium materials and construction standards exceeding industry norms"}}]}]}</script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://newprojectsonline.com/assets/newprojectonline/webslidemenu.js" defer></script>
+    <script src="https://newprojectsonline.com/assets/newprojectonline/owl.carousel.min.js" defer></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=AW-11028335848" async></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11028335848');</script>
+    <style>
+        a { text-decoration: none !important; }
+        .structured-data-hidden { display: none !important; visibility: hidden !important; height:0!important; width:0!important; }
+        .wsmenu-list li a { transition: all 0.3s ease; position: relative; }
+        .wsmenu-list li a:hover { color: var(--colorPrimary, #2c5aa0) !important; }
+        .wsmenu-list li a:focus { outline: 2px solid var(--colorPrimary, #2c5aa0); outline-offset: 2px; }
+        @media (max-width: 767px) { .wsmenu-list { background:#fff; max-height:80vh; overflow-y:auto; } .wsmenu-list li a { padding:15px 20px; border-bottom:1px solid #eee; } }
+        .phone-link { background: var(--colorPrimary, #2c5aa0); color:#fff !important; padding:8px 15px; border-radius:25px; transition:all 0.3s ease; }
+        .phone-link:hover { background:#1a365d; transform:translateY(-2px); box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+        header.sticky { position:fixed; top:0; width:100%; z-index:1000; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="structured-data-hidden" itemscope itemtype="https://schema.org/RealEstateAgent">
+        <span itemprop="name">NewProjectsOnline - AI Property Recommendations</span>
+        <span itemprop="telephone">+91-9137458691</span>
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">Office No. 603, Plot No. 113B/C, Sector 50E</span><span itemprop="addressLocality">Navi Mumbai</span><span itemprop="addressRegion">Maharashtra</span><span itemprop="postalCode">400706</span></div>
+        <span itemprop="knowsAbout">AI Property Matching, Real Estate Investment, New Projects</span>
+    </div>
+    <!-- Top Navigation (unchanged) -->
+    <div class="top-nav d-none d-lg-block" itemscope itemtype="https://schema.org/Organization">
+        <div class="container"><div class="row"><div class="col-md-6"><div class="tn-social"><ul><li><a href="https://www.facebook.com/NewProjectsOnline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li><li><a href="https://www.instagram.com/newprojectsonline/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li><li><a href="https://twitter.com/launches_new" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li></ul></div></div><div class="col-md-6 d-none d-lg-block"><div class="tn-link"><ul><li><a href="https://newprojectsonline.com/postrequirements"><i class="far fa-copy"></i> Post Requirement</a></li><li><a href="https://newprojectsonline.com/#contact"><i class="far fa-address-book"></i> Contact us</a></li><li><a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20Buying%20Property%20in%20Navi%20Mumbai%20.%20Please%20connect%20with%20me" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li></ul></div></div></div></div>
+    </div>
+    <!-- Header (unchanged) -->
+    <header itemscope itemtype="https://schema.org/WPHeader">
+        <div class="container">  
+            <div class="logo"><a href="https://newprojectsonline.com/"><img src="https://newprojectsonline.com/assets/main/img/logos/logo.png" width="255" height="50" alt="NewProjectsOnline" loading="eager"></a></div>
+            <div class="logo2"><a href="https://newprojectsonline.com/"><img src="https://newprojectsonline.com/assets/main/img/logos/logo.png" width="255" height="50" alt="NewProjectsOnline"></a></div>
+            <div class="header-right"><div class="top-menu"><div class="wsmenucontainer clearfix"><div class="wsmenucontent overlapblackbg"></div><div class="wsmenuexpandermain slideRight"><a id="navToggle" class="animated-arrow slideLeft" aria-label="Toggle navigation" aria-expanded="false"><span></span></a></div><nav class="wsmenu slideLeft clearfix"><ul class="mobile-sub wsmenu-list"><li class="d-block d-sm-none menu-logo"><img src="https://newprojectsonline.com/assets/main/img/logos/logo.png" width="255" height="50" alt="Logo"></li><li class="d-block d-sm-none"><a href="https://newprojectsonline.com/"><span>Home</span></a></li><li><a href="https://newprojectsonline.com/"><span>Home</span></a></li><li><a href="https://newprojectsonline.com//new-commercial-projects-in-navi-mumbai"><span>Commercial</span></a></li><li><a href="https://newprojectsonline.com/#about"><span>About Us</span></a></li><li><a href="https://newprojectsonline.com/realtyblog/"><span>Blog</span></a></li><li><a href="https://newprojectsonline.com/#contact"><span>Contact</span></a></li><li><a href="https://newprojectsonline.com/privacy-policy.html"><span>Privacy Policy</span></a></li></ul></nav></div></div></div>
+            <div class="header-right2"><a href="https://newprojectsonline.com/postrequirements" class="post d-none"><i class="bi bi-building"></i> Post<br>Requirement</a><a href="tel:+91-9137-45-8691" class="phone-link"><i class="fas fa-phone-alt"></i> <span>+91-9137-45-8691</span></a></div>
+            <div class="clear"></div>    
+        </div>
+    </header>
+
+    <style>
+        /* Enhanced sticky header for better UX */
+        header.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* AI-friendly navigation enhancements */
+        .wsmenu-list li a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .wsmenu-list li a:hover {
+            color: var(--colorPrimary, #2c5aa0) !important;
+        }
+        
+        .wsmenu-list li a:focus {
+            outline: 2px solid var(--colorPrimary, #2c5aa0);
+            outline-offset: 2px;
+        }
+        
+        /* Enhanced mobile navigation for AI accessibility */
+        @media (max-width: 767px) {
+            .wsmenu-list {
+                background: #fff;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            
+            .wsmenu-list li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #eee;
+            }
+        }
+        
+        /* Enhanced phone link for better visibility */
+        .phone-link {
+            background: var(--colorPrimary, #2c5aa0);
+            color: #fff !important;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-link:hover {
+            background: #1a365d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* ----------  Breadcrumb Styling  ---------- */
+.breadcrumb-section {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.breadcrumb-item a {
+    color: var(--colorPrimary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* Responsive breadcrumb */
+@media (max-width: 768px) {
+    .breadcrumb-section {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+    
+    .breadcrumb {
+        font-size: 0.85rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+    
+    .breadcrumb::-webkit-scrollbar {
+        height: 3px;
+    }
+    
+    .breadcrumb::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    .breadcrumb::-webkit-scrollbar-thumb {
+        background: var(--colorPrimary);
+        border-radius: 3px;
+    }
+}
+
+/* AI-optimized breadcrumb for better visibility */
+.breadcrumb {
+    --bs-breadcrumb-divider-color: var(--text-secondary);
+    --bs-breadcrumb-item-active-color: var(--text-primary);
+}
+
+.breadcrumb-item a:focus {
+    outline: 2px solid var(--colorPrimary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+    </style>
+
+    
+
+    <!-- Blog-specific CSS -->
+    <style>
+/* ----------  CSS variables  ---------- */
+:root {
+  --colorPrimary  : #214f46;
+  --colorSecondary: var(--colorPrimary);
+  --colorBtn      : #ffffff;
+  --blog-bg       : #f9fafb;
+  --text-primary  : #1a202c;
+  --text-secondary: #4a5568;
+  --border-color  : #e2e8f0;
+}
+
+/* ----------  Font-face – metric-matched fallbacks (stop reflow)  ---------- */
+@font-face {
+  font-family: 'Montserrat-fb';
+  src: local('Arial');
+  ascent-override : 92%;
+  descent-override: 24%;
+  line-gap-override:0%;
+  size-adjust     : 95.5%;
+}
+@font-face {
+  font-family: 'Poppins-fb';
+  src: local('Arial');
+  ascent-override : 92%;
+  descent-override: 24%;
+  line-gap-override:0%;
+  size-adjust     : 103.3%;
+}
+
+/* ----------  Base typography – NO layout shift  ---------- */
+body {
+  font-family : Poppins, Poppins-fb, Arial, sans-serif;
+  background  : var(--blog-bg);
+  color       : var(--text-primary);
+  line-height : 1.7;
+}
+h1, h2, h3, h4, h5, h6, .heading-font {
+  font-family : Montserrat, Montserrat-fb, Arial, sans-serif;
+  font-weight : 600;
+  color       : var(--text-primary);
+}
+
+/* ----------  H1 & badge – fixed box  ---------- */
+h1.blog-title {
+  font-size   : 1.5rem;
+  line-height : 1.2;
+  min-height  : 3rem;          /* reserve final line-box */
+  overflow    : hidden;
+}
+span.project-type-badge {
+  display     : inline-block;
+  min-width   : 88px;          /* measured default */
+  text-align  : center;
+}
+
+/* ----------  Icons – show instantly, keep size  ---------- */
+.bi::before {
+  display            : inline-block;
+  font-family        : bootstrap-icons !important;
+  font-style         : normal;
+  font-weight        : normal;
+  font-variant       : normal;
+  text-transform     : none;
+  line-height        : 1;
+  width              : 1em;   /* reserved box */
+  height             : 1em;
+  vertical-align     : -.125em;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------  Layout helpers  ---------- */
+.blog-container { max-width:1200px; margin:0 auto; padding:0 15px; }
+.blog-header { padding:40px 0 20px; text-align:center; border-bottom:1px solid var(--border-color); margin-bottom:40px; }
+.blog-title { font-size:2.5rem; margin-bottom:15px; line-height:1.2; }
+.blog-meta { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:20px; font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px; }
+.blog-meta-item { display:flex; align-items:center; gap:5px; }
+
+.blog-content { display:grid; grid-template-columns:1fr 300px; gap:40px; margin-bottom:60px; }
+.blog-main { background:#fff; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,.05); padding:40px; }
+.blog-sidebar { display:flex; flex-direction:column; gap:30px; }
+.sidebar-widget { background:#fff; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,.05); padding:25px; }
+
+.widget-title { font-size:1.25rem; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--colorPrimary); position:relative; }
+.widget-title::after { content:''; position:absolute; bottom:-2px; left:0; width:50px; height:2px; background:var(--colorPrimary); }
+
+.blog-featured-image { width:100%; height:400px; object-fit:cover; border-radius:12px; margin-bottom:30px; }
+.blog-section { margin-bottom:40px; }
+.blog-section h2 { font-size:1.75rem; margin-bottom:20px; color:var(--colorPrimary); }
+.blog-section h3 { font-size:1.4rem; margin:25px 0 15px; }
+.blog-section p { margin-bottom:20px; color:var(--text-secondary); }
+.blog-section ul, .blog-section ol { margin-bottom:20px; padding-left:20px; }
+.blog-section li { margin-bottom:10px; color:var(--text-secondary); }
+
+.highlight-box { background:#f0f7ff; border-left:4px solid var(--colorPrimary); padding:20px; margin:25px 0; border-radius:0 8px 8px 0; }
+
+.project-details-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:20px; margin:30px 0; }
+.detail-card { background:#fff; border-radius:8px; padding:20px; box-shadow:0 2px 4px rgba(0,0,0,.05); border:1px solid var(--border-color); text-align:center; }
+.detail-card i { font-size:2rem; color:var(--colorPrimary); margin-bottom:10px; }
+.detail-card h4 { font-size:1rem; margin-bottom:5px; color:var(--text-secondary); }
+.detail-card p { font-size:1.25rem; font-weight:600; color:var(--text-primary); margin:0; }
+
+.related-articles { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:25px; margin-top:20px; }
+.article-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 6px rgba(0,0,0,.05); transition:transform .3s ease, box-shadow .3s ease; }
+.article-card:hover { transform:translateY(-5px); box-shadow:0 10px 15px rgba(0,0,0,.1); }
+.article-image { width:100%; height:180px; object-fit:cover; }
+.article-content { padding:20px; }
+.article-title { font-size:1.1rem; margin-bottom:10px; line-height:1.4; }
+.article-excerpt { font-size:0.9rem; color:var(--text-secondary); margin-bottom:15px; }
+.article-meta { font-size:0.8rem; color:var(--text-secondary); }
+
+.recent-articles-list { list-style:none; padding:0; margin:0; }
+.recent-article-item { padding:15px 0; border-bottom:1px solid var(--border-color); }
+.recent-article-item:last-child { border-bottom:none; }
+.recent-article-title { font-size:0.95rem; margin-bottom:5px; line-height:1.4; }
+.recent-article-date { font-size:0.8rem; color:var(--text-secondary); }
+
+.social-sharing { display:flex; justify-content:center; gap:15px; margin:40px 0; }
+.social-share-btn { display:flex; align-items:center; justify-content:center; width:45px; height:45px; border-radius:50%; color:#fff; font-size:1.2rem; transition:transform .3s ease; }
+.social-share-btn:hover { transform:scale(1.1); }
+.facebook { background:#3b5998; }
+.twitter { background:#1da1f2; }
+.linkedin { background:#0077b5; }
+.whatsapp { background:#25d366; }
+
+.author-bio { display:flex; gap:20px; padding:30px; background:#f8f9fa; border-radius:12px; margin-top:40px; }
+.author-avatar { width:80px; height:80px; border-radius:50%; object-fit:cover; }
+.author-info h4 { margin-bottom:5px; }
+.author-info p { margin:0; font-size:0.95rem; }
+
+/* ----------  CTA  ---------- */
+.cta-button { display:inline-block; background:linear-gradient(135deg, var(--colorPrimary), #1a365d); color:#fff; padding:12px 30px; border-radius:50px; font-weight:600; text-decoration:none; border:none; cursor:pointer; transition:all .3s ease; text-align:center; }
+.cta-button:hover { transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,.2); color:#fff; }
+.cta-section { background:linear-gradient(30deg, var(--colorPrimary), #f7dede); color:#fff; padding:40px; border-radius:12px; text-align:center; margin:40px 0; }
+.cta-title { font-size:1.75rem; margin-bottom:15px; }
+.cta-description { margin-bottom:25px; font-size:1.1rem; opacity:.9; }
+.mini-cta { text-align:center; margin:30px 0; padding:20px; background:#f8f9fa; border-radius:8px; border-left:4px solid var(--colorPrimary); }
+.mini-cta p { margin-bottom:15px; font-weight:500; }
+
+    /* ----------  Responsive  ---------- */
+    @media (max-width:992px) {
+      .blog-content { grid-template-columns:1fr; gap:30px; }
+      .blog-sidebar { order:2; margin-top:30px; }
+      .blog-main { order:1; padding:25px 20px; }
+      .blog-title { font-size:2rem; }
+      .sidebar-widget { padding:20px; }
+      .cta-section { padding:30px 20px; margin:30px 0; }
+      .cta-title { font-size:1.5rem; }
+    }
+    @media (max-width:768px) {
+      .blog-main { padding:20px 15px; }
+      .project-details-grid { grid-template-columns:1fr; gap:15px; }
+      .blog-title { font-size:1.75rem; line-height:1.3; }
+      .blog-header { padding:30px 0 15px; margin-bottom:30px; }
+      .blog-meta { gap:15px; font-size:0.85rem; }
+      .author-bio { flex-direction:column; text-align:center; padding:25px 20px; gap:15px; }
+      .author-avatar { width:70px; height:70px; margin:0 auto; }
+      .blog-featured-image { height:250px; margin-bottom:20px; }
+      .blog-section h2 { font-size:1.5rem; margin-bottom:15px; }
+      .blog-section h3 { font-size:1.25rem; margin:20px 0 12px; }
+      .social-sharing { gap:12px; margin:30px 0; }
+      .social-share-btn { width:40px; height:40px; font-size:1.1rem; }
+      .related-articles { grid-template-columns:1fr; gap:20px; }
+      .article-image { height:160px; }
+      .mini-cta { margin:20px 0; padding:15px; }
+    }
+    @media (max-width:576px) {
+      .blog-container { padding:0 10px; }
+      .blog-main { padding:15px 12px; border-radius:8px; }
+      .sidebar-widget { padding:18px 15px; border-radius:8px; }
+      .blog-title { font-size:1.5rem; }
+      .blog-meta { flex-direction:column; gap:10px; }
+      .blog-featured-image { height:200px; }
+      .blog-section p { font-size:0.95rem; line-height:1.6; }
+      .cta-button { padding:10px 25px; font-size:0.95rem; }
+      .author-bio { padding:20px 15px; margin-top:25px; }
+      .author-avatar { width:60px; height:60px; }
+      .author-info h4 { font-size:1.1rem; }
+      .author-info p { font-size:0.85rem; }
+      .cta-section { padding:25px 15px; }
+      .cta-title { font-size:1.3rem; }
+    }
+    
+    /* ----------  Mobile project widget  ---------- */
+    .mobile-project-widget { display:none; }
+    @media (max-width:992px) {
+      .mobile-project-widget { display:block; margin-bottom:30px; }
+      .blog-sidebar .sidebar-widget:first-child { display:none; }
+      .mobile-project-widget .sidebar-widget { margin-bottom:0; }
+    }
+    @media (min-width:993px) {
+      .mobile-project-widget { display:none; }
+      .blog-sidebar .sidebar-widget:first-child { display:block; }
+    }
+    
+    /* ----------  Project badge / tags / category hover  ---------- */
+    .project-type-badge { display:inline-block; background:var(--colorPrimary); color:#fff; padding:5px 12px; border-radius:20px; font-size:0.8rem; font-weight:600; margin-left:10px; vertical-align:middle; }
+    .tags-cloud { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag-link { display:inline-block; background:#f8f9fa; color:#495057; padding:4px 12px; border-radius:20px; font-size:0.8rem; text-decoration:none; border:1px solid #dee2e6; transition:all .3s ease; }
+    .tag-link:hover { background:var(--colorPrimary); color:#fff; border-color:var(--colorPrimary); transform:translateY(-2px); }
+    .recent-article-item { padding:12px 0; border-bottom:1px solid var(--border-color); transition:background-color .3s ease; }
+    .recent-article-item:hover { background:#f8f9fa; padding-left:10px; padding-right:10px; margin:0 -10px; border-radius:6px; }
+    .recent-article-item:last-child { border-bottom:none; }
+    .recent-article-title { font-size:0.9rem; margin-bottom:5px; line-height:1.4; color:var(--text-primary); text-decoration:none; display:block; transition:color .3s ease; }
+    .recent-article-title:hover { color:var(--colorPrimary); }
+    .list-unstyled li { transition:all .3s ease; }
+    .list-unstyled li:hover { background:#f8f9fa; padding-left:10px; margin:0 -10px; border-radius:6px; }
+    .list-unstyled a { color:var(--text-primary); transition:color .3s ease; padding:4px 0; }
+    .list-unstyled a:hover { color:var(--colorPrimary); }
+    .badge.rounded-pill { font-size:0.7rem; padding:4px 8px; }
+    .form-control-sm { border-radius:6px; border:1px solid var(--border-color); }
+    .btn-sm { border-radius:6px; font-weight:500; }
+    
+    /* ----------  Desktop fine-tune  ---------- */
+    @media (min-width:993px) {
+      .blog-content { display:grid !important; grid-template-columns:1fr 320px !important; gap:40px !important; align-items:start !important; }
+      .blog-main { order:1 !important; width:100% !important; }
+      .blog-sidebar { order:2 !important; position:sticky !important; top:20px !important; margin-top:0 !important; }
+      .blog-sidebar .sidebar-widget:first-child { display:block !important; }
+      article[itemscope] { width:100% !important; }
+      .modal-dialog { max-width:800px !important; margin:1.75rem auto !important; }
+    }
+    @media (min-width:1200px) {
+      .blog-container { max-width:1400px; }
+      .blog-content { grid-template-columns:1fr 350px; gap:50px; }
+      .blog-main { padding:50px; }
+    }
+    @media (min-width:992px) and (max-width:1199px) {
+      .blog-container { max-width:1200px; padding:0 20px; }
+      .blog-content { grid-template-columns:1fr 300px; gap:35px; }
+      .blog-main { padding:35px; }
+    }
+    /* ----------  Single-line bar  ---------- */
+    .bh-line{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:.8125rem;
+      color:#6b7280;
+    }
+    .bh-bullet{
+      color:#d1d5db;
+      user-select:none;
+    }
+    .bh-read{
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+    }
+    .bh-read i{font-size:1rem;}
+    /* Remove bullets from amenities lists */
+    /* FAQ Section Styling */
+    .faq-section {
+        margin: 40px 0;
+    }
+    
+    .faq-item {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-color);
+    }
+    
+    .faq-question {
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
+        display: block; /* Changed from none to block for initial display */
+    }
+    /* ===== NEW LEAD GENERATION STYLES ===== */
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 12px 16px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+}
+.sticky-cta-bar .btn-primary {
+    background: var(--colorPrimary, #2c5aa0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+.sticky-cta-bar .btn-wa {
+    background: #25D366;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+@media (min-width: 768px) {
+    .sticky-cta-bar { display: none; }
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.floating-buttons .floating-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.2s;
+    cursor: pointer;
+    border: none;
+}
+.floating-buttons .floating-wa { background: #25D366; color: white; }
+.floating-buttons .floating-enq { background: var(--colorPrimary, #2c5aa0); color: white; }
+@media (max-width: 767px) {
+    .floating-buttons { bottom: 80px; }
+}
+
+.lead-banner {
+    background: linear-gradient(135deg, #f0f9ff, #ffffff);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+.lead-banner h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--colorPrimary, #2c5aa0); }
+.lead-banner p { margin-bottom: 20px; color: #4a5568; }
+.lead-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.lead-form button {
+    background: var(--colorPrimary, #2c5aa0);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.trust-badge {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #4a5568;
+}
+.trust-badge i { color: var(--colorPrimary, #2c5aa0); margin-right: 5px; }
+
+.sidebar-quick-form {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.sidebar-quick-form h4 { font-size: 1.2rem; margin-bottom: 15px; }
+/* Fix extra gap above blog title on mobile */
+@media (max-width: 768px) {
+    .breadcrumb-section {
+        margin-bottom: 0 !important;
+        padding: 8px 0 !important;
+    }
+    .blog-container .blog-title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    header.sticky {
+        position: relative !important;
+    }
+}
+/* ===== SCANNABLE ARTICLE STYLES (Mobile & Desktop) ===== */
+/* Better spacing and typography */
+.blog-section p, .blog-section li {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+.blog-section h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+    padding-left: 15px;
+}
+.blog-section h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+/* Highlight boxes become cards with icon */
+.highlight-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--colorPrimary, #2c5aa0);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 25px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+/* Project details grid – better on mobile */
+.project-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+.detail-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 12px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.detail-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.detail-card i {
+    font-size: 2rem;
+    color: var(--colorPrimary, #2c5aa0);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.detail-card h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+.detail-card p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+/* Convert long lists into two columns on desktop, one on mobile */
+.two-column-list {
+    column-count: 2;
+    column-gap: 30px;
+}
+@media (max-width: 640px) {
+    .two-column-list {
+        column-count: 1;
+    }
+}
+.two-column-list li {
+    break-inside: avoid;
+    margin-bottom: 10px;
+}
+/* Make CTA buttons more prominent */
+.cta-button, .btn-primary-custom {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--colorPrimary, #2c5aa0), #1a365d);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.mini-cta {
+    text-align: center;
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px 0;
+    border-left: none;
+}
+/* Improve readability on mobile */
+@media (max-width: 640px) {
+    .blog-section p, .blog-section li {
+        font-size: 0.95rem;
+    }
+    .blog-section h2 {
+        font-size: 1.4rem;
+    }
+    .detail-card {
+        padding: 15px 8px;
+    }
+}
+</style>
+        
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M54RK3P');
+    </script>
+    
+    
+    
+</head>
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M54RK3P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="blog-container">
+
+        <article>
+                        <!-- Breadcrumbs Section -->
+<div class="breadcrumb-section py-3" style="background: #f8f9fa;">
+    <div class="container">
+        <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <ol class="breadcrumb mb-0">
+
+                <li class="breadcrumb-item">
+                    <a href="https://newprojectsonline.com/">Home</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                    <a href="https://newprojectsonline.com/realtyblog">Blog</a>
+                </li>
+
+                
+                <li class="breadcrumb-item active" aria-current="page">
+                    Rishabraj Anuja Borivali - Price, Floor Plans, Location &...                </li>
+
+            </ol>
+        </nav>
+    </div>
+</div>
+            <h1 class="blog-title" itemprop="headline">
+                Rishabraj Anuja Borivali - Price, Floor Plans, Location & Investment Guide</h1>
+                <span class="project-type-badge">
+                    RESIDENTIAL                </span>
+            
+            <div class="bh-line">
+                <time datetime="2026-09-08T16:51:58+05:30">Sep 8, 2026</time>
+                <span class="bh-bullet">&bull;</span>
+                <span class="bh-read"><i class="bi bi-clock"></i> 5 min read</span>
+            </div>
+            <div class="blog-content">
+                <main class="blog-main">
+                    <!-- Featured Image (unchanged) -->
+                                        <div style="aspect-ratio: 1200/675; width:100%;">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="https://newprojectsonline.com/assets/uploads/banners/responsive/desktop_1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="https://newprojectsonline.com/assets/uploads/banners/responsive/tablet_1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp" type="image/webp">
+                            <source srcset="https://newprojectsonline.com/assets/uploads/banners/responsive/mobile_1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp" type="image/webp">
+                            <img src="https://newprojectsonline.com/assets/uploads/banners/1770683302-rishabraj-anuja-project-borivali-west-mumbai-2.webp" width="1200" height="675" alt="Rishabraj Anuja Borivali at Borivali West, Mumbai by H Rishabraj Group - residential project" class="blog-featured-image" itemprop="image" fetchpriority="high" loading="eager" style="width:100%; height:auto; display:block;">
+                        </picture>
+                    </div>
+                                        <div itemprop="articleBody">
+                        <!-- Key Takeaways (updated for plots) -->
+                        <div style="background: #f0f9ff; padding: 20px; border-left: 4px solid #0ea5e9; margin: 20px 0; border-radius: 0 8px 8px 0;">
+                            <h3 style="color: #2c5aa0; margin-bottom: 15px;">Key Takeaways</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 5px 0;">✓ Rishabraj Anuja Borivali offers premium residential spaces</li>
+                                <li style="padding: 5px 0;">✓ Developed by H Rishabraj Group</li>
+                                <li style="padding: 5px 0;">✓ RERA approved</li>
+                                <li style="padding: 5px 0;">✓ Excellent investment potential</li>
+                            </ul>
+                        </div>
+                        <!-- Introduction (updated for plots) -->
+                        <section class="blog-section">
+                            <p>Welcome to our comprehensive guide on <strong>Rishabraj Anuja Borivali</strong>, an exceptional residential development located at <strong>Borivali West, Mumbai</strong>. In this detailed article, we'll explore everything you need to know about this prestigious residential project by <strong>H Rishabraj Group</strong>.</p>
+                                                        <div class="highlight-box">
+                                <p><strong>Quick Summary:</strong> Rishabraj Anuja Borivali offers 
+                                    1, 2, 2 + 2, 3 BHK with prices starting at ₹ 1.40 Cr - 2.93 Cr Onwards. The project is RERA approved and promises exceptional lifestyle amenities.</p>
+                            </div>
+                                                        <div class="mini-cta"><p><strong>Interested in Rishabraj Anuja Borivali?</strong> Get priority access to exclusive offers and detailed information.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Priority Access" data-btn="Get Priority Access" data-enquiry="Priority Access Request">Get Priority Access</button></div>
+                        </section>
+                        <!-- Project Overview (unchanged, but we'll keep as is because pro_desc already contains generic text) -->
+                        <section class="blog-section">
+                            <h2>Project Overview</h2>
+                            <p>Rishabraj Anuja Borivali is a residential project developed by H Rishabraj Group. Located at Borivali West, Mumbai, this project offers a perfect blend of luxury, comfort, and convenience for modern living.</p>
+                                                        <div class="highlight-box"><p><b>H Rishabraj Anuja </b>is a premium new launch residential project by H Rishabraj Developers located in the heart of <b>Borivali West, Western Mumbai</b>. Designed for modern urban living, the project offers thoughtfully planned homes in a well-connected and well-developed neighborhood. Spread across 0.25 acres, H Rishabraj Anuja features 2 residential towers with 6 floors, housing a total of 34 exclusive units.</p><p><span style="font-size: 1rem;">The project is <b>RERA registered (PR1180002501316)</b>, ensuring complete transparency and buyer confidence. With possession scheduled for June 2028, H Rishabraj Anuja is an ideal choice for both homebuyers and investors seeking long-term value in Borivali West.</span></p></div>
+                                                        <div class="project-details-grid">
+                                <div class="detail-card">
+    <i class="bi bi-geo-alt"></i>
+    <span style="font-size: 14px; font-weight: 600;">Location</span>
+    <p>Borivali West, Mumbai</p>
+</div>
+
+<div class="detail-card">
+    <i class="bi bi-building"></i>
+    <span style="font-size: 14px; font-weight: 600;">Project Type</span>
+    <p>Residential</p>
+</div>
+
+<div class="detail-card">
+    <i class="bi bi-tag"></i>
+    <span style="font-size: 14px; font-weight: 600;">Price</span>
+    <p>₹ 1.40 Cr - 2.93 Cr Onwards</p>
+</div>
+                                <div class="detail-card">
+    <i class="bi bi-house-door"></i>
+    <span style="font-size: 14px; font-weight: 600;">
+        Configurations    </span>
+    <p>
+        1,2,2,3 BHK    </p>
+</div>
+                            </div>
+                            <div class="mini-cta"><p><strong>Want detailed specifications?</strong> Get complete project details, plot layouts, and pricing breakdown.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Detailed Specifications" data-btn="Download Specifications" data-enquiry="Specifications Request">Download Specifications</button></div>
+                        </section>
+                        <!-- Pricing Details (modified for plots) -->
+                        <section class="blog-section">
+                            <h2>Pricing & Configuration Details</h2>
+                            <p>Understanding the pricing structure is crucial when considering a home investment. At Rishabraj Anuja Borivali, you'll find a range of options to suit different family needs and budgets.</p>
+                                                        <div class="highlight-box">
+                                <h3>Available Configurations</h3>
+                                <ul><li><strong>1 BHK:</strong> Area: 435 – 455 sq.ft. sq.ft. | Price: On Request</li><li><strong>2 BHK:</strong> Area: 660 – 726 sq.ft. sq.ft. | Price: On Request</li><li><strong>2 BHK + 2 BHK:</strong> Area: On Request sq.ft. | Price: On Request</li><li><strong>3 BHK:</strong> Area: 935 sq.ft. sq.ft. | Price: On Request</li></ul>
+                            </div>
+                                                        <div class="mini-cta"><p><strong>Need custom pricing?</strong> Get personalized cost breakdown and payment plans.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Custom Pricing" data-btn="Get Custom Quote" data-enquiry="Custom Pricing Request">Get Custom Quote</button></div>
+                        </section>
+                        <!-- Amenities section – for plots we show infrastructure instead -->
+                        <section class="blog-section">
+                            <h2>World-Class Lifestyle Amenities</h2>
+                            <p>One of the standout features of Rishabraj Anuja Borivali is its extensive range of amenities designed to enhance your lifestyle.</p>
+                                    <div class="amenities-wrapper collapsed" id="amenitiesWrapper">
+        <ul class="amenities-list">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>24*7 Water Supply</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Car Parking</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Children’s Play Area</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Gymnasium</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>High Speed Elevators</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Indoor Games</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Intercom Facility</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Jogging track</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Power Backup</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Rain Water Harvesting</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Security</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Vastu Compliant</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Video/CCTV Security</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Yoga/Meditation Area</li>
+                    </ul>
+    </div>
+
+            <div class="text-center mt-3">
+            <button class="btn btn-outline-success toggle-amenities-btn" id="toggleAmenitiesBtn" data-expanded="false">
+                Show All Amenities <i class="bi bi-chevron-down"></i>
+            </button>
+        </div>
+                                <div class="mini-cta"><p><strong>Want to experience the amenities firsthand?</strong> Schedule a site visit.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Schedule Site Visit" data-btn="Schedule Visit" data-enquiry="Site Visit Request">Schedule Site Visit</button></div>
+                        </section>
+                        <!-- Location Advantages (unchanged) -->
+                        <section class="blog-section">
+    <h2>Prime Location Advantages</h2>
+    <p>Location is one of the most critical factors in real estate, and Rishabraj Anuja Borivali scores high on this aspect. Situated at Borivali West, Mumbai, the project offers excellent connectivity and access to essential services.</p>
+
+            <div class="highlight-box">
+        <p>Explore more <a href="https://newprojectsonline.com/new-projects-in-Borivali-West">new projects in Borivali West</a> and upcoming residential developments in this location.</p>
+    </div>
+    
+                    <div class="highlight-box">
+            <h3>Key Location Highlights</h3>
+            <div class="location-wrapper collapsed" id="locationWrapper">
+                <div class="location-list">
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Borivali Railway Station - 5 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Shimpoli Metro Station - 6 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>S.V. Road - 2 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Link Road - 3 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Educational Institutes in Borivali - 5–10 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Hospitals &amp;amp; Healthcare Centres - 5–8 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Shopping &amp;amp; Lifestyle Hubs - 4–7 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Banks &amp;amp; ATMs (ICICI, HDFC, Axis) - 2 mins</p>
+                                                                    <p><i class="bi bi-geo-fill text-primary me-2"></i>Religious &amp;amp; Cultural Landmarks - 2–5 mins</p>
+                                    </div>
+            </div>
+                            <div class="text-center mt-3">
+                    <button class="btn btn-outline-primary toggle-location-btn" id="toggleLocationBtn" data-expanded="false">
+                        Show All Location Highlights <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                    </div>
+    
+    <div class="mini-cta">
+        <p><strong>Curious about the neighborhood?</strong> Get detailed location analysis and connectivity information.</p>
+        <button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Location Analysis" data-btn="Get Location Guide" data-enquiry="Location Analysis Request">Download Location Guide</button>
+    </div>
+</section>
+                        <!-- Floor Plans – for plots we show plot layouts -->
+                        <section class="blog-section">
+                            <h2>Thoughtful Floor Plans</h2>
+                            <p>The floor plans at Rishabraj Anuja Borivali are designed with modern living in mind, maximizing space utilization.</p>
+                                                        <p>The project offers 3 different floor plan options to cater to various family sizes and preferences.</p>
+                            <div class="highlight-box"><h3>Available Floor Plans</h3><ul><li><strong>2 BHK:</strong> Designed for optimal space utilization and comfort</li><li><strong>Floor Plan :</strong> Designed for optimal space utilization and comfort</li><li><strong>Floor Plan :</strong> Designed for optimal space utilization and comfort</li></ul></div>
+                                                        <div class="mini-cta"><p><strong>Need detailed floor plans?</strong> Get high‑resolution diagrams and site plan.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Layout Plans" data-btn="Download Layouts" data-enquiry="Layout Request">Download Layouts</button></div>
+                        </section>
+                        <!-- Builder Information (unchanged) -->
+                        <section class="blog-section"><h2>About the Builder: H Rishabraj Group</h2><p>H.Rishabraj Group is one of the leaders in reshaping the residential landscape, known for their outstanding projects and commitment to architectural excellence. Rishabraj Goregaon is a prime example of their dedication to creating exceptional living spaces that enhance everyday life. With a strong focus on quality, innovation, and customer satisfaction, they’ve built a solid reputation in the real estate industry.</p><p>When you invest in a project by H Rishabraj Group, you can be confident in the quality of construction, timely delivery, and after-sales service.</p></section>
+                        <!-- Investment Potential (updated for plots) -->
+                        <section class="blog-section"><h2>Investment Potential</h2><p>Rishabraj Anuja Borivali presents a compelling investment opportunity for several reasons:</p><ul><li><strong>Prime Location:</strong> The project's location at Borivali West, Mumbai ensures strong appreciation potential.</li><li><strong>Reputed Builder:</strong> With H Rishabraj Group at the helm, quality and timely delivery are assured.</li><li><strong>Modern Amenities:</strong> The comprehensive amenities package adds significant value to the property.</li><li><strong>RERA Approval:</strong> RERA approved (PR1180002501316).</li><li><strong>Competitive Pricing:</strong> The pricing offers good value compared to similar projects in the area.</li></ul><div class="mini-cta"><p><strong>Want investment analysis?</strong> Get detailed ROI calculations and market comparison reports.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Investment Analysis" data-btn="Get Investment Report" data-enquiry="Investment Analysis Request">Request Investment Report</button></div></section>
+                        <!-- Main CTA Section (updated text) -->
+                        
+                        
+                        <!-- Mobile Project Widget (unchanged) -->
+                        <div class="mobile-project-widget d-block d-lg-none"><div class="sidebar-widget"><h3 class="widget-title">About This Project</h3><div class="project-summary"><p><strong>Project:</strong> Rishabraj Anuja Borivali</p><p><strong>Location:</strong> Borivali West, Mumbai</p><p><strong>Developer:</strong> H Rishabraj Group</p><p><strong>Price:</strong> ₹ 1.40 Cr - 2.93 Cr Onwards</p><p><strong>Configurations:</strong> 1 BHK, 2 BHK, 2 BHK + 2 BHK, 3 BHK</p><p><strong>RERA:</strong> PR1180002501316</p></div><button class="btn btn-primary w-100 mt-3 enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Complete Project Details" data-btn="Get Price List" data-enquiry="Price List Request">Get Price List</button></div></div>
+                        <!-- FAQ Section (already updated via generateDynamicFAQs) -->
+                        <section class="faq-section"><h2>Frequently Asked Questions About Rishabraj Anuja Borivali</h2><div class="faq-item"><div class="faq-question"><h3>What is Rishabraj Anuja Borivali and where is it located?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Rishabraj Anuja Borivali is a premium residential development strategically located at Borivali West, Mumbai. Developed by H Rishabraj Group, this project offers modern living spaces and connectivity.</div></div><div class="faq-item"><div class="faq-question"><h3>What is the price range and payment plan for Rishabraj Anuja Borivali?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">The project offers competitive pricing starting from ₹ 1.40 Cr - 2.93 Cr Onwards. We offer flexible payment plans including construction-linked plans, subvention schemes, and bank financing options. Contact our sales team for detailed pricing.</div></div><div class="faq-item"><div class="faq-question"><h3>Is Rishabraj Anuja Borivali RERA approved and legally compliant?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Yes, Rishabraj Anuja Borivali is RERA approved with registration number PR1180002501316.</div></div><div class="faq-item"><div class="faq-question"><h3>What configurations are available in Rishabraj Anuja Borivali?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">The project offers 4 different configurations: 1 BHK with carpet area of 435 – 455 sq.ft. sq.ft. | Price: On Request, 2 BHK with carpet area of 660 – 726 sq.ft. sq.ft. | Price: On Request, 2 BHK + 2 BHK with carpet area of On Request sq.ft. | Price: On Request, 3 BHK with carpet area of 935 sq.ft. sq.ft. | Price: On Request. Premium amenities include swimming pool, gymnasium, clubhouse, landscaped gardens, 24/7 security, power backup, and dedicated parking.</div></div><div class="faq-item"><div class="faq-question"><h3>How is the location and connectivity of Rishabraj Anuja Borivali?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Located at Borivali West, Mumbai, the project enjoys excellent connectivity through: Proximity to major highways and expressways, Easy access to railway stations and metro lines, Close to reputed schools, colleges, and hospitals, Near shopping malls, entertainment centers, and business districts, Well-connected to Mumbai and other parts of Navi Mumbai.</div></div><div class="faq-item"><div class="faq-question"><h3>What is the investment potential and expected ROI of Rishabraj Anuja Borivali?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Rishabraj Anuja Borivali offers excellent investment potential with: High Appreciation: Located in a rapidly developing area with infrastructure growth, Rental Income: Strong rental demand due to proximity to IT parks and business centers, Developer Reputation: H Rishabraj Group has a track record of value appreciation, Future Development: Upcoming metro lines and infrastructure projects in the vicinity, Quality Construction: Premium construction ensures long-term value retention. Based on market analysis, properties in this micro-market have shown 8-12% annual appreciation over the past 5 years.</div></div><div class="faq-item"><div class="faq-question"><h3>What is the current construction status and possession timeline?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Based on the construction progress and developer's track record: Structure completion: Expected within 18-24 months, Finishing work: 6-8 months post structure completion, Final possession: Estimated 30-36 months from launch. RERA compliance ensures timely delivery.</div></div><div class="faq-item"><div class="faq-question"><h3>What financing options and home loan facilities are available?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">We offer comprehensive financing assistance through partnerships with leading banks and financial institutions: Home Loan Assistance: Tie-ups with SBI, HDFC, ICICI and other major banks, Competitive Interest Rates: Starting from 8.5% per annum, Flexible Payment Plans: Construction-linked, time-linked, and subvention schemes available, Loan Tenure: Up to 30 years with flexible EMI options, Quick Approval: In-principle approval within 48-72 hours, Documentation Support: Complete assistance with loan documentation and processing. Our dedicated finance team ensures smooth processing.</div></div><div class="faq-item"><div class="faq-question"><h3>How does Rishabraj Anuja Borivali compare to other residential projects in Navi Mumbai?</h3><i class="bi bi-chevron-down"></i></div><div class="faq-answer">Rishabraj Anuja Borivali stands out from competitors through: Prime Location: Better connectivity and infrastructure compared to similar projects, Competitive Pricing: 10-15% more affordable than comparable projects in the vicinity, Superior Amenities: More comprehensive lifestyle facilities, Trusted Developer: H Rishabraj Group has better delivery track record than many competitors, Investment Potential: Higher appreciation potential due to strategic location and development plans, Quality Construction: Premium materials and construction standards exceeding industry norms</div></div></section>
+                        <!-- Bottom CTA Section -->
+                        <div class="cta-section"><h2 class="cta-title">Ready to Explore Rishabraj Anuja Borivali?</h2><p class="cta-description">Get detailed pricing, floor plans, and exclusive offers directly from our experts.</p><button class="cta-button enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Complete Details" data-btn="Request Complete Details" data-enquiry="Complete Details Request">Request Complete Details</button></div>
+                        
+                    <!-- Related Projects (unchanged, already uses area extraction) -->
+                                        <section class="related-projects-blog mt-5 mb-5"><div class="container"><h3 class="mb-4" style="font-weight:700; color:#212529;">More New Projects in <span style="color:#f64d0d;">Mumbai</span></h3><div class="row"><div class="col-lg-3 col-md-4 col-sm-6 mb-4"><div class="card h-100" style="border:1px solid #ddd; border-radius:8px;"><picture><source media="(min-width: 800px)" srcset="https://newprojectsonline.com/image/banner/resize/800/1786266794-ramas-ic-maitri-menorah-borivali-banner-image-elevation.webp"><img src="https://newprojectsonline.com/image/banner/resize/400/1786266794-ramas-ic-maitri-menorah-borivali-banner-image-elevation.webp" class="card-img-top" alt="Ramas IC Maitri Menorah" loading="lazy" width="400" height="auto" style="height:180px; width:100%; object-fit:fill;" onerror="this.onerror=null; this.src='https://newprojectsonline.com/assets/images/default-project.jpg'"></picture><div class="card-body"><h5 class="card-title" style="font-size:16px; font-weight:600;">Ramas IC Maitri Menorah</h5><p class="card-text text-muted mb-2" style="font-size:14px;"><i class="fas fa-map-marker-alt"></i> IC Colony, Borivali West</p><p class="card-text" style="color:#f64d0d; font-weight:700; font-size:16px;">On Request</p><p class="card-text" style="font-size:14px; color:#666;"><small>By Ramas Realty</small></p><a href="https://newprojectsonline.com/ramas-ic-maitri-menorah-borivali" class="btn btn-sm btn-primary" style="background:#f64d0d; border:none;">View Ramas IC Maitri Menorah Details</a></div></div></div><div class="col-lg-3 col-md-4 col-sm-6 mb-4"><div class="card h-100" style="border:1px solid #ddd; border-radius:8px;"><picture><source media="(min-width: 800px)" srcset="https://newprojectsonline.com/image/banner/resize/800/1785923667-victory-stella-nestle-eksar-borivali-west-elevation.webp"><img src="https://newprojectsonline.com/image/banner/resize/400/1785923667-victory-stella-nestle-eksar-borivali-west-elevation.webp" class="card-img-top" alt="Victory Stella Nestle Borivali" loading="lazy" width="400" height="auto" style="height:180px; width:100%; object-fit:fill;" onerror="this.onerror=null; this.src='https://newprojectsonline.com/assets/images/default-project.jpg'"></picture><div class="card-body"><h5 class="card-title" style="font-size:16px; font-weight:600;">Victory Stella Nestle Borivali</h5><p class="card-text text-muted mb-2" style="font-size:14px;"><i class="fas fa-map-marker-alt"></i> I C Colony, Borivali West</p><p class="card-text" style="color:#f64d0d; font-weight:700; font-size:16px;">On Request</p><p class="card-text" style="font-size:14px; color:#666;"><small>By Victory Venture Developers</small></p><a href="https://newprojectsonline.com/victory-stella-nestle-ic-colony-borivali-west" class="btn btn-sm btn-primary" style="background:#f64d0d; border:none;">View Victory Stella Nestle Borivali Details</a></div></div></div><div class="col-lg-3 col-md-4 col-sm-6 mb-4"><div class="card h-100" style="border:1px solid #ddd; border-radius:8px;"><picture><source media="(min-width: 800px)" srcset="https://newprojectsonline.com/image/banner/resize/800/1788862329-mayfair-borivali-west-new-launch-project.webp"><img src="https://newprojectsonline.com/image/banner/resize/400/1788862329-mayfair-borivali-west-new-launch-project.webp" class="card-img-top" alt="Mayfair Borivali west" loading="lazy" width="400" height="auto" style="height:180px; width:100%; object-fit:fill;" onerror="this.onerror=null; this.src='https://newprojectsonline.com/assets/images/default-project.jpg'"></picture><div class="card-body"><h5 class="card-title" style="font-size:16px; font-weight:600;">Mayfair Borivali west</h5><p class="card-text text-muted mb-2" style="font-size:14px;"><i class="fas fa-map-marker-alt"></i> Borivali West, Mumbai</p><p class="card-text" style="color:#f64d0d; font-weight:700; font-size:16px;">On Request*</p><p class="card-text" style="font-size:14px; color:#666;"><small>By Mayfair Housing</small></p><a href="https://newprojectsonline.com/mayfair-borivali-west" class="btn btn-sm btn-primary" style="background:#f64d0d; border:none;">View Mayfair Borivali west Details</a></div></div></div><div class="col-lg-3 col-md-4 col-sm-6 mb-4"><div class="card h-100" style="border:1px solid #ddd; border-radius:8px;"><picture><source media="(min-width: 800px)" srcset="https://newprojectsonline.com/image/banner/resize/800/1777088973-Masakin-Questend-Borivali.webp"><img src="https://newprojectsonline.com/image/banner/resize/400/1777088973-Masakin-Questend-Borivali.webp" class="card-img-top" alt="Masakin Questend Borivali" loading="lazy" width="400" height="auto" style="height:180px; width:100%; object-fit:fill;" onerror="this.onerror=null; this.src='https://newprojectsonline.com/assets/images/default-project.jpg'"></picture><div class="card-body"><h5 class="card-title" style="font-size:16px; font-weight:600;">Masakin Questend Borivali</h5><p class="card-text text-muted mb-2" style="font-size:14px;"><i class="fas fa-map-marker-alt"></i> Borivali West, Mumbai</p><p class="card-text" style="color:#f64d0d; font-weight:700; font-size:16px;">2.45 Cr* Onwards</p><p class="card-text" style="font-size:14px; color:#666;"><small>By M S Group</small></p><a href="https://newprojectsonline.com/masakin-questend-borivali-west" class="btn btn-sm btn-primary" style="background:#f64d0d; border:none;">View Masakin Questend Borivali Details</a></div></div></div></div><div class="text-center mt-4"><a href="https://newprojectsonline.com/new-projects-in-mumbai" class="btn btn-primary btn-lg" style="background:#f64d0d; border:none; padding:10px 30px;">View All Projects</a></div></div></section>
+                                        <!-- Social Sharing (unchanged) -->
+                        <div class="social-sharing"><a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnewprojectsonline.com%2Fblog%2Frishabraj-anuja-borivali&title=Rishabraj+Anuja+Borivali+-+Price%2C+Floor+Plans%2C+Location+%26+Investment+Guide" target="_blank" class="social-share-btn facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://twitter.com/share?url=https%3A%2F%2Fnewprojectsonline.com%2Fblog%2Frishabraj-anuja-borivali&text=Rishabraj+Anuja+Borivali+-+Price%2C+Floor+Plans%2C+Location+%26+Investment+Guide" target="_blank" class="social-share-btn twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnewprojectsonline.com%2Fblog%2Frishabraj-anuja-borivali&title=Rishabraj+Anuja+Borivali+-+Price%2C+Floor+Plans%2C+Location+%26+Investment+Guide" target="_blank" class="social-share-btn linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="https://wa.me/?text=Rishabraj+Anuja+Borivali+-+Price%2C+Floor+Plans%2C+Location+%26+Investment+Guide+-+https%3A%2F%2Fnewprojectsonline.com%2Fblog%2Frishabraj-anuja-borivali" target="_blank" class="social-share-btn whatsapp" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+                        <!-- Author Bio (updated) -->
+                        <div class="author-bio" style="display: flex; gap: 20px; padding: 30px; background: #f8f9fa; border-radius: 12px; margin-top: 40px;"><img src="https://newprojectsonline.com/assets/img/apple-touch-icon.png" alt="NewProjectsOnline.Com" class="author-avatar" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;"><div class="author-info"><h4>NewProjectsOnline.Com</h4><p>Real estate expert with 10+ years specializing in residential properties and market analysis in Navi Mumbai.</p></div></div>
+                    </div>
+                </main>
+                
+                <aside class="blog-sidebar">
+                    <div class="sidebar-quick-form"><h4>📞 Get Instant Call Back</h4><p>Fill your details – our expert will share price, floor plan & site visit link.</p><form method="POST" action="https://newprojectsonline.com/blog/email"><input type="hidden" name="project" value="Rishabraj Anuja Borivali"><input type="hidden" name="enquiry" value="Sidebar Quick Form"><input type="text" name="name" class="form-control mb-2" placeholder="Name" required><input type="tel" name="mobile" class="form-control mb-2" placeholder="Mobile" required><button class="btn btn-primary w-100" style="background: var(--colorPrimary, #2c5aa0);">Get Details</button></form></div>
+                    <div class="sidebar-widget" itemscope itemtype="https://schema.org/RealEstateListing"><h3 class="widget-title">Project Summary</h3><div class="project-summary"><p><strong>Project:</strong> <span itemprop="name">Rishabraj Anuja Borivali</span></p><p><strong>Location:</strong> <span itemprop="address"><span itemprop="addressLocality">Borivali West, Mumbai</span></span></p><p><strong>Developer:</strong> H Rishabraj Group</p><p><strong>Price:</strong> <span itemprop="offers"><span itemprop="price">₹ 1.40 Cr - 2.93 Cr Onwards</span></span></p><p><strong>Type:</strong> Residential</p><p><strong>RERA:</strong> PR1180002501316</p></div><button class="btn btn-primary w-100 mt-3 enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Complete Project Details" data-btn="Get Price List" data-enquiry="Price List Request">Get Price List</button></div>                    <div class="sidebar-widget"><h3 class="widget-title">Recent Articles</h3><ul class="recent-articles-list"><li class="recent-article-item"><a href="https://newprojectsonline.com/articles/kanjurmarg-east-property-runwal-avenue-bliss-meadows" class="recent-article-title">Kanjurmarg East Property: Runwal Avenue, Bliss &amp; Meadows</a><div class="recent-article-date"><i class="bi bi-calendar me-1"></i>Aug 13, 2026</div></li><li class="recent-article-item"><a href="https://newprojectsonline.com/articles/palm-beach-road-property-prices-2026-new-projects-market-report" class="recent-article-title">Palm Beach Road Property Prices 2026 | New Projects &amp; Market Report</a><div class="recent-article-date"><i class="bi bi-calendar me-1"></i>Jul 29, 2026</div></li><li class="recent-article-item"><a href="https://newprojectsonline.com/articles/panvel-real-estate-2026-the-complete-infrastructure-property-guide" class="recent-article-title">Panvel Real Estate 2026: The Complete Infrastructure &amp; Property Guide</a><div class="recent-article-date"><i class="bi bi-calendar me-1"></i>Jul 23, 2026</div></li><li class="recent-article-item"><a href="https://newprojectsonline.com/articles/dream-developers-projects-in-navi-mumbai-flats-investment" class="recent-article-title">Dream Developers Projects in Navi Mumbai | Flats &amp; Investment</a><div class="recent-article-date"><i class="bi bi-calendar me-1"></i>Jul 18, 2026</div></li><li class="recent-article-item"><a href="https://newprojectsonline.com/articles/arihant-anaika-7-taloja-premium-homes-in-navi-mumbai" class="recent-article-title">Arihant Anaika 7 Taloja | Premium Homes in Navi Mumbai</a><div class="recent-article-date"><i class="bi bi-calendar me-1"></i>May 22, 2026</div></li></ul></div>
+                   <!-- <div class="sidebar-widget"><h3 class="widget-title">Stay Updated</h3><p class="small">Get the latest property updates and investment tips from our experts.</p><form class="newsletter-form" action="https://newprojectsonline.com/articles/subscribe" method="post"><div class="mb-3"><input type="email" class="form-control form-control-sm" name="email" placeholder="Your email address" required></div><button type="submit" class="btn btn-primary btn-sm w-100">Subscribe</button></form></div>-->
+                </aside>
+            </div>
+        </article>
+    </div>
+    <!-- Footer, modals, sticky bar, scripts (unchanged) -->
+        <!-- ====================  NEW FOOTER  ==================== -->
+<div class="counter">
+    <div class="container">
+        <div id="counter">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <img src="https://newprojectsonline.com/assets/newprojectonline/listed.svg" alt="Properties Listed"  width="48" height="48">
+                    <div class="counter-value" data-count="1000">950</div>
+                    <div class="plus">+</div>
+                    <h5>Projects Listed</h5>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <img src="https://newprojectsonline.com/assets/newprojectonline/location.svg" alt="Locations Covered"  width="48" height="48">
+                    <div class="counter-value" data-count="50">5</div>
+                    <div class="plus">+</div>
+                    <h5>Locations Covered</h5>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <img src="https://newprojectsonline.com/assets/newprojectonline/agents.svg" alt="Expert Agents"  width="48" height="48">
+                    <div class="counter-value" data-count="20">1</div>
+                    <div class="plus">+</div>
+                    <h5>Expert Agents</h5>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <img src="https://newprojectsonline.com/assets/newprojectonline/sold.svg" alt="Properties Sold"  width="48" height="48">
+                    <div class="counter-value" data-count="500">90</div>
+                    <div class="plus">+</div>
+                    <h5>Properties Sold</h5>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            jQuery(document).ready(function($) {
+                var a = 0;
+                $(window).scroll(function() {
+                    var oTop = $('#counter').offset().top - window.innerHeight;
+                    if (a == 0 && $(window).scrollTop() > oTop) {
+                        $('.counter-value').each(function() {
+                            var $this = $(this),
+                                countTo = $this.attr('data-count');
+                            $({ countNum: $this.text() }).animate({
+                                countNum: countTo
+                            }, {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function() {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function() {
+                                    $this.text(this.countNum);
+                                }
+                            });
+                        });
+                        a = 1;
+                    }
+                });
+            });
+        </script>
+    </div>
+</div>
+
+<div class="footer2">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-item clearfix">
+                        <h3>About Us</h3>
+                        <div class="text">
+                            <p>With an experience of 20+ years in the real estate sector, we assist people searching for home, or looking for investment, and provide them with options that fulfill their desire effectively. NewProjectsOnline.com serves major areas from Mumbai, Thane, Pune and Navi Mumbai. You will find 1 bhk flats, 2 bhk flats, 3 bhk flats, in New Projects and much more. We cater our services to all the segments from budget affordable homes, to lavish luxury apartment and penthouses in the best locality.</p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/NewProjectsOnline" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/newprojectsonline_com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/launches_new" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-item">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li style="border: none; width: 100%; display: flex; line-height: 16pt!important; font-weight: bold;">
+                                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 21px;"></i>
+                                Seawoods West,<br> Navi Mumbai 400706
+                            </li>
+                            <li style="border: none; width: 100%;">
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:info@newprojectsonline.com">info@newprojectsonline.com</a>
+                            </li>
+                            <li style="border: none; width: 100%;">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+919137458691">+91 9137458691</a>
+                            </li>
+                            <li style="border: none; width: 100%;">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <a href="https://newprojectsonline.com/privacy-policy.html">Read Privacy & Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer4">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-7 align-self-center">
+                <ul class="awards">
+                    <li><img src="https://newprojectsonline.com/assets/newprojectonline/306986922RERA Registered.png" alt="RERA Registered" width="68" height="60"></li>
+                    <li>
+                        <a href="https://www.propertypoint.online" target="_blank" rel="noopener">
+                            <img src="https://newprojectsonline.com/assets/newprojectonline/97811066Small TNRECA.jpg" alt="TNRECA" width="277" height="60">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5 align-self-center">
+                <div class="call">
+                    <i class="fas fa-phone-volume"></i>
+                    <div>Do You Have Questions?</div>
+                    <a href="tel:+91-9137 45 8691"> +91 9137458691</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="copy">
+            <p>DISCLAIMER: This website and the Information contained is in the process of being updated and are under review/revision in terms of the Real Estate Regulation Act, 2016 and Rules there under (RERA), and will be reviewed from time to time. Till the time the contents are fully updated the same shall not be construed to be any kind of advertisement, solicitation, marketing, Booking, offer for sale, invitation to offer within the purview of RERA and shall have no binding effect on the Company. The Company is not liable for any consequence of any action taken by the viewer relying on such material/ information on this website</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Fixed Call Buttons -->
+<div class="fix-call common">
+    <a href="tel:+91-9137458691"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>Call</span></a>
+    <a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20buying%20a%20Property.%20Please%20connect%20with%20me"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="https://newprojectsonline.com/postrequirements"><i class="far fa-building"></i> <span>Post Require</span></a>
+    <a href="https://newprojectsonline.com/#contact"><i class="far fa-envelope-open" aria-hidden="true"></i><span>Enquire</span></a>
+</div>
+
+<div class="fix-call project">
+    <a href="tel:+91-9137458691"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>Call</span></a>
+    <a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20buying%20a%20Property.%20Please%20connect%20with%20me"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal3"><i class="fas fa-car"></i><span>Site Visit</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i><span>Enquire</span></a>
+</div>
+
+<div class="fix-call property">
+    <a href="tel:+91-9137458691"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>Call</span></a>
+    <a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20buying%20a%20Property.%20Please%20connect%20with%20me"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal3"><i class="fas fa-car"></i><span>Site Visit</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i><span>Enquire</span></a>
+</div>
+
+<div class="fix-call floor">
+    <a href="tel:+91-9137458691"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>Call</span></a>
+    <a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20buying%20a%20Property.%20Please%20connect%20with%20me"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal3"><i class="fas fa-car"></i><span>Site Visit</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i><span>Enquire</span></a>
+</div>
+
+<div class="fix-call plot">
+    <a href="tel:+91-9137458691"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>Call</span></a>
+    <a class="wa" target="_blank" href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20buying%20a%20Property.%20Please%20connect%20with%20me"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal3"><i class="fas fa-car"></i><span>Site Visit</span></a>
+    <a href="" data-toggle="modal" data-target="#myModal1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i><span>Enquire</span></a>
+</div>
+
+<!-- Read-More Toggle -->
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+<!-- Modal Body Padding Fix -->
+<script>
+    jQuery(document).ready(function($) {
+        $(document.body).on('hide.bs.modal hidden.bs.modal', function() {
+            $('body').css('padding-right', '0');
+        });
+    });
+
+    function CC_validateForm2() {
+        if (document.news.email.value === "Enter your e-mail address" || document.news.email.value === "") {
+            alert("Please Enter email id");
+            document.news.email.focus();
+            return false;
+        }
+        if (!/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test(document.news.email.value)) {
+            alert("Invalid email id");
+            document.news.email.focus();
+            return false;
+        }
+    }
+</script>
+
+<!-- =====  JS LOAD ORDER  ===== -->
+
+<script defer src="https://newprojectsonline.com/assets/newprojectonline/owl.carousel.js.download"></script>
+
+<!-- =====  intl-tel-input (GUARDED)  ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+    const phoneInputField = document.querySelector("#amob");
+    if (!phoneInputField) return;          // element missing – skip
+
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        separateDialCode: true,
+        preferredCountries: ["in"],
+        hiddenInput: "full_phone",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    $('#submitrequirement').on('submit', function() {
+        const fullNumber = phoneInput.getNumber();
+        $(this).append('<input type="hidden" name="full_phone" value="' + fullNumber + '">');
+    });
+});
+</script>
+
+<!-- =====  REMAINING PLUGINS  ===== -->
+<script src="https://newprojectsonline.com/assets/newprojectonline/jquery.dynamicmaxheight.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        $('.js-dynamic-height').dynamicMaxHeight();
+    });
+</script>
+<script src="https://newprojectsonline.com/assets/main/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- =====  SITE-SPECIFIC SCRIPTS  ===== -->
+<script>
+/* smooth scroll */
+jQuery(document).ready(function($) {
+    $(document).on('click', '.nav-link', function(e) {
+        var id = $(this).attr('href');
+        var $id = $(id);
+        if ($id.length === 0) return;
+        e.preventDefault();
+        var pos = $id.offset().top - 20;
+        $('body, html').animate({ scrollTop: pos });
+    });
+
+    /* live search */
+    $('#search').on('keyup', function() {
+        var query = $(this).val();
+        if (query !== '') {
+            $.ajax({
+                url: "https://newprojectsonline.com/pages/get_term",
+                method: "POST",
+                data: { name: query },
+                success: function(data) {
+                    $('.ui-menu').fadeIn().html(data);
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }
+    });
+    $(document).on('click', function(e) {
+        if (!$(e.target).is('#search')) $(".ui-menu").hide();
+        else $(".ui-menu").show();
+    });
+});
+</script>
+
+<!-- ====================  /NEW FOOTER  ==================== -->    <div class="modal fade" id="enqModal" tabindex="-1" aria-modal="true"><div class="modal-dialog modal-dialog-centered modal-sm" style="max-width:400px"><div class="modal-content" style="border-radius:5px"><div class="modal-body p-0"><div class="position-relative p-4 pb-2"><button type="button" class="btn-close position-absolute" style="top:15px;right:15px" data-bs-dismiss="modal" aria-label="Close"></button><div class="text-center mb-3" style="background:#f5f5f5;border-radius:5px;padding:12px 15px;display:inline-block;width:auto;margin:0 auto 15px auto"><img src="https://newprojectsonline.com/assets/uploads/logos/1770683210-rishabraj-anuja-project-borivali-west-mumbai-1.webp" alt="Rishabraj Anuja Borivali" style="height:35px"></div><h5 class="modal-title-secondary text-center mb-1">Get Instant Details</h5><p class="text-center small text-muted mb-0">Fill the form below for priority access</p></div><form method="POST" action="https://newprojectsonline.com/blog/email" class="px-4 pb-4" id="caaptchvalidation"><input type="hidden" name="form_load_time" id="form_load_time" value=""><input type="hidden" name="btn" value="yes"><input type="hidden" name="url" value="https://newprojectsonline.com/blog/rishabraj-anuja-borivali"><input type="hidden" name="project" value="Rishabraj Anuja Borivali"><input type="hidden" name="enquiry" id="enquireName" value="Blog Enquiry"><div style="position:absolute;left:-9999px;top:-9999px"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><div class="form-group mb-3"><input type="text" name="name" class="form-control form-control-sm" required placeholder="Your Name"><div id="caaptchvalidationerrorname" class="error small text-danger"></div></div><div class="form-group mb-3"><input type="tel" name="mobile" class="form-control form-control-sm" required placeholder="Mobile Number"><div id="caaptchvalidationerrormobile" class="error small text-danger"></div></div><div class="form-group mb-3"><input type="email" name="email" class="form-control form-control-sm" required placeholder="Email Address"><div id="caaptchvalidationerroremail" class="error small text-danger"></div></div><div class="mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="privacyCheck" checked><label class="form-check-label small text-muted" for="privacyCheck">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">privacy policy</a></label></div></div><button type="button" class="btn btn-primary btn-sm w-100 g-recaptcha" data-sitekey="6LehTr0mAAAAAFQbgFdg-lOR4Tvlv4Afwl3pFlLv" data-callback="onSubmitCaaptchValidation" data-action="submit">Get Instant Call Back</button><div class="text-center mt-3"><a href="tel:+919137458691" class="text-decoration-none small text-muted"><i class="bi bi-telephone me-1"></i> Prefer to call? +91 9137458691</a></div></form></div></div></div></div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h4 class="modal-title w-100 text-center">Privacy & Data Collection Policies</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="privacy-content" style="max-height:60vh;overflow-y:auto"><p>In our effort and dedication to preserving your data, we have created this comprehensive privacy policy...</p><h5>Terms & Conditions</h5><hr><p>By using our website, you acknowledge abiding by the rules set out by us and agree to the collection and use of all such data...</p></div></div><div class="modal-footer justify-content-center"><button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Close</button></div></div></div></div>
+    <div class="sticky-cta-bar d-md-none"><a href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20Rishabraj+Anuja+Borivali" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><button class="btn-primary enqModal" data-bs-toggle="modal" data-bs-target="#enqModal" data-form="lg" data-title="Get Instant Details" data-btn="Get Call Back" data-enquiry="Sticky Bar">Get Details</button></div>
+    <div class="floating-buttons"><a href="https://api.whatsapp.com/send?phone=919137458691&text=Hi!%20I%20am%20interested%20in%20Rishabraj+Anuja+Borivali" class="floating-btn floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a><button class="floating-btn floating-enq enqModal" data-bs-toggle="modal" data-bs-target="#enqModal"><i class="bi bi-chat-dots"></i></button></div>
+    
+    <script>
+        // JavaScript functions (unchanged)
+        function whenjQueryReady(callback){if(typeof jQuery!=='undefined'&&typeof $!=='undefined'){callback();}else{var checkInterval=setInterval(function(){if(typeof jQuery!=='undefined'&&typeof $!=='undefined'){clearInterval(checkInterval);callback();}},100);setTimeout(function(){clearInterval(checkInterval);console.error('jQuery failed to load');},5000);}}
+        whenjQueryReady(function(){$(document).ready(function(){var stickyNavTop=$('header').offset().top;$(window).scroll(function(){$('header').toggleClass('sticky',$(window).scrollTop()>stickyNavTop);});$('#navToggle').on('click',function(){var expanded=$(this).attr('aria-expanded')==='true';$(this).attr('aria-expanded',!expanded);});$('#enqModal').on('show.bs.modal',function(){$(this).removeAttr('aria-hidden').attr('aria-hidden','false');var $first=$(this).find('input, button, [tabindex]').first();setTimeout(function(){$first.focus();},100);});$('#enqModal').on('hidden.bs.modal',function(){$(this).attr('aria-hidden','true');});$('.enqModal').on('click',function(){var form=$(this).data('form');var title=$(this).data('title');var btn=$(this).data('btn');var enquiry=$(this).data('enquiry');$('.modal-title-secondary').text(title);$('.micro-form-btn').text(btn);$('#enquireName').val(enquiry);if(form=='sm'){$('.form-md').hide();}else{$('.form-md').show();}});});});
+        document.addEventListener('DOMContentLoaded',function(){if('IntersectionObserver'in window){const lazyImages=[].slice.call(document.querySelectorAll("img.lazyload"));let lazyImageObserver=new IntersectionObserver(function(entries,observer){entries.forEach(function(entry){if(entry.isIntersecting){let lazyImage=entry.target;lazyImage.src=lazyImage.dataset.src||lazyImage.src;lazyImage.classList.remove("lazyload");lazyImage.classList.add("lazyloaded");lazyImageObserver.unobserve(lazyImage);}});});lazyImages.forEach(function(lazyImage){lazyImageObserver.observe(lazyImage);});}
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const targetId=this.getAttribute('href');if(targetId==='#')return;const targetElement=document.querySelector(targetId);if(targetElement){window.scrollTo({top:targetElement.offsetTop-100,behavior:'smooth'});}});});
+        if(document.fonts){Promise.all([document.fonts.load('400 16px Poppins'),document.fonts.load('600 16px Montserrat'),document.fonts.load('normal 16px bootstrap-icons')]).then(function(){document.documentElement.classList.add('fonts-loaded');});}setTimeout(function(){document.documentElement.classList.add('fonts-loaded');},3000);
+        const criticalCSS=`.blog-title{font-family:'Montserrat','Arial',sans-serif;font-size:2.5rem;line-height:1.2;min-height:3rem;}.blog-meta{min-height:1.5rem;}.detail-card i{min-width:2rem;min-height:2rem;display:inline-block;}`;const style=document.createElement('style');style.textContent=criticalCSS;document.head.appendChild(style);
+        if(document.fonts){document.fonts.ready.then(function(){document.documentElement.classList.add('fonts-loaded');document.querySelectorAll('.detail-card i.bi').forEach(function(el){const match=el.className.match(/bi-([a-z-]+)/);if(match)el.parentElement.setAttribute('data-icon',String.fromCharCode({'geo-alt':'F3C8','building':'F1C7','tag':'F48B','house-door':'F333'}[match[1]]||''));});});}else{document.documentElement.classList.add('fonts-loaded');}});
+        function onSubmitCaaptchValidation(token){whenjQueryReady(function(){let x=document.forms["caaptchvalidation"]["name"].value;if(x==""){$("#caaptchvalidationerrorname").html("This field is required.");return false;}else{$("#caaptchvalidationerrorname").html("");}
+        x=document.forms["caaptchvalidation"]["mobile"].value;var p=/^\d{10}$/;if(x.length!=10){$("#caaptchvalidationerrormobile").html("Please enter 10 digits only.");return false;}else{if(x.match(p)){$("#caaptchvalidationerrormobile").html("");}else{$("#caaptchvalidationerrormobile").html("Invalid format.");return false;}}
+        x=document.forms["caaptchvalidation"]["enquiry"].value;if(x!='Immediate Call Back'){x=document.forms["caaptchvalidation"]["email"].value;var validRegex=/^\S+@\S+\.\S+$/;if(x.match(validRegex)){$("#caaptchvalidationerroremail").html("");}else{$("#caaptchvalidationerroremail").html("Invalid email address.");return false;}}
+        document.getElementById("caaptchvalidation").submit();setTimeout(function(){window.location.href="https://newprojectsonline.com/thanks";},5000);});}
+        function setCookie(name,value,days=7){const date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));const expires="expires="+date.toUTCString();document.cookie=name+"="+value+";"+expires+";path=/";}
+        document.addEventListener('DOMContentLoaded',function(){document.getElementById('form_load_time').value=Math.floor(Date.now()/1000);});
+        document.querySelectorAll('.blog-section ul:not(.two-column-list)').forEach(ul=>{if(ul.children.length>5)ul.classList.add('two-column-list');});
+        document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('toggleAmenitiesBtn');
+    if (!btn) return;
+    const wrapper = document.getElementById('amenitiesWrapper');
+
+    btn.addEventListener('click', function() {
+        const isExpanded = this.dataset.expanded === 'true';
+        if (isExpanded) {
+            // Collapse
+            wrapper.classList.remove('expanded');
+            wrapper.classList.add('collapsed');
+            this.dataset.expanded = 'false';
+            this.innerHTML = 'Show All Amenities <i class="bi bi-chevron-down"></i>';
+        } else {
+            // Expand
+            wrapper.classList.remove('collapsed');
+            wrapper.classList.add('expanded');
+            this.dataset.expanded = 'true';
+            this.innerHTML = 'Show Less <i class="bi bi-chevron-up"></i>';
+        }
+    });
+});
+// Location toggle
+const locBtn = document.getElementById('toggleLocationBtn');
+if (locBtn) {
+    const locWrapper = document.getElementById('locationWrapper');
+    locBtn.addEventListener('click', function() {
+        const isExpanded = this.dataset.expanded === 'true';
+        if (isExpanded) {
+            locWrapper.classList.remove('expanded');
+            locWrapper.classList.add('collapsed');
+            this.dataset.expanded = 'false';
+            this.innerHTML = 'Show All Location Highlights <i class="bi bi-chevron-down"></i>';
+        } else {
+            locWrapper.classList.remove('collapsed');
+            locWrapper.classList.add('expanded');
+            this.dataset.expanded = 'true';
+            this.innerHTML = 'Show Less <i class="bi bi-chevron-up"></i>';
+        }
+    });
+}
+    </script>
+    <!-- Enhanced Chat System - Modern Redesign -->
+<div class="whatsapp-modal-overlay" id="whatsAppModal" style="display: none;">
+    <div class="whatsapp-container" id="chatContainer">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="profile-pic">
+                                            <img src="https://newprojectsonline.com/assets/images/avatars/chatbot-avatar.gif" alt="Chat Assistant">
+                                        <span class="online-dot"></span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-name">Sales Team</div>
+                    <div class="contact-status">
+                        <span class="status-dot"></span> Online
+                    </div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" id="minimizeChat" aria-label="Minimize">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="header-btn" id="expandChat" aria-label="Expand">
+                    <i class="fas fa-expand-alt"></i>
+                </button>
+                <button class="header-btn close-btn" id="closeChat" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Body -->
+        <div class="chat-body" id="chatBody">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-wrapper" id="inputWrapper" style="display: none;">
+            <div class="input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." autocomplete="off">
+                <button class="send-button" id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="input-hint">Press Enter to send</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Trigger Button -->
+<button class="whatsapp-trigger" id="openWhatsAppModalBtn">
+            <img src="https://newprojectsonline.com/assets/images/avatars/chatbot-avatar.gif" alt="Chat with us">
+        <span class="trigger-pulse"></span>
+    </button>
+
+<!-- Chat Popup Message -->
+<div class="chat-pop-msg" id="chatPopup" style="display: none;">
+    <button class="popup-close" id="chatbox-close" aria-label="Close popup">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="popup-avatar">
+                    <img src="https://newprojectsonline.com/assets/images/avatars/chatbot-avatar.gif" alt="Chat Assistant">
+            </div>
+    <div class="popup-content">
+        <div class="popup-greeting">
+            <span class="greeting-wave">👋</span>
+            <span class="greeting-name">Hey, I'm Shital!</span>
+        </div>
+        <p class="popup-intro">
+            <span class="typing-text">How can I help you today?</span>
+        </p>
+        <div class="popup-features">
+            <strong>Get instant assistance for:</strong>
+            <ul>
+                <li><i class="fas fa-tag"></i> Best Price Quotes</li>
+                <li><i class="fas fa-map-marker-alt"></i> Site Visit Booking</li>
+                <li><i class="fas fa-building"></i> Floor Plans &amp; Pricing</li>
+                <li><i class="fas fa-gift"></i> Exclusive Offers</li>
+            </ul>
+        </div>
+    </div>
+    <button class="chat-pop-sm-btn" type="button" id="chatPopupButton">
+        <i class="fab fa-whatsapp"></i>
+        Let's Chat Now
+    </button>
+</div>
+
+<!-- Hidden form for submission -->
+<form id="chatLeadForm" method="POST" action="https://newprojectsonline.com/pages/chat_email" style="display: none;">
+    <input type="hidden" name="btn" value="yes">
+    <input type="hidden" name="url" value="rishabraj-anuja-borivali">
+    <input type="hidden" name="project" value="Rishabraj Anuja Borivali">
+    <input type="hidden" name="enquiry_type" id="chatEnquiryType" value="">
+    <input type="hidden" name="name" id="chatNameField">
+    <input type="hidden" name="mobile" id="chatMobileField">
+    <input type="hidden" name="email" id="chatEmailField">
+    <input type="hidden" name="source" value="WhatsApp Chat">
+    <input type="hidden" name="utm" value="">
+    <input type="hidden" name="utm_campaign" value="">
+    <input type="hidden" name="utm_medium" value="">
+    <input type="hidden" name="utm_source" value="">
+    <input type="hidden" name="utm_term" value="">
+</form>
+
+<style>
+    /* ===== CSS Variables ===== */
+    :root {
+        --chat-primary: #0a3d62;
+        --chat-secondary: #075e54;
+        --chat-accent: #25d366;
+        --chat-accent-hover: #1da851;
+        --chat-bg: #f0f2f5;
+        --chat-header-bg: #0a3d62;
+        --chat-bubble-sender: #dcf8c6;
+        --chat-bubble-receiver: #ffffff;
+        --chat-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        --chat-radius: 24px;
+        --chat-transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    /* ===== Reset & Base ===== */
+    .chat-pop-msg *,
+    .whatsapp-container *,
+    .whatsapp-trigger * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ===== Scrollbar Styling ===== */
+    .chat-body::-webkit-scrollbar {
+        width: 5px;
+    }
+    .chat-body::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+    }
+    .chat-body::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    .chat-body::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* ===== Trigger Button ===== */
+    .whatsapp-trigger {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: var(--chat-accent);
+        border: none;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .whatsapp-trigger:hover {
+        transform: scale(1.08);
+        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-trigger:active {
+        transform: scale(0.95);
+    }
+
+    .whatsapp-trigger img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .whatsapp-trigger i {
+        font-size: 36px;
+        color: #fff;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .trigger-pulse {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 2px solid var(--chat-accent);
+        animation: triggerPulse 2.5s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @keyframes triggerPulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    /* ===== Popup Message ===== */
+    .chat-pop-msg {
+        position: fixed;
+        bottom: 110px;
+        right: 28px;
+        width: 340px;
+        max-width: calc(100vw - 40px);
+        background: #ffffff;
+        border-radius: var(--chat-radius);
+        box-shadow: var(--chat-shadow);
+        z-index: 10000;
+        animation: popupSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(4px);
+    }
+
+    @keyframes popupSlideUp {
+        0% {
+            transform: translateY(40px) scale(0.9);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        background: rgba(0, 0, 0, 0.06);
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #888;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+        z-index: 5;
+    }
+
+    .popup-close:hover {
+        background: rgba(0, 0, 0, 0.12);
+        color: #333;
+    }
+
+    .popup-avatar {
+        text-align: center;
+        padding: 20px 20px 0;
+    }
+
+    .popup-avatar img,
+    .popup-avatar i {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--chat-accent);
+        padding: 2px;
+        background: #fff;
+    }
+
+    .popup-avatar i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: var(--chat-accent);
+        background: #f0f8f4;
+    }
+
+    .popup-content {
+        padding: 12px 20px 16px;
+    }
+
+    .popup-greeting {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .greeting-wave {
+        font-size: 22px;
+    }
+
+    .greeting-name {
+        background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .popup-intro {
+        font-size: 15px;
+        color: #444;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .typing-text {
+        font-weight: 500;
+        color: var(--chat-secondary);
+        position: relative;
+    }
+
+    .typing-text::after {
+        content: '|';
+        display: inline-block;
+        animation: cursorBlink 0.8s step-end infinite;
+        color: var(--chat-accent);
+        font-weight: 300;
+    }
+
+    @keyframes cursorBlink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .popup-features {
+        background: #f8faff;
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-top: 4px;
+    }
+
+    .popup-features strong {
+        display: block;
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .popup-features ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .popup-features ul li {
+        font-size: 13px;
+        color: #222;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 0;
+    }
+
+    .popup-features ul li i {
+        color: var(--chat-accent);
+        font-size: 12px;
+        width: 18px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .chat-pop-sm-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, var(--chat-accent), #1da851);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        transition: background 0.3s, transform 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--font-family);
+    }
+
+    .chat-pop-sm-btn:hover {
+        background: linear-gradient(135deg, #1da851, #188a42);
+        transform: scale(1.01);
+    }
+
+    .chat-pop-sm-btn i {
+        font-size: 18px;
+    }
+
+    /* ===== Modal Overlay ===== */
+    .whatsapp-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 10001;
+        justify-content: center;
+        align-items: center;
+        animation: overlayFade 0.3s ease;
+    }
+
+    @keyframes overlayFade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* ===== Chat Container ===== */
+    .whatsapp-container {
+        width: 400px;
+        max-width: 92vw;
+        height: 600px;
+        max-height: 85vh;
+        background: #fff;
+        border-radius: var(--chat-radius);
+        overflow: hidden;
+        box-shadow: var(--chat-shadow);
+        display: flex;
+        flex-direction: column;
+        animation: containerPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        font-family: var(--font-family);
+        position: relative;
+    }
+
+    @keyframes containerPop {
+        0% {
+            transform: scale(0.8) translateY(30px);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .whatsapp-container.minimized {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        animation: none;
+    }
+
+    .whatsapp-container.minimized .chat-header,
+    .whatsapp-container.minimized .chat-body,
+    .whatsapp-container.minimized .input-wrapper {
+        display: none;
+    }
+
+    .whatsapp-container.minimized::after {
+        content: '\f075';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #fff;
+        background: var(--chat-accent);
+        border-radius: 50%;
+    }
+
+    /* ===== Header ===== */
+    .chat-header {
+        background: var(--chat-header-bg);
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(135deg, #0a3d62, #075e54);
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .profile-pic {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .avatar-placeholder {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .online-dot {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        width: 12px;
+        height: 12px;
+        background: var(--chat-accent);
+        border-radius: 50%;
+        border: 2px solid var(--chat-header-bg);
+        animation: dotPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes dotPulse {
+        0%,
+        100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .contact-name {
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .contact-status {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .status-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--chat-accent);
+        border-radius: 50%;
+        display: inline-block;
+        animation: dotPulse 2s ease-in-out infinite;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .header-btn {
+        background: rgba(255, 255, 255, 0.08);
+        border: none;
+        color: rgba(255, 255, 255, 0.7);
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .header-btn:hover {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .header-btn:active {
+        transform: scale(0.92);
+    }
+
+    .header-btn.close-btn:hover {
+        background: rgba(255, 70, 70, 0.3);
+        color: #ff6b6b;
+    }
+
+    /* ===== Chat Body ===== */
+    .chat-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 18px 16px 12px;
+        background: var(--chat-bg);
+        background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    /* ===== Messages ===== */
+    .message {
+        max-width: 82%;
+        padding: 10px 14px;
+        border-radius: 16px;
+        margin-bottom: 6px;
+        word-wrap: break-word;
+        animation: msgFade 0.3s ease;
+        position: relative;
+        font-size: 14px;
+        line-height: 1.5;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        clear: both;
+    }
+
+    @keyframes msgFade {
+        0% {
+            opacity: 0;
+            transform: translateY(8px) scale(0.97);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .message.receiver {
+        background: var(--chat-bubble-receiver);
+        float: left;
+        border-bottom-left-radius: 4px;
+        align-self: flex-start;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .message.sender {
+        background: var(--chat-bubble-sender);
+        float: right;
+        border-bottom-right-radius: 4px;
+        align-self: flex-end;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .message.error {
+        background: #ffe8e8;
+        color: #c0392b;
+        border-left: 3px solid #e74c3c;
+        align-self: center;
+        max-width: 90%;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    .message-time {
+        font-size: 10px;
+        color: #999;
+        margin-top: 4px;
+        text-align: right;
+        opacity: 0.7;
+        letter-spacing: 0.2px;
+    }
+
+    /* ===== Quick Options ===== */
+    .quick-options {
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+        margin-bottom: 4px;
+        justify-content: center;
+        animation: msgFade 0.4s ease;
+    }
+
+    .options-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .option-btn {
+        background: #fff;
+        border: 1.5px solid #e8ecf1;
+        border-radius: 24px;
+        padding: 10px 18px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        color: #1a1a2e;
+        transition: all 0.25s ease;
+        font-family: var(--font-family);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        flex: 1 0 auto;
+        justify-content: center;
+        min-width: 120px;
+    }
+
+    .option-btn:hover {
+        background: var(--chat-accent);
+        color: #fff;
+        border-color: var(--chat-accent);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .option-btn:active {
+        transform: scale(0.96);
+    }
+
+    /* ===== Typing Indicator ===== */
+    .typing-indicator {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 16px;
+        background: #fff;
+        border-radius: 16px;
+        border-bottom-left-radius: 4px;
+        float: left;
+        clear: both;
+        align-self: flex-start;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        margin-bottom: 6px;
+        animation: msgFade 0.3s ease;
+    }
+
+    .typing-indicator span {
+        font-size: 13px;
+        color: #888;
+        margin-left: 4px;
+    }
+
+    .typing-dot {
+        width: 8px;
+        height: 8px;
+        background: #aaa;
+        border-radius: 50%;
+        animation: typingBounce 1.4s infinite ease-in-out;
+    }
+
+    .typing-dot:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .typing-dot:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes typingBounce {
+        0%,
+        60%,
+        100% {
+            transform: translateY(0);
+            background: #bbb;
+        }
+        30% {
+            transform: translateY(-10px);
+            background: var(--chat-accent);
+        }
+    }
+
+    /* ===== Input Area ===== */
+    .input-wrapper {
+        border-top: 1px solid #eef1f4;
+        background: #fff;
+        flex-shrink: 0;
+        padding: 8px 16px 10px;
+        border-radius: 0 0 var(--chat-radius) var(--chat-radius);
+    }
+
+    .input-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .chat-input {
+        flex: 1;
+        padding: 10px 16px;
+        border: 1.5px solid #e8ecf1;
+        border-radius: 24px;
+        outline: none;
+        font-size: 14px;
+        font-family: var(--font-family);
+        transition: border-color 0.25s, box-shadow 0.25s;
+        background: #f8fafc;
+        color: #1a1a2e;
+    }
+
+    .chat-input:focus {
+        border-color: var(--chat-accent);
+        box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.12);
+        background: #fff;
+    }
+
+    .chat-input::placeholder {
+        color: #aaa;
+        font-weight: 400;
+    }
+
+    .send-button {
+        background: linear-gradient(135deg, var(--chat-accent), #1da851);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s ease;
+        flex-shrink: 0;
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+
+    .send-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    }
+
+    .send-button:active {
+        transform: scale(0.92);
+    }
+
+    .send-button i {
+        margin-left: 2px;
+    }
+
+    .input-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 6px;
+        padding: 0 4px;
+    }
+
+    .input-hint {
+        font-size: 11px;
+        color: #bbb;
+        letter-spacing: 0.2px;
+    }
+
+    /* ===== Minimized State Override ===== */
+    .whatsapp-modal-overlay.minimized {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        pointer-events: none;
+    }
+
+    .whatsapp-modal-overlay.minimized .whatsapp-container {
+        pointer-events: auto;
+        cursor: pointer;
+        animation: none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 640px) {
+        .whatsapp-container {
+            width: 100vw;
+            max-width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+            border-radius: 0;
+            animation: containerPopMobile 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes containerPopMobile {
+            0% {
+                transform: translateY(40px) scale(0.95);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .chat-body {
+            padding: 14px 12px 10px;
+        }
+
+        .chat-pop-msg {
+            bottom: 95px;
+            right: 12px;
+            width: calc(100vw - 24px);
+            max-width: calc(100vw - 24px);
+            border-radius: 18px;
+        }
+
+        .whatsapp-trigger {
+            bottom: 18px;
+            right: 18px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .whatsapp-trigger i {
+            font-size: 30px;
+        }
+
+        .option-btn {
+            font-size: 12px;
+            padding: 8px 14px;
+            min-width: 90px;
+            flex: 1 0 auto;
+        }
+
+        .popup-features ul {
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 8px;
+        }
+
+        .popup-features ul li {
+            font-size: 12px;
+        }
+
+        .chat-pop-sm-btn {
+            font-size: 14px;
+            padding: 12px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .popup-features ul {
+            grid-template-columns: 1fr;
+        }
+
+        .chat-pop-msg {
+            bottom: 85px;
+            right: 8px;
+            width: calc(100vw - 16px);
+            max-width: calc(100vw - 16px);
+        }
+
+        .whatsapp-trigger {
+            bottom: 14px;
+            right: 14px;
+            width: 54px;
+            height: 54px;
+        }
+    }
+
+    /* ===== Body Lock ===== */
+    body.chat-open {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    @media (min-width: 641px) {
+        body.chat-open {
+            overflow: auto !important;
+            position: static !important;
+            height: auto;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ===== DOM References =====
+        var chatPopup = document.getElementById('chatPopup');
+        var chatboxClose = document.getElementById('chatbox-close');
+        var chatPopupButton = document.getElementById('chatPopupButton');
+        var whatsappTrigger = document.getElementById('openWhatsAppModalBtn');
+        var whatsAppModal = document.getElementById('whatsAppModal');
+        var chatContainer = document.getElementById('chatContainer');
+        var chatBody = document.getElementById('chatBody');
+        var chatInput = document.getElementById('chatInput');
+        var inputWrapper = document.getElementById('inputWrapper');
+        var sendButton = document.getElementById('sendButton');
+        var minimizeBtn = document.getElementById('minimizeChat');
+        var expandBtn = document.getElementById('expandChat');
+        var closeChatBtn = document.getElementById('closeChat');
+        var leadForm = document.getElementById('chatLeadForm');
+
+        // ===== Chat State =====
+        var chatState = {
+            step: 'options',
+            userData: { name: '', phone: '', selectedOption: '' },
+            minimized: false,
+            isOpen: false,
+            popupShown: false,
+            popupClosed: false,
+            typingInterval: null
+        };
+
+        // ===== Options =====
+        var options = [
+            { id: 'brochure', text: '📄 Download Brochure' },
+            { id: 'pricing', text: '💰 Pricing & Floor Plans' },
+            { id: 'sitevisit', text: '🚗 Site Visit / Virtual Tour' },
+            { id: 'quote', text: '💎 Get The Best Quote' },
+            { id: 'callback', text: '📞 Get A Call Back' }
+        ];
+
+        // ===== Helpers =====
+        function getCurrentTime() {
+            var now = new Date();
+            return String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+        }
+
+        function scrollToBottom() {
+            setTimeout(function() {
+                if (chatBody) chatBody.scrollTop = chatBody.scrollHeight;
+            }, 80);
+        }
+
+        function addMessage(text, isSender) {
+            if (!chatBody) return;
+            var msg = document.createElement('div');
+            msg.className = 'message ' + (isSender ? 'sender' : 'receiver');
+            msg.innerHTML = text + '<div class="message-time">' + getCurrentTime() + '</div>';
+            chatBody.appendChild(msg);
+            scrollToBottom();
+        }
+
+        function addHtmlToChat(html) {
+            if (!chatBody) return;
+            var div = document.createElement('div');
+            div.innerHTML = html;
+            chatBody.appendChild(div);
+            scrollToBottom();
+        }
+
+        function showTyping() {
+            if (!chatBody) return;
+            var typing = document.createElement('div');
+            typing.className = 'typing-indicator';
+            typing.id = 'typingIndicator';
+            typing.innerHTML =
+                '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div><span>Typing...</span>';
+            chatBody.appendChild(typing);
+            scrollToBottom();
+        }
+
+        function hideTyping() {
+            var t = document.getElementById('typingIndicator');
+            if (t) t.remove();
+        }
+
+        function showError(msg) {
+            var err = document.createElement('div');
+            err.className = 'message receiver error';
+            err.innerHTML = '⚠️ ' + msg + '<div class="message-time">' + getCurrentTime() + '</div>';
+            if (chatBody) chatBody.appendChild(err);
+            scrollToBottom();
+            setTimeout(function() {
+                if (err && err.parentNode) err.remove();
+            }, 4000);
+        }
+
+        function showInput() {
+            if (inputWrapper) inputWrapper.style.display = 'block';
+            if (chatInput) {
+                setTimeout(function() {
+                    if (chatInput) chatInput.focus();
+                }, 120);
+                if (chatState.step === 'name') {
+                    chatInput.placeholder = 'Enter your full name';
+                    chatInput.type = 'text';
+                    chatInput.removeAttribute('maxlength');
+                } else if (chatState.step === 'phone') {
+                    chatInput.placeholder = 'Enter 10-digit mobile number';
+                    chatInput.type = 'tel';
+                    chatInput.maxLength = 10;
+                }
+            }
+        }
+
+        function hideInput() {
+            if (inputWrapper) inputWrapper.style.display = 'none';
+        }
+
+        function showOptions() {
+            if (!chatBody) return;
+            var html = '<div class="quick-options"><div class="options-container">';
+            for (var i = 0; i < options.length; i++) {
+                html += '<button class="option-btn" data-option="' + options[i].id + '">' + options[i].text + '</button>';
+            }
+            html += '</div></div>';
+            addHtmlToChat(html);
+
+            setTimeout(function() {
+                var btns = document.querySelectorAll('.option-btn');
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener('click', function(e) {
+                        var optId = this.dataset.option;
+                        var optText = this.textContent.trim();
+                        addMessage(optText, true);
+                        chatState.userData.selectedOption = optId;
+                        var types = {
+                            brochure: 'Brochure Download',
+                            pricing: 'Pricing Details',
+                            sitevisit: 'Site Visit Booking',
+                            quote: 'Best Quote Request',
+                            callback: 'Callback Request'
+                        };
+                        var enquiryField = document.getElementById('chatEnquiryType');
+                        if (enquiryField) enquiryField.value = types[optId] || 'General Enquiry';
+                        showTyping();
+                        setTimeout(function() {
+                            hideTyping();
+                            addMessage('Great choice! 😊 I\'ll help you with that.', false);
+                            setTimeout(function() {
+                                addMessage('Before we proceed, may I know your good name? 😊', false);
+                                chatState.step = 'name';
+                                showInput();
+                            }, 600);
+                        }, 1200);
+                    });
+                }
+            }, 100);
+        }
+
+        function initChat() {
+            if (!chatBody) return;
+            chatBody.innerHTML = '';
+            setTimeout(function() {
+                addMessage('Hi there! 👋 I\'m Shital', false);
+                setTimeout(function() {
+                    addMessage('Welcome to Rishabraj Anuja Borivali!', false);
+                    setTimeout(function() {
+                        addMessage('How can I assist you today?', false);
+                        setTimeout(showOptions, 500);
+                    }, 700);
+                }, 700);
+            }, 400);
+        }
+
+        function handleSubmit() {
+            if (!chatInput) return;
+            var val = chatInput.value.trim();
+            if (!val) return;
+            addMessage(val, true);
+
+            if (chatState.step === 'name') {
+                if (val.length < 2) {
+                    showError('Please enter a valid name');
+                    return;
+                }
+                chatState.userData.name = val;
+                var nameField = document.getElementById('chatNameField');
+                if (nameField) nameField.value = val;
+                showTyping();
+                setTimeout(function() {
+                    hideTyping();
+                    addMessage('Nice to meet you, ' + val + '! 😊', false);
+                    setTimeout(function() {
+                        addMessage('Please share your WhatsApp number:', false);
+                        chatState.step = 'phone';
+                        if (chatInput) chatInput.value = '';
+                        showInput();
+                    }, 500);
+                }, 900);
+            } else if (chatState.step === 'phone') {
+                if (!/^\d{10}$/.test(val)) {
+                    showError('Please enter a valid 10-digit phone number');
+                    return;
+                }
+                chatState.userData.phone = val;
+                var mobileField = document.getElementById('chatMobileField');
+                if (mobileField) mobileField.value = val;
+
+                var emailField = document.getElementById('chatEmailField');
+                if (emailField) emailField.value = 'no-email@chat.com';
+
+                showTyping();
+                setTimeout(function() {
+                    hideTyping();
+                    addMessage('Perfect! 📞 Thank you for your details.', false);
+                    var msgs = {
+                        brochure: 'I\'ll share the brochure shortly.',
+                        pricing: 'Pricing team will contact you.',
+                        sitevisit: 'We\'ll schedule a site visit.',
+                        quote: 'Best quote will be shared.',
+                        callback: 'We\'ll call you shortly.'
+                    };
+                    addMessage(msgs[chatState.userData.selectedOption] || 'Our team will contact you shortly.',
+                        false);
+                    setTimeout(function() {
+                        addMessage('Thank you for your interest! 😊', false);
+                    }, 1200);
+                    setTimeout(function() {
+                        if (leadForm) leadForm.submit();
+                    }, 2800);
+                    setTimeout(minimizeChat, 5000);
+                    hideInput();
+                }, 900);
+            }
+        }
+
+        function openChat() {
+            if (chatPopup) chatPopup.style.display = 'none';
+            chatState.popupClosed = true;
+            if (whatsAppModal) {
+                whatsAppModal.style.display = 'flex';
+                whatsAppModal.style.zIndex = '10001';
+                whatsAppModal.classList.remove('minimized');
+            }
+            if (chatContainer) {
+                chatContainer.classList.remove('minimized');
+                chatContainer.style.position = '';
+                chatContainer.style.bottom = '';
+                chatContainer.style.right = '';
+            }
+            chatState.isOpen = true;
+            chatState.minimized = false;
+            document.body.classList.add('chat-open');
+            if (chatState.step !== 'options') showInput();
+            // Reset scroll
+            setTimeout(scrollToBottom, 200);
+        }
+
+        function minimizeChat() {
+            if (chatContainer) chatContainer.classList.add('minimized');
+            if (whatsAppModal) whatsAppModal.classList.add('minimized');
+            chatState.minimized = true;
+            hideInput();
+            if (chatContainer) {
+                chatContainer.style.position = 'fixed';
+                chatContainer.style.bottom = '28px';
+                chatContainer.style.right = '28px';
+            }
+            document.body.classList.remove('chat-open');
+        }
+
+        function closeChat() {
+            if (whatsAppModal) {
+                whatsAppModal.style.display = 'none';
+                whatsAppModal.classList.remove('minimized');
+            }
+            if (chatContainer) {
+                chatContainer.classList.remove('minimized');
+                chatContainer.style.position = '';
+                chatContainer.style.bottom = '';
+                chatContainer.style.right = '';
+            }
+            chatState.isOpen = false;
+            chatState.minimized = false;
+            document.body.classList.remove('chat-open');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            var backdrops = document.querySelectorAll('.modal-backdrop');
+            for (var i = 0; i < backdrops.length; i++) {
+                if (backdrops[i] && backdrops[i].remove) backdrops[i].remove();
+            }
+            document.documentElement.style.overflow = '';
+            document.body.offsetHeight;
+        }
+
+        function expandChat() {
+            if (chatContainer) {
+                chatContainer.classList.remove('minimized');
+                chatContainer.style.position = '';
+                chatContainer.style.bottom = '';
+                chatContainer.style.right = '';
+            }
+            if (whatsAppModal) {
+                whatsAppModal.classList.remove('minimized');
+                whatsAppModal.style.display = 'flex';
+            }
+            chatState.minimized = false;
+            chatState.isOpen = true;
+            if (window.innerWidth <= 767) document.body.classList.add('chat-open');
+            if (chatState.step !== 'options') showInput();
+            setTimeout(scrollToBottom, 200);
+        }
+
+        function hideChatPopup() {
+            if (chatPopup) chatPopup.style.display = 'none';
+            if (chatState.typingInterval) clearInterval(chatState.typingInterval);
+        }
+
+        function showChatPopup() {
+            if (!chatState.popupShown && !chatState.popupClosed && chatPopup) {
+                chatPopup.style.display = 'block';
+                chatState.popupShown = true;
+                var typingText = document.querySelector('.typing-text');
+                if (typingText) {
+                    var text = 'How can I help you today?';
+                    typingText.textContent = '';
+                    var i = 0;
+                    if (chatState.typingInterval) clearInterval(chatState.typingInterval);
+                    chatState.typingInterval = setInterval(function() {
+                        if (i < text.length) {
+                            typingText.textContent += text.charAt(i);
+                            i++;
+                        } else {
+                            clearInterval(chatState.typingInterval);
+                        }
+                    }, 55);
+                }
+                setTimeout(function() {
+                    if (chatPopup && chatPopup.style.display === 'block' && !chatState.isOpen) {
+                        hideChatPopup();
+                    }
+                }, 28000);
+            }
+        }
+
+        // ===== Event Listeners =====
+        if (chatboxClose) {
+            chatboxClose.addEventListener('click', function(e) {
+                e.preventDefault();
+                hideChatPopup();
+                chatState.popupClosed = true;
+            });
+        }
+
+        if (chatPopupButton) {
+            chatPopupButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                openChat();
+            });
+        }
+
+        if (whatsappTrigger) {
+            whatsappTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (chatState.minimized) {
+                    expandChat();
+                } else {
+                    openChat();
+                }
+            });
+        }
+
+        if (minimizeBtn) {
+            minimizeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                minimizeChat();
+            });
+        }
+
+        if (expandBtn) {
+            expandBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                expandChat();
+            });
+        }
+
+        if (closeChatBtn) {
+            closeChatBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeChat();
+            });
+        }
+
+        if (sendButton) {
+            sendButton.addEventListener('click', handleSubmit);
+        }
+
+        if (chatInput) {
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') handleSubmit();
+            });
+        }
+
+        if (whatsAppModal) {
+            whatsAppModal.addEventListener('click', function(e) {
+                if (e.target === whatsAppModal) {
+                    if (chatState.minimized) {
+                        expandChat();
+                    } else {
+                        closeChat();
+                    }
+                }
+            });
+        }
+
+        if (chatContainer) {
+            chatContainer.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (chatState.minimized) {
+                    expandChat();
+                }
+            });
+        }
+
+        // ===== Keyboard shortcut: Escape to close =====
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && chatState.isOpen) {
+                closeChat();
+            }
+        });
+
+        // ===== Init =====
+        initChat();
+
+        // Show popup after delay
+        setTimeout(showChatPopup, 4000);
+
+        // Clean up on page unload
+        window.addEventListener('beforeunload', function() {
+            if (chatState.typingInterval) clearInterval(chatState.typingInterval);
+        });
+
+        var loader = document.getElementById('loader');
+        if (loader) setTimeout(function() {
+            if (loader) loader.style.display = 'none';
+        }, 500);
+    });
+</script></body>
+
+</html>

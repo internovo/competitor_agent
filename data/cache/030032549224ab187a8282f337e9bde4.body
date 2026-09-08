@@ -1,0 +1,390 @@
+{
+  "places": [
+    {
+      "id": "ChIJ3WQmqe225zsRd5qrHPY3xAg",
+      "types": [
+        "apartment_complex",
+        "housing_complex",
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, New Link Rd, behind Infiniti Mall Malad, Malad, West, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1869367,
+        "longitude": 72.8310415
+      },
+      "displayName": {
+        "text": "Interface Heights",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJo489S7G35zsR_gSg8XNDjOo",
+      "types": [
+        "apartment_building",
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "next to Billabong High School, Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.2037944,
+        "longitude": 72.8210831
+      },
+      "displayName": {
+        "text": "Royal Lagoon | Apartments In Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJOfcWAf-35zsRSG24XxUFTEk",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "PG Rd, off New Link Road, Malad, Ekta Nagar, W, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.183353699999998,
+        "longitude": 72.8379219
+      },
+      "displayName": {
+        "text": "Harshail Hornbill, Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJi7XxlJC35zsR1Z4GwZE_pew",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Uncle Kitchen, Samarth Reva, Church, Lane, Sunder Ln, behind Orlem, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193713499999998,
+        "longitude": 72.8351364
+      },
+      "displayName": {
+        "text": "Samarth Reva",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJtzDi9WG35zsRJkB6kcmg1sM",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kala Vidyalaya Rd, Malad, Gaikwad Nagar, Malvani, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.181662199999998,
+        "longitude": 72.8142277
+      },
+      "displayName": {
+        "text": "Galaxy Heights | A project by Maharashtra Police Co-operative Housing Federation Limited",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJWymMisS35zsRfNQRSaXOTII",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, New Link Rd, opp. landmark Restaurant, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.191909,
+        "longitude": 72.835933
+      },
+      "displayName": {
+        "text": "Auris Serenity",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJayLkRAC35zsRJ7X80IfORO4",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RVM+C25, Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193156,
+        "longitude": 72.833124099999992
+      },
+      "displayName": {
+        "text": "Ruparel Stardom Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJg7EwVs-35zsRay9HirI40mM",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chincholi Bunder Rd, Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.179547,
+        "longitude": 72.8426293
+      },
+      "displayName": {
+        "text": "Chandak Treesourus",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJXWHVWZm35zsRCTNX7WQBdu8",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RGM+6WM, near In orbit mall, Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1755848,
+        "longitude": 72.8347849
+      },
+      "displayName": {
+        "text": "Rustomjee Elanza,",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJgycoLLu25zsRdlWYkiuJc2U",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "GURUKRUPA MARINA ENCLAVE, Marina Enclave Rd, Near Bilabong School, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.202101,
+        "longitude": 72.8150436
+      },
+      "displayName": {
+        "text": "Gurukrupa Marina Enclave",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJo_5qJ0C35zsRah2DVMvqhos",
+      "types": [
+        "condominium_complex",
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bhagwan Gautam Buddha Rd, Malad, Orlem, Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1966833,
+        "longitude": 72.8367852
+      },
+      "displayName": {
+        "text": "Shreeji Atlantis by Shreeji Group",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJSxzJ_vC25zsR7a1om_N2-5o",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RJP+MWQ, New Link Rd, Malad, Rajan Pada, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1817188,
+        "longitude": 72.8373438
+      },
+      "displayName": {
+        "text": "Link Palace Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJjy8CIOy25zsRncQlZJXA-dQ",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, Ramchandra Ln, near Movie Time Cinema, Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.188225199999998,
+        "longitude": 72.834405199999992
+      },
+      "displayName": {
+        "text": "Lodha Raj Infinia",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJB6GL2eW25zsRYJvPxQ-VEDw",
+      "types": [
+        "condominium_complex",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Aspee Enclave, Marve Rd, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1914494,
+        "longitude": 72.8404363
+      },
+      "displayName": {
+        "text": "Bhoomi Celestia",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJJzogvO625zsRYZ8ymb9-uGo",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Movie Time Cinema, B-1, Ramchandra Ln, next to Movie Time Cinema, Khandelwal Layout, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.189384,
+        "longitude": 72.833983899999993
+      },
+      "displayName": {
+        "text": "Grace Luxuria",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJ2V56yBG35zsRePriua1GQQE",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "opp. Jay Sagar, near Navy Colony, Liberty Garden, Navy Colony, NSC Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185325799999998,
+        "longitude": 72.8387624
+      },
+      "displayName": {
+        "text": "Alliance Bhaskar",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJM9ov40Eq-ikRtEvuBNHvDrs",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, Malad, Kanchpada, Goregaon West, Mumbai, Maharashtra 400065, India",
+      "location": {
+        "latitude": 19.1901382,
+        "longitude": 72.8355478
+      },
+      "displayName": {
+        "text": "Raghav UTOPIA New Launch Project Goregaon West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJiauEfum25zsRyQ52eiEcU6M",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Road, D'Monte Ln, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1917574,
+        "longitude": 72.8370776
+      },
+      "displayName": {
+        "text": "Auris Bliss",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ5w2udZ235zsRUVhxnxSPOqY",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, opp. Sapna Hotel, near N L College, Malad, Daruwala Compound, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1920303,
+        "longitude": 72.84722339999999
+      },
+      "displayName": {
+        "text": "Sahakar Avenue",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJue21I_u25zsRfiRFjpgLkn4",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RMV+JC2, Haji Zakaria Rd, Malad, Navy Colony, Mamledarwadi, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1840165,
+        "longitude": 72.8435136
+      },
+      "displayName": {
+        "text": "Kamla Jainson",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

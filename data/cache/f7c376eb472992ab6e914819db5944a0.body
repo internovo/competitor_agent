@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJF2cfxSSx5zsRj-AAlo4KQf4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mhada Colony, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2346882,
+        "longitude": 72.8406381
+      },
+      "displayName": {
+        "text": "Aura Hotel Borivali west",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHwYPxSSx5zsRqPwYCYbPjnw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2343916,
+        "longitude": 72.8407821
+      },
+      "displayName": {
+        "text": "Yogi Nagar or Jayraj Nagar (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLQMK2ySx5zsRlfW_34fqKeg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.234427999999998,
+        "longitude": 72.840724999999992
+      },
+      "displayName": {
+        "text": "Yogi Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

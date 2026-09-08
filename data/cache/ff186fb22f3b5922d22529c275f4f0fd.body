@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJpQG3l5TO5zsRyB-sx23xx70",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kamagar Nagar Number 1, Century Mills, Lower Parel, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00637,
+        "longitude": 72.82628
+      },
+      "displayName": {
+        "text": "Century Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ68WFl5TO5zsR8PSpZk96T4Y",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.006225,
+        "longitude": 72.826291
+      },
+      "displayName": {
+        "text": "Century Mills",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ1bSNl5TO5zsR4BkD11r99J4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.006218999999998,
+        "longitude": 72.826488000000012
+      },
+      "displayName": {
+        "text": "Century Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

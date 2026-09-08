@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJb31HraLO5zsRN__Aov0BOT0",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "400030, India",
+      "location": {
+        "latitude": 19.0108785,
+        "longitude": 72.8160375
+      },
+      "displayName": {
+        "text": "National Association For Blind (NAB)",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJf2POrKLO5zsRVtfSLqAt3CA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Sea Face, Worli, 400030, India",
+      "location": {
+        "latitude": 19.01102,
+        "longitude": 72.81622999999999
+      },
+      "displayName": {
+        "text": "National Association For Blind (Nab)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOUwa8ZfO5zsRbBskDImiK9E",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00937,
+        "longitude": 72.816589999999991
+      },
+      "displayName": {
+        "text": "Traffic Police H.Q (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

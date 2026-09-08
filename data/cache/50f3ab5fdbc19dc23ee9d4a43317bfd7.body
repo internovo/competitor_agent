@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" href="assets/img/favicon.png" sizes="16x16">
+	<title>Chheda Greens </title>
+	<style>:root{--colorPrimary:#c79f75;--colorSecondary:#c79f75;--colorBtn:#ffffff}#loader{width:100vw;height:100vh;background-color:rgba(255,255,255,1);position:fixed;top:0;left:0;z-index:1040}.loader-text{display:block;text-align:center;color:#d7d7d7;font-family:Arial,sans-serif;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.loading{height:0;width:0;padding:4vw;border:.8vw solid #ccc;border-right-color:#888;border-radius:6vw;-webkit-animation:rotate 1s infinite linear}@keyframes loader{0%{filter:grayscale(0)}50%{filter:grayscale(100%)}100%{filter:grayscale(0)}}.loader-logo{width:300px;-webkit-animation:loader 1.3s infinite linear;-moz-animation:loader 1.3s infinite linear;-ms-animation:loader 1.3s infinite linear;-o-animation:loader 1.3s infinite linear;animation:loader 1.3s infinite linear}.pload{display:none}</style>
+	<link rel="preload" href="assets/css/style.css" as="style">
+	<link rel="preload" href="assets/js/app.js" as="script">
+	<link rel="preload" href="assets/fonts/roboto-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/roboto-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/muli-variablefont_wght-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/micon.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="dns-prefetch" href="http://google-analytics.com/" crossorigin>
+	<link rel="dns-prefetch" href="http://googletagmanager.com/" crossorigin>
+	<link rel="dns-prefetch" href="http://www.googleadservices.com/" crossorigin>
+	<link rel="dns-prefetch" href="http://googleads.g.doubleclick.net/" crossorigin>
+	<link rel="dns-prefetch" href="http://zopim.com/" crossorigin>
+	<link rel="dns-prefetch" href="http://ipinfo.io/" crossorigin>
+	<link rel="dns-prefetch" href="http://cdn.jsdelivr.net/" crossorigin>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/app.js" defer></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11085202697"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11085202697');
+</script>
+
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav"><div id="loader">
+	<span class="loader-text"><img src="assets/img/logo.png" class="loader-logo"></span></div>
+	<style> @media only screen and (min-width: 992px){ .info-box{ width: 27vw; top: 8px; left: 10px; background-color: #fff; color: #000; text-align: center; border-radius: 8px; padding: 0 10px; font-weight: 400; } .pro-status{ display: block; text-shadow: none; color: var(--colorPrimary); background-color: transparent; padding: .6vw 2.5vw .3vw 2vw; font-weight: 700; } .pro-title, .pro-add, .pro-dev, ul.pro-spec, .info-box span.heading, .pro-tag-line, .pro-price, .pro-rera{ text-shadow: none; color: #000; font-weight: 400; } .pro-title{ padding: .5vw .8vw .3vw; } .pro-title, .pro-add, .pro-price{ font-weight: 700; } ul.pro-spec{ background-color: transparent; margin-bottom: 0; } .info-box span.list-icon{ display: none; } .pro-rera{ font-size: .8vw; } } .offer{ display: block; padding: 8px; font-size: 13px; font-weight: 700; } .offer-top{ background: #76BC4E; border-radius: 8px 8px 0px 0px; } .offer-bottom{ background: #d1e9fc; border-radius: 0px 0px 8px 8px; } .offer-bg-animation{ color: #ffffff; display: block; background: linear-gradient(-45deg, #c79f75, #c79f75 ,#c79f75,#c79f75); background-size: 400% 400%; -webkit-animation: Gradient 3s ease infinite; -moz-animation: Gradient 3s ease infinite; animation: Gradient 3s ease infinite; }
+</style>
+
+	<header class="micro-nav fixed-top pload">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white micro-navbar">
+		<a class="navbar-brand" href="#" onclick="return false"><img src="assets/img/logo.png" class="logo"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav nav-fill">
+		<li class="nav-item"><a class="nav-link" href="#home"><i class="mi mi-home nav-icon"></i><span class="d-sm-inline d-md-none"> Home</span></a></li>
+	<li class="nav-item"><a class="nav-link" href="#pricing"><i class="mi mi-price nav-icon"></i> Price</a></li>
+	<li class="nav-item"><a class="nav-link" href="#sitefloorplan"><i class="mi mi-siteplan nav-icon"></i> Site &amp; Floor Plan</a></li>
+	<li class="nav-item"><a class="nav-link" href="#amenities"><i class="mi mi-ami nav-icon"></i> Amenities</a></li>
+	<li class="nav-item"><a class="nav-link" href="#gallery"><i class="mi mi-gallery nav-icon"></i> Gallery</a></li>
+	<li class="nav-item"><a class="nav-link" href="#location"><i class="mi mi-location nav-icon"></i> Location</a></li>
+	<li class="nav-item"><a class="nav-link" href="#sitevisit"><i class="mi mi-sitevisit nav-icon"></i> Virtual Site Tour</a></li>
+	<li class="nav-item overflow-hidden"><a class="nav-link enqModal" href="#" data-form="md" data-title="Download brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure" data-redirect-file="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block animated slideInDown infinite"></i> Brochure</a></li>
+</ul>
+</div>
+</nav>
+</header>
+	<main class="pload">
+		<div id="home" class="carousel slide micro-main-slider" data-ride="carousel">
+		<ol class="carousel-indicators">
+		<li data-target="#home" data-slide-to="0" class="active"></li>
+	<li data-target="#home" data-slide-to="1"></li>
+	<!-- <li data-target="#home" data-slide-to="2"></li> -->
+</ol>
+	<div class="carousel-inner">
+		
+	<div class="carousel-item">
+		<picture>
+		<source class="lazyload d-block micro-main-slider-img" media="(max-width: 750px)" data-srcset="assets/img/banner1.jpg" type="image/webp">
+		<source class="lazyload d-block micro-main-slider-img" media="(min-width: 751px)" data-srcset="assets/img/banner1.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload d-block micro-main-slider-img" data-srcset="assets/img/banner1.jpg 750w,assets/img/banner1.jpg">
+</picture>
+</div>
+
+	<div class="carousel-item">
+		<picture>
+		<source class="lazyload d-block micro-main-slider-img" media="(max-width: 750px)" data-srcset="assets/img/banner2.jpg" type="image/webp">
+		<source class="lazyload d-block micro-main-slider-img" media="(min-width: 751px)" data-srcset="assets/img/banner2.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload d-block micro-main-slider-img" data-srcset="assets/img/banner2.jpg 750w,assets/img/banner2.jpg">
+</picture>
+</div>
+</div>
+</div>
+	<div class="info-box overflow-hidden">
+		<span class="pro-status">Booking Open</span>
+	<span class="pro-title">Chheda Greens </span>
+	<span class="pro-add">At Mira Road East</span>
+	<span class="pro-dev">by Chheda Group</span>
+	<br>
+	<!-- <ul class="pro-spec">
+		<li><span class="list-icon">&rtrif;</span>
+		<span class="heading">Avail Best Offer & Discounts</span></li>
+	<li><span class="list-icon">&rtrif;</span>
+		<span class="heading">Typology : 2, 3 BHK</li>
+	<li><span class="list-icon">&rtrif;</span>
+		<span class="heading"> World-Class Lifestyle</li>
+</ul> -->
+	
+	<div class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0">
+		<span class="animated bounceIn infinite d-block" style="animation-duration: 3s;">  IGBC Certified Green Building
+		</span>
+	</div>
+		<span class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0"> Modern Lifestyle Amenities</span>
+
+<div class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0">
+		<span class="animated bounceIn infinite d-block" style="animation-duration: 3s;">  Book Now & Save Upto 3.5 lacs*</span>
+	</div>
+	
+	
+	<span class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0">   Easy Payment Plan 35:35:30</span>
+	
+	<div class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0">
+		<span class="animated bounceIn infinite d-block" style="animation-duration: 3s;">  12 Month EMI Waiver </span>
+	</div>
+	
+	 
+	<!-- <div class="offer offer-top offer-bg-animation text-white overflow-hidden mt-1 text-uppercase mx-1 mx-md-0">
+	<span class="animated bounceIn infinite d-block" style="animation-duration: 3s;"> Under Construction – 0 Floor rise | 5% Effective GST
+ </span></div> -->
+	
+	<!-- <div class="offer offer-bottom overflow-hidden mb-1 mx-1 mx-md-0">
+		<span class="animated bounceIn infinite d-block" style="animation-duration: 3s;"> Book by Paying 25% Only
+	</span>
+</div> --><br>
+	<span class="pro-tag-line">Luxurious 1 & 2 BHK Homes</span>
+	<span class="pro-price"> Starts From ₹ 66 Lacs*</span><br>
+	<button class="btn btn-info micro-form-btn enqModal effetMoveGradient effectScale" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
+	<span class="pro-rera"><span class="heading">Rera Regd. No.</span> :   P51700047096
+</span>
+</div>
+	<div class="mob-form d-sm-block d-md-none d-lg-none">
+		<span class="d-block form-heading font-weight-bold">Pre-Register here for Best Offers</span>
+	<form action="email.php" onsubmit="enq_formBtn.disabled = true; return true;" method="POST" class="form-side">
+		<input type="hidden" name="lead_form_name" value="Pre-Register Mobile Form">
+		<div class="form-group">
+		<input type="text" name="name" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
+</div>
+	<div class="form-group">
+		<input type="hidden" name="fullMobileNo" value="">
+	<input type="tel" id="intTelInput-mob" pattern="[0-9]+" name="mobile" class="intTelInput form-control rounded-0 micro-form-field" required placeholder="Mobile No">
+</div>
+	<div class="form-group">
+		<input type="email" name="email" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
+</div>
+	<button type="submit" name="enq_formBtn" class="btn btn-info micro-form-btn effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+</form>
+</div>
+	<section class="section shadow-sm lazyload" id="overview">
+		<span class="head text-capitalize d-none d-md-block">Overview</span>
+	<span class="d-block section-heading color-primary text-capitalize">Chheda Greens</span>
+	<span class="d-block section-heading-sub color-primary text-capitalize">At Mira Road East</span>
+	
+				<p>Chheda Greens Avighna comprises of 29 floors with Two Wings A & B Wing and features 3 level parking and an E-Deck level. The project offers various types of apartments including 1 BHK, 2 BHK, and limited 2.5 BHK options. The apartments also have the option for combined units such as 1+1 BHK Jodi and 2+1 BHK Jodi. The project includes ultra-modern amenities such as a lavish lobby and modular kitchen.
+ </p>
+ <p>In addition to the amenities previously mentioned, Chheda Greens Mira Road also offers a variety of other features and facilities for residents to enjoy.</p>
+	<button class="btn btn-sm btn-outline-info sectio-bro-btn overflow-hidden enqModal" data-form="md" data-title="Download brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure" data-redirect-file="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="d-inline-block mi mi-download mr-1 animated slideInDown infinite"></span> Download Brochure</button>
+
+	<hr>
+
+
+<h3 class="blink-soft" style="text-align: center; color: #c79f75;">Project Highlights</h3>
+			<div class="row">
+			<div class="col-sm-12">	 
+				   <ul class="list-group rk-list">
+				       <!--<li class="list-group-item">✓ Book Now & Save Upto 3.5 Lacs* (Offer Valid 15th Oct-23rd October 23)</li>-->
+				   	<li class="list-group-item">✓ Ample Greenery & Open Spaces</li>
+				   	
+				   	
+				   	 <li class="list-group-item">✓ Homes Build With World Class Aluminium Form Work Technology</li>
+				   	 <li class="list-group-item">✓ IGBC Certified Green Building </li>
+                    <li class="list-group-item">✓ A Tata Enterprise Firm (Eco First) As Design Consultants For Green Building</li>
+                    
+				   	 <li class="list-group-item">✓ Upcoming Infra Projects In The Vicinity In Future  </li>
+				   	 <li class="list-group-item">✓ Modern Lifestyle Amenities & Gated Community Living</li>
+				   	 <li class="list-group-item">✓ Immaculately Planned Residences</li>
+                    <li class="list-group-item">✓ Close proximity to prominent commercial hubs.
+
+</li>
+                   <li class="list-group-item">✓ Busbar Trunking System</li>
+                   <li class="list-group-item">✓ Well Sized Apartments</li>
+                   <li class="list-group-item">✓ Smart Apartment Management System</li>
+                   <li class="list-group-item">✓ Charging Point For Electric Vehicle</li>
+                    <li class="list-group-item">✓ Excellent Connectivity</li>
+                    
+				   
+                    
+                  </ul>
+				</div>
+			    </div><br>
+</section>
+	<section class="section shadow-sm lazyload">
+		<span class="section-link" id="pricing"></span>
+	<span class="head text-capitalize">Price</span>
+	<div class="row">
+		<div class="col-md-8">
+		<table class="table table-striped table-borderless border micro-price-table table-pricing">
+		<thead>
+		<tr>
+		<th scope="col" class="border border-bottom-0 mb-w">Type</th>
+	<th scope="col" class="border border-bottom-0 mb-w">Carpet Area</th>
+	<th scope="col" class="border border-bottom-0 border-right-0">Price</th>
+	<th scope="col"></th>
+</tr>
+</thead>
+	<tbody>
+		
+	
+
+<tr>
+		<td class="border border-left-0 border-top-0 border-bottom-0 price-type">1 BHK  </td>
+	<td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">On Request
+		<small class="d-inline-block d-md-none">(Carpet Area)</small></td>
+	<td class="price-amt"><i class="mi mi-rs-light"></i>66 Lacs*</td>
+	<td><button class="btn btn-sm btn-info effetGradient effectScale enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+</tr>
+
+<tr>
+		<td class="border border-left-0 border-top-0 border-bottom-0 price-type">2 BHK </td>
+	<td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">On Request
+		<small class="d-inline-block d-md-none">(Carpet Area)</small></td>
+	<td class="price-amt"><i class="mi mi-rs-light"></i> 96 Lacs*</td>
+	<td><button class="btn btn-sm btn-info effetGradient effectScale enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+	<div class="col-md-4">
+		<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Costing Details" data-toggle="modal" data-target="#enqModal">
+		<div class="at-property-item shadow-sm border border-grey mt-1">
+		<div class="at-property-img">
+		<picture>
+		<source class="lazyload w-100" data-srcset="assets/img/costing-details.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload w-100" data-srcset="assets/img/costing-details.jpg">
+</picture>
+	<div class="at-property-overlayer"></div>
+	<span class="btn btn-default at-property-btn">Enquire Now</span>
+</div>
+	<div class="at-property-dis effetGradient">
+		<h5>Complete Costing Details</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+	<section class="section shadow-sm lazyload" data-script="assets/plugins/fancybox/jquery.fancybox.min.js" data-link="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<span class="section-link" id="sitefloorplan"></span>
+	<span class="head text-capitalize">Site &amp; Floor Plan</span>
+	<div class="row">
+		<div class="col-md-4">
+		<span class="d-block section-heading-sub text-capitalize">Master Plan</span>
+	<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">
+	
+		<div class="at-property-item mt-1">
+		<div class="at-property-img master-plan text-center">
+		<picture>
+		<source class="lazyload shadow-sm border border-grey blur" data-srcset="assets/img/layout.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload shadow-sm border border-grey blur" data-srcset="assets/img/layout.jpg" width="320" height="154" >
+</picture>
+	<div class="at-property-overlayer"></div>
+	<span class="at-property-btn">View Master Plan</span>
+</div>
+</div>
+</a>
+</div>
+	<div class="col-md-8">
+		<span class="d-block section-heading-sub text-capitalize ">Floor Plan</span>
+	<div class="row row-cols-1 row-cols-md-2">
+		
+	<div class="col">
+		<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">
+		<div class="at-property-item shadow-sm border border-grey mt-1">
+		<div class="at-property-img">
+		<picture>
+		<source class="lazyload floor-plan-img blur" data-srcset="assets/img/1bhk.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload floor-plan-img blur" data-srcset="assets/img/1bhk.jpg">
+</picture>
+	<div class="at-property-overlayer"></div>
+	<span class="btn btn-default at-property-btn" role="button">Enquire Now</span>
+</div>
+	<div class="at-property-dis effetGradient">
+		<h5>1 BHK </h5>
+</div>
+</div>
+</a>
+</div>
+
+<div class="col">
+		<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">
+		<div class="at-property-item shadow-sm border border-grey mt-1">
+		<div class="at-property-img">
+		<picture>
+		<source class="lazyload floor-plan-img blur" data-srcset="assets/img/2bhk.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload floor-plan-img blur" data-srcset="assets/img/2bhk.jpg">
+</picture>
+	<div class="at-property-overlayer"></div>
+	<span class="btn btn-default at-property-btn" role="button">Enquire Now</span>
+</div>
+	<div class="at-property-dis effetGradient">
+		<h5>2 BHK</h5>
+</div>
+</div>
+</a>
+</div>
+	
+	
+	
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section shadow-sm lazyload">
+<span class="section-link" id="amenities"></span>
+<span class="head text-capitalize">Amenities</span>
+<div id="ami-3" class="ami-3 owl-carousel owl-theme">
+ <div class="item-wrp">
+ 	            	 
+ 	            	 <div>  <p>✓ GREEN LAWN </p> </div>
+ 	            	<div>  <p>✓ KIDS PLAY AREA</p> </div>
+					<div>  <p>✓ MULTI-PURPOSE TURF</p> </div>
+
+					<div>  <p>✓ GYMNASIUM</p> </div>
+ 	            	 </div>
+
+ 	            	 <div class="item-wrp">
+ 	            	 
+					<div>  <p>✓ SITTING PATIO</p> </div>
+					 	            	
+					<div>  <p>✓ Senior Citizens Corner</p> </div>
+ 	            	<div>  <p>✓ Vehicle Free E-Deck Level</p> </div>
+ 	            	<div>  <p>✓ Outdoor Fitness Plaza</p> </div>
+					
+ 	            	 </div>
+
+ 	            	 <div class="item-wrp">
+ 	            	
+					<div>  <p>✓ Indoor Games Zone</p> </div>
+ 	            	
+					<div>  <p>✓ Kids Play Area</p> </div>
+ 	            	<div>  <p>✓ Fire Evacuation Lift</p> </div>
+ 	            	
+ 	            	<div>  <p>✓ Gymnasium </p> </div>
+ 	            	
+
+ 	            	 </div>
+
+				<div class="item-wrp">
+ 	            	
+					<div>  <p>✓ Modern Double Height Lobbies</p> </div>
+ 	            	<div>  <p>✓ High Speed Elevators</p> </div>
+ 	            	
+ 	            
+
+ 	            	 </div>
+ 	            	
+ 	            	
+            	  
+ 	            	
+
+</div>
+</section>
+	<section class="section shadow-sm lazyload">
+		<span class="section-link" id="gallery"></span>
+	<span class="head text-capitalize">Gallery</span>
+	<div class="row">
+		<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g1.jpg">
+		<img data-src="assets/img/g1.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+	<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g2.jpg">
+		<img data-src="assets/img/g2.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+	<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g3.jpg">
+		<img data-src="assets/img/g3.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+	<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g4.jpg">
+		<img data-src="assets/img/g4.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+	
+<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g5.jpg">
+		<img data-src="assets/img/g5.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g6.jpg">
+		<img data-src="assets/img/g6.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g7.jpg">
+		<img data-src="assets/img/g7.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+		<a data-fancybox="gallery-0" href="assets/img/g8.jpg">
+		<img data-src="assets/img/g8.jpg" class="lazyload gallery-thumb">
+</a>
+</div>
+	
+</div>
+</section>
+	<section class="section shadow-sm lazyload" data-script="assets/plugins/fancybox/jquery.fancybox.min.js" data-link="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<span class="section-link" id="location"></span>
+	<span class="head text-capitalize">Location</span>
+	<div class="row mb-3">
+		<div class=" col-sm-12">
+		<span class="d-block section-heading-sub text-capitalize">Map View</span>
+
+	<iframe class="lazyload lmap mb-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.659691748351!2d72.87022631490451!3d19.297159786961487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13d6487490f%3A0x53d0431b2a652be7!2sChheda%20Greens%20-%20Avighna!5e0!3m2!1sen!2sin!4v1677606666261!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+	<p></p>
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+		<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Upcoming Metro Station - 5 mins</div>
+                  <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Mira Road Railway Station - 10 mins </div>
+
+                    <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Kashimira NH 8 Highway - 10 mins</div>
+
+                   <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> RBK High School - 5 mins</div>
+                   <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Podar International - 12 mins</div>
+                    <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Wockhardt Hospital - 8 mins</div>
+                     <div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> Thunga Hospital - 6 mins</div>
+                     
+
+                      
+	
+</div>
+</section>
+	<section class="section shadow-sm lazyload">
+		<span class="section-link" id="sitevisit"></span>
+	<span class="head text-capitalize">Virtual Site Tour</span>
+	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-redirect="virtualtour" data-toggle="modal" data-target="#enqModal">
+		<div class="at-property-item my-2 pt-md-0">
+		<div class="at-property-img vsv-img">
+		<picture>
+		<source class="lazyload w-100" media="(max-width: 750px)" data-srcset="assets/img/banner1.jpg" type="image/webp">
+		<source class="lazyload w-100" media="(min-width: 751px)" data-srcset="assets/img/banner1.jpg" type="image/webp">
+		<img data-sizes="auto" class="lazyload w-100" data-srcset="assets/img/banner1.jpg 750w,assets/img/banner1.jpg">
+</picture>
+	<div class="vsv-text-bk">
+		<div class="vsv-text-bg">
+		<div class="vsv-icon lazyload"></div>
+	<span class="text-uppercase h1 font-weight-bold mb-0 d-none d-lg-block">Virtual Tour</span>
+	<span class="text-capitalize text-center d-none d-lg-block">Chheda Greens At Mira Road East</span>
+</div>
+</div>
+</div>
+	<span class="d-block text-capitalize text-center d-sm-block d-md-none pt-2">Chheda Greens At Mira Road East</span>
+</div>
+</a>
+</section>
+	<section class="section shadow-sm lazyload" id="developer">
+		<div class="d-block pt-2 pb-1 text-center">
+		<img src="assets/img/logo.png" style="max-width: 100%;height: 70px; display: inline-block;">
+</div>
+	<span class="d-block section-heading-sub text-capitalize">About Chheda Group</span>
+	<p>We bring over 4 decades of real estate excellence in developing and building premium residential towers, gated communities and commercial spaces all over MM region of Maharashtra. Known as Brihanmumbai Municipal Corporation (MC), Mira- Bhayandar Municipal Corporation (MBMC) and Vasai-Virar Municipal Corporation (WVMC) and Palghar Municipal Council.
+ </p>
+	
+</section>
+	<div class="micro-side text-center">
+		<div class="og-section pb-2">
+		<ul class="nav nav-fill og-block">
+		<li class="nav-item enqModal" data-form="lg" data-title="Organize Site Visit" data-btn="Request Site Visit" data-enquiry="Organize Site Visit" data-toggle="modal" data-target="#enqModal">Organize Site Visit</li>
+	<li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=+917506386467&text=I want More Information About Chheda Greens Project.', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> +91 7506386467</li>
+</ul>
+	<button class="btn btn-sm btn-info micro-form-btn-sm effetGradient effectScale enqModal mt-1" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Request Call Back</button>
+</div>
+	<span class="d-block form-heading font-weight-bold my-2">Pre-Register here for Best Offers</span>
+	<form action="email.php" onsubmit="enq_formBtn.disabled = true; return true;" method="POST" class="form-side">
+		<input type="hidden" name="lead_form_name" value="Pre-Register Form">
+		<div class="form-group">
+		<input type="text" name="name" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" placeholder="Name" required>
+</div>
+	<div class="form-group">
+		<input type="hidden" name="fullMobileNo" value="">
+	<input type="tel" id="intTelInput-side" pattern="[0-9]+" name="mobile" class="intTelInput form-control rounded-0 micro-form-field w-100" placeholder="Mobile No" required>
+</div>
+	<div class="form-group">
+		<input type="email" name="email" class="form-control rounded-0 micro-form-field" placeholder="E-Mail Address" required>
+</div>
+	<button type="submit" name="enq_formBtn" class="btn btn-info micro-form-btn mt-2 effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+</form>
+</div>
+	<ul class="mob-action nav nav-fill d-sm-block d-lg-none">
+		<li class="nav-item" onclick="javascript:location.href='tel:+917506386467'"><span class="mi mi-call action-icon"></span> Call</li>
+	<li class="nav-item enqModal" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal"><span class="mi mi-enquire action-icon"></span> Enquire</li>
+	<li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=+917506386467&text=I want More Information About Chheda Greens Project.', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp</li>
+</ul>
+	<div class="modal fade" id="enqModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered enq-modal" role="document">
+		<div class="modal-content">
+		<div class="modal-body text-center">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+</button>
+	<div class="modal-head d-none"><span class="modal-title">Title</span></div>
+	<div class="d-flex">
+		<div class="flex-fill align-self-center flex-shrink-1 modal-highlight-bg d-none d-lg-block">
+		<span class="modal-highlight-title">We Promise</span>
+	<ul class="modal-highlight">
+		<li><i class="mi mi-support-call"></i><span>Instant Call Back</span></li>
+	<li><i class="mi mi-support-visit"></i><span>Free Site Visit</span></li>
+	<li><i class="mi mi-support-price"></i><span>Unmatched Price</span></li>
+</ul>
+</div>
+	<div class="flex-fill align-self-center">
+		<img src="assets/img/logo.png" class="modal-logo">
+	<span class="modal-title-secondary">Register here and Avail the
+		<span class="text-danger">Best Offers!!</span></span>
+	<form action="email.php" onsubmit="enq_formBtn.disabled = true; return true;" method="POST" class="form-modal">
+		<input type="hidden" id="lead_form_name" name="lead_form_name" value="">
+		<div class="form-group">
+		<input type="text" name="name" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
+</div>
+	<div class="form-group">
+		<input type="hidden" name="fullMobileNo" value="">
+	<input type="tel" id="intTelInput-popup" pattern="[0-9]+" name="mobile" class="intTelInput form-control rounded-0 micro-form-field" required placeholder="Mobile No">
+</div>
+	<div class="form-group form-md">
+		<input type="email" name="email" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
+</div>
+	
+	<input type="hidden" id="enquireName" value="Enquire Now">
+	<button type="submit" name="enq_formBtn" class="btn btn-info micro-form-btn effetGradient effectScale">Get Instant Call Back</button>
+</form>
+</div>
+</div>
+	<a href="tel:+917506386467" class="modal-call-btn"><i class="mi mi-call"></i> +91 7506386467</a>
+</div>
+</div>
+</div>
+</div></main>
+	<footer class="disclaimer pload">
+<p class="card-text" style="text-align:center;">
+                        <a href="privacy.html"> Privacy Policy || Terms &amp; Conditions  </a> 
+                    </p>
+		<b>Disclaimer :</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. This is the official website of authorized channel partner.
+
+	</footer>
+
+	<script>document.addEventListener("DOMContentLoaded", function(event){document.getElementById("loader").remove();document.querySelector('header').classList.remove('pload');document.querySelector('main').classList.remove('pload');document.querySelector('footer').classList.remove('pload')});var sitePrimaryColor='#c79f75';</script>
+</body>
+
+</html>

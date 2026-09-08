@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJsfhnjLvO5zsR16VUghRH36E",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01673,
+        "longitude": 72.81963
+      },
+      "displayName": {
+        "text": "Worli Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJKRar9LvO5zsR0Si0uIWxd5I",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.016811999999998,
+        "longitude": 72.819908
+      },
+      "displayName": {
+        "text": "Worli Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJX5_jfrvO5zsRqJZO8-2WtKY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0165,
+        "longitude": 72.81885
+      },
+      "displayName": {
+        "text": "Worli Sea Face Post Office",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

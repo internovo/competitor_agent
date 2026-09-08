@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJT_NzFJTO5zsRJxEuceoKPIo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Colony, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.006346999999998,
+        "longitude": 72.823139
+      },
+      "displayName": {
+        "text": "Gopal Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJD28xEZTO5zsRhOAyjeSaTpI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "BDD Chawls Worli, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.006232999999998,
+        "longitude": 72.823301
+      },
+      "displayName": {
+        "text": "Gopal Nagar (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJj80CbZTO5zsRvqzW5jdgWIc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Mills, Lower Parel, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.006308,
+        "longitude": 72.823807
+      },
+      "displayName": {
+        "text": "Paragon Centre",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

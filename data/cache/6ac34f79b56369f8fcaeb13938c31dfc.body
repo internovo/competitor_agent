@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-besEaLP5zsRI3tZJCV-qig",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Lodha, Subhedar Ramji Ambedkar Nagar, Worli Sea Face, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9969265,
+        "longitude": 72.812454199999991
+      },
+      "displayName": {
+        "text": "Lodha Sea Face",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

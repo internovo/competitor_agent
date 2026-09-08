@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJyf_EACmx5zsR3CIIbAiVgCI",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2285772,
+        "longitude": 72.848466399999992
+      },
+      "displayName": {
+        "text": "Babhai Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJj2Y5ASmx5zsRLryv7pKnOQg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "LT Rd, Kamdhenu Society, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.228659999999998,
+        "longitude": 72.848401
+      },
+      "displayName": {
+        "text": "Babhai Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ_bMsASmx5zsR8HLQULNLFGo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Babhai Naka, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22852,
+        "longitude": 72.848469
+      },
+      "displayName": {
+        "text": "Babhai Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJE4_EXfC25zsR7JFLIaeUqcs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.182199999999998,
+        "longitude": 72.83829999999999
+      },
+      "displayName": {
+        "text": "Bhujale Talao",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJn8gSH_G25zsRxV6Vj7CWVn0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1804,
+        "longitude": 72.836540000000014
+      },
+      "displayName": {
+        "text": "Chinchvali Bunder Road",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJB31Wt_G25zsRc6H-t8nWFqs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ekta Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.182809499999998,
+        "longitude": 72.8360525
+      },
+      "displayName": {
+        "text": "Malad Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

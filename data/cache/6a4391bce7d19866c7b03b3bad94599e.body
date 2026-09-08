@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJWZBx5_LP5zsROBv2XeThrXg",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Pandurang Budhkar Marg, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.004861,
+        "longitude": 72.8281817
+      },
+      "displayName": {
+        "text": "Lodha Marquise",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

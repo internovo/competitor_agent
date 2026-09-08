@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJHVBRgfm25zsRlEA1DXGD1RQ",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.179092,
+        "longitude": 72.8423425
+      },
+      "displayName": {
+        "text": "Municipal School",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJwapAhvm25zsRimHL6q71zwY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.17925,
+        "longitude": 72.84204
+      },
+      "displayName": {
+        "text": "Municipal School or Chinchvali Bunder",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJT1mefm25zsRQFOeREQ_g9A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mandlik Nagar, Sunder Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.178942,
+        "longitude": 72.843139999999991
+      },
+      "displayName": {
+        "text": "Municipal School or Chinchvali Bunder",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

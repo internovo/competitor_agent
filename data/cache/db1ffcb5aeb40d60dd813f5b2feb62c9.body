@@ -1,0 +1,28 @@
+{
+  "places": [
+    {
+      "id": "ChIJaTfOD5jO5zsR_smyHEHNdEA",
+      "types": [
+        "banquet_hall",
+        "wedding_venue",
+        "catering_service",
+        "food_delivery",
+        "event_venue",
+        "service",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "11, Khan Abdul Gaffar Khan Road, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0106943,
+        "longitude": 72.8163129
+      },
+      "displayName": {
+        "text": "Blue Sea Mumbai",
+        "languageCode": "en"
+      },
+      "primaryType": "banquet_hall"
+    }
+  ]
+}

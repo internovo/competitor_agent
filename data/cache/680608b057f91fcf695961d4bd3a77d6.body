@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJy-hFrNqw5zsR57zg5aKd1s0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Daulat Nagar, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.233055,
+        "longitude": 72.863091
+      },
+      "displayName": {
+        "text": "Shree Krishna Complex / Rashtriya Udyan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJW09Dqtqw5zsRUJXg-LbEDAM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kulupwadi, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.23314,
+        "longitude": 72.86319
+      },
+      "displayName": {
+        "text": "Shree Krishna Nagar (Borivali -E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLT5Uq9qw5zsRz25NyT5UoxQ",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.233525,
+        "longitude": 72.8633455
+      },
+      "displayName": {
+        "text": "Nancy Colony",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

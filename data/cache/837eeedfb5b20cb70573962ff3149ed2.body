@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ5_NjMR6x5zsRQqVU8Px7D6Y",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24671,
+        "longitude": 72.85056
+      },
+      "displayName": {
+        "text": "Uncle's Corner Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ-SwVMR6x5zsRQd_TyAMx2dk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.246778,
+        "longitude": 72.85054199999999
+      },
+      "displayName": {
+        "text": "Uncle's Corner Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJlX86MR6x5zsR7EuO2unDbiM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Road Number 2, I C Colony, Borivali West, I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2468,
+        "longitude": 72.85041
+      },
+      "displayName": {
+        "text": "Citizen Bank Borivali",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

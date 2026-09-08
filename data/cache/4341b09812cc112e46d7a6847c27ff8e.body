@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJOVtjjCix5zsRrGjioRF1GSg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chandavarkar Rd, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2304422,
+        "longitude": 72.848120299999991
+      },
+      "displayName": {
+        "text": "Prasanna Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJDa76jSix5zsRldB7to3PYAU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "CKP Colony, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.23058,
+        "longitude": 72.8479
+      },
+      "displayName": {
+        "text": "Prasanna Jeevan Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJSeMP7Six5zsRODtUnqhbhvg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kamdhenu Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2300255,
+        "longitude": 72.847777999999991
+      },
+      "displayName": {
+        "text": "Prasanna Jeevan Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "places": [
+    {
+      "id": "ChIJnQfvDZbO5zsRYsUsn3hf1Io",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "SK Ahire Marg, 2R5C+VF9, Dr Annie Besant Rd, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0096558,
+        "longitude": 72.821239699999992
+      },
+      "displayName": {
+        "text": "RNA Mirage",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJj3xRkkXP5zsRlr2z1qE7T-c",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Villa 7, Khan Abdul Gaffar Khan Road, Siddharth Nagar, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0008651,
+        "longitude": 72.811798799999991
+      },
+      "displayName": {
+        "text": "The Legacy Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJx4WASIzO5zsRBcuot8WjMvk",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Off, Dr Elijah Moses Rd, next to Four Seasons, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.996098500000002,
+        "longitude": 72.8205608
+      },
+      "displayName": {
+        "text": "THE RESERVE",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJZ6e0Q8fP5zsRxBM6vITYpKE",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Pandurang Budhkar Marg, Kamagar Nagar Number 1, Century Mills, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0068831,
+        "longitude": 72.8260718
+      },
+      "displayName": {
+        "text": "Birla Niyaara Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ2Rl6vULP5zsR1nnEc76WDWA",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "41, Prabhadevi New Rd, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0129573,
+        "longitude": 72.82180919999999
+      },
+      "displayName": {
+        "text": "AAKASA",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJS2JGb5fO5zsRkFFj9n7U-jY",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Vainganga Apartments, Upper, Sir Pochkhanawala Rd, B Wing, Police Camp, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0065214,
+        "longitude": 72.8168902
+      },
+      "displayName": {
+        "text": "Vainganga Worli CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ6aAVhLvO5zsR3wa8j2o2ckw",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Bus Depot, 52/561, VB Worlikar Marg, near Worli, Worli Village, MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0167879,
+        "longitude": 72.8195027
+      },
+      "displayName": {
+        "text": "Desai Oceanic",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJaxEecuvO5zsRcZfvF-5JdEE",
+      "types": [
+        "apartment_building",
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kabir Ashram Building, Gokhale Rd, nr. Hard Rock Cafe, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.0061264,
+        "longitude": 72.8296727
+      },
+      "displayName": {
+        "text": "Altus Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJT_rZG7rP5zsRXFZRrDgMSfU",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "2R78+MRH, Khan Abdul Gaffar Khan Road, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0141831,
+        "longitude": 72.8171179
+      },
+      "displayName": {
+        "text": "Raitan",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJV1IiRJrO5zsR8jzdBK2QeFM",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Dr RG Thadani Marg, Worli Sea Face, South, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.001082699999998,
+        "longitude": 72.81317159999999
+      },
+      "displayName": {
+        "text": "Venus Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJW7wfLADP5zsRO_YmlTcK_Fo",
+      "types": [
+        "condominium_complex",
+        "apartment_building",
+        "general_contractor",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.9979762,
+        "longitude": 72.8222152
+      },
+      "displayName": {
+        "text": "Runwal Raaya",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJL5oIsirP5zsRjdtMfqhlr2s",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Sudam Kalu Ahire Marg, B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.004414999999998,
+        "longitude": 72.8184388
+      },
+      "displayName": {
+        "text": "Kalpataru Horizon Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ2X-pOpDO5zsRdoK5AVgCxyw",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "XRX9+W65, G M Bhosale Road, Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9997524,
+        "longitude": 72.818106
+      },
+      "displayName": {
+        "text": "Ansal Height",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJ0eK2n5fO5zsRk7WbZvxVkK8",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "2R58+2V7, Sir Pochkhanawala Rd, B Wing, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0075307,
+        "longitude": 72.8171845
+      },
+      "displayName": {
+        "text": "Sukhada Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJWZBx5_LP5zsROBv2XeThrXg",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Pandurang Budhkar Marg, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.004861,
+        "longitude": 72.8281817
+      },
+      "displayName": {
+        "text": "Lodha Marquise",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJMZjJJFLP5zsRivDdPUw7YcA",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "LR Papan Marg, Gandhi Nagar, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9957884,
+        "longitude": 72.821621999999991
+      },
+      "displayName": {
+        "text": "Cornerstone",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJNUCouCvP5zsRNu7n8wIAhio",
+      "types": [
+        "apartment_complex",
+        "apartment_building",
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Lodha Place, off सेनापती बापट मार्ग, वरळी, मुंबई, महाराष्ट्र 400013, India",
+      "location": {
+        "latitude": 19.0025976,
+        "longitude": 72.8269246
+      },
+      "displayName": {
+        "text": "Lodha World Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJcYZ9J53P5zsRM4cRCqZsnSY",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "SHRI GANESH WING-A, 67/A, Sir Pochkhanawala Rd, B Wing, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.005736700000003,
+        "longitude": 72.8165586
+      },
+      "displayName": {
+        "text": "Palm Beach Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJG-y1l43O5zsRXKAEgaYB7UE",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "XRXF+M35, Ganapatrao Kadam Marg, next to A TO Z Company, Worli Naka, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.999142199999998,
+        "longitude": 72.8227352
+      },
+      "displayName": {
+        "text": "Raheja Atlantis",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJHdtEvhDP5zsRiXIV2wo46uI",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Dr Annie Besant Rd, next to Old Passport Office, Cen, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0118148,
+        "longitude": 72.8229309
+      },
+      "displayName": {
+        "text": "Three Sixty West (Main Gate)",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

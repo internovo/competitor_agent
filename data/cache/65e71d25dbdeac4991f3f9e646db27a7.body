@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJ_-0EImq35zsRoyAi0-pQb3Q",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ram Baug Lane, Swami Vivekanand Rd, Poisar, Borivali, W, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2162908,
+        "longitude": 72.8531248
+      },
+      "displayName": {
+        "text": "Garuda Shatrunjay",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

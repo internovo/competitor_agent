@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJLYXnF-3O5zsRh4dEf8bNd3M",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.001891999999998,
+        "longitude": 72.82938399999999
+      },
+      "displayName": {
+        "text": "Kamala City Gate No 3 (Via Atal Setu)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJMf_AP-3O5zsRabUlAcr9zNU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Railway Colony, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.001559999999998,
+        "longitude": 72.829309999999992
+      },
+      "displayName": {
+        "text": "Kamala Mills (Via Atal Setu)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJmal0qPLO5zsRw9tudXMsVyA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.999866000000004,
+        "longitude": 72.828631
+      },
+      "displayName": {
+        "text": "Peninsula Corporate Park",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

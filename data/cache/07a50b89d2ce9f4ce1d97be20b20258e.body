@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-RFeRbzO5zsRrt2ao1PSHvc",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "413, Sasmira Rd, Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0142614,
+        "longitude": 72.8198768
+      },
+      "displayName": {
+        "text": "Vrindavan CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

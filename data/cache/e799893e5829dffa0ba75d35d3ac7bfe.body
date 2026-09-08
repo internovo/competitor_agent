@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJK-YKdM2w5zsRC1ncu1ZQjMA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Tata Power Residential Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224323,
+        "longitude": 72.864556999999991
+      },
+      "displayName": {
+        "text": "Ambrosia Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJE1MEns2w5zsRDOi74Wya_cY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devipada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22458,
+        "longitude": 72.864589
+      },
+      "displayName": {
+        "text": "Devipada",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJNYTPcM2w5zsR_KTXYJ4z7SQ",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224239999999998,
+        "longitude": 72.864231
+      },
+      "displayName": {
+        "text": "Devipada",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    }
+  ]
+}

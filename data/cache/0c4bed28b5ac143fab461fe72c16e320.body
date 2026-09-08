@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJyfLKxJnO5zsRZUkE1oCgICQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.006339399999998,
+        "longitude": 72.815362
+      },
+      "displayName": {
+        "text": "Saibaba Mandir (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJfyRK25nO5zsRXIJOxR8mi-4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, Worli Police Camp, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00632,
+        "longitude": 72.81537999999999
+      },
+      "displayName": {
+        "text": "Saibaba Mandir (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJC_n0mZnO5zsRDcXjhIp6oR0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.005288099999998,
+        "longitude": 72.8138317
+      },
+      "displayName": {
+        "text": "Worli Sea Face (S)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

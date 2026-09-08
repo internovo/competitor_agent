@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJsbILhCax5zsRH5PRzUnhpi0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Rd, Naitodi Gaothan, Govind Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.234802,
+        "longitude": 72.846087
+      },
+      "displayName": {
+        "text": "Thakur Pakhadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJwUHegyax5zsRswvvSt9WzUg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Naitodi Gaothan, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.234759999999998,
+        "longitude": 72.84591
+      },
+      "displayName": {
+        "text": "Thakur Pakhadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJR2B4GSax5zsR8bpGHfvRJUk",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2321271,
+        "longitude": 72.846782699999991
+      },
+      "displayName": {
+        "text": "C.K.P. Colony",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

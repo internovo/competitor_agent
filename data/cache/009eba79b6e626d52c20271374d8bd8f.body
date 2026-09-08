@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJdz-Qeua25zsREzbhXTXwO1Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Adarsh Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.19133,
+        "longitude": 72.84206
+      },
+      "displayName": {
+        "text": "Orlem Post Office or S.N.D.T.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJsZJ0Xua25zsRnDubKsAv4dc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.192574999999998,
+        "longitude": 72.84185
+      },
+      "displayName": {
+        "text": "Adarsh Dairy (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ73ZTLOa25zsR7R_SGE91G6A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Dominic Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193220099999998,
+        "longitude": 72.8405587
+      },
+      "displayName": {
+        "text": "Orlem Well",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

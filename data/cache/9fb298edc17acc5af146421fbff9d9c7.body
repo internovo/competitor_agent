@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJgzdPBJfO5zsR96InVW8qQxo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dr Annie Besant Rd, B Wing, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.007275999999997,
+        "longitude": 72.818429999999992
+      },
+      "displayName": {
+        "text": "Doordarshan (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJw8vpJ5jO5zsRpn8sgCI23NE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Police Camp, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00815,
+        "longitude": 72.81601
+      },
+      "displayName": {
+        "text": "Adhya Shankaracharya Udyan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHR6tJ5jO5zsRMZfHdgLl2eI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00823,
+        "longitude": 72.815919999999991
+      },
+      "displayName": {
+        "text": "Adhya Shankaracharya Udyan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

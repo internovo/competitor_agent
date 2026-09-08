@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJySm2Ruq25zsRDZP2z6I2B7s",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193859,
+        "longitude": 72.83206899999999
+      },
+      "displayName": {
+        "text": "Ushma Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJF_3nRuq25zsRGbwzbmHS_1Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193803,
+        "longitude": 72.832116
+      },
+      "displayName": {
+        "text": "Ushma Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJMxDm_uq25zsRTgpJC7eaWbA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.192776,
+        "longitude": 72.8307208
+      },
+      "displayName": {
+        "text": "Salasar Hanuman Mandir (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

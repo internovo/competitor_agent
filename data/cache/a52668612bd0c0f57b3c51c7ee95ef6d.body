@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJkdvv0-u25zsRmH_xug9TIfI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.19258,
+        "longitude": 72.83335
+      },
+      "displayName": {
+        "text": "Saibaba Park (Evershine Nagar)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJF_3nRuq25zsRGbwzbmHS_1Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193803,
+        "longitude": 72.832116
+      },
+      "displayName": {
+        "text": "Ushma Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJySm2Ruq25zsRDZP2z6I2B7s",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193859,
+        "longitude": 72.83206899999999
+      },
+      "displayName": {
+        "text": "Ushma Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

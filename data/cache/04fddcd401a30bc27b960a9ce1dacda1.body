@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJK_quauG25zsRG4Xl4t0NY28",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Daruwala Compound, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.19284,
+        "longitude": 72.84709
+      },
+      "displayName": {
+        "text": "N.L.Vidyalaya (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ2zm0P-G25zsRSF3M3xn2Zkc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Daruwala Compound, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.19297,
+        "longitude": 72.84701
+      },
+      "displayName": {
+        "text": "N.L.Vidyalaya (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLQggVOG25zsRGyO8ZxTvCn4",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.191541,
+        "longitude": 72.846009
+      },
+      "displayName": {
+        "text": "Marve Road/Swami Shivanand Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

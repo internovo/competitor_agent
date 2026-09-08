@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJKT89vZvO5zsRgWsHWynG9F0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.002029999999998,
+        "longitude": 72.811799999999991
+      },
+      "displayName": {
+        "text": "Venus Building or Watumal Engg.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJT5eUvJvO5zsRWNhBroJIVx4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00207,
+        "longitude": 72.81195
+      },
+      "displayName": {
+        "text": "Venus Building or Watumal Engg.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJQaN0SJvO5zsRNxysXNKAsWM",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "400018, India",
+      "location": {
+        "latitude": 18.999032,
+        "longitude": 72.811568999999992
+      },
+      "displayName": {
+        "text": "Worli Dairy",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

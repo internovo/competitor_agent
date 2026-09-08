@@ -1,0 +1,392 @@
+{
+  "places": [
+    {
+      "id": "ChIJI7pIzByx5zsRIQlXnOigbG4",
+      "types": [
+        "real_estate_agency",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "near MCF Joggers Park, opp. Yogi Nagar, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.235177,
+        "longitude": 72.8417465
+      },
+      "displayName": {
+        "text": "FlatsatMumbai - Real Estates strategic partner",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ8bbXAp6x5zsRU2Y6uUVdkac",
+      "types": [
+        "corporate_office",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prerna Nagar, Babhai Naka, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2270999,
+        "longitude": 72.8460727
+      },
+      "displayName": {
+        "text": "One Borivali by Osho Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJBTzXJgKx5zsRXBymx7hQFUI",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Vitthal Apartment, 1-C, Sardar Vallabhbhai Patel Rd, Cosmos Gardens, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2384621,
+        "longitude": 72.8543573
+      },
+      "displayName": {
+        "text": "Arkade Crown",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ8wo5ZJ2x5zsRBmjTvcTKtNw",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Cross Rd, behind Reliance Mall, Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.224268,
+        "longitude": 72.8504273
+      },
+      "displayName": {
+        "text": "Aura by DSD GROUP",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJxTQM5Fux5zsRsUaOCJYR218",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "A/004, Prathamesh Horizon, New MHB Colony, New Link Rd, opposite DON Bosco School, New MHB Colony, Ashtavinayak Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2277736,
+        "longitude": 72.840586700000017
+      },
+      "displayName": {
+        "text": "SAILEE DEVELOPERS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJR5UtVNKx5zsR5JK-6Aqa2DE",
+      "types": [
+        "business_center",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Raichura Circle, 6VJ3+7GP, Chandavarkar Rd, Sundar Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2307192,
+        "longitude": 72.8538192
+      },
+      "displayName": {
+        "text": "Kaveri Heights",
+        "languageCode": "en"
+      },
+      "primaryType": "business_center"
+    },
+    {
+      "id": "ChIJg0hhGyGx5zsROML0f-ryW5s",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devidas Rd, Near St. Lawerence High School, LIC Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2393946,
+        "longitude": 72.8484721
+      },
+      "displayName": {
+        "text": "Aquaria Grande - The Wadhwa Group,Tower A",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJLZwBQbWx5zsRD5un4bewR9I",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "sureshwari villas, Bungalow, New Link Rd, near Techno It Park, Eksar Village, Eksar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2404644,
+        "longitude": 72.8420031
+      },
+      "displayName": {
+        "text": "Sureshwari Villas",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJI5DLc7Gx5zsR3hxnwORjats",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Amann Solitaire society, Chandavarkar Rd, near food loads, Kamdhenu Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2305307,
+        "longitude": 72.8487305
+      },
+      "displayName": {
+        "text": "Amann Solitaire",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ2eb-uxOx5zsRKVvX0BHmRS0",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "PLOT no 541 & 545, Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2217012,
+        "longitude": 72.8428435
+      },
+      "displayName": {
+        "text": "Supreme Imperial Prerana",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ_____zqx5zsR7GhSyziWmXA",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Goyal Shopping Arcade, 109-111, opp. Railway Station, Sundar Nagar, Borivali, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2287154,
+        "longitude": 72.8554723
+      },
+      "displayName": {
+        "text": "Chheda Group",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJl-p-h_C35zsRAmTgfp0fKT8",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Estee Geejay Apartment, Saibaba Mandir Marg, near Gurudwara, Om Shree Geetanjali Nagar, Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2179417,
+        "longitude": 72.8458137
+      },
+      "displayName": {
+        "text": "Airavat By Bhoomi Group",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJyT_dLOCw5zsR6jW7BHBH0RI",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shri Aurobindo Marg, I C Colony, Marian Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2464329,
+        "longitude": 72.8518879
+      },
+      "displayName": {
+        "text": "Romell Shraddha",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJL01IGZqx5zsRNNKL1gZm7KE",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "House of Shrreeji Sharan, Rank Terrace CHSL, Kastur Park, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2236636,
+        "longitude": 72.8476608
+      },
+      "displayName": {
+        "text": "Shreeji Sharan Group of Companies",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJH71ZcDyx5zsRKQCinHT6r44",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I.C. Colony Road No.02, Near 206 last bus stop, Borivali West, Mumbai - 400 103, I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.245471700000003,
+        "longitude": 72.846760199999991
+      },
+      "displayName": {
+        "text": "The Green Venturez Group",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJqxecfaK35zsRVq4dkKtz23c",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kosamgo Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.219152599999997,
+        "longitude": 72.8542275
+      },
+      "displayName": {
+        "text": "Shraddha Elite",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJnUz6qdiw5zsRCqY3k6zr13g",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "1, Devidas Cross Ln, Prem Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2373036,
+        "longitude": 72.851792899999992
+      },
+      "displayName": {
+        "text": "Mamta Heights",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJhYX-YbSx5zsRcJXXkj_0ivY",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "A-101, ABHAY CHSL, MALHARRAO, PM Kulkarni Rd, OPP DON BOSCO, Koliwada, Vazira, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2288477,
+        "longitude": 72.8415675
+      },
+      "displayName": {
+        "text": "AADHUNIK DEVELOPERS",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJHSgnM76x5zsRl3hCkJmOXSU",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ground, Paradigm Anantaara Experience Centre, next to Shimpoli, Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.222628399999998,
+        "longitude": 72.842791699999992
+      },
+      "displayName": {
+        "text": "Paradigm Anantaara - Shimpoli, Borivali (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ4w9hMojH5zsRMYXOY1V_PIA",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Fortune Avirahi, Jambli Galli, Bhatt Chawl, Mini Zaveri Bazaar, Hari Om Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.226318199999998,
+        "longitude": 72.8530382
+      },
+      "displayName": {
+        "text": "Fortune Avirahi",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

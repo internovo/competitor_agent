@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJhz1l7d2w5zsRp-NbOY9eFEE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Leo Peter Wadi, Borivali West, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.24343,
+        "longitude": 72.858809999999991
+      },
+      "displayName": {
+        "text": "Gomant Nagar (Dahisar-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJoXAz7d2w5zsRZVaClm_pEmM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Western Railway Colony, Maratha Colony, Borivali West, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.243382999999998,
+        "longitude": 72.858969
+      },
+      "displayName": {
+        "text": "Gomant Nagar (Dahisar-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJL9KEMNyw5zsRXOklCKnGvMI",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.2406477,
+        "longitude": 72.8584237
+      },
+      "displayName": {
+        "text": "Sai Amrut Society",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

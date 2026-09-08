@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJ1zs6rSux5zsRb4P4YQAh3Ao",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22374,
+        "longitude": 72.84854
+      },
+      "displayName": {
+        "text": "Ganesh Mandir or Kastur Park",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJryXzUiqx5zsR428XoIUAbec",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22366,
+        "longitude": 72.848689999999991
+      },
+      "displayName": {
+        "text": "Ganesh Mandir or Kastur Park",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJu_VVUiqx5zsRVdIfG7C5sKI",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2237175,
+        "longitude": 72.848779
+      },
+      "displayName": {
+        "text": "Ganesh Mandir/Kastur Park",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

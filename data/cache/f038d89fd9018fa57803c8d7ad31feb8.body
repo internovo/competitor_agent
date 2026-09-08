@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJP9PtHfe25zsRAR0znSUll38",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.177324,
+        "longitude": 72.836849
+      },
+      "displayName": {
+        "text": "Nirlon Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJrZJiHve25zsRWi90X9n7j14",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.177167,
+        "longitude": 72.8369565
+      },
+      "displayName": {
+        "text": "Nirlon Society",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJbxbFNPa25zsR6BpbQJHrhXU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.174362,
+        "longitude": 72.836749
+      },
+      "displayName": {
+        "text": "Vinay Industry (Subkuch Market)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

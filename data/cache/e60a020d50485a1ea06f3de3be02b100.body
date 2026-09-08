@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-5Inn92w5zsRxcWSe3k8F8Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Western Railway Colony, Maratha Colony, Borivali, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.24314,
+        "longitude": 72.86005
+      },
+      "displayName": {
+        "text": "Parvat Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJu1v_m92w5zsR3UaM2gw6nG4",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Western Railway Colony, Maratha Colony, Borivali, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.243305499999998,
+        "longitude": 72.8600385
+      },
+      "displayName": {
+        "text": "Parvat Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJ9zNwm92w5zsRt7OvunXWrtA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Western Railway Colony, Maratha Colony, Borivali, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.243489999999998,
+        "longitude": 72.860019999999992
+      },
+      "displayName": {
+        "text": "Parvat Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

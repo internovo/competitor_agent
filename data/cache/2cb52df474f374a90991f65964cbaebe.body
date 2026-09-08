@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJp287vu625zsRkgGuQJw_ppg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18884,
+        "longitude": 72.83505
+      },
+      "displayName": {
+        "text": "Movie Time Cinema (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJiVyov-625zsRl-pvvZJz_y8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.188993,
+        "longitude": 72.83496199999999
+      },
+      "displayName": {
+        "text": "Movie Time Cinema (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ_5yxv-625zsRg4jNaJrnZDs",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1889205,
+        "longitude": 72.8351425
+      },
+      "displayName": {
+        "text": "Movie Star Talkies",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

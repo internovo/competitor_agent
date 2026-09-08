@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJhdx8EI7O5zsRLa0DjBHoMU0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.99849,
+        "longitude": 72.821339999999992
+      },
+      "displayName": {
+        "text": "Shree Ram Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJXUhP2I3O5zsRo6rXd-IJ3zs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Upper Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.99737,
+        "longitude": 72.82204999999999
+      },
+      "displayName": {
+        "text": "Shree Ram Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJZWec343O5zsRLjMCDx_I2Ss",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Upper Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.99775,
+        "longitude": 72.82204
+      },
+      "displayName": {
+        "text": "Shree Ram Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

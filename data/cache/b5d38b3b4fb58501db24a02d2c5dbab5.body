@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJU7V-acDO5zsRokCgQ083Bvc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.01332,
+        "longitude": 72.82919
+      },
+      "displayName": {
+        "text": "Prabhadevi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJfU_LbsDO5zsRyED1Wf2IPOs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.013389999999998,
+        "longitude": 72.82902
+      },
+      "displayName": {
+        "text": "Prabhadevi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJm4uLbsDO5zsR5_L7usPyL9Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.01334,
+        "longitude": 72.828859999999992
+      },
+      "displayName": {
+        "text": "Prabhadevi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

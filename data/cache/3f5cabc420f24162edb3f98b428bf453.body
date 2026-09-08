@@ -1,0 +1,391 @@
+{
+  "places": [
+    {
+      "id": "ChIJJ4iiqOrO5zsR-xbrRHe8VFM",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, Dr Annie Besant Rd, next to Neelam Center, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0091622,
+        "longitude": 72.8235527
+      },
+      "displayName": {
+        "text": "Omkar 1973",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJq6qq6sDO5zsRqqOk-hcBLC4",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Hindustan Mills, compound, Yadav Patil Ln, off Swatantryaveer Savarkar Road, Dadar, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.018593499999998,
+        "longitude": 72.8292421
+      },
+      "displayName": {
+        "text": "25 South",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJA5A3kr_O5zsRmuFNJob00ns",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Beaumonde Towers A, B & C, Appasaheb Marathe Marg, Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0112994,
+        "longitude": 72.8272649
+      },
+      "displayName": {
+        "text": "BeauMonde Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJXdhMOcDO5zsRWRNL0B10shQ",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "925, Appasaheb Marathe Marg, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.012781,
+        "longitude": 72.82920159999999
+      },
+      "displayName": {
+        "text": "Chaitanya Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJLU_tfQDP5zsRCf_lQzWEhbE",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dr Annie Besant Rd, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0075227,
+        "longitude": 72.8185433
+      },
+      "displayName": {
+        "text": "Prestige Nautilus",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJkUdh8ZfO5zsRHPik46LKv3E",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R59+83W, Sir Pochkhanawala Rd, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0083692,
+        "longitude": 72.8177178
+      },
+      "displayName": {
+        "text": "Shubhda Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJxxWKqrjO5zsR8x7jOhvWlXo",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Technocrat Society, Twin Tower Ln, off : V S Marg, RBI Colony, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.017326000000004,
+        "longitude": 72.8278361
+      },
+      "displayName": {
+        "text": "Technocrat CHS Ltd.",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJsSQoFn_P5zsRqxeVKRzqKo8",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "75, Khan Abdul Gaffar Khan Road, Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0066698,
+        "longitude": 72.8143881
+      },
+      "displayName": {
+        "text": "Jayashree Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJc4ZZ0b_O5zsR6EahZzFSKWc",
+      "types": [
+        "apartment_building",
+        "real_estate_agency",
+        "consultant",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ahuja Towers, Raja Bhau Desai Marg, Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0118877,
+        "longitude": 72.8255459
+      },
+      "displayName": {
+        "text": "Ahuja Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJPWf6G5bO5zsRqTHODB5IiD0",
+      "types": [
+        "business_center",
+        "apartment_complex",
+        "service",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "254-B, Nirton House, Dr Annie Besant Rd, opposite Sasmira Road, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0098531,
+        "longitude": 72.8205066
+      },
+      "displayName": {
+        "text": "Nirlon House",
+        "languageCode": "en"
+      },
+      "primaryType": "business_center"
+    },
+    {
+      "id": "ChIJ0eK2n5fO5zsRk7WbZvxVkK8",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R58+2V7, Sir Pochkhanawala Rd, B Wing, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0075307,
+        "longitude": 72.8171845
+      },
+      "displayName": {
+        "text": "Sukhada Apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJwynnUgDP5zsRPHqfRK9A0Qs",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R9J+C4M, West, Yadav Patil Ln, Chandrakant Dhuru Wadi, Dadar, Mumbai, Maharashtra 400028, India",
+      "location": {
+        "latitude": 19.0185991,
+        "longitude": 72.8302168
+      },
+      "displayName": {
+        "text": "25 south tower",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJnQfvDZbO5zsRYsUsn3hf1Io",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "SK Ahire Marg, 2R5C+VF9, Dr Annie Besant Rd, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0096558,
+        "longitude": 72.821239699999992
+      },
+      "displayName": {
+        "text": "RNA Mirage",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ36Zle8fO5zsRutYxfTRknRg",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Stanrose Apartment 1, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0192357,
+        "longitude": 72.8282541
+      },
+      "displayName": {
+        "text": "Twin Towers - B Wing",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ7QdTuL_O5zsR3xzleJ8QEOo",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Appasaheb Marathe Marg, Century Bazaar, Prabhadevi, Century Bazaar, Worli, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.012909999999998,
+        "longitude": 72.8254278
+      },
+      "displayName": {
+        "text": "Jayant apartment",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJrQ9-hYLP5zsRtFzGXJV8VaY",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0125624,
+        "longitude": 72.8249728
+      },
+      "displayName": {
+        "text": "Electric Mansion",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJBxjdHZbP5zsRkH5J43l80dM",
+      "types": [
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Vraj Tiara, Veer Nariman Marg, Janata Colony, BPT Colony, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.016351600000004,
+        "longitude": 72.8225997
+      },
+      "displayName": {
+        "text": "Vraj Tiara",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJGTDp_cbO5zsRhR_vBz_WeeY",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swatantryaveer Savarkar Rd, Dadar West, Prabhadevi, Mumbai, Maharashtra 400028, India",
+      "location": {
+        "latitude": 19.019677899999998,
+        "longitude": 72.830939399999991
+      },
+      "displayName": {
+        "text": "Paschim Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJ8_DKGsfO5zsRMfhb2yGOdaY",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R9H+HXW, Yadav Patil Ln, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0189812,
+        "longitude": 72.8299641
+      },
+      "displayName": {
+        "text": "EL-Dorado",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ7aHJxejP5zsRvhPigJ3Qryw",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R5C+R28, Dr Annie Besant Rd, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.009539699999998,
+        "longitude": 72.820075899999992
+      },
+      "displayName": {
+        "text": "Raheja Legend",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    }
+  ]
+}

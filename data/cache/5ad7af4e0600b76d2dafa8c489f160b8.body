@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJVW3iuvO25zsRaoFAgBz-LvM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Rajan Pada, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.180449,
+        "longitude": 72.831808
+      },
+      "displayName": {
+        "text": "Paradigm B",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJR9-OsPO25zsRu4z09RK48bY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18063,
+        "longitude": 72.83182
+      },
+      "displayName": {
+        "text": "Paradigm/B",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJfb7w0_O25zsR7Miq6MgXiDw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Rajan Pada, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18121,
+        "longitude": 72.83353
+      },
+      "displayName": {
+        "text": "Technimont I.C.B.House",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

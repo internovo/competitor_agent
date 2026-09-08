@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJJZ-3r9K25zsReQT1Qkz0Z2E",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Krishraj Tower, New Link Rd, Shivkrupa CHS, RDP 8, Padma Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.218840699999998,
+        "longitude": 72.8371068
+      },
+      "displayName": {
+        "text": "Krishraj Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

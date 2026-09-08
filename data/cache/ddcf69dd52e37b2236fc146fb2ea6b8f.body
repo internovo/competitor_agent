@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJXY4FxbzO5zsRQKg8WXK6nvU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.013876,
+        "longitude": 72.8171119
+      },
+      "displayName": {
+        "text": "Worli Sea Face (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJewZoo7zO5zsRu3nJSlDptSA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Koliwada, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.015639999999998,
+        "longitude": 72.817439999999991
+      },
+      "displayName": {
+        "text": "Worli Sea Face (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ92Tjl7zO5zsRBj5OjJEgzqo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0156,
+        "longitude": 72.817685
+      },
+      "displayName": {
+        "text": "Worli Sea Face (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "places": [
+    {
+      "id": "ChIJI7pIzByx5zsRIQlXnOigbG4",
+      "types": [
+        "real_estate_agency",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "near MCF Joggers Park, opp. Yogi Nagar, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.235177,
+        "longitude": 72.8417465
+      },
+      "displayName": {
+        "text": "FlatsatMumbai - Real Estates strategic partner",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

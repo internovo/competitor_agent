@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJI-2e5uDP5zsRx36lKYsSzCE",
+      "types": [
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rane Chawl, Pandurang Budhkar Marg, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0062002,
+        "longitude": 72.822913500000013
+      },
+      "displayName": {
+        "text": "Worli residence",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    }
+  ]
+}

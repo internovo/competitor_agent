@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJgzdPBJfO5zsR96InVW8qQxo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dr Annie Besant Rd, B Wing, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.007275999999997,
+        "longitude": 72.818429999999992
+      },
+      "displayName": {
+        "text": "Doordarshan (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJV9AGBJfO5zsRCTjRkWGA2EI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.007244,
+        "longitude": 72.818669
+      },
+      "displayName": {
+        "text": "Worli Metro Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHThyGpfO5zsR--pBrwFtsMs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00722,
+        "longitude": 72.81863
+      },
+      "displayName": {
+        "text": "Doordarshan (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJIfLzfOW25zsR0D87pqz1ZWI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18726,
+        "longitude": 72.83999
+      },
+      "displayName": {
+        "text": "Krishna Building (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJt2N3m--25zsRrvc3Cf2QKJA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.187307,
+        "longitude": 72.838824
+      },
+      "displayName": {
+        "text": "Navy Nagar (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ7VO5nu-25zsRXII2rF5tGMM",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.187393,
+        "longitude": 72.83855299999999
+      },
+      "displayName": {
+        "text": "Navy Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJeZOCFdew5zsRwQCWf9F8UVk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shanti Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.23085,
+        "longitude": 72.85593999999999
+      },
+      "displayName": {
+        "text": "Borivali (W) Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJFeHgFdew5zsRPpuHQIr0ISk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sundar Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.230707,
+        "longitude": 72.855964
+      },
+      "displayName": {
+        "text": "Borivali (W) Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJ4ZWPtew5zsREHoVrbZniQ0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shanti Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.23077,
+        "longitude": 72.85607
+      },
+      "displayName": {
+        "text": "Borivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

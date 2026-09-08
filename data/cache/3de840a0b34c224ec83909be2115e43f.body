@@ -1,0 +1,26 @@
+{
+  "places": [
+    {
+      "id": "ChIJS2GfRy6x5zsRERpaKyVpjdc",
+      "types": [
+        "family_restaurant",
+        "seafood_restaurant",
+        "chinese_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, opp. Sai Lee Hospital & Diagnostic Centre, Koliwada, Vazira, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2271839,
+        "longitude": 72.841133
+      },
+      "displayName": {
+        "text": "Link View - Fine Dine",
+        "languageCode": "en"
+      },
+      "primaryType": "family_restaurant"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJXRVTqdGw5zsR5LazV-gycNI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Chinchpada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.229423,
+        "longitude": 72.860266
+      },
+      "displayName": {
+        "text": "Carter Road Market",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJVZpiMtCw5zsRGFRZggDb3t0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Rajendra Nagar, Chinchpada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.230528,
+        "longitude": 72.862847
+      },
+      "displayName": {
+        "text": "Omkareshwar Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ7WVYBtGw5zsR4c3Vbkxb6KA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "D.H Mane Chawl, Chinchpada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22946,
+        "longitude": 72.86017
+      },
+      "displayName": {
+        "text": "Borivali Market (E) or Carter Road",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

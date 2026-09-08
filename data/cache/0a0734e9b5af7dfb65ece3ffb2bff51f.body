@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJtdxp02XP5zsRuqrZ5fKLAeU",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ganapatrao Kadam Marg, Lower, Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.998295799999998,
+        "longitude": 72.8227804
+      },
+      "displayName": {
+        "text": "Sanghvi Evana",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

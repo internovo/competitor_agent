@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJT5eUvJvO5zsRWNhBroJIVx4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00207,
+        "longitude": 72.81195
+      },
+      "displayName": {
+        "text": "Venus Building or Watumal Engg.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJKT89vZvO5zsRgWsHWynG9F0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.002029999999998,
+        "longitude": 72.811799999999991
+      },
+      "displayName": {
+        "text": "Venus Building or Watumal Engg.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJtaWgN5rO5zsRhN80zait7eo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Police Camp, Worli Sea Face, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0030094,
+        "longitude": 72.8138422
+      },
+      "displayName": {
+        "text": "Flora Hotel or Watumal Engg.College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

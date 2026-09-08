@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJWfRZI5DO5zsRAzCZv6f3PFI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.99974,
+        "longitude": 72.818005
+      },
+      "displayName": {
+        "text": "Acharya Atre Chowk (Worli Naka)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ1Y6YPJDO5zsRvA8FNQMuyB0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.999748999999998,
+        "longitude": 72.817911
+      },
+      "displayName": {
+        "text": "Worli Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ0SshPJDO5zsRI38k1A8tC1U",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.999955999999997,
+        "longitude": 72.817961
+      },
+      "displayName": {
+        "text": "Worli Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJUf3p_eS25zsRVH5N0DaD-w0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Mamledarwadi, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.187566999999998,
+        "longitude": 72.842666999999992
+      },
+      "displayName": {
+        "text": "Liberty Garden",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJIfLzfOW25zsR0D87pqz1ZWI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18726,
+        "longitude": 72.83999
+      },
+      "displayName": {
+        "text": "Krishna Building (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJUTu_P-W25zsR1vEtr31NNJg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185879999999997,
+        "longitude": 72.84174999999999
+      },
+      "displayName": {
+        "text": "Industrial Estate (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

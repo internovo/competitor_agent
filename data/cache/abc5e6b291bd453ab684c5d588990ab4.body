@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJ83xrSdWw5zsRepQLffOu4DI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Meghdoot, Vivekanand Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22168,
+        "longitude": 72.853062299999991
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLXluNNWw5zsR8kx1_-YEOBw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "FM Cariappa Flyover, Meghdoot, Hari Om Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.221968000000004,
+        "longitude": 72.85347
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJPRwRtSq35zsRt3PRQV2gz0c",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2205617,
+        "longitude": 72.852899
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

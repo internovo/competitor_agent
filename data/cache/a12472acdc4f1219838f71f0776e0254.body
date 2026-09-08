@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJUWlrTrzO5zsRWacFoPULgJk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01392,
+        "longitude": 72.81989
+      },
+      "displayName": {
+        "text": "Worli Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJRzhwTbzO5zsRlbnDYJ844Co",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01353,
+        "longitude": 72.81998
+      },
+      "displayName": {
+        "text": "Worli Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLQxHTrzO5zsRrAdQlE8lm7o",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01397,
+        "longitude": 72.81989
+      },
+      "displayName": {
+        "text": "Worli Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

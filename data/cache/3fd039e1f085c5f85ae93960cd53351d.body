@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ5S-ngrzO5zsRiWZgiOw1dy4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.016209999999997,
+        "longitude": 72.818379999999991
+      },
+      "displayName": {
+        "text": "Worli Sea Face (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJX5_jfrvO5zsRqJZO8-2WtKY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0165,
+        "longitude": 72.81885
+      },
+      "displayName": {
+        "text": "Worli Sea Face Post Office",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJewZoo7zO5zsRu3nJSlDptSA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Koliwada, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.015639999999998,
+        "longitude": 72.817439999999991
+      },
+      "displayName": {
+        "text": "Worli Sea Face (N)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

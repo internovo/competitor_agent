@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJg3Y9nsHO5zsReNeAII4aGXM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dadar West, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.014782,
+        "longitude": 72.83255
+      },
+      "displayName": {
+        "text": "Khedgalli or Siddhivinayak Mandir (Prabhadevi)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ07IfjMHO5zsRJNcCGdz_OeQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kakasaheb Gadgil Marg, M.B Kowli Wadi, Dadar West, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.013759,
+        "longitude": 72.833389
+      },
+      "displayName": {
+        "text": "Khed Galli",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJnY4E08PO5zsRoZaYQbxSVgI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dadar West, Prabhadevi, Mumbai, Maharashtra 400028, India",
+      "location": {
+        "latitude": 19.01501,
+        "longitude": 72.83435
+      },
+      "displayName": {
+        "text": "Jakhadevi or Dadar Police Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

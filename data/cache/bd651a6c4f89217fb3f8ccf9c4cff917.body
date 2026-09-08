@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJuYd1Oi6x5zsRXPr6c-UyjOE",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2274186,
+        "longitude": 72.8407332
+      },
+      "displayName": {
+        "text": "Rameshwar Bank",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJFU3YMC6x5zsRApOTUZgzY7k",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, New MHB Colony, Ashtavinayak Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.227709,
+        "longitude": 72.841082
+      },
+      "displayName": {
+        "text": "Rameshwar Bank",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJ_DqNi6x5zsRFW5a3YZlylQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Koliwada, Vazira, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2277,
+        "longitude": 72.84094
+      },
+      "displayName": {
+        "text": "Rameshwar Bank (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

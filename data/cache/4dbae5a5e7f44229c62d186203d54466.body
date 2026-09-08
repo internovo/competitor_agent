@@ -1,0 +1,394 @@
+{
+  "places": [
+    {
+      "id": "ChIJo6tzLo-x5zsRYKmmB-RbGkA",
+      "types": [
+        "condominium_complex",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, next to Parbat Nagar, Ambawadi, Dahisar (E, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.2432028,
+        "longitude": 72.860288799999992
+      },
+      "displayName": {
+        "text": "Chandak Nishchay",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJN64Yzyy35zsRBrAQkreOceo",
+      "types": [
+        "apartment_building",
+        "housing_complex",
+        "condominium_complex",
+        "apartment_complex",
+        "finance",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Fmc flyover Rd, Dattapada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2215319,
+        "longitude": 72.8580394
+      },
+      "displayName": {
+        "text": "Rustomjee Summit",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJO1XD0zK35zsRYa7ofrHp1es",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "WESTERN EXPRESS HIGHWAY DEVI PADA, Khodiyar Nagar, Magathane, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224063599999997,
+        "longitude": 72.8649445
+      },
+      "displayName": {
+        "text": "Ambrosia Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJdVhqkzK35zsRJ9brFnVk1xs",
+      "types": [
+        "housing_complex",
+        "atm",
+        "finance",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "6VC7+5MQ, Dattapada Rd, Food Corporation of India Warehouse, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2204703,
+        "longitude": 72.8642319
+      },
+      "displayName": {
+        "text": "Country Park Phase 3",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJiQTBY86w5zsR89RwbgVQMYg",
+      "types": [
+        "condominium_complex",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Green Park, Raheja Estate, Kulupwadi, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.228819599999998,
+        "longitude": 72.8661174
+      },
+      "displayName": {
+        "text": "Green park Raheja",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJVVVlAS235zsRS5VcRzYN8_Y",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "E600 Ekta bhoomi gardens, 1, Dattapada Rd, Rajendra Nagar, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.219159299999998,
+        "longitude": 72.8606555
+      },
+      "displayName": {
+        "text": "Ekta Bhoomi Gardens I & II CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJaeQ27syx5zsRz6FT_sPGdi4",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Romell Allure, Post Office, near Shri Krishna Nagar, Nensey Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2367907,
+        "longitude": 72.8661448
+      },
+      "displayName": {
+        "text": "Romell Allure",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJA6ddXdWw5zsRtji42o_TS1s",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "6VC2+QQJ, FM Cariappa Flyover, Vivekanand Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2219642,
+        "longitude": 72.8518838
+      },
+      "displayName": {
+        "text": "Pushp Vinod 1",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ9dmtANCw5zsRmCt4MOTLZp8",
+      "types": [
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Opposite National Park Western Express Highway Borivali East, 6VM7+65W, Daulat Nagar, Borivali, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2331152,
+        "longitude": 72.8629423
+      },
+      "displayName": {
+        "text": "Shree Krishna Complex (Borivali East)",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJVbFu4xCx5zsRFJxAHdDwXvo",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dattapada, Borivali, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.224068799999998,
+        "longitude": 72.8614958
+      },
+      "displayName": {
+        "text": "RajHill Building No. 2",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJZWF9gTK35zsRvIf97cLrC20",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "SAMARPAN EXOTICA, Food Corporation of India Warehouse, Borivali, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2193032,
+        "longitude": 72.8638251
+      },
+      "displayName": {
+        "text": "Samarpan Exotica Borivali East",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJFSdBi76x5zsRoxc0nDJs8DE",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rustomjee Reserve, Rangnath Keskar Marg, Jaywant Sawant Marg, next to BMC Building, Dahisar West, Mumbai, Maharashtra 400068, India",
+      "location": {
+        "latitude": 19.2424399,
+        "longitude": 72.8568579
+      },
+      "displayName": {
+        "text": "Rustomjee Reserve",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJO-ysuNmw5zsRdiZBhpxx_t4",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ganjawala Apartment 2, Ganjawala Ln, Pai Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2339883,
+        "longitude": 72.8560914
+      },
+      "displayName": {
+        "text": "Jalaram Heights",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJE_xwqSy35zsRapY-1y0Bufk",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rustomjee Pinnacle, 5, Dattapada Rd, MIG Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2207527,
+        "longitude": 72.8577189
+      },
+      "displayName": {
+        "text": "Rustomjee Pinnacle",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJg0hhGyGx5zsROML0f-ryW5s",
+      "types": [
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devidas Rd, Near St. Lawerence High School, LIC Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2393946,
+        "longitude": 72.8484721
+      },
+      "displayName": {
+        "text": "Aquaria Grande - The Wadhwa Group,Tower A",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJuyiF6Sqx5zsRZos479lfK-g",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Om Samarpan, Shimpoli Rd, Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2221951,
+        "longitude": 72.8497713
+      },
+      "displayName": {
+        "text": "Om Samarpan Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJjRQZSSix5zsRw7GBDPSJz7g",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "N.R.Complex, Pratap Heritage,Opposite, Veer Savarkar Udyan, 6RHX+PVJ, LT Rd, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2293476,
+        "longitude": 72.849643700000016
+      },
+      "displayName": {
+        "text": "Pratap Heritage",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJxREcbi235zsRysgqLTSyCvg",
+      "types": [
+        "apartment_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Tatva Society, Rane Lane, Magathane, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.219513799999998,
+        "longitude": 72.8623443
+      },
+      "displayName": {
+        "text": "Tatva",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ08j5JNW25zsRn3mCipEmcFw",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B-2, Derasar Ln, Ram Nagar, Haridas Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.219482499999998,
+        "longitude": 72.849152899999993
+      },
+      "displayName": {
+        "text": "Sutlej Society",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJka-fHkmx5zsRjseQNX8cQcU",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sant Gora Kumbhar Marg, Khodiyar Nagar, Tata Power Residential Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2243805,
+        "longitude": 72.8662042
+      },
+      "displayName": {
+        "text": "Ariana Residency",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

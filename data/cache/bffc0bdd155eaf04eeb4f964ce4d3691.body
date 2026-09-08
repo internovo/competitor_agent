@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJa59rzIyx5zsRl4yhG2PHm-s",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "1, Kasthurba Rd, near Super Electronics, Chinchpada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.229873599999998,
+        "longitude": 72.861603399999993
+      },
+      "displayName": {
+        "text": "Sanghvi Horizon",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

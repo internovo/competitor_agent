@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJ070lVSKx5zsRfYeVs0vCEl0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Village, Eksar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.23989,
+        "longitude": 72.84284
+      },
+      "displayName": {
+        "text": "S.K.Resort (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJoWMwTiKx5zsR3m8EWI2jA7A",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Village, Eksar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.240398,
+        "longitude": 72.843481
+      },
+      "displayName": {
+        "text": "Eksar",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ6bVUBiOx5zsRJti29n0yukI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2388682,
+        "longitude": 72.842281
+      },
+      "displayName": {
+        "text": "S.K.Resort (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

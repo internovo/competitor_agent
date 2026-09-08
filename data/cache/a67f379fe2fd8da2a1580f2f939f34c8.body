@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJL2IiN5bO5zsROIJgUjG6HSs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.00937,
+        "longitude": 72.8197
+      },
+      "displayName": {
+        "text": "Dr.Ravindra Kulkarni Chowk or Sasmira (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJa_GrN5bO5zsRhXD9HqJ_yqo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.009314,
+        "longitude": 72.819625
+      },
+      "displayName": {
+        "text": "Worli Metro Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJjbtVIpbO5zsRHtmiwdoQCVY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01002,
+        "longitude": 72.820219999999992
+      },
+      "displayName": {
+        "text": "Dr.Ravindra Kulkarni Chowk or Sasmira",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

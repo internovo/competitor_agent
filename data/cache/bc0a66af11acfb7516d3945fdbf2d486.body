@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJHWdbq-625zsR71HJAHnZm4s",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.190072999999998,
+        "longitude": 72.834153
+      },
+      "displayName": {
+        "text": "Modern Usha Colony",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJU4aqrO625zsRd7OT8ze1pg8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Khandelwal Layout Extension, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.190049,
+        "longitude": 72.834285
+      },
+      "displayName": {
+        "text": "Modern Usha Colony",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJiVyov-625zsRl-pvvZJz_y8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.188993,
+        "longitude": 72.83496199999999
+      },
+      "displayName": {
+        "text": "Movie Time Cinema (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

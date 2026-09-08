@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJJdBqBcWw5zsRjKWOF5QP8x0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Nikunj Housing Society, Shri Krishna Nagar, Nensey Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.23565,
+        "longitude": 72.86568
+      },
+      "displayName": {
+        "text": "Shri Krishna Nagar Post Office",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ6X210MSw5zsRpknkE0W4pV0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Nensey Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.23649,
+        "longitude": 72.864010000000007
+      },
+      "displayName": {
+        "text": "Hemgiri Society or Ganesh Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJc9XAo8Sw5zsRzz9pDGh5LPk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Nensey Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.238398999999998,
+        "longitude": 72.864603
+      },
+      "displayName": {
+        "text": "Nensey Colony",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

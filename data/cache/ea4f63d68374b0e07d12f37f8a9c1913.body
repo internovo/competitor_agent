@@ -1,0 +1,393 @@
+{
+  "places": [
+    {
+      "id": "ChIJ6aAVhLvO5zsR3wa8j2o2ckw",
+      "types": [
+        "apartment_building",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bus Depot, 52/561, VB Worlikar Marg, near Worli, Worli Village, MIG Colony, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0167879,
+        "longitude": 72.8195027
+      },
+      "displayName": {
+        "text": "Desai Oceanic",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJZ6e0Q8fP5zsRxBM6vITYpKE",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Pandurang Budhkar Marg, Kamagar Nagar Number 1, Century Mills, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0068831,
+        "longitude": 72.8260718
+      },
+      "displayName": {
+        "text": "Birla Niyaara Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJt0u1_8DO5zsRPn88QLm71jY",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "3rd floor, Nirton House, 254-B, Dr Annie Besant Rd, opp. Sasmira Road, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0097482,
+        "longitude": 72.8206677
+      },
+      "displayName": {
+        "text": "Sugee Developers Pvt. Ltd.",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJExY4_L_P5zsRH01-ZrNpJIA",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "N M Joshi Marg, Sane Guruji Marg, Adarsh Nagar, Worli, Mumbai, Maharashtra 400011, India",
+      "location": {
+        "latitude": 18.9865586,
+        "longitude": 72.8315932
+      },
+      "displayName": {
+        "text": "7 Mahalaxmi",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJVVXxn5rO5zsRXT4RMqFXRrA",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "BIRLA AURORA, 8, Dr Annie Besant Rd, Century Bazaar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0119214,
+        "longitude": 72.8234496
+      },
+      "displayName": {
+        "text": "Birla Estates",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJx4WASIzO5zsRBcuot8WjMvk",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "general_contractor",
+        "finance",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Off, Dr Elijah Moses Rd, next to Four Seasons, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.996098500000002,
+        "longitude": 72.8205608
+      },
+      "displayName": {
+        "text": "THE RESERVE",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJZ789JgDP5zsRYk6fwh_SX9Y",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "AB Nair Rd, Mariamma Nagar, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9900841,
+        "longitude": 72.8156662
+      },
+      "displayName": {
+        "text": "Godrej Trilogy, Worli",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJQ4U9Vb7O5zsRhVWExt2xvBM",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bandbox House, Dr Annie Besant Rd, Municipal Colony, Hanuman Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0106085,
+        "longitude": 72.820724
+      },
+      "displayName": {
+        "text": "Pashmina Builders & Developers Pvt Ltd",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ2Rl6vULP5zsR1nnEc76WDWA",
+      "types": [
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "41, Prabhadevi New Rd, Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0129573,
+        "longitude": 72.82180919999999
+      },
+      "displayName": {
+        "text": "AAKASA",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJW7wfLADP5zsRO_YmlTcK_Fo",
+      "types": [
+        "condominium_complex",
+        "apartment_building",
+        "general_contractor",
+        "finance",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.9979762,
+        "longitude": 72.8222152
+      },
+      "displayName": {
+        "text": "Runwal Raaya",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJzZdLULvO5zsR8-g0CqCtWw0",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Atur House, 87, Annie Besant Road, Maya Nagar, Siddharth Nagar, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9981577,
+        "longitude": 72.816788899999992
+      },
+      "displayName": {
+        "text": "Atur India Pvt. Ltd.",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJtYxHNInO5zsRBG5OyxKUjEc",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "110, Dr Elijah Moses Rd, Gandhi Nagar, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.993226399999998,
+        "longitude": 72.8204167
+      },
+      "displayName": {
+        "text": "S2 REALTY & DEVELOPERS PVT. LTD.",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJeUO8al7O5zsRMk-NTmULwK0",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "apartment_complex",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sane Guruji Marg, Mahalaxmi (E, Jacob Circle, Mumbai, Maharashtra 400011, India",
+      "location": {
+        "latitude": 18.9825537,
+        "longitude": 72.8266086
+      },
+      "displayName": {
+        "text": "Piramal Mahalaxmi",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ_4bofADP5zsRpOQpmCktQEs",
+      "types": [
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Overhead Water Tank, B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0050271,
+        "longitude": 72.8200006
+      },
+      "displayName": {
+        "text": "TATA MHADA NEW REHAB Building No 1 G M Bhosle Marg Mumbai 400018",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJf0ntx47O5zsRy6y7mR4L_-s",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "27th Floor, Four Seasons Hotel, Dr. E Moses Road, Worli, Gandhi Nagar, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9942076,
+        "longitude": 72.8204785
+      },
+      "displayName": {
+        "text": "Provenance Land",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJn1sxk4DP5zsRTPGMeaG93oI",
+      "types": [
+        "real_estate_agency",
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Bdd Chawl, Ground Floor, big Tirumala medical, Jambori Maidan, 76, BW MARG, Ambedkar Nagar Colony, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0033255,
+        "longitude": 72.8210809
+      },
+      "displayName": {
+        "text": "DSR Estates & Consultant",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ3_MO-LzO5zsRHYuGJGxE6YI",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Amar Nagar CHS, Khan Abdul Gaffar Khan Road, Bus Depot, Sasmira Rd, behind Worlu, Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0135722,
+        "longitude": 72.8191065
+      },
+      "displayName": {
+        "text": "Amar Nagar CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJX_OfAlbP5zsR-95n_jhG-5c",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "XRVC+FFP, Dainik Shivner Marg, Gandhi Nagar, Upper Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.993570599999998,
+        "longitude": 72.8220544
+      },
+      "displayName": {
+        "text": "Lady Ratan Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJARWwxr3O5zsR3XMZegSzvvg",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "2R7C+289, JB Temkar Marg, Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.0125433,
+        "longitude": 72.8208472
+      },
+      "displayName": {
+        "text": "Swapna Safalya C H S Ltd",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ2X-pOpDO5zsRdoK5AVgCxyw",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "XRX9+W65, G M Bhosale Road, Worli Naka, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 18.9997524,
+        "longitude": 72.818106
+      },
+      "displayName": {
+        "text": "Ansal Height",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    }
+  ]
+}

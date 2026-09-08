@@ -1,0 +1,64 @@
+{
+  "places": [
+    {
+      "id": "ChIJ5zsCK9mw5zsRDcvrJVr9cZE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Cosmos Gardens, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2381878,
+        "longitude": 72.8547226
+      },
+      "displayName": {
+        "text": "Ram Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ4cbuLdmw5zsRKKRrsGnxijM",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Pai Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.237849999999998,
+        "longitude": 72.855175
+      },
+      "displayName": {
+        "text": "Gokul Hotel Borivali (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    },
+    {
+      "id": "ChIJH7MCL9mw5zsRavmDTU2dbSk",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra, India",
+      "location": {
+        "latitude": 19.2375899,
+        "longitude": 72.85501
+      },
+      "displayName": {
+        "text": "Ram Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

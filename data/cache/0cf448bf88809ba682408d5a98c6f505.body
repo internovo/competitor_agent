@@ -1,0 +1,64 @@
+{
+  "places": [
+    {
+      "id": "ChIJq3l9n86w5zsRpMy4p9Lu6a8",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kulupwadi, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22825,
+        "longitude": 72.86774
+      },
+      "displayName": {
+        "text": "Sanjay Gandhi Udyan (National Park)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    },
+    {
+      "id": "ChIJD-EAn86w5zsRMQOjrgIng0w",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Raheja Estate, Kulupwadi, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.227819999999998,
+        "longitude": 72.86784999999999
+      },
+      "displayName": {
+        "text": "Sanjay Gandhi Udyan (National Park)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    },
+    {
+      "id": "ChIJexD1tc-w5zsRgjkT_8W3DCQ",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kulupwadi, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.230721,
+        "longitude": 72.864992
+      },
+      "displayName": {
+        "text": "National Park Gate",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    }
+  ]
+}

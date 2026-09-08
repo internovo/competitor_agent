@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ2zSUyJDO5zsRc_BpbxJsGrU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00403,
+        "longitude": 72.81783999999999
+      },
+      "displayName": {
+        "text": "Kohinoor Ppl Gate No.2",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJnzchJ5HO5zsR2PCWvr9Rsxs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.0038,
+        "longitude": 72.81922
+      },
+      "displayName": {
+        "text": "Worli- Jamboree Maidan Opp: Bdd Chawls Bulding No. 49 50",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJy2ZiPZfO5zsRfeX22fPPo-s",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "B Wing, BDD Chawls Worli, Worli, Mumbai, Maharashtra 400018, India",
+      "location": {
+        "latitude": 19.00564,
+        "longitude": 72.81804
+      },
+      "displayName": {
+        "text": "Doordarshan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

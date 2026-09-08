@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJRU9F5I3O5zsR7c8UFBGYuB4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Worli Naka, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.99843,
+        "longitude": 72.82251
+      },
+      "displayName": {
+        "text": "Best Receiving Centre (Worli)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJZWec343O5zsRLjMCDx_I2Ss",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Upper Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.99775,
+        "longitude": 72.82204
+      },
+      "displayName": {
+        "text": "Shree Ram Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ04XJ2I3O5zsRHwCaePLinn4",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Upper Worli, Worli, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 18.9975175,
+        "longitude": 72.822108
+      },
+      "displayName": {
+        "text": "Shree Ram Mill",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

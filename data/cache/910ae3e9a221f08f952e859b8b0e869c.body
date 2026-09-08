@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-bDCqiy35zsRQBAm9vClPAE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Dattapada, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.221,
+        "longitude": 72.85795
+      },
+      "displayName": {
+        "text": "Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJifKaqyy35zsRHRUhe7vb3zo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "MIG Colony, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22093,
+        "longitude": 72.85777
+      },
+      "displayName": {
+        "text": "Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJH_ypqyy35zsR517bylpWpb4",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2209575,
+        "longitude": 72.857665
+      },
+      "displayName": {
+        "text": "Datta Pada",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

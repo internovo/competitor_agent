@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJO8RE3u-25zsRf5HSDSVNjKY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, NSC Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18501,
+        "longitude": 72.83812
+      },
+      "displayName": {
+        "text": "Smt K G Mittal College",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLyYsJe625zsRVxCI81u2SWc",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Ekta Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185253,
+        "longitude": 72.835886
+      },
+      "displayName": {
+        "text": "Malad (West)",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJpaoyJ-625zsRC48qepMfGwE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18467,
+        "longitude": 72.83567
+      },
+      "displayName": {
+        "text": "Malad Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

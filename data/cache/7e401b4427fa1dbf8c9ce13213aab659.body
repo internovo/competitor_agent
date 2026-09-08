@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJtcPVluC25zsRXUG4GeUARvU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Bhadran Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.196188,
+        "longitude": 72.847589
+      },
+      "displayName": {
+        "text": "Milap Talkies",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ80moluC25zsR62R3FMevWbk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Bhadran Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.196200299999997,
+        "longitude": 72.8475957
+      },
+      "displayName": {
+        "text": "Milap Talkies",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ-6TZnOC25zsRsLaVkMCOv3Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mumbai, Bhadran Nagar, Kandiwali West, Kandivali, Kailash Nagar, Malad West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.1972155,
+        "longitude": 72.847621699999991
+      },
+      "displayName": {
+        "text": "Milap Talkies",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

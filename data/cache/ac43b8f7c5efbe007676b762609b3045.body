@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJLQ4NVi235zsRM4iR-R_0vyQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Food Corporation of India Warehouse, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22123,
+        "longitude": 72.86317
+      },
+      "displayName": {
+        "text": "Special Steel or Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJi5TlLC235zsR7lmj7DaDuaE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.2213846,
+        "longitude": 72.8612366
+      },
+      "displayName": {
+        "text": "Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJfU-mLS235zsRTIIIBl9c60k",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.221266,
+        "longitude": 72.8610175
+      },
+      "displayName": {
+        "text": "Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

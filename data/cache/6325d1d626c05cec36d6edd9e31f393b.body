@@ -1,0 +1,1776 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+<link rel="manifest" href="/manifest.json" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#0e1023">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#0e1023">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#0e1023">
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.eu01.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-975c7885532d44c79eb",applicationID:"102821505",browserID:"102821516"};;/*! For license information please see nr-loader-rum-1.321.0.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):e[s]instanceof Map||e[s]instanceof Set||e[s]instanceof Date||e[s]instanceof RegExp?r[s]=e[s]:"object"==typeof e[s]&&null!==t[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,a)])},7699(e,t,r){"use strict";var n=r(860);const i={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,1e6,"KC",0,i,"qh",0,"SESSION_ERROR"])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.321.0"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=""+s?.location,u=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,a,"gm",0,s,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=s?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<s.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),a=r(860),s=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:a.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const a=e.ee,o=i.i.handlers;if(a&&!a.aborted&&a.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof s.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete o[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,a=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(i(r,a++).toString(16));return s.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,a){const d=a||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function l(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)("api-"+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",a="browser/blobs",s="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:a,[o.sessionReplay]:a,[o.logging]:s,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,s,"df",0,a,"hg",0,"connect"])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const a=t[n]={exports:{}};return e[n](a,a.exports,r),a.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],a=t[n++];r.o(e,i)?0===a&&n++:0===a?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:a})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.321.0.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.321.0.PROD:";r.l=(n,i,a,s)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==a){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+a){o=r;break}}}if(!o){c=!0;var d={296:"sha512-auOJN989wXoxmQeiyRE/ZlrR6yqeuq5/WjLH1btsNQ6Iqm/RK+IqmjTuvad7oOBZyozPaWg6y2Uu2qAZy3e0cQ=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+a),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[s]&&(o.integrity=d[s])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const a=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=a);const s=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(s,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,a,s]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in a)r.o(a,o)&&(r.m[o]=a[o]);if(s)s(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.321.0.PROD"]=self["webpackChunk:NRBA-1.321.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),a=r(1741);var s=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,connector:void 0,harvester:void 0,v2Target:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1},R="BA";var A=r(7836),x=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var S=r(9908);const k="newrelic-iframe-";function T(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,E)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,s.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),e.runtime.v2Target??={type:R,instance:e.agentIdentifier,get id(){return e.runtime.appMetadata?.agents?.[0]?.entityGuid},get attributes(){return{"entity.guid":this.id,appId:e.info.applicationID}}},v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(a.W.prototype).forEach(r=>{const n=a.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=A.ee.get(e.agentIdentifier),e.exposed=f,(0,x.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(k)&&(0,S.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var j=r(1863),P=r(4261),N=r(1738);var O=r(1687),M=r(4234),I=r(5289),D=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,D.V)(e)&&!0===e?.session_trace.enabled}var W=r(6389),B=r(7699);const C=new WeakSet,K=new WeakMap;class U extends M.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,W.J)(()=>{(0,O.Ak)(e,this.featureName),t()}))}):(0,O.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,s.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);try{await async function(e,t,n){if(K.has(e))return K.get(e);const i=(async()=>{if((0,D.V)(e.init))try{const{setupAgentSession:t}=await r.e(296).then(r.bind(r,8391));t(e)}catch(e){(0,f.R)(20,e),t.emit("internal-error",[e]),(0,S.p)(B.qh,[e],void 0,n,t)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}const[{Connector:i},{Harvester:a}]=await Promise.all([r.e(296).then(r.bind(r,6589)),r.e(296).then(r.bind(r,5237))]);e.runtime.connector=new i(e),e.runtime.harvester=new a(e);const s=Object.values(e.features).filter(t=>e.runtime.drainRegistry.has(t.featureName));Promise.all(s.map(e=>e.onAggregateImported)).then(()=>e.runtime.harvester.startTimer())})();K.set(e,i),await i}(e,this.ee,this.featureName)}catch(e){return(0,f.R)(79,e),this.ee.abort(),void this.loadedSuccessfully(!1)}try{if(!this.#r(this.featureName,e.runtime.session,e.init))return this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,O.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1)}};h.RI?(0,I.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!C.has(e)&&(C.add(e),!(0,s.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}T(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var L=r(6630);class F extends U{static featureName=L.T;constructor(e){var t;super(e,L.T),this.setupInspectionEvents(),t=e,(0,N.Y)(P.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,S.p)("api-"+P.Fw,[(0,j.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>e.init.feature_flags.includes("rum_v2")?r.e(296).then(r.bind(r,908)):r.e(296).then(r.bind(r,7927)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,I.sB)(t=>{e(t,"DOMContentLoaded")}),(0,I.GG)(t=>{e(t,"load")}),(0,I.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class G extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(F),T(this,e,e.loaderType||"agent"),t=this,(0,N.Y)(P.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,N.U)(t,e,r,P.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,N.Y)(P.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,S.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,N.U)(e,"enduser.id",t,P.Dl,!0)},e)}(this),function(e){(0,N.Y)(P.nb,function(t){if("string"==typeof t||null===t)return(0,N.U)(e,"application.version",t,P.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,N.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,N.Y)(P.Pv,function(t=!0){if("boolean"==typeof t){if((0,S.p)("api-"+P.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum?.()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures],i=this.init.feature_flags.includes("rum_v2");r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&(i||r.featureName!==t.K7.pageViewEvent))return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var H=r(2843),z=r(782);class Y extends U{static featureName=z.T;constructor(e){super(e,z.T),h.RI&&((0,H.u)(()=>(0,S.p)("docHidden",[(0,j.t)()],void 0,z.T,this.ee),!0),(0,H.G)(()=>(0,S.p)("winPagehide",[(0,j.t)()],void 0,z.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var Z=r(3969);class q extends U{static featureName=Z.TZ;constructor(e){super(e,Z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new G({features:[F,Y,q],loaderType:"lite"})})()})();</script>
+<meta name="language" content="english" />
+<meta name="author" content="CommonFloor.com" />
+<meta name="verify-v1" content="VdeJNnS7hN4uOPvKtrk68W7kpAX2onKQh4IB6AxZExk=" />
+<meta name="alexaVerifyID" content="j8ycakrVppm3U8Lrjh20f0l9MME" />
+<link rel="shortcut icon" href="https://teja8.kuikr.com/cfassets/images/favicon.ico" />
+<title>Evershine Grandeur in Malad West, Mumbai | Find Price, Gallery, Plans, Amenities on CommonFloor.com</title>
+<link href="https://www.commonfloor.com/evershine-grandeur-mumbai/povp-cxfpu7" rel="canonical"><meta name = "description" content = "Buy 2 BHK Apartment ✓ 1.99 Crores - 1.99 Crores ✓ Ready to Move-in | Evershine Grandeur by Evershine Builders is located in Malad West, Mumbai and boasts of amenities like Health Facilities,Intercom,Landscaped Garden... " />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="product" />
+<meta property="og:title" content="Evershine Grandeur in Malad West, Mumbai | Find Price, Gallery, Plans, Amenities on CommonFloor.com" />
+<meta property="og:description" content="Buy 2 BHK Apartment ✓ 1.99 Crores - 1.99 Crores ✓ Ready to Move-in | Evershine Grandeur by Evershine Builders is located in Malad West, Mumbai and boasts of amenities like Health Facilities,Intercom,Landscaped Garden... " />
+<meta property="og:image" content="https://teja12.kuikr.com/is/a/c/1200x500/public/images/apartments/original_img/cxfpu7.gif" />
+<meta property="og:url" content="https://www.commonfloor.com/evershine-grandeur-mumbai/povp-cxfpu7" />
+<meta property="og:site_name" content="https://www.commonfloor.com " />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@commonfloor" />
+<meta name="twitter:creator" content="@commonfloor" />
+<meta name="twitter:title" content="Evershine Grandeur in Malad West, Mumbai | Find Price, Gallery, Plans, Amenities on CommonFloor.com" />
+<meta name="twitter:description" content="Buy 2 BHK Apartment ✓ 1.99 Crores - 1.99 Crores ✓ Ready to Move-in | Evershine Grandeur by Evershine Builders is located in Malad West, Mumbai and boasts of amenities like Health Facilities,Intercom,Landscaped Garden... " />
+<meta name="twitter:image:src" content="https://teja12.kuikr.com/is/a/c/1200x500/public/images/apartments/original_img/cxfpu7.gif" />
+<meta name="twitter:url" content="https://www.commonfloor.com/evershine-grandeur-mumbai/povp-cxfpu7"/>
+<meta name="twitter:domain" content="www.commonfloor.com"/>
+<!-- Bootstrap -->
+<link rel="preconnect" href="https://teja8.kuikr.com/">
+<link rel="preconnect" href="https://teja10.kuikr.com/">
+<link rel="preconnect" href="https://teja12.kuikr.com/">
+<link rel="preconnect" href="https://www.googletagservices.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link href="https://teja8.kuikr.com/cfassets/js/cf-common-full.761a6d2a5b10e285c35.css" rel="stylesheet">
+<link href="https://teja8.kuikr.com/cfassets/js/cf-project.5f6cd4e54d4648c3917.css" rel="stylesheet">
+<script>
+    window.stateFromServer = {};
+    window.stateFromServer.pageType = 'ProjectOverviewPage';
+    window.stateFromServer.city = 'Mumbai';
+    window.stateFromServer.cityGroup = null;
+    window.stateFromServer.pageasset = 'project-overview-page';
+    window.stateFromServer.query = '{"id":"cxfpu7","projectId":"cxfpu7","projectName":"evershine-grandeur-mumbai","imgAltName":"evershine-grandeur-mumbai","f_params":null,"enableProcess":1,"povpBody":{"pageName":"projectOverview","commonService":{"config":{},"cookieService":{"cookieValue":null,"cookieExpiryTime":null,"config":{}},"logLevel":0},"scope_id":"cxfpu7","scope_name":"Evershine%20Grandeur","overviewUrl":"\/evershine-grandeur-mumbai\/povp-cxfpu7","locationUrl":"\/how-to-reach-evershine-grandeur-mumbai-direction-location\/prdl-cxfpu7","buyUrl":"\/evershine-grandeur-mumbai-for-sale\/pfbs-cxfpu7","rentUrl":"\/evershine-grandeur-mumbai-rent\/prns-cxfpu7","city":"Mumbai","lat":"19.1760277","log":"72.8337282","address":"Malad%20West%2C%20Mumbai%2C%20Maharashtra%2C%20INDIA%20","updatedDate":"06-Sep-2026","parentUrl":null,"offerTextValidity":false,"city_id":112,"builder_name":"Evershine Builders","builder_id":"wtn93p","reraNumbers":[],"minimumArea":1110,"maximumArea":1110,"minimumPrice":19889400,"maximumPrice":19889400,"completion_date":"2012-08-01","launch_date":null,"area_name":"Malad West","propertyTypes":["Apartment"],"intent":"sale","cfRegionId":"52c2599c8671b","localityId":"79","bhk_range":["2"]},"localityName":"Malad West","view":null,"pop":null,"showBrowserTalkLink":0,"projectBrochureUrl":""}';
+    window.stateFromServer.enableProcess = '1';
+    window.stateFromServer.adBotProcess = '1';
+    window.stateFromServer.searchIntent = '';
+    window.stateFromServer.my_check_cache = '';
+    window.stateFromServer.version = '1553252411053';
+    window.stateFromServer.map_required = '';
+    window.stateFromServer.qdfp_required = '1';
+    window.stateFromServer.localityName = 'Malad West';
+    window.stateFromServer.intent = 'sale';
+    window.stateFromServer.cityId = '112';
+    window.stateFromServer.abTestConfig = {"abTests":[{"key":"change-pap-url"}]};
+    window.stateFromServer.__cf = false;
+    window.stateFromServer.subcat = { name: '' };
+</script>
+<!-- fid script -->
+<script>
+!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);
+perfMetrics.onFirstInputDelay(function (delay, evt) {window.qperf = window.qperf || [];window.qperf.push({ FID: delay, event: evt });});
+</script>
+
+    <script>
+        var qdfpParams = {};
+
+        if (window.stateFromServer.pageType === "ListingOverviewPage") {
+                      qdfpParams["dfp_id"] = "CF_FLP";
+            qdfpParams["dfp_subId"] = "flp";
+                    qdfpParams['intent'] = 'buy';
+        
+        }
+        else if (window.stateFromServer.pageType === "ProjectOverviewPage") {
+                      qdfpParams["dfp_id"] = "CF_POVP";
+            qdfpParams["dfp_subId"] = "flp";
+                    qdfpParams['intent'] = 'buy';
+        
+        }
+        else if (window.stateFromServer.pageType === "HomePage") {
+                      qdfpParams["dfp_id"] = "CF_HOME";
+            qdfpParams["dfp_subId"] = "home";
+                  }else if (window.stateFromServer.pageType === "GuideArticlesPage" || window.stateFromServer.pageType === "GuideArticlesCategoryPage" || window.stateFromServer.pageType === "GuideArticlesPostPage") {
+                      qdfpParams["dfp_id"] = "CF_GUIDE";
+            qdfpParams["dfp_subId"] = "projectOverview";
+                  }
+
+        window.qdfp_vp = {
+            id: qdfpParams.dfp_id,
+            ptargeting: [{
+                key: 'City',
+                value: window.stateFromServer.city
+            }, {
+                key: 'Category',
+                value: 'Real Estate'
+            }, {
+                key: 'SubCat',
+                value: qdfpParams.dfp_subId
+            }, {
+                key: 'Locality',
+                value: window.stateFromServer.localityName
+            }]
+        };
+        if(qdfpParams.intent){
+          window.qdfp_vp.ptargeting.push({
+                key: 'Intent',
+                value: qdfpParams['intent'] 
+            })
+        }
+
+        (window.stateFromServer.pageType == "ListingOverviewPage") ? window.qdfp_vp.ptargeting.push({"key" : "price", "value": '' }) : '';        
+
+        var QDFP = window.QDFP || {};
+        QDFP.dynamicSlots = QDFP.dynamicSlots || [];
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VLPXGQ9YW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag()
+{dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2VLPXGQ9YW');
+</script><script async src="https://teja8.kuikr.com/cfassets/js/q-analytics-708cd95540b616c1098.js"></script>
+<script type='application/ld+json'>{"geo":{"@type":"GeoCoordinates","latitude":"19.1760277","longitude":"72.8337282"},"image":"/is/a/c/655x525/public/images/apartments/original_img/cxfpu7.gif","address":{"addressCountry":"IN","@type":"PostalAddress","addressLocality":"Malad West","addressRegion":"Mumbai","url":"/how-to-reach-evershine-grandeur-mumbai-direction-location/prdl-cxfpu7"},"@type":"ApartmentComplex","name":"Evershine Grandeur","@context":"http://schema.org","url":"https://www.commonfloor.com/evershine-grandeur-mumbai/povp-cxfpu7"}</script></head>
+<body>
+<!-- header start here -->
+<header class="snbheader header cf-sell-wrp " id="snbheaderId">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-5 col-sm-6 col-md-3 pdltnone pdrgnone">
+        <a href="javascript:void(0);" class="icon-menu cf-tracking-enabled" data-tracking-id='hp-burger-click'></a>
+        <a href="/" data-tracking-id='header-logo-click' class="logo_cf_snb cf-tracking-enabled">
+            <img src="data:image/png;base64, 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" width="220" class="hidden-xs" alt="Commonfloor - India's Premium Real Estate Portal">
+            <img src="https://teja8.kuikr.com/cfassets/images/cf_logo.webp " width="40" class="visible-xs" alt="Commonfloor - India's Premium Real Estate Portal">  
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 snbsrch pdltnone pdrgnone " id="msiteSearchview">
+        <div class="srchbox">
+
+          <div class="snbcty" id="CitySelectDw">
+            <div class="snb-ch" id="snb_city_sl" onclick="CfAppActions.getFilterCityValue(this);CfAppActions.showCitySelect(this, event);">
+              <span class="snb-cn" id="snb_cn_id">Mumbai</span>
+              <span class="icon-downarrow-01 carw"></span>
+            </div>
+            <!-- <span class="icon-location msnbcity" id="msnbcity_id" onclick="CfAppActions.showCitySelect(this, event)"></span> -->
+            <div class="snb-cty-dw buy-rent-filter-class" style='display:block'>
+              <div class="snb-cty-lst">
+                <div class="snb-cty-inpt">
+                  <input placeholder="Type your City" id="citySuggestInput" onkeyup="CfAppActions.showCityAjax(this.value);"  value="">
+                </div>
+                <ul role="listbox"  id="cityDropdownList">
+                  <li role="option">Bangalore</li>
+                  <li role="option">Mumbai</li>
+                  <li role="option">Delhi</li>
+                  <li role="option">Pune</li>
+                  <li role="option">Chennai</li>
+                  <li role="option">Hyderabad</li>
+                  <li role="option">Kolkata</li>
+                  <li role="option">Ahmedabad</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="snbcat"  id="snb_search_intent">
+            <div class="dropdown">
+                                <button class="dropdown-toggle cf-tracking-enabled" type="button" id="facility" data-value="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-tracking-id="2029" data-delegation-parent-class="dropdown">Buy</button>
+                <ul class="dropdown-menu" aria-labelledby="facility">
+                    <li onclick="CfAppActions.setSearchIntent('sale', 'Buy')">Buy</li>
+                    <li onclick="CfAppActions.setSearchIntent('rent', 'Rent')">Rent</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="snbipsrch" id="SrchSelectDw" onclick="CfAppActions.setLocalityActiveEvent();">
+            <div class="snb-multiselect-wrapper">
+              <input type="text" id="SrchSelectDwnew" value="" />
+              <div id="hdrsrchtpbtn" class="btn hdtopbtn" onclick="CfAppActions.redirectToSnbPage();"><i class="icon-magnifier"></i></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-xs-7 col-sm-6 col-md-3 pdltnone">
+        <div class="cfrlogin">
+          <div class="dropdown">
+            
+          <a class="postpropbtn cf-tracking-enabled" data-tracking-id="hp-post-property-click" data-delegation-parent-class="cf-sell-wrp" href="/postad" >POST <span>PROPERTY</span></a>
+            
+          </div>
+          <div class="dropdown logintxt" id="login-details">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <svg width="72px" height="72px" class="usricon" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="user_with_circle" sketch:type="MSArtboardGroup" fill="#fff"><g id="icon_Artboard-35-copy-4" sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)"><g id="Layer_1" sketch:type="MSShapeGroup"><g id="Group"><path d="M34,13 C27.3,13 21.8,18.5 21.8,25.2 C21.8,31.9 27.3,37.4 34,37.4 C40.7,37.4 46.2,32 46.2,25.2 C46.2,18.5 40.8,13 34,13 L34,13 Z M34,34.4 C28.9,34.4 24.8,30.3 24.8,25.2 C24.8,20.1 28.9,16 34,16 C39.1,16 43.2,20.1 43.2,25.2 C43.2,30.3 39.1,34.4 34,34.4 L34,34.4 Z" id="Shape"></path><path d="M34,0 C15.3,0 0,15.3 0,34 C0,52.7 15.3,68 34,68 C52.7,68 68,52.7 68,34 C68,15.3 52.7,0 34,0 L34,0 Z M14,57.6 L14,57.5 C14,56 14,52.8 15.4,49.8 C17.1,46.1 19,43.9 24.6,42.4 C27.4,44 30.7,44.8 34,44.8 C37.3,44.8 40.5,44 43.4,42.4 C47.9,43.7 51,46.2 52.7,49.8 C54.1,52.8 54.1,56 54.1,57.5 L54.1,57.6 C48.6,62.2 41.6,65 34,65 C26.4,65 19.4,62.2 14,57.6 L14,57.6 Z M56.9,54.9 C56.8,53.1 56.4,50.8 55.3,48.6 C53.2,44.1 49.2,40.9 43.5,39.4 C43.1,39.3 42.7,39.4 42.3,39.6 C39.8,41.1 36.9,41.9 33.9,41.9 C30.9,41.9 28,41.1 25.5,39.6 C25.2,39.4 24.8,39.3 24.4,39.4 C17.3,41.2 14.7,44.2 12.6,48.6 C11.6,50.9 11.2,53.1 11,54.9 C6.1,49.3 3,42 3,34 C3,16.9 16.9,3 34,3 C51.1,3 65,16.9 65,34 C65,42 61.9,49.3 56.9,54.9 L56.9,54.9 Z" id="Shape"></path></g></g></g></g></g></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a onclick="CfAppActions.pushAnalytics('hp-login-click', 'log-in')" href="#">Log in to your account</a></li>
+              <li><a onclick="CfAppActions.pushAnalytics('hp-login-click', 'signup-ind')" href="#">Sign up as individual</a></li>
+              <li><a onclick="CfAppActions.pushAnalytics('hp-login-click', 'signup-bld-brk')" href="#">Sign up as builder/agent</a></li>
+            </ul>
+          </div>
+          <div class="dropdown hide" id="short-list-details">
+            <span id="short-list-header-count"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-heart cfsl"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Login to add properties to your shortlist</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end here -->
+<div class="topstickynav hidden-xs hidden-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-1">
+              <a href="/" class="icon-cf-logo cfxlogo"></a>
+          </div>
+          <div class="col-md-3">
+            <p class="fxtitle">Evershine Grandeur</p>
+          </div>
+          <div class="col-md-8">
+            <div class="pagetabs">
+                <a class="cf-tracking-enabled active" data-tracking-id="tabs-click" data-is-onclick= "OVERVIEW" data-ga-data="OVERVIEW" title="Evershine Grandeur" href="/evershine-grandeur-mumbai/povp-cxfpu7">OVERVIEW
+                </a>
+                <a class="cf-tracking-enabled" data-tracking-id="tabs-click" data-is-onclick= "LOCATION" data-ga-data="LOCATION" title="Evershine Grandeur" href="/how-to-reach-evershine-grandeur-mumbai-direction-location/prdl-cxfpu7">LOCATION
+                </a>
+                <a class="cf-tracking-enabled" data-tracking-id="tabs-click" data-is-onclick= "BUY ()" data-ga-data="BUY ()" title="Evershine Grandeur" href="/evershine-grandeur-mumbai-for-sale/pfbs-cxfpu7">BUY <span>PROPERTIES</span> <span class="buy-tab-count"></span></a>
+                <a class="cf-tracking-enabled" data-tracking-id="tabs-click" data-is-onclick= "RENT ()" data-ga-data="RENT ()" title="Evershine Grandeur" href="/evershine-grandeur-mumbai-rent/prns-cxfpu7">RENT <span>PROPERTIES</span> <span class="rent-tab-count"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="projectOverview">
+  <div id="stateoverlay"></div>
+  <div class="container">
+        <div class="row hidden-sm hidden-xs">
+      <div class="col-xs-12 clearfix">
+        <div class="cfbreadcrumbs listingbdc clearfix">
+          <ul itemScope itemType="http://schema.org/BreadcrumbList">
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="0" data-labl="">
+                <a href = "/" itemprop="item" title="CommonFloor.com">
+                  <span itemprop="name" title="CommonFloor.com">Home</span>
+                </a>
+                <meta itemprop="position" content="1">
+              </li>
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="1" data-labl="">
+                <a href = "/mumbai-property/projects" itemprop="item" title="Projects in Mumbai">
+                  <span itemprop="name" title="Projects in Mumbai">Mumbai</span>
+                </a>
+                <meta itemprop="position" content="2">
+              </li>
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="2" data-labl="">
+                <a href = "/all-apartments-in-mumbai-andheri--dahisar/psz-fg5p9vnbxqkw5q6j" itemprop="item" title="Projects in Mumbai Andheri- Dahisar">
+                  <span itemprop="name" title="Projects in Mumbai Andheri- Dahisar">Mumbai Andheri- Dahisar</span>
+                </a>
+                <meta itemprop="position" content="3">
+              </li>
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="3" data-labl="">
+                <a href = "/all-apartments-in-malad-west/psr-52c2599c8671b" itemprop="item" title="Projects in Malad West">
+                  <span itemprop="name" title="Projects in Malad West">Malad West</span>
+                </a>
+                <meta itemprop="position" content="4">
+              </li>
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="4" data-labl="">
+                <a href = "/completed-apartments-in-malad-west/psr-52c2599c8671b" itemprop="item" title="Completed Projects in Malad West">
+                  <span itemprop="name" title="Completed Projects in Malad West">Completed Projects</span>
+                </a>
+                <meta itemprop="position" content="5">
+              </li>
+                          <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" key="5" data-labl="">
+                <a href = "/evershine-grandeur-mumbai/povp-cxfpu7" itemprop="item" title="Evershine Grandeur">
+                  <span itemprop="name" title="Evershine Grandeur">Evershine Grandeur</span>
+                </a>
+                <meta itemprop="position" content="6">
+              </li>
+                      </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row dflex">
+      <div class="col-xs-12 col-sm-12 col-md-9 z_indexc mgraybg">
+          <div id='project-masthead'><div class="row">
+	<div class="col-lg-12">
+		<div class="_pro_title">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+					<h1>
+						<span>
+														Evershine Grandeur						</span>
+						<p>
+														By:
+				              	<a title="Evershine Builders Pvt Ltd" href="/evershine-builders-pvt-ltd/builder/wtn93p" class='cf-tracking-enabled' data-tracking-id='project-builder-click' data-delegation-parent-class='project-detail' data-povp-id="cxfpu7" data-city="Mumbai" data-locality="Malad West" data-builder="Evershine Builders Pvt Ltd" data-prop-type="Apartment" data-proj-status="Completed">
+				                  Evershine Builders Pvt Ltd				              	</a>
+				            							 
+															in
+								<a href="/malad-west-mumbai/rvp-52c2599c8671b" class='cf-tracking-enabled' data-tracking-id='project-location-click' data-delegation-parent-class='project-detail' data-povp-id="cxfpu7" data-city="Mumbai" data-locality="Malad West" data-builder="Evershine Builders Pvt Ltd" data-prop-type="Apartment" data-proj-status="Completed" title="Property in Malad West">
+								Malad West								</a>
+													</p>
+					</h1>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+					<h2>
+						<i class="icon-inr"></i>1.98 Cr <small>onwards</small>					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div><div id='project-tab'><div class="row">
+  <div class="col-xs-12">
+    <div class="responsivenav _count_4">
+      <div class="pagetabs">
+        <a class="cf-tracking-enabled active" data-tracking-id="tabs-click" data-is-onclick= "OVERVIEW" data-ga-data="OVERVIEW"  href="/evershine-grandeur-mumbai/povp-cxfpu7">OVERVIEW
+        </a>
+        <a class="cf-tracking-enabled " data-tracking-id="tabs-click" data-is-onclick= "LOCATION" data-ga-data="LOCATION"  href="/how-to-reach-evershine-grandeur-mumbai-direction-location/prdl-cxfpu7">LOCATION
+        </a>
+        <a class="cf-tracking-enabled " data-tracking-id="tabs-click" data-is-onclick= "BUY ()" data-ga-data="BUY ()" href="/evershine-grandeur-mumbai-for-sale/pfbs-cxfpu7">BUY <span class="buy-tab-count"></span></a>
+        <a class="cf-tracking-enabled " data-tracking-id="tabs-click" data-is-onclick= "RENT ()" data-ga-data="RENT ()" href="/evershine-grandeur-mumbai-rent/prns-cxfpu7">RENT <span class="rent-tab-count"></span></a>
+      </div>
+    </div>
+    <div class="offer_sv">
+        <span id="siteVisitPovp"></span>
+            </div>
+
+      </div>
+</div>
+</div><div id='project-overview-details'><div class="prodls_imagewrap">
+  <div class="row">
+    <div class="pdrgnone pdR0" id="gallery_project">
+        <div class="bgclolr mmrbtnone">
+                        <div class="pro-pnv-img photo-count_1 clearfix"><div class="pnv-img-wraper img-responsive bgload" onclick="CfAppActions.getGalleryData('images');">
+                  <img title="evershine-grandeur-mumbai" alt="evershine-grandeur-mumbai" src="https://teja12.kuikr.com/is/a/c/880x425/public/images/apartments/original_img/cxfpu7.gif" /></div></div>
+                     </div>    </div>
+    <div class="prop-details-wrapper col-xs-12">
+      <div class="pro_dls_info">
+        <ul>
+                                                            <li>
+              <small>BHK</small>
+              <span>
+                  2 BHK              </span>
+            </li>
+                                    <li>
+              <small>Area</small>
+              <span>
+                <div>
+                  1110 sq.ft. 
+                    <a class="area-converter-icon" href="/area-converter">
+                      <img loading="lazy" width="14" height="14" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAABHNCSVQICAgIfAhkiAAABA1JREFUWIXNWV1uGkkQ/qqGH2HW0vgEHgsjHk1OsHCC5QbAeyR79gLOCbbx7r7bOUHiE0BOEPbRIo6GE4CEsL0wXbUPhogAaw8Nsv1JSPRQ1f1RNVXV1U1Yg5EpVDyP6ypaAVGwTmbXIEUXjK61cr0f3n5e+X1xMDClIOvZS1WqQHVIoM9Wpf8SRJlwQqCyEgVQjSY6rR6E/WiF6MAUy2nSNgGAUpgPe1cvQXAZY1NsEOm5Aj6Uqvmw1/1BdGBKQZrsVwaGpNNqbuGfvAbuTSlQsm0F/IlO3x2E/YgBIEO2/VZIAkAuvIlIvSoAZL30JQDQyBRqzPwJguZrufv/MDbFBhiXIlJlz+PfSDV6ayQBIB/2rqA69IjrKRGUSeifpMr35jDYlsADMDwI+8Mksiq4BmslRYSykFw/pzBPXaJU2ZZoBsC4dbySgtYSJY2IuJ5KOnnWk3OJ0c/T5IASWuMpjP44amVT6UsA1STyiYmqaI2IqrsgCQApyrREbDuxfOKZify9VDwAFiqYINiEHDGif+20+Zy71yE50UUlnZyppIeitrmJHsXUyHLmHMBGeoAjUYLnQ+Pr/fB7ZxO9kSlUADp0WZNdlF4DThZV0og9ro9MIdhEz/PoV43jxDl7EU5EY8Qtjtn3OLWRG62VL7+QtFzWdCI6qypnLrqu2Pod3UVJTYKtiQql2/r3kVMkbwIn1wPzVIMKAP9ugnBkCp3lXmdsig2BBAuPOvvhbcdlvZ2lJwb7y88EspNyC2xh0ZllOuPWcX0vA0PveytN4MzCKx2lC5yJzrGn03f0fjcblaewtet3tZt6Ds4WvTOFmsWjewemFGQgleV25u6v0ilUyvOxtfLRNZiciSo4YtL22BTLIFuH6sdlGRvHfQAH8zGDna3vTDQf9rojU2gy0ydYus7//u3DssybCKaBKQVM1pDiSllr9xfFeu6095NVR6ZQUXAwH1tMOi6bZmCLYMpAKqpysXfWa0KpGoscrRGreKT1+SeLVHmNTCJs4/qrhe9dAN1lmf3w9oPr/MtIblHVnaYhgaxUsqeQnCij+yC8k63dwBz65OGUQJ2kOoldz9ZrKtn2+KK4E7Iq2mGdJm7yUlCNPOJnt2m58CYCcKTm0H8ANnLb+vmSRT97OCFBN6WCL2CtIWELOyuZL1I2AQBCZQAdVtIrEPljU2y82OIJMTbFBogCq3JNADD+87gNQXl+uvvK/AA8FpQM2TYB2Dv7dsTAY6AAQIbS7cEL9UBPYU4SgE86rQKz9JQLbyIoVQH4GUq3X/M1GJtiI032K2aXDfOg++n65sch/+wKhZm7sbVOBwabwvP4UB5PDH3oY+rKrbu+WcTIFGqkVAPrCRE71+eNoBoRqGN1/Z71P+b32bxVp36JAAAAAElFTkSuQmCC">
+                      <p>Change your area measurement</p>
+                    </a>
+                </div>
+                <small class="smtext">(103.12 sq.m)</small>
+              </span>
+            </li>
+                                    <li>
+              <small>Possession</small>
+              <span>Aug-2012                                  <i>(Ready-to-move)</i>
+                              </span>
+            </li>
+                        <li>
+              <small>Price Range 
+                              </small>
+              <span><i class="icon-inr"></i> 1.98 Cr </span>
+            </li>
+                       <li>
+              <small>Property Type</small>
+              <span>Apartment</span>
+            </li>
+                        
+        <!-- Download Brochure -->
+                </ul>
+        </div>
+    </div>
+  </div>
+</div>
+</div><div id='covid-measures'></div><div id='house-details'>		<h2 class="section-header">Unit Configuration</h2>
+	<div class="prounitdls">
+		<div class="bgclolr unitdetails clearfix ">
+			<div class="header">
+				<div class="col">Unit Types</div>
+				<div class="col">Super Built-Up Area</div>
+									<div class="col">Carpet Area</div>
+								<div class="col">Price</div>
+									<div class="col">Floor Plans</div>
+							</div>
+					 
+						<div class="body">
+							<div class="col">
+								<span>2 BHK Apartment</span>
+								<small>Availability*: <b>Sold out</b></small>
+							</div>
+							<div class="col">1110 sq.ft <small class="smtext"> (103.12 sq.m)</small></div>
+															<div class="col">NA <small class="smtext"> </small></div>
+														<div class="col price">
+														<i class="icon-inr"></i> 
+														1.98 Cr 							</div>
+														<div class="col">
+								<div class="cell cf-tracking-enabled" data-tracking-id='unitdetail-floorplan-click' data-delegation-parent-class='project-type' data-povp-id="cxfpu7" data-bhk="2 BHK" data-type="Apartment" data-sqft="1110 sq.ft" data-price="1.98 Cr ">
+									<small>
+																							NA
+																			</small>
+								</div>
+							</div>
+													</div>	
+							 <div class="clearfix"></div>
+			 <div class="avlabel">*Availability <b>Yes/Sold Out</b> depicts Availability with Builder only.Taxes and other charges may apply. 
+				<span itemprop="lastReviewed">
+						Last Updated on 06-Sep-2026				</span>
+			 </div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div><div id='download-brochure'><div class="bgclolr hide" id="site_visit_brochure">
+</div></div><div id='project-special-offer'></div><div id='mon_povp_5'></div><div id='locationmap'><div class="bgclolr mmrbtnone">
+	<h2 class="section-header">Location</h2>
+	<div class="mapbox">
+		<img alt ="Explore Now" class="cf-lazyload" data-src="https://teja8.kuikr.com/cfassets/images/cf_listing_default-map.webp" />
+		<div class="btnlink">
+			<span class="mapproname" id="mapImgName"></span>
+			<div class="clearfix"></div>
+			<a   class="locbtn mrtp15" onClick="CfAppActions.mCrossMapShow(this)"  title="Evershine Grandeur" href="/how-to-reach-evershine-grandeur-mumbai-direction-location/prdl-cxfpu7">Explore Now</a>
+		</div>
+	</div>
+</div></div><div id='mon_povp_2'></div><div id='people-liked-contacted'></div><div id='gallery'><!-- Lightbox Gallery start here -->
+<div class="modal fade gallery-modal-lg" id="gallery-modal-lg-main" style="visibility: hidden; opacity: 0; z-index: 1;" tabindex="-1" role="dialog" aria-labelledby="myGalleryModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"> 
+      <button type="button" class="closegallery" onclick="CfAppActions.dismissgallery();">
+        <span aria-hidden="true">×</span>
+      </button> 
+      <div class="modal-body" id="galleryModal">
+      </div> 
+    </div>
+  </div>
+</div></div><div id='master-plan'>
+</div><div id='amenities'> 
+<div class="bgclolr amenitiesb mmrbtnone">
+         
+    <div class="row">
+        <div class="col-xs-12">
+          <h2 class="section-header">Amenities 
+          - Evershine Grandeur         </h2>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class=" contenttext">
+                    <div class="amtlist clearfix">
+                <ul>
+                  <li><span class="title"> Society</span></li>
+                                              <li>
+                                <i class="amenities-icon icon-health_facilities">
+                                                                  </i> 
+                                Health Facilities                            </li>
+                                                    <li>
+                                <i class="amenities-icon icon-landscaped_garden">
+                                                                  </i> 
+                                Landscaped Garden                            </li>
+                                                    <li>
+                                <i class="amenities-icon icon-home">
+                                                                  </i> 
+                                Security Personnel                            </li>
+                                                    <li>
+                                <i class="amenities-icon icon-swimming_pool">
+                                                                  </i> 
+                                Swimming Pool                            </li>
+                          
+                </ul>
+            </div>
+                    <div class="amtlist clearfix">
+                <ul>
+                  <li><span class="title"> Indoor</span></li>
+                                              <li>
+                                <i class="amenities-icon icon-intercom">
+                                                                  </i> 
+                                Intercom                            </li>
+                                                    <li>
+                                <i class="amenities-icon icon-home">
+                                                                  </i> 
+                                Wifi Connection                            </li>
+                          
+                </ul>
+            </div>
+                </div>
+      </div>
+    </div>
+   </div>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">    
+    </svg>
+ 
+<div class="clearfix"></div>
+</div><div id='property-sale'><div class="bgclolr">
+  <h2 class="section-header"></h2>
+  <div class="cf-loader-wrp">
+    <div class="cf-loader">
+      <svg class="circular">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+      </svg>
+    </div>
+  </div>
+</div>
+</div><div id='sale-rent-properties'><div class="bgclolr mmrbtnone">
+	<h2 class="section-header">Properties in Evershine Grandeur</h2>
+	<ul class="nav hla_tabs"><!-- populated from client side --></ul>
+	<div class="tab-content">
+		<div id="ForSale" class="tab-pane fade in active">
+			<a class="btn-hscontact pull-right vallbtn" href="/evershine-grandeur-mumbai-for-sale/pfbs-cxfpu7">View All</a>
+			<div class="row">
+				<div class="col-xs-12 sr_section">
+					<div class="row" id="for-sale-listing"></div>
+				</div>
+			</div>
+		</div>
+		<div id="ForRent" class="tab-pane fade">
+			<a class="btn-hscontact pull-right vallbtn" href="/evershine-grandeur-mumbai-rent/prns-cxfpu7">View All</a>
+			<div class="row">
+				<div class="col-xs-12 sr_section">
+					<div class="row" id="for-rent-listing"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div><div id='people-liked'><div class="bgclolr">
+  <h2></h2>
+  <div class="cf-loader-wrp">
+    <div class="cf-loader">
+      <svg class="circular">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+      </svg>
+    </div>
+  </div>
+</div>
+</div><div id='about'><div class="bgclolr mmrbtnone">
+      <h2 class="section-header">            <div>
+               About Evershine Grandeur            </div>
+            </h2>
+  <div class="boxshdo">
+    <div class="contenttext">
+      <div class="textshowhide">
+        <p><b> Evershine Grandeur </b> – Luxury Apartments with Unmatched Lifestyle Amenities.</p><p><b> Key Highlights of Evershine Grandeur: </b>.</p><p>• Spacious Apartments : Choose from elegantly designed 2 BHK BHK Apartments, with a well-planned 11 structure.</p><p>• Premium Lifestyle Amenities: Access lifestyle amenities, with modern facilities.</p><p>• Vaastu Compliant: These homes are Vaastu-compliant with efficient designs that maximize space and functionality.</p><p>• Prime Location: Evershine Grandeur is strategically located close to IT hubs, reputed schools, colleges, hospitals, malls, and the metro station, offering the perfect mix of connectivity and convenience.</p><p><b> Discover Luxury and Convenience </b>.</p><p>Step into the world of Evershine Grandeur, where luxury is redefined. The contemporary design, with façade lighting and lush landscapes, creates a tranquil ambiance that exudes sophistication. Each home is designed with attention to detail, offering spacious layouts and modern interiors that reflect elegance and practicality.</p><p>Whether it's the world-class amenities or the beautifully designed homes, Evershine Grandeur stands as a testament to luxurious living. Come and explore a life of comfort, luxury, and convenience.</p><p><b> Evershine Grandeur </b>– Address.</p>      </div>
+       
+        <span class="viewmoreinline">
+          <span onclik="CfAppActions.aboutGA(true);" class="view">Read More</span>
+          <span onclik="CfAppActions.aboutGA(false);" class="less">Read Less</span>
+        </span>
+       
+    </div>
+       </div>
+  </div>
+<div class="bgclolr mmrbtnone">
+  <div id="gallery"></div>
+</div>
+<div class="clearfix"></div>
+
+<div class="clearfix"></div>
+<div class="contentnewd">The information provided herein have been collected from publicly available sources, and is yet to be verified as per RERA guidelines.*
+</div>
+</div><div id='about-project-builder'><div class="bgclolr">
+    <a href="/evershine-builders-pvt-ltd/builder/wtn93p" class="cf-tracking-enabled" target="_blank" data-tracking-id='builder-name-click' data-delegation-parent-class='builder-head' data-povp-id="cxfpu7" >
+        <h2 class="section-header">About The Builder :</h2>
+    </a>
+    <div class="boxshdo">
+      <div class="row">
+          <div class="col-xs-12 col-sm-12">
+              <div class="contenttext">
+                  <div class="textshowhide">
+                      Evershine Builders journey began in 1960, and since then, they have established themselves as one of the premier real estate development companies in the city of Mumbai. The firm has a distinction in developing commercial projects and residential complexes which are deemed to be outstanding works of perfection. All of which is accomplished through its foresighted vision, application for high quality test, professional management and timely completion of projects.<br><br><br />
+<br />
+Evershine Builders deliver top-class structures with its continuous innovative construction strategies to achieve new milestones, leading it to surge ahead with its presence felt in the sector. Their involvements in ground-breaking projects are creating immense opportunities for everyone to be a part of the monumental task. No project is executed without the help of the finest architects, creative designers and meticulous contractors, who then create some of the finest structures ever seen.<br></br></br>                  </div>
+
+                                <span class="viewmoreinline cf-tracking-enabled" data-tracking-id="builder-overview-readmore" data-delegation-parent-class="builder-overview-page">
+                  <span class="view">Read More </span>
+                  <span class="less">Read Less</span>
+                </span>
+                 
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+</div><div id='about-locality'><div class="bgclolr mmrbtnone">
+    <div class="contenttext mrtp10">
+    <p class="add">
+      No.215, Veena Beena Shopping Centre, Opp. Bandra Station, Bandra West, Mumbai - 400050, Maharashtra, INDIA.    </p>
+  </div>
+  <div class="contentsummary">
+    <p>Projects in Mumbai</p>
+          <a title="Evershine Builders Pvt Ltd Completed Projects" class="cf-tracking-enabled" data-tracking-id='builder-project-click' data-delegation-parent-class='completed' data-povp-id="cxfpu7" data-status='Completed' href="/mumbai-property/projects/status-completed/builder-evershine-builders-pvt-ltd-wtn93p">
+        Completed Projects
+      </a> &nbsp; | &nbsp;
+      </div>
+</div></div><div id='approvals-loans'>  <div class="bgclolr mmrbtnone">
+    <div class="buttonin">
+      <h2 class="section-header">Home Loans &amp; Legal Approvals</h2>
+      <!-- <p class="spara">Interested in enquiring about Home Loans and EMI? <a href="https://commonfloor.bankbazaar.com/home-loan.html?WT.mc_id=commonfloor_Header&utm_source=commonfloor&utm_medium=referral&utm_campaign=commonfloor&variant=slide&variantOptions=mobileRequired" target="_blank" class="cf-tracking-enabled" data-tracking-id="bank-interst" 
+        data-povp-id="" data-locality="" data-pname=""> Compare Interest Rate</a>
+      </p> -->
+      <div class="clearfix"></div>
+    </div>
+    <ul class="nav hla_tabs">
+              <li class="active"><a data-toggle="tab" href="#HomeLoan">Home Loan</a></li>
+                    <li class=""><a data-toggle="tab" href="#LegalApproval">Legal Approval</a></li>
+          </ul>
+    <div class="tab-content">
+            <div id="HomeLoan" class="tab-pane fade in active">
+        <div class="row legal-section">
+          <div class="col-xs-12">
+            <div class="bddashed">
+              <!-- <p class="bnktitle">Bank</p> -->
+              <div class="row">
+                 
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                      <span class="subinfo">Sorry, Approvals and Loans information is currently unavailable</span>
+                    </div>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                  <div id="LegalApproval" class="tab-pane fade ">
+        <div class="row legal-section">
+          <div class="col-xs-12">
+            <div class="bddashed">
+              <!-- <p class="bnktitle">Legal</p> -->
+              <div class="row">
+                 
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                      <span class="subinfo">BMC</span>
+                    </div>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+  <div class="clearfix"></div>
+  </div><div id='mon_povp_3'></div><div id='similar-props-by-builder'><div class="bgclolr">
+    <h2 class="section-header">
+        Other project by                 Evershine Builders Pvt Ltd            :    </h2>
+    <div class="contenttext">
+        <div class="carousel slide media-carousel projects_slider" id="other-project-by-builder">
+            <div class="carousel-inner" id="city-project-data">
+                                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine City">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-city-mumbai/povp-5gio6f"  target="_blank" data-tracking-id="project-snippet" data-listingid="5gio6f" data-prop-lid="5gio6f" data-prop-city="" data-prop-marketedby="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="1" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/cf5cde487ff0f75.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'5gio6f','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="5gio6f" data-prop-city="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="5gio6f" data-prop-name="Evershine City" data-prop-loc="Vasai East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine City</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Vasai East</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 33.02 L  - 1.15 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'5gio6f','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Aangan">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-aangan-mumbai/povp-4kqdw4"  target="_blank" data-tracking-id="project-snippet" data-listingid="4kqdw4" data-prop-lid="4kqdw4" data-prop-city="" data-prop-marketedby="" data-prop-location="Goregaon West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="2" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja8.kuikr.com/cfassets/images/no-image.jpg">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'4kqdw4','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="4kqdw4" data-prop-city="" data-prop-location="Goregaon West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="4kqdw4" data-prop-name="Evershine Aangan" data-prop-loc="Goregaon West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Aangan</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Goregaon West</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'4kqdw4','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Sparkle">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-sparkle-mumbai/povp-c6t5kf"  target="_blank" data-tracking-id="project-snippet" data-listingid="c6t5kf" data-prop-lid="c6t5kf" data-prop-city="" data-prop-marketedby="" data-prop-location="Jogeshwari East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="3" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja8.kuikr.com/cfassets/images/no-image.jpg">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'c6t5kf','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="c6t5kf" data-prop-city="" data-prop-location="Jogeshwari East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="c6t5kf" data-prop-name="Evershine Sparkle" data-prop-loc="Jogeshwari East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Sparkle</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Jogeshwari East</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'c6t5kf','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                        <div class="item ">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine Homes">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-homes-mumbai/povp-kdqmvk"  target="_blank" data-tracking-id="project-snippet" data-listingid="kdqmvk" data-prop-lid="kdqmvk" data-prop-city="" data-prop-marketedby="" data-prop-location="Virar West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="4" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/kdqmvk.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'kdqmvk','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="kdqmvk" data-prop-city="" data-prop-location="Virar West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="kdqmvk" data-prop-name="Evershine Homes" data-prop-loc="Virar West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Homes</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Virar West</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 30.70 L  - 44.07 L <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'kdqmvk','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Meadows">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-meadows-mumbai/povp-9f3e5g"  target="_blank" data-tracking-id="project-snippet" data-listingid="9f3e5g" data-prop-lid="9f3e5g" data-prop-city="" data-prop-marketedby="" data-prop-location="Dharavi" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="5" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/9f3e5g.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'9f3e5g','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="9f3e5g" data-prop-city="" data-prop-location="Dharavi" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="9f3e5g" data-prop-name="Evershine Meadows" data-prop-loc="Dharavi" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Meadows</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Dharavi</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 1.44 Cr  - 2.64 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'9f3e5g','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Cosmic">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-cosmic-mumbai/povp-w0ilou"  target="_blank" data-tracking-id="project-snippet" data-listingid="w0ilou" data-prop-lid="w0ilou" data-prop-city="" data-prop-marketedby="" data-prop-location="Jogeshwari West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="6" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/w0ilou.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'w0ilou','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="w0ilou" data-prop-city="" data-prop-location="Jogeshwari West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="w0ilou" data-prop-name="Evershine Cosmic" data-prop-loc="Jogeshwari West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Cosmic</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Jogeshwari West</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 1.73 Cr  - 3.98 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'w0ilou','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                        <div class="item ">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine Jewel">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-jewel-mumbai/povp-rvymc2"  target="_blank" data-tracking-id="project-snippet" data-listingid="rvymc2" data-prop-lid="rvymc2" data-prop-city="" data-prop-marketedby="" data-prop-location="Khar West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="7" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/rvymc2.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'rvymc2','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="rvymc2" data-prop-city="" data-prop-location="Khar West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="rvymc2" data-prop-name="Evershine Jewel" data-prop-loc="Khar West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Jewel</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Khar West</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 13.26 Cr  - 18.96 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'rvymc2','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Sapphire">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-sapphire-mumbai/povp-c53ltx"  target="_blank" data-tracking-id="project-snippet" data-listingid="c53ltx" data-prop-lid="c53ltx" data-prop-city="" data-prop-marketedby="" data-prop-location="Powai" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="8" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/c53ltx.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'c53ltx','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="c53ltx" data-prop-city="" data-prop-location="Powai" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="c53ltx" data-prop-name="Evershine Sapphire" data-prop-loc="Powai" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Sapphire</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Powai</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 88.74 L  - 1.79 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'c53ltx','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Woods">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-woods-mumbai/povp-ozdt9b"  target="_blank" data-tracking-id="project-snippet" data-listingid="ozdt9b" data-prop-lid="ozdt9b" data-prop-city="" data-prop-marketedby="" data-prop-location="Mira Road" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="9" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/ozdt9b.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'ozdt9b','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="ozdt9b" data-prop-city="" data-prop-location="Mira Road" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="ozdt9b" data-prop-name="Evershine Woods" data-prop-loc="Mira Road" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Woods</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Mira Road</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 48.69 L  - 98.90 L <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'ozdt9b','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                        <div class="item ">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine Crown">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-crown-mumbai/povp-nan71v"  target="_blank" data-tracking-id="project-snippet" data-listingid="nan71v" data-prop-lid="nan71v" data-prop-city="" data-prop-marketedby="" data-prop-location="Kandivali East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="10" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/cf5e5642af333bf.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'nan71v','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="nan71v" data-prop-city="" data-prop-location="Kandivali East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="nan71v" data-prop-name="Evershine Crown" data-prop-loc="Kandivali East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Crown</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Kandivali East</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 2.04 Cr  - 2.26 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'nan71v','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Millenium Paradise">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-millenium-paradise-mumbai/povp-mwysci"  target="_blank" data-tracking-id="project-snippet" data-listingid="mwysci" data-prop-lid="mwysci" data-prop-city="" data-prop-marketedby="" data-prop-location="Kandivali East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="11" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/cf5cdeaa66835c9.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'mwysci','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="mwysci" data-prop-city="" data-prop-location="Kandivali East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="mwysci" data-prop-name="Evershine Millenium Paradise" data-prop-loc="Kandivali East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Millenium Paradise</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Kandivali East</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 1.62 Cr  - 4.49 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'mwysci','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Solitaire">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-solitaire-mumbai/povp-qe5zrr"  target="_blank" data-tracking-id="project-snippet" data-listingid="qe5zrr" data-prop-lid="qe5zrr" data-prop-city="" data-prop-marketedby="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="12" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/qe5zrr.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'qe5zrr','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="qe5zrr" data-prop-city="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="qe5zrr" data-prop-name="Evershine Solitaire" data-prop-loc="Vasai East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Solitaire</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Vasai East</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'qe5zrr','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                        <div class="item ">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine Marvel">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-marvel-mumbai/povp-aqdj4a"  target="_blank" data-tracking-id="project-snippet" data-listingid="aqdj4a" data-prop-lid="aqdj4a" data-prop-city="" data-prop-marketedby="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="13" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/cf63283ce31463d.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'aqdj4a','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="aqdj4a" data-prop-city="" data-prop-location="Vasai East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="aqdj4a" data-prop-name="Evershine Marvel" data-prop-loc="Vasai East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Marvel</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Vasai East</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'aqdj4a','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Residency">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-residency-mumbai/povp-xy0hua"  target="_blank" data-tracking-id="project-snippet" data-listingid="xy0hua" data-prop-lid="xy0hua" data-prop-city="" data-prop-marketedby="" data-prop-location="Borivali West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="14" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/5409533a3edc5.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'xy0hua','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="xy0hua" data-prop-city="" data-prop-location="Borivali West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="xy0hua" data-prop-name="Evershine Residency" data-prop-loc="Borivali West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Residency</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Borivali West</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'xy0hua','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Everest Square">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-everest-square-mumbai/povp-wb5wn9"  target="_blank" data-tracking-id="project-snippet" data-listingid="wb5wn9" data-prop-lid="wb5wn9" data-prop-city="" data-prop-marketedby="" data-prop-location="Nehru Road" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="15" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja8.kuikr.com/cfassets/images/no-image.jpg">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'wb5wn9','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="wb5wn9" data-prop-city="" data-prop-location="Nehru Road" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="wb5wn9" data-prop-name="Evershine Everest Square" data-prop-loc="Nehru Road" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Everest Square</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Nehru Road</div>
+        <div class="textads subTile">Price On Request<!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'wb5wn9','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                        <div class="item ">
+                        <div class="row">
+                            <div class="col-md-4" title="Evershine Greens">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-greens-mumbai/povp-omwcyz"  target="_blank" data-tracking-id="project-snippet" data-listingid="omwcyz" data-prop-lid="omwcyz" data-prop-city="" data-prop-marketedby="" data-prop-location="Goregaon West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="16" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/public/images/apartments/original_img/omwcyz.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'omwcyz','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="omwcyz" data-prop-city="" data-prop-location="Goregaon West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="omwcyz" data-prop-name="Evershine Greens" data-prop-loc="Goregaon West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Greens</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Goregaon West</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 1.94 Cr  - 3.28 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'omwcyz','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Madhuvan">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-madhuvan-mumbai/povp-ck7rci"  target="_blank" data-tracking-id="project-snippet" data-listingid="ck7rci" data-prop-lid="ck7rci" data-prop-city="" data-prop-marketedby="" data-prop-location="Santacruz East" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="17" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/cf5b063dbd37592.gif">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'ck7rci','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="ck7rci" data-prop-city="" data-prop-location="Santacruz East" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="ck7rci" data-prop-name="Evershine Madhuvan" data-prop-loc="Santacruz East" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Madhuvan</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Santacruz East</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 2.61 Cr  - 4.59 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'ck7rci','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div><div class="col-md-4" title="Evershine Embassy">
+  <div class="cf-tile">
+    <a class="similarproj cf-tracking-enabled" href="/evershine-embassy-mumbai/povp-he3r7v"  target="_blank" data-tracking-id="project-snippet" data-listingid="he3r7v" data-prop-lid="he3r7v" data-prop-city="" data-prop-marketedby="" data-prop-location="Andheri West" data-prop-builder="" data-prop-property-type="Apartment" data-prop-proj-status="completed" data-prop-intent="" data-prop-indexkey="18" data-galabel-prefix="Other Projects">
+      <div class="imagesad bgload">
+        <img class="cf-lazyload imgbg" data-src="https://teja12.kuikr.com/is/a/c/655x525/gallery_images/original/54d35a7e40487.jpg">
+        <span class="ongoing">Completed</span>
+      </div>
+      <span class=" cf-tracking-enabled gapos" onclick="CfAppActions.toggleContactFormVisibility(this,'he3r7v','Evershine%20Builders','wtn93p')" data-tracking-id="" data-listingid="he3r7v" data-prop-city="" data-prop-location="Andheri West" data-prop-builder="" data-prop-property-type="Apartment"  data-prop-proj-status="completed" data-prop-intent="" data-prop-lid="he3r7v" data-prop-name="Evershine Embassy" data-prop-loc="Andheri West" data-galabel-prefix="Other Projects"></span>
+      <div class="recentlypro">
+        <h3>Evershine Embassy</h3>
+        <div class="subtext"> Apartment</div>
+        <div class="subtext">Andheri West</div>
+        <div class="textads subTile"><i class='icon-inr'></i> 1.94 Cr  - 2.60 Cr <!--  --></div>
+      </div>
+    </a>
+    <div class="bddls">
+            
+      <button class="btn orgin-line btn-similar-property" onclick="CfAppActions.toggleContactFormVisibility(this,'he3r7v','Evershine%20Builders','wtn93p')" data-toggle="modal" data-target=".bs-example-modal-sm">Contact</button>
+    </div>
+  </div>
+</div>        
+                        </div>
+                    </div>
+                                </div> 
+            <a data-slide="prev" href="#other-project-by-builder" class="left carousel-control icon-navigate_before recent-slider-prev"></a>
+            <a data-slide="next" href="#other-project-by-builder" class="right carousel-control icon-navigate_next recent-slider-next"></a>
+        </div>
+    </div>
+</div>
+</div><div id='similar-props'><div class="bgclolr">
+  <h2 class="section-header"></h2>
+  <div class="cf-loader-wrp">
+    <div class="cf-loader">
+      <svg class="circular">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+      </svg>
+    </div>
+  </div>
+</div>
+</div><div id='guide-scroll'></div><div id='related-blogs'></div><div id='similar-search'><div class="bgclolr similarse">
+    <h2 class="section-header">Similar Searches</h2>
+    <div class="contenttext">
+      <div class="carousel slide media-carousel projects_slider" id="cross-link-slider">
+        <div class="carousel-inner">
+        
+          <div class="item active">
+            <div class="row">
+                            <div class="col-md-6">
+                <div class="similarproj nobdr">
+                  <h5>Properties For Sale In Mumbai</h5>
+                  <ul>
+                                         <li><a href="/mumbai-property/for-sale" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="192" data-tab-num="2" data-pattern-num = "2" data-pattern="$city$ $search_intent$" data-city-name = "Evershine Grandeur"  key="amenities1" >All Properties For Sale In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-sale/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="193" data-tab-num="3" data-pattern-num = "3" data-pattern="$city$ $search_intent$ $house_type$" data-city-name = "Evershine Grandeur"  key="amenities2" >Apartments For Sale In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-sale/status-completed/apartment-ht/2-bhk" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="194" data-tab-num="4" data-pattern-num = "4" data-pattern="$city$ $search_intent$ $house_type$ $bed_rooms$ $project_status$" data-city-name = "Evershine Grandeur"  key="amenities3" >2 BHK Ready To Move Apartments For Sale In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-sale/apartment-ht/2-bhk" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="210" data-tab-num="5" data-pattern-num = "5" data-pattern="$city$ $search_intent$ $house_type$ $bed_rooms$" data-city-name = "Evershine Grandeur"  key="amenities4" >2 BHK Apartments For Sale In Mumbai</a></li>
+                                      </ul>
+                </div>
+              </div> 
+                            <div class="col-md-6">
+                <div class="similarproj nobdr">
+                  <h5>Properties For Rent In Mumbai</h5>
+                  <ul>
+                                         <li><a href="/mumbai-property/for-rent" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="195" data-tab-num="2" data-pattern-num = "2" data-pattern="$city$ $search_intent$" data-city-name = "Evershine Grandeur"  key="amenities1" >All Properties For Rent In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-rent/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="196" data-tab-num="3" data-pattern-num = "3" data-pattern="$city$ $search_intent$ $house_type$" data-city-name = "Evershine Grandeur"  key="amenities2" >Apartments For Rent In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-rent/status-completed/apartment-ht/2-bhk" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="197" data-tab-num="4" data-pattern-num = "4" data-pattern="$city$ $search_intent$ $house_type$ $bed_rooms$ $project_status$" data-city-name = "Evershine Grandeur"  key="amenities3" >2 BHK Ready To Move Apartments For Rent In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/for-rent/apartment-ht/2-bhk" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="209" data-tab-num="5" data-pattern-num = "5" data-pattern="$city$ $search_intent$ $house_type$ $bed_rooms$" data-city-name = "Evershine Grandeur"  key="amenities4" >2 BHK Apartments For Rent In Mumbai</a></li>
+                                      </ul>
+                </div>
+              </div> 
+                      
+            </div>
+          </div>
+        
+          <div class="item ">
+            <div class="row">
+                            <div class="col-md-6">
+                <div class="similarproj nobdr">
+                  <h5>Projects In Malad West</h5>
+                  <ul>
+                                         <li><a href="/mumbai-property/in-malad-west-r52c2599c8671b/projects" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="199" data-tab-num="2" data-pattern-num = "2" data-pattern="$city$ $location$" data-city-name = "Evershine Grandeur"  key="amenities1" >All Projects In Malad West</a></li>
+                                         <li><a href="/mumbai-property/in-malad-west-r52c2599c8671b/projects/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="200" data-tab-num="3" data-pattern-num = "3" data-pattern="$city$ $location$ $house_type$" data-city-name = "Evershine Grandeur"  key="amenities2" >Apartments Projects In Malad West</a></li>
+                                         <li><a href="/mumbai-property/in-malad-west-r52c2599c8671b/projects/status-completed/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="201" data-tab-num="4" data-pattern-num = "4" data-pattern="$city$ $project_status$ $house_type$ $location$" data-city-name = "Evershine Grandeur"  key="amenities3" >Apartments Ready To Move Projects In Malad West</a></li>
+                                      </ul>
+                </div>
+              </div> 
+                            <div class="col-md-6">
+                <div class="similarproj nobdr">
+                  <h5>Projects In Mumbai</h5>
+                  <ul>
+                                         <li><a href="/mumbai-property/projects" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="202" data-tab-num="2" data-pattern-num = "2" data-pattern="$city$" data-city-name = "Evershine Grandeur"  key="amenities1" >All Projects In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/projects/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="203" data-tab-num="3" data-pattern-num = "3" data-pattern="$city$ $house_type$" data-city-name = "Evershine Grandeur"  key="amenities2" >Apartments Projects In Mumbai</a></li>
+                                         <li><a href="/mumbai-property/projects/status-completed/apartment-ht" class="cross-link cf-tracking-enabled" data-tracking-id="povp-overview-crosslink-clicked" data-pattern-id="204" data-tab-num="4" data-pattern-num = "4" data-pattern="$city$ $project_status$ $house_type$" data-city-name = "Evershine Grandeur"  key="amenities3" >Ready To Move Apartments Projects In Mumbai</a></li>
+                                      </ul>
+                </div>
+              </div> 
+                      
+            </div>
+          </div>
+                </div> 
+        <a data-slide="prev" data-target="#cross-link-slider" class="left carousel-control icon-navigate_before"></a>
+        <a data-slide="next" data-target="#cross-link-slider" class="right carousel-control icon-navigate_next"></a>
+      </div>
+    </div>
+</div>
+</div><div id='cf-faq'>
+      <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{"@type":"Question","name":"1.Where is Evershine Grandeur located?","acceptedAnswer":{"@type":"Answer","text":"The project is located in Malad West, Mumbai, Maharashtra, INDIA "}},{"@type":"Question","name":"2.What is available Apartment size in Evershine Grandeur?","acceptedAnswer":{"@type":"Answer","text":"Flat Size in the project is 1110"}},{"@type":"Question","name":"4. How much is the area of 2 BHK in Evershine Grandeur?","acceptedAnswer":{"@type":"Answer","text":" The area of 2 BHK units in the project is 1110 sqft"}},{"@type":"Question","name":"5. What is the total size of Evershine Grandeur?","acceptedAnswer":{"@type":"Answer","text":"The project is spread over an area of 1.00  Acres."}},{"@type":"Question","name":"6. What is the price of 2 BHK in Evershine Grandeur?","acceptedAnswer":{"@type":"Answer","text":"Price of 2 BHK unit in the project is Rs. 1.99 Crs"}}]
+      }
+      </script><div class="bgclolr">
+  <h2 class="section-header">Frequently Asked Questions on Evershine Grandeur</h2>
+  <div class="boxshdo">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div>
+          <div class="panel-group" id="cf_faq_collapse" role="tablist" aria-multiselectable="true">
+                          <div class="panel panel-default ">
+                <div class="panel-heading" role="tab" id="heading0">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#cf_faq_collapse" href="#collapse0" aria-expanded="false" aria-controls="collapse0" class="collapsed">
+                      1.Where is Evershine Grandeur located?                    </a>
+                  </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                  <div class="panel-body">
+                    <div>
+                      <div>
+                        <p>The project is located in Malad West, Mumbai, Maharashtra, INDIA </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="panel panel-default ">
+                <div class="panel-heading" role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#cf_faq_collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">
+                      2.What is available Apartment size in Evershine Grandeur?                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    <div>
+                      <div>
+                        <p>Flat Size in the project is 1110</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="panel panel-default ">
+                <div class="panel-heading" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#cf_faq_collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
+                      4. How much is the area of 2 BHK in Evershine Grandeur?                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    <div>
+                      <div>
+                        <p> The area of 2 BHK units in the project is 1110 sqft</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="panel panel-default ">
+                <div class="panel-heading" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#cf_faq_collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
+                      5. What is the total size of Evershine Grandeur?                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    <div>
+                      <div>
+                        <p>The project is spread over an area of 1.00  Acres.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="panel panel-default ">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#cf_faq_collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed">
+                      6. What is the price of 2 BHK in Evershine Grandeur?                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    <div>
+                      <div>
+                        <p>Price of 2 BHK unit in the project is Rs. 1.99 Crs</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        <div class="cf_faq_va hide" id="faq_va_btn" onclick="CfAppActions.showAllFaq();">View All</div>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+</div><div id='guide'><div class="bgclolr">
+<h2 class="section-header">Real Estate Blog</h2>
+  <div class="cf-loader-wrp">
+    <div class="cf-loader">
+      <svg class="circular">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+      </svg>
+    </div>
+  </div>
+</div></div><div id='pro-agent'></div><div id='recent-viewed'><div class="bgclolr">
+  <h2></h2>
+  <div class="cf-loader-wrp">
+    <div class="cf-loader">
+      <svg class="circular">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+      </svg>
+    </div>
+  </div>
+</div>
+</div><div id='rate-project'></div><div id='mon_povp_4'></div>      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 pdltnone">
+    <div class="rightsided clearfix cwd" id="sidebar">
+      <div id="cotactsidebar" class="mobileform">
+        <div class="mcross">&times;</div>
+        <div id="contact-top"></div>
+        <div class="bgclolr">
+            <div id="contactForm"></div>
+        </div>
+        <div id="super-agent">
+        </div>
+      </div>
+      <div class="share__fwg mshare" id="mshareDesktop"></div>      
+    </div>
+          <button class="btn orgin disiplayb mobilebutton">Contact</button>
+    </div>    </div>
+  </div>
+</section> 
+
+<!-- Bootom Nav Start here-->
+<section class="bottomNav hidden-xs hidden-sm clearfix localitysas">
+  <a href="/how-to-reach-evershine-grandeur-mumbai-direction-location/prdl-cxfpu7" class="btpagelink pdrg80 clearfix pull-right">
+    <i class="icon-arrow-right pull-right"></i>
+    <span class="btnext pull-right text-right">Next</span>
+    <span class="btpage pull-right text-right">Location</span>
+  </a>
+</section>
+<!--Bootom Nav End here-->
+<div class="leftmenu">
+  <div class="topclosebutton cf-tracking-enabled" data-tracking-id="header-menu-close" data-delegation-parent-class="header"><i class="icon-cross"></i></div>
+  <!-- <div class="centermenu" id="centermenu">
+    </div> -->
+  <div class="cflg" id="headermenu">
+    <ul>
+      <li>
+        <a href="/" data-tracking-id="header-logo-click" class="logo_commonfloor">                                 
+        <img class="cf-lazyload" data-src="https://teja8.kuikr.com/cfassets/images/header_cf_logo.webp" width="180" class="forweb" alt="Commonfloor - India's Premium Real Estate Portal">
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="loginmenu" onclick="CfAppActions.getLogin('sign-in');" data-toggle="modal" data-target=".bs-example-modal-sm" rel="nofollow" class="cf-tracking-enabled logintext" data-tracking-id="header-login" data-delegation-parent-class="header">Log in to your account</div>
+  <div id="loggedinmenu" class="logwrapper">
+    
+  </div>
+
+  <div class="centermenu" id="centermenu">
+    
+  </div>
+
+</div>
+<div class="overlay"></div>
+ 
+<div class="modal fade contact-form-modal" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content contactform"> 
+      <button type="button" class="close" data-dismiss="modal"  aria-label="Close" onclick="CfAppActions.unsetFormData();">
+        <span aria-hidden="true">×</span>
+      </button> 
+      <div class="modal-body" id="contactFormModal">
+      </div> 
+    </div>
+  </div>
+</div><div class="android-promo-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="android-promo-modal-dialog modal-lg" role="document">
+    <div class="android-promo-modal-content"> 
+      <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+          <span aria-hidden="true" class="android-popup-cross-icon"></span>
+      </button> 
+      <div class="android-promo-modal-body text-center" onclick="CfAppActions.downloadAndroidApplication();">
+        <h2 class="android-promo-section-header">CommonFloor is Better on App!</h2>
+        <p class="android-promo-desc">Find your Dream Home from <b>1.9L+ Projects</b>. Get <b>Unlimited Free Alerts</b> matching your needs.</p>
+        <div class="android-promo-download-button"><b>Download</b></div>
+        <img alt="Commonfloor App Promo" class="cf-lazyload" data-src="https://teja8.kuikr.com/cfassets/images/android_promo.webp">
+      </div> 
+    </div>
+  </div>
+</div><div class="modal fade bs-overview-similar-popup similar-project-contact-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content"> 
+      <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+          <span aria-hidden="true" class="icon-cross"></span>
+      </button> 
+      <div class="modal-body">
+      </div> 
+    </div>
+  </div>
+</div><div class="modal fade guide-form-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"> 
+      <button type="button" class="close" data-dismiss="modal"  aria-label="Close" onclick="CfAppActions.guideHandleClose();">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-body" id="guideFormModal">
+      </div> 
+    </div>
+  </div>
+</div><div class="popupforgotp" id="optoverlay" style="display: none;"></div>
+<div class="modal fade login-form-modal mdchh newmc new-login-modal" id="NewLoginModal" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content loginform"> 
+      <div class="rating-bar-header">
+      <span class='icon-viewall icon-arrow-left backarrow' onclick="CfAppActions.getLogin('sign-in');" id="forget-arrow" style="display:none"></span>
+        <button type="button" class="close cf-tracking-enabled" data-dismiss="modal" aria-label="Close" data-tracking-id='login-modal-close' onClick={this.handleClose} data-delegation-parent-class='new-login-modal'>
+          <span aria-hidden="true">×</span>
+        </button> 
+        <div id="login-popup-header" class="loginc">Login to CommonFloor</div>
+      </div>
+      <div class="modal-body" id="loginFormModal">
+      </div> 
+      <span class="poweredby"><img class="cf-lazyload" alt="Powered by Quikr" data-src="https://teja8.kuikr.com/cfassets/images/powered_by_quikr.webp" width="140" /></span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!--footer start here-->
+
+
+<div class="modal fade mobile-prompt-modal" id="js-mobile-prompt-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content contactform">
+      <div class="rating-bar-header">
+        <button id="js-btn-mobile-prompt-modal-close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="loginc">Verify Your Mobile</div>
+      </div>
+      <div class="modal-body">
+        <div id="js-status-msg" class="status-msg hidden"></div>
+        <form class="right_sideform">
+          <div id="js-input-container"></div>
+
+          <div class="buttoncl taC mrtp30">
+            For any feedback, please write to us contactus@commonfloor.com
+          </div>
+          <div class="buttoncl">
+            I authorise Commonfloor.com (Quikr India Pvt. Ltd.) and its business
+            associates,
+            <span class="clrgmore">...Read More</span>
+            <span class="showcontent" style="display: none">
+              partners and/or affiliates to call, sms or email me in connection
+              with my application or for offering other products and services
+              and I agree to the
+              <a href="https://www.commonfloor.com/privacy-policy" target="_blank">privacy policy</a>
+              and
+              <a href="https://www.commonfloor.com/terms-conditions" target="_blank">terms of use</a>. <span class="clrgless">...Less</span></span>
+          </div>
+        </form>
+        <div id="js-form-loader" class="cf-loader-wrp hide">
+          <div class="cf-loader">
+            <svg class="circular">
+              <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade qkrpls-modal" id="js-qkrpls-modal" tabindex="-1" role="dialog" aria-labelledby="qkrplsModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content contactform">
+      <div class="rating-bar-header">
+        <button id="js-btn-qkrpls-modal-close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div id="qkrplsModalLabel" class="loginc">Choose how you want to search Commonfloor</div>
+      </div>
+      <div class="modal-body">
+        <form name="form-qrkpls">
+          <div class="checkbox_raidobox">
+            <input type="radio" name="rdo-qkrpls" id="optionTraditional" value="traditional">
+            <label for="optionTraditional">Use traditional method</label>
+          </div>
+          <div class="checkbox_raidobox mrtp10">
+            <input type="radio" name="rdo-qkrpls" id="optionQkrpls" checked value="qkrpls">
+            <label for="optionQkrpls">Use AI-search powered by Quikr!<span class="newtag">New</span></label>
+          </div>
+          <div class="mrtp20">
+            <input name="btn-submit" type="button" class="btn btn-primary mx-auto" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalContainer"><div class="popupforgotp hide" id="modalOverlay"></div></div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="footercontentadd">
+          <p class="boldt">
+            The information provided herein have been collected from publicly
+            available sources, and is yet to be verified as per RERA guidelines.* <a href="javascript:void(0);" onclick ="CfAppActions.expandFooterReadMore(event);" >Read more..</a>
+          </p> 
+          <p class="footerd hide">
+            The information sources used here include onsite interviews, marketing
+            material and other information sources on the internet. The information related
+            to ownership of this property are also based on material gathered from public
+            sources mentioned above or as has been declared to us by the owners/person
+            listing the property. These data have not yet been verified against
+            authentic documents, and are only indicative of the actual situation
+            of this property, project or land holding, and their ownership.
+          </p>
+          <p class="footerd hide">At CommonFloor, we provide this information to help our users find
+            publicly available data in a structured format. We are in the process
+            of connecting with the relevant owners and verifying the data as per
+            the provisions of the Real Estate (Regulation and Development) Act, 2016.
+            We will keep updating the information here regularly. While we believe
+            that the information provided to you is correct on the basis of the data
+            provided to us, please consider this data and information as indicative
+            and use your judgement and verify any information before making any
+            decision.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row more-footer-content">
+      <div class="col-xs-12">
+        <div class="bdtplgt mrbt30"></div>
+        <div class="footerlinktitle">Real Estate</div>
+        <ul class="fltitlelink">
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/bangalore" data-tracking-id="footer-links" title="Real Estate in Bangalore" data-delegation-parent-class="more-footer-content" target="">Bangalore Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/mumbai" data-tracking-id="footer-links" title="Real Estate in Mumbai" data-delegation-parent-class="more-footer-content" target="">Mumbai Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/delhi" data-tracking-id="footer-links" title="Real Estate in Delhi" data-delegation-parent-class="more-footer-content" target="">Delhi Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/pune" data-tracking-id="footer-links" title="Real Estate in Pune" data-delegation-parent-class="more-footer-content" target="">Pune Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/zirakpur" data-tracking-id="footer-links" title="Real Estate in Zirakpur" data-delegation-parent-class="more-footer-content" target="">Zirakpur Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/jaipur" data-tracking-id="footer-links" title="Real Estate in Jaipur" data-delegation-parent-class="more-footer-content" target="">Jaipur Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/ghaziabad" data-tracking-id="footer-links" title="Real Estate in Ghaziabad" data-delegation-parent-class="more-footer-content" target="">Ghaziabad Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/chandigarh" data-tracking-id="footer-links" title="Real Estate in Chandigarh" data-delegation-parent-class="more-footer-content" target="">Chandigarh Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/delhi-ncr" data-tracking-id="footer-links" title="Real Estate in Delhi-NCR" data-delegation-parent-class="more-footer-content" target="">Delhi-NCR Real Estate</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/thane" data-tracking-id="footer-links" title="Real Estate in Thane" data-delegation-parent-class="more-footer-content" target="">Thane Real Estate</a>
+            </li>
+                  </ul>
+        <div class="footerlinktitle">Properties For Sale</div>
+        <ul class="fltitlelink">
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/bangalore/property/sale" data-tracking-id="footer-links" title="Properties for Sale in Bangalore" data-delegation-parent-class="more-footer-content" target="">Buy Property in Bangalore</a>
+                            </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/mumbai-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Mumbai" data-delegation-parent-class="more-footer-content" target="">Buy Property in Mumbai</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/delhi-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Delhi" data-delegation-parent-class="more-footer-content" target="">Buy Property in Delhi</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/pune-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Pune" data-delegation-parent-class="more-footer-content" target="">Buy Property in Pune</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/zirakpur-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Zirakpur" data-delegation-parent-class="more-footer-content" target="">Buy Property in Zirakpur</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/jaipur-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Jaipur" data-delegation-parent-class="more-footer-content" target="">Buy Property in Jaipur</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/ghaziabad-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Ghaziabad" data-delegation-parent-class="more-footer-content" target="">Buy Property in Ghaziabad</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/chandigarh-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Chandigarh" data-delegation-parent-class="more-footer-content" target="">Buy Property in Chandigarh</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/delhi-ncr-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Delhi-NCR" data-delegation-parent-class="more-footer-content" target="">Buy Property in Delhi-NCR</a>
+                          </li>
+                      <li>
+                            <a class="cf-tracking-enabled anchor-class" href="/thane-property/for-sale" data-tracking-id="footer-links" title="Properties for Sale in Thane" data-delegation-parent-class="more-footer-content" target="">Buy Property in Thane</a>
+                          </li>
+                  </ul>
+        <div class="footerlinktitle">Properties For Rent</div>
+        <ul class="fltitlelink">
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/bangalore/property/rent" data-tracking-id="footer-links" title="Properties for Rent in Bangalore" data-delegation-parent-class="more-footer-content" target="">Rent Property in Bangalore</a>
+                              
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/mumbai-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Mumbai" data-delegation-parent-class="more-footer-content" target="">Rent Property in Mumbai</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/delhi-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Delhi" data-delegation-parent-class="more-footer-content" target="">Rent Property in Delhi</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/pune-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Pune" data-delegation-parent-class="more-footer-content" target="">Rent Property in Pune</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/zirakpur-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Zirakpur" data-delegation-parent-class="more-footer-content" target="">Rent Property in Zirakpur</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/jaipur-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Jaipur" data-delegation-parent-class="more-footer-content" target="">Rent Property in Jaipur</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/ghaziabad-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Ghaziabad" data-delegation-parent-class="more-footer-content" target="">Rent Property in Ghaziabad</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/chandigarh-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Chandigarh" data-delegation-parent-class="more-footer-content" target="">Rent Property in Chandigarh</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/delhi-ncr-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Delhi-NCR" data-delegation-parent-class="more-footer-content" target="">Rent Property in Delhi-NCR</a>
+                            
+            </li>
+                      <li>
+                              <a class="cf-tracking-enabled anchor-class" href="/thane-property/for-rent" data-tracking-id="footer-links" title="Properties for Rent in Thane" data-delegation-parent-class="more-footer-content" target="">Rent Property in Thane</a>
+                            
+            </li>
+                  </ul>
+        <div class="footerlinktitle">Best Properties In India</div>
+        <ul class="fltitlelink">
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/bangalore/property" data-tracking-id="footer-links" title="Best Properties in Bangalore" data-delegation-parent-class="more-footer-content" target="">Bangalore Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/mumbai/property" data-tracking-id="footer-links" title="Best Properties in Mumbai" data-delegation-parent-class="more-footer-content" target="">Mumbai Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/delhi/property" data-tracking-id="footer-links" title="Best Properties in Delhi" data-delegation-parent-class="more-footer-content" target="">Delhi Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/pune/property" data-tracking-id="footer-links" title="Best Properties in Pune" data-delegation-parent-class="more-footer-content" target="">Pune Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/zirakpur/property" data-tracking-id="footer-links" title="Best Properties in Zirakpur" data-delegation-parent-class="more-footer-content" target="">Zirakpur Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/jaipur/property" data-tracking-id="footer-links" title="Best Properties in Jaipur" data-delegation-parent-class="more-footer-content" target="">Jaipur Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/ghaziabad/property" data-tracking-id="footer-links" title="Best Properties in Ghaziabad" data-delegation-parent-class="more-footer-content" target="">Ghaziabad Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/chandigarh/property" data-tracking-id="footer-links" title="Best Properties in Chandigarh" data-delegation-parent-class="more-footer-content" target="">Chandigarh Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/delhi-ncr/property" data-tracking-id="footer-links" title="Best Properties in Delhi-NCR" data-delegation-parent-class="more-footer-content" target="">Delhi-NCR Properties</a>
+            </li>
+                      <li>
+              <a class="cf-tracking-enabled anchor-class" href="/thane/property" data-tracking-id="footer-links" title="Best Properties in Thane" data-delegation-parent-class="more-footer-content" target="">Thane Properties</a>
+            </li>
+                  </ul>
+        <div class="footerlinktitle">Residential Projects</div>
+        <ul class="fltitlelink">
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/bangalore/projects" data-tracking-id="footer-links" title="Residential Projects in Bangalore" data-delegation-parent-class="more-footer-content" target="">Projects in Bangalore</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/mumbai-property/projects" data-tracking-id="footer-links" title="Residential Projects in Mumbai" data-delegation-parent-class="more-footer-content" target="">Projects in Mumbai</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/delhi-property/projects" data-tracking-id="footer-links" title="Residential Projects in Delhi" data-delegation-parent-class="more-footer-content" target="">Projects in Delhi</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/pune-property/projects" data-tracking-id="footer-links" title="Residential Projects in Pune" data-delegation-parent-class="more-footer-content" target="">Projects in Pune</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/zirakpur-property/projects" data-tracking-id="footer-links" title="Residential Projects in Zirakpur" data-delegation-parent-class="more-footer-content" target="">Projects in Zirakpur</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/jaipur-property/projects" data-tracking-id="footer-links" title="Residential Projects in Jaipur" data-delegation-parent-class="more-footer-content" target="">Projects in Jaipur</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/ghaziabad-property/projects" data-tracking-id="footer-links" title="Residential Projects in Ghaziabad" data-delegation-parent-class="more-footer-content" target="">Projects in Ghaziabad</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/chandigarh-property/projects" data-tracking-id="footer-links" title="Residential Projects in Chandigarh" data-delegation-parent-class="more-footer-content" target="">Projects in Chandigarh</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/delhi-ncr-property/projects" data-tracking-id="footer-links" title="Residential Projects in Delhi-NCR" data-delegation-parent-class="more-footer-content" target="">Projects in Delhi-NCR</a>
+                        </li>
+                      <li>
+                          <a class="cf-tracking-enabled anchor-class" href="/thane-property/projects" data-tracking-id="footer-links" title="Residential Projects in Thane" data-delegation-parent-class="more-footer-content" target="">Projects in Thane</a>
+                        </li>
+                  </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12"><div class="bdtplgt mrtp20 mrbt20"></div></div>
+    </div>
+        <div class="row">
+      <div class="col-xs-6 col-sm-3 col-md-2 about">
+        <div class="footerlink">
+          <div class="footerTag">About</div>
+          <ul class="uls">
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about" href="/about-us" title="About CommonFloor" target="_blank">About Us</a></li>
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about"href="http://www.quikr.com/html/jobs.php" rel="nofollow" title="Careers" target="_blank">Careers</a></li>
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about"href="/blog" title="CommonFloor Blog" target="_blank">Blog</a></li>
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about" href="/cancellation-refund" title="Cancellation and Refund Policy" target="_blank">Cancellation/Refund</a></li>
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about" href="/terms-conditions" title="Terms & Conditions" target="_blank">Terms & Conditions</a></li>
+            <li><a class="cf-tracking-enabled" data-tracking-id="footer-links-static" data-delegation-parent-class="about" href="/contactus" title="Contact Us" target="_blank">Contact</a></li>
+            <li><a class="" href="https://www.quikr.com"  target="_blank">Quikr</a></li>
+            <li><a class="" href="https://www.indiaproperty.com" target="_blank">India Property</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3 col-md-2 products">
+        <div class="footerlink">
+          <div class="footerTag">Products</div>
+          <ul class="uls">
+            <li><a class="cf-tracking-enabled" href="https://www.quikr.com/coworking" data-tracking-id="footer-links-static" title="Quikr Cowork" data-delegation-parent-class="products" target="_blank">Quikr Cowork</a></li>
+            <li><a class="cf-tracking-enabled" href="https://groups.commonfloor.com/" data-tracking-id="footer-links-static" title="Apartment Management Software" data-delegation-parent-class="products" target="">Groups</a></li>
+            <li><a class="cf-tracking-enabled" href="/agent" data-tracking-id="footer-links-static" rel="nofollow" title="Agents" data-delegation-parent-class="products" target="">Agents</a></li>
+            <li><a class="cf-tracking-enabled" href="/blog" data-tracking-id="footer-links-static" title="Real Estate Blog" data-delegation-parent-class="products" target="">Blog</a></li>
+            <li><a class="cf-tracking-enabled" href="/news" data-tracking-id="footer-links-static" title="Real Estate News" data-delegation-parent-class="products" target="">News</a></li>
+            <li><a class="cf-tracking-enabled" href="/forum" data-tracking-id="footer-links-static" title="Real Estate Forum" data-delegation-parent-class="products" target="">Forum</a></li>
+            <li><a class="cf-tracking-enabled" href="https://www.commonfloor.com/retina" data-tracking-id="footer-links-static" title="Virtual Reality" data-delegation-parent-class="products" target="">Retina</a></li>
+            <li><a class="cf-tracking-enabled" href="https://www.commonfloor.com/live-in-tour" data-tracking-id="footer-links-static" title="360 degree view of Property" data-delegation-parent-class="products" target="">Live-in-tour</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 apps">
+        <div class="footerlink">
+          <div class="footerTag">Experience Commonfloor App on Mobile</div>
+          <ul class="mrb10">
+            <li>
+              <a class='cf-tracking-enabled' data-tracking-id='hp-footer-anroid'
+                data-delegation-parent-class='apps' title='Android Property Search App'
+                href="http://a.localytics.com/android?id=com.commonfloor&referrer=utm_source=other_commonfloor&utm_medium=pcweb&utm_content=projectOverview&utm_term=&utm_campaign=PC-Footer" target="_blank" rel="nofollow">
+                <div class="cf-appbtn play">
+                  <svg width="28px" height="28px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="#ffffff" fill-rule="evenodd" sketch:type="MSPage">
+                        <path d="M0.644744964,21.9650748 C0.254202901,21.8598787 0,21.4721398 0,20.8721315 L0,1.06673994 C0,0.511040818 0.215237322,0.13626225 0.556430066,3.90798505e-14 L0.556430066,3.90798505e-14 L10.2892072,11.0372633 L0.644744964,21.9650748 L0.644744964,21.9650748 Z M1.98453168,21.5446698 L13.6997237,14.9048922 L10.8463222,11.6690486 L1.98453168,21.5446698 L1.98453168,21.5446698 Z M13.7803956,7.08151669 L2.22846736,0.532749802 L10.8632139,10.3868759 L13.7803956,7.08151669 L13.7803956,7.08151669 Z M14.5641845,7.52584521 L19.0895939,10.0912915 C19.946426,10.577028 19.9542618,11.36003 19.0895939,11.8500947 L14.4496961,14.479833 L11.4233025,11.026059 L14.5641845,7.52584521 L14.5641845,7.52584521 Z" id="google-play-copy" fill="#ffffff" sketch:type="MSShapeGroup"></path>
+                    </g>
+                  </svg>
+                  <small>Android App on</small><span>Google Play</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="footerTag">Hiring Partner: <a class="cf-tracking-enabled" data-tracking-id='footer-hiring-partner-tarmack' data-delegation-parent-class='hiring-partner' href="https://www.tarmack.com" title="" target="_blank" rel="nofollow">Tarmack</a></div>
+          <!--
+          <p class="appdnd"><span>(OR)</span> Give a missed call to 1800 180 180 180 and get link to download App</p>
+          -->
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 cnct-wt-us">
+        <div class="footerlink">
+          <div class="cftm">
+            <img alt="Commonfloor - India's Premium Real Estate Portal" class="cf-lazyload" data-src="https://teja8.kuikr.com/cfassets/images/CommonFloor_footer_logo.webp">
+          </div>
+          <p class="cprgt">Copyright &copy; 2007-26  Commonfloor.com.<br/>All rights reserved.</p>
+          <div class="kit mrtp20">Keep in Touch</div>
+          <ul>
+            <li>
+              <a class="cf-tracking-enabled" data-tracking-id='footer-share-facebook' data-delegation-parent-class='cnct-wt-us' href="https://www.facebook.com/commonfloor.com" title="" target="_blank" rel="nofollow"><i class="icon-Facebook-01"></i></a>
+              <a class="cf-tracking-enabled" data-tracking-id='footer-share-twitter' data-delegation-parent-class='cnct-wt-us' href="https://twitter.com/commonfloor" title="" target="_blank" rel="nofollow"><i class="icon-Twitter-01"></i></a>
+              <a class="cf-tracking-enabled" data-tracking-id='footer-share-youtube' data-delegation-parent-class='cnct-wt-us' href="https://www.youtube.com/user/commonfloor" title="" target="_blank" rel="nofollow"><i class="icon-Youtube-01"></i></a>
+              <a class="cf-tracking-enabled" data-tracking-id='footer-share-slideshare' data-delegation-parent-class='cnct-wt-us' href="http://www.slideshare.net/CommonFloor" title="" target="_blank" rel="nofollow"><i class="icon-Slideshare-01"></i></a>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    var gtmData = {"PAGE_TYPE":"Project_Page_Overview","PROJECT_NAME":"Evershine Grandeur","PROJECT_ID":"cxfpu7","USER_CITY_ID":112,"USER_CITY_NAME":"Mumbai","CATEGORY_NAME":"CommonFloor","PROPERTY_TYPE":"Apartment","LOCALITY_ID":"5dkiyj","LOCALITY_NAME":"Malad West","REGION_ID":"52c2599c8671b","REGION_NAME":"Malad West","BUILDER_NAME":"Evershine Builders Pvt Ltd","BUILDER_ID":"wtn93p","PROJECT_LAT":"19.1760277","PROJECT_LONG":"72.8337282","MAX_PRICE":19889400,"MIN_PRICE":19889400,"SOURCE":"","DEPTH":6};
+    var sourceType = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) ? 'MOBILESITE' : 'WEBSITE';
+    if (sourceType == 'MOBILESITE') {
+       gtmData.SOURCE = 'MOBILESITE';
+    } else {
+       gtmData.SOURCE = 'WEBSITE';
+    }
+</script>
+
+  
+<script type="text/javascript">
+  var json = {"event":"projectOverview","email":null,"mobile":null,"project_id":"cxfpu7","propertytype":"Apartment","city_name":"Mumbai","city":"Mumbai","locality":"Malad West","cf_data":{"locality_id":"2872","locality":"Malad West","city_id":112,"city_name":"Mumbai"},"cfProject_id":"22908","cfProject_name":"Evershine Grandeur","cfBuilder_id":"wtn93p","cfBuilder_name":"Evershine Builders Pvt Ltd","project_name":"Evershine Grandeur","locality_name":"Malad West","locality_id":"79","builder_name":"Evershine Builders","city_id":"31","price_min":19889400};
+  var _paqv3 = _paqv3 || [];
+  _paqv3.push(['_sendEventApiData','projectOverview',"desktop",JSON.stringify(json)]);
+</script>
+
+<script defer src="https://teja8.kuikr.com/cfassets/js/polyfill-intersection-observer-b88245bc9783752b3d1.js"></script>
+
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_6-407ac8bb4e0f9fa8ed6.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_5-646bea4f4e7c3120ce0.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_4-8e3f0accb1744084238.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_3-b6ceec7578d6fa6c10f.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_2-0c091b93efe34252c2d.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/vendor_1-bdba54cf25e4b2c7285.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/start-2edfbdadf553e1bee74.js"></script>
+<script defer src="https://teja8.kuikr.com/cfassets/js/page-b2d8ae52ece1f2f0825.js"></script>
+
+<!-- Script for Tracking Event -->
+  <script defer src="https://teja8.kuikr.com/cfassets/js/qanalytics_cf-641a8d22f01e70d9fdc.js" ></script>
+<!-- End Script for Tracking Event -->
+      <script defer src="https://teja8.kuikr.com/cfassets/js/index-9629c99b5b5c5b10f6f.js"></script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-975c7885532d44c79eb","applicationID":"102821505","transactionName":"MhBSZQoZXkEAVhFfWwtac0QLDF9fTkUXWV4AFkR8GRFe","queueTime":0,"applicationTime":347,"atts":"HldRE0IDTU8=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>

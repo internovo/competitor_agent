@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w, d) { w.CollectId = "632ebfe66405a40542b3d20c"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance Bhaskar Malad West | Premium 2 & 3 BHK Apartments in Mumbai</title>
+    <meta name="description" content="Explore Alliance Bhaskar in Malad West, Mumbai. RERA approved ready-to-move 2 & 3 BHK apartments. Sizes 520-789 sq.ft, possession Dec 2023. Prime Western Suburbs location by Alliance City Developers. Enquire now.">
+    <meta name="keywords" content="Alliance Bhaskar, Alliance Bhaskar Malad West, Apartments in Malad West, 2 BHK in Malad, 3 BHK Mumbai, Alliance City Developers Mumbai, Premium Apartments Mumbai, Ready to Move Projects Mumbai">
+    <meta name="ROBOTS" content="index, follow" />
+    <meta name="ROBOTS" content="ALL" />
+    <meta name="Slurp" content="index,follow,archive" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="allow-search" content="yes" />
+    <meta name="revisit-after" content="daily" />
+    <meta name="distribution" content="global" />
+    <meta name="expires" content="never" />
+    <link rel="canonical" href="https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/" />
+    <link rel="alternate" hreflang="en-us" href="https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/fevicon.png" type="/images/fevicon.png">
+    <style>
+        /* Detail Hero */
+        .detail-hero { background: var(--gradient); padding: 96px 0 50px; position: relative; overflow: hidden; }
+        .detail-hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=60') center/cover no-repeat; opacity:0.12; }
+        .detail-hero .container { position: relative; z-index: 2; }
+        .proj-title-hero { font-size: clamp(1.6rem,3.5vw,2.4rem); font-weight: 800; color: var(--white); margin-bottom: 8px; }
+        .proj-loc-hero { color: rgba(255,255,255,0.72); font-size: 0.92rem; margin-bottom: 18px; display:flex;align-items:center;gap:6px; }
+        .proj-loc-hero i { color: var(--accent); }
+        .hero-badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+        .hbadge { padding: 5px 14px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+        .hbadge-green { background: rgba(16,185,129,0.2); border: 1px solid rgba(16,185,129,0.5); color: #6ee7b7; }
+        .hbadge-blue { background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.5); color: #a5b4fc; }
+        .hbadge-gold { background: rgba(232,160,32,0.2); border: 1px solid rgba(232,160,32,0.5); color: #fcd34d; }
+        .detail-stat-row { display: flex; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 16px 24px; gap: 0; flex-wrap: wrap; margin-top: 22px; }
+        .dstat { padding: 8px 24px; border-right: 1px solid rgba(255,255,255,0.15); min-width: 120px; }
+        .dstat:last-child { border-right: none; }
+        .dstat-val { font-size: 1.1rem; font-weight: 800; color: var(--accent); display: block; }
+        .dstat-lbl { font-size: 0.68rem; color: rgba(255,255,255,0.58); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 2px; }
+        .detail-cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+
+        /* Sticky Tab Nav */
+        .proj-tab-nav { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 66px; z-index: 200; }
+        .proj-tab-nav .container { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+        .proj-tab-nav::-webkit-scrollbar { display: none; }
+        .ptab { padding: 14px 22px; font-size: 0.82rem; font-weight: 600; color: var(--text-light); border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: var(--transition); font-family: 'Poppins',sans-serif; background: none; border-top: none; border-left: none; border-right: none; }
+        .ptab:hover { color: var(--primary); }
+        .ptab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+        /* Sections */
+        .detail-section { padding: 52px 0; border-bottom: 1px solid var(--border-light); }
+        .detail-section:last-child { border-bottom: none; }
+        .sec-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary-light); background: rgba(26,60,110,0.07); padding: 4px 12px; border-radius: 50px; display: inline-block; margin-bottom: 10px; }
+
+        /* Highlight Cards */
+        .highlight-card { background: var(--bg-light); border-radius: var(--radius); padding: 20px; text-align: center; transition: var(--transition); border: 1.5px solid transparent; }
+        .highlight-card:hover { border-color: var(--primary-light); background: var(--white); box-shadow: var(--shadow); }
+        .highlight-icon { width: 52px; height: 52px; background: linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--white); margin: 0 auto 12px; }
+        .highlight-card h6 { font-size: 0.84rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .highlight-card p { font-size: 0.76rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+        /* Price Table */
+        .price-tab-btn { padding: 8px 20px; border-radius: 50px; border: 1.5px solid var(--border); background: var(--white); color: var(--text); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Poppins',sans-serif; }
+        .price-tab-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+        .price-table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+        .price-table th { background: var(--primary); color: var(--white); font-weight: 600; font-size: 0.82rem; padding: 13px 16px; text-align: left; }
+        .price-table td { font-size: 0.82rem; padding: 12px 16px; vertical-align: middle; color: var(--text); border-bottom: 1px solid var(--border-light); }
+        .price-table tr:last-child td { border-bottom: none; }
+        .price-table tr:hover td { background: rgba(26,60,110,0.025); }
+        .price-tag { font-weight: 700; color: var(--primary); }
+        .price-table-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 10px; }
+
+        /* Floor Plan */
+        .fp-tab { padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--border); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Poppins',sans-serif; background: var(--white); color: var(--text); }
+        .fp-tab.active { background: var(--accent); color: var(--white); border-color: var(--accent); }
+        .fp-panel { display: none; }
+        .fp-panel.active { display: block; }
+        .fp-img-wrap { background: var(--bg-light); border-radius: var(--radius); padding: 24px; text-align: center; border: 1.5px dashed var(--border); }
+        .fp-img-wrap img { max-height: 320px; object-fit: contain; margin: 0 auto; }
+        .fp-info { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
+        .fp-info-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border-light); font-size: 0.83rem; }
+        .fp-info-row:last-child { border-bottom: none; }
+        .fp-info-row span:first-child { color: var(--text-light); }
+        .fp-info-row span:last-child { font-weight: 700; color: var(--dark); }
+
+        /* Amenities */
+        .amenity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+        .amenity-item { display: flex; align-items: center; gap: 10px; background: var(--bg-light); border-radius: 10px; padding: 12px 14px; font-size: 0.8rem; font-weight: 500; color: var(--dark); transition: var(--transition); border: 1.5px solid transparent; }
+        .amenity-item:hover { background: var(--white); border-color: var(--primary-light); box-shadow: var(--shadow); }
+        .amenity-item i { color: var(--accent); width: 18px; text-align: center; font-size: 1rem; flex-shrink: 0; }
+
+        /* Location */
+        .location-table td { font-size: 0.82rem; padding: 10px 14px; border-bottom: 1px solid var(--border-light); }
+        .location-table td:first-child { color: var(--text-light); width: 55%; }
+        .location-table td:last-child { font-weight: 600; color: var(--dark); }
+        .map-placeholder { background: var(--bg-light); border-radius: var(--radius); height: 280px; display: flex; align-items: center; justify-content: center; border: 1.5px dashed var(--border); color: var(--text-muted); flex-direction: column; gap: 10px; }
+        .map-placeholder i { font-size: 2rem; color: var(--accent); }
+
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 200px 200px; gap: 8px; border-radius: var(--radius); overflow: hidden; }
+        .gal-main { grid-row: 1 / 3; }
+        .gal-item { overflow: hidden; position: relative; cursor: pointer; }
+        .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gal-item:hover img { transform: scale(1.07); }
+        .gal-item .gal-overlay { position: absolute; inset: 0; background: rgba(13,27,42,0); transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+        .gal-item:hover .gal-overlay { background: rgba(13,27,42,0.4); }
+        .gal-more { position: absolute; inset: 0; background: rgba(13,27,42,0.7); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.2rem; font-weight: 700; }
+
+        /* Investment */
+        .invest-stat { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; transition: var(--transition); }
+        .invest-stat:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+        .invest-stat strong { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+        .invest-stat span { font-size: 0.76rem; color: var(--text-light); }
+
+        /* Sticky Enquiry Sidebar */
+        .sticky-form { position: sticky; top: 120px; }
+
+        @media(max-width:991px){ .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,180px);} .gal-main{grid-row:auto;} .sticky-form{position:static;} .detail-stat-row{flex-direction:column;gap:10px;} .dstat{border-right:none;padding:6px 0;} }
+        @media(max-width:600px){ .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,150px);} .amenity-grid{grid-template-columns:1fr 1fr;} }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "Alliance Bhaskar Malad West",
+      "description": "Explore Alliance Bhaskar in Malad West, Mumbai. RERA approved ready-to-move 2 & 3 BHK apartments. Sizes 520-789 sq.ft, possession Dec 2023.",
+      "url": "https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/",
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mamlatdar Wadi Extention Road, Navy Colony, Near Liberty Garden, Malad West",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Alliance Bhaskar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alliance Bhaskar is a premium residential apartment project by Alliance City Developers located in Malad West, Mumbai. It offers 2 and 3 BHK apartments with possession starting December 2023."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the RERA number of Alliance Bhaskar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The RERA number for Alliance Bhaskar is P51800028213."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the possession date of Alliance Bhaskar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The possession date for Alliance Bhaskar is scheduled for December 2023. It is a ready-to-move project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities are offered at Alliance Bhaskar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alliance Bhaskar offers amenities including 24x7 Water Supply, Open Car Parking, Storm Water Drains, Landscaping & Tree Planting, Open Parking, Water Conservation/Rain water Harvesting, Electrical meter Room, Fire Fighting System, and Sewage Treatment Plant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Alliance Bhaskar located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alliance Bhaskar is located at Mamlatdar Wadi Extention Road, Navy Colony, Near Liberty Garden, Malad West, in the Western Suburbs of Mumbai."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the configurations available at Alliance Bhaskar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alliance Bhaskar offers 2 BHK and 3 BHK apartments with sizes ranging from 520 sq.ft to 789 sq.ft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price range of Alliance Bhaskar apartments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The price range for Alliance Bhaskar apartments is on request. Please contact us for the latest pricing and availability."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "UpcomingProp.com",
+      "url": "https://upcomingprop.com",
+      "logo": "https://upcomingprop.com/images/fevicon.png",
+      "description": "India's #1 Trusted Property Hub. Find verified upcoming, new launch, and ready-to-move projects across India.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<div id="preloader"><div class="pre-inner"><div class="pre-logo"><span>Upcoming</span><span style="color:var(--accent)">Prop</span>.com</div><div class="pre-bar"><div class="pre-fill"></div></div></div></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span class="logo-up">Upcoming</span><span class="logo-prop">Prop</span><span class="logo-dot">.com</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cities/">Cities</a></li>
+                <li class="nav-item"><a class="nav-link" href="/developers/">Developers</a></li>
+                <li class="nav-item"><a class="nav-link active-page" href="/">Projects</a></li>
+                <li class="nav-item ms-lg-2"><button class="btn-nav-cta" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-phone-alt me-1"></i>Get Expert Advice</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- DETAIL HERO -->
+<section class="detail-hero">
+    <div class="container">
+        <div class="breadcrumb-custom">
+            <a href="/">Home</a><i class="fa fa-chevron-right"></i>
+            <a href="/alliance-developers/">Alliance Developers</a><i class="fa fa-chevron-right"></i>
+            <a href="/alliance-developers/mumbai/">Mumbai</a><i class="fa fa-chevron-right"></i>
+            <span>Alliance Bhaskar Malad West</span>
+        </div>
+        <div class="row align-items-center g-4">
+            <!-- LEFT: Content -->
+            <div class="col-lg-6">
+                <div class="hero-badge-row">
+                    <span class="hbadge hbadge-green"><i class="fa fa-check-circle me-1"></i>Ready to Move</span>
+                    <span class="hbadge hbadge-gold"><i class="fa fa-rocket me-1"></i>RERA Approved</span>
+                    <span class="hbadge hbadge-blue"><i class="fa fa-shield-alt me-1"></i>Verified</span>
+                </div>
+                <h1 class="proj-title-hero">Alliance Bhaskar Malad West</h1>
+                <p class="proj-loc-hero"><i class="fa fa-map-marker-alt"></i>Mamlatdar Wadi Extention Road, Navy Colony, Near Liberty Garden, Malad West, Western Suburbs, Mumbai, Maharashtra</p>
+                <div class="detail-stat-row">
+                    <div class="dstat"><span class="dstat-val">On Request*</span><span class="dstat-lbl">Starting Price</span></div>
+                    <div class="dstat"><span class="dstat-val">520-789 Sq.Ft.</span><span class="dstat-lbl">Apartment Sizes</span></div>
+                    <div class="dstat"><span class="dstat-val">2,3 BHK</span><span class="dstat-lbl">Configurations</span></div>
+                    <div class="dstat"><span class="dstat-val">Dec 2023</span><span class="dstat-lbl">Possession</span></div>
+                    <div class="dstat"><span class="dstat-val">14 Units</span><span class="dstat-lbl">Exclusive Project</span></div>
+                </div>
+                <div class="detail-cta-row">
+                    <button class="btn-accent" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-download me-2"></i>Download Brochure</button>
+                    <button class="btn-outline-white" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-rupee-sign me-2"></i>Get Investment Details</button>
+                    <button class="btn-outline-white" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-calendar me-2"></i>Book Site Visit</button>
+                </div>
+            </div>
+
+            <!-- RIGHT: Banner Image -->
+            <div class="col-lg-6">
+                <div class="hero-banner-img">
+                    <img src="/images/banner/alliance-bhaskar-malad-west.webp" alt="Alliance Bhaskar Malad West" class="img-fluid rounded-4 shadow-lg">
+                    <div class="banner-tag">
+                        <i class="fa fa-play-circle"></i> Virtual Tour
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- STICKY TAB NAV -->
+<div class="proj-tab-nav">
+    <div class="container">
+        <button class="ptab active" data-target="overview">Overview</button>
+        <button class="ptab" data-target="highlights">Highlights</button>
+        <button class="ptab" data-target="price">Investment Details</button>
+        <button class="ptab" data-target="floorplans">Unit Plans</button>
+        <button class="ptab" data-target="amenities">Amenities</button>
+        <button class="ptab" data-target="location">Location</button>
+        <button class="ptab" data-target="gallery">Gallery</button>
+        <button class="ptab" data-target="investment">Investment</button>
+        <button class="ptab" data-target="developer">Developer</button>
+        <button class="ptab" data-target="faqs">FAQs</button>
+    </div>
+</div>
+
+<!-- MAIN BODY -->
+<div class="container" style="padding-top:36px;padding-bottom:60px">
+    <div class="row g-5">
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-8">
+
+            <!-- OVERVIEW -->
+            <div class="detail-section" id="overview">
+                <span class="sec-tag">Project Overview</span>
+                <h2 class="sec-title mb-3">Overview <span>Alliance Bhaskar Malad West</span></h2>
+                <p style="text-align: justify;"><strong>Alliance Bhaskar</strong> is a premier residential apartment project situated in the sought-after locality of Malad West, one of Mumbai's most developed western suburbs. Developed by the renowned <strong>Alliance City Developers</strong>, this exclusive project offers a boutique living experience with 14 meticulously designed apartments. Featuring spacious 2 and 3 BHK configurations ranging from 520 to 789 square feet, Alliance Bhaskar is crafted for discerning homebuyers seeking luxury, comfort, and convenience in a prime Mumbai location. The project's strategic positioning near Liberty Garden in Malad West ensures seamless connectivity to major business hubs, entertainment zones, and social infrastructure, making it an ideal choice for families and professionals alike.</p>
+<p style="text-align: justify;">The architectural design of Alliance Bhaskar combines modern aesthetics with functional living spaces, maximizing natural light and ventilation in every apartment. Each residence is thoughtfully planned to offer a harmonious blend of style and practicality, making it an ideal choice for those seeking a ready-to-move home in Mumbai. Located close to the Malad railway station, Western Express Highway, and the upcoming Mith Chowky Metro Station, the project offers a serene living environment while keeping you connected to the city's vibrant energy. With Alliance City Developers' legacy of trust and quality, <span style="text-decoration: underline;"><strong><a href="https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/" target="_blank">Alliance Bhaskar</a></strong></span> is a landmark address in Mumbai's real estate landscape.</p>
+<p style="text-align: justify;">Malad West is renowned for its excellent social infrastructure, including top-rated schools like Atharva Institute of Management Studies and Orchid International School, world-class hospitals such as Thunga Hospital and CritiCare Asia, and easy access to shopping destinations like Infiniti Mall. The neighborhood's vibrant lifestyle, coupled with its proximity to the Mumbai International Airport and major commercial districts, makes it a preferred choice for those who value both luxury and convenience. Whether you are looking for a dream home or a high-growth investment, Alliance Bhaskar offers exceptional value and long-term appreciation in one of Mumbai's most prestigious locations.</p>
+<div class="row g-3 mt-3">
+                    <div class="col-6 col-md-3"><div class="about-stat"><strong>Alliance City Developers</strong><span>Developer</span></div></div>
+                    <div class="col-6 col-md-3"><div class="about-stat"><strong>On Request*</strong><span>Starting Price</span></div></div>
+                    <div class="col-6 col-md-3"><div class="about-stat"><strong>1 Building</strong><span>Total Units</span></div></div>
+                    <div class="col-6 col-md-3"><div class="about-stat"><strong>RERA Approved</strong><span>P51800028213</span></div></div>
+                </div>
+            </div>
+
+            <!-- HIGHLIGHTS -->
+            <div class="detail-section" id="highlights">
+                <span class="sec-tag">Key Features</span>
+                <h2 class="sec-title mb-4">Project <span>Highlights</span></h2>
+                <div class="row g-3">
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-map-pin"></i></div><h6>Prime Malad West Location</h6><p>Prestigious western suburb address</p></div></div>
+
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-building"></i></div><h6>Alliance City Developers</h6><p>Trusted name in Mumbai real estate</p></div></div>
+
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-home"></i></div><h6>2-3 BHK Spacious Apartments</h6><p>520-789 sq.ft. premium residences</p></div></div>
+
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-shield-alt"></i></div><h6>RERA Approved Project</h6><p>P51800028213 certified</p></div></div>
+
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-wifi"></i></div><h6>Modern Amenities</h6><p>Open parking, rainwater harvesting & more</p></div></div>
+
+    <div class="col-6 col-md-4"><div class="highlight-card"><div class="highlight-icon"><i class="fa fa-chart-line"></i></div><h6>High Investment Potential</h6><p>Prime western suburbs growth corridor</p></div></div>
+</div>
+            </div>
+
+            <!-- PRICE LIST -->
+            <div class="detail-section" id="price">
+                <span class="sec-tag">Investment Details</span>
+                <h2 class="sec-title mb-3">Pricing &amp; <span>Investment Overview</span></h2>
+                <div class="d-flex gap-2 mb-4 flex-wrap">
+                    <button class="price-tab-btn active" onclick="showPriceTab('all',this)">Investment Details</button>
+                    <!--<button class="price-tab-btn" onclick="showPriceTab('2bhk',this)">2 BHK</button>-->
+                    <!--<button class="price-tab-btn" onclick="showPriceTab('3bhk',this)">3 BHK</button>-->
+                </div>
+                <div style="overflow-x:auto">
+                    <table class="price-table">
+                        <thead><tr><th>Category</th><th>Details</th><th>Status</th><th>Investment</th></tr></thead>
+                        <tbody>
+                            <tr>
+    <td><strong>Starting Price</strong></td>
+    <td>Base Price per Apartment</td>
+    <td>Limited Period Offer</td>
+    <td class="price-tag">On Request*</td>
+</tr>
+
+<tr>
+    <td><strong>Configurations</strong></td>
+    <td>2, 3 BHK Apartments</td>
+    <td>Exclusive Inventory</td>
+    <td class="price-tag">520 - 789 Sq.Ft.</td>
+</tr>
+
+<tr>
+    <td><strong>Unit Sizes</strong></td>
+    <td>Premium Residential Apartments</td>
+    <td>Ready to Move</td>
+    <td class="price-tag">Contact for Price</td>
+</tr>
+
+<tr>
+    <td><strong>Possession</strong></td>
+    <td>December 2023</td>
+    <td>RERA Approved</td>
+    <td class="price-tag">Immediate</td>
+</tr>
+
+<tr>
+    <td><strong>Developer</strong></td>
+    <td>Alliance City Developers</td>
+    <td>Trusted Brand</td>
+    <td class="price-tag">Premium Quality</td>
+</tr>
+
+</tbody>
+                    </table>
+                </div>
+                <p class="price-table-note"><i class="fa fa-info-circle me-1"></i>Prices are indicative and subject to change. GST, stamp duty, and registration charges extra. Contact us for exact pricing and payment plan details.</p>
+                <button class="btn-main mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-file-invoice me-2"></i>Request Detailed Investment Report</button>
+            </div>
+
+            <!-- FLOOR PLANS -->
+            
+            
+            
+            <div class="detail-section" id="floorplans">
+    <span class="sec-tag">Unit Plans</span>
+    <h2 class="sec-title mb-3">Apartment <span>Layouts</span></h2>
+
+    <div class="d-flex gap-2 mb-4 flex-wrap">
+        <button class="fp-tab active" onclick="showFP('fp2bhk',this)">2 BHK (520 sq.ft)</button>
+        <button class="fp-tab" onclick="showFP('fp3bhk',this)">3 BHK (715 sq.ft)</button>
+        <button class="fp-tab" onclick="showFP('fp3bhkL',this)">3 BHK (789 sq.ft)</button>
+    </div>
+
+    <!-- 2 BHK -->
+    <div id="fp2bhk" class="fp-panel active">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="fp-img-wrap">
+                    <img src="/images/floorplanimage (1).webp" alt="2 BHK Apartment Layout Alliance Bhaskar" style="opacity:0.6;filter:grayscale(1)">
+                    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">
+                        <i class="fa fa-lock me-1"></i>Full layout plan available after enquiry
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="fp-info">
+                    <h5 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:14px">2 BHK Premium Apartment</h5>
+                    <div class="fp-info-row"><span>Area</span><span>520 Sq.Ft.</span></div>
+                    <div class="fp-info-row"><span>Category</span><span>2 BHK</span></div>
+                    <div class="fp-info-row"><span>Type</span><span>Residential Apartment</span></div>
+                    <div class="fp-info-row"><span>Status</span><span>Ready to Move</span></div>
+                    <div class="fp-info-row"><span>Price</span><span style="color:var(--accent);font-weight:800">On Request*</span></div>
+                </div>
+                <button class="btn-accent w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                    <i class="fa fa-download me-2"></i>Download Layout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 BHK -->
+    <div id="fp3bhk" class="fp-panel">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="fp-img-wrap">
+                    <img src="/images/floorplanimage (1).webp" alt="3 BHK Apartment Layout Alliance Bhaskar" style="opacity:0.6;filter:grayscale(1)">
+                    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">
+                        <i class="fa fa-lock me-1"></i>Full layout plan available after enquiry
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="fp-info">
+                    <h5 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:14px">3 BHK Luxury Apartment</h5>
+                    <div class="fp-info-row"><span>Area</span><span>715 Sq.Ft.</span></div>
+                    <div class="fp-info-row"><span>Category</span><span>3 BHK</span></div>
+                    <div class="fp-info-row"><span>Type</span><span>Residential Apartment</span></div>
+                    <div class="fp-info-row"><span>Status</span><span>Ready to Move</span></div>
+                    <div class="fp-info-row"><span>Price</span><span style="color:var(--accent);font-weight:800">On Request*</span></div>
+                </div>
+                <button class="btn-accent w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                    <i class="fa fa-download me-2"></i>Download Layout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 BHK Large -->
+    <div id="fp3bhkL" class="fp-panel">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="fp-img-wrap">
+                    <img src="/images/floorplanimage (1).webp" alt="3 BHK Large Apartment Layout Alliance Bhaskar" style="opacity:0.6;filter:grayscale(1)">
+                    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">
+                        <i class="fa fa-lock me-1"></i>Full layout plan available after enquiry
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="fp-info">
+                    <h5 style="font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:14px">3 BHK Premium Apartment</h5>
+                    <div class="fp-info-row"><span>Area</span><span>789 Sq.Ft.</span></div>
+                    <div class="fp-info-row"><span>Category</span><span>3 BHK</span></div>
+                    <div class="fp-info-row"><span>Type</span><span>Residential Apartment</span></div>
+                    <div class="fp-info-row"><span>Status</span><span>Ready to Move</span></div>
+                    <div class="fp-info-row"><span>Price</span><span style="color:var(--accent);font-weight:800">On Request*</span></div>
+                </div>
+                <button class="btn-accent w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                    <i class="fa fa-download me-2"></i>Download Layout
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- AMENITIES -->
+            <div class="detail-section" id="amenities">
+                <span class="sec-tag">World-Class Amenities</span>
+                <h2 class="sec-title mb-4">Project <span>Lifestyle</span></h2>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <h6 style="font-weight:700;color:var(--dark);margin-bottom:12px;font-size:0.88rem"><i class="fa fa-dumbbell me-2" style="color:var(--accent)"></i>Recreation & Wellness</h6>
+                        <div class="amenity-grid" style="grid-template-columns:1fr">
+                            <div class="amenity-item"><i class="fa fa-tree"></i>Landscaping & Tree Planting</div>
+                            <div class="amenity-item"><i class="fa fa-water"></i>Water Conservation & Rainwater Harvesting</div>
+                            <div class="amenity-item"><i class="fa fa-dumbbell"></i>Gymnasium (Nearby)</div>
+                            <div class="amenity-item"><i class="fa fa-park"></i>Liberty Garden (Nearby)</div>
+                            <div class="amenity-item"><i class="fa fa-sun"></i>Open Spaces</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 style="font-weight:700;color:var(--dark);margin-bottom:12px;font-size:0.88rem"><i class="fa fa-shield-alt me-2" style="color:var(--accent)"></i>Safety & Security</h6>
+                        <div class="amenity-grid" style="grid-template-columns:1fr">
+                            <div class="amenity-item"><i class="fa fa-fire-extinguisher"></i>Fire Fighting System</div>
+                            <div class="amenity-item"><i class="fa fa-shield-alt"></i>Fire Protection & Safety Requirements</div>
+                            <div class="amenity-item"><i class="fa fa-video"></i>24x7 Security (Nearby)</div>
+                            <div class="amenity-item"><i class="fa fa-elevator"></i>Lift(s)</div>
+                            <div class="amenity-item"><i class="fa fa-water"></i>24X7 Water Supply</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 style="font-weight:700;color:var(--dark);margin-bottom:12px;font-size:0.88rem"><i class="fa fa-leaf me-2" style="color:var(--accent)"></i>Green & Utility</h6>
+                        <div class="amenity-grid" style="grid-template-columns:1fr">
+                            <div class="amenity-item"><i class="fa fa-recycle"></i>Sewage Treatment Plant</div>
+                            <div class="amenity-item"><i class="fa fa-drain"></i>Storm Water Drains</div>
+                            <div class="amenity-item"><i class="fa fa-bolt"></i>Electrical meter Room</div>
+                            <div class="amenity-item"><i class="fa fa-parking"></i>Open Car Parking</div>
+                            <div class="amenity-item"><i class="fa fa-leaf"></i>Rainwater Harvesting System</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="detail-section" id="location">
+    <span class="sec-tag">Connectivity</span>
+    <h2 class="sec-title mb-4">Location <span>Advantages</span></h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h6 style="font-weight:700;color:var(--dark);margin-bottom:10px;font-size:0.88rem">
+                    <i class="fa fa-road me-2" style="color:var(--accent)"></i>Road & Connectivity
+                </h6>
+                <table class="location-table" style="width:100%;border-collapse:collapse">
+                    <tr><td>Mumbai International Airport</td><td>12-15 km, 25-30 Min</td></tr>
+                    <tr><td>Western Express Highway</td><td>2-3 km, 5-10 Min</td></tr>
+                    <tr><td>Malad Railway Station</td><td>1.5 km, 5-7 Min</td></tr>
+                    <tr><td>Mith Chowky Metro Station (Upcoming)</td><td>0.5 km, 2-3 Min</td></tr>
+                    <tr><td>Versova Bandra Sea Link (Upcoming)</td><td>Nearby, 5 Min</td></tr>
+                </table>
+            </div>
+
+            <div>
+                <h6 style="font-weight:700;color:var(--dark);margin-bottom:10px;font-size:0.88rem">
+                    <i class="fa fa-graduation-cap me-2" style="color:var(--accent)"></i>Education
+                </h6>
+                <table class="location-table" style="width:100%;border-collapse:collapse">
+                    <tr><td>Atharva Institute of Management Studies</td><td>0.5 km, 1-2 min</td></tr>
+                    <tr><td>St. Joseph's School</td><td>1-2 km, 5-10 min</td></tr>
+                    <tr><td>Orchid International School</td><td>1-2 km, 5-10 min</td></tr>
+                    <tr><td>Precious Lil Ones School</td><td>1-2 km, 5-10 min</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h6 style="font-weight:700;color:var(--dark);margin-bottom:10px;font-size:0.88rem">
+                    <i class="fa fa-hospital me-2" style="color:var(--accent)"></i>Healthcare
+                </h6>
+                <table class="location-table" style="width:100%;border-collapse:collapse">
+                    <tr><td>Thunga Hospital</td><td>0.5 km, 1-2 min</td></tr>
+                    <tr><td>CritiCare Asia Multispeciality Hospital</td><td>0.3 km, 1 min</td></tr>
+                    <tr><td>Zenith Hospital</td><td>0.3 km, 1 min</td></tr>
+                    <tr><td>Cloudnine Hospital</td><td>1 km, 3-4 min</td></tr>
+                </table>
+            </div>
+
+            <div>
+                <h6 style="font-weight:700;color:var(--dark);margin-bottom:10px;font-size:0.88rem">
+                    <i class="fa fa-briefcase me-2" style="color:var(--accent)"></i>Employment Hubs
+                </h6>
+                <table class="location-table" style="width:100%;border-collapse:collapse">
+                    <tr><td>Mindspace IT Park</td><td>2-3 km, 5-10 min</td></tr>
+                    <tr><td>Bandra Kurla Complex (BKC)</td><td>15-20 km, 30-40 min</td></tr>
+                    <tr><td>Andheri Business District</td><td>8-10 km, 15-20 min</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-placeholder mt-4">
+        <i class="fa fa-map-marked-alt"></i>
+        <span style="font-size:0.85rem;font-weight:600">Alliance Bhaskar, Malad West, Mumbai, Maharashtra</span>
+        <span style="font-size:0.76rem">Strategically located in Mumbai's prime western suburb</span>
+        <button class="btn-outline btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal">Get Exact Location</button>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2 mt-3">
+        <span class="loc-chip active"><i class="fa fa-circle"></i>Malad West</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Navy Colony</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Liberty Garden</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Western Express Highway</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Mith Chowky Metro</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Mumbai Airport</span>
+        <span class="loc-chip"><i class="fa fa-circle"></i>Infiniti Mall</span>
+    </div>
+</div>
+
+            <!-- GALLERY -->
+            <div class="detail-section" id="gallery">
+                <span class="sec-tag">Visuals</span>
+                <h2 class="sec-title mb-4">Project <span>Gallery</span></h2>
+                <div class="gallery-grid">
+                    <div class="gal-item gal-main"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Alliance Bhaskar Mumbai"><div class="gal-overlay"></div></div>
+                    <div class="gal-item"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80" alt="Premium Apartments Malad West"><div class="gal-overlay"></div></div>
+                    <div class="gal-item"><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=400&q=80" alt="Luxury 2 BHK Mumbai"><div class="gal-overlay"></div></div>
+                    <div class="gal-item"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80" alt="Modern Amenities Malad"><div class="gal-overlay"></div></div>
+                    <div class="gal-item" style="position:relative"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80" alt="Alliance Bhaskar Gallery"><div class="gal-more">+12 More</div></div>
+                </div>
+                <button class="btn-outline mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-images me-2"></i>View Full Gallery</button>
+            </div>
+
+            <!-- INVESTMENT -->
+            <div class="detail-section" id="investment">
+                <span class="sec-tag">Investment Analysis</span>
+                <h2 class="sec-title mb-4">Investment <span>Perspective</span></h2>
+                <div class="row g-3 mb-4">
+    <div class="col-6 col-md-3"><div class="invest-stat"><strong>High</strong><span>Appreciation Potential in Malad West</span></div></div>
+    
+    <div class="col-6 col-md-3"><div class="invest-stat"><strong>RERA</strong><span>Approved Project P51800028213</span></div></div>
+    
+    <div class="col-6 col-md-3"><div class="invest-stat"><strong>Trusted</strong><span>Alliance City Developers</span></div></div>
+    
+    <div class="col-6 col-md-3"><div class="invest-stat"><strong>Premium</strong><span>Western Suburbs Address</span></div></div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="about-dev-section" style="background:var(--bg-light);border-radius:var(--radius);padding:20px">
+            <h5 style="font-size:0.92rem;font-weight:700;color:var(--dark);margin-bottom:10px">
+                <i class="fa fa-chart-bar me-2" style="color:var(--accent)"></i>Why Invest Here?
+            </h5>
+            <p style="font-size:0.82rem;color:var(--text-light);line-height:1.7;margin:0">
+                Malad West is one of Mumbai's most premium residential addresses, offering excellent connectivity, top-tier social infrastructure, and a prestigious lifestyle. With the upcoming Mith Chowky Metro Station, the Versova Bandra Sea Link, and the area's continuous development, investing in Alliance Bhaskar offers significant long-term value and appreciation potential.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="about-dev-section" style="background:var(--bg-light);border-radius:var(--radius);padding:20px">
+            <h5 style="font-size:0.92rem;font-weight:700;color:var(--dark);margin-bottom:10px">
+                <i class="fa fa-road me-2" style="color:var(--accent)"></i>Growth Drivers
+            </h5>
+            <p style="font-size:0.82rem;color:var(--text-light);line-height:1.7;margin:0">
+                Proximity to Mumbai Airport, the upcoming metro line, Mindspace IT Park, and the area's reputation as a commercial and residential hub make Malad West a prime investment destination. The limited inventory of premium apartments and the brand legacy of Alliance City Developers further enhance the project's attractiveness.
+            </p>
+        </div>
+    </div>
+
+                </div>
+            </div>
+
+            <!-- DEVELOPER -->
+            <div class="detail-section" id="developer">
+                <span class="sec-tag">About Builder</span>
+                <h2 class="sec-title mb-3">About <span>Alliance City Developers</span></h2>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-8">
+                        <p style="text-align: justify;"><strong>Alliance City Developers</strong> is a premier real estate company in Mumbai with a strong focus on delivering projects that meet the highest standards of quality. With a portfolio of 16 successful projects, the company has consistently made great strides in fulfilling the dreams of a large number of esteemed customers. Alliance City Developers is armed with a team of talented professionals who are highly knowledgeable and proficient in the real estate sector, always ready to deliver more than what has been asked for.</p>
+<p style="text-align: justify;">Alliance City Developers' philosophy revolves around creating sustainable communities that enhance the quality of life. Their projects are meticulously planned, incorporating the latest trends in architecture and design. <span style="text-decoration: underline;"><strong><a href="https://upcomingprop.com/alliance-developers/" target="_blank">Alliance Upcoming Projects</a></strong></span> exemplifies their vision of offering premium residential apartments in strategic locations. With a customer-centric approach and a track record of delivering successful projects, Alliance City Developers continues to be a preferred choice for discerning buyers in Mumbai.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row g-2">
+                            <div class="col-6"><div class="about-stat"><strong>16+</strong><span>Projects Delivered</span></div></div>
+                            <div class="col-6"><div class="about-stat"><strong>Trusted</strong><span>Developer Brand</span></div></div>
+                            <div class="col-6"><div class="about-stat"><strong>Premium</strong><span>Mumbai Locations</span></div></div>
+                            <div class="col-6"><div class="about-stat"><strong>Customer</strong><span>Centric Approach</span></div></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/alliance-developers/" class="btn-outline mt-4"><i class="fa fa-building me-2"></i>View All Alliance Projects</a>
+            </div>
+
+            <!-- TESTIMONIALS -->
+            <div class="detail-section">
+                <span class="sec-tag">Reviews</span>
+                <h2 class="sec-title mb-4">Customer <span>Testimonials</span></h2>
+                <div class="swiper testiSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><div class="testi-card"><div class="testi-quote"><i class="fa fa-quote-left"></i></div><p>"We were looking for a premium ready-to-move apartment in a prime Mumbai location. Alliance Bhaskar's Malad West address and the brand value of Alliance City Developers gave us the confidence to invest."</p><div class="testi-user"><div class="tuser-av">A</div><div><strong>Aditya & Neha</strong><span>Homebuyers, Mumbai</span></div><div class="tuser-stars ms-auto"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></div></div></div>
+                        <div class="swiper-slide"><div class="testi-card"><div class="testi-quote"><i class="fa fa-quote-left"></i></div><p>"Alliance Bhaskar is an excellent ready-to-move project in Malad West. With Alliance's legacy of quality and the RERA approval, we are confident about the appreciation potential of this address."</p><div class="testi-user"><div class="tuser-av">S</div><div><strong>Sanjay & Priya</strong><span>Investors, Mumbai</span></div><div class="tuser-stars ms-auto"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div></div></div></div>
+                        <div class="swiper-slide"><div class="testi-card"><div class="testi-quote"><i class="fa fa-quote-left"></i></div><p>"Malad West has always been our preferred location for a home. Alliance Bhaskar's luxury offerings and strategic location make it the perfect choice for our family."</p><div class="testi-user"><div class="tuser-av">R</div><div><strong>Rohit & Sneha</strong><span>First-Time Investors</span></div><div class="tuser-stars ms-auto"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></div></div></div>
+                    </div>
+                    <div class="swiper-pagination mt-3"></div>
+                </div>
+            </div>
+
+            <!-- FAQS -->
+            <div class="detail-section" id="faqs">
+                <span class="sec-tag">FAQs</span>
+                <h2 class="sec-title mb-4">Frequently Asked <span>Questions</span></h2>
+                <div class="accordion" id="detailFaq">
+                    <div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#df1">
+            What is Alliance Bhaskar?
+        </button>
+    </h2>
+    <div id="df1" class="accordion-collapse collapse show" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            Alliance Bhaskar is a premium residential apartment project by Alliance City Developers located in Malad West, Mumbai. It offers 2 and 3 BHK apartments with possession starting December 2023.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df2">
+            What is the RERA number of Alliance Bhaskar?
+        </button>
+    </h2>
+    <div id="df2" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            The RERA number for Alliance Bhaskar is P51800028213.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df3">
+            What is the possession date of Alliance Bhaskar?
+        </button>
+    </h2>
+    <div id="df3" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            The possession date for Alliance Bhaskar is scheduled for December 2023. It is a ready-to-move project.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df4">
+            What amenities are offered at Alliance Bhaskar?
+        </button>
+    </h2>
+    <div id="df4" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            Alliance Bhaskar offers amenities including 24x7 Water Supply, Open Car Parking, Storm Water Drains, Landscaping & Tree Planting, Open Parking, Water Conservation/Rain water Harvesting, Electrical meter Room, Fire Fighting System, and Sewage Treatment Plant.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df5">
+            Where is Alliance Bhaskar located?
+        </button>
+    </h2>
+    <div id="df5" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            Alliance Bhaskar is located at Mamlatdar Wadi Extention Road, Navy Colony, Near Liberty Garden, Malad West, in the Western Suburbs of Mumbai.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df6">
+            What are the configurations available at Alliance Bhaskar?
+        </button>
+    </h2>
+    <div id="df6" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            Alliance Bhaskar offers 2 BHK and 3 BHK apartments with sizes ranging from 520 sq.ft to 789 sq.ft.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item faq-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#df7">
+            What is the price range of Alliance Bhaskar apartments?
+        </button>
+    </h2>
+    <div id="df7" class="accordion-collapse collapse" data-bs-parent="#detailFaq">
+        <div class="accordion-body faq-body">
+            The price range for Alliance Bhaskar apartments is on request. Please contact us for the latest pricing and availability.
+        </div>
+    </div>
+</div>
+</div>
+            </div>
+
+            <!-- NEARBY PROJECTS -->
+            <div class="detail-section">
+                <span class="sec-tag">Similar Projects</span>
+                <h2 class="sec-title mb-4">Nearby <span>Projects</span></h2>
+                <div class="row g-3">
+                    <div class="col-md-4"><div class="proj-card"><div class="proj-img-wrap" style="height:160px"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80" alt="Gurukrupa Marina Enclave Malad West" loading="lazy"><span class="proj-badge badge-new">Ready to Move</span></div><div class="proj-body"><div class="proj-dev">Gurukrupa Group</div><h5 class="proj-name" style="font-size:0.88rem">Gurukrupa Marina Enclave</h5><p class="proj-loc" style="font-size:0.74rem"><i class="fa fa-map-marker-alt"></i>Malad West, Mumbai</p><div class="proj-footer"><div class="proj-price" style="font-size:0.85rem">₹1.61 Cr*</div><a href="/" class="proj-action">View</a></div></div></div></div>
+                    <div class="col-md-4"><div class="proj-card"><div class="proj-img-wrap" style="height:160px"><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=400&q=80" alt="Rishabraj Ceramont Malad West" loading="lazy"><span class="proj-badge badge-ongoing">Under Construction</span></div><div class="proj-body"><div class="proj-dev">Rishabraj Group</div><h5 class="proj-name" style="font-size:0.88rem">Rishabraj Ceramont</h5><p class="proj-loc" style="font-size:0.74rem"><i class="fa fa-map-marker-alt"></i>Malad West, Mumbai</p><div class="proj-footer"><div class="proj-price" style="font-size:0.85rem">₹1.79 Cr*</div><a href="/" class="proj-action">View</a></div></div></div></div>
+                    <div class="col-md-4"><div class="proj-card"><div class="proj-img-wrap" style="height:160px"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80" alt="Gurukrupa Marina Enclave Wings Q And R" loading="lazy"><span class="proj-badge badge-upcoming">Ready to Move</span></div><div class="proj-body"><div class="proj-dev">Gurukrupa Group</div><h5 class="proj-name" style="font-size:0.88rem">Gurukrupa Marina Enclave Wings Q & R</h5><p class="proj-loc" style="font-size:0.74rem"><i class="fa fa-map-marker-alt"></i>Malad West, Mumbai</p><div class="proj-footer"><div class="proj-price" style="font-size:0.85rem">₹1.21 Cr*</div><a href="/" class="proj-action">View</a></div></div></div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT STICKY FORM -->
+        <div class="col-lg-4">
+            <div class="sticky-form">
+                <div class="form-card">
+                    <h4>Get Exclusive Offers &amp; Latest Price Details</h4>
+                    <p class="form-sub">Our advisor will call you within 15 minutes</p>
+                    <form action="/mail.php" method="post" name="form" autocomplete="off">
+                        <div class="row g-3">
+                            <div class="col-12"><label class="form-label-custom">Name *</label><input type="text" class="form-control-custom" name="name" placeholder="Full Name" required></div>
+                            <div class="col-12"><label class="form-label-custom">Email *</label><input type="email" class="form-control-custom" name="email" placeholder="Email ID" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"></div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Phone *</label>
+                                <div class="contact_number">
+                                    <select name="country_name" class="countryCode">
+                                <option data-countrycode="IN" value="91">India (+91)</option>
+                                                    <optgroup label="Other countries">
+                                                        <option data-countrycode="DZ" value="213">Algeria (+213)</option>
+                                                        <option data-countrycode="AD" value="376">Andorra (+376)</option>
+                                                        <option data-countrycode="AO" value="244">Angola (+244)</option>
+                                                        <option data-countrycode="AI" value="1264">Anguilla (+1264)</option>
+                                                        <option data-countrycode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                                                        <option data-countrycode="AR" value="54">Argentina (+54)</option>
+                                                        <option data-countrycode="AM" value="374">Armenia (+374)</option>
+                                                        <option data-countrycode="AW" value="297">Aruba (+297)</option>
+                                                        <option data-countrycode="AU" value="61">Australia (+61)</option>
+                                                        <option data-countrycode="AT" value="43">Austria (+43)</option>
+                                                        <option data-countrycode="AZ" value="994">Azerbaijan (+994)</option>
+                                                        <option data-countrycode="BS" value="1242">Bahamas (+1242)</option>
+                                                        <option data-countrycode="BH" value="973">Bahrain (+973)</option>
+                                                        <option data-countrycode="BD" value="880">Bangladesh (+880)</option>
+                                                        <option data-countrycode="BB" value="1246">Barbados (+1246)</option>
+                                                        <option data-countrycode="BY" value="375">Belarus (+375)</option>
+                                                        <option data-countrycode="BE" value="32">Belgium (+32)</option>
+                                                        <option data-countrycode="BZ" value="501">Belize (+501)</option>
+                                                        <option data-countrycode="BJ" value="229">Benin (+229)</option>
+                                                        <option data-countrycode="BM" value="1441">Bermuda (+1441)</option>
+                                                        <option data-countrycode="BT" value="975">Bhutan (+975)</option>
+                                                        <option data-countrycode="BO" value="591">Bolivia (+591)</option>
+                                                        <option data-countrycode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                                                        <option data-countrycode="BW" value="267">Botswana (+267)</option>
+                                                        <option data-countrycode="BR" value="55">Brazil (+55)</option>
+                                                        <option data-countrycode="BN" value="673">Brunei (+673)</option>
+                                                        <option data-countrycode="BG" value="359">Bulgaria (+359)</option>
+                                                        <option data-countrycode="BF" value="226">Burkina Faso (+226)</option>
+                                                        <option data-countrycode="BI" value="257">Burundi (+257)</option>
+                                                        <option data-countrycode="KH" value="855">Cambodia (+855)</option>
+                                                        <option data-countrycode="CM" value="237">Cameroon (+237)</option>
+                                                        <option data-countrycode="CA" value="1">Canada (+1)</option>
+                                                        <option data-countrycode="CV" value="238">Cape Verde Islands (+238)</option>
+                                                        <option data-countrycode="KY" value="1345">Cayman Islands (+1345)</option>
+                                                        <option data-countrycode="CF" value="236">Central African Republic (+236)</option>
+                                                        <option data-countrycode="CL" value="56">Chile (+56)</option>
+                                                        <option data-countrycode="CN" value="86">China (+86)</option>
+                                                        <option data-countrycode="CO" value="57">Colombia (+57)</option>
+                                                        <option data-countrycode="KM" value="269">Comoros (+269)</option>
+                                                        <option data-countrycode="CG" value="242">Congo (+242)</option>
+                                                        <option data-countrycode="CK" value="682">Cook Islands (+682)</option>
+                                                        <option data-countrycode="CR" value="506">Costa Rica (+506)</option>
+                                                        <option data-countrycode="HR" value="385">Croatia (+385)</option>
+                                                        <option data-countrycode="CU" value="53">Cuba (+53)</option>
+                                                        <option data-countrycode="CY" value="90392">Cyprus North (+90392)</option>
+                                                        <option data-countrycode="CY" value="357">Cyprus South (+357)</option>
+                                                        <option data-countrycode="CZ" value="42">Czech Republic (+42)</option>
+                                                        <option data-countrycode="DK" value="45">Denmark (+45)</option>
+                                                        <option data-countrycode="DJ" value="253">Djibouti (+253)</option>
+                                                        <option data-countrycode="DM" value="1809">Dominica (+1809)</option>
+                                                        <option data-countrycode="DO" value="1809">Dominican Republic (+1809)</option>
+                                                        <option data-countrycode="EC" value="593">Ecuador (+593)</option>
+                                                        <option data-countrycode="EG" value="20">Egypt (+20)</option>
+                                                        <option data-countrycode="SV" value="503">El Salvador (+503)</option>
+                                                        <option data-countrycode="GQ" value="240">Equatorial Guinea (+240)</option>
+                                                        <option data-countrycode="ER" value="291">Eritrea (+291)</option>
+                                                        <option data-countrycode="EE" value="372">Estonia (+372)</option>
+                                                        <option data-countrycode="ET" value="251">Ethiopia (+251)</option>
+                                                        <option data-countrycode="FK" value="500">Falkland Islands (+500)</option>
+                                                        <option data-countrycode="FO" value="298">Faroe Islands (+298)</option>
+                                                        <option data-countrycode="FJ" value="679">Fiji (+679)</option>
+                                                        <option data-countrycode="FI" value="358">Finland (+358)</option>
+                                                        <option data-countrycode="FR" value="33">France (+33)</option>
+                                                        <option data-countrycode="GF" value="594">French Guiana (+594)</option>
+                                                        <option data-countrycode="PF" value="689">French Polynesia (+689)</option>
+                                                        <option data-countrycode="GA" value="241">Gabon (+241)</option>
+                                                        <option data-countrycode="GM" value="220">Gambia (+220)</option>
+                                                        <option data-countrycode="GE" value="7880">Georgia (+7880)</option>
+                                                        <option data-countrycode="DE" value="49">Germany (+49)</option>
+                                                        <option data-countrycode="GH" value="233">Ghana (+233)</option>
+                                                        <option data-countrycode="GI" value="350">Gibraltar (+350)</option>
+                                                        <option data-countrycode="GR" value="30">Greece (+30)</option>
+                                                        <option data-countrycode="GL" value="299">Greenland (+299)</option>
+                                                        <option data-countrycode="GD" value="1473">Grenada (+1473)</option>
+                                                        <option data-countrycode="GP" value="590">Guadeloupe (+590)</option>
+                                                        <option data-countrycode="GU" value="671">Guam (+671)</option>
+                                                        <option data-countrycode="GT" value="502">Guatemala (+502)</option>
+                                                        <option data-countrycode="GN" value="224">Guinea (+224)</option>
+                                                        <option data-countrycode="GW" value="245">Guinea - Bissau (+245)</option>
+                                                        <option data-countrycode="GY" value="592">Guyana (+592)</option>
+                                                        <option data-countrycode="HT" value="509">Haiti (+509)</option>
+                                                        <option data-countrycode="HN" value="504">Honduras (+504)</option>
+                                                        <option data-countrycode="HK" value="852">Hong Kong (+852)</option>
+                                                        <option data-countrycode="HU" value="36">Hungary (+36)</option>
+                                                        <option data-countrycode="IS" value="354">Iceland (+354)</option>
+                                                        <option data-countrycode="ID" value="62">Indonesia (+62)</option>
+                                                        <option data-countrycode="IR" value="98">Iran (+98)</option>
+                                                        <option data-countrycode="IQ" value="964">Iraq (+964)</option>
+                                                        <option data-countrycode="IE" value="353">Ireland (+353)</option>
+                                                        <option data-countrycode="IL" value="972">Israel (+972)</option>
+                                                        <option data-countrycode="IT" value="39">Italy (+39)</option>
+                                                        <option data-countrycode="JM" value="1876">Jamaica (+1876)</option>
+                                                        <option data-countrycode="JP" value="81">Japan (+81)</option>
+                                                        <option data-countrycode="JO" value="962">Jordan (+962)</option>
+                                                        <option data-countrycode="KZ" value="7">Kazakhstan (+7)</option>
+                                                        <option data-countrycode="KE" value="254">Kenya (+254)</option>
+                                                        <option data-countrycode="KI" value="686">Kiribati (+686)</option>
+                                                        <option data-countrycode="KP" value="850">Korea North (+850)</option>
+                                                        <option data-countrycode="KR" value="82">Korea South (+82)</option>
+                                                        <option data-countrycode="KW" value="965">Kuwait (+965)</option>
+                                                        <option data-countrycode="KG" value="996">Kyrgyzstan (+996)</option>
+                                                        <option data-countrycode="LA" value="856">Laos (+856)</option>
+                                                        <option data-countrycode="LV" value="371">Latvia (+371)</option>
+                                                        <option data-countrycode="LB" value="961">Lebanon (+961)</option>
+                                                        <option data-countrycode="LS" value="266">Lesotho (+266)</option>
+                                                        <option data-countrycode="LR" value="231">Liberia (+231)</option>
+                                                        <option data-countrycode="LY" value="218">Libya (+218)</option>
+                                                        <option data-countrycode="LI" value="417">Liechtenstein (+417)</option>
+                                                        <option data-countrycode="LT" value="370">Lithuania (+370)</option>
+                                                        <option data-countrycode="LU" value="352">Luxembourg (+352)</option>
+                                                        <option data-countrycode="MO" value="853">Macao (+853)</option>
+                                                        <option data-countrycode="MK" value="389">Macedonia (+389)</option>
+                                                        <option data-countrycode="MG" value="261">Madagascar (+261)</option>
+                                                        <option data-countrycode="MW" value="265">Malawi (+265)</option>
+                                                        <option data-countrycode="MY" value="60">Malaysia (+60)</option>
+                                                        <option data-countrycode="MV" value="960">Maldives (+960)</option>
+                                                        <option data-countrycode="ML" value="223">Mali (+223)</option>
+                                                        <option data-countrycode="MT" value="356">Malta (+356)</option>
+                                                        <option data-countrycode="MH" value="692">Marshall Islands (+692)</option>
+                                                        <option data-countrycode="MQ" value="596">Martinique (+596)</option>
+                                                        <option data-countrycode="MR" value="222">Mauritania (+222)</option>
+                                                        <option data-countrycode="YT" value="269">Mayotte (+269)</option>
+                                                        <option data-countrycode="MX" value="52">Mexico (+52)</option>
+                                                        <option data-countrycode="FM" value="691">Micronesia (+691)</option>
+                                                        <option data-countrycode="MD" value="373">Moldova (+373)</option>
+                                                        <option data-countrycode="MC" value="377">Monaco (+377)</option>
+                                                        <option data-countrycode="MN" value="976">Mongolia (+976)</option>
+                                                        <option data-countrycode="MS" value="1664">Montserrat (+1664)</option>
+                                                        <option data-countrycode="MA" value="212">Morocco (+212)</option>
+                                                        <option data-countrycode="MZ" value="258">Mozambique (+258)</option>
+                                                        <option data-countrycode="MN" value="95">Myanmar (+95)</option>
+                                                        <option data-countrycode="NA" value="264">Namibia (+264)</option>
+                                                        <option data-countrycode="NR" value="674">Nauru (+674)</option>
+                                                        <option data-countrycode="NP" value="977">Nepal (+977)</option>
+                                                        <option data-countrycode="NL" value="31">Netherlands (+31)</option>
+                                                        <option data-countrycode="NC" value="687">New Caledonia (+687)</option>
+                                                        <option data-countrycode="NZ" value="64">New Zealand (+64)</option>
+                                                        <option data-countrycode="NI" value="505">Nicaragua (+505)</option>
+                                                        <option data-countrycode="NE" value="227">Niger (+227)</option>
+                                                        <option data-countrycode="NG" value="234">Nigeria (+234)</option>
+                                                        <option data-countrycode="NU" value="683">Niue (+683)</option>
+                                                        <option data-countrycode="NF" value="672">Norfolk Islands (+672)</option>
+                                                        <option data-countrycode="NP" value="670">Northern Marianas (+670)</option>
+                                                        <option data-countrycode="NO" value="47">Norway (+47)</option>
+                                                        <option data-countrycode="OM" value="968">Oman (+968)</option>
+                                                        <option data-countrycode="PW" value="680">Palau (+680)</option>
+                                                        <option data-countrycode="PA" value="507">Panama (+507)</option>
+                                                        <option data-countrycode="PG" value="675">Papua New Guinea (+675)</option>
+                                                        <option data-countrycode="PY" value="595">Paraguay (+595)</option>
+                                                        <option data-countrycode="PE" value="51">Peru (+51)</option>
+                                                        <option data-countrycode="PH" value="63">Philippines (+63)</option>
+                                                        <option data-countrycode="PL" value="48">Poland (+48)</option>
+                                                        <option data-countrycode="PT" value="351">Portugal (+351)</option>
+                                                        <option data-countrycode="PR" value="1787">Puerto Rico (+1787)</option>
+                                                        <option data-countrycode="QA" value="974">Qatar (+974)</option>
+                                                        <option data-countrycode="RE" value="262">Reunion (+262)</option>
+                                                        <option data-countrycode="RO" value="40">Romania (+40)</option>
+                                                        <option data-countrycode="RU" value="7">Russia (+7)</option>
+                                                        <option data-countrycode="RW" value="250">Rwanda (+250)</option>
+                                                        <option data-countrycode="SM" value="378">San Marino (+378)</option>
+                                                        <option data-countrycode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                                                        <option data-countrycode="SA" value="966">Saudi Arabia (+966)</option>
+                                                        <option data-countrycode="SN" value="221">Senegal (+221)</option>
+                                                        <option data-countrycode="CS" value="381">Serbia (+381)</option>
+                                                        <option data-countrycode="SC" value="248">Seychelles (+248)</option>
+                                                        <option data-countrycode="SL" value="232">Sierra Leone (+232)</option>
+                                                        <option data-countrycode="SG" value="65">Singapore (+65)</option>
+                                                        <option data-countrycode="SK" value="421">Slovak Republic (+421)</option>
+                                                        <option data-countrycode="SI" value="386">Slovenia (+386)</option>
+                                                        <option data-countrycode="SB" value="677">Solomon Islands (+677)</option>
+                                                        <option data-countrycode="SO" value="252">Somalia (+252)</option>
+                                                        <option data-countrycode="ZA" value="27">South Africa (+27)</option>
+                                                        <option data-countrycode="ES" value="34">Spain (+34)</option>
+                                                        <option data-countrycode="LK" value="94">Sri Lanka (+94)</option>
+                                                        <option data-countrycode="SH" value="290">St. Helena (+290)</option>
+                                                        <option data-countrycode="KN" value="1869">St. Kitts (+1869)</option>
+                                                        <option data-countrycode="SC" value="1758">St. Lucia (+1758)</option>
+                                                        <option data-countrycode="SD" value="249">Sudan (+249)</option>
+                                                        <option data-countrycode="SR" value="597">Suriname (+597)</option>
+                                                        <option data-countrycode="SZ" value="268">Swaziland (+268)</option>
+                                                        <option data-countrycode="SE" value="46">Sweden (+46)</option>
+                                                        <option data-countrycode="CH" value="41">Switzerland (+41)</option>
+                                                        <option data-countrycode="SI" value="963">Syria (+963)</option>
+                                                        <option data-countrycode="TW" value="886">Taiwan (+886)</option>
+                                                        <option data-countrycode="TJ" value="7">Tajikstan (+7)</option>
+                                                        <option data-countrycode="TH" value="66">Thailand (+66)</option>
+                                                        <option data-countrycode="TG" value="228">Togo (+228)</option>
+                                                        <option data-countrycode="TO" value="676">Tonga (+676)</option>
+                                                        <option data-countrycode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                                                        <option data-countrycode="TN" value="216">Tunisia (+216)</option>
+                                                        <option data-countrycode="TR" value="90">Turkey (+90)</option>
+                                                        <option data-countrycode="TM" value="7">Turkmenistan (+7)</option>
+                                                        <option data-countrycode="TM" value="993">Turkmenistan (+993)</option>
+                                                        <option data-countrycode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+                                                        <option data-countrycode="TV" value="688">Tuvalu (+688)</option>
+                                                        <option data-countrycode="UG" value="256">Uganda (+256)</option>
+                                                        <option data-countrycode="GB" value="44">UK (+44)</option>
+                                                        <option data-countrycode="UA" value="380">Ukraine (+380)</option>
+                                                        <option data-countrycode="AE" value="971">United Arab Emirates (+971)</option>
+                                                        <option data-countrycode="UY" value="598">Uruguay (+598)</option>
+                                                        <option data-countrycode="US" value="1">USA (+1)</option>
+                                                        <option data-countrycode="UZ" value="7">Uzbekistan (+7)</option>
+                                                        <option data-countrycode="VU" value="678">Vanuatu (+678)</option>
+                                                        <option data-countrycode="VA" value="379">Vatican City (+379)</option>
+                                                        <option data-countrycode="VE" value="58">Venezuela (+58)</option>
+                                                        <option data-countrycode="VN" value="84">Vietnam (+84)</option>
+                                                        <option data-countrycode="VG" value="84">Virgin Islands - British (+1284)</option>
+                                                        <option data-countrycode="VI" value="84">Virgin Islands - US (+1340)</option>
+                                                        <option data-countrycode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+                                                        <option data-countrycode="YE" value="969">Yemen (North)(+969)</option>
+                                                        <option data-countrycode="YE" value="967">Yemen (South)(+967)</option>
+                                                        <option data-countrycode="ZM" value="260">Zambia (+260)</option>
+                                                        <option data-countrycode="ZW" value="263">Zimbabwe (+263)</option>
+                                                    </optgroup>
+                            </select>
+                                    <input type="text" class="form-control-custom" name="mobile" placeholder="Mobile" required pattern="[0-9]{10}">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Preferred Investment Type</label>
+                                <select class="form-control-custom" name="message">
+                                    <option value="">Select Investment Interest</option>
+                                    <option>2 BHK Apartment</option>
+                                    <option>3 BHK Apartment</option>
+                                    <option>Investment Enquiry</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Connect with us</label>
+                                <select class="form-control-custom" name="scheduletime">
+                                    <option class="d-none">Best Time To Call You</option>
+                                    <option>Within 15 Min.</option>
+                                    <option>08AM To 12PM</option>
+                                    <option>12PM To 04PM</option>
+                                    <option>04PM To 08PM</option>
+                                    <option>Anytime</option>
+                                </select>
+                            </div>
+                                        <input type="hidden" name="min_budget" value="">
+                                        <input type="hidden" name="location_id" value="8">
+                                        <input type="hidden" name="bhk" value="">
+                                        <input type="hidden" name="manager_id" value="1">
+                                        <input type="hidden" name="property_id" value="84251">
+                                        <input type="hidden" name="city_id" value="4">
+                                        <input type="hidden" name="current_url" value="https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/">
+                                        
+                                        
+                            
+                            <div class="col-12">
+                                <button type="submit" name="submit" value="submit" class="btn-main w-100" style="font-size:0.9rem;padding:7px"><i class="fa fa-paper-plane me-2"></i>Submit Enquiry</button>
+                            </div>
+                            <div class="col-12 text-center"><a href="tel:+919876543210" class="btn-outline w-100" style="font-size:0.84rem"><i class="fa fa-phone me-2"></i>Call Now</a></div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Quick Facts -->
+                <div class="form-card mt-3">
+                    <h5 style="font-size:0.92rem;font-weight:700;color:var(--dark);margin-bottom:14px"><i class="fa fa-info-circle me-2" style="color:var(--accent)"></i>Quick Project Facts</h5>
+                    <div style="font-size:0.8rem">
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Project Name</span><span style="font-weight:600;color:var(--dark)">Alliance Bhaskar</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Developer</span><span style="font-weight:600;color:var(--dark)">Alliance City Developers</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Location</span><span style="font-weight:600;color:var(--dark)">Mamlatdar Wadi Extention Road, Navy Colony, Near Liberty Garden, Malad West, Western Suburbs, Mumbai, Maharashtra</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Type</span><span style="font-weight:600;color:var(--dark)">Residential Apartments</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Starting Price</span><span style="font-weight:700;color:var(--accent)">On Request*</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Status</span><span style="font-weight:600;color:var(--dark)">Ready to Move</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-light)"><span style="color:var(--text-light)">Possession</span><span style="font-weight:600;color:var(--dark)">December 2023</span></div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0"><span style="color:var(--text-light)">RERA No.</span><span style="font-weight:600;color:var(--dark);font-size:0.72rem">P51800028213</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <a href="/" class="navbar-brand d-inline-block mb-2"><span class="logo-up">Upcoming</span><span class="logo-prop">Prop</span><span class="logo-dot">.com</span></a>
+                <p class="footer-desc">India's #1 Trusted Property Hub. Find verified upcoming, new launch, and ready-to-move projects across India. Explore 5,000+ listings from 200+ top developers in more than 100+ cities and get exclusive pre-launch access.</p>
+                <div class="footer-social mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-lg-2"><h6 class="footer-head">Quick Links</h6><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/cities/">Cities</a></li><li><a href="/developers/">Developers</a></li><li><a href="/">Projects</a></li></ul></div>
+            <div class="col-6 col-lg-2">
+            <h6 class="footer-head">Alliance Projects</h6>
+            <ul class="footer-links">
+
+                <li><a href="/alliance-developers/mumbai/">Alliance Projects Mumbai</a></li>
+
+            </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-head">Other Developers</h6>
+                <ul class="footer-links">
+                    <li><a href="/dlf/">DLF Limited</a></li>
+                    <li><a href="/developers/">Godrej Properties Limited</a></li>
+                    <li><a href="/developers/">Prestige Group</a></li>
+                    <li><a href="/developers/">Oberoi Realty Limited</a></li>
+                    <li><a href="/developers/">Brigade Group</a></li>
+                    <li><a href="/developers/">Lodha Group</a></li>
+                    <li><a href="/developers/">Sobha Limited</a></li>
+                    <li><a href="/developers/">Tata Housing</a></li>
+                    <li><a href="/developers/">Hiranandani Group</a></li>
+                    <li><a href="/developers/">Phoenix Mills Limited</a></li>
+                </ul>
+            </div>
+<div class="col-6 col-lg-2">
+    <h6 class="footer-head">Top Cities</h6>
+    <ul class="footer-links">
+        <li><a href="/bangalore/">Bangalore</a></li>
+        <li><a href="/mumbai/">Mumbai</a></li>
+        <li><a href="/gurgaon/">Gurgaon</a></li>
+        <li><a href="/hyderabad/">Hyderabad</a></li>
+        <li><a href="/chennai/">Chennai</a></li>
+        <li><a href="/pune/">Pune</a></li>
+        <li><a href="/kolkata/">Kolkata</a></li>
+        <li><a href="/ahmedabad/">Ahmedabad</a></li>
+        <li><a href="/kochi/">Kochi</a></li>
+        <li><a href="/jaipur/">Jaipur</a></li>
+    </ul>
+</div>
+        </div>
+        
+        <hr class="footer-hr">
+                
+        <div class="footer-bottom">
+            <p>This website is developed by the <strong><a href="https://fomocommunication.com/">Fomocommunication.com</a></strong>. The purpose of website to provide information about new launches property in india.The content is taken from news websites. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only.</p>
+            <p>&copy; 2026 Fomocommunication.com. All rights reserved.</p><p><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms</a></p></div>
+    </div>
+</footer>
+
+<!-- ENQUIRY MODAL -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-custom">
+            <button type="button" class="modal-close-btn" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
+            <div class="modal-left"><h3>Get Alliance Bhaskar Investment Details</h3><ul class="modal-features"><li><i class="fa fa-check-circle"></i>Investment Report</li><li><i class="fa fa-check-circle"></i>Project Brochure</li><li><i class="fa fa-check-circle"></i>Floor Plan PDF</li><li><i class="fa fa-check-circle"></i>Free Site Visit</li><li><i class="fa fa-check-circle"></i>Expert Advisory</li></ul><div class="modal-trust"><div class="mt-item"><strong>4.7★</strong><span>Rating</span></div><div class="mt-item"><strong>On Request*</strong><span>Starting Price</span></div></div></div>
+            <div class="modal-right">
+                <h4>Get Exclusive Investment Insights</h4><p class="modal-sub">Callback within 15 minutes — no spam, ever</p>
+                                <form action="/mail.php" method="post" autocomplete="off">
+                    <div class="row g-3">
+                        <div class="col-12"><label class="form-label-custom">Name *</label><input type="text" class="form-control-custom" name="name" placeholder="Full Name" required></div>
+                        <div class="col-12"><label class="form-label-custom">Email *</label><input type="email" class="form-control-custom" name="email" placeholder="Email ID" required></div>
+                        <div class="col-12"><label class="form-label-custom">Phone *</label><div class="contact_number">
+                            <select name="country_name" class="countryCode">
+                                <option data-countrycode="IN" value="91">India (+91)</option>
+                                                    <optgroup label="Other countries">
+                                                        <option data-countrycode="DZ" value="213">Algeria (+213)</option>
+                                                        <option data-countrycode="AD" value="376">Andorra (+376)</option>
+                                                        <option data-countrycode="AO" value="244">Angola (+244)</option>
+                                                        <option data-countrycode="AI" value="1264">Anguilla (+1264)</option>
+                                                        <option data-countrycode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                                                        <option data-countrycode="AR" value="54">Argentina (+54)</option>
+                                                        <option data-countrycode="AM" value="374">Armenia (+374)</option>
+                                                        <option data-countrycode="AW" value="297">Aruba (+297)</option>
+                                                        <option data-countrycode="AU" value="61">Australia (+61)</option>
+                                                        <option data-countrycode="AT" value="43">Austria (+43)</option>
+                                                        <option data-countrycode="AZ" value="994">Azerbaijan (+994)</option>
+                                                        <option data-countrycode="BS" value="1242">Bahamas (+1242)</option>
+                                                        <option data-countrycode="BH" value="973">Bahrain (+973)</option>
+                                                        <option data-countrycode="BD" value="880">Bangladesh (+880)</option>
+                                                        <option data-countrycode="BB" value="1246">Barbados (+1246)</option>
+                                                        <option data-countrycode="BY" value="375">Belarus (+375)</option>
+                                                        <option data-countrycode="BE" value="32">Belgium (+32)</option>
+                                                        <option data-countrycode="BZ" value="501">Belize (+501)</option>
+                                                        <option data-countrycode="BJ" value="229">Benin (+229)</option>
+                                                        <option data-countrycode="BM" value="1441">Bermuda (+1441)</option>
+                                                        <option data-countrycode="BT" value="975">Bhutan (+975)</option>
+                                                        <option data-countrycode="BO" value="591">Bolivia (+591)</option>
+                                                        <option data-countrycode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                                                        <option data-countrycode="BW" value="267">Botswana (+267)</option>
+                                                        <option data-countrycode="BR" value="55">Brazil (+55)</option>
+                                                        <option data-countrycode="BN" value="673">Brunei (+673)</option>
+                                                        <option data-countrycode="BG" value="359">Bulgaria (+359)</option>
+                                                        <option data-countrycode="BF" value="226">Burkina Faso (+226)</option>
+                                                        <option data-countrycode="BI" value="257">Burundi (+257)</option>
+                                                        <option data-countrycode="KH" value="855">Cambodia (+855)</option>
+                                                        <option data-countrycode="CM" value="237">Cameroon (+237)</option>
+                                                        <option data-countrycode="CA" value="1">Canada (+1)</option>
+                                                        <option data-countrycode="CV" value="238">Cape Verde Islands (+238)</option>
+                                                        <option data-countrycode="KY" value="1345">Cayman Islands (+1345)</option>
+                                                        <option data-countrycode="CF" value="236">Central African Republic (+236)</option>
+                                                        <option data-countrycode="CL" value="56">Chile (+56)</option>
+                                                        <option data-countrycode="CN" value="86">China (+86)</option>
+                                                        <option data-countrycode="CO" value="57">Colombia (+57)</option>
+                                                        <option data-countrycode="KM" value="269">Comoros (+269)</option>
+                                                        <option data-countrycode="CG" value="242">Congo (+242)</option>
+                                                        <option data-countrycode="CK" value="682">Cook Islands (+682)</option>
+                                                        <option data-countrycode="CR" value="506">Costa Rica (+506)</option>
+                                                        <option data-countrycode="HR" value="385">Croatia (+385)</option>
+                                                        <option data-countrycode="CU" value="53">Cuba (+53)</option>
+                                                        <option data-countrycode="CY" value="90392">Cyprus North (+90392)</option>
+                                                        <option data-countrycode="CY" value="357">Cyprus South (+357)</option>
+                                                        <option data-countrycode="CZ" value="42">Czech Republic (+42)</option>
+                                                        <option data-countrycode="DK" value="45">Denmark (+45)</option>
+                                                        <option data-countrycode="DJ" value="253">Djibouti (+253)</option>
+                                                        <option data-countrycode="DM" value="1809">Dominica (+1809)</option>
+                                                        <option data-countrycode="DO" value="1809">Dominican Republic (+1809)</option>
+                                                        <option data-countrycode="EC" value="593">Ecuador (+593)</option>
+                                                        <option data-countrycode="EG" value="20">Egypt (+20)</option>
+                                                        <option data-countrycode="SV" value="503">El Salvador (+503)</option>
+                                                        <option data-countrycode="GQ" value="240">Equatorial Guinea (+240)</option>
+                                                        <option data-countrycode="ER" value="291">Eritrea (+291)</option>
+                                                        <option data-countrycode="EE" value="372">Estonia (+372)</option>
+                                                        <option data-countrycode="ET" value="251">Ethiopia (+251)</option>
+                                                        <option data-countrycode="FK" value="500">Falkland Islands (+500)</option>
+                                                        <option data-countrycode="FO" value="298">Faroe Islands (+298)</option>
+                                                        <option data-countrycode="FJ" value="679">Fiji (+679)</option>
+                                                        <option data-countrycode="FI" value="358">Finland (+358)</option>
+                                                        <option data-countrycode="FR" value="33">France (+33)</option>
+                                                        <option data-countrycode="GF" value="594">French Guiana (+594)</option>
+                                                        <option data-countrycode="PF" value="689">French Polynesia (+689)</option>
+                                                        <option data-countrycode="GA" value="241">Gabon (+241)</option>
+                                                        <option data-countrycode="GM" value="220">Gambia (+220)</option>
+                                                        <option data-countrycode="GE" value="7880">Georgia (+7880)</option>
+                                                        <option data-countrycode="DE" value="49">Germany (+49)</option>
+                                                        <option data-countrycode="GH" value="233">Ghana (+233)</option>
+                                                        <option data-countrycode="GI" value="350">Gibraltar (+350)</option>
+                                                        <option data-countrycode="GR" value="30">Greece (+30)</option>
+                                                        <option data-countrycode="GL" value="299">Greenland (+299)</option>
+                                                        <option data-countrycode="GD" value="1473">Grenada (+1473)</option>
+                                                        <option data-countrycode="GP" value="590">Guadeloupe (+590)</option>
+                                                        <option data-countrycode="GU" value="671">Guam (+671)</option>
+                                                        <option data-countrycode="GT" value="502">Guatemala (+502)</option>
+                                                        <option data-countrycode="GN" value="224">Guinea (+224)</option>
+                                                        <option data-countrycode="GW" value="245">Guinea - Bissau (+245)</option>
+                                                        <option data-countrycode="GY" value="592">Guyana (+592)</option>
+                                                        <option data-countrycode="HT" value="509">Haiti (+509)</option>
+                                                        <option data-countrycode="HN" value="504">Honduras (+504)</option>
+                                                        <option data-countrycode="HK" value="852">Hong Kong (+852)</option>
+                                                        <option data-countrycode="HU" value="36">Hungary (+36)</option>
+                                                        <option data-countrycode="IS" value="354">Iceland (+354)</option>
+                                                        <option data-countrycode="ID" value="62">Indonesia (+62)</option>
+                                                        <option data-countrycode="IR" value="98">Iran (+98)</option>
+                                                        <option data-countrycode="IQ" value="964">Iraq (+964)</option>
+                                                        <option data-countrycode="IE" value="353">Ireland (+353)</option>
+                                                        <option data-countrycode="IL" value="972">Israel (+972)</option>
+                                                        <option data-countrycode="IT" value="39">Italy (+39)</option>
+                                                        <option data-countrycode="JM" value="1876">Jamaica (+1876)</option>
+                                                        <option data-countrycode="JP" value="81">Japan (+81)</option>
+                                                        <option data-countrycode="JO" value="962">Jordan (+962)</option>
+                                                        <option data-countrycode="KZ" value="7">Kazakhstan (+7)</option>
+                                                        <option data-countrycode="KE" value="254">Kenya (+254)</option>
+                                                        <option data-countrycode="KI" value="686">Kiribati (+686)</option>
+                                                        <option data-countrycode="KP" value="850">Korea North (+850)</option>
+                                                        <option data-countrycode="KR" value="82">Korea South (+82)</option>
+                                                        <option data-countrycode="KW" value="965">Kuwait (+965)</option>
+                                                        <option data-countrycode="KG" value="996">Kyrgyzstan (+996)</option>
+                                                        <option data-countrycode="LA" value="856">Laos (+856)</option>
+                                                        <option data-countrycode="LV" value="371">Latvia (+371)</option>
+                                                        <option data-countrycode="LB" value="961">Lebanon (+961)</option>
+                                                        <option data-countrycode="LS" value="266">Lesotho (+266)</option>
+                                                        <option data-countrycode="LR" value="231">Liberia (+231)</option>
+                                                        <option data-countrycode="LY" value="218">Libya (+218)</option>
+                                                        <option data-countrycode="LI" value="417">Liechtenstein (+417)</option>
+                                                        <option data-countrycode="LT" value="370">Lithuania (+370)</option>
+                                                        <option data-countrycode="LU" value="352">Luxembourg (+352)</option>
+                                                        <option data-countrycode="MO" value="853">Macao (+853)</option>
+                                                        <option data-countrycode="MK" value="389">Macedonia (+389)</option>
+                                                        <option data-countrycode="MG" value="261">Madagascar (+261)</option>
+                                                        <option data-countrycode="MW" value="265">Malawi (+265)</option>
+                                                        <option data-countrycode="MY" value="60">Malaysia (+60)</option>
+                                                        <option data-countrycode="MV" value="960">Maldives (+960)</option>
+                                                        <option data-countrycode="ML" value="223">Mali (+223)</option>
+                                                        <option data-countrycode="MT" value="356">Malta (+356)</option>
+                                                        <option data-countrycode="MH" value="692">Marshall Islands (+692)</option>
+                                                        <option data-countrycode="MQ" value="596">Martinique (+596)</option>
+                                                        <option data-countrycode="MR" value="222">Mauritania (+222)</option>
+                                                        <option data-countrycode="YT" value="269">Mayotte (+269)</option>
+                                                        <option data-countrycode="MX" value="52">Mexico (+52)</option>
+                                                        <option data-countrycode="FM" value="691">Micronesia (+691)</option>
+                                                        <option data-countrycode="MD" value="373">Moldova (+373)</option>
+                                                        <option data-countrycode="MC" value="377">Monaco (+377)</option>
+                                                        <option data-countrycode="MN" value="976">Mongolia (+976)</option>
+                                                        <option data-countrycode="MS" value="1664">Montserrat (+1664)</option>
+                                                        <option data-countrycode="MA" value="212">Morocco (+212)</option>
+                                                        <option data-countrycode="MZ" value="258">Mozambique (+258)</option>
+                                                        <option data-countrycode="MN" value="95">Myanmar (+95)</option>
+                                                        <option data-countrycode="NA" value="264">Namibia (+264)</option>
+                                                        <option data-countrycode="NR" value="674">Nauru (+674)</option>
+                                                        <option data-countrycode="NP" value="977">Nepal (+977)</option>
+                                                        <option data-countrycode="NL" value="31">Netherlands (+31)</option>
+                                                        <option data-countrycode="NC" value="687">New Caledonia (+687)</option>
+                                                        <option data-countrycode="NZ" value="64">New Zealand (+64)</option>
+                                                        <option data-countrycode="NI" value="505">Nicaragua (+505)</option>
+                                                        <option data-countrycode="NE" value="227">Niger (+227)</option>
+                                                        <option data-countrycode="NG" value="234">Nigeria (+234)</option>
+                                                        <option data-countrycode="NU" value="683">Niue (+683)</option>
+                                                        <option data-countrycode="NF" value="672">Norfolk Islands (+672)</option>
+                                                        <option data-countrycode="NP" value="670">Northern Marianas (+670)</option>
+                                                        <option data-countrycode="NO" value="47">Norway (+47)</option>
+                                                        <option data-countrycode="OM" value="968">Oman (+968)</option>
+                                                        <option data-countrycode="PW" value="680">Palau (+680)</option>
+                                                        <option data-countrycode="PA" value="507">Panama (+507)</option>
+                                                        <option data-countrycode="PG" value="675">Papua New Guinea (+675)</option>
+                                                        <option data-countrycode="PY" value="595">Paraguay (+595)</option>
+                                                        <option data-countrycode="PE" value="51">Peru (+51)</option>
+                                                        <option data-countrycode="PH" value="63">Philippines (+63)</option>
+                                                        <option data-countrycode="PL" value="48">Poland (+48)</option>
+                                                        <option data-countrycode="PT" value="351">Portugal (+351)</option>
+                                                        <option data-countrycode="PR" value="1787">Puerto Rico (+1787)</option>
+                                                        <option data-countrycode="QA" value="974">Qatar (+974)</option>
+                                                        <option data-countrycode="RE" value="262">Reunion (+262)</option>
+                                                        <option data-countrycode="RO" value="40">Romania (+40)</option>
+                                                        <option data-countrycode="RU" value="7">Russia (+7)</option>
+                                                        <option data-countrycode="RW" value="250">Rwanda (+250)</option>
+                                                        <option data-countrycode="SM" value="378">San Marino (+378)</option>
+                                                        <option data-countrycode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                                                        <option data-countrycode="SA" value="966">Saudi Arabia (+966)</option>
+                                                        <option data-countrycode="SN" value="221">Senegal (+221)</option>
+                                                        <option data-countrycode="CS" value="381">Serbia (+381)</option>
+                                                        <option data-countrycode="SC" value="248">Seychelles (+248)</option>
+                                                        <option data-countrycode="SL" value="232">Sierra Leone (+232)</option>
+                                                        <option data-countrycode="SG" value="65">Singapore (+65)</option>
+                                                        <option data-countrycode="SK" value="421">Slovak Republic (+421)</option>
+                                                        <option data-countrycode="SI" value="386">Slovenia (+386)</option>
+                                                        <option data-countrycode="SB" value="677">Solomon Islands (+677)</option>
+                                                        <option data-countrycode="SO" value="252">Somalia (+252)</option>
+                                                        <option data-countrycode="ZA" value="27">South Africa (+27)</option>
+                                                        <option data-countrycode="ES" value="34">Spain (+34)</option>
+                                                        <option data-countrycode="LK" value="94">Sri Lanka (+94)</option>
+                                                        <option data-countrycode="SH" value="290">St. Helena (+290)</option>
+                                                        <option data-countrycode="KN" value="1869">St. Kitts (+1869)</option>
+                                                        <option data-countrycode="SC" value="1758">St. Lucia (+1758)</option>
+                                                        <option data-countrycode="SD" value="249">Sudan (+249)</option>
+                                                        <option data-countrycode="SR" value="597">Suriname (+597)</option>
+                                                        <option data-countrycode="SZ" value="268">Swaziland (+268)</option>
+                                                        <option data-countrycode="SE" value="46">Sweden (+46)</option>
+                                                        <option data-countrycode="CH" value="41">Switzerland (+41)</option>
+                                                        <option data-countrycode="SI" value="963">Syria (+963)</option>
+                                                        <option data-countrycode="TW" value="886">Taiwan (+886)</option>
+                                                        <option data-countrycode="TJ" value="7">Tajikstan (+7)</option>
+                                                        <option data-countrycode="TH" value="66">Thailand (+66)</option>
+                                                        <option data-countrycode="TG" value="228">Togo (+228)</option>
+                                                        <option data-countrycode="TO" value="676">Tonga (+676)</option>
+                                                        <option data-countrycode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                                                        <option data-countrycode="TN" value="216">Tunisia (+216)</option>
+                                                        <option data-countrycode="TR" value="90">Turkey (+90)</option>
+                                                        <option data-countrycode="TM" value="7">Turkmenistan (+7)</option>
+                                                        <option data-countrycode="TM" value="993">Turkmenistan (+993)</option>
+                                                        <option data-countrycode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+                                                        <option data-countrycode="TV" value="688">Tuvalu (+688)</option>
+                                                        <option data-countrycode="UG" value="256">Uganda (+256)</option>
+                                                        <option data-countrycode="GB" value="44">UK (+44)</option>
+                                                        <option data-countrycode="UA" value="380">Ukraine (+380)</option>
+                                                        <option data-countrycode="AE" value="971">United Arab Emirates (+971)</option>
+                                                        <option data-countrycode="UY" value="598">Uruguay (+598)</option>
+                                                        <option data-countrycode="US" value="1">USA (+1)</option>
+                                                        <option data-countrycode="UZ" value="7">Uzbekistan (+7)</option>
+                                                        <option data-countrycode="VU" value="678">Vanuatu (+678)</option>
+                                                        <option data-countrycode="VA" value="379">Vatican City (+379)</option>
+                                                        <option data-countrycode="VE" value="58">Venezuela (+58)</option>
+                                                        <option data-countrycode="VN" value="84">Vietnam (+84)</option>
+                                                        <option data-countrycode="VG" value="84">Virgin Islands - British (+1284)</option>
+                                                        <option data-countrycode="VI" value="84">Virgin Islands - US (+1340)</option>
+                                                        <option data-countrycode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+                                                        <option data-countrycode="YE" value="969">Yemen (North)(+969)</option>
+                                                        <option data-countrycode="YE" value="967">Yemen (South)(+967)</option>
+                                                        <option data-countrycode="ZM" value="260">Zambia (+260)</option>
+                                                        <option data-countrycode="ZW" value="263">Zimbabwe (+263)</option>
+                                                    </optgroup>
+                            </select><input type="text" class="form-control-custom" name="mobile" placeholder="Mobile" required pattern="[0-9]{10}"></div></div>
+                        <div class="col-12"><label class="form-label-custom">Investment Interest</label><select class="form-control-custom" name="message"><option value="">Select Option</option><option>2 BHK Apartment</option><option>3 BHK Apartment</option><option>Investment Enquiry</option></select></div>
+                        <div class="col-12"><label class="form-label-custom">Best Time to Call</label><select class="form-control-custom" name="scheduletime"><option class="d-none">Best Time To Call You</option><option>Within 15 Min.</option><option>08AM To 12PM</option><option>12PM To 04PM</option><option>04PM To 08PM</option><option>Anytime</option></select>
+                        
+                        
+                        </div>
+                                        
+                                        <input type="hidden" name="min_budget" value="">
+                                        <input type="hidden" name="location_id" value="8">
+                                        <input type="hidden" name="bhk" value="">
+                                        <input type="hidden" name="manager_id" value="1">
+                                        <input type="hidden" name="property_id" value="84251">
+                                        <input type="hidden" name="city_id" value="4">
+                                        <input type="hidden" name="current_url" value="https://upcomingprop.com/alliance/mumbai/alliance-bhaskar-malad-west/">
+                                        
+                                        
+                        <div class="col-12"><button type="submit" class="btn-main w-100"><i class="fa fa-paper-plane me-2"></i>Submit Enquiry</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="floating-cta" id="floatingCta"><button class="float-cta-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa fa-comments"></i><span>Get Investment Details</span></button><a href="tel:+919876543210" class="float-call-btn"><i class="fa fa-phone-alt"></i></a></div>
+<div class="exit-overlay" id="exitOverlay"></div>
+<div class="exit-popup" id="exitPopup"><button class="exit-close" id="exitClose"><i class="fa fa-times"></i></button><div class="exit-icon"><i class="fa fa-tag"></i></div><h3>Get Alliance Bhaskar Brochure</h3><p>Download investment report, floor plans &amp; project brochure — <strong>absolutely free</strong>!</p><button class="btn-main w-100" data-bs-toggle="modal" data-bs-target="#enquiryModal" id="exitEnquire">Download Brochure Now</button><a class="exit-skip" id="exitSkip">No thanks</a></div>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/script.js"></script>
+<script>
+/* Tab Navigation */
+$('.ptab').on('click', function () {
+    $('.ptab').removeClass('active');
+    $(this).addClass('active');
+    var target = '#' + $(this).data('target');
+    if ($(target).length) {
+        $('html,body').animate({ scrollTop: $(target).offset().top - 120 }, 400);
+    }
+});
+/* Scroll spy */
+$(window).on('scroll', function () {
+    var pos = $(this).scrollTop() + 130;
+    $('.detail-section').each(function () {
+        if ($(this).offset().top <= pos && $(this).offset().top + $(this).outerHeight() > pos) {
+            var id = $(this).attr('id');
+            if (id) { $('.ptab').removeClass('active'); $('[data-target="'+id+'"]').addClass('active'); }
+        }
+    });
+});
+/* Floor Plans */
+function showFP(id, btn) {
+    $('.fp-panel').removeClass('active'); $('#'+id).addClass('active');
+    $('.fp-tab').removeClass('active'); $(btn).addClass('active');
+}
+/* Price Tabs */
+function showPriceTab(type, btn) {
+    $('.price-tab-btn').removeClass('active'); $(btn).addClass('active');
+}
+</script>
+</body>
+</html>

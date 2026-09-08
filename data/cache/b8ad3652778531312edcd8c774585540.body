@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJF_iLW-vO5zsRW_tlnYHMLqQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.006207,
+        "longitude": 72.829
+      },
+      "displayName": {
+        "text": "Bombay Dyeing Mills Lower Parel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJa6d8W-vO5zsRB9XCR7tO1Z0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kamagar Nagar Number 1, Century Mills, Lower Parel, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.006318,
+        "longitude": 72.829
+      },
+      "displayName": {
+        "text": "Bombay Dyeing Mills Lower Parel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJt9iiXevO5zsRSE62_C37sVw",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lower Parel, Mumbai, Maharashtra 400013, India",
+      "location": {
+        "latitude": 19.0062635,
+        "longitude": 72.8292885
+      },
+      "displayName": {
+        "text": "Bombay Dyeing",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJR8vorlW35zsRhNnOZ2HqdlE",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malwani Satyam CHS, near Billabong International School, Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.203783299999998,
+        "longitude": 72.8204228
+      },
+      "displayName": {
+        "text": "Malwani Satyam CHS",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    }
+  ]
+}

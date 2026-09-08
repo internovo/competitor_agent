@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJm7sA8Sqx5zsRFX1kzfESJY4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.222739999999998,
+        "longitude": 72.84952
+      },
+      "displayName": {
+        "text": "Ankur Palace",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJtWum8Sqx5zsRE8KdTqXspYc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22268,
+        "longitude": 72.84957
+      },
+      "displayName": {
+        "text": "Ankur Palace",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJu_VVUiqx5zsRVdIfG7C5sKI",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2237175,
+        "longitude": 72.848779
+      },
+      "displayName": {
+        "text": "Ganesh Mandir/Kastur Park",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

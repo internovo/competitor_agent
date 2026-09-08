@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJMba2AfK25zsRkgDaNtl2vOQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1842526,
+        "longitude": 72.8327661
+      },
+      "displayName": {
+        "text": "Ijmima",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJFzJ_bfK25zsRdzv8OcF8dzo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18346,
+        "longitude": 72.832169999999991
+      },
+      "displayName": {
+        "text": "Ijimima",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ3RfakOu25zsRC-54iBq5kl4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Evershine Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.190875,
+        "longitude": 72.831936
+      },
+      "displayName": {
+        "text": "Evershine Nagar (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

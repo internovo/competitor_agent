@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJUxdmOh-x5zsRzTMmCZRp7Ts",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devki Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2449402,
+        "longitude": 72.8464654
+      },
+      "displayName": {
+        "text": "Mansi Plaza",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJaz6iMB-x5zsRWPX2Bow035Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kalpana Chawla Marg, Devki Nagar, Borivali West, Devki Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.244688999999997,
+        "longitude": 72.846238
+      },
+      "displayName": {
+        "text": "Mansi Plaza",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJH3NnKhmx5zsRnsirwejcjX8",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2459211,
+        "longitude": 72.8454228
+      },
+      "displayName": {
+        "text": "Atmaram Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

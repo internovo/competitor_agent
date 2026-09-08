@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJUZrusNmw5zsRf5XFdc0oquw",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2343103,
+        "longitude": 72.8551227
+      },
+      "displayName": {
+        "text": "Pai Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJHffDsNmw5zsRYm772RSxoo4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sardar Vallabhbhai Patel Rd, Pai Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.234451,
+        "longitude": 72.855025
+      },
+      "displayName": {
+        "text": "Pai Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHUDLsdmw5zsR8LcgWFYKcms",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Himmat Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.234469999999998,
+        "longitude": 72.855049999999991
+      },
+      "displayName": {
+        "text": "Pai Nagar (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

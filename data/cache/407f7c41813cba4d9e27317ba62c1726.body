@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJLzvkMui25zsRPnOZ8DNNF_w",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Orlem, Malad West, Malad, Orlem, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.195249999999998,
+        "longitude": 72.836970999999991
+      },
+      "displayName": {
+        "text": "Orlem Church",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOea4POi25zsR_wJE58vGwI8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Father Justin Dsouza Rd, Malad, Orlem, Lourdes Colony, Kandivali West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.19559,
+        "longitude": 72.837983999999992
+      },
+      "displayName": {
+        "text": "Orlem Church or Valnai Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJy-7DF-i25zsR6S8IL__CHMA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Orlem, Lourdes Colony, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.195539999999998,
+        "longitude": 72.83827
+      },
+      "displayName": {
+        "text": "Orlem Church or Valnai Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

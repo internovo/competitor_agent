@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJOfmxPtiw5zsRNhiVPu3shoo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2332792,
+        "longitude": 72.8534182
+      },
+      "displayName": {
+        "text": "Pandya Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJX3QCFtiw5zsR-4iirGDIxU4",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2332415,
+        "longitude": 72.8530239
+      },
+      "displayName": {
+        "text": "Pandya Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJa5SSFdiw5zsRHlJdlRt7EHc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Himmat Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.233432,
+        "longitude": 72.853323
+      },
+      "displayName": {
+        "text": "Pandya Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

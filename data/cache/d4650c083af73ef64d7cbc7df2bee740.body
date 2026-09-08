@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJa0zPIu-25zsR5LShjmNRq6Y",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad West, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.189107000000003,
+        "longitude": 72.83753999999999
+      },
+      "displayName": {
+        "text": "Mariamman Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJi0UIIe-25zsRJFbz7V6plX0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.189195,
+        "longitude": 72.837088
+      },
+      "displayName": {
+        "text": "Mariamman Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ07hJIu-25zsRvUji2Z0pmtk",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.189148,
+        "longitude": 72.8372455
+      },
+      "displayName": {
+        "text": "Mariamman Mandir",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

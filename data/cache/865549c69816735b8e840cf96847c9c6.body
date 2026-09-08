@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJl-p-h_C35zsRAmTgfp0fKT8",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Estee Geejay Apartment, Saibaba Mandir Marg, near Gurudwara, Om Shree Geetanjali Nagar, Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2179417,
+        "longitude": 72.8458137
+      },
+      "displayName": {
+        "text": "Airavat By Bhoomi Group",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "places": [
+    {
+      "id": "ChIJCwQNMtW25zsR3hZz0ve1eSA",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "formattedAddress": "Bhattad Aurus, RM Bhattad Rd, Off S.V.Road, Ram Nagar, Sheetal Co-op Housing Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.220004499999998,
+        "longitude": 72.8493555
+      },
+      "displayName": {
+        "text": "Bhattad Aurus",
+        "languageCode": "en"
+      },
+      "primaryType": "premise"
+    }
+  ]
+}

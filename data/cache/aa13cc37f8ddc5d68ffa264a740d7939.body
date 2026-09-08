@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJz_zhrTK35zsRakFDhMvZ88w",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Khande Rao Dongari, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.22145,
+        "longitude": 72.86403
+      },
+      "displayName": {
+        "text": "Special Steel or Rajendra Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJrWRxxjK35zsRiP_lFKz8yGA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Food Corporation of India Warehouse, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.220508,
+        "longitude": 72.86546899999999
+      },
+      "displayName": {
+        "text": "Magathane Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJCc_7xDK35zsR2at_q2HLQ10",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Magathane, Borivali East, Mumbai, Maharashtra 400066, India",
+      "location": {
+        "latitude": 19.220952,
+        "longitude": 72.865421
+      },
+      "displayName": {
+        "text": "Tata Power Borivali East",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJQVRXNZvO5zsRtkLVd13I4LA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar, Worli, 400018, India",
+      "location": {
+        "latitude": 18.99765,
+        "longitude": 72.81183
+      },
+      "displayName": {
+        "text": "Worli Dairy",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ96NgtoTO5zsRzZOYTsfAGPE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "400018, India",
+      "location": {
+        "latitude": 18.99788,
+        "longitude": 72.811500000000009
+      },
+      "displayName": {
+        "text": "Worli Dairy Coastal Road",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJQbjJQZvO5zsRtMWnwGLLjX8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "400018, India",
+      "location": {
+        "latitude": 18.998193,
+        "longitude": 72.811533
+      },
+      "displayName": {
+        "text": "Worli Dairy",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

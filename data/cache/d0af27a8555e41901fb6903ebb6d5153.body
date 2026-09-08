@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJucN_uL_O5zsRYfMfBvCtfpc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.012629999999998,
+        "longitude": 72.82588
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJzZq6uL_O5zsRbY7r-bR2nQs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.01269,
+        "longitude": 72.82602
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk (Century Bazaar)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJLV5rtr_O5zsRtXGMKdOhJXI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.0126526,
+        "longitude": 72.824531499999992
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk (Century Bazaar)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

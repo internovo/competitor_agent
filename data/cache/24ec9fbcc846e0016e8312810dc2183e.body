@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJvby9Fvy25zsR8RtMCHcuXqs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18072,
+        "longitude": 72.84685
+      },
+      "displayName": {
+        "text": "Rani Sati Nagar (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJwQiEYfy25zsR46WWapAjdgI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Vijaykar Wadi, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1825627,
+        "longitude": 72.8469976
+      },
+      "displayName": {
+        "text": "New Era Talkies",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJb-ZuF_y25zsRQ6qSbxmx3SA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.180637,
+        "longitude": 72.8468
+      },
+      "displayName": {
+        "text": "Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

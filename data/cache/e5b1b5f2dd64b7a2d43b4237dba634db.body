@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJg2EYGfy25zsR_eiZCLWvVrY",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Vijaykar Wadi, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.180315999999998,
+        "longitude": 72.846897
+      },
+      "displayName": {
+        "text": "Rani Sati Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJb-ZuF_y25zsRQ6qSbxmx3SA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.180637,
+        "longitude": 72.8468
+      },
+      "displayName": {
+        "text": "Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJvby9Fvy25zsR8RtMCHcuXqs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.18072,
+        "longitude": 72.84685
+      },
+      "displayName": {
+        "text": "Rani Sati Nagar (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

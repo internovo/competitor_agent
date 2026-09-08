@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJjV1hm-S35zsRMKIMDuiN3Ys",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5RPQ+JJJ Mahindra Lifespaces, Navy Nagar Rd, Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.186563,
+        "longitude": 72.839063
+      },
+      "displayName": {
+        "text": "Mahindra Marina64",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

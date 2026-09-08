@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJmShOsCq35zsRHWRt_V0sxXE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, Gokul Dham Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.220048,
+        "longitude": 72.852671
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJPRwRtSq35zsRt3PRQV2gz0c",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2205617,
+        "longitude": 72.852899
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJF83usSq35zsR9MpYwhEyoJw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Gokul Dham Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2201462,
+        "longitude": 72.852445899999992
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

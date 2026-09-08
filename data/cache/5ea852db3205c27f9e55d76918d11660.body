@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJsXJjKNSw5zsRzCobeGMA6k8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Road, Datta Park, Borivali West, Mhatre Wadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.226119999999998,
+        "longitude": 72.854952
+      },
+      "displayName": {
+        "text": "Dharamshi Hall",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJRVZaLtSw5zsRAV4kAVfF7EA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Datta Park, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22606,
+        "longitude": 72.855
+      },
+      "displayName": {
+        "text": "Dharamshi Hall",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJqQxzstWw5zsRsB7QClbiOJU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mhatre Wadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.224483199999998,
+        "longitude": 72.8542658
+      },
+      "displayName": {
+        "text": "Borivali Jail (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

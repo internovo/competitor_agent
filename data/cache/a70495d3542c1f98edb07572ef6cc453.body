@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJQc8Tr77O5zsRCpS-E5JV8RM",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mumbai, Maharashtra, India",
+      "location": {
+        "latitude": 19.016001,
+        "longitude": 72.822499999999991
+      },
+      "displayName": {
+        "text": "Adarsh Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJESMmALzO5zsRHsrbopjoAIY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.01643,
+        "longitude": 72.82199
+      },
+      "displayName": {
+        "text": "Adarsh Nagar (Worli Village)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJiZdPub7O5zsRQYE3S96T6XY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Aadarsh nagar, Hatiskar Wadi, Prabhadevi, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.015988,
+        "longitude": 72.823093
+      },
+      "displayName": {
+        "text": "Adarsh Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

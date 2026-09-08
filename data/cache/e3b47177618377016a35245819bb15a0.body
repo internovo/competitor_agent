@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJH1CSIP625zsRjzOal9MahIc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Lower Govind Nagar, Malad East, Mumbai, Maharashtra 400097, India",
+      "location": {
+        "latitude": 19.17863,
+        "longitude": 72.851469999999992
+      },
+      "displayName": {
+        "text": "Desai Municipal Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ8QKjIP625zsRV8I5df72uQw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Lower Govind Nagar, Malad East, Mumbai, Maharashtra 400097, India",
+      "location": {
+        "latitude": 19.178587999999998,
+        "longitude": 72.851474
+      },
+      "displayName": {
+        "text": "M. V. Desai Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJM4PDI_625zsReyYn9tlty50",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Lower Govind Nagar, Malad East, Mumbai, Maharashtra 400097, India",
+      "location": {
+        "latitude": 19.17858,
+        "longitude": 72.85112
+      },
+      "displayName": {
+        "text": "Desai Municipal Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

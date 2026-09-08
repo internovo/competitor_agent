@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ00Hrcr7O5zsRd5tWkaTfqKw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.012549999999997,
+        "longitude": 72.822949999999992
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJTc8Pbr7O5zsRkIF3QC8OHSY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Adarsh Nagar, Worli, Mumbai, Maharashtra 400030, India",
+      "location": {
+        "latitude": 19.012729999999998,
+        "longitude": 72.8228
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk (Century Bazaar)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ4bSdc77O5zsRIOf21UjvA5E",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swatantryaveer Savarkar Rd, Adarsh Nagar, Worli, Mumbai, Maharashtra 400025, India",
+      "location": {
+        "latitude": 19.012455,
+        "longitude": 72.822231
+      },
+      "displayName": {
+        "text": "Babasaheb Worlikar Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

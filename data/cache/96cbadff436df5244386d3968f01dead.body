@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJ4eZELeW25zsRahxpW0HmYYs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185267,
+        "longitude": 72.841995
+      },
+      "displayName": {
+        "text": "Sardar Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJew2mMuW25zsRXlmRjzVrCqM",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185185000000004,
+        "longitude": 72.841927
+      },
+      "displayName": {
+        "text": "Sardar Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJUTu_P-W25zsR1vEtr31NNJg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Navy Colony, Liberty Garden, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185879999999997,
+        "longitude": 72.84174999999999
+      },
+      "displayName": {
+        "text": "Industrial Estate (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

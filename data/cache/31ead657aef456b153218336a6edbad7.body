@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ9WU7GC2x5zsRLcR1zx2wzgw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.221263999999998,
+        "longitude": 72.842068
+      },
+      "displayName": {
+        "text": "Yashkripa Building",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJYwfBYyyx5zsReyP_YHv2MFw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.222663999999998,
+        "longitude": 72.84285
+      },
+      "displayName": {
+        "text": "Shimpavali Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJwTVNFy2x5zsR_MYdTotkfas",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.221049999999998,
+        "longitude": 72.84192
+      },
+      "displayName": {
+        "text": "Yashkripa Building",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

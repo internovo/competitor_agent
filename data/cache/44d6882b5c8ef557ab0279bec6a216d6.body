@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJS68q2SCx5zsR3dK9VQXiJY8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "LIC Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.238609999999998,
+        "longitude": 72.848779999999991
+      },
+      "displayName": {
+        "text": "Om Shanti Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ1yWF2CCx5zsRgzr_bDr5SVI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Govind Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.23846,
+        "longitude": 72.84863
+      },
+      "displayName": {
+        "text": "Om Shanti Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJi3-PEiGx5zsRfrP925aYO2E",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "LIC Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2395452,
+        "longitude": 72.8473138
+      },
+      "displayName": {
+        "text": "St.Lawrence High School (Kandivali-E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

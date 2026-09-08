@@ -1,0 +1,391 @@
+{
+  "places": [
+    {
+      "id": "ChIJB6GL2eW25zsRYJvPxQ-VEDw",
+      "types": [
+        "condominium_complex",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Aspee Enclave, Marve Rd, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1914494,
+        "longitude": 72.8404363
+      },
+      "displayName": {
+        "text": "Bhoomi Celestia",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJo_5qJ0C35zsRah2DVMvqhos",
+      "types": [
+        "apartment_building",
+        "condominium_complex",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Bhagwan Gautam Buddha Rd, Malad, Orlem, Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1966833,
+        "longitude": 72.8367852
+      },
+      "displayName": {
+        "text": "Shreeji Atlantis by Shreeji Group",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ3WQmqe225zsRd5qrHPY3xAg",
+      "types": [
+        "apartment_complex",
+        "housing_complex",
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Off, New Link Rd, behind Infiniti Mall Malad, Malad, West, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1869367,
+        "longitude": 72.8310415
+      },
+      "displayName": {
+        "text": "Interface Heights",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJT7wPxe-25zsRZUlgLv67e8w",
+      "types": [
+        "corporate_office",
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Irene Malad, Near, Off, New Link Rd, Liberty Garden, Ekta Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.185758099999997,
+        "longitude": 72.8376838
+      },
+      "displayName": {
+        "text": "Sheth Irene",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJtzDi9WG35zsRJkB6kcmg1sM",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kala Vidyalaya Rd, Malad, Gaikwad Nagar, Malvani, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.181662199999998,
+        "longitude": 72.8142277
+      },
+      "displayName": {
+        "text": "Galaxy Heights | A project by Maharashtra Police Co-operative Housing Federation Limited",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJi7XxlJC35zsR1Z4GwZE_pew",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Uncle Kitchen, Samarth Reva, Church, Lane, Sunder Ln, behind Orlem, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193713499999998,
+        "longitude": 72.8351364
+      },
+      "displayName": {
+        "text": "Samarth Reva",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJa2sfrfe35zsRkXWQWBug6-M",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Nadiadwala Colony Rd Number 2, Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1801033,
+        "longitude": 72.8458938
+      },
+      "displayName": {
+        "text": "KRISHNA DEVELOPERS - Residential Flat Property in Malad West 1BHK 2 BHK in Malad West . flat near jain temple upashray",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJf6UTwky35zsRcLXYNBZhxog",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ramdev Veeral Heights, Nadaidwala Colony 1, S.V Road, 400064, Malad, Nadiyawala Colony 2, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1809937,
+        "longitude": 72.8447176
+      },
+      "displayName": {
+        "text": "Ramdev Associates Builders & Developers",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJlYcDvQG35zsRSVPjWKoU1_4",
+      "types": [
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Bajaj Hall, Swami Vivekanand Rd, Malad, Pawan Baug, Liliya Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1772589,
+        "longitude": 72.844339699999992
+      },
+      "displayName": {
+        "text": "Triumph Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJo489S7G35zsR_gSg8XNDjOo",
+      "types": [
+        "apartment_building",
+        "housing_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "next to Billabong High School, Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.2037944,
+        "longitude": 72.8210831
+      },
+      "displayName": {
+        "text": "Royal Lagoon | Apartments In Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJWymMisS35zsRfNQRSaXOTII",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Off, New Link Rd, opp. landmark Restaurant, Malad, Kanchpada, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.191909,
+        "longitude": 72.835933
+      },
+      "displayName": {
+        "text": "Auris Serenity",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJOfcWAf-35zsRSG24XxUFTEk",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "PG Rd, off New Link Road, Malad, Ekta Nagar, W, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.183353699999998,
+        "longitude": 72.8379219
+      },
+      "displayName": {
+        "text": "Harshail Hornbill, Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJgR1wO-625zsRzeEpLkXbDaY",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ground Floor, F wing, off New Link Road, behind Infiniti Mall Malad, Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1869022,
+        "longitude": 72.8303557
+      },
+      "displayName": {
+        "text": "K. Raheja Constructions",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJVXC71ea35zsRXZiXBNI4Xqo",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Evershine Nagar Rd, Malad, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.193946699999998,
+        "longitude": 72.8326447
+      },
+      "displayName": {
+        "text": "Narang Vivenda",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJUzB5bvu25zsRxYNH9FdtRAI",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Eesha Kripa, Brahman Sabha Marg, Malad, Navy Colony, Somwari Bazar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1833854,
+        "longitude": 72.8445471
+      },
+      "displayName": {
+        "text": "Gemstar Constructions",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJcxKIo1q25zsR8R2fw9I4FDM",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "DLH Park Road, DLH Park, 1001, Swami Vivekanand Rd, Malad, Sunder Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.174308099999998,
+        "longitude": 72.8445574
+      },
+      "displayName": {
+        "text": "PCPL (Pranav Constructions)",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ5QKe8s635zsRyACJ6AvzEMg",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Centrico, Edward Compound, Gautam Buddha Marg, Malad (W), Mumbai near Orlem Church, 5RXP+3QR, Malad - Marve Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1978637,
+        "longitude": 72.8369784
+      },
+      "displayName": {
+        "text": "Vora Centrico, Malad West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJe0wNyX-35zsR9VxTEcyX0jk",
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Shreeji Eternity experience centre, Shreeji Eternity, New Link Rd, near Zenith Hospital, Malad, Orlem, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1948629,
+        "longitude": 72.8339787
+      },
+      "displayName": {
+        "text": "Shreeji Eternity by Shreeji Group",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJgycoLLu25zsRdlWYkiuJc2U",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "GURUKRUPA MARINA ENCLAVE, Marina Enclave Rd, Near Bilabong School, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095, India",
+      "location": {
+        "latitude": 19.202101,
+        "longitude": 72.8150436
+      },
+      "displayName": {
+        "text": "Gurukrupa Marina Enclave",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJg7EwVs-35zsRay9HirI40mM",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Chincholi Bunder Rd, Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.179547,
+        "longitude": 72.8426293
+      },
+      "displayName": {
+        "text": "Chandak Treesourus",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    }
+  ]
+}
