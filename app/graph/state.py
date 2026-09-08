@@ -25,6 +25,8 @@ class GraphState(TypedDict, total=False):
     candidates: Annotated[list[Candidate], operator.add]
     projects: Annotated[list[Project], merge_by_id]
     dropped: Annotated[list[dict[str, Any]], operator.add]
+    register_filings: Annotated[list[dict[str, Any]], operator.add]
+    societies: Annotated[list[dict[str, Any]], operator.add]
     retry_done: bool
     nearest_metro: str | None
     log: Annotated[list[str], operator.add]

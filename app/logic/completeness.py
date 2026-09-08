@@ -25,7 +25,19 @@ def label_for(n: int) -> Label:
 
 def apply(project: Project) -> Project:
     project.completeness = count(project)
-    project.label = label_for(project.completeness)
+    # Counted for coverage, but withdrawn as contradictory, so there is no value to show
+    # and no dimension to score. Runs after conflicts.apply, which is what sets these.
+    project.unresolved = [f for f in COMPLETENESS_FIELDS if project.report(f).absent == "SOURCES_DISAGREE"]
+    label = label_for(project.completeness)
+    # One unresolved dimension is survivable: the score reports its own denominator
+    # (score_max / score_excluded), so nothing is over-promised. Capping on ANY unresolved
+    # field made COMPARABLE rarer the better the research got -- more sources, more
+    # disagreement -- which is the wrong direction for a label to move in.
+    if len(project.unresolved) > 1 and label == "COMPARABLE":
+        label = "PARTIAL"
+    # A lifecycle nobody stated outranks coverage: six filled fields say nothing about
+    # whether the building is still selling, so it is not COMPARABLE with one that is.
+    project.label = "UNVERIFIED" if project.status == "unknown" else label
     # "Could not verify" means we never saw it at all. A disagreement is a different
     # fact and travels in `conflicts`.
     project.could_not_verify = [f for f in COMPLETENESS_FIELDS if not project.report(f).observations]

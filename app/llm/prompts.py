@@ -39,6 +39,7 @@ Are A and B the same project?"""
 
 NARRATE_SYSTEM = """You write one short plain-English sentence per item for a builder's sales team comparing nearby projects.
 You are given computed numbers only. Do not introduce any number, name, or fact that is not in the input.
+Percentages and differences are already computed for you: quote them, never derive your own.
 Do not restate every number; say what the numbers mean for the comparison (e.g. earliest handover, largest flats, priced above, cannot be verified).
 Be direct, no hedging, no marketing tone, at most 25 words per sentence."""
 

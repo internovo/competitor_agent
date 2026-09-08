@@ -17,7 +17,7 @@ from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, 
 from app.sources.fetch import Fetcher
 from app.sources.registry import build_sources
 
-LABEL_ORDER = {"COMPARABLE": 0, "PARTIAL": 1, "THIN": 2}
+LABEL_ORDER = {"COMPARABLE": 0, "PARTIAL": 1, "THIN": 2, "UNVERIFIED": 3}
 CATEGORY_LABELS = compare_logic.CATEGORY_LABELS
 
 
@@ -29,7 +29,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     `on_stage(node, update)` is called as each node finishes, so a polling client
     sees real progress rather than a spinner.
     """
-    fetcher = Fetcher(mode)
+    fetcher = Fetcher(mode, timeout=settings.fetch_timeout_s)
     deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm if llm is not None else get_llm()}
     scan_id = uuid.uuid4().hex[:12]
     state = {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [],
@@ -40,14 +40,18 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     else:
         final = dict(state)
         on_stage("", {})   # start the clock after setup, so the first node is not billed for it
-        async for mode, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
-            if mode == "values":
+        # not `mode`: that is the fetch mode, and shadowing it recorded every streamed
+        # scan as mode "values".
+        async for stream, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
+            if stream == "values":
                 final = chunk
             else:
                 for node, update in chunk.items():
                     on_stage(node, update or {})
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
     meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls),
+            "register_filings": final.get("register_filings", []),
+            "societies": final.get("societies", []),
             "urls": list(fetcher.calls), "pages_fetched": final.get("pages_fetched", 0),
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0})}
     return rec, meta
@@ -83,9 +87,22 @@ async def execute(run) -> "RunRecord":
     return run
 
 
+def unread(projects: list[Project]) -> list[Project]:
+    """Eligible, but no source ever produced a page for them.
+
+    A register row nobody has written about is not a competitor a rep can use; it is a
+    filing with coordinates. It is still reported -- it may be real and worth a call --
+    but it belongs beside the table, not in it.
+    """
+    return [p for p in projects if p.eligible and not p.pages_seen]
+
+
 def rank(projects: list[Project]) -> list[Project]:
-    eligible = [p for p in projects if p.eligible]
-    return sorted(eligible, key=lambda p: (LABEL_ORDER[p.label], -(p.match_score or -1), p.distance_km or 99))
+    """Label, then coverage, then distance. Coverage before distance is the point: sorting
+    an UNVERIFIED 0/6 register row above a filled launch because it is 200 m closer put
+    the emptiest rows at the top of the table."""
+    eligible = [p for p in projects if p.eligible and p.pages_seen]
+    return sorted(eligible, key=lambda p: (LABEL_ORDER[p.label], -p.completeness, p.distance_km or 99))
 
 
 # ------------------------------------------------------------------ list
@@ -97,10 +114,14 @@ def _rate_block(p: Project, conflict) -> dict[str, Any] | None:
     seen = p.rate_psf.observations
     if not seen:
         return None
-    if conflict:
-        lo, hi, basis = p.rate_span()
-        return {"min": lo, "max": hi, "basis": basis, "conflict": conflict.detail, "sources": len(seen)}
     fv = p.display("rate_psf")
+    if fv is None:
+        # Seen and then withdrawn -- sources disagreed, the figure was outside the
+        # plausible band, or it was quoted for several projects at once. The card shows
+        # the span and says why it is not this project's rate; it never shows it as one.
+        lo, hi, basis = p.rate_span()
+        return {"min": lo, "max": hi, "basis": basis, "sources": len(seen),
+                "conflict": conflict.detail if conflict else p.rate_psf.label}
     return {"min": fv.value.min_psf, "max": fv.value.max_psf, "basis": fv.value.basis, "conflict": None, "sources": len(seen)}
 
 
@@ -123,8 +144,10 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
         "rank": rank_no, "id": p.id, "name": p.name, "builder": p.builder, "distance_km": p.distance_km, "status": _status_label(p),
         "rera_verified": rera_verified, "on_propog": p.on_propog,
         "label": p.label, "completeness": p.completeness, "completeness_text": f"{p.label} · {p.completeness} of 6" if p.label != "COMPARABLE" else "COMPARABLE",
-        "match_score": p.match_score, "score_note": None if p.match_score is not None else "not scored at this coverage",
-        "analyse_enabled": p.label != "THIN",
+        "match_score": p.match_score, "score_max": p.score_max, "score_excluded": p.score_excluded,
+        "score_note": None if p.match_score is not None else "not scored at this coverage",
+        "unresolved": p.unresolved,
+        "analyse_enabled": p.label not in ("THIN", "UNVERIFIED"),
         "configurations": p.value("configurations"),
         "carpet_sqft": [carpet.value.min_sqft, carpet.value.max_sqft] if carpet else None,
         "rate_psf": _rate_block(p, rate_conflict),
@@ -143,9 +166,17 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
         "mode": rec.mode, "created_at": rec.created_at.isoformat(),
         "counts": {"candidates_seen": len(rec.projects) + len(rec.dropped), "eligible": len(ranked),
                    "comparable": sum(1 for p in ranked if p.label == "COMPARABLE"), "partial": sum(1 for p in ranked if p.label == "PARTIAL"),
-                   "thin": sum(1 for p in ranked if p.label == "THIN")},
+                   "thin": sum(1 for p in ranked if p.label == "THIN"),
+                   "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
         "extraction": meta.get("extraction", {}),
-        "competitors": [card(p, i + 1) for i, p in enumerate(ranked)],
+        "competitors": [card(p, i + 1) for i, p in enumerate(ranked[: settings.max_table_rows])],
+        "also_found": [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
+                        "completeness": p.completeness, "reason": None} for p in ranked[settings.max_table_rows:]]
+                      + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
+                          "completeness": p.completeness,
+                          "reason": "no source produced a page about this project"} for p in unread(rec.projects)]
+                      + meta.get("societies", []),
+        "register_filings": meta.get("register_filings", []),
         "dropped": [{"id": p.id, "name": p.name, "reason": p.drop_reason} for p in rec.projects if not p.eligible] + rec.dropped,
         "log": meta.get("log", []),
     }

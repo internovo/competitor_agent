@@ -108,7 +108,11 @@ class LLM:
         self.calls_failed = 0
         self.usage = UsageCounter()
         self.model = getattr(self.chat, "model_name", None) or getattr(self.chat, "model", "")
-        self._extract = self.chat.with_structured_output(ExtractedFacts, method="json_schema")
+        # Anthropic's json_schema grammar refuses a schema with more than 24 optional /
+        # union-typed properties, and ExtractedFacts has 26: every extraction 400s. Tool
+        # calling has no such cap. The three small schemas below are fine either way.
+        self._extract = self.chat.with_structured_output(
+            ExtractedFacts, method="function_calling" if self.provider == "anthropic" else "json_schema")
         self._match = self.chat.with_structured_output(MatchVerdict, method="json_schema")
         self._cards = self.chat.with_structured_output(CardInsights, method="json_schema")
         self._sections = self.chat.with_structured_output(SectionInsights, method="json_schema")

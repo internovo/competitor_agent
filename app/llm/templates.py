@@ -11,6 +11,9 @@ def _months(a: date, b: date) -> int:
 
 
 def card_insight(p: Project, own: OwnProject, eligible: list[Project]) -> str:
+    if p.label == "UNVERIFIED":
+        return (f"{p.completeness} of 6 fields on file, but no source said whether it is still selling; "
+                f"confirm the lifecycle before comparing.")
     if p.label == "THIN":
         missing = ", ".join(f.replace("_", " ") for f in p.could_not_verify[:3])
         return f"Not enough verified data to compare; {missing} still missing. Adding its RERA number would lift it into ranking."
@@ -50,9 +53,11 @@ def card_insight(p: Project, own: OwnProject, eligible: list[Project]) -> str:
 def compare_insights(payload: dict, own: OwnProject) -> dict[str, str]:
     out = {}
     ra = payload["rate_axis"]
-    if len(ra["points"]) >= 2:
-        g = max(ra["gaps"], key=lambda x: x["gap"])
-        out["rate"] = f"Base rates on the shared axis sit ₹{g['gap']:,} apart at the widest. {len(ra['off_axis'])} project(s) cannot be placed on the axis."
+    others = [x for x in ra["points"] if x["delta_pct"] is not None and x["id"] != payload["own_id"]]
+    if others:
+        w = max(others, key=lambda x: abs(x["delta_pct"]))
+        out["rate"] = (f"{w['name']} is priced {abs(w['delta_pct'])}% {'above' if w['delta_pct'] > 0 else 'below'} {own.name} on base rate, "
+                       f"the widest on the axis. {len(ra['off_axis'])} project(s) cannot be placed on it.")
     else:
         out["rate"] = f"Only {len(ra['points'])} project has a base rate on record, so rates cannot be compared on one axis."
     ps = payload["possession"]["points"]

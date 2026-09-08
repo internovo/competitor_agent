@@ -19,7 +19,7 @@ def scan():
 def test_counts_and_labels(scan):
     own, rec, meta, _ = scan
     pl = service.list_payload(rec, own, meta)
-    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 3, "partial": 2, "thin": 1}
+    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 3, "partial": 2, "thin": 1, "unverified": 0}
     by = {c["name"]: c for c in pl["competitors"]}
     assert by["Runwal Vertex"]["label"] == "COMPARABLE" and by["Runwal Vertex"]["match_score"] is not None
     assert by["Rustomjee Crest"]["completeness"] == 4 and by["Rustomjee Crest"]["match_score"] is None
@@ -98,11 +98,28 @@ def test_compare_own_plus_two(scan):
     assert payload["common_bhk"] == 3
     assert {p["name"] for p in payload["rate_axis"]["points"]} == {"Marina64", "Runwal Vertex"}
     assert payload["rate_axis"]["off_axis"][0]["name"] == "Rustomjee Crest" and "disagree" in payload["rate_axis"]["off_axis"][0]["reason"]
+    ra = payload["rate_axis"]
+    own_mid = (own.rate_psf.min_psf + own.rate_psf.max_psf) / 2
+    vertex_mid = 35400
+    assert ra["baseline"] == {"id": own.id, "name": own.name, "value": round(own_mid)}
+    assert {p["id"]: p["delta_pct"] for p in ra["points"]} == {
+        own.id: 0.0, by["Runwal Vertex"].id: round((vertex_mid - own_mid) / own_mid * 100, 1)}
     assert payload["carpet"]["overlap"] == [690, 1105]
     assert payload["config_matrix"]["types"] == [1, 2, 3, 4]
     assert payload["structure"]["all_same_type"] is True
     assert payload["amenities"]["counts"][0] == 20 and payload["amenities"]["counts"][1] == 19
     assert payload["amenities"]["stale"][0]["id"] == "rustomjee-crest"
+
+
+def test_no_own_base_rate_means_no_delta_rather_than_a_guessed_one(scan):
+    """A percentage needs a baseline. Without one the cell stays empty."""
+    own, rec, _, _ = scan
+    own = own.model_copy(deep=True)
+    own.rate_psf.basis = "all_in"
+    ra = compare.build(own, [next(p for p in rec.projects if p.name == "Runwal Vertex")], 1.5)["rate_axis"]
+    assert ra["baseline"] is None
+    assert all(p["delta_pct"] is None for p in ra["points"])
+    assert "no delta" in ra["baseline_note"]
 
 
 def test_manual_override_lifts_completeness(scan):
@@ -126,3 +143,44 @@ def test_the_agent_stores_nothing(scan):
     assert offenders == [], f"the agent still owns a database: {offenders}"
     _, rec, meta, _ = scan
     assert rec.scan_id and any("persist:" in line for line in meta["log"])
+
+
+def test_the_table_is_capped_and_the_rest_goes_to_also_found(scan, monkeypatch):
+    """Ten rows is what the UI shows. Sixty-one is a database dump."""
+    from app.config import settings
+
+    own, rec, meta, _ = scan
+    monkeypatch.setattr(settings, "max_table_rows", 3)
+    pl = service.list_payload(rec, own, meta)
+    assert len(pl["competitors"]) == 3
+    assert len(pl["also_found"]) == len(service.rank(rec.projects)) - 3
+    assert set(pl["also_found"][0]) == {"id", "name", "distance_km", "label", "completeness", "reason"}
+
+
+def test_coverage_outranks_distance_inside_a_label(own):
+    """The bug this fixes: an empty register row 60 m away sorted above a filled launch
+    a kilometre out, so the top of the table was the emptiest part of it."""
+    from app.models.schema import Project
+
+    near_empty = Project(id="a", name="Near Empty", status="unknown", distance_km=0.06, completeness=0,
+                        label="UNVERIFIED", pages_seen=["https://x/a"])
+    far_full = Project(id="b", name="Far Full", status="unknown", distance_km=1.4, completeness=4,
+                       label="UNVERIFIED", pages_seen=["https://x/b"])
+    assert [p.id for p in service.rank([near_empty, far_full])] == ["b", "a"]
+
+
+def test_a_project_no_source_wrote_about_is_listed_not_tabled(own):
+    """Borivali West's top ten was 'Mahendra Jamnadas Kara', 'K Mehta And Company',
+    'Bharat V Kenny' -- register filings with coordinates and nothing else. They are
+    still reported; they are not competitors."""
+    from app.models.schema import Project, ScanRecord
+
+    read = Project(id="read", name="Has A Page", status="under_construction", distance_km=0.5,
+                   completeness=4, label="PARTIAL", pages_seen=["https://x/read"])
+    unread = Project(id="unread", name="Bharat V Kenny", status="unknown", distance_km=0.1,
+                     completeness=1, label="UNVERIFIED")
+    rec = ScanRecord(scan_id="s", own_id=own.id, radius_km=1.5, mode="live", projects=[read, unread])
+    pl = service.list_payload(rec, own, {})
+    assert [c["id"] for c in pl["competitors"]] == ["read"]
+    beside = {x["id"]: x["reason"] for x in pl["also_found"]}
+    assert beside["unread"] == "no source produced a page about this project"

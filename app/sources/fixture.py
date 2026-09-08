@@ -29,7 +29,7 @@ class FixtureSource(NullSource):
         return [Candidate(**c) for c in self._data["candidates"]]
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
-        entries = self._data["facts"].get(project.id) or self._data["facts"].get(project.name) or []
+        entries = self._data["facts"].get(project.id) or self._data["facts"].get(project.match_name) or []
         pages = []
         for e in entries:
             fetched = datetime.fromisoformat(e["fetched_at"]) if e.get("fetched_at") else datetime.now(timezone.utc)

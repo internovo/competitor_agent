@@ -32,7 +32,7 @@ class PropOGSource(NullSource):
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
         for p in self._projects:
-            if p.name.lower() == project.name.lower() or (p.rera_phases and p.rera_phases[0].number == project.id):
+            if p.name.lower() == project.match_name.lower() or (p.rera_phases and p.rera_phases[0].number == project.id):
                 facts = {
                     "name": p.name, "builder": p.builder, "status": "under_construction", "configurations": p.configurations,
                     "carpet_min_sqft": p.carpet_sqft.min_sqft, "carpet_max_sqft": p.carpet_sqft.max_sqft,

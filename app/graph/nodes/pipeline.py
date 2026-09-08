@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import time
 import uuid
 from datetime import date
 
@@ -18,7 +19,7 @@ from app.logic.geo import haversine_km
 from app.extract import deterministic
 from app.logic.merge import consolidate_rera, merge_facts
 from app.models.schema import (
-    REPORTED_FIELDS, Candidate, ExtractedFacts, FieldValue, Project, Provenance, ReraPhase, ScanRecord,
+    REPORTED_FIELDS, Candidate, ExtractedFacts, FieldValue, Page, Project, Provenance, ReraPhase, ScanRecord,
 )
 from app.sources.base import ScanContext
 from app.sources.fetch import CacheMiss
@@ -88,8 +89,11 @@ async def discover(state: GraphState, config: RunnableConfig) -> dict:
         if isinstance(r, Exception):
             log.append(f"discover[{s.name}]: failed ({type(r).__name__}: {r})")
         else:
+            for c in r:
+                c.register_only = c.source == "maharera" and resolve.looks_like_company(c.name)
             cands.extend(r)
-            log.append(f"discover[{s.name}]: {len(r)} candidates")
+            n_reg = sum(1 for c in r if c.register_only)
+            log.append(f"discover[{s.name}]: {len(r)} candidates" + (f", {n_reg} register-only" if n_reg else ""))
     return {"candidates": cands, "log": log}
 
 
@@ -99,11 +103,16 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
     own = state["own"]
     groups: list[tuple[Candidate, list[Candidate]]] = []
     log = []
+    placeholders = resolve.placeholder_pins(state["candidates"])
+    asked = 0
     for c in state["candidates"]:
         placed = False
         for rep, members in groups:
+            if not resolve.could_be_same(rep, c, placeholders):
+                continue
             verdict = resolve.decide(rep, c)
-            if verdict is None and llm is not None:
+            if verdict is None and llm is not None and asked < settings.resolve_max_llm_pairs:
+                asked += 1
                 try:
                     v = await llm.same_project(rep, c)
                     verdict = v.same_project and v.confidence >= 0.6
@@ -113,29 +122,50 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
                 except Exception as e:  # noqa: BLE001
                     log.append(f"resolve: LLM match failed ({type(e).__name__}); treating as different")
                     verdict = False
+            if verdict is None:
+                verdict = False   # out of model budget, or no model: never guess toward merging
             if verdict:
                 resolve.merge_into(rep, c, COORD_PRIORITY)
                 members.append(c)
                 placed = True
                 break
         if not placed:
-            groups.append((c.model_copy(), [c]))
+            rep = c.model_copy()
+            rep.source_url = resolve.page_url(c)
+            groups.append((rep, [c]))
 
     projects: list[Project] = []
     dropped: list[dict] = []
+    filings: list[dict] = []
+    societies: list[dict] = []
     margin = state["radius_km"] + settings.discovery_margin_km
     own_reras = {ph.number for ph in own.rera_phases}
+    own_slug = resolve.slug(own.name)
     own_card = Candidate(name=own.name, builder=own.builder, lat=own.lat, lng=own.lng, address=own.address,
                          locality=own.locality, source="manual")
     for rep, members in groups:
         pid = rep.rera_no or resolve.slug(rep.name)
         # The register and the portals both list the builder's own project; it is the baseline, not a competitor.
-        if (rep.rera_no and rep.rera_no in own_reras) or resolve.decide(own_card, rep) is True:
+        # Identity only -- RERA number or name. A shared lifecycle or builder is not identity.
+        if (rep.rera_no and rep.rera_no in own_reras) or resolve.slug(rep.name) == own_slug or resolve.decide(own_card, rep) is True:
             dropped.append({"id": pid, "name": rep.name, "reason": "own project"})
             continue
-        p = Project(id=pid, name=rep.name, builder=rep.builder, lat=rep.lat, lng=rep.lng, address=rep.address,
+        # A promoter's register filing is not a competitor a rep can use, and researching
+        # it cannot make it one: the name is unsearchable. It is reported, not researched.
+        if resolve.looks_like_society(rep.name):
+            societies.append({"id": pid, "name": rep.name, "label": "UNVERIFIED", "completeness": 0,
+                              "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
+                              "reason": "a registered co-operative housing society, not a project on sale"})
+            continue
+        if rep.register_only or resolve.looks_like_company(rep.name):
+            filings.append({"id": pid, "name": rep.name, "rera_no": rep.rera_no,
+                            "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
+                            "reason": "MahaRERA row named for the promoter, not a marketed project"})
+            continue
+        p = Project(id=pid, name=resolve.clean_project_name(rep.name, rep.builder, own.locality), name_raw=rep.name,
+                    builder=rep.builder, lat=rep.lat, lng=rep.lng, address=rep.address,
                     locality=rep.locality, on_propog=rep.on_propog, nearest_metro=rep.nearest_metro,
-                    discovered_via=sorted({m.source for m in members}))
+                    source_url=rep.source_url, discovered_via=sorted({m.source for m in members}))
         if rep.lat is not None:
             p.pin_accuracy = "Places - rooftop" if rep.source == "places" else f"{rep.source} - address"
             p.distance_km = round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2)
@@ -149,8 +179,11 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
                                              prov=Provenance(source="maharera", url=m.source_url),
                                              method="deterministic", confidence="high"))
         projects.append(p)
-    log.append(f"resolve: {len(state['candidates'])} candidates -> {len(groups)} projects, {len(dropped)} dropped early")
-    return {"projects": projects, "dropped": dropped, "log": log}
+    log.append(f"resolve: {len(state['candidates'])} candidates -> {len(groups)} groups, {len(projects)} to research, "
+               f"{len(filings)} register filings, {len(societies)} societies, {len(dropped)} dropped early, "
+               f"{asked} model pairs asked")
+    return {"projects": projects, "dropped": dropped, "register_filings": filings,
+            "societies": societies, "log": log}
 
 
 def fan_out_extract(state: GraphState):
@@ -209,6 +242,27 @@ def _only(facts: ExtractedFacts, want: set[str]) -> ExtractedFacts:
     return ExtractedFacts(**{k: v for k, v in facts.model_dump().items() if k in allowed})
 
 
+async def _seed_page(project: Project, ctx: ScanContext, log: list[str]) -> list[Page]:
+    """Fetch the URL discovery pulled this project's name from, if there is one."""
+    from app.sources.fetch import html_to_text
+    from app.sources.tavily_web import _source_for
+
+    url = project.source_url
+    if not url or url in project.pages_seen:
+        return []
+    try:
+        res = await ctx.fetcher.get(url, impersonate=True)
+        text = html_to_text(res.text, settings.max_page_chars) if res.ok else ""
+    except Exception as e:  # noqa: BLE001 - a dead discovery URL is not a reason to lose the project
+        log.append(f"extract[{project.id}]: source_url fetch failed ({type(e).__name__})")
+        return []
+    if len(text) < 200:
+        log.append(f"extract[{project.id}]: source_url returned nothing readable ({url})")
+        return []
+    log.append(f"extract[{project.id}]: source_url fetched ({url})")
+    return [Page(url=url, source=_source_for(url), text=text, fetched_at=res.fetched_at)]
+
+
 async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     d = _deps(config)
     llm = d.get("llm")
@@ -221,13 +275,28 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         sources = [s for s in sources if s.name == "tavily" or s.name not in project.sources_consulted]
         project.retried = True
 
-    page_lists = await asyncio.gather(*(s.pages_for(project, ctx) for s in sources), return_exceptions=True)
-    pages = []
+    # --- 0. the page discovery already found --------------------------------
+    # A candidate found by a portal or a search demonstrably has a page and we already
+    # know its URL. Reading it costs one fetch; finding it again costs a search.
+    # One wall-clock budget for this candidate's whole research. Running out is a normal
+    # outcome: it keeps what it already has and the rest takes an absence reason.
+    deadline = time.monotonic() + settings.candidate_budget_s
+    left = lambda: max(0.05, deadline - time.monotonic())  # noqa: E731
+
+    seed = [] if state["retry"] else await _seed_page(project, ctx, log)
+
+    page_lists = await asyncio.gather(
+        *(asyncio.wait_for(s.pages_for(project, ctx), left()) for s in sources), return_exceptions=True)
+    pages = list(seed)
+    seen_urls = {p.url for p in seed} | set(project.pages_seen)
     for s, r in zip(sources, page_lists):
         if isinstance(r, Exception):
             log.append(f"extract[{project.id}][{s.name}]: failed ({type(r).__name__}: {r})")
-        else:
-            pages.extend(pg for pg in r if pg.url not in project.pages_seen)
+            continue
+        for pg in r:
+            if pg.url not in seen_urls:
+                seen_urls.add(pg.url)
+                pages.append(pg)
 
     # --- 1. deterministic first: pure, no network, microseconds -------------
     prose = [p for p in pages if p.kind == "html"]
@@ -236,7 +305,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     why: dict[str, tuple[str, list | None]] = {}
     # Pages that never name the project are about a neighbour, and with twenty
     # pages per project those foreign pages decide the answer.
-    keep = {p.url for p in deterministic.relevant_pages(prose, project.name)}
+    keep = {p.url for p in deterministic.relevant_pages(prose, project.match_name)}
     n_det = 0
     for page in pages:
         if page.kind == "json_facts":
@@ -251,7 +320,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         if page.url not in keep:
             log.append(f"extract[{project.id}]: {page.url} never names the project; not read")
             continue
-        facts, confidence, evidence, filled, _, page_why = deterministic.read(page, project.name)
+        facts, confidence, evidence, filled, _, page_why = deterministic.read(page, project.match_name)
         merge_facts(project, facts, page, method="deterministic", confidence=confidence, evidence=evidence)
         n_det += len(filled)
         why |= page_why
@@ -260,7 +329,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     read_pages = [p for p in prose if p.url in keep]
     if read_pages and project.status == "unknown":
         lifecycle, evidence, _ = deterministic.vote_lifecycle(
-            [deterministic.focus_on_project(p.text, project.name) for p in read_pages])
+            [deterministic.focus_on_project(p.text, project.match_name) for p in read_pages])
         if lifecycle not in deterministic.UNMAPPED_LIFECYCLES | {"unknown"}:
             project.status = lifecycle
             log.append(f"extract[{project.id}]: status {lifecycle} by majority ({evidence})")
@@ -268,7 +337,8 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     # --- 2. only what is still missing goes to Claude -----------------------
     want = set(_still_missing(project))
     n_llm = 0
-    if want and llm is not None and read_pages:
+    timed_out = deadline - time.monotonic() <= 0
+    if want and llm is not None and read_pages and not timed_out:
         sem = asyncio.Semaphore(settings.extract_concurrency)
 
         async def one(page):
@@ -281,7 +351,12 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
                     log.append(f"extract[{project.id}]: LLM failed on {page.url} ({type(e).__name__})")
                     return page, None
 
-        for page, facts in await asyncio.gather(*(one(pg) for pg in read_pages)):
+        try:
+            done = await asyncio.wait_for(asyncio.gather(*(one(pg) for pg in read_pages)), left())
+        except TimeoutError:
+            done, timed_out = [], True
+            log.append(f"extract[{project.id}]: out of budget after {settings.candidate_budget_s}s; keeping what it has")
+        for page, facts in done:
             if facts is None:
                 continue
             before = {f for f in FILLABLE if _has(project, f)}
@@ -292,7 +367,11 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     # An absence keeps the most specific reason any source gave it.
     for f in REPORTED_FIELDS:
         report = project.report(f)
-        if not report.observations and f in why:
+        if report.observations:
+            continue
+        if timed_out:
+            report.mark_absent("RESEARCH_TIMED_OUT")
+        elif f in why:
             report.mark_absent(*why[f])
     for page in pages:
         if page.source not in project.sources_consulted:
@@ -302,7 +381,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     if project.lat is None:
         # A portal-discovered project often has no address at all; its name plus the locality is still worth a lookup,
         # and a project that stays unpinned is dropped for "no coordinates" rather than compared.
-        query = f"{project.name} {project.address}" if project.address else f"{project.name} {ctx.own.locality or ''} Mumbai"
+        query = f"{project.match_name} {project.address}" if project.address else f"{project.match_name} {ctx.own.locality or ''} Mumbai"
         hit = await _geocode(_geocoders(d), ctx, query)
         if hit is None:
             log.append(f"extract[{project.id}]: no geocoder could place '{query.strip()}'")
@@ -330,10 +409,15 @@ async def filter_node(state: GraphState, config: RunnableConfig) -> dict:
 
 # ------------------------------------------------------------------ score
 async def score(state: GraphState, config: RunnableConfig) -> dict:
+    # One anchor for the whole set, so the plausibility band cannot mean two things in
+    # one scan. Conflicts run before completeness: they are what mark a field unresolved,
+    # and the label depends on that.
+    anchor = conflicts.anchor_for(state["own"], state["projects"])
+    shared = conflicts.shared_rates(state["projects"])
     out = []
     for p in state["projects"]:
+        conflicts.apply(p, anchor, shared)
         completeness.apply(p)
-        conflicts.apply(p)
         match_score.apply(p, state["own"], state["radius_km"])
         out.append(p)
     return {"projects": out}

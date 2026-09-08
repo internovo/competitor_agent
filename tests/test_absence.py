@@ -1,4 +1,4 @@
-"""A missing field must say why it is missing. All six reasons, and both refusals."""
+"""A missing field must say why it is missing. Every reason, and both refusals."""
 from datetime import date
 
 import pytest
@@ -9,10 +9,11 @@ from app.models.schema import AbsenceReason, FieldReport, RateValue, absence_lab
 from tests.conftest import fv
 
 REASONS = ("NOT_PUBLISHED", "NO_RERA_ON_FILE", "RATE_NOT_PUBLISHED", "UNPARSEABLE_DATE",
-           "SOURCES_DISAGREE", "NOT_FOUND")
+           "SOURCES_DISAGREE", "NOT_FOUND", "NOT_RESEARCHED", "RESEARCH_TIMED_OUT", "IMPLAUSIBLE_RATE",
+           "SHARED_ACROSS_PROJECTS")
 
 
-def test_the_six_reasons_are_the_whole_set():
+def test_the_listed_reasons_are_the_whole_set():
     assert set(AbsenceReason.__args__) == set(REASONS)
 
 
@@ -105,7 +106,7 @@ def test_a_thin_project_names_a_reason_on_every_empty_field(full_project):
     from app.config import COMPLETENESS_FIELDS
     from app.models.schema import Project
 
-    p = Project(id="thin", name="Nothing Known")
+    p = Project(id="thin", name="Nothing Known", status="under_construction")
     completeness.apply(p)
     assert p.label == "THIN"
     for f in COMPLETENESS_FIELDS:

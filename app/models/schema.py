@@ -16,7 +16,7 @@ Status = Literal["new_launch", "under_construction", "ready", "completed", "resa
 BuildingType = Literal["single", "multi_tower", "complex"]
 RateBasis = Literal["base", "all_in", "undisclosed"]
 AmenityCategory = Literal["sport_fitness", "social_leisure", "convenience_safety", "other"]
-Label = Literal["COMPARABLE", "PARTIAL", "THIN"]
+Label = Literal["COMPARABLE", "PARTIAL", "THIN", "UNVERIFIED"]
 
 AbsenceReason = Literal[
     "NOT_PUBLISHED",        # we read a source and it does not state this
@@ -25,6 +25,10 @@ AbsenceReason = Literal[
     "UNPARSEABLE_DATE",     # a possession phrase was found but is not a date
     "SOURCES_DISAGREE",     # values differ beyond the configured threshold
     "NOT_FOUND",            # no source produced anything for this field
+    "NOT_RESEARCHED",       # outside this run's research budget; nobody looked
+    "RESEARCH_TIMED_OUT",   # research started and ran out of its wall-clock budget
+    "IMPLAUSIBLE_RATE",     # a rate was read, but it is outside a believable band for this market
+    "SHARED_ACROSS_PROJECTS",  # the same figure was quoted for several projects in this run
 ]
 ExtractMethod = Literal["deterministic", "llm", "manual"]
 Confidence = Literal["high", "medium", "low"]
@@ -72,6 +76,15 @@ def _a(name: str) -> str:
 def absence_label(field: str | None, reason: AbsenceReason, span: list[Any] | None = None) -> str:
     """The one place absence is put into words, so the wording cannot drift between fields."""
     name = field_label(field)
+    if reason == "SHARED_ACROSS_PROJECTS":
+        value = f"{span[0]:,}" if span else "the same figure"
+        n = span[1] if span and len(span) >= 2 else "several"
+        return (f"Rs {value} per sq ft was quoted for {n} projects in this radius. "
+                f"It reads as a locality average and is not treated as this project's rate.")
+    if reason == "IMPLAUSIBLE_RATE":
+        quoted = f"{span[0]:,} to {span[1]:,}" if span and len(span) >= 2 and span[0] != span[1] else f"{span[0]:,}" if span else "a figure"
+        return (f"A source quoted Rs {quoted} per sq ft, outside a believable band for this market. "
+                f"It is reported here and not used.")
     if reason == "SOURCES_DISAGREE":
         spread = f"{span[0]} to {span[1]}" if span and len(span) >= 2 else "beyond the tolerated spread"
         return f"Sources disagree on the {name} ({spread}); no single value is reported."
@@ -81,6 +94,8 @@ def absence_label(field: str | None, reason: AbsenceReason, span: list[Any] | No
         "RATE_NOT_PUBLISHED": "Pages were found for this project; none quotes a per-sq-ft rate.",
         "UNPARSEABLE_DATE": "A possession phrase was found but it does not state a date.",
         "NOT_FOUND": f"No source produced {_a(name)} for this project.",
+        "NOT_RESEARCHED": f"This project was outside the run's research budget; no page was read for {_a(name)}.",
+        "RESEARCH_TIMED_OUT": f"Research for this project ran out of time before {_a(name)} was read.",
     }[reason]
 
 
@@ -194,15 +209,39 @@ def report_of(field: str, fv: FieldValue) -> FieldReport:
     return FieldReport(field=field, values=[fv])
 
 
+def _sort_if_it_is_a_slip(lo: int, hi: int) -> tuple[int, int]:
+    """A min above a max, close enough together to be a min/max assignment slip, is sorted.
+
+    A wide inversion is two numbers from two places and we do not know which is the
+    floor, so it is left inverted here and refused as SOURCES_DISAGREE in
+    app/logic/conflicts.py. Never guess which end is which.
+    """
+    from app.config import settings
+
+    if lo > hi and hi > 0 and lo <= hi * settings.rate_conflict_ratio:
+        return hi, lo
+    return lo, hi
+
+
 class RateValue(BaseModel):
     min_psf: int
     max_psf: int
     basis: RateBasis = "undisclosed"
 
+    @model_validator(mode="after")
+    def _order(self) -> "RateValue":
+        self.min_psf, self.max_psf = _sort_if_it_is_a_slip(self.min_psf, self.max_psf)
+        return self
+
 
 class CarpetRange(BaseModel):
     min_sqft: int
     max_sqft: int
+
+    @model_validator(mode="after")
+    def _order(self) -> "CarpetRange":
+        self.min_sqft, self.max_sqft = _sort_if_it_is_a_slip(self.min_sqft, self.max_sqft)
+        return self
 
 
 class Structure(BaseModel):
@@ -252,6 +291,7 @@ class Candidate(BaseModel):
     source_url: str | None = None
     on_propog: bool = False
     nearest_metro: str | None = None
+    register_only: bool = False   # a MahaRERA row whose name is the promoter, not a project
 
 
 class Page(BaseModel):
@@ -314,6 +354,11 @@ class Project(BaseModel):
     nearest_metro: str | None = None
     status: Status = "unknown"
     on_propog: bool = False
+    source_url: str | None = None   # the page discovery pulled this name from
+    researched: bool = True         # False when the run's research budget did not reach it
+    # `name` is cleaned for display. Identity, dedup and page matching run on `name_raw`,
+    # so a cosmetic change can never merge two different projects.
+    name_raw: str | None = None
 
     configurations: FieldReport[list[int]] = Field(default_factory=_blank("configurations"))
     carpet_sqft: FieldReport[CarpetRange] = Field(default_factory=_blank("carpet_sqft"))
@@ -335,11 +380,19 @@ class Project(BaseModel):
     label: Label = "THIN"
     conflicts: list[Conflict] = Field(default_factory=list)
     match_score: int | None = None
+    score_max: int | None = None            # the weights that could actually be evaluated
+    score_excluded: list[str] = Field(default_factory=list)
     score_breakdown: dict[str, float] = Field(default_factory=dict)
+    unresolved: list[str] = Field(default_factory=list)   # counted for coverage, no value to show
     could_not_verify: list[str] = Field(default_factory=list)
     insight: str | None = None
     insight_source: Literal["llm", "template"] | None = None
     retried: bool = False
+
+    @property
+    def match_name(self) -> str:
+        """The name every identity and page-matching path uses. Never the display name."""
+        return self.name_raw or self.name
 
     # ---- display helpers -------------------------------------------------
     def report(self, field: str) -> FieldReport:

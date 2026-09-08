@@ -18,6 +18,25 @@ def _months_between(a: date, b: date) -> int:
     return (b.year - a.year) * 12 + (b.month - a.month)
 
 
+def _mid(rate: dict[str, Any]) -> float:
+    return (rate["min"] + rate["max"]) / 2
+
+
+def _on_axis(col: dict[str, Any]) -> bool:
+    """A rate belongs on the shared axis only if it is a base rate no source disputes."""
+    return bool(col["rate"] and col["rate"]["basis"] == "base" and not col["rate"]["conflict"])
+
+
+def _delta_pct(value: float, baseline: float | None) -> float | None:
+    """The one rate delta in this payload, against the one baseline: the own project.
+
+    Pairwise gaps carried no baseline, so every reader picked its own -- the template
+    measured against the own project, the model against whichever number it liked, and
+    match_score against a third. A percentage nobody can reproduce is worse than none.
+    """
+    return None if baseline is None else round((value - baseline) / baseline * 100, 1)
+
+
 def _column_from_own(own: OwnProject) -> dict[str, Any]:
     return {
         "id": own.id, "name": own.name, "builder": own.builder, "is_own": True, "distance_km": 0.0,
@@ -78,10 +97,10 @@ def build(own: OwnProject, competitors: list[Project], radius_km: float) -> dict
     common_bhk = max(common) if common else None
 
     # --- rate axis ----------------------------------------------------------
-    on_axis = [c for c in cols if c["rate"] and c["rate"]["basis"] == "base" and not c["rate"]["conflict"]]
+    on_axis = [c for c in cols if _on_axis(c)]
     off_axis = []
     for c in cols:
-        if c in on_axis:
+        if _on_axis(c):
             continue
         if c["rate"] is None:
             off_axis.append({"id": c["id"], "name": c["name"], "reason": "Rate not published"})
@@ -91,14 +110,15 @@ def build(own: OwnProject, competitors: list[Project], radius_km: float) -> dict
         else:
             off_axis.append({"id": c["id"], "name": c["name"], "range": [c["rate"]["min"], c["rate"]["max"]],
                              "reason": f"Basis is '{c['rate']['basis']}', not base rate"})
-    axis_points = [{"id": c["id"], "name": c["name"], "value": round((c["rate"]["min"] + c["rate"]["max"]) / 2)} for c in on_axis]
-    gaps = []
-    for i in range(len(axis_points)):
-        for j in range(i + 1, len(axis_points)):
-            gaps.append({"a": axis_points[i]["id"], "b": axis_points[j]["id"], "gap": abs(axis_points[i]["value"] - axis_points[j]["value"])})
+    baseline = _mid(cols[0]["rate"]) if _on_axis(cols[0]) else None
+    axis_points = [{"id": c["id"], "name": c["name"], "value": round(_mid(c["rate"])),
+                    "delta_pct": _delta_pct(_mid(c["rate"]), baseline)} for c in on_axis]
     axis_vals = [p["value"] for p in axis_points]
     rate_axis = {
-        "basis": "base", "points": axis_points, "gaps": gaps, "off_axis": off_axis,
+        "basis": "base", "points": axis_points, "off_axis": off_axis,
+        "baseline": {"id": cols[0]["id"], "name": cols[0]["name"], "value": round(baseline)} if baseline else None,
+        "baseline_note": ("delta_pct is the base-rate midpoint against the own project's, computed here"
+                          if baseline else "the own project has no base rate on the axis, so no delta can be stated"),
         "axis_min": (min(axis_vals) // 1000 - 2) * 1000 if axis_vals else None,
         "axis_max": (max(axis_vals) // 1000 + 3) * 1000 if axis_vals else None,
         "coverage": f"{len(axis_points)} of {len(cols)} projects",

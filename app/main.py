@@ -114,6 +114,8 @@ async def compare(run_id: str, body: CompareRequest) -> dict:
     comps = []
     for cid in body.competitor_ids:
         p = _project(run, cid)
+        if p.label == "UNVERIFIED":
+            raise HTTPException(422, f"'{p.name}' has no lifecycle on record; confirm it is still selling before comparing")
         if p.label == "THIN":
             raise HTTPException(422, f"'{p.name}' is THIN ({p.completeness}/6) and cannot be analysed")
         comps.append(p)

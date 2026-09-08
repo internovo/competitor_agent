@@ -6,7 +6,11 @@ from datetime import date
 from app.logic.geo import haversine_km
 from app.models.schema import OwnProject, Project
 
-ELIGIBLE_STATUSES = {"new_launch", "under_construction"}
+# Only a lifecycle we positively read as finished disqualifies. "unknown" is not a
+# disqualification: it dropped 59 of 68 real candidates on the Malad West live run,
+# including launches that are plainly selling. Those surface as UNVERIFIED instead,
+# where a rep can see them and confirm the status.
+DISQUALIFYING_STATUSES = {"ready", "completed", "resale"}
 
 
 def check(project: Project, own: OwnProject, radius_km: float, today: date | None = None) -> str | None:
@@ -22,7 +26,7 @@ def check(project: Project, own: OwnProject, radius_km: float, today: date | Non
     if dist > radius_km:
         return f"outside radius ({dist:.2f} km > {radius_km} km)"
 
-    if project.status not in ELIGIBLE_STATUSES:
+    if project.status in DISQUALIFYING_STATUSES:
         return f"status is {project.status}, only new launch / under construction qualify"
 
     possession = project.value("possession")

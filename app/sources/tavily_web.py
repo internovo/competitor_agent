@@ -21,7 +21,8 @@ GENERIC_TITLE_WORDS = {
     "rent", "price", "prices", "rate", "rates", "trend", "trends", "review", "reviews", "photo", "photos", "video",
     "videos", "list", "listing", "listings", "result", "results", "page", "of", "for", "in", "near", "by", "with",
     "and", "the", "best", "top", "bhk", "sq", "ft", "mumbai", "india", "south", "north", "east", "west", "central",
-    "map", "details", "detail", "info", "guide", "updated", "today",
+    "map", "details", "detail", "info", "guide", "updated", "today", "store", "society",
+    "societies", "chs", "chsl", "search", "explore", "overview", "sq", "sqft", "carpet",
 }
 
 
@@ -36,11 +37,17 @@ def _source_for(url: str) -> str:
     return "tavily"
 
 
-def _is_generic(title: str) -> bool:
-    """True when nothing in the title names a building - only counts, portal words and the locality."""
+def _is_generic(title: str, locality: str | None = None) -> bool:
+    """True when nothing in the title names a building - only counts, portal words and the locality.
+
+    The locality has to come in from the scan: "Borivali West Mumbai: Map Property Rates"
+    and "981+ Flats / Apartments for Sale near Borivali West" are portal index pages, and
+    the only thing keeping them out of the candidate list is knowing that "Borivali" is
+    where we are looking, not what we are looking for.
+    """
     words = [w for w in re.findall(r"[a-z0-9]+", title.lower()) if not w.isdigit()]
-    locality_words = {w for w in re.findall(r"[a-z]+", title.lower()) if w in ("malabar", "hill", "hills")}
-    return not [w for w in words if w not in GENERIC_TITLE_WORDS and w not in locality_words]
+    here = set(re.findall(r"[a-z]+", (locality or "").lower())) | {"malabar", "hill", "hills"}
+    return not [w for w in words if w not in GENERIC_TITLE_WORDS and w not in here]
 
 
 class TavilySource(NullSource):
@@ -69,15 +76,15 @@ class TavilySource(NullSource):
             for r in await self.search(ctx, q, include_domains=PORTAL_DOMAINS):
                 title = re.sub(r"\s*[-|–].*$", "", r.get("title", "")).strip()
                 title = re.sub(r"\b(in|at)\b.*$", "", title, flags=re.I).strip()
-                if len(title) < 4 or title.lower() in seen or _is_generic(title):
+                if len(title) < 4 or title.lower() in seen or _is_generic(title, loc):
                     continue
                 seen.add(title.lower())
                 out.append(Candidate(name=title, locality=ctx.own.locality, source="tavily", source_url=r.get("url")))
         return out
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
-        queries = [f"{project.name} {project.builder or ''} {ctx.own.locality or ''} price carpet area possession RERA".strip()]
-        queries += [f"{project.name} {q}" for q in ctx.extra_queries]
+        queries = [f"{project.match_name} {project.builder or ''} {ctx.own.locality or ''} price carpet area possession RERA".strip()]
+        queries += [f"{project.match_name} {q}" for q in ctx.extra_queries]
         urls: list[str] = []
         for q in queries:
             for r in await self.search(ctx, q, max_results=6):
