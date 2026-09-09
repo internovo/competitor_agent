@@ -15,7 +15,7 @@ one sentence per card from numbers we already computed. Claude never decides who
 brew install uv                 # once
 uv sync                         # creates .venv with Python 3.12
 uv run pytest -q                # fixture mode, no network, no keys
-uv run pytest -q -m slow        # the offline replay of the frozen suburbs (~2 min)
+uv run pytest -q -m slow        # replays the frozen suburbs, incl. 10 concurrent (~7 min)
 uv run uvicorn app.main:app --reload
 
 # the competitor table for a frozen suburb, off the page cache, no keys, no model
@@ -26,12 +26,18 @@ uv run python scripts/replay.py borivali-west-2026-09-08
 Then:
 
 ```bash
-curl -X POST 'localhost:8000/own-projects/marina64/scan?mode=fixture'          # screen 1: ranked list
-curl        'localhost:8000/competitors/P51800048221'                          # screen 2: one competitor in detail
-curl -X POST 'localhost:8000/compare' -H 'content-type: application/json' \
-     -d '{"own_id":"marina64","competitor_ids":["P51800048221","rustomjee-crest"]}'   # screens 3-4: side by side
-curl -X POST 'localhost:8000/competitors/sheth-nova/fields' -H 'content-type: application/json' \
+# A scan is asynchronous: POST returns a run_id and the client polls until status is done.
+curl -X POST 'localhost:8000/scans' -H 'content-type: application/json' \
+     -d @data/fixtures/scan_request.json                                       # -> {"run_id": ..., "status": "queued"}
+curl        'localhost:8000/scans/<run_id>'                                    # screen 1: ranked list, once done
+curl        'localhost:8000/scans/<run_id>/competitors/P51800048221'           # screen 2: one competitor in detail
+curl -X POST 'localhost:8000/scans/<run_id>/compare' -H 'content-type: application/json' \
+     -d '{"competitor_ids":["P51800048221","rustomjee-crest"]}'                # screens 3-4: side by side
+curl -X POST 'localhost:8000/scans/<run_id>/competitors/sheth-nova/fields' -H 'content-type: application/json' \
      -d '{"field":"rera_phases","value":["P51800077777"]}'                     # a rep records a fact from a site visit
+
+# Or, with no server and no keys: the same four responses for a frozen suburb.
+uv run python scripts/replay.py malad-west-2026-09-08 --json marina64.json
 ```
 
 Interactive docs at `http://localhost:8000/docs`.
@@ -90,14 +96,18 @@ Every completed run reports it, alongside the scan payload:
 ```json
 "cost":    {"llm_calls": 14, "input_tokens": 41200, "output_tokens": 3100,
             "searches": 22, "pages_fetched": 47, "places_calls": 3, "estimated_inr": 112.40,
-            "note": "estimated from call counts and configured unit prices, not a bill"},
+            "model": "claude-opus-5", "candidates": 39, "tokens_per_candidate": 1136,
+            "by_stage": {"extract": {"calls": 12, "input_tokens": 39000, "output_tokens": 1800,
+                                     "estimated_inr": 4.22}, "...": {}},
+            "note": "estimated from call counts and the configured price table, not a bill"},
 "extraction": {"deterministic_fields": 31, "llm_fields": 9},
 "timing":  {"started_at": "...", "finished_at": "...", "duration_s": 89,
             "per_stage_s": {"extract": 71.3, "discover": 4.1, ...}}
 ```
 
-`estimated_inr` is local arithmetic from call counts and the unit prices in `app/config.py`. **It is an estimate, not a
-bill** - the agent never sees an invoice, so it cannot know about cached-token discounts or a call that was charged for
+Each stage is priced at the model that ran it: extraction is on `EXTRACT_MODEL` (Haiku 4.5, because reading a labelled
+number off a page is not a judgement call) and matching and narration are on `CLAUDE_MODEL`. `estimated_inr` is local
+arithmetic from call counts and the price table in `app/config.py`. **It is an estimate, not a bill** - the agent never sees an invoice, so it cannot know about cached-token discounts or a call that was charged for
 and then failed. Edit the prices when they move. `timing.started_at` is also what dates a stored analysis: search
 results vary between runs, and two scans returning different competitors reads as a broken product unless the report
 says when it was taken.
@@ -116,6 +126,9 @@ app/
   storage/runs.py    in-memory run store: bounded, TTL, lost on restart
 data/fixtures/       marina64.json, competitors_malad_west.json, propog_projects.json, scan_request.json,
                      pages/ (prose pages the extractors are measured on)
+data/cache/          every response the live runs fetched; what replay serves
+scripts/replay.py    one frozen suburb, offline, no keys, no model -> table + cost + API payloads
+tests/fixtures/replay/  one subject per frozen suburb; the free regression surface
 docs/                reference screenshots
 tests/
 ```

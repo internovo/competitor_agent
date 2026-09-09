@@ -298,9 +298,18 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     # A candidate found by a portal or a search demonstrably has a page and we already
     # know its URL. Reading it costs one fetch; finding it again costs a search.
     # One wall-clock budget for this candidate's whole research. Running out is a normal
-    # outcome: it keeps what it already has and the rest takes an absence reason.
-    deadline = time.monotonic() + settings.candidate_budget_s
-    left = lambda: max(0.05, deadline - time.monotonic())  # noqa: E731
+    # outcome against live sources: it keeps what it already has and the rest takes an
+    # absence reason.
+    #
+    # Off the network there is nothing to time out against, so the budget is not applied
+    # at all. It was measuring the machine: cache reads and regexes are CPU, the fan-out
+    # shares one event loop, and a busy sibling could push a candidate past its deadline.
+    # The same cached pages then printed RESEARCH_TIMED_OUT where an earlier run printed
+    # RATE_NOT_PUBLISHED -- a reason code that is a fact about server load, shown to a
+    # sales rep as a fact about a building.
+    live = getattr(d.get("fetcher"), "mode", None) == "live"
+    deadline = time.monotonic() + settings.candidate_budget_s if live else None
+    left = lambda: max(0.05, deadline - time.monotonic()) if deadline else None  # noqa: E731
 
     seed = [] if state["retry"] else await _seed_page(project, ctx, log)
 
@@ -381,7 +390,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     trimmed = [pg.model_copy(update={"text": deterministic.spans_for_fields(pg.text[: settings.max_page_chars], asked)})
                for pg in read_pages] if want else []
     n_llm = 0
-    timed_out = deadline - time.monotonic() <= 0
+    timed_out = deadline is not None and deadline - time.monotonic() <= 0
     if want and llm is not None and read_pages and not timed_out:
         sem = asyncio.Semaphore(settings.extract_concurrency)
 

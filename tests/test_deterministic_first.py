@@ -153,3 +153,48 @@ def test_a_portal_spec_table_outranks_the_prose_around_it():
     assert fields["configurations"].value == [1, 2]
     assert fields["configurations"].display().confidence == "high"
     assert lifecycle == "under_construction"
+
+
+# --- the research budget, and the limit we are keeping ----------------------
+
+class SlowSource(StubSource):
+    """A site that takes longer to answer than the candidate's whole budget."""
+
+    async def pages_for(self, project, ctx):
+        await asyncio.sleep(0.3)
+        return [self.page]
+
+
+def _run_with_fetcher(mode: str, own, budget_s: float):
+    from app.config import settings
+    from app.sources.fetch import Fetcher
+
+    old = settings.candidate_budget_s
+    settings.candidate_budget_s = budget_s
+    try:
+        project = Project(id="slow-site", name="Runwal Vertex")
+        state = ExtractInput(own=own, radius_km=1.5, project=project, retry=False, extra_queries=[])
+        config = {"configurable": {"sources": [SlowSource("nothing useful here")],
+                                   "fetcher": Fetcher(mode), "llm": None}}
+        return asyncio.run(pipeline.extract(state, config))["projects"][0]
+    finally:
+        settings.candidate_budget_s = old
+
+
+def test_a_slow_site_still_times_out_when_the_run_is_live(own):
+    """The budget is doing a real job against the network and stays there."""
+    project = _run_with_fetcher("live", own, budget_s=0.01)
+    assert project.rate_psf.absent == "RESEARCH_TIMED_OUT"
+
+
+def test_the_same_slow_source_never_times_out_in_replay(own):
+    """Off the network the budget measures the machine, so it is not applied.
+
+    KNOWN LIMIT, live mode only: this deadline is wall clock taken when the
+    candidate's node starts, and every candidate in the fan-out shares one event
+    loop. CPU spent on one candidate therefore still consumes another's budget.
+    Fixing that needs per-candidate isolation -- a different fan-out, not a
+    different constant -- so it is recorded here rather than half-done.
+    """
+    project = _run_with_fetcher("replay", own, budget_s=0.01)
+    assert project.rate_psf.absent != "RESEARCH_TIMED_OUT"

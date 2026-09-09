@@ -253,6 +253,13 @@ def test_a_span_is_emitted_per_node_and_per_candidate():
     assert per_candidate, "extract must carry the candidate it ran on"
     assert "llm.input_tokens" in per_candidate[0].attributes
 
+    # And the shutdown holds: a later scan exports nothing into this exporter. The
+    # global provider cannot be replaced, so without this every later test in the
+    # suite was paying to export spans it never asked for.
+    before = len(exporter.get_finished_spans())
+    asyncio.run(service.run_scan(OwnProject(**REQUEST["own"]), 1.5, "fixture", llm=None))
+    assert len(exporter.get_finished_spans()) == before
+
 
 def test_extraction_and_matching_run_on_different_models_by_default():
     """Field reading is not a judgement call; entity matching is. They were on one

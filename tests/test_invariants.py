@@ -232,3 +232,38 @@ def test_every_thin_project_names_a_reason_on_every_empty_field(scanned):
             if card["absent"].get(f):
                 assert card["absent"][f]["reason"] in REASONS
                 assert card["absent"][f]["label"]
+
+
+# --- the same input must give the same answer, every time -------------------
+
+def _canonical(rec, payload) -> str:
+    """Everything the answer is, minus the two ids that are new per run.
+
+    Absence reasons are in here on purpose: they are the product's whole claim,
+    and a reason code that moves between runs is a fact about the machine wearing
+    the costume of a fact about a building.
+    """
+    body = {k: v for k, v in payload.items() if k not in ("scan_id", "created_at")}
+    body["absences"] = sorted(
+        (p.id, f, p.report(f).absent, str(p.report(f).span))
+        for p in rec.projects for f in REPORTED_FIELDS if p.report(f).absent)
+    # The scan id is new per run by design, and it appears inside a log line too.
+    return json.dumps(body, sort_keys=True, default=str).replace(rec.scan_id, "<scan_id>")
+
+
+def test_ten_identical_runs_give_ten_identical_answers(own):
+    """Ten in a row, so a run that is slower than its neighbours cannot change a
+    reason code. The wall-clock research budget used to make that possible: it is
+    not applied off the network, where there is nothing to time out against."""
+    seen = set()
+    for _ in range(10):
+        rec, meta = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", llm=None))
+        seen.add(_canonical(rec, service.list_payload(rec, own, meta)))
+    assert len(seen) == 1
+
+
+def test_research_timed_out_cannot_be_emitted_without_a_network(own):
+    """Off the network the budget is measuring the machine and nothing else."""
+    rec, _ = asyncio.run(service.run_scan(own, RADIUS_KM, "fixture", llm=None))
+    assert not [p.id for p in rec.projects for f in REPORTED_FIELDS
+                if p.report(f).absent == "RESEARCH_TIMED_OUT"]

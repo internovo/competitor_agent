@@ -99,3 +99,33 @@ def test_the_other_two_suburbs_replay_too_so_the_surface_is_not_one_locality():
         _, _, meta, payload = _replay(name)
         assert meta["pages_fetched"] > pages, name
         assert payload["counts"]["eligible"] >= 1, name
+
+
+def test_ten_concurrent_replays_of_the_real_corpus_agree_to_the_byte():
+    """The loaded-machine version, on real cached pages rather than fixtures.
+
+    Ten scans in one event loop is the starvation condition itself: they compete
+    for the same CPU, and under the old wall-clock budget a candidate whose
+    siblings were busy could be pushed past its deadline and print
+    RESEARCH_TIMED_OUT where a quiet run printed the real reason. Goregaon West is
+    the smallest corpus, so this costs about a minute rather than ten.
+    """
+    from app.models.schema import REPORTED_FIELDS
+    from tests.test_invariants import _canonical
+
+    def subject():
+        return OwnProject(**json.loads((FIXTURES / "goregaon-west-2026-09-08" / "subject.json")
+                                       .read_text(encoding="utf-8")))
+
+    subjects = [subject() for _ in range(10)]
+
+    async def ten():
+        return await asyncio.gather(*(service.run_scan(o, settings.default_radius_km, "replay", llm=None)
+                                      for o in subjects))
+
+    runs = asyncio.run(ten())
+    seen = {_canonical(rec, service.list_payload(rec, own, meta))
+            for own, (rec, meta) in zip(subjects, runs)}
+    assert len(seen) == 1
+    assert not [p.id for rec, _ in runs for p in rec.projects for f in REPORTED_FIELDS
+                if p.report(f).absent == "RESEARCH_TIMED_OUT"]

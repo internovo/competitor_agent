@@ -243,6 +243,33 @@ def cost_projection(meta: dict, payload: dict) -> str:
     return "\n".join(rows)
 
 
+async def api_bundle(own: OwnProject, rec, meta: dict, radius: float) -> dict:
+    """Every response the five screens are built from, keyed by the route that serves it.
+
+    Not a report rendering and not a summary -- `RunRecord.body()`, `detail_payload`
+    and `compare_payload` are the same functions `app/main.py` calls, so what is
+    written here is byte-for-byte what the API returns. Absences keep their reason
+    codes; nothing is filled in to make the file look complete.
+    """
+    from app.config import settings as s
+    from app.storage.runs import RunRecord
+
+    run = RunRecord(run_id="replay000000", own=own, radius_km=radius, mode="replay")
+    run.started_at = run.finished_at = rec.created_at
+    run.finish(rec, meta, service.list_payload(rec, own, meta))
+    run.tally(None, meta)
+    ranked = service.rank(rec.projects)
+    analysable = [p for p in ranked if p.label not in ("THIN", "UNVERIFIED")][:2]
+    return {
+        "GET /health": {"ok": True, "mode": "replay", "llm": False, "provider": s.llm_provider,
+                        "model": s.llm_model, "runs_held": 1},
+        "GET /scans/{run_id}": run.body(),
+        "GET /scans/{run_id}/competitors/{competitor_id}": {
+            p.id: service.detail_payload(p, own, rec) for p in ranked},
+        "POST /scans/{run_id}/compare": await service.compare_payload(own, analysable, radius, None),
+    }
+
+
 async def run(name: str, radius: float, rows: int) -> tuple[str, dict]:
     own = OwnProject(**json.loads((FIXTURES / name / "subject.json").read_text(encoding="utf-8")))
     stage_s: dict[str, float] = {}
@@ -268,7 +295,7 @@ async def run(name: str, radius: float, rows: int) -> tuple[str, dict]:
         parts += [provenance(best), ""]
     parts += [refusals(rec.projects), "", geocode_audit(rec, meta), "",
               stats(rec, meta, payload, stage_s, total), "", cost_projection(meta, payload)]
-    return "\n".join(parts), payload
+    return "\n".join(parts), await api_bundle(own, rec, meta, radius)
 
 
 def main() -> int:
@@ -277,7 +304,7 @@ def main() -> int:
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--radius", type=float, default=settings.default_radius_km)
     ap.add_argument("--rows", type=int, default=settings.max_table_rows)
-    ap.add_argument("--json", dest="json_out", help="also write the list payload here")
+    ap.add_argument("--json", dest="json_out", help="also write every API response here, keyed by route")
     a = ap.parse_args()
     if a.list or not a.suburb:
         print("\n".join(suburbs()))
