@@ -265,3 +265,95 @@ def test_a_withdrawn_rate_still_renders_on_the_card_with_its_reason():
     block = service._rate_block(ps[0], None)
     assert block["min"] == 22130 and block["conflict"] and "4 projects" in block["conflict"]
     assert service.card(ps[0], 1)["rate_psf"]["conflict"]
+
+
+# --- the carpet band: same shape as the rate band, anchored on the subject ---
+CARPET_ANCHOR = 1050.0   # Marina64's own 450-1650 midpoint
+
+
+def _carpet_at(project, lo, hi):
+    from app.models.schema import CarpetRange
+
+    project.carpet_sqft = fr("carpet_sqft", fv(CarpetRange(min_sqft=lo, max_sqft=hi)))
+    return project
+
+
+def test_a_carpet_range_four_times_the_subject_is_refused(full_project, own):
+    """Narang Valora published 1,360-4,218 sqft beside a 430-1,180 sqft subject."""
+    conflicts.apply(_carpet_at(full_project, 1360, 4218), carpet_anchor=CARPET_ANCHOR)
+    assert full_project.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"
+    assert full_project.carpet_sqft.span == [1360, 4218]
+    assert "not used" in full_project.carpet_sqft.label
+
+
+def test_half_a_carpet_range_is_not_a_carpet_range(full_project):
+    """The top is credible and the bottom is a quarter of the floor; the range goes."""
+    conflicts.apply(_carpet_at(full_project, 60, 1400), carpet_anchor=CARPET_ANCHOR)
+    assert full_project.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"
+
+
+def test_a_genuinely_larger_competitor_is_a_real_comparison_and_is_kept(full_project):
+    """3.5x the subject's midpoint is a bigger building, not a bad reading. Deleting
+    it would delete the comparison the rep most wants."""
+    conflicts.apply(_carpet_at(full_project, 1200, 3600), carpet_anchor=CARPET_ANCHOR)
+    assert full_project.carpet_sqft.absent is None
+    assert full_project.carpet_sqft.value.max_sqft == 3600
+
+
+def test_without_a_carpet_anchor_no_judgement_is_made(full_project):
+    conflicts.apply(_carpet_at(full_project, 60, 90), carpet_anchor=None)
+    assert full_project.carpet_sqft.absent is None
+
+
+def test_the_carpet_anchor_is_the_subjects_own_midpoint(own):
+    assert conflicts.carpet_anchor_for(own) == CARPET_ANCHOR
+
+
+def test_an_implausible_carpet_beats_sources_disagreeing_about_it(full_project):
+    """Two refusals on one field is one reason too many; the stronger one is reported."""
+    from app.models.schema import CarpetRange
+
+    full_project.carpet_sqft = fr("carpet_sqft", fv(CarpetRange(min_sqft=400, max_sqft=900)),
+                                  fv(CarpetRange(min_sqft=1360, max_sqft=4218), source="tavily"))
+    conflicts.apply(full_project, carpet_anchor=CARPET_ANCHOR)
+    assert full_project.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"
+    assert not [c for c in full_project.conflicts if c.field == "carpet_sqft"]
+
+
+# --- promoter rows vs projects ---------------------------------------------
+
+def test_the_register_forms_borivali_uses_are_recognised_as_promoters():
+    from app.logic.resolve import looks_like_company
+
+    for name in ["New India Construction Company", "K Mehta And Company", "Chheda Group",
+                 "Atithi Builders And Constructors Private Lim", "Ekta Housing",
+                 "Sumukh Ventures", "Kothari Contractors", "Bhoomi Estates Limite"]:
+        assert looks_like_company(name), name
+
+
+def test_a_real_project_is_never_a_promoter_row():
+    """The false positive costs a competitor silently, so this is the direction that
+    matters. 'X by Y' is judged on X: 'group' in the builder half must not delete it."""
+    from app.logic.resolve import looks_like_company
+
+    for name in ["Airavat By Bhoomi Group", "Shreeji Atlantis by Shreeji Group",
+                 "Laxmi Shrushti - THE LAXMI GROUP",
+                 "Lodha Amara", "Ajmera Realty Heights", "Kalpataru Horizon Apartments",
+                 "Rustomjee Summit", "Neev Horizon", "Sanghvi Horizon", "73 East",
+                 "Ekta Tripolis", "Runwal Vertex", "Godrej Properties Prime"]:
+        assert not looks_like_company(name), name
+
+
+def test_a_page_title_is_cut_at_its_first_separator():
+    from app.logic.resolve import clean_project_name
+
+    assert clean_project_name("Evoke Residential project by Arkade | Goregaon West | Mumbai") == "Evoke by Arkade"
+    assert clean_project_name("Paradigm Anantaara - Shimpoli Borivali West") == "Paradigm Anantaara"
+    assert clean_project_name("Rustomjee Summit") == "Rustomjee Summit"
+
+
+def test_cleaning_never_cuts_a_hyphenated_name_in_half():
+    """The separator needs spaces around it; 'Sun-Rise Heights' is one name."""
+    from app.logic.resolve import clean_project_name
+
+    assert clean_project_name("Sun-Rise Heights") == "Sun-Rise Heights"

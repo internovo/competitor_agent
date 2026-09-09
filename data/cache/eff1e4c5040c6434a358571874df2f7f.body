@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJF-J8k0m25zsRfYJ3OVdg7Mk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Maharashtra Housing and Area Development Authority Colony, Best Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.152554,
+        "longitude": 72.84461499999999
+      },
+      "displayName": {
+        "text": "Ram Mandir Road",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJd7SI60m25zsRXAPhwU4mODc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mahatma Jyotiba Phule Nagar, Jogeshwari West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1521,
+        "longitude": 72.844510000000014
+      },
+      "displayName": {
+        "text": "Ram Mandir (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOVNs7Em25zsRX7H-TAFPyf0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mahatma Jyotiba Phule Nagar, Jogeshwari West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.152079999999998,
+        "longitude": 72.84459
+      },
+      "displayName": {
+        "text": "Ram Mandir (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

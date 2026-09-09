@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJBQjbZrC25zsR-0lLHMFbtXw",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "no 1, 5RXV+W2H Patil Compound, off, Mahatma Gandhi Rd, opposite RUSTOMJEE MERIDIAN, Kandivali, Charkop, Charkop Gaon, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2071293,
+        "longitude": 72.81861219999999
+      },
+      "displayName": {
+        "text": "Rustomjee Meridian",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

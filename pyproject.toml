@@ -19,6 +19,8 @@ dependencies = [
     "tavily-python>=0.5",
     "python-dotenv>=1.0",
     "langchain-groq>=1.0",
+    "opentelemetry-sdk>=1.27",
+    "opentelemetry-exporter-otlp-proto-http>=1.27",
 ]
 
 [project.optional-dependencies]
@@ -30,6 +32,10 @@ dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+# The offline replay re-reads ~300 cached pages. Worth having, not worth 60s on
+# every run: `uv run pytest -q -m slow`.
+addopts = "-m 'not slow'"
+markers = ["slow: replays a frozen suburb from the page cache"]
 
 [build-system]
 requires = ["hatchling"]

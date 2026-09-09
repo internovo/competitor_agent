@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJPUKHi1W25zsRvZsE-8yXEDo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1738,
+        "longitude": 72.84733
+      },
+      "displayName": {
+        "text": "Madina Manzil (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ7XeCjFW25zsRWdCgZ2tJIts",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.17379,
+        "longitude": 72.84727
+      },
+      "displayName": {
+        "text": "Madina Manzil (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJDax0i1W25zsRnFyOZ_G8sD4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Malad, Liliya Nagar, Malad West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.17388,
+        "longitude": 72.84728
+      },
+      "displayName": {
+        "text": "Madina Manzil (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

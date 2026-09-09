@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ-R1wAE225zsRVOPens3mDVE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16004,
+        "longitude": 72.84864
+      },
+      "displayName": {
+        "text": "Jain Mandir (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJib62qk225zsR2OcdHjT2OH0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Road No. 1, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.160171,
+        "longitude": 72.848518
+      },
+      "displayName": {
+        "text": "Jain Mandir Goregaon",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJRShenU225zsRq3g7q41x_dc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16197,
+        "longitude": 72.84858
+      },
+      "displayName": {
+        "text": "Jain Mandir (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

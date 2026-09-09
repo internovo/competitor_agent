@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJIZ7kcFa25zsRYwhFw8_K8hg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.172,
+        "longitude": 72.84522
+      },
+      "displayName": {
+        "text": "Madina Manzil (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ5R4KDFa25zsRuDAta-XcOCA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.172962,
+        "longitude": 72.845351
+      },
+      "displayName": {
+        "text": "Madina Manzil (Malad-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJWnvqVa25zsRb-TrnEzBo34",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mahindra Gardens, Piramal Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16866,
+        "longitude": 72.84559
+      },
+      "displayName": {
+        "text": "Patkar College (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

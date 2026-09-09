@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJpVwD89i25zsRztEtcwjA4LE",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Parekh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20575,
+        "longitude": 72.849897
+      },
+      "displayName": {
+        "text": "Kandivali",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    },
+    {
+      "id": "ChIJDfjh9Ni25zsRkdoMCZ21wHg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Road, Parekh Nagar, Kandivali West, Kandivali, Parekh Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20587,
+        "longitude": 72.849985
+      },
+      "displayName": {
+        "text": "Kandivali Station (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJMcAxi9i25zsRKS5eowV9bb8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Jethava Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20581,
+        "longitude": 72.8501
+      },
+      "displayName": {
+        "text": "Kandivali Station Road (W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

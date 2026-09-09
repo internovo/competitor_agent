@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJgwH6lEa25zsRKE8sQiJhsuc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sejal Park, Best Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1545,
+        "longitude": 72.835529999999991
+      },
+      "displayName": {
+        "text": "Goregaon or Oshiwara Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJH_LZv0a25zsRJfYALgkISYA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sejal Park, Patliputra, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.154360000000004,
+        "longitude": 72.835399999999993
+      },
+      "displayName": {
+        "text": "Goregaon or Oshiwara Depot",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJcRuah0a25zsRIC7oYmW8Kdc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sejal Park, Motilal Nagar I, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.155400000000004,
+        "longitude": 72.83666
+      },
+      "displayName": {
+        "text": "Bhagatsingh Nagar or Sejal Park",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

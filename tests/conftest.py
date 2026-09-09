@@ -3,10 +3,24 @@ from datetime import date
 
 import pytest
 
-from app.config import FIXTURE_DIR
+from app.config import FIXTURE_DIR, settings
 from app.models.schema import (
     Amenity, CarpetRange, FieldReport, FieldValue, OwnProject, Project, Provenance, RateValue, ReraPhase, Structure,
 )
+
+
+@pytest.fixture(autouse=True, scope="session")
+def _no_keys():
+    """The suite runs as if no provider key existed, whoever runs it.
+
+    Settings reads the developer's .env, so a fixture-mode run through the API was
+    building a real client off a real key and spending on it -- the two cost tests
+    that assert "no keys, no model" were failing on a populated machine and passing
+    on a bare one. Tests must not be able to buy tokens.
+    """
+    for field in ("anthropic_api_key", "groq_api_key", "tavily_api_key", "google_maps_api_key"):
+        setattr(settings, field, None)
+    yield
 
 
 @pytest.fixture

@@ -28,7 +28,9 @@ AbsenceReason = Literal[
     "NOT_RESEARCHED",       # outside this run's research budget; nobody looked
     "RESEARCH_TIMED_OUT",   # research started and ran out of its wall-clock budget
     "IMPLAUSIBLE_RATE",     # a rate was read, but it is outside a believable band for this market
+    "IMPLAUSIBLE_CARPET",   # a carpet range was read, but it is outside a believable band against the subject
     "SHARED_ACROSS_PROJECTS",  # the same figure was quoted for several projects in this run
+    "LIFECYCLE_UNKNOWN",       # no source declared a lifecycle; not classified, not dropped as finished
 ]
 ExtractMethod = Literal["deterministic", "llm", "manual"]
 Confidence = Literal["high", "medium", "low"]
@@ -76,11 +78,18 @@ def _a(name: str) -> str:
 def absence_label(field: str | None, reason: AbsenceReason, span: list[Any] | None = None) -> str:
     """The one place absence is put into words, so the wording cannot drift between fields."""
     name = field_label(field)
+    if reason == "LIFECYCLE_UNKNOWN":
+        return ("No source stated whether this project is selling, under construction or finished. "
+                "It is listed unclassified rather than dropped as finished.")
     if reason == "SHARED_ACROSS_PROJECTS":
         value = f"{span[0]:,}" if span else "the same figure"
         n = span[1] if span and len(span) >= 2 else "several"
         return (f"Rs {value} per sq ft was quoted for {n} projects in this radius. "
                 f"It reads as a locality average and is not treated as this project's rate.")
+    if reason == "IMPLAUSIBLE_CARPET":
+        quoted = f"{span[0]:,} to {span[1]:,}" if span and len(span) >= 2 and span[0] != span[1] else f"{span[0]:,}" if span else "a range"
+        return (f"A source gave {quoted} sq ft carpet, outside a believable band against this project. "
+                f"It is reported here and not used.")
     if reason == "IMPLAUSIBLE_RATE":
         quoted = f"{span[0]:,} to {span[1]:,}" if span and len(span) >= 2 and span[0] != span[1] else f"{span[0]:,}" if span else "a figure"
         return (f"A source quoted Rs {quoted} per sq ft, outside a believable band for this market. "
@@ -354,6 +363,7 @@ class Project(BaseModel):
     nearest_metro: str | None = None
     status: Status = "unknown"
     on_propog: bool = False
+    status_note: str | None = None  # why the lifecycle is not what a page said it was
     source_url: str | None = None   # the page discovery pulled this name from
     researched: bool = True         # False when the run's research budget did not reach it
     # `name` is cleaned for display. Identity, dedup and page matching run on `name_raw`,

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ05Yp7MW25zsRD52PXjy0CSM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Shankar Pada, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.206535,
+        "longitude": 72.834938999999991
+      },
+      "displayName": {
+        "text": "Dahanukarwadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJcMs6cW25zsROVuR4vaKohA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2063618,
+        "longitude": 72.8347781
+      },
+      "displayName": {
+        "text": "Dhanukar wadi Kandivali West",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJvXs278W25zsRjAQ-DZ4wb10",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Mahatma Gandhi Nagar, Kandivali West, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.20638,
+        "longitude": 72.834664
+      },
+      "displayName": {
+        "text": "Dahanukarwadi",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

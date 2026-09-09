@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security Alert</title>
+<link rel="icon" href="https://assets-0.housingcdn.com/static/favicon1.png">
+<style>
+:root{--p:#5a189a;--l:#9d4edd;--s:#ffd60a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:16px -apple-system,sans-serif;background:#f8f9fa;color:#333}
+.c{max-width:800px;margin:auto;padding:0 20px}
+header{background:linear-gradient(135deg,var(--p),var(--l));color:#fff;padding:15px 0;box-shadow:0 4px 10px #0002}
+.o{display:flex;align-items:center}
+.o img{height:36px}
+.d{background:#fff;border-radius:12px;box-shadow:0 8px 20px #0001;padding:20px;margin:20px 0;position:relative;transition:.3s}
+.d:hover{transform:translateY(-5px);box-shadow:0 12px 24px #0002}
+.a{border-left:4px solid var(--s)}
+.b{position:absolute;top:0;right:0;background:var(--s);color:var(--p);padding:5px 10px;font-size:.8rem;border-bottom-left-radius:8px}
+h2{color:var(--p);margin-bottom:15px;font-size:1.5rem;position:relative}
+h2:after{content:'';position:absolute;bottom:-5px;left:0;width:40px;height:3px;background:var(--s)}
+.r{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:6px;padding:12px;text-align:center;font-family:monospace;margin:15px 0}
+.t{background:var(--p);color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:10px}
+.t:hover{background:var(--l)}
+.h{display:flex;align-items:center;margin:30px 0 15px}
+.h .n{flex:1;height:2px;background:linear-gradient(to right,var(--p),transparent);margin-left:15px}
+.hs{display:flex;gap:20px;flex-wrap:wrap}
+.hc{flex:1;min-width:260px}
+footer{background:var(--p);color:#fff;text-align:center;padding:15px 0;font-size:.9rem}
+ul{margin:10px 0 0 20px}
+li{margin-bottom:6px}
+@media(max-width:768px){.hs{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="c"><div class="o">
+<img src="https://assets-0.housingcdn.com/seller/images/logo-72b33703f043bbab94637cf6faab9fc1.png" alt="Housing.com">
+</div></div></header>
+<main class="c">
+<div class="d a">
+<div class="b">ALERT</div>
+<h2>Request Blocked</h2>
+<p>Our security system detected suspicious activity. Your request was temporarily blocked to protect users and system integrity. We apologize for any inconvenience.</p>
+</div>
+<div class="d">
+<h2>Block Reference ID</h2>
+<div class="r">0.1cf43717.1788872203.2549ef9</div>
+<p>Save this ID when contacting support.</p>
+</div>
+<div class="d">
+<h2>Real Client IP</h2>
+<div class="r">103.54.188.234</div>
+<p>Save this IP when contacting support.</p>
+</div>
+<div class="h"><h2>Need Help?</h2><div class="n"></div></div>
+<div class="hs">
+<div class="d hc">
+<h2>Contact Support</h2>
+<p>If you believe this is an error, contact our support team with your Reference ID and details.</p>
+<a href="https://urldefense.com/v3/__https://support.housing.com/support/home__;!!GjvTz_vk!XJeGgLucbpw3n-w8t3O2fps4E7sNxaLAm3hf7QPBx3EGGeg61tRY-0-Qcp1FFSLEtj7mgPLq4KDqgjgI1DmqNbk$" class="t">Contact Support</a>
+</div>
+<div class="d hc">
+<h2>Common Causes</h2>
+<ul>
+<li>Unusual network activity</li>
+<li>Rapid browsing</li>
+<li>Use of bots or scrapers</li>
+<li>Suspicious VPNs/proxies</li>
+<li>Failed login attempts</li>
+<li>Accessing restricted areas</li>
+</ul>
+</div>
+</div>
+<div class="d">
+<h2>Next Steps</h2>
+<ul>
+<li>Wait a few minutes, typically 10 minutes</li>
+<li>Clear cookies/cache</li>
+<li>Use another browser/device</li>
+<li>Disable extensions</li>
+<li>Disconnect VPN</li>
+</ul>
+</div>
+</main>
+<footer><div class="c">&copy; 2025 Housing.com | Protecting our users</div></footer>
+<script type="text/javascript"  src="/TXektPUYBmWJCNepVrqicZSiUCo/bNa7S4i5imrO/VmoyJ1wMBA/cH0/zKyoKQxcb?v=1912939c-0dcb-5257-7ee8-4f7511401737" defer></script></body>
+</html>

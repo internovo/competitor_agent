@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJkyFvnU-25zsRjEm9QqpJwoA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Tilak Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.15919,
+        "longitude": 72.84085
+      },
+      "displayName": {
+        "text": "Motilal Nagar Post Office",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJDyMdeE-25zsRPl_txLNjmC4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Motilal Nagar I, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1591,
+        "longitude": 72.84049
+      },
+      "displayName": {
+        "text": "Motilal Nagar Post Office",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJC0FFd0W25zsRppeVLCqGy64",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.15919,
+        "longitude": 72.83909
+      },
+      "displayName": {
+        "text": "New Siddharth Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

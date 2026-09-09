@@ -689,13 +689,38 @@ LIFECYCLE_PATTERNS = [
 UNMAPPED_LIFECYCLES = {"rental"}
 
 
-def classify_lifecycle(text: str) -> tuple[str, str | None]:
-    """(lifecycle, evidence) for ONE page. unknown is a real answer."""
+# A lifecycle counts only where the page DECLARES it: a spec-table cell, a definition
+# list, or a labelled status field. Portals repeat their filter vocabulary in navigation,
+# widgets and cross-sell blocks while the construction status appears once, so counting
+# prose let site furniture decide the vote -- one project scored {rental: 8} off rental-
+# yield calculators, and under_construction lost 6-4 on eight others.
+_STATUS_LABEL = re.compile(r"(?:status|stage|availability|possession)\s*(?:[:|\-–—]|\n)\s*$", re.I)
+
+
+def _is_declared(text: str, start: int, end: int) -> bool:
+    """Is this match the value of a labelled field, rather than something the page says?"""
+    before = text[max(0, start - 60):start]
+    if _STATUS_LABEL.search(before):
+        return True
+    # a table cell of its own: "| Ready To Move |"
+    return before.rstrip().endswith("|") and text[end:end + 12].lstrip().startswith("|")
+
+
+def classify_lifecycle(text: str) -> tuple[str, str | None, bool]:
+    """(lifecycle, evidence, declared) for ONE page. unknown is a real answer.
+
+    A declared statement anywhere on the page beats a mention at the top of it. Searching
+    patterns in order and taking the first hit meant one "for rent" in a cross-sell block
+    outranked "| Status | Under Construction |" further down.
+    """
+    mentioned = None
     for value, pattern in LIFECYCLE_PATTERNS:
-        m = pattern.search(text or "")
-        if m:
-            return value, _evidence(text, m.start(), m.end())
-    return "unknown", None
+        for m in pattern.finditer(text or ""):
+            if _is_declared(text, m.start(), m.end()):
+                return value, _evidence(text, m.start(), m.end()), True
+            if mentioned is None:
+                mentioned = (value, _evidence(text, m.start(), m.end()))
+    return (*mentioned, False) if mentioned else ("unknown", None, False)
 
 
 FORWARD_LIFECYCLES = {"under_construction", "new_launch"}
@@ -716,8 +741,11 @@ def vote_lifecycle(texts: list[str]) -> tuple[str, str | None, dict[str, int]]:
     votes: dict[str, int] = {}
     evidence: dict[str, str | None] = {}
     for text in texts:
-        value, ev = classify_lifecycle(text)
-        if value == "unknown":
+        value, ev, declared = classify_lifecycle(text)
+        # Only a declared statement votes, and a rent listing is a transaction rather than
+        # a lifecycle -- a project whose only signal is rental is one whose page we read
+        # wrongly, and it belongs in LIFECYCLE_UNKNOWN, not in a finished-drop.
+        if value == "unknown" or not declared or value in UNMAPPED_LIFECYCLES:
             continue
         votes[value] = votes.get(value, 0) + 1
         evidence.setdefault(value, ev)
@@ -935,12 +963,16 @@ def extract_page(text: str, *, source: Source = "tavily", url: str | None = None
 
     fields["building_type"] = reconcile_structure(fields["building_type"], fields["tower_count"])
 
-    lifecycle, evidence = classify_lifecycle(focused)
+    lifecycle, evidence, lifecycle_declared = classify_lifecycle(focused)
     declared = spec_lifecycle(spec)
     if declared:
         # A portal's own "Project Status" field beats a phrase found in the body:
         # it is a declaration about THIS project, not a word near it.
         lifecycle, evidence = declared, f"portal status field: {declared}"
+    elif not lifecycle_declared:
+        # Found in prose, a nav link or a cross-sell block. Kept as evidence so the card
+        # can still show what the page said, but it does not become this project's status.
+        lifecycle = "unknown"
 
     # A project cannot be launched after it is handed over. When the two disagree
     # the launch date is the unreliable one -- possession is stated far more often

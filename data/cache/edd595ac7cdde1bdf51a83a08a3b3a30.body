@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJHYDVVFG25zsRgmWAZKZ_uGE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Unnat Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.167986,
+        "longitude": 72.845486
+      },
+      "displayName": {
+        "text": "Patkar Mahavidyalaya",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJX6vIVVG25zsR2kOrrWXpIug",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Unnat Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.167939999999998,
+        "longitude": 72.8455
+      },
+      "displayName": {
+        "text": "Patkar College (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJJWnvqVa25zsRb-TrnEzBo34",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mahindra Gardens, Piramal Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16866,
+        "longitude": 72.84559
+      },
+      "displayName": {
+        "text": "Patkar College (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

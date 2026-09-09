@@ -81,7 +81,11 @@ class BuilderSiteSource(NullSource):
         self.tavily = tavily
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
-        if not settings.tavily_api_key:
+        # A missing key only stops a live search. In replay the answer is already in
+        # the cache, and gating on the key made an offline run with keys unset return
+        # a different competitor set from the same cache -- which is the one thing a
+        # frozen regression surface must not do.
+        if not settings.tavily_api_key and ctx.fetcher.mode == "live":
             return []
         q = f"{project.match_name} {project.builder or ''} official site amenities".strip()
         from app.sources.tavily_web import PORTAL_DOMAINS

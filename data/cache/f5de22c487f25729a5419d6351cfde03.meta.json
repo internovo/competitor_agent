@@ -1,0 +1,6 @@
+{
+  "url": "https://api.tavily.com/extract",
+  "status": 200,
+  "fetched_at": "2026-09-08T12:44:18.723778+00:00",
+  "fetcher": "httpx"
+}

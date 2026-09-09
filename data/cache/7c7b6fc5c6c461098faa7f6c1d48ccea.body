@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJi6rR-0225zsRMSX2HqhBiIA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Opposite Citi Bank, Swami Vivekanand Rd, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400062, India",
+      "location": {
+        "latitude": 19.160697199999998,
+        "longitude": 72.8459568
+      },
+      "displayName": {
+        "text": "Jawahar Nagar Bus Stop",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJBxpq1E225zsRKnihwEyn_KQ",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar 4, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.159848999999998,
+        "longitude": 72.845897
+      },
+      "displayName": {
+        "text": "Jawahar Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJF7Jg1E225zsRq-sQAo7_hkI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Siddharth Nagar 4, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.159779999999998,
+        "longitude": 72.84591
+      },
+      "displayName": {
+        "text": "Jawahar Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

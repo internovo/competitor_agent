@@ -32,6 +32,11 @@ class GraphState(TypedDict, total=False):
     log: Annotated[list[str], operator.add]
     extraction: Annotated[dict[str, int], add_counts]
     pages_fetched: Annotated[int, operator.add]
+    # What extraction put in front of the model, or would have: the input side of the
+    # cost question, measured on the real pages rather than guessed from a page count.
+    model_pages: Annotated[int, operator.add]
+    prompt_chars: Annotated[int, operator.add]
+    ambiguous_pairs: Annotated[int, operator.add]
 
 
 class ExtractInput(TypedDict):

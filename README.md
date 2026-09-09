@@ -14,8 +14,13 @@ one sentence per card from numbers we already computed. Claude never decides who
 ```bash
 brew install uv                 # once
 uv sync                         # creates .venv with Python 3.12
-uv run pytest -q                # 33 tests, fixture mode, no network
+uv run pytest -q                # fixture mode, no network, no keys
+uv run pytest -q -m slow        # the offline replay of the frozen suburbs (~2 min)
 uv run uvicorn app.main:app --reload
+
+# the competitor table for a frozen suburb, off the page cache, no keys, no model
+uv run python scripts/replay.py --list
+uv run python scripts/replay.py borivali-west-2026-09-08
 ```
 
 Then:
@@ -36,7 +41,7 @@ Interactive docs at `http://localhost:8000/docs`.
 | `FETCH_MODE` | Network | LLM | What it does |
 |---|---|---|---|
 | `fixture` (default) | none | not needed | Hand-written Malad West competitor set in `data/fixtures/`. Every stage after discovery runs for real. |
-| `replay` | none | needed | Serves every HTTP call from `data/cache/`. Claude still extracts from the cached pages. A cache miss is a loud error. |
+| `replay` | none | optional | Serves every HTTP call from `data/cache/`. With a model, Claude still extracts from the cached pages; with `llm=None` the deterministic half runs alone and the scan costs nothing. A cache miss is a loud error. |
 | `live` | yes | needed | Hits MahaRERA, Google Places, Tavily, SquareYards, Housing.com and builder sites, and writes `data/cache/`. |
 
 Copy `.env.example` to `.env` and add `ANTHROPIC_API_KEY`, `GOOGLE_MAPS_API_KEY`, `TAVILY_API_KEY` for replay/live.

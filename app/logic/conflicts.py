@@ -11,7 +11,7 @@ from collections import Counter
 from statistics import median
 
 from app.config import settings
-from app.models.schema import Conflict, OwnProject, Project
+from app.models.schema import Conflict, FieldReport, FieldValue, OwnProject, Project, _priority
 
 RANGE_FIELDS = (("rate_psf", "min_psf", "max_psf"), ("carpet_sqft", "min_sqft", "max_sqft"))
 
@@ -85,6 +85,42 @@ def _detect_with_spans(project: Project) -> list[tuple[Conflict, list]]:
     return out
 
 
+# Scalars SOURCE_PRIORITY can arbitrate. Sets are merged in logic/merge.py instead, and
+# carpet ranges are left withdrawn: two different ranges are two different unit mixes.
+DECIDABLE_FIELDS = ("possession", "rate_psf")
+
+
+def _show(value) -> str:
+    if hasattr(value, "isoformat"):
+        return value.isoformat()
+    if hasattr(value, "min_psf"):
+        return f"{value.min_psf:,}" if value.min_psf == value.max_psf else f"{value.min_psf:,}-{value.max_psf:,}"
+    return str(value)
+
+
+def pick_by_priority(report: FieldReport) -> FieldValue | None:
+    """The observation SOURCE_PRIORITY chooses, when it can choose at all.
+
+    Withdrawing a field because two sources differ threw away 36 of 58 possession dates
+    on two suburbs, and the lifecycle rules that need those dates never saw them. The
+    priority order already records which source we trust; using it is selection, not
+    correction, and the published value is still one a named source stated.
+
+    Two sources at the same priority give no basis to prefer either, so the field stays
+    withdrawn. That is the only case where "we do not know" is still the honest answer.
+    """
+    ranked = sorted(report.observations, key=lambda fv: _priority(fv.prov.source))
+    if len(ranked) < 2 or _priority(ranked[0].prov.source) == _priority(ranked[1].prov.source):
+        return None
+    return ranked[0]
+
+
+def _stated_beside_it(report: FieldReport, winner: FieldValue) -> str:
+    others = [fv for fv in report.observations if fv is not winner]
+    return (f"{winner.prov.source} says {_show(winner.value)}; "
+            + ", ".join(f"{fv.prov.source} says {_show(fv.value)}" for fv in others))
+
+
 def anchor_for(own: OwnProject, projects: list[Project]) -> float | None:
     """What "this market" means for the plausibility band, in one number.
 
@@ -99,17 +135,29 @@ def anchor_for(own: OwnProject, projects: list[Project]) -> float | None:
     return median(mids) if mids else None
 
 
-def _implausible(project: Project, anchor: float | None) -> list[int] | None:
-    """The observed span, when a rate sits outside the believable band. Never adjusted.
+def carpet_anchor_for(own: OwnProject) -> float | None:
+    """What "a normal flat here" means, in one number: the subject's own carpet midpoint.
+
+    Builder-declared, so unlike the rate anchor there is no fallback to a median of
+    what the competitors quote -- that median is exactly the thing being judged.
+    """
+    c = own.carpet_sqft
+    return (c.min_sqft + c.max_sqft) / 2 if c else None
+
+
+def _outside_band(observations, lo_at: str, hi_at: str, anchor: float | None,
+                  min_ratio: float, max_ratio: float) -> list[int] | None:
+    """The observed span, when it sits outside the believable band. Never adjusted.
 
     Both bounds must hold: Raghav UTOPIA quoted 295-26,412, where the top is credible
-    and the bottom is not, and half a rate is not a rate.
+    and the bottom is not, and half a rate is not a rate. The whole range goes, for the
+    same reason -- one end being readable does not make the other one true.
     """
     if anchor is None:
         return None
-    floor, ceiling = anchor * settings.rate_plausible_min_ratio, anchor * settings.rate_plausible_max_ratio
-    for fv in project.rate_psf.observations:
-        lo, hi = sorted((fv.value.min_psf, fv.value.max_psf))
+    floor, ceiling = anchor * min_ratio, anchor * max_ratio
+    for fv in observations:
+        lo, hi = sorted((getattr(fv.value, lo_at), getattr(fv.value, hi_at)))
         if lo < floor or hi > ceiling:
             return [lo, hi]
     return None
@@ -140,20 +188,34 @@ def _shared(project: Project, shared: dict[tuple[int, int], int]) -> list[int] |
 
 
 def apply(project: Project, anchor: float | None = None,
-          shared: dict[tuple[int, int], int] | None = None) -> Project:
+          shared: dict[tuple[int, int], int] | None = None,
+          carpet_anchor: float | None = None) -> Project:
     found = _detect_with_spans(project)
     # Strongest refusal wins: a figure we cannot credit at all, then one that is not this
     # project's to claim, then sources that merely disagree.
-    refused = _implausible(project, anchor)
+    refused = _outside_band(project.rate_psf.observations, "min_psf", "max_psf", anchor,
+                            settings.rate_plausible_min_ratio, settings.rate_plausible_max_ratio)
     borrowed = _shared(project, shared or {}) if refused is None else None
+    carpet_refused = _outside_band(project.carpet_sqft.observations, "min_sqft", "max_sqft", carpet_anchor,
+                                   settings.carpet_plausible_min_ratio, settings.carpet_plausible_max_ratio)
     if refused is not None or borrowed is not None:
         found = [(c, s) for c, s in found if c.field != "rate_psf"]
+    if carpet_refused is not None:
+        found = [(c, s) for c, s in found if c.field != "carpet_sqft"]
     project.conflicts = [c for c, _ in found]
     for conflict, span in found:
-        # We saw several values and will not publish one of them as the answer.
-        project.report(conflict.field).mark_absent("SOURCES_DISAGREE", span=span)
+        report = project.report(conflict.field)
+        winner = pick_by_priority(report) if conflict.field in DECIDABLE_FIELDS else None
+        if winner is not None:
+            # The best source's value stands and the disagreement travels beside it.
+            conflict.detail = _stated_beside_it(report, winner)
+            continue
+        # No basis to choose: we saw several values and publish none of them as the answer.
+        report.mark_absent("SOURCES_DISAGREE", span=span)
     if refused is not None:
         project.rate_psf.mark_absent("IMPLAUSIBLE_RATE", span=refused)
     elif borrowed is not None:
         project.rate_psf.mark_absent("SHARED_ACROSS_PROJECTS", span=borrowed)
+    if carpet_refused is not None:
+        project.carpet_sqft.mark_absent("IMPLAUSIBLE_CARPET", span=carpet_refused)
     return project

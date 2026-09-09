@@ -20,9 +20,21 @@ STOP = {
 COMPANY_SUFFIXES = {
     "llp", "ltd", "limited", "pvt", "private", "developers", "developer", "infrastructure", "infra",
     "constructions", "construction", "realtors", "realty", "enterprises", "builders", "associates", "corporation",
+    # Borivali West's register is mostly individual redevelopment filings, and these are
+    # the forms its promoter rows use. "Company" and "Group" are the two commonest.
+    "company", "group", "builder", "constructors", "contractors", "estates", "properties",
+    "ventures", "projects", "housing",
+    # The register truncates projectName at 44 characters, so "... Private Limited"
+    # arrives as "... Private Lim" or "... Private Limite".
+    "lim", "limite",
 }
 COMPANY_CONNECTORS = {"and", "&"}
 COMPANY_PREFIXES = ("aop of ", "m/s ", "m/s. ")
+
+# A page title's segment separator. Everything after the first one is the site's own
+# breadcrumb -- "Evoke by Arkade | Goregaon West | Mumbai". The dashes need spaces
+# around them so a hyphenated name is not cut in half.
+_TITLE_TAIL = re.compile(r"\s*[|]|\s+[-–]\s+")
 
 
 def looks_like_company(name: str) -> bool:
@@ -32,11 +44,17 @@ def looks_like_company(name: str) -> bool:
     Developers' is a company; 'Lodha Amara' is a project; and 'Ajmera Realty Heights'
     is a project too, because a real name survives after the suffix. The false
     positive costs a competitor, so the tail rule is what decides, not a word count.
+
+    'X by Y' and 'X - THE Y GROUP' are projects with their builder appended, so only
+    the part before the attribution is judged. Without that, adding 'group' to the
+    list would have deleted 'Airavat By Bhoomi Group' and 'Laxmi Shrushti - THE LAXMI
+    GROUP', which are buildings.
     """
     low = (name or "").strip().lower()
     if any(low.startswith(p) for p in COMPANY_PREFIXES):
         return True
-    words = [w for w in re.findall(r"[a-z0-9&]+", low) if w]
+    head = _TITLE_TAIL.split(re.split(r"\bby\b", low, maxsplit=1)[0], maxsplit=1)[0]
+    words = [w for w in re.findall(r"[a-z0-9&]+", head or low) if w]
     first = next((i for i, w in enumerate(words) if w in COMPANY_SUFFIXES), None)
     if first is None:
         return False
@@ -54,7 +72,7 @@ def page_url(c: Candidate) -> str | None:
 
 
 # Portal and SEO page titles, not names anyone uses.
-_NOISE = re.compile(r"\b(new\s+launch\s+project|new\s+launch|under\s+construction)\b", re.I)
+_NOISE = re.compile(r"\b(new\s+launch\s+project|new\s+launch|residential\s+project|under\s+construction)\b", re.I)
 
 
 def clean_project_name(name: str, builder: str | None = None, locality: str | None = None) -> str:
@@ -63,7 +81,8 @@ def clean_project_name(name: str, builder: str | None = None, locality: str | No
     Identity, dedup and page matching stay on the raw name (Project.match_name), so
     tidying a title can never merge two different projects or change what we search for.
     """
-    out = _NOISE.sub(" ", name or "")
+    out = _TITLE_TAIL.split(name or "", maxsplit=1)[0] or (name or "")
+    out = _NOISE.sub(" ", out)
     if builder:
         brand = builder.split()[0]
         out = re.sub(rf"\bby\s+{re.escape(builder)}\s*$", "", out.strip(), flags=re.I)

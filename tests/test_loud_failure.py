@@ -115,9 +115,9 @@ def test_every_model_call_is_counted_and_a_fatal_one_stops_the_run():
 
     llm = LLM.__new__(LLM)
     llm.calls_attempted = llm.calls_failed = 0
-    llm.usage = UsageCounter()
+    llm.usage = {"extract": UsageCounter()}
     with pytest.raises(LLMAuthError):
-        asyncio.run(llm._call(Chat(), []))
+        asyncio.run(llm._call(Chat(), [], "extract"))
     assert (llm.calls_attempted, llm.calls_failed) == (1, 1)
 
 
@@ -132,9 +132,9 @@ def test_a_page_failure_is_counted_and_re_raised_for_the_caller_to_absorb():
 
     llm = LLM.__new__(LLM)
     llm.calls_attempted = llm.calls_failed = 0
-    llm.usage = UsageCounter()
+    llm.usage = {"extract": UsageCounter()}
     with pytest.raises(ValueError):
-        asyncio.run(llm._call(Chat(), []))
+        asyncio.run(llm._call(Chat(), [], "extract"))
     assert llm.failure_rate == 1.0
 
 

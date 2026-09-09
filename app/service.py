@@ -8,12 +8,14 @@ from collections.abc import Callable
 from typing import Any
 
 from app.config import settings
+from app.cost import NodeSpans
 from app.graph.build import graph
 from app.llm import templates
 from app.llm.client import LLM, get_llm
 from app.logic import compare as compare_logic
 from app.logic import completeness, conflicts, match_score
-from app.models.schema import REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord, now_utc
+from app.models.schema import (REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord,
+                               absence_label, now_utc)
 from app.sources.fetch import Fetcher
 from app.sources.registry import build_sources
 
@@ -28,13 +30,21 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
 
     `on_stage(node, update)` is called as each node finishes, so a polling client
     sees real progress rather than a spinner.
+
+    `llm=None` means run with no model at all, and is taken literally: the caller
+    that wants one builds it and passes it. Falling back to `get_llm()` here made
+    "no model" unaskable -- every fixture test and every offline replay quietly
+    constructed a client off whatever key was in .env and spent on it.
     """
     fetcher = Fetcher(mode, timeout=settings.fetch_timeout_s)
-    deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm if llm is not None else get_llm()}
+    deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm}
     scan_id = uuid.uuid4().hex[:12]
     state = {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [],
              "projects": [], "dropped": [], "retry_done": False, "log": []}
-    config = {"configurable": deps, "recursion_limit": 50}
+    # One span per node, one per candidate at the fan-out. Exported only when a
+    # collector endpoint is configured; otherwise the no-op tracer costs a dict write.
+    config = {"configurable": deps, "recursion_limit": 50,
+              "callbacks": [NodeSpans(llm, scan_id, own.locality or "")]}
     if on_stage is None:
         final = await graph.ainvoke(state, config=config)
     else:
@@ -53,7 +63,10 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
             "register_filings": final.get("register_filings", []),
             "societies": final.get("societies", []),
             "urls": list(fetcher.calls), "pages_fetched": final.get("pages_fetched", 0),
-            "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0})}
+            "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0}),
+            "candidates_researched": len(final["projects"]),
+            "model_pages": final.get("model_pages", 0), "prompt_chars": final.get("prompt_chars", 0),
+            "ambiguous_pairs": final.get("ambiguous_pairs", 0)}
     return rec, meta
 
 
@@ -97,11 +110,20 @@ def unread(projects: list[Project]) -> list[Project]:
     return [p for p in projects if p.eligible and not p.pages_seen]
 
 
+def unclassified(projects: list[Project]) -> list[Project]:
+    """Eligible, researched, and no source declared a lifecycle.
+
+    Sweeping these into the finished-drops is the same failure as inventing a value,
+    pointed the other way: the project vanishes and nothing says why.
+    """
+    return [p for p in projects if p.eligible and p.pages_seen and p.status == "unknown"]
+
+
 def rank(projects: list[Project]) -> list[Project]:
     """Label, then coverage, then distance. Coverage before distance is the point: sorting
     an UNVERIFIED 0/6 register row above a filled launch because it is 200 m closer put
     the emptiest rows at the top of the table."""
-    eligible = [p for p in projects if p.eligible and p.pages_seen]
+    eligible = [p for p in projects if p.eligible and p.pages_seen and p.status != "unknown"]
     return sorted(eligible, key=lambda p: (LABEL_ORDER[p.label], -p.completeness, p.distance_km or 99))
 
 
@@ -122,7 +144,8 @@ def _rate_block(p: Project, conflict) -> dict[str, Any] | None:
         lo, hi, basis = p.rate_span()
         return {"min": lo, "max": hi, "basis": basis, "sources": len(seen),
                 "conflict": conflict.detail if conflict else p.rate_psf.label}
-    return {"min": fv.value.min_psf, "max": fv.value.max_psf, "basis": fv.value.basis, "conflict": None, "sources": len(seen)}
+    return {"min": fv.value.min_psf, "max": fv.value.max_psf, "basis": fv.value.basis,
+            "conflict": conflict.detail if conflict else None, "sources": len(seen)}
 
 
 def absence_block(p: Project) -> dict[str, dict[str, Any]]:
@@ -154,6 +177,8 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
         "possession": poss.value.isoformat() if poss else None,
         "towers": struct.value.towers if struct else None, "building_type": struct.value.building_type if struct else None,
         "insight": p.insight, "insight_source": p.insight_source,
+        "conflicts": [{"field": c.field, "detail": c.detail} for c in p.conflicts],
+        "status_note": p.status_note,
         "absent": absence_block(p),
         "data_note": "builder-declared data" if p.on_propog else ("RERA verified" if rera_verified else None),
     }
@@ -175,6 +200,9 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
                       + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
                           "completeness": p.completeness,
                           "reason": "no source produced a page about this project"} for p in unread(rec.projects)]
+                      + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
+                          "completeness": p.completeness,
+                          "reason": absence_label(None, "LIFECYCLE_UNKNOWN")} for p in unclassified(rec.projects)]
                       + meta.get("societies", []),
         "register_filings": meta.get("register_filings", []),
         "dropped": [{"id": p.id, "name": p.name, "reason": p.drop_reason} for p in rec.projects if not p.eligible] + rec.dropped,

@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJNXtG-U225zsR-aSfdG-o-uc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.162157999999998,
+        "longitude": 72.846192
+      },
+      "displayName": {
+        "text": "Jawahar Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJF78QAVK25zsReY7dbVxffvw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.162753,
+        "longitude": 72.845913
+      },
+      "displayName": {
+        "text": "Filmistan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJl78ZAVK25zsRL7GsjsBRGN0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kakaji Nagar, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.162959999999998,
+        "longitude": 72.84608
+      },
+      "displayName": {
+        "text": "Filmistan (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

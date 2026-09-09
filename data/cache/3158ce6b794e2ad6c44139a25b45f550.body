@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJm7yHE0W25zsR2NtOTGLPXPU",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mitha Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.159879999999998,
+        "longitude": 72.83788
+      },
+      "displayName": {
+        "text": "New Siddharth Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJr87tBUW25zsRgLnpBzuPvJM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mitha Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.15927,
+        "longitude": 72.83746
+      },
+      "displayName": {
+        "text": "Shastri Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJC0FFd0W25zsRppeVLCqGy64",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.15919,
+        "longitude": 72.83909
+      },
+      "displayName": {
+        "text": "New Siddharth Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

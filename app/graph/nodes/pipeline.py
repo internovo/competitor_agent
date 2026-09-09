@@ -36,13 +36,22 @@ def _geocoders(d: dict) -> list:
     return [s for s in d["sources"] if hasattr(s, "geocode")]
 
 
-async def _geocode(sources: list, ctx: ScanContext, query: str) -> tuple[tuple[float, float, str], str] | None:
-    """First geocoder with an answer wins; a dead key or a miss falls through to the next."""
+async def _geocode(sources: list, ctx: ScanContext, query: str,
+                   attempts: list[str] | None = None) -> tuple[tuple[float, float, str], str] | None:
+    """First geocoder with an answer wins; a dead key or a miss falls through to the next.
+
+    `attempts` collects one note per geocoder actually called, so a caller can tell
+    "we asked and nobody knew" from "nobody was asked".
+    """
     for s in sources:
         try:
             g = await s.geocode(ctx, query)
-        except Exception:  # noqa: BLE001 - a geocoder that is down is not a reason to lose the project
+        except Exception as e:  # noqa: BLE001 - a geocoder that is down is not a reason to lose the project
+            if attempts is not None:
+                attempts.append(f"{s.name} errored ({type(e).__name__})")
             continue
+        if attempts is not None:
+            attempts.append(f"{s.name} {'answered' if g else 'had no match'}")
         if g:
             return g, s.name
     return None
@@ -104,13 +113,14 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
     groups: list[tuple[Candidate, list[Candidate]]] = []
     log = []
     placeholders = resolve.placeholder_pins(state["candidates"])
-    asked = 0
+    asked = ambiguous = 0
     for c in state["candidates"]:
         placed = False
         for rep, members in groups:
             if not resolve.could_be_same(rep, c, placeholders):
                 continue
             verdict = resolve.decide(rep, c)
+            ambiguous += verdict is None
             if verdict is None and llm is not None and asked < settings.resolve_max_llm_pairs:
                 asked += 1
                 try:
@@ -181,9 +191,10 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
         projects.append(p)
     log.append(f"resolve: {len(state['candidates'])} candidates -> {len(groups)} groups, {len(projects)} to research, "
                f"{len(filings)} register filings, {len(societies)} societies, {len(dropped)} dropped early, "
-               f"{asked} model pairs asked")
+               f"{asked} model pairs asked of {ambiguous} ambiguous")
     return {"projects": projects, "dropped": dropped, "register_filings": filings,
-            "societies": societies, "log": log}
+            "societies": societies, "log": log,
+            "ambiguous_pairs": min(ambiguous, settings.resolve_max_llm_pairs)}
 
 
 def fan_out_extract(state: GraphState):
@@ -325,14 +336,32 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         n_det += len(filled)
         why |= page_why
 
-    # Lifecycle across ALL pages, never taken from the first one that matched.
+    # Lifecycle across ALL pages, from the pages that DECLARE one. The vote is
+    # authoritative rather than first-writer-wins: a status set from prose, or by the model
+    # reading prose, is exactly what this is here to overrule.
     read_pages = [p for p in prose if p.url in keep]
-    if read_pages and project.status == "unknown":
-        lifecycle, evidence, _ = deterministic.vote_lifecycle(
+    if read_pages:
+        lifecycle, evidence, votes = deterministic.vote_lifecycle(
             [deterministic.focus_on_project(p.text, project.match_name) for p in read_pages])
+        register_said = project.status != "unknown" and any(pg.source == "maharera" for pg in pages)
         if lifecycle not in deterministic.UNMAPPED_LIFECYCLES | {"unknown"}:
             project.status = lifecycle
-            log.append(f"extract[{project.id}]: status {lifecycle} by majority ({evidence})")
+            log.append(f"extract[{project.id}]: status {lifecycle} declared, votes {votes} ({evidence})")
+        elif not register_said and project.status != "unknown":
+            log.append(f"extract[{project.id}]: status '{project.status}' had no declared statement behind it; unknown")
+            project.status = "unknown"
+
+    # A possession date well in the future contradicts a "ready" badge, and the date is the
+    # value with a source behind it. The reverse is left alone: a delayed project is still
+    # a competitor, and there the date is the likelier stale half.
+    poss = project.value("possession")
+    if poss is not None and project.status in ("ready", "completed"):
+        months = (poss.year - date.today().year) * 12 + (poss.month - date.today().month)
+        if months > settings.lifecycle_possession_margin_months:
+            project.status_note = (f"a source called this {project.status}, but possession is stated as "
+                                   f"{poss.isoformat()}, {months} months out; read as under construction")
+            project.status = "under_construction"
+            log.append(f"extract[{project.id}]: {project.status_note}")
 
     # --- 2. only what is still missing goes to Claude -----------------------
     want = set(_still_missing(project))
@@ -383,7 +412,14 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         # A portal-discovered project often has no address at all; its name plus the locality is still worth a lookup,
         # and a project that stays unpinned is dropped for "no coordinates" rather than compared.
         query = f"{project.match_name} {project.address}" if project.address else f"{project.match_name} {ctx.own.locality or ''} Mumbai"
-        hit = await _geocode(_geocoders(d), ctx, query)
+        attempts: list[str] = []
+        hit = await _geocode(_geocoders(d), ctx, query, attempts)
+        # One line per unplaced candidate, so "we asked and nobody knew" can be told
+        # apart from "nobody was asked". They are different fixes.
+        log.append(f"geocode-audit[{project.id}]: {project.name!r} | discovery gave "
+                   f"via={'+'.join(project.discovered_via) or 'none'} address={project.address!r} "
+                   f"locality={project.locality!r} | query={query.strip()!r} | "
+                   + ("no geocoder enabled; none was issued" if not attempts else "; ".join(attempts)))
         if hit is None:
             log.append(f"extract[{project.id}]: no geocoder could place '{query.strip()}'")
         else:
@@ -398,7 +434,12 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             pass
     log.append(f"extract[{project.id}]: {len(pages)} pages, {n_det} fields deterministic, "
                f"{n_llm} from Claude, sources {project.sources_consulted}")
+    # The pages the model was given, or would have been given had one been configured.
+    # Counted either way, so an offline replay can still answer "what would this cost".
+    billable = read_pages if want else []
     return {"projects": [project], "log": log, "pages_fetched": len(pages),
+            "model_pages": len(billable),
+            "prompt_chars": sum(len(pg.text[: settings.max_page_chars]) for pg in billable),
             "extraction": {"deterministic_fields": n_det, "llm_fields": n_llm}}
 
 
@@ -414,10 +455,11 @@ async def score(state: GraphState, config: RunnableConfig) -> dict:
     # one scan. Conflicts run before completeness: they are what mark a field unresolved,
     # and the label depends on that.
     anchor = conflicts.anchor_for(state["own"], state["projects"])
+    carpet_anchor = conflicts.carpet_anchor_for(state["own"])
     shared = conflicts.shared_rates(state["projects"])
     out = []
     for p in state["projects"]:
-        conflicts.apply(p, anchor, shared)
+        conflicts.apply(p, anchor, shared, carpet_anchor)
         completeness.apply(p)
         match_score.apply(p, state["own"], state["radius_km"])
         out.append(p)

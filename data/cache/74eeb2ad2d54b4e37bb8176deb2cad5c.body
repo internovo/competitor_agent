@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJBdQzwlG25zsRQ5KKpCSAixo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Divyapuri CHS, Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16336,
+        "longitude": 72.844
+      },
+      "displayName": {
+        "text": "Ram Baug (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJp2Ziz1G25zsRJMZXWigt2aw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.163330000000002,
+        "longitude": 72.84339
+      },
+      "displayName": {
+        "text": "Ram Baug (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJaX7gIVK25zsROaw2X3oZ_v0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kakaji Nagar, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.164181,
+        "longitude": 72.845974
+      },
+      "displayName": {
+        "text": "Filmistan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

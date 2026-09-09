@@ -1,0 +1,23 @@
+{
+  "places": [
+    {
+      "id": "ChIJEczgM9C35zsRzre3ufaaEVo",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "VeenaSmartHomes, Ambedkar Rd, Kandivali, Charkop, Charkop Gaon, Kandivali (W, Mumbai, Maharashtra 400067, India",
+      "location": {
+        "latitude": 19.2064313,
+        "longitude": 72.821334999999991
+      },
+      "displayName": {
+        "text": "Veena Smart Homes Sales Office",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from app.config import settings
-from app.cost import UsageCounter
+from app.cost import LLM_STAGES, UsageCounter
 from app.llm import prompts
 from app.models.schema import Candidate, ExtractedFacts, OwnProject, Page, Project
 
@@ -106,7 +106,11 @@ class LLM:
         # Per run. narrate reads these before anything is presented as complete.
         self.calls_attempted = 0
         self.calls_failed = 0
-        self.usage = UsageCounter()
+        # One counter per stage. The client knows which job each call is doing, so the
+        # split is taken here rather than inferred from the graph -- and a counter per
+        # stage is exact under extract's concurrency, where a shared "current stage"
+        # would not be.
+        self.usage = {s: UsageCounter() for s in LLM_STAGES}
         self.model = getattr(self.chat, "model_name", None) or getattr(self.chat, "model", "")
         # Anthropic's json_schema grammar refuses a schema with more than 24 optional /
         # union-typed properties, and ExtractedFacts has 26: every extraction 400s. Tool
@@ -117,11 +121,14 @@ class LLM:
         self._cards = self.chat.with_structured_output(CardInsights, method="json_schema")
         self._sections = self.chat.with_structured_output(SectionInsights, method="json_schema")
 
-    async def _call(self, runnable, messages):
-        """Every model call goes through here, so nothing can fail quietly."""
+    async def _call(self, runnable, messages, stage: str):
+        """Every model call goes through here, so nothing can fail quietly and every
+        token lands against the stage that spent it."""
         self.calls_attempted += 1
+        counter = self.usage[stage]
+        counter.calls += 1
         try:
-            return await runnable.ainvoke(messages, config={"callbacks": [self.usage]})
+            return await runnable.ainvoke(messages, config={"callbacks": [counter]})
         except Exception as e:  # noqa: BLE001
             self.calls_failed += 1
             fatal = fatal_for(e)
@@ -133,6 +140,17 @@ class LLM:
     def failure_rate(self) -> float:
         return self.calls_failed / self.calls_attempted if self.calls_attempted else 0.0
 
+    @property
+    def input_tokens(self) -> int:
+        return sum(c.input_tokens for c in self.usage.values())
+
+    @property
+    def output_tokens(self) -> int:
+        return sum(c.output_tokens for c in self.usage.values())
+
+    def usage_by_stage(self) -> dict[str, dict]:
+        return {s: c.body(self.model) for s, c in self.usage.items() if c.calls}
+
     async def extract_facts(self, page: Page, project: Project, locality: str | None,
                             wanted: list[str] | None = None) -> ExtractedFacts:
         from app.models.schema import REPORTED_FIELDS
@@ -142,19 +160,19 @@ class LLM:
         user = prompts.EXTRACT_USER.format(name=project.name, builder=project.builder or "unknown builder", locality=locality or "Mumbai",
                                            source=page.source, url=page.url, text=page.text[: settings.max_page_chars],
                                            known=", ".join(known) or "nothing", wanted=", ".join(wanted))
-        out = await self._call(self._extract, [("system", prompts.EXTRACT_SYSTEM), ("human", user)])
+        out = await self._call(self._extract, [("system", prompts.EXTRACT_SYSTEM), ("human", user)], "extract")
         return out if isinstance(out, ExtractedFacts) else ExtractedFacts(**out)
 
     async def same_project(self, a: Candidate, b: Candidate) -> MatchVerdict:
         user = prompts.SAME_PROJECT_USER.format(a_name=a.name, a_builder=a.builder or "", a_rera=a.rera_no or "", a_address=a.address or "",
                                                 b_name=b.name, b_builder=b.builder or "", b_rera=b.rera_no or "", b_address=b.address or "")
-        out = await self._call(self._match, [("system", prompts.SAME_PROJECT_SYSTEM), ("human", user)])
+        out = await self._call(self._match, [("system", prompts.SAME_PROJECT_SYSTEM), ("human", user)], "resolve")
         return out if isinstance(out, MatchVerdict) else MatchVerdict(**out)
 
     async def narrate_cards(self, own: OwnProject, projects: list[Project], radius_km: float, set_summary: dict) -> dict[str, str]:
         items = "\n".join(json.dumps(card_facts(p)) for p in projects)
         user = prompts.NARRATE_CARDS_USER.format(own=json.dumps(own_facts(own)), radius_km=radius_km, set_summary=json.dumps(set_summary), items=items)
-        out = await self._call(self._cards, [("system", prompts.NARRATE_SYSTEM), ("human", user)])
+        out = await self._call(self._cards, [("system", prompts.NARRATE_SYSTEM), ("human", user)], "narrate")
         out = out if isinstance(out, CardInsights) else CardInsights(**out)
         return {i.id: i.sentence for i in out.insights}
 
@@ -162,7 +180,7 @@ class LLM:
         slim = {k: payload[k] for k in ("headline", "common_bhk", "rate_axis", "possession", "carpet", "config_matrix", "structure", "amenities")}
         slim["amenities"] = {k: v for k, v in slim["amenities"].items() if k != "rows"} | {"top_rows": payload["amenities"]["rows"][:12]}
         user = prompts.NARRATE_COMPARE_USER.format(own=json.dumps(own_facts(own)), payload=json.dumps(slim, default=str))
-        out = await self._call(self._sections, [("system", prompts.NARRATE_SYSTEM), ("human", user)])
+        out = await self._call(self._sections, [("system", prompts.NARRATE_SYSTEM), ("human", user)], "narrate")
         out = out if isinstance(out, SectionInsights) else SectionInsights(**out)
         return out.model_dump()
 

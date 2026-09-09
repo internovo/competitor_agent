@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJrXusP1m25zsR1nvd5RnidAg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.168815,
+        "longitude": 72.835137
+      },
+      "displayName": {
+        "text": "Bangur Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJbV_sP1m25zsR8wMDZ7CeClY",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.168744999999998,
+        "longitude": 72.835219999999993
+      },
+      "displayName": {
+        "text": "Bangur Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJ2TLK31i25zsR4SYxBef8Brs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1702857,
+        "longitude": 72.8352392
+      },
+      "displayName": {
+        "text": "Inorbit Mall Bus Stop",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

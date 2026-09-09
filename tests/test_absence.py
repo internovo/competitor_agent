@@ -6,11 +6,11 @@ from pydantic import ValidationError
 
 from app.logic import completeness, conflicts
 from app.models.schema import AbsenceReason, FieldReport, RateValue, absence_label
-from tests.conftest import fv
+from tests.conftest import fr, fv
 
 REASONS = ("NOT_PUBLISHED", "NO_RERA_ON_FILE", "RATE_NOT_PUBLISHED", "UNPARSEABLE_DATE",
-           "SOURCES_DISAGREE", "NOT_FOUND", "NOT_RESEARCHED", "RESEARCH_TIMED_OUT", "IMPLAUSIBLE_RATE",
-           "SHARED_ACROSS_PROJECTS")
+           "SOURCES_DISAGREE", "NOT_FOUND", "NOT_RESEARCHED", "RESEARCH_TIMED_OUT", "IMPLAUSIBLE_RATE", "IMPLAUSIBLE_CARPET",
+           "SHARED_ACROSS_PROJECTS", "LIFECYCLE_UNKNOWN")
 
 
 def test_the_listed_reasons_are_the_whole_set():
@@ -86,19 +86,43 @@ def test_marking_absent_keeps_the_observations_as_disputed():
 
 # --- absence gets decided in conflicts --------------------------------------
 
-def test_disagreeing_sources_make_the_field_absent_with_its_spread(full_project):
+def test_a_better_source_wins_and_the_disagreement_travels_beside_it(full_project):
+    """Withdrawing on any disagreement threw away 36 of 58 possession dates across two
+    suburbs. SOURCE_PRIORITY already records which source we trust; using it is selection,
+    and the published number is still one a named source stated."""
     full_project.rate_psf.observe(fv(RateValue(min_psf=29100, max_psf=29100, basis="undisclosed"), source="squareyards"))
     conflicts.apply(full_project)
     r = full_project.rate_psf
-    assert r.absent == "SOURCES_DISAGREE"
-    assert r.span == [29100, 36000]
-    assert r.value is None
-    assert [c.field for c in full_project.conflicts] == ["rate_psf"]   # the Conflict entry is kept as-is
+    assert r.absent is None
+    assert r.value.min_psf == 36000                      # builder_site outranks squareyards
+    assert [c.field for c in full_project.conflicts] == ["rate_psf"]
+    detail = full_project.conflicts[0].detail
+    assert "builder_site says 36,000" in detail and "squareyards says 29,100" in detail
 
 
-def test_a_disagreeing_possession_carries_iso_dates_in_its_span(full_project):
+def test_two_sources_of_equal_standing_are_still_refused(full_project):
+    """No basis to prefer either, so "we do not know" is still the honest answer."""
+    full_project.rate_psf = fr("rate_psf", fv(RateValue(min_psf=36000, max_psf=36000), source="squareyards"),
+                               fv(RateValue(min_psf=29100, max_psf=29100), source="squareyards"))
+    conflicts.apply(full_project)
+    assert full_project.rate_psf.absent == "SOURCES_DISAGREE"
+    assert full_project.rate_psf.span == [29100, 36000]
+    assert full_project.rate_psf.value is None
+
+
+def test_a_disagreeing_possession_publishes_the_better_source(full_project):
     full_project.possession.observe(fv(date(2030, 6, 1), source="housing"))
     conflicts.apply(full_project)
+    assert full_project.possession.absent is None
+    assert full_project.possession.value == date(2029, 9, 1)      # maharera outranks housing
+    assert full_project.conflicts[0].detail == "maharera says 2029-09-01; housing says 2030-06-01"
+
+
+def test_two_equal_sources_disagreeing_on_possession_still_carry_the_span(full_project):
+    full_project.possession = fr("possession", fv(date(2029, 9, 1), source="housing"),
+                                 fv(date(2030, 6, 1), source="housing"))
+    conflicts.apply(full_project)
+    assert full_project.possession.absent == "SOURCES_DISAGREE"
     assert full_project.possession.span == ["2029-09-01", "2030-06-01"]
 
 

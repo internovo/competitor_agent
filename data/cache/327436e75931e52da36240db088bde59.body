@@ -1,0 +1,392 @@
+{
+  "places": [
+    {
+      "id": "ChIJ5f-ERE-25zsRF74qidSVjuM",
+      "types": [
+        "apartment_building",
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kalpataru Radiance Tower A, 60, Rd Number 13, Motilal Nagar I, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1570456,
+        "longitude": 72.8411601
+      },
+      "displayName": {
+        "text": "Kalpataru Radiance",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJXZABqKe35zsROT86RgPwImg",
+      "types": [
+        "housing_complex",
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Grih Nirman Bhawan Kalanagar, Vandre (E, Goregaon West, Mumbai, Maharashtra 400051, India",
+      "location": {
+        "latitude": 19.1687251,
+        "longitude": 72.8366112
+      },
+      "displayName": {
+        "text": "Maharashtra Housing and Area Development Authority",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJXWHVWZm35zsRCTNX7WQBdu8",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5RGM+6WM, near In orbit mall, Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1755848,
+        "longitude": 72.8347849
+      },
+      "displayName": {
+        "text": "Rustomjee Elanza,",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ88pjyk225zsRpG4TInMbZeA",
+      "types": [
+        "apartment_complex",
+        "apartment_building",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "8, Siddharth Nagar Rd, Motilal Nagar I, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1542759,
+        "longitude": 72.842491
+      },
+      "displayName": {
+        "text": "EKTA Tripolis, Goregaon West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ9Sczoju35zsRRleBOPqQdvA",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "51-55, Unnat Nagar 2, Unnat Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1699755,
+        "longitude": 72.8444955
+      },
+      "displayName": {
+        "text": "Aurum Tower - Residential Apartments",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJmUoBCeq35zsRyK1CrhgvvxA",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "365, Road No. 2, Motilal Nagar II, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.165872399999998,
+        "longitude": 72.8363614
+      },
+      "displayName": {
+        "text": "Sethia Sea View",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJwYZECfe25zsR3xYeqdZaZY4",
+      "types": [
+        "apartment_complex",
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5RGQ+G83, Ahimsa Marg, Malad, Chincholi Bunder, Malad West, Mumbai, Maharashtra 400064, India",
+      "location": {
+        "latitude": 19.1762579,
+        "longitude": 72.8382826
+      },
+      "displayName": {
+        "text": "Usha Garden Co-operative Housing Society Limited",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJ4we4V0O25zsRPMI_9DYtVv8",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Gulraj tower, Link Road, Mahakali Mandir Marg, behind Garden Estate Bldg, Colony No 2, Laxmi Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.160736099999998,
+        "longitude": 72.833848199999991
+      },
+      "displayName": {
+        "text": "Garden Estates Goregaon West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJA6299VG25zsRiN54E7Q3hCU",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Ration Office goregaon west, Off, Mahatma Gandhi Rd, Unnat Nagar, Opposite, Unnat Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.164994099999998,
+        "longitude": 72.8430649
+      },
+      "displayName": {
+        "text": "Anmol Fortune - The Wadhwa Group",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJpxUTcgC35zsRR9GETrtwnPU",
+      "types": [
+        "housing_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Mhada Ln, Mahesh Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.168798199999998,
+        "longitude": 72.843023399999993
+      },
+      "displayName": {
+        "text": "Vastu Heights Complex",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJYSOQVlS25zsRGxK8AFre-2E",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5RCX+98Q, Piramal Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1709685,
+        "longitude": 72.8483607
+      },
+      "displayName": {
+        "text": "High Rise Building Bld No 11 Piramal Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJiZbGi1O25zsRgA0c9ZbZ-AA",
+      "types": [
+        "condominium_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Wing-2, 1102, Sitaram Patkar Rd, Piramal Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1680059,
+        "longitude": 72.8473391
+      },
+      "displayName": {
+        "text": "Mahindra Eminente Angelica",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJWR-Rlhu35zsRuveYPcQvgCQ",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5R6R+387 Dps Parkview, Tilak Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.160168,
+        "longitude": 72.8407941
+      },
+      "displayName": {
+        "text": "DPS Park view",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ8QPvKRW35zsRN-ctJdcu1hA",
+      "types": [
+        "condominium_complex",
+        "apartment_building",
+        "association_or_organization",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Yashwant Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.167415,
+        "longitude": 72.8414255
+      },
+      "displayName": {
+        "text": "34 Park Estate",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJs9o2WJe35zsRPqXqLz6HnYE",
+      "types": [
+        "condominium_complex",
+        "corporate_office",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, Hari Ratan CHS, Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1637099,
+        "longitude": 72.834043999999992
+      },
+      "displayName": {
+        "text": "Kolte Patil Goregaon",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJi9RtiVa25zsRp8Vvp82Cehg",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Eco Tower, Govindji Shroff Marg, Mahesh Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1709383,
+        "longitude": 72.8446305
+      },
+      "displayName": {
+        "text": "Eco Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJPaTm51G35zsRu8v3eHp9lSc",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "5R7V+86F, Mahatma Gandhi Rd, Belwalkar Wadi, Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1633191,
+        "longitude": 72.8430462
+      },
+      "displayName": {
+        "text": "KABRA DIAMANTÉ",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJv8IyYa235zsRpU9MlOD1moM",
+      "types": [
+        "apartment_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "krushna kunj, 17, Jay Prakash Nagar Rd No-3, Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.16358,
+        "longitude": 72.85326400000001
+      },
+      "displayName": {
+        "text": "Rajhans Classic",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJX3z_UFG25zsR4VFfhbPOrq0",
+      "types": [
+        "apartment_building",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Kabra Argentum, Co-op, Housing Society LTD, Plot No 318, Swami Vivekanand Rd, opp. PATKAR VARDE COLLEGE, Unnat Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1681021,
+        "longitude": 72.845030400000013
+      },
+      "displayName": {
+        "text": "Kabra Argentum",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJQR6BGcy35zsRYTCO51lVg6s",
+      "types": [
+        "housing_complex",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Hotel Manthan Lane, off Mahatma Gandhi Road, Motilal Nagar II, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1660353,
+        "longitude": 72.8373151
+      },
+      "displayName": {
+        "text": "Sethia Link View Tower",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    }
+  ]
+}

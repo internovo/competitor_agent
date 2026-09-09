@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJbQxuoVq25zsRbZnFEcKAjq4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Unnat Nagar No. 4, Motilal Nagar III, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16311,
+        "longitude": 72.83943
+      },
+      "displayName": {
+        "text": "C.C.I.Colony (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJI9_4C1C25zsR-5uJLq9uE28",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Tilak Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16307,
+        "longitude": 72.840090000000018
+      },
+      "displayName": {
+        "text": "C.C.I.Colony (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJk4FmOVC25zsRYQZm4pTLetY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Unnat Nagar III, Motilal Nagar III, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.163288899999998,
+        "longitude": 72.841773199999992
+      },
+      "displayName": {
+        "text": "Lokmanya Tilak Nagar (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

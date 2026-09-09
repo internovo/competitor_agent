@@ -73,10 +73,13 @@ class RunRecord:
         searches, places, _ = classify(meta.get("urls", []))
         self.cost = Cost(
             llm_calls=getattr(llm, "calls_attempted", 0),
-            input_tokens=getattr(getattr(llm, "usage", None), "input_tokens", 0),
-            output_tokens=getattr(getattr(llm, "usage", None), "output_tokens", 0),
+            input_tokens=getattr(llm, "input_tokens", 0),
+            output_tokens=getattr(llm, "output_tokens", 0),
             searches=searches, places_calls=places,
             pages_fetched=meta.get("pages_fetched", 0),
+            model=getattr(llm, "model", "") or "",
+            candidates=meta.get("candidates_researched", 0),
+            by_stage=llm.usage_by_stage() if llm is not None else {},
         )
         self.extraction = meta.get("extraction", self.extraction)
 

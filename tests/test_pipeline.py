@@ -48,8 +48,11 @@ def test_conflict_shows_full_span(scan):
     own, rec, meta, _ = scan
     pl = service.list_payload(rec, own, meta)
     r = next(c for c in pl["competitors"] if c["name"] == "Rustomjee Crest")["rate_psf"]
-    assert (r["min"], r["max"], r["sources"]) == (29100, 38700, 3)
-    assert "3 sources disagree" in r["conflict"]
+    # squareyards outranks housing and tavily, so its number is published and the other
+    # two travel beside it rather than taking the field away.
+    assert (r["min"], r["max"], r["sources"]) == (29100, 29100, 3)
+    assert "squareyards says 29,100" in r["conflict"]
+    assert "housing says 33,500" in r["conflict"] and "tavily says 38,700" in r["conflict"]
 
 
 def test_every_value_has_provenance_and_nothing_is_estimated(scan):
@@ -97,7 +100,8 @@ def test_compare_own_plus_two(scan):
     assert payload["columns"][0]["is_own"] is True
     assert payload["common_bhk"] == 3
     assert {p["name"] for p in payload["rate_axis"]["points"]} == {"Marina64", "Runwal Vertex"}
-    assert payload["rate_axis"]["off_axis"][0]["name"] == "Rustomjee Crest" and "disagree" in payload["rate_axis"]["off_axis"][0]["reason"]
+    assert payload["rate_axis"]["off_axis"][0]["name"] == "Rustomjee Crest"
+    assert "squareyards says 29,100" in payload["rate_axis"]["off_axis"][0]["reason"]
     ra = payload["rate_axis"]
     own_mid = (own.rate_psf.min_psf + own.rate_psf.max_psf) / 2
     vertex_mid = 35400
@@ -162,10 +166,10 @@ def test_coverage_outranks_distance_inside_a_label(own):
     a kilometre out, so the top of the table was the emptiest part of it."""
     from app.models.schema import Project
 
-    near_empty = Project(id="a", name="Near Empty", status="unknown", distance_km=0.06, completeness=0,
-                        label="UNVERIFIED", pages_seen=["https://x/a"])
-    far_full = Project(id="b", name="Far Full", status="unknown", distance_km=1.4, completeness=4,
-                       label="UNVERIFIED", pages_seen=["https://x/b"])
+    near_empty = Project(id="a", name="Near Empty", status="under_construction", distance_km=0.06,
+                        completeness=0, label="THIN", pages_seen=["https://x/a"])
+    far_full = Project(id="b", name="Far Full", status="under_construction", distance_km=1.4,
+                       completeness=4, label="PARTIAL", pages_seen=["https://x/b"])
     assert [p.id for p in service.rank([near_empty, far_full])] == ["b", "a"]
 
 

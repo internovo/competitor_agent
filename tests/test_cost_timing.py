@@ -152,3 +152,91 @@ def test_a_provider_that_reports_nothing_leaves_the_count_at_zero():
     u = UsageCounter()
     asyncio.run(u.on_llm_end(Response()))
     assert (u.input_tokens, u.output_tokens) == (0, 0)
+
+
+# --- the price table and the per-node split ---------------------------------
+
+def test_each_model_is_priced_from_the_table_not_one_global_rate():
+    from app.config import LLM_PRICES, llm_price
+
+    assert llm_price("claude-opus-5") == LLM_PRICES["claude-opus-5"]
+    assert llm_price("openai/gpt-oss-120b") == (0.15, 0.75)
+    opus = Cost(model="claude-opus-5", input_tokens=1_000_000, output_tokens=100_000)
+    groq = Cost(model="openai/gpt-oss-120b", input_tokens=1_000_000, output_tokens=100_000)
+    assert opus.estimated_inr > groq.estimated_inr * 50
+
+
+def test_an_unpriced_model_falls_back_rather_than_reading_as_free():
+    """A zero would be the one answer that is certainly wrong."""
+    from app.config import llm_price
+
+    assert llm_price("some-model-nobody-listed") == (settings.llm_input_usd_per_mtok,
+                                                     settings.llm_output_usd_per_mtok)
+    assert Cost(model="some-model-nobody-listed", input_tokens=1_000_000).estimated_inr > 0
+
+
+def test_tokens_land_against_the_stage_that_spent_them():
+    """extract, resolve and narrate are billed separately because they scale on
+    different things: pages, candidate pairs, and the eligible set."""
+    import asyncio
+
+    from app.llm.client import LLM
+
+    class Chat:
+        async def ainvoke(self, messages, config=None):
+            for cb in (config or {}).get("callbacks", []):
+                cb.input_tokens += 1000
+                cb.output_tokens += 100
+            return "ok"
+
+    llm = LLM.__new__(LLM)
+    llm.calls_attempted = llm.calls_failed = 0
+    llm.model = "claude-opus-5"
+    llm.usage = {s: UsageCounter() for s in ("extract", "resolve", "narrate")}
+    asyncio.run(llm._call(Chat(), [], "extract"))
+    asyncio.run(llm._call(Chat(), [], "extract"))
+    asyncio.run(llm._call(Chat(), [], "narrate"))
+
+    split = llm.usage_by_stage()
+    assert set(split) == {"extract", "narrate"}          # resolve made no call, so it is not billed
+    assert split["extract"]["calls"] == 2 and split["extract"]["input_tokens"] == 2000
+    assert split["narrate"]["input_tokens"] == 1000
+    assert llm.input_tokens == 3000 and llm.output_tokens == 300
+
+
+def test_the_scan_reports_tokens_per_candidate_not_just_a_total():
+    """The number that projects to a monthly bill: cost scales with candidates
+    researched, not with the suburb."""
+    c = Cost(input_tokens=1_000_000, output_tokens=100_000, candidates=50)
+    assert c.tokens_per_candidate == 22_000
+    assert Cost(input_tokens=10, candidates=0).tokens_per_candidate == 0
+    assert c.body()["tokens_per_candidate"] == 22_000
+
+
+def test_a_span_is_emitted_per_node_and_per_candidate():
+    """The collector is not stood up here -- only the wiring is checked, so pointing
+    one at OTEL_EXPORTER_OTLP_ENDPOINT later needs no code change."""
+    import asyncio
+
+    from opentelemetry import trace
+    from opentelemetry.sdk.trace import TracerProvider
+    from opentelemetry.sdk.trace.export import SimpleSpanProcessor
+    from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter
+
+    from app import service
+    from app.models.schema import OwnProject
+
+    exporter = InMemorySpanExporter()
+    provider = TracerProvider()
+    provider.add_span_processor(SimpleSpanProcessor(exporter))
+    trace.set_tracer_provider(provider)
+
+    own = OwnProject(**REQUEST["own"])
+    asyncio.run(service.run_scan(own, 1.5, "fixture", llm=None))
+
+    names = [s.name for s in exporter.get_finished_spans()]
+    assert {"node.geocode", "node.discover", "node.extract", "node.score", "node.persist"} <= set(names)
+    per_candidate = [s for s in exporter.get_finished_spans()
+                     if s.name == "node.extract" and s.attributes.get("candidate.id")]
+    assert per_candidate, "extract must carry the candidate it ran on"
+    assert "llm.input_tokens" in per_candidate[0].attributes

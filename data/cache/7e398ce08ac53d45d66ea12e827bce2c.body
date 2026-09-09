@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJYcS6t1K25zsRQ2biLcgG-9w",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.16431,
+        "longitude": 72.85094
+      },
+      "displayName": {
+        "text": "Goregaon Station (E) Bus Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJddPwrlK25zsRaFMYjY2vP7k",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.163529999999998,
+        "longitude": 72.85105
+      },
+      "displayName": {
+        "text": "Goregaon Station (E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJK5QZsVK25zsRKqeDpxyfchE",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.16455,
+        "longitude": 72.85091
+      },
+      "displayName": {
+        "text": "Goregaon Station (E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    }
+  ]
+}

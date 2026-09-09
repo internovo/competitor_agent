@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJOxONsV625zsRSLzCkSQwlwM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.16774,
+        "longitude": 72.8335
+      },
+      "displayName": {
+        "text": "Kaveri Mahima Society (Goregaon-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJVYirBFy25zsR8Hph8dJkMxk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.166619999999998,
+        "longitude": 72.8331
+      },
+      "displayName": {
+        "text": "Dwarkadhish Society",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJywQcE1y25zsRASrD-3tbdkM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.165699999999998,
+        "longitude": 72.83288
+      },
+      "displayName": {
+        "text": "Bangur Hall",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

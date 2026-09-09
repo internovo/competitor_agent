@@ -70,7 +70,11 @@ def test_a_page_the_donor_tests_cover_is_read_without_an_llm(vertex_page, own):
     assert project.value("rate_psf").basis == "base"
     assert project.value("possession").isoformat() == "2028-12-01"
     assert project.value("structure").towers == 3
-    assert project.status == "new_launch"
+    # "Under construction, 3 towers of 42 floors." is a sentence, not a labelled field, and
+    # only a declared statement votes now. The cost of that rule is exactly this: a
+    # first-party page describing itself in prose no longer classifies, and the project
+    # goes to LIFECYCLE_UNKNOWN rather than being guessed at.
+    assert project.status == "unknown"
     assert out["extraction"]["deterministic_fields"] >= 7
 
 

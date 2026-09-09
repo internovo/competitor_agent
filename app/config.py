@@ -52,6 +52,10 @@ class Settings(BaseSettings):
     discovery_margin_km: float = 0.5  # RERA rows geocoded within radius + margin are kept as candidates
     maharera_max_candidates: int = 25  # nearest N pinned register rows; the circle downtown holds far more
 
+    # A possession date this far out contradicts a "ready" badge, and the date is the
+    # thing with a source behind it.
+    lifecycle_possession_margin_months: int = 6
+
     # Conflict thresholds
     rate_conflict_ratio: float = 1.15  # max/min across sources above this -> "sources disagree"
     possession_conflict_months: int = 3
@@ -61,6 +65,12 @@ class Settings(BaseSettings):
     # would be us deciding what the market is.
     rate_plausible_min_ratio: float = 0.25
     rate_plausible_max_ratio: float = 4.00
+    # Same rule for carpet, anchored on the subject's own midpoint. A genuinely larger
+    # competitor is a real comparison, so the band is as wide as the rate band: 4x the
+    # subject's midpoint still passes a tower of penthouses next to a compact project.
+    # What it catches is a range read off a page that was listing something else.
+    carpet_plausible_min_ratio: float = 0.25
+    carpet_plausible_max_ratio: float = 4.00
     # One figure quoted for this many projects in a run is a locality average someone
     # attributed to each of them, not any one building's rate.
     shared_rate_min_projects: int = 3
@@ -87,6 +97,8 @@ class Settings(BaseSettings):
     # invoice, so these are list prices at the time of writing and are meant to be
     # edited when they move.
     inr_per_usd: float = 88.0
+    # Fallback for a model not in LLM_PRICES below. Pricing an unknown model at zero
+    # would read as free, which is the one answer that is certainly wrong.
     llm_input_usd_per_mtok: float = 15.0     # claude-opus-5
     llm_output_usd_per_mtok: float = 75.0
     search_usd_per_call: float = 0.008       # Tavily search / extract
@@ -133,3 +145,16 @@ SOURCE_PRIORITY: list[str] = [
 COMPLETENESS_FIELDS: tuple[str, ...] = (
     "configurations", "carpet_sqft", "rate_psf", "possession", "structure", "rera_phases",
 )
+
+# USD per million tokens, (input, output). List prices at the time of writing, and
+# meant to be edited when they move -- the agent never sees an invoice.
+LLM_PRICES: dict[str, tuple[float, float]] = {
+    "claude-opus-5": (15.0, 75.0),
+    "claude-sonnet-5": (3.0, 15.0),
+    "claude-haiku-4-5-20251001": (1.0, 5.0),
+    "openai/gpt-oss-120b": (0.15, 0.75),
+}
+
+
+def llm_price(model: str) -> tuple[float, float]:
+    return LLM_PRICES.get(model or "", (settings.llm_input_usd_per_mtok, settings.llm_output_usd_per_mtok))

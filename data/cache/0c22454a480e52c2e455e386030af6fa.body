@@ -1,0 +1,389 @@
+{
+  "places": [
+    {
+      "id": "ChIJrWRK_hS35zsR8XDYlgo30xc",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Laxmi Shrushti, Sane Guruji Nagar Marg, near Police Quarters, Teen Dongari, Prem Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.166174599999998,
+        "longitude": 72.839937499999991
+      },
+      "displayName": {
+        "text": "Laxmi Shrushti - THE LAXMI GROUP",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJU-0wtj_McagRXkiSk0mKS7I",
+      "types": [
+        "housing_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Inorbit mall, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400072, India",
+      "location": {
+        "latitude": 19.1620331,
+        "longitude": 72.8466962
+      },
+      "displayName": {
+        "text": "Evoke New Launch Residential project by Arkade | Goregaon West | Mumbai",
+        "languageCode": "en"
+      },
+      "primaryType": "housing_complex"
+    },
+    {
+      "id": "ChIJT1OysUS25zsRLrA7mBZPyFw",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Pahadi, Goregaon, New Link Rd, Colony No 2, Bhagat Singh II, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1609195,
+        "longitude": 72.8346423
+      },
+      "displayName": {
+        "text": "Goodbuild (India) Pvt. Ltd. Developers & Builders",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJ88pjyk225zsRpG4TInMbZeA",
+      "types": [
+        "apartment_complex",
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "8, Siddharth Nagar Rd, Motilal Nagar I, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1542759,
+        "longitude": 72.842491
+      },
+      "displayName": {
+        "text": "EKTA Tripolis, Goregaon West",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_complex"
+    },
+    {
+      "id": "ChIJMSr4KFG35zsR5RdJ0t9QEaM",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Satra One, Shastri Nagar Road No. 1, opposite guru Nanak park, Pragati Nagar, Mitha Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1605189,
+        "longitude": 72.838979999999992
+      },
+      "displayName": {
+        "text": "Satra One",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJgXNEVVa25zsRWrGb1LtT-v4",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5R9V+X76, Govindji Shroff Marg, Mahesh Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.169913299999997,
+        "longitude": 72.843147300000012
+      },
+      "displayName": {
+        "text": "Anmol Prestige",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJYcOudVa25zsRaumHDmMyhCQ",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Stella, Plot No, 9, Vir Sanghvi Marg, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1723353,
+        "longitude": 72.8470284
+      },
+      "displayName": {
+        "text": "Chandak Stella",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJXf9lghi35zsRSrlGm_ZrlPE",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Bldg no. 5, New Shastri Nagar, Mitha Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.159997699999998,
+        "longitude": 72.8382621
+      },
+      "displayName": {
+        "text": "RAGHAV UTOPIA",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJt8tKEuq35zsR0ud8OyVZd5Y",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Empire Towers, Old Sanchit CHS, Sonawala Rd, Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.164014299999998,
+        "longitude": 72.8513466
+      },
+      "displayName": {
+        "text": "Empire Towers",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJib2U4ti35zsRfJnZC4TRMn8",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Ram Mandir Rd, opp. Railway Station, Somani Gram, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.150772699999997,
+        "longitude": 72.8495513
+      },
+      "displayName": {
+        "text": "Nemi Bhavan, Goregaon West",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJufA6UOO35zsRyXralD4f71I",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Redevelopment of Pancham CHSL, Bldg. 1 to 5 CTS No. 356-A, Siddharth Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.156954,
+        "longitude": 72.8441419
+      },
+      "displayName": {
+        "text": "Navrang Crystal",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJD75WGwC35zsRl9qTvbQektM",
+      "types": [
+        "condominium_complex",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Axiom Rudra, Siddharth Nagar 2, Near, Swami Vivekanand Rd, Siddharth Nagar 4, Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1607669,
+        "longitude": 72.8450807
+      },
+      "displayName": {
+        "text": "Axiom Rudra | 3BHK Project in Goregaon(w)",
+        "languageCode": "en"
+      },
+      "primaryType": "service"
+    },
+    {
+      "id": "ChIJFZWcGgu35zsRxDiYKLbEkU0",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Govardhan Giri, Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1694258,
+        "longitude": 72.8340542
+      },
+      "displayName": {
+        "text": "Govardhan Giri Soc, Bangur Nagar,link road, goregaon West,Mumbai 400104",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJoSYQ_E225zsRMCVfylGHcJU",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Aarey Rd, opp. Shri Ambabai Mandir, off Swami Vivekanand Road, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.166347,
+        "longitude": 72.8465046
+      },
+      "displayName": {
+        "text": "SAHAKAR REVANTA",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJs9o2WJe35zsRPqXqLz6HnYE",
+      "types": [
+        "condominium_complex",
+        "corporate_office",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Link Rd, Hari Ratan CHS, Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.1637099,
+        "longitude": 72.834043999999992
+      },
+      "displayName": {
+        "text": "Kolte Patil Goregaon",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJGSi-v0e35zsRs6NPNp4qtLg",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "5, Swami Vivekanand Rd, Maharashtra Housing and Area Development Authority Colony, Best Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.152980799999998,
+        "longitude": 72.8446173
+      },
+      "displayName": {
+        "text": "Samadhan",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ8QPvKRW35zsRN-ctJdcu1hA",
+      "types": [
+        "condominium_complex",
+        "apartment_building",
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Yashwant Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.167415,
+        "longitude": 72.8414255
+      },
+      "displayName": {
+        "text": "34 Park Estate",
+        "languageCode": "en"
+      },
+      "primaryType": "condominium_complex"
+    },
+    {
+      "id": "ChIJo23newC35zsRg28S_yrr398",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "3E, MHADA, New Link Rd, Prem Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.168858399999998,
+        "longitude": 72.8366277
+      },
+      "displayName": {
+        "text": "Swarajya Complex Co-op Housing Society Limited",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJeeseYK-35zsRjoTFTry_R4Q",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Plot No 28, opposite Anmol Fortune, Unnat Nagar 2, Yashwant Nagar, Goregaon West, Mumbai, Maharashtra 400104, India",
+      "location": {
+        "latitude": 19.166352,
+        "longitude": 72.843619500000017
+      },
+      "displayName": {
+        "text": "Modirealty Vatvriksh",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJz48N3Km35zsRPSmdShl5Mrw",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sahakar Wadi, Mukadam Compound, New Link Road, ITT Bhatti, G.M, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.173457,
+        "longitude": 72.857096099999993
+      },
+      "displayName": {
+        "text": "Applaud 38",
+        "languageCode": "en"
+      },
+      "primaryType": "general_contractor"
+    }
+  ]
+}

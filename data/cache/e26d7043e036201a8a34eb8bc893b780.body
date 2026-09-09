@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJfcqCo7K35zsRVejE3JlkE8A",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.163242000000004,
+        "longitude": 72.85267
+      },
+      "displayName": {
+        "text": "Swati Studio",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJddPwrlK25zsRaFMYjY2vP7k",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.163529999999998,
+        "longitude": 72.85105
+      },
+      "displayName": {
+        "text": "Goregaon Station (E)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJt6jiU0225zsRSAf9u-jYt-I",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Jay Prakash Nagar, Goregaon East, Mumbai, Maharashtra 400063, India",
+      "location": {
+        "latitude": 19.16262,
+        "longitude": 72.85118
+      },
+      "displayName": {
+        "text": "Udyog Bhavan",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}
