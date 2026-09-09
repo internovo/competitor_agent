@@ -29,10 +29,10 @@ def card_insight(p: Project, own: OwnProject, eligible: list[Project]) -> str:
     others = [q.value("possession") for q in eligible if q.id != p.id and q.value("possession")]
     if poss and others and poss < min(others):
         bits.append("earliest handover in the set")
-    elif poss and _months(own.possession, poss) > 12:
+    elif poss and own.possession and _months(own.possession, poss) > 12:
         bits.append(f"hands over {_months(own.possession, poss)} months after {own.name}")
     r = p.value("rate_psf")
-    if r and r.basis == "base" and own.rate_psf.basis == "base":
+    if r and r.basis == "base" and own.rate_psf and own.rate_psf.basis == "base":
         mid = (r.min_psf + r.max_psf) / 2
         own_mid = (own.rate_psf.min_psf + own.rate_psf.max_psf) / 2
         pct = round((mid - own_mid) / own_mid * 100)

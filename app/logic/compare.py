@@ -42,10 +42,15 @@ def _column_from_own(own: OwnProject) -> dict[str, Any]:
         "id": own.id, "name": own.name, "builder": own.builder, "is_own": True, "distance_km": 0.0,
         "label": "OWN", "match_score": None, "tags": ["OWN PROJECT"],
         "configurations": own.configurations,
-        "carpet": {"min": own.carpet_sqft.min_sqft, "max": own.carpet_sqft.max_sqft, "source": "propog"},
-        "rate": {"min": own.rate_psf.min_psf, "max": own.rate_psf.max_psf, "basis": own.rate_psf.basis, "source": "propog", "conflict": None},
-        "possession": {"date": own.possession.isoformat(), "source": "propog"},
-        "structure": own.structure.model_dump(),
+        # A field propOG has not sent reads exactly like a competitor field no source
+        # published: the key is None, and the same downstream code says why it is
+        # missing. Nulls inside the dict would have travelled as a rate of None-None.
+        "carpet": {"min": own.carpet_sqft.min_sqft, "max": own.carpet_sqft.max_sqft,
+                   "source": "propog"} if own.carpet_sqft else None,
+        "rate": {"min": own.rate_psf.min_psf, "max": own.rate_psf.max_psf, "basis": own.rate_psf.basis,
+                 "source": "propog", "conflict": None} if own.rate_psf else None,
+        "possession": {"date": own.possession.isoformat(), "source": "propog"} if own.possession else None,
+        "structure": own.structure.model_dump() if own.structure else None,
         "rera_phases": [p.model_dump() for p in own.rera_phases],
         "rera_verified_count": sum(1 for p in own.rera_phases if p.verified),
         "amenities": [a.model_dump() for a in own.amenities],

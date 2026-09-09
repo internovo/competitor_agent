@@ -169,3 +169,93 @@ def test_restarting_the_process_loses_every_run():
     first = RunStore()
     run_id = first.create(own, 1.5, "fixture").run_id
     assert RunStore().get(run_id) is None
+
+
+# --- POST /scan: the route propOG's agent-client.cjs actually calls ---------
+# The body below is what that client sends, verbatim from its JSON.stringify, with
+# the subject copied off a real seeded Marina64 row -- including the two fields
+# propOG's own routes.cjs currently gets wrong: `locality` never reaches the wire,
+# and `configurations` is always empty because inventory carries `type`, not `config`.
+
+AGENT_BODY = {
+    "run_id": "6f1a2b3c-4d5e-4f60-8123-000000000001",
+    "project_id": "b0000000-0000-4000-8000-000000000064",
+    "builder_id": "a0000000-0000-4000-8000-000000000001",
+    "radius_km": 3,
+    "subject": {"id": "b0000000-0000-4000-8000-000000000064", "name": "Mahindra Marina64",
+                "city": "Mumbai", "latitude": 19.1874, "longitude": 72.8401, "configurations": []},
+}
+
+
+def _post_scan(client, body=None, headers=None):
+    return client.post("/scan", json=body or AGENT_BODY, headers=headers or {})
+
+
+def test_scan_accepts_the_body_the_propog_client_sends_and_returns_immediately():
+    """Their client aborts after 10s and reads only res.ok, so a 2xx that arrives
+    fast is the whole response contract."""
+    with TestClient(app) as c:
+        r = _post_scan(c)
+    assert r.status_code == 202
+
+
+def test_the_run_is_keyed_by_the_id_propog_already_holds():
+    """agent-client.cjs reads no identifier back, so a run addressed by an id the
+    agent invented is a run Node can never poll."""
+    with TestClient(app) as c:
+        _post_scan(c)
+        body = c.get(f"/scans/{AGENT_BODY['run_id']}").json()
+    assert body["run_id"] == AGENT_BODY["run_id"]
+
+
+def test_a_thin_subject_is_scanned_rather_than_rejected(monkeypatch):
+    """No carpet, no rate, no possession, no structure, no configurations. The scan
+    still runs; those dimensions are simply not scored against anything."""
+    from app.main import _own_from_subject
+
+    own = _own_from_subject(AGENT_BODY["subject"], AGENT_BODY["project_id"])
+    assert (own.carpet_sqft, own.rate_psf, own.possession, own.structure) == (None, None, None, None)
+    assert own.configurations == []
+    assert (own.lat, own.lng) == (19.1874, 72.8401)
+    assert own.address == "Mumbai"          # `city` is the only place name on the wire
+    assert own.locality is None             # propOG's routes.cjs never sends it
+
+
+def test_bhk_strings_are_read_as_bedroom_counts():
+    """propOG's inventory carries "2 BHK"; this form counts bedrooms."""
+    from app.main import _bhk
+
+    assert _bhk(["2 BHK", "3 BHK", "2 BHK"]) == [2, 3]
+    assert _bhk([2, 3]) == [2, 3]
+    assert _bhk(["studio", None]) == []     # nothing numeric, so nothing is guessed
+
+
+def test_a_subject_with_no_name_is_refused_with_a_readable_reason():
+    """Their client reads 200 characters of the body on a non-2xx, so the reason has
+    to fit and has to say what to fix."""
+    body = {**AGENT_BODY, "subject": {**AGENT_BODY["subject"], "name": None}}
+    with TestClient(app) as c:
+        r = _post_scan(c, body)
+    assert r.status_code == 422
+    assert "name" in r.text
+
+
+def test_a_subject_that_cannot_be_placed_is_refused():
+    body = {**AGENT_BODY, "subject": {"id": "x", "name": "Draft Project"}}
+    with TestClient(app) as c:
+        r = _post_scan(c, body)
+    assert r.status_code == 422
+    assert "geocode" in r.text
+
+
+def test_the_shared_secret_is_checked_only_when_one_is_configured(monkeypatch):
+    """agent-client.cjs sends x-agent-token only when its own env var is non-empty,
+    so this mirrors it exactly."""
+    from app.config import settings
+
+    with TestClient(app) as c:
+        assert _post_scan(c).status_code == 202                       # unset: not checked
+        monkeypatch.setattr(settings, "agent_token", "s3cret")
+        assert _post_scan(c).status_code == 401                       # set, header absent
+        assert _post_scan(c, headers={"x-agent-token": "wrong"}).status_code == 401
+        assert _post_scan(c, headers={"x-agent-token": "s3cret"}).status_code == 202

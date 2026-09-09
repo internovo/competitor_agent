@@ -61,7 +61,13 @@ def test_the_per_stage_breakdown_names_every_stage_the_graph_ran(done):
 def test_the_breakdown_shows_which_stage_the_run_was_spent_in(monkeypatch):
     """A fixture run finishes in ~50 ms with no network and no model, so nothing
     dominates it. The stage that does the work is the one that shows: here that is
-    forced onto extract, which is where a live run spends its minutes."""
+    forced onto extract, which is where a live run spends its minutes.
+
+    Asserted as a margin rather than a maximum. "extract is the largest stage" is a
+    comparison between one injected delay and the machine's own noise, and it lost
+    that comparison intermittently -- a timing test that fails on a busy machine is
+    the same defect this suite spends its time hunting.
+    """
     import asyncio
 
     from app.sources.fixture import FixtureSource
@@ -69,7 +75,7 @@ def test_the_breakdown_shows_which_stage_the_run_was_spent_in(monkeypatch):
     original = FixtureSource.pages_for
 
     async def slow(self, project, ctx):
-        await asyncio.sleep(0.05)
+        await asyncio.sleep(0.1)
         return await original(self, project, ctx)
 
     monkeypatch.setattr(FixtureSource, "pages_for", slow)
@@ -81,7 +87,8 @@ def test_the_breakdown_shows_which_stage_the_run_was_spent_in(monkeypatch):
                 break
             time.sleep(0.02)
     per_stage = body["timing"]["per_stage_s"]
-    assert max(per_stage, key=per_stage.get) == "extract", per_stage
+    others = sum(v for k, v in per_stage.items() if k != "extract")
+    assert per_stage["extract"] > others, per_stage
 
 
 def test_a_fixture_run_costs_nothing_and_says_so(done):

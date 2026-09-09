@@ -447,19 +447,27 @@ def _priority(source: str) -> int:
 
 
 class OwnProject(BaseModel):
-    """The builder's own project as uploaded to propOG. Builder-declared, so no provenance games."""
+    """The builder's own project as uploaded to propOG. Builder-declared, so no provenance games.
+
+    Only `id` and `name` are required. propOG sends a subject built from a row that may
+    still be a draft, and the four scoring fields below are not on the wire at all yet.
+    A missing one is carried as missing: the dimension it feeds is excluded from the
+    match score and its denominator, and the compare column prints null. Defaulting a
+    carpet range or a possession date to make the form look complete would be inventing
+    a builder-declared value, which is the one thing this project never does.
+    """
     id: str
     name: str
-    builder: str
-    address: str
+    builder: str | None = None
+    address: str | None = None
     locality: str | None = None
     lat: float | None = None
     lng: float | None = None
-    configurations: list[int]
-    carpet_sqft: CarpetRange
-    rate_psf: RateValue
-    possession: date
-    structure: Structure
+    configurations: list[int] = Field(default_factory=list)
+    carpet_sqft: CarpetRange | None = None
+    rate_psf: RateValue | None = None
+    possession: date | None = None
+    structure: Structure | None = None
     rera_phases: list[ReraPhase] = Field(default_factory=list)
     amenities: list[Amenity] = Field(default_factory=list)
     launched: date | None = None

@@ -7,10 +7,11 @@ only long enough to be polled.
 from __future__ import annotations
 
 import asyncio
+import re
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from fastapi import FastAPI, HTTPException, Request
+from pydantic import BaseModel, Field, ValidationError
 
 from app import service
 from app.config import settings
@@ -64,6 +65,89 @@ def _finished(run_id: str) -> RunRecord:
     if run.status != "done":
         raise HTTPException(409, f"run '{run_id}' is {run.status}; poll GET /scans/{run_id} until it is done")
     return run
+
+
+# ------------------------------------------------- the propOG entry point
+class AgentScanRequest(BaseModel):
+    """Exactly the body agent-client.cjs sends, and nothing else.
+
+    Every id is a UUID string there; they are opaque here, so they are typed as
+    strings rather than validated as UUIDs -- rejecting a caller's id format is not
+    this service's job. `radius_km` is validated 0 to 25 on their side; the ceiling
+    here is the same one /scans has always used, because a 25 km circle in Mumbai is
+    tens of thousands of register rows and would not finish.
+    """
+    run_id: str
+    project_id: str
+    builder_id: str
+    radius_km: float = Field(gt=0, le=10)
+    subject: dict[str, Any]
+
+
+def _bhk(values: list) -> list[int]:
+    """propOG's inventory carries "2 BHK" strings; this form counts bedrooms.
+
+    Anything without a number in it is dropped rather than guessed at.
+    """
+    out = set()
+    for v in values or []:
+        if isinstance(v, int):
+            out.add(v)
+            continue
+        digits = re.search(r"\d+", str(v))
+        if digits:
+            out.add(int(digits.group()))
+    return sorted(out)
+
+
+def _own_from_subject(subject: dict, project_id: str) -> OwnProject:
+    """propOG's subject row -> the form the pipeline compares against.
+
+    Only what is on the wire is used. The fields propOG does not send stay unset and
+    the pipeline reports them as unavailable rather than scoring against a default.
+    """
+    return OwnProject(
+        id=str(subject.get("id") or project_id),
+        name=subject.get("name") or "",
+        builder=subject.get("builder"),
+        # `city` is the only place propOG puts a place name today, so it stands in for
+        # the address discovery searches on. `locality` is what that search wants.
+        address=subject.get("address") or subject.get("city"),
+        locality=subject.get("locality"),
+        lat=subject.get("latitude"), lng=subject.get("longitude"),
+        configurations=_bhk(subject.get("configurations") or []),
+        carpet_sqft=subject.get("carpet_sqft"), rate_psf=subject.get("rate_psf"),
+        possession=subject.get("possession"), structure=subject.get("structure"),
+    )
+
+
+@app.post("/scan", status_code=202)
+async def scan(body: AgentScanRequest, request: Request) -> dict:
+    """The route propOG calls. Returns immediately; the scan runs in the background.
+
+    Their client aborts after 10 seconds and reads only `res.ok`, so this must not
+    wait for the graph. The run is keyed by THEIR run_id, so `GET /scans/{run_id}`
+    is addressable with the id they already hold.
+    """
+    if settings.agent_token and request.headers.get("x-agent-token") != settings.agent_token:
+        raise HTTPException(401, "x-agent-token missing or wrong")
+    if not (body.subject.get("name") or "").strip():
+        raise HTTPException(422, "subject.name is required; a project with no name cannot be searched for")
+    try:
+        own = _own_from_subject(body.subject, body.project_id)
+    except ValidationError as e:
+        raise HTTPException(422, f"subject could not be read: {e.errors()[:3]}") from e
+    if own.lat is None and not own.address:
+        raise HTTPException(422, "subject needs latitude and longitude, or a city to geocode from")
+
+    run = runs.create(own, body.radius_km, settings.fetch_mode, run_id=body.run_id)
+    request_id = request.headers.get("x-request-id")
+    run.note([f"scan: accepted for project {body.project_id}, builder {body.builder_id}"
+              + (f", request {request_id}" if request_id else "")])
+    task = asyncio.create_task(service.execute(run))
+    _tasks.add(task)
+    task.add_done_callback(_tasks.discard)
+    return {"run_id": run.run_id, "status": run.status}
 
 
 @app.get("/scans/{run_id}")

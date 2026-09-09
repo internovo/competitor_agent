@@ -200,10 +200,12 @@ class LLM:
 
 
 def own_facts(own: OwnProject) -> dict:
+    c, r, st = own.carpet_sqft, own.rate_psf, own.structure
     return {"name": own.name, "builder": own.builder, "configurations": own.configurations,
-            "carpet_sqft": [own.carpet_sqft.min_sqft, own.carpet_sqft.max_sqft],
-            "rate_psf": [own.rate_psf.min_psf, own.rate_psf.max_psf, own.rate_psf.basis],
-            "possession": own.possession.isoformat(), "building_type": own.structure.building_type, "towers": own.structure.towers}
+            "carpet_sqft": [c.min_sqft, c.max_sqft] if c else None,
+            "rate_psf": [r.min_psf, r.max_psf, r.basis] if r else None,
+            "possession": own.possession.isoformat() if own.possession else None,
+            "building_type": st.building_type if st else None, "towers": st.towers if st else None}
 
 
 def card_facts(p: Project) -> dict:

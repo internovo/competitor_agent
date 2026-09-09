@@ -418,3 +418,40 @@ def test_a_candidate_carrying_a_registers_worth_of_rera_numbers_is_a_listing(ful
     assert eligibility.not_a_project(full_project) is None      # one phase, a real project
     full_project.rera_phases = fr("rera_phases", fv([ReraPhase(number=f"P5180000000{i}") for i in range(6)]))
     assert "register listing" in eligibility.not_a_project(full_project)
+
+
+# --- a subject propOG has not filled in yet ---------------------------------
+
+def test_a_subject_with_no_scoring_fields_scores_nothing_rather_than_ten_out_of_ten(full_project, own):
+    """propOG's subject arrives without carpet, rate, possession, structure or
+    configurations. Distance is proximity, not similarity: with everything else
+    excluded the arithmetic still produced 9/10, which reads as a strong match on a
+    competitor nothing about the subject had been compared to."""
+    thin = own.model_copy(update={"carpet_sqft": None, "rate_psf": None, "possession": None,
+                                  "structure": None, "configurations": []})
+    completeness.apply(full_project)
+    match_score.apply(full_project, thin, 1.5)
+    assert full_project.label == "COMPARABLE"
+    assert full_project.match_score is None and full_project.score_max is None
+    assert "distance" in full_project.score_excluded
+
+
+def test_one_real_dimension_is_enough_to_score(full_project, own):
+    """Only carpet survives, and the denominator says so rather than hiding it."""
+    thin = own.model_copy(update={"rate_psf": None, "possession": None, "structure": None,
+                                  "configurations": []})
+    completeness.apply(full_project)
+    match_score.apply(full_project, thin, 1.5)
+    assert full_project.match_score is not None
+    assert full_project.score_max == settings.w_carpet + settings.w_distance
+    assert set(full_project.score_excluded) == {"config", "rate", "possession", "structure"}
+
+
+def test_the_compare_column_for_an_unfilled_subject_reads_like_an_unpublished_one(own):
+    """Null, not a dict of nulls -- so the same downstream code says why it is missing."""
+    from app.logic import compare as compare_logic
+
+    thin = own.model_copy(update={"carpet_sqft": None, "rate_psf": None, "possession": None,
+                                  "structure": None})
+    col = compare_logic._column_from_own(thin)
+    assert (col["carpet"], col["rate"], col["possession"], col["structure"]) == (None, None, None, None)

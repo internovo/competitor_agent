@@ -23,6 +23,26 @@ uv run python scripts/replay.py --list
 uv run python scripts/replay.py borivali-west-2026-09-08
 ```
 
+## The propOG entry point
+
+`POST /scan` is the route the propOG backend calls, and its body is that client's, not ours:
+
+```
+POST /scan            {run_id, project_id, builder_id, radius_km, subject}    -> 202
+  headers             content-type: application/json
+                      x-agent-token: <AGENT_TOKEN>   checked only when AGENT_TOKEN is set here
+                      x-request-id: <id>             recorded in the run log when sent
+```
+
+The run is keyed by the caller's `run_id`, so `GET /scans/{run_id}` is addressable with the id
+Node already holds. The POST returns in milliseconds because that client aborts after 10 seconds
+and reads only the status code.
+
+`subject` is used for what it carries and nothing more. It needs `name` and either coordinates or
+a city. Without `carpet_sqft`, `rate_psf`, `possession`, `structure` or `configurations` the scan
+still runs; those dimensions are excluded from the match score and its denominator, and the compare
+column prints null rather than a default.
+
 Then:
 
 ```bash

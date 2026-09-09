@@ -12,7 +12,7 @@
     "status": "done",
     "stage": null,
     "stages_done": [],
-    "elapsed_s": 2.2,
+    "elapsed_s": 0.0,
     "own": {
       "id": "marina64",
       "name": "Marina64",
@@ -20,7 +20,7 @@
     },
     "radius_km": 1.5,
     "mode": "replay",
-    "created_at": "2026-09-09T10:50:23.084399+00:00",
+    "created_at": "2026-09-09T11:29:03.102265+00:00",
     "cost": {
       "llm_calls": 0,
       "input_tokens": 0,
@@ -36,16 +36,16 @@
       "note": "estimated from call counts and the configured price table, not a bill"
     },
     "extraction": {
-      "deterministic_fields": 707,
-      "llm_fields": 0
+      "llm_fields": 0,
+      "deterministic_fields": 707
     },
     "timing": {
-      "started_at": "2026-09-09T10:50:23.084399+00:00",
-      "finished_at": "2026-09-09T10:50:25.333911+00:00",
-      "duration_s": 2.2,
+      "started_at": "2026-09-09T11:29:03.102265+00:00",
+      "finished_at": "2026-09-09T11:29:03.129398+00:00",
+      "duration_s": 0.0,
       "per_stage_s": {}
     },
-    "scan_id": "89255094be38",
+    "scan_id": "fe94c93fa045",
     "counts": {
       "candidates_seen": 43,
       "eligible": 4,
@@ -883,7 +883,7 @@
       "extract[P51800051004]: status ready declared, votes {'ready': 1} (rtments | Apartments | Apartments | Apartments |\n| Status | Ready to Move | Ready to Move | Ready to Move | Ready to Move |\n| Configu)",
       "extract[P51800051004]: a source called this ready, but possession is stated as 2030-09-01, 48 months out; read as under construction",
       "extract[P51800051004]: 6 pages, 34 fields deterministic, 0 from Claude, sources ['tavily', 'squareyards', 'builder_site', 'propog']",
-      "persist: scan 89255094be38 complete with 39 projects"
+      "persist: scan fe94c93fa045 complete with 39 projects"
     ]
   },
   "GET /scans/{run_id}/competitors/{competitor_id}": {
@@ -1045,7 +1045,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T10:49:54.975074+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
             "method": "deterministic"
           },
           {
@@ -1054,7 +1054,7 @@
             ],
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T10:49:54.975096+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
             "method": "deterministic"
           },
           {
@@ -1063,7 +1063,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T10:49:54.975107+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
             "method": "deterministic"
           },
           {
@@ -1084,7 +1084,7 @@
             },
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T10:49:54.975096+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
             "method": "deterministic"
           }
         ],
@@ -1097,7 +1097,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T10:49:54.975102+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
             "method": "deterministic"
           },
           {
@@ -1108,7 +1108,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T10:49:54.975107+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
             "method": "deterministic"
           },
           {
@@ -1128,14 +1128,14 @@
             "value": "2026-01-01",
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T10:49:54.975074+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
             "method": "deterministic"
           },
           {
             "value": "2026-12-01",
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T10:49:54.975107+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
             "method": "deterministic"
           },
           {
@@ -1159,7 +1159,7 @@
             },
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T10:49:54.975096+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
             "method": "deterministic"
           },
           {
@@ -1174,7 +1174,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T10:49:54.975102+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
             "method": "deterministic"
           },
           {
@@ -1189,7 +1189,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T10:49:54.975107+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
             "method": "deterministic"
           }
         ],
@@ -1200,7 +1200,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T10:49:54.975074+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
             "method": "deterministic"
           },
           {
@@ -1209,7 +1209,7 @@
             ],
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T10:49:54.975102+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
             "method": "deterministic"
           },
           {
@@ -1225,7 +1225,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T10:49:54.975107+00:00",
+            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
             "method": "deterministic"
           },
           {
@@ -1401,7 +1401,7 @@
             ],
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T10:49:57.808461+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
             "method": "deterministic"
           },
           {
@@ -1411,7 +1411,7 @@
             ],
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T10:49:57.808461+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
             "method": "deterministic"
           },
           {
@@ -1421,7 +1421,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T10:49:57.808470+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
             "method": "deterministic"
           },
           {
@@ -1431,7 +1431,7 @@
             ],
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T10:49:57.808534+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
             "method": "deterministic"
           },
           {
@@ -1441,7 +1441,7 @@
             ],
             "source": "tavily",
             "url": "https://keystonerealestateadvisory.com/buy/new/shreeji-eternity-project-malad-west-mumbai/1049",
-            "fetched_at": "2026-09-09T10:49:57.808544+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782865+00:00",
             "method": "deterministic"
           }
         ],
@@ -1453,7 +1453,7 @@
             },
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T10:49:57.808534+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
             "method": "deterministic"
           }
         ],
@@ -1466,7 +1466,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T10:49:57.808470+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
             "method": "deterministic"
           },
           {
@@ -1477,7 +1477,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T10:49:57.808478+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
             "method": "deterministic"
           }
         ],
@@ -1486,28 +1486,28 @@
             "value": "2027-06-01",
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T10:49:57.808461+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
             "method": "deterministic"
           },
           {
             "value": "2027-06-01",
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T10:49:57.808470+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
             "method": "deterministic"
           },
           {
             "value": "2027-01-01",
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T10:49:57.808478+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
             "method": "deterministic"
           },
           {
             "value": "2028-06-01",
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T10:49:57.808534+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
             "method": "deterministic"
           }
         ],
@@ -1524,7 +1524,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T10:49:57.808470+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
             "method": "deterministic"
           },
           {
@@ -1539,7 +1539,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T10:49:57.808478+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
             "method": "deterministic"
           },
           {
@@ -1554,7 +1554,7 @@
             },
             "source": "tavily",
             "url": "https://keystonerealestateadvisory.com/buy/new/shreeji-eternity-project-malad-west-mumbai/1049",
-            "fetched_at": "2026-09-09T10:49:57.808544+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782865+00:00",
             "method": "deterministic"
           }
         ],
@@ -1576,7 +1576,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T10:49:57.808470+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
             "method": "deterministic"
           },
           {
@@ -1586,7 +1586,7 @@
             ],
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T10:49:57.808478+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
             "method": "deterministic"
           },
           {
@@ -1595,7 +1595,7 @@
             ],
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T10:49:57.808534+00:00",
+            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
             "method": "deterministic"
           }
         ]
@@ -1806,7 +1806,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T10:50:11.659131+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
             "method": "deterministic"
           },
           {
@@ -1815,7 +1815,7 @@
             ],
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T10:50:11.659145+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
             "method": "deterministic"
           },
           {
@@ -1835,7 +1835,7 @@
             ],
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ],
@@ -1847,7 +1847,7 @@
             },
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T10:50:11.659145+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
             "method": "deterministic"
           },
           {
@@ -1857,7 +1857,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ],
@@ -1870,7 +1870,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T10:50:11.659153+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
             "method": "deterministic"
           },
           {
@@ -1881,7 +1881,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ],
@@ -1890,28 +1890,28 @@
             "value": "2026-12-01",
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T10:50:11.659131+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
             "method": "deterministic"
           },
           {
             "value": "2008-07-01",
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T10:50:11.659145+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-06-01",
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T10:50:11.659153+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
             "method": "deterministic"
           },
           {
             "value": "2030-09-01",
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ],
@@ -1928,7 +1928,7 @@
             },
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T10:50:11.659131+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
             "method": "deterministic"
           },
           {
@@ -1943,7 +1943,7 @@
             },
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T10:50:11.659145+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
             "method": "deterministic"
           },
           {
@@ -1958,7 +1958,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T10:50:11.659153+00:00",
+            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
             "method": "deterministic"
           },
           {
@@ -1988,7 +1988,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ],
@@ -2009,7 +2009,7 @@
             ],
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T10:50:12.415793+00:00",
+            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
             "method": "deterministic"
           }
         ]
@@ -2179,7 +2179,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/raghav-utopia-malad-west-pid-21430",
-            "fetched_at": "2026-09-09T10:50:04.055671+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743550+00:00",
             "method": "deterministic"
           },
           {
@@ -2189,7 +2189,7 @@
             ],
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T10:50:04.055708+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
             "method": "deterministic"
           },
           {
@@ -2200,7 +2200,7 @@
             ],
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055782+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
             "method": "deterministic"
           },
           {
@@ -2210,7 +2210,7 @@
             ],
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T10:50:04.055793+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
             "method": "deterministic"
           },
           {
@@ -2232,7 +2232,7 @@
             },
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055782+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
             "method": "deterministic"
           },
           {
@@ -2242,7 +2242,7 @@
             },
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T10:50:04.055793+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
             "method": "deterministic"
           }
         ],
@@ -2252,28 +2252,28 @@
             "value": "2027-01-01",
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/raghav-utopia-malad-west-pid-21430",
-            "fetched_at": "2026-09-09T10:50:04.055671+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743550+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-12-01",
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T10:50:04.055708+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-12-01",
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055782+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
             "method": "deterministic"
           },
           {
             "value": "2028-12-01",
             "source": "tavily",
             "url": "https://housiey.com/projects/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055797+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743581+00:00",
             "method": "deterministic"
           }
         ],
@@ -2290,7 +2290,7 @@
             },
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T10:50:04.055708+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
             "method": "deterministic"
           },
           {
@@ -2305,7 +2305,7 @@
             },
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T10:50:04.055793+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
             "method": "deterministic"
           },
           {
@@ -2320,7 +2320,7 @@
             },
             "source": "tavily",
             "url": "https://housiey.com/projects/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055797+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743581+00:00",
             "method": "deterministic"
           }
         ],
@@ -2331,7 +2331,7 @@
             ],
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T10:50:04.055782+00:00",
+            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
             "method": "deterministic"
           }
         ]

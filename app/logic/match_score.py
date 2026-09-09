@@ -37,20 +37,23 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
     b: dict[str, float] = {}
     excluded: list[str] = []
 
+    # Either side missing takes the dimension out of the score AND its denominator.
+    # propOG's subject can arrive without the scoring fields, and a zero there would
+    # read as "no overlap" rather than "nothing to compare against".
     cfg = project.value("configurations")
-    if cfg:
+    if cfg and own.configurations:
         b["config"] = _jaccard(set(own.configurations), set(cfg))
     else:
         excluded.append("config")
 
     c = project.value("carpet_sqft")
-    if c:
+    if c and own.carpet_sqft:
         b["carpet"] = _range_overlap(own.carpet_sqft.min_sqft, own.carpet_sqft.max_sqft, c.min_sqft, c.max_sqft)
     else:
         excluded.append("carpet")
 
     r = project.value("rate_psf")
-    if r and r.basis == "base" and own.rate_psf.basis == "base":
+    if r and r.basis == "base" and own.rate_psf and own.rate_psf.basis == "base":
         own_mid = (own.rate_psf.min_psf + own.rate_psf.max_psf) / 2
         their_mid = (r.min_psf + r.max_psf) / 2
         b["rate"] = 1 - min(1.0, abs(their_mid - own_mid) / own_mid)
@@ -58,7 +61,7 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
         excluded.append("rate")
 
     p = project.value("possession")
-    if p:
+    if p and own.possession:
         b["possession"] = 1 - min(1.0, _months_between(p, own.possession) / settings.possession_horizon_months)
     else:
         excluded.append("possession")
@@ -67,11 +70,18 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
     b["distance"] = max(0.0, 1 - d / radius_km)
 
     s = project.value("structure")
-    own_t, their_t = own.structure.building_type, (s.building_type if s else None)
+    own_t, their_t = (own.structure.building_type if own.structure else None), (s.building_type if s else None)
     if own_t and their_t:
         b["structure"] = 1.0 if own_t == their_t else (0.5 if own_t in ("multi_tower", "complex") and their_t in ("multi_tower", "complex") else 0.0)
     else:
         excluded.append("structure")
+
+    # Distance is proximity, not similarity. With every other dimension excluded the
+    # arithmetic still produces a number -- a subject with no carpet, rate, possession
+    # or configurations scored 9/10 on a competitor nothing about it had been compared
+    # to -- and 9/10 reads as a strong match. Nothing compared means no score.
+    if set(b) <= {"distance"}:
+        return None, {}, None, sorted(set(excluded) | {"distance"})
 
     weights = {
         "config": settings.w_config, "carpet": settings.w_carpet, "rate": settings.w_rate,

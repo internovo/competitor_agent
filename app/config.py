@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     tavily_api_key: str | None = None
 
     fetch_mode: FetchMode = "fixture"
+    # The shared secret propOG sends as x-agent-token. Unset means the header is not
+    # checked, which mirrors the caller: agent-client.cjs only sends it when its own
+    # COMPETITOR_AGENT_TOKEN is non-empty. Set it on both sides in any deployment.
+    agent_token: str | None = None
     # housing is OFF: housing.com answers every search with an Imperva interstitial
     # (2.7 KB, one <a>, zero project links), so the adapter spent 38 fetches a scan and
     # returned nothing. The adapter is kept; re-enable it behind a real browser.

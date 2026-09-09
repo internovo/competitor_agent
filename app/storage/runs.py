@@ -132,9 +132,15 @@ class RunStore:
         self.ttl = timedelta(hours=ttl_hours)
         self._runs: dict[str, RunRecord] = {}
 
-    def create(self, own: OwnProject, radius_km: float, mode: str) -> RunRecord:
+    def create(self, own: OwnProject, radius_km: float, mode: str, run_id: str | None = None) -> RunRecord:
+        """`run_id` lets the caller keep its own identifier.
+
+        propOG inserts its row first and sends that UUID; its client reads no id back,
+        so a run it cannot address by the id it already holds is a run it can never
+        poll. Keying on theirs is what makes GET /scans/{run_id} usable from Node.
+        """
         self._prune()
-        run = RunRecord(run_id=uuid.uuid4().hex[:12], own=own, radius_km=radius_km, mode=mode)
+        run = RunRecord(run_id=run_id or uuid.uuid4().hex[:12], own=own, radius_km=radius_km, mode=mode)
         self._runs[run.run_id] = run
         while len(self._runs) > self.max_runs:
             self._runs.pop(next(iter(self._runs)))
