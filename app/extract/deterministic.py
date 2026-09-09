@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import re
 from datetime import date
+from functools import lru_cache
 
 from app.models.schema import (
     AbsenceReason, Amenity, AmenityCategory, Confidence, FieldReport, FieldValue, Provenance, Source, absent_report,
@@ -842,16 +843,68 @@ def focus_on_project(text: str, name: str, window: int = FOCUS_WINDOW) -> str:
     if not spans:
         return text
 
-    windows: list[list[int]] = []
-    for start, end in spans:
-        lo, hi = max(0, start - window), min(len(text), end + window)
-        if windows and lo <= windows[-1][1]:
-            windows[-1][1] = max(windows[-1][1], hi)
-        else:
-            windows.append([lo, hi])
-
+    windows = _merge_windows(spans, len(text), window)
     focused = " ".join(text[lo:hi] for lo, hi in windows)
     return focused if len(focused) >= FOCUS_MIN_CHARS else text
+
+
+def _merge_windows(spans: list[tuple[int, int]], length: int, window: int) -> list[list[int]]:
+    """Overlapping context windows around each match, merged into runs."""
+    out: list[list[int]] = []
+    for start, end in spans:
+        lo, hi = max(0, start - window), min(length, end + window)
+        if out and lo <= out[-1][1]:
+            out[-1][1] = max(out[-1][1], hi)
+        else:
+            out.append([lo, hi])
+    return out
+
+
+# The words a page uses to label each field. Not extraction patterns -- these only
+# decide which parts of the page the model is shown, and the deterministic regexes
+# above are what actually read the values.
+FIELD_TERMS: dict[str, tuple[str, ...]] = {
+    "configurations": ("bhk", "bedroom", "configuration", "unit type", "apartment type", "typology"),
+    "carpet_sqft": ("carpet", "sq ft", "sqft", "sq. ft", "sq.ft", "square feet", "saleable"),
+    "rate_psf": ("price", "rate", "per sq", "psf", "onwards", "starting", "cr", "lakh", "crore"),
+    "possession": ("possession", "completion", "handover", "ready by", "delivery"),
+    "structure": ("tower", "wing", "floor", "storey", "acre", "units", "building type", "podium"),
+    "rera_phases": ("rera", "registration", "maharera"),
+    "amenities": ("amenit", "facilit", "clubhouse", "swimming", "gym", "play area", "landscap"),
+    "timeline": ("launch", "commence", "started"),
+    "builder": ("developer", "builder", "promoter"),
+    "status": ("under construction", "ready to move", "new launch", "possession", "status", "occupancy"),
+}
+# Generous on purpose. The point is dropping 20,000 characters of nav, footer and
+# cross-sell, not squeezing the last token out of the part that might state a value.
+FIELD_WINDOW = 600
+
+
+@lru_cache(maxsize=64)
+def _field_pattern(fields: frozenset[str]) -> re.Pattern:
+    terms = sorted({t for f in fields for t in FIELD_TERMS.get(f, ())}, key=len, reverse=True)
+    return re.compile("|".join(re.escape(t) for t in terms), re.IGNORECASE)
+
+
+def spans_for_fields(text: str, fields: list[str], window: int = FIELD_WINDOW) -> str:
+    """The parts of a page that could state the fields still wanted, and nothing else.
+
+    Whole pages were going to the model so it could read six labelled values off
+    them: 5,785 input tokens a call, most of it navigation and cross-sell.
+
+    Two rules keep this from changing an answer. If no term matches, the whole page
+    is returned rather than nothing -- the trimmer never decides a page is empty.
+    And the kept runs are joined with an explicit gap marker, so a number and a
+    label that were far apart cannot read as adjacent.
+    """
+    wanted = frozenset(f for f in fields if f in FIELD_TERMS)
+    if not text or not wanted:
+        return text
+    spans = [m.span() for m in _field_pattern(wanted).finditer(text)]
+    if not spans:
+        return text
+    kept = _merge_windows(spans, len(text), window)
+    return " […] ".join(text[lo:hi] for lo, hi in kept)
 
 
 # ---------------------------------------------------------------------------

@@ -159,11 +159,11 @@ def test_a_provider_that_reports_nothing_leaves_the_count_at_zero():
 def test_each_model_is_priced_from_the_table_not_one_global_rate():
     from app.config import LLM_PRICES, llm_price
 
-    assert llm_price("claude-opus-5") == LLM_PRICES["claude-opus-5"]
+    assert llm_price("claude-opus-5") == LLM_PRICES["claude-opus-5"][:2]
     assert llm_price("openai/gpt-oss-120b") == (0.15, 0.75)
     opus = Cost(model="claude-opus-5", input_tokens=1_000_000, output_tokens=100_000)
-    groq = Cost(model="openai/gpt-oss-120b", input_tokens=1_000_000, output_tokens=100_000)
-    assert opus.estimated_inr > groq.estimated_inr * 50
+    haiku = Cost(model="claude-haiku-4-5", input_tokens=1_000_000, output_tokens=100_000)
+    assert opus.estimated_inr > haiku.estimated_inr * 4
 
 
 def test_an_unpriced_model_falls_back_rather_than_reading_as_free():
@@ -192,6 +192,8 @@ def test_tokens_land_against_the_stage_that_spent_them():
     llm = LLM.__new__(LLM)
     llm.calls_attempted = llm.calls_failed = 0
     llm.model = "claude-opus-5"
+    llm.extract_model = "claude-haiku-4-5"
+    llm.stage_model = {"extract": "claude-haiku-4-5", "resolve": "claude-opus-5", "narrate": "claude-opus-5"}
     llm.usage = {s: UsageCounter() for s in ("extract", "resolve", "narrate")}
     asyncio.run(llm._call(Chat(), [], "extract"))
     asyncio.run(llm._call(Chat(), [], "extract"))
@@ -202,6 +204,9 @@ def test_tokens_land_against_the_stage_that_spent_them():
     assert split["extract"]["calls"] == 2 and split["extract"]["input_tokens"] == 2000
     assert split["narrate"]["input_tokens"] == 1000
     assert llm.input_tokens == 3000 and llm.output_tokens == 300
+    # And each stage is priced at the model that ran it: two extraction calls on the
+    # cheap model cost less than one narrate call on the expensive one.
+    assert split["extract"]["estimated_inr"] < split["narrate"]["estimated_inr"]
 
 
 def test_the_scan_reports_tokens_per_candidate_not_just_a_total():
@@ -232,7 +237,14 @@ def test_a_span_is_emitted_per_node_and_per_candidate():
     trace.set_tracer_provider(provider)
 
     own = OwnProject(**REQUEST["own"])
-    asyncio.run(service.run_scan(own, 1.5, "fixture", llm=None))
+    try:
+        asyncio.run(service.run_scan(own, 1.5, "fixture", llm=None))
+    finally:
+        # OpenTelemetry's global provider cannot be replaced once set, so leaving this
+        # one live had every later test exporting spans it never asked for -- which was
+        # enough extra per-node work to flip the stage-timing test when the suite ran
+        # in order. Shutting the processor down stops the export.
+        provider.shutdown()
 
     names = [s.name for s in exporter.get_finished_spans()]
     assert {"node.geocode", "node.discover", "node.extract", "node.score", "node.persist"} <= set(names)
@@ -240,3 +252,34 @@ def test_a_span_is_emitted_per_node_and_per_candidate():
                      if s.name == "node.extract" and s.attributes.get("candidate.id")]
     assert per_candidate, "extract must carry the candidate it ran on"
     assert "llm.input_tokens" in per_candidate[0].attributes
+
+
+def test_extraction_and_matching_run_on_different_models_by_default():
+    """Field reading is not a judgement call; entity matching is. They were on one
+    model only because one client served all three jobs."""
+    from app.llm.client import LLM
+
+    llm = LLM.__new__(LLM)
+    llm.provider = "anthropic"
+    assert settings.extract_model == "claude-haiku-4-5"
+    assert settings.claude_model == "claude-opus-5"
+    from app.config import llm_price
+
+    assert llm_price(settings.extract_model)[0] < llm_price(settings.claude_model)[0]
+
+
+def test_the_stable_prefix_is_below_the_cache_minimum_on_the_extraction_model():
+    """Task 3's answer, pinned so a model change re-raises the question: the prefix
+    caches on Opus 5 (512) and does not on Haiku 4.5 (4096), and the tokens saved by
+    caching on Opus are worth far less than moving the calls to Haiku."""
+    import json as _json
+
+    from app.config import min_cacheable_tokens
+    from app.llm import prompts
+    from app.models.schema import ExtractedFacts
+
+    prefix = (len(prompts.EXTRACT_SYSTEM) + len(prompts.EXTRACT_USER)
+              + len(_json.dumps(ExtractedFacts.model_json_schema()))) // 4
+    assert 1000 < prefix < 2000
+    assert prefix > min_cacheable_tokens("claude-opus-5")
+    assert prefix < min_cacheable_tokens("claude-haiku-4-5")

@@ -101,7 +101,8 @@ def build_chat(provider: str | None = None, model: str | None = None):
 
 
 class LLM:
-    def __init__(self, model: str | None = None, provider: str | None = None):
+    def __init__(self, model: str | None = None, provider: str | None = None,
+                 extract_model: str | None = None):
         self.chat, self.provider = build_chat(provider, model)
         # Per run. narrate reads these before anything is presented as complete.
         self.calls_attempted = 0
@@ -112,10 +113,23 @@ class LLM:
         # would not be.
         self.usage = {s: UsageCounter() for s in LLM_STAGES}
         self.model = getattr(self.chat, "model_name", None) or getattr(self.chat, "model", "")
+        # Extraction gets its own, cheaper chat. Everything else keeps self.chat, so
+        # each stage is billed at the price of the model that actually ran it.
+        extract_chat = self.chat
+        self.extract_model = self.model
+        # Only when nothing was overridden, and only on Anthropic: extract_model names
+        # a Claude id, and handing it to ChatGroq would build a client for a model that
+        # provider does not serve.
+        default = settings.extract_model if (provider is None and model is None and self.provider == "anthropic") else ""
+        wanted = extract_model or default
+        if wanted and wanted != self.model:
+            extract_chat, _ = build_chat(self.provider, wanted)
+            self.extract_model = wanted
+        self.stage_model = {"extract": self.extract_model, "resolve": self.model, "narrate": self.model}
         # Anthropic's json_schema grammar refuses a schema with more than 24 optional /
         # union-typed properties, and ExtractedFacts has 26: every extraction 400s. Tool
         # calling has no such cap. The three small schemas below are fine either way.
-        self._extract = self.chat.with_structured_output(
+        self._extract = extract_chat.with_structured_output(
             ExtractedFacts, method="function_calling" if self.provider == "anthropic" else "json_schema")
         self._match = self.chat.with_structured_output(MatchVerdict, method="json_schema")
         self._cards = self.chat.with_structured_output(CardInsights, method="json_schema")
@@ -149,7 +163,7 @@ class LLM:
         return sum(c.output_tokens for c in self.usage.values())
 
     def usage_by_stage(self) -> dict[str, dict]:
-        return {s: c.body(self.model) for s, c in self.usage.items() if c.calls}
+        return {s: c.body(self.stage_model[s]) for s, c in self.usage.items() if c.calls}
 
     async def extract_facts(self, page: Page, project: Project, locality: str | None,
                             wanted: list[str] | None = None) -> ExtractedFacts:

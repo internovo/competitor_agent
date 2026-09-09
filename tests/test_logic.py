@@ -357,3 +357,64 @@ def test_cleaning_never_cuts_a_hyphenated_name_in_half():
     from app.logic.resolve import clean_project_name
 
     assert clean_project_name("Sun-Rise Heights") == "Sun-Rise Heights"
+
+
+# --- what the model is shown -----------------------------------------------
+
+def test_the_trimmer_keeps_the_region_around_a_wanted_field():
+    from app.extract.deterministic import spans_for_fields
+
+    page = ("Home About Contact " + "nav junk " * 400
+            + " Possession: December 2028 for this tower. "
+            + "footer cross-sell " * 400)
+    out = spans_for_fields(page, ["possession"])
+    assert "December 2028" in out
+    assert len(out) < len(page) / 3
+
+
+def test_a_page_with_nothing_relevant_is_sent_whole_rather_than_emptied():
+    """The trimmer never gets to decide a page says nothing -- that judgement
+    belongs to extraction, and an emptied page would read as an absence."""
+    from app.extract.deterministic import spans_for_fields
+
+    page = "Contact us for details about our upcoming developments."
+    assert spans_for_fields(page, ["rate_psf"]) == page
+    assert spans_for_fields(page, []) == page
+
+
+def test_distant_fragments_cannot_read_as_adjacent():
+    """Joining two far-apart regions could put a number next to a label it does not
+    belong to. The gap is marked so it cannot."""
+    from app.extract.deterministic import spans_for_fields
+
+    page = "Carpet area 640 sq ft. " + "x " * 5000 + " Possession December 2028."
+    out = spans_for_fields(page, ["carpet_sqft", "possession"])
+    assert "[…]" in out
+
+
+# --- rows that are not projects at all -------------------------------------
+
+def test_places_says_what_the_pin_is_and_a_shop_is_not_a_competitor():
+    from app.logic.resolve import not_residential
+
+    assert not_residential(["clothing_store", "store", "point_of_interest"]) == "clothing_store"
+    assert not_residential(["school"]) == "school"
+    assert not_residential(["apartment_complex", "premise"]) is None
+    assert not_residential([]) is None
+
+
+def test_a_tower_with_a_shop_downstairs_is_still_a_tower():
+    """Places tags a residential pin with its ground-floor retail too. Dropping on
+    the retail tag alone would cost a real competitor."""
+    from app.logic.resolve import not_residential
+
+    assert not_residential(["apartment_building", "clothing_store"]) is None
+
+
+def test_a_candidate_carrying_a_registers_worth_of_rera_numbers_is_a_listing(full_project):
+    from app.logic import eligibility
+    from app.models.schema import ReraPhase
+
+    assert eligibility.not_a_project(full_project) is None      # one phase, a real project
+    full_project.rera_phases = fr("rera_phases", fv([ReraPhase(number=f"P5180000000{i}") for i in range(6)]))
+    assert "register listing" in eligibility.not_a_project(full_project)

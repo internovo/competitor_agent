@@ -66,6 +66,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0}),
             "candidates_researched": len(final["projects"]),
             "model_pages": final.get("model_pages", 0), "prompt_chars": final.get("prompt_chars", 0),
+            "untrimmed_chars": final.get("untrimmed_chars", 0),
             "ambiguous_pairs": final.get("ambiguous_pairs", 0)}
     return rec, meta
 
@@ -123,7 +124,8 @@ def rank(projects: list[Project]) -> list[Project]:
     """Label, then coverage, then distance. Coverage before distance is the point: sorting
     an UNVERIFIED 0/6 register row above a filled launch because it is 200 m closer put
     the emptiest rows at the top of the table."""
-    eligible = [p for p in projects if p.eligible and p.pages_seen and p.status != "unknown"]
+    eligible = [p for p in projects if p.eligible and p.pages_seen and p.status != "unknown"
+                and not p.not_a_project]
     return sorted(eligible, key=lambda p: (LABEL_ORDER[p.label], -p.completeness, p.distance_km or 99))
 
 
@@ -203,6 +205,9 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
                       + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
                           "completeness": p.completeness,
                           "reason": absence_label(None, "LIFECYCLE_UNKNOWN")} for p in unclassified(rec.projects)]
+                      + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
+                          "completeness": p.completeness, "reason": p.not_a_project}
+                         for p in rec.projects if p.eligible and p.not_a_project]
                       + meta.get("societies", []),
         "register_filings": meta.get("register_filings", []),
         "dropped": [{"id": p.id, "name": p.name, "reason": p.drop_reason} for p in rec.projects if not p.eligible] + rec.dropped,

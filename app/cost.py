@@ -86,8 +86,14 @@ class Cost:
 
     @property
     def estimated_inr(self) -> float:
-        usd = (self.searches * settings.search_usd_per_call + self.places_calls * settings.places_usd_per_call)
-        return round(tokens_inr(self.model, self.input_tokens, self.output_tokens) + usd * settings.inr_per_usd, 2)
+        """Summed per stage, because the stages no longer run on one model: extraction
+        is on the cheap one and matching is not, and pricing the total at either
+        model's rate is wrong in one direction or the other."""
+        http = ((self.searches * settings.search_usd_per_call
+                 + self.places_calls * settings.places_usd_per_call) * settings.inr_per_usd)
+        if self.by_stage:
+            return round(sum(v["estimated_inr"] for v in self.by_stage.values()) + http, 2)
+        return round(tokens_inr(self.model, self.input_tokens, self.output_tokens) + http, 2)
 
     @property
     def tokens_per_candidate(self) -> int:

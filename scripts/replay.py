@@ -190,42 +190,54 @@ NARRATE_OUT_TOKENS = 60      # per eligible card
 
 
 def cost_projection(meta: dict, payload: dict) -> str:
-    from app.config import llm_price
+    from app.config import llm_price, min_cacheable_tokens
     from app.cost import tokens_inr
     from app.llm import prompts
+    from app.models.schema import ExtractedFacts
 
-    model = settings.claude_model
+    ex, other = settings.extract_model, settings.claude_model
     scaffold = (len(prompts.EXTRACT_SYSTEM) + len(prompts.EXTRACT_USER)) / CHARS_PER_TOKEN
+    tools = len(json.dumps(ExtractedFacts.model_json_schema())) / CHARS_PER_TOKEN
+    prefix = round(scaffold + tools)          # identical on every extraction call
     pages, eligible = meta["model_pages"], payload["counts"]["eligible"]
     pairs = meta["ambiguous_pairs"]
+
+    def block(chars: float) -> tuple[int, int, int]:
+        return pages, round(chars / CHARS_PER_TOKEN + prefix * pages), pages * EXTRACT_OUT_TOKENS
+
     stages = {
-        "extract": (pages, round(meta["prompt_chars"] / CHARS_PER_TOKEN + scaffold * pages), pages * EXTRACT_OUT_TOKENS),
-        "resolve": (pairs, pairs * RESOLVE_IN_TOKENS, pairs * RESOLVE_OUT_TOKENS),
-        "narrate": (1 if eligible else 0, 250 * eligible, NARRATE_OUT_TOKENS * eligible),
+        "extract": (ex, *block(meta["prompt_chars"])),
+        "resolve": (other, pairs, pairs * RESOLVE_IN_TOKENS, pairs * RESOLVE_OUT_TOKENS),
+        "narrate": (other, 1 if eligible else 0, 250 * eligible, NARRATE_OUT_TOKENS * eligible),
     }
     rows = ["### Cost, if this scan ran with a model attached", "",
-            f"Model `{model}` at {llm_price(model)[0]:g}/{llm_price(model)[1]:g} USD per Mtok, "
-            f"Rs {settings.inr_per_usd:g} to the dollar.", "",
-            "| Node | Model calls | Input tokens | Output tokens | Rs |", "|---|---:|---:|---:|---:|"]
-    tot_in = tot_out = 0.0
-    for node, (calls, tin, tout) in stages.items():
+            "| Node | Model | Calls | Input tokens | Output tokens | Rs |", "|---|---|---:|---:|---:|---:|"]
+    tot_in = tot_out = llm_inr = 0.0
+    for node, (m, calls, tin, tout) in stages.items():
         tot_in, tot_out = tot_in + tin, tot_out + tout
-        rows.append(f"| {node} | {calls} | {tin:,} | {tout:,} | {tokens_inr(model, tin, tout):,.2f} |")
+        inr = tokens_inr(m, tin, tout)
+        llm_inr += inr
+        rows.append(f"| {node} | `{m}` | {calls} | {tin:,} | {tout:,} | {inr:,.2f} |")
     searches, places, _ = classify(meta["urls"])
     http = round((searches * settings.search_usd_per_call + places * settings.places_usd_per_call) * settings.inr_per_usd, 2)
-    llm_inr = tokens_inr(model, round(tot_in), round(tot_out))
     researched = meta["candidates_researched"]
+    per_call = round(stages["extract"][2] / pages) if pages else 0
+    untrimmed = meta.get("untrimmed_chars", 0)
+    before = round(untrimmed / CHARS_PER_TOKEN / pages + prefix) if pages else 0
     rows += [
-        f"| search + places | {searches} searches, {places} places | - | - | {http:,.2f} |",
-        f"| **total** | | **{round(tot_in):,}** | **{round(tot_out):,}** | **{llm_inr + http:,.2f}** |", "",
+        f"| search + places | - | {searches} searches, {places} places | - | - | {http:,.2f} |",
+        f"| **total** | | | **{round(tot_in):,}** | **{round(tot_out):,}** | **{llm_inr + http:,.2f}** |", "",
         "```",
+        f"input tokens per extraction call  {per_call:,}   (whole page: {before:,})",
+        f"  of which the stable prefix      {prefix:,}   cacheable at >= {min_cacheable_tokens(ex):,} on {ex}"
+        f"  -> {'CACHES' if prefix >= min_cacheable_tokens(ex) else 'BELOW THE MINIMUM, no cache'}",
         f"tokens per researched candidate   {round((tot_in + tot_out) / max(1, researched)):,}  ({researched} candidates)",
         f"cost per scan                     Rs {llm_inr + http:,.2f}   (model Rs {llm_inr:,.2f} + search/places Rs {http:,.2f})",
         f"one builder, 40 projects monthly  Rs {(llm_inr + http) * 40:,.0f} / month",
         "```",
         "",
-        "Measured: the page characters extraction put in front of the model, the calls it",
-        f"would make, and the {pairs} resolve pairs the deterministic rules could not settle.",
+        "Measured: the characters extraction would put in front of the model after trimming,",
+        f"the calls it would make, and the {pairs} resolve pairs the deterministic rules could not settle.",
         f"Assumed: {CHARS_PER_TOKEN} characters to the token, {EXTRACT_OUT_TOKENS} output tokens per extraction.",
     ]
     return "\n".join(rows)

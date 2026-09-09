@@ -167,6 +167,14 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
                               "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
                               "reason": "a registered co-operative housing society, not a project on sale"})
             continue
+        # Places already told us what this pin is. Checking it here rather than after
+        # research also means a clothing shop never costs an extraction pass.
+        kind = resolve.not_residential([t for m in members for t in m.place_types])
+        if kind is not None:
+            societies.append({"id": pid, "name": rep.name, "label": "UNVERIFIED", "completeness": 0,
+                              "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
+                              "reason": f"Google Places classifies this pin as {kind.replace('_', ' ')}, not somewhere flats are sold"})
+            continue
         if rep.register_only or resolve.looks_like_company(rep.name):
             filings.append({"id": pid, "name": rep.name, "rera_no": rep.rera_no,
                             "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
@@ -365,6 +373,13 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
 
     # --- 2. only what is still missing goes to Claude -----------------------
     want = set(_still_missing(project))
+    # Only the parts of each page that could state what is still missing. Whole pages
+    # were going to the model so it could read six labelled values off them. Trimmed
+    # here rather than in the client because `want` is known here, and because the
+    # count is then the same number whether or not a model is attached.
+    asked = sorted(want)
+    trimmed = [pg.model_copy(update={"text": deterministic.spans_for_fields(pg.text[: settings.max_page_chars], asked)})
+               for pg in read_pages] if want else []
     n_llm = 0
     timed_out = deadline - time.monotonic() <= 0
     if want and llm is not None and read_pages and not timed_out:
@@ -373,7 +388,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         async def one(page):
             async with sem:
                 try:
-                    return page, await llm.extract_facts(page, project, ctx.own.locality, sorted(want))
+                    return page, await llm.extract_facts(page, project, ctx.own.locality, asked)
                 except FatalLLMError:
                     raise            # a bad key fails every page; that is a broken run, not a thin one
                 except Exception as e:  # noqa: BLE001
@@ -381,7 +396,7 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
                     return page, None
 
         try:
-            done = await asyncio.wait_for(asyncio.gather(*(one(pg) for pg in read_pages)), left())
+            done = await asyncio.wait_for(asyncio.gather(*(one(pg) for pg in trimmed)), left())
         except TimeoutError:
             done, timed_out = [], True
             log.append(f"extract[{project.id}]: out of budget after {settings.candidate_budget_s}s; keeping what it has")
@@ -436,16 +451,18 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
                f"{n_llm} from Claude, sources {project.sources_consulted}")
     # The pages the model was given, or would have been given had one been configured.
     # Counted either way, so an offline replay can still answer "what would this cost".
-    billable = read_pages if want else []
     return {"projects": [project], "log": log, "pages_fetched": len(pages),
-            "model_pages": len(billable),
-            "prompt_chars": sum(len(pg.text[: settings.max_page_chars]) for pg in billable),
+            "model_pages": len(trimmed),
+            "prompt_chars": sum(len(pg.text) for pg in trimmed),
+            "untrimmed_chars": sum(len(pg.text[: settings.max_page_chars]) for pg in read_pages) if want else 0,
             "extraction": {"deterministic_fields": n_det, "llm_fields": n_llm}}
 
 
 # ----------------------------------------------------------------- filter
 async def filter_node(state: GraphState, config: RunnableConfig) -> dict:
     projects = eligibility.apply(state["projects"], state["own"], state["radius_km"], date.today())
+    for p in projects:
+        p.not_a_project = eligibility.not_a_project(p)
     return {"projects": projects}
 
 

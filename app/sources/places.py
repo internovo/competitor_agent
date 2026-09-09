@@ -67,8 +67,10 @@ class PlacesSource(NullSource):
         if not pid or pid in seen:
             return
         seen.add(pid)
+        types = [t for t in ([p.get("primaryType")] + (p.get("types") or [])) if t]
         out.append(Candidate(name=p["displayName"]["text"], lat=p["location"]["latitude"], lng=p["location"]["longitude"],
-                             address=p.get("formattedAddress"), source="places", source_url=f"https://www.google.com/maps/place/?q=place_id:{pid}"))
+                             address=p.get("formattedAddress"), source="places", place_types=types,
+                             source_url=f"https://www.google.com/maps/place/?q=place_id:{pid}"))
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:
         return []  # Places has coordinates, not facts

@@ -32,6 +32,12 @@ class Settings(BaseSettings):
     # Which chat model does the extraction / matching / narration work.
     llm_provider: LLMProvider = "anthropic"
     claude_model: str = "claude-opus-5"
+    # Field reading is not a judgement call: the page either states the number or it
+    # does not, and the deterministic extractors have already taken everything they
+    # can prove. Entity matching -- "is Vertex by Runwal the same building as Runwal
+    # Vertex" -- is a judgement call, and stays on claude_model. Extraction was on
+    # Opus only because one client served all three jobs, never because anyone chose it.
+    extract_model: str = "claude-haiku-4-5"
     groq_model: str = "openai/gpt-oss-120b"
     # gpt-oss models reason before answering; "low" cuts extraction latency ~10x with no loss of fields.
     groq_reasoning_effort: str = "low"
@@ -146,15 +152,32 @@ COMPLETENESS_FIELDS: tuple[str, ...] = (
     "configurations", "carpet_sqft", "rate_psf", "possession", "structure", "rera_phases",
 )
 
-# USD per million tokens, (input, output). List prices at the time of writing, and
-# meant to be edited when they move -- the agent never sees an invoice.
-LLM_PRICES: dict[str, tuple[float, float]] = {
-    "claude-opus-5": (15.0, 75.0),
-    "claude-sonnet-5": (3.0, 15.0),
-    "claude-haiku-4-5-20251001": (1.0, 5.0),
-    "openai/gpt-oss-120b": (0.15, 0.75),
+# USD per million tokens, (input, output, minimum cacheable prefix in tokens).
+# List prices, and meant to be edited when they move -- the agent never sees an
+# invoice. The Opus and Sonnet rows were wrong until now: they were written from
+# memory at 15/75 and 3/15, which overstated every cost figure this repo has
+# reported by roughly 3x. Checked against Anthropic's published table.
+LLM_PRICES: dict[str, tuple[float, float, int]] = {
+    "claude-opus-5": (5.0, 25.0, 512),
+    "claude-sonnet-5": (2.0, 10.0, 1024),
+    "claude-haiku-4-5": (1.0, 5.0, 4096),
+    "claude-haiku-4-5-20251001": (1.0, 5.0, 4096),   # dated alias of the row above
+    "openai/gpt-oss-120b": (0.15, 0.75, 0),
 }
 
 
 def llm_price(model: str) -> tuple[float, float]:
-    return LLM_PRICES.get(model or "", (settings.llm_input_usd_per_mtok, settings.llm_output_usd_per_mtok))
+    row = LLM_PRICES.get(model or "")
+    return row[:2] if row else (settings.llm_input_usd_per_mtok, settings.llm_output_usd_per_mtok)
+
+
+def min_cacheable_tokens(model: str) -> int:
+    """Below this, a cache breakpoint is accepted and silently does nothing.
+
+    Not monotonic across generations: 512 on Opus 5, 4096 on Haiku 4.5. A prefix
+    that caches on the expensive model does not cache on the cheap one.
+    """
+    row = LLM_PRICES.get(model or "")
+    return row[2] if row else 1024
+
+

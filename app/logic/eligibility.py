@@ -40,6 +40,29 @@ def check(project: Project, own: OwnProject, radius_km: float, today: date | Non
     return None
 
 
+# A project registers one phase, or a handful. A page carrying this many registration
+# numbers is a register LISTING, and the candidate's name came off its title. Measured
+# before it was picked: across Borivali West, Kandivali West and Goregaon West the
+# counts are 0 (52 candidates), 1 (77), 2 (1), then nothing until 6 (3), 8 (1) and 10
+# (1). There is no project between 2 and 6, so the threshold is not a judgement call.
+MAX_RERA_PHASES = 3
+
+
+def not_a_project(project: Project) -> str | None:
+    """Why this candidate is not a competitor at all, as opposed to a thin one.
+
+    Kept separate from `check`: a drop reason says "a competitor we excluded", and
+    this says "never a competitor". They read differently to a rep, and this one has
+    to appear beside the table rather than in the dropped list, so it can be argued
+    with.
+    """
+    phases = project.value("rera_phases") or []
+    if len(phases) >= MAX_RERA_PHASES:
+        return (f"{len(phases)} RERA numbers on one candidate: the page behind this name is a "
+                f"register listing, not a project")
+    return None
+
+
 def apply(projects: list[Project], own: OwnProject, radius_km: float, today: date | None = None) -> list[Project]:
     out = []
     for p in projects:

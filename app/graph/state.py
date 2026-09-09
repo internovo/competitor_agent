@@ -36,6 +36,7 @@ class GraphState(TypedDict, total=False):
     # cost question, measured on the real pages rather than guessed from a page count.
     model_pages: Annotated[int, operator.add]
     prompt_chars: Annotated[int, operator.add]
+    untrimmed_chars: Annotated[int, operator.add]
     ambiguous_pairs: Annotated[int, operator.add]
 
 

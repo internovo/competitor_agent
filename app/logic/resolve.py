@@ -73,6 +73,11 @@ def page_url(c: Candidate) -> str | None:
 
 # Portal and SEO page titles, not names anyone uses.
 _NOISE = re.compile(r"\b(new\s+launch\s+project|new\s+launch|residential\s+project|under\s+construction)\b", re.I)
+# The portal tab the name was scraped off -- "Sanghvi Horizon FAQs" is the FAQ page.
+# Anchored to the end because that is where a tab name sits; unanchored, "prices"
+# turned "Price Waterhouse Towers" into "Waterhouse Towers".
+_TAB_SUFFIX = re.compile(
+    r"(?:\s*[,:-]?\s*\b(faqs?|reviews?|floor\s+plans?|brochure|price\s+list|prices?)\b)+\s*$", re.I)
 
 
 def clean_project_name(name: str, builder: str | None = None, locality: str | None = None) -> str:
@@ -82,7 +87,7 @@ def clean_project_name(name: str, builder: str | None = None, locality: str | No
     tidying a title can never merge two different projects or change what we search for.
     """
     out = _TITLE_TAIL.split(name or "", maxsplit=1)[0] or (name or "")
-    out = _NOISE.sub(" ", out)
+    out = _TAB_SUFFIX.sub("", _NOISE.sub(" ", out).strip())
     if builder:
         brand = builder.split()[0]
         out = re.sub(rf"\bby\s+{re.escape(builder)}\s*$", "", out.strip(), flags=re.I)
@@ -127,6 +132,36 @@ _SOCIETY = re.compile(r"\b(chsl?|co[\s\-]?op(?:erative)?\s+housing\s+society|sah
 def looks_like_society(name: str) -> bool:
     """A registered co-operative housing society, not a project anyone is selling."""
     return bool(_SOCIETY.search(name or ""))
+
+
+# What Google Places calls a pin that is not somewhere anyone buys a flat. The point
+# of using the type rather than the name is that it is data: Places already knows
+# "The Pant Project Store" is a clothing shop, and we were discarding the answer.
+NON_RESIDENTIAL_TYPES = {
+    "clothing_store", "store", "shopping_mall", "department_store", "furniture_store",
+    "hospital", "doctor", "dentist", "pharmacy", "school", "primary_school",
+    "secondary_school", "university", "restaurant", "cafe", "bar", "bank", "atm",
+    "gym", "hotel", "lodging", "car_dealer", "car_repair", "gas_station",
+    "supermarket", "convenience_store", "electronics_store", "jewelry_store",
+    "beauty_salon", "hair_care", "movie_theater", "place_of_worship", "park",
+}
+# Places tags a genuine residential pin with these; when one is present the pin is a
+# building people live in and a retail tag beside it is the ground-floor shop.
+RESIDENTIAL_TYPES = {"apartment_building", "apartment_complex", "housing_complex",
+                     "condominium_complex", "real_estate_agency", "premise"}
+
+
+def not_residential(place_types: list[str]) -> str | None:
+    """The Places type that disqualifies this pin, or None.
+
+    A residential tag wins: a tower with a showroom on the ground floor comes back
+    tagged both ways, and dropping it would cost a real competitor.
+    """
+    types = {t.lower() for t in place_types or ()}
+    if types & RESIDENTIAL_TYPES:
+        return None
+    hit = sorted(types & NON_RESIDENTIAL_TYPES)
+    return hit[0] if hit else None
 
 
 def placeholder_pins(candidates: list[Candidate], max_uses: int = 3) -> set[tuple]:

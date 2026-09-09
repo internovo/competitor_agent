@@ -301,6 +301,10 @@ class Candidate(BaseModel):
     on_propog: bool = False
     nearest_metro: str | None = None
     register_only: bool = False   # a MahaRERA row whose name is the promoter, not a project
+    # What Google Places calls this pin. Requested in the field mask and then dropped
+    # on the floor until now, which is why a clothing shop reached rank 4 of a
+    # competitor table: the data saying it was a clothing shop was already in hand.
+    place_types: list[str] = Field(default_factory=list)
 
 
 class Page(BaseModel):
@@ -394,6 +398,9 @@ class Project(BaseModel):
     score_excluded: list[str] = Field(default_factory=list)
     score_breakdown: dict[str, float] = Field(default_factory=dict)
     unresolved: list[str] = Field(default_factory=list)   # counted for coverage, no value to show
+    # Not a competitor at all -- a shop, a school, a register listing page. Reported
+    # beside the table with this reason, never ranked in it and never silently dropped.
+    not_a_project: str | None = None
     could_not_verify: list[str] = Field(default_factory=list)
     insight: str | None = None
     insight_source: Literal["llm", "template"] | None = None

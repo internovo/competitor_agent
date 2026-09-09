@@ -46,10 +46,18 @@ def test_no_key_is_needed_and_no_model_is_built(borivali):
 
 def test_the_borivali_table_is_the_one_the_anthropic_budget_paid_for(borivali):
     _, _, _, payload = borivali
-    assert payload["counts"]["eligible"] == 5
+    assert payload["counts"]["eligible"] == 4      # was 5; the clothing shop left
     assert payload["counts"]["comparable"] == 2
-    assert [c["name"] for c in payload["competitors"][:2]] == ["Sanghvi Horizon FAQs", "Avyukta Neelkamal"]
+    assert [c["name"] for c in payload["competitors"][:2]] == ["Sanghvi Horizon", "Avyukta Neelkamal"]
     assert payload["competitors"][0]["match_score"] is not None
+
+
+def test_the_clothing_shop_is_beside_the_table_with_its_reason_not_deleted(borivali):
+    _, _, _, payload = borivali
+    assert "Pant Project Store" not in [c["name"] for c in payload["competitors"]]
+    row = next(a for a in payload["also_found"] if "Pant Project Store" in a["name"])
+    assert "clothing store" in row["reason"]
+    assert "Pant" not in json.dumps(payload["dropped"])
 
 
 def test_every_empty_cell_in_the_table_names_its_reason(borivali):
