@@ -1,6 +1,7 @@
 """Orchestration used by both the API and the tests: run a scan, shape list / detail / compare payloads."""
 from __future__ import annotations
 
+import asyncio
 import time
 import uuid
 from datetime import date
@@ -71,7 +72,18 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     return rec, meta
 
 
+# Concurrency is bounded here rather than in the route, so both entry points -- ours
+# and propOG's /scan -- queue against the same slots.
+_slots = asyncio.Semaphore(settings.max_concurrent_scans)
+
+
 async def execute(run) -> "RunRecord":
+    """Run one scan, waiting for a free slot first. Failure ends the run failed, never done."""
+    async with _slots:
+        return await _execute(run)
+
+
+async def _execute(run) -> "RunRecord":
     """Run one scan into its RunRecord. Failure ends the run failed, never done."""
     run.begin("geocode")
     run.started_at = now_utc()

@@ -2,6 +2,13 @@
 
 live   -> hit the network, write data/cache/<key>.body + .meta.json
 replay -> read only from the cache; a miss is a loud error, never a silent empty page
+
+Live reuses a cached page only while it is younger than CACHE_MAX_AGE_HOURS and only
+if it was a success. An error was cached the same as a page until Sep 2026, so 31
+"API key not valid" replies from one broken afternoon were still being served as
+"no buildings nearby" days after the key was fixed. Replay is unaffected: it must
+serve whatever the run recorded, errors included, or the frozen corpus stops
+reproducing.
 """
 from __future__ import annotations
 
@@ -14,7 +21,7 @@ from typing import Any
 
 import httpx
 
-from app.config import CACHE_DIR
+from app.config import CACHE_DIR, settings
 
 
 class CacheMiss(RuntimeError):
@@ -61,6 +68,15 @@ class Fetcher:
         raw = json.dumps([method, url, clean_params, body, clean_headers], sort_keys=True, default=str)
         return hashlib.sha256(raw.encode()).hexdigest()[:32]
 
+    def _usable(self, cached: FetchResult) -> bool:
+        """Replay takes the recording as it stands; live wants a fresh success."""
+        if self.mode != "live":
+            return True
+        if not cached.ok:
+            return False
+        age_h = (datetime.now(timezone.utc) - cached.fetched_at).total_seconds() / 3600
+        return age_h < settings.cache_max_age_hours
+
     def _read(self, key: str) -> FetchResult | None:
         meta = self.cache_dir / f"{key}.meta.json"
         body = self.cache_dir / f"{key}.body"
@@ -82,7 +98,7 @@ class Fetcher:
         key = self._key(method, url, params, json_body, headers)
         self.calls.append(url)
         cached = self._read(key)
-        if cached is not None:
+        if cached is not None and self._usable(cached):
             return cached
         if self.mode != "live":
             raise CacheMiss(f"{method} {url} not in cache (mode={self.mode})")
@@ -93,7 +109,10 @@ class Fetcher:
         else:
             res = await self._httpx(url, method, params, json_body, headers)
             fetcher = "httpx"
-        self._write(key, res, fetcher)
+        # Only successes are kept. A failure that is cached is a failure that is
+        # permanent, and the next scan should get to try the network again.
+        if res.ok:
+            self._write(key, res, fetcher)
         return res
 
     async def get(self, url: str, **kw) -> FetchResult:

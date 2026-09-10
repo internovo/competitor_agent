@@ -56,6 +56,15 @@ class Settings(BaseSettings):
     # Node API, against Postgres, where tenancy is enforced in one place.
     max_runs_held: int = 50
     run_ttl_hours: float = 2.0
+    # A live scan reuses a cached page only while it is this fresh. Prices and
+    # possession dates move; a rep pressing re-scan and being handed last week's
+    # table is a bug wearing a saving's clothes. Replay ignores this entirely.
+    cache_max_age_hours: float = 24.0
+    # Every POST used to spawn a scan immediately. One scan fans out to
+    # extract_concurrency fetches per candidate across ~40 candidates, so two reps
+    # scanning at once was already hundreds of sockets and no ceiling above that.
+    # Scans over the limit wait in `queued`, which is a status the client polls anyway.
+    max_concurrent_scans: int = 2
 
     # Discovery
     rera_district: str = "Mumbai Suburban"

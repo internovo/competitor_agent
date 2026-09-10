@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import re
+from contextlib import asynccontextmanager
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request
@@ -19,7 +20,23 @@ from app.llm.client import get_llm
 from app.models.schema import OwnProject, Project
 from app.storage.runs import RunRecord, RunStore
 
-app = FastAPI(title="propOG Competitor Analysis Agent", version="0.2.0")
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    """Refuse to start a live deployment with the shared secret unset.
+
+    Unset means the header is not checked, which is right for the fixture demo and
+    wrong for anything on the network: /scan would accept a scan from anyone and
+    spend real money on it. Fail at boot, where a deploy notices, not on the first
+    request from a stranger.
+    """
+    if settings.fetch_mode == "live" and not settings.agent_token:
+        raise RuntimeError(
+            "FETCH_MODE=live requires AGENT_TOKEN to be set; without it /scan is unauthenticated. "
+            "Set the same value here and as COMPETITOR_AGENT_TOKEN in propOG.")
+    yield
+
+
+app = FastAPI(title="propOG Competitor Analysis Agent", version="0.2.0", lifespan=lifespan)
 runs = RunStore()
 # asyncio only holds a weak reference to a task, so a scan would be collected
 # mid-run without this.
