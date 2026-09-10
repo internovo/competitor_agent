@@ -53,6 +53,12 @@ curl        'localhost:8000/scans/<run_id>'                                    #
 curl        'localhost:8000/scans/<run_id>/competitors/P51800048221'           # screen 2: one competitor in detail
 curl -X POST 'localhost:8000/scans/<run_id>/compare' -H 'content-type: application/json' \
      -d '{"competitor_ids":["P51800048221","rustomjee-crest"]}'                # screens 3-4: side by side
+
+# The same comparison with no run in memory. A run lives here two hours and is lost on
+# restart; propOG keeps every finished scan forever, so last month's scan compares too.
+# `columns` is compare_columns from the stored scan: own first, then one or two competitors.
+curl -X POST 'localhost:8000/compare' -H 'content-type: application/json' \
+     -d '{"columns":[<own>,<competitor>],"radius_km":1.5}'                     # screens 3-4, statelessly
 curl -X POST 'localhost:8000/scans/<run_id>/competitors/sheth-nova/fields' -H 'content-type: application/json' \
      -d '{"field":"rera_phases","value":["P51800077777"]}'                     # a rep records a fact from a site visit
 
@@ -88,6 +94,14 @@ geocode -> discover -> resolve -> [extract per project, in parallel] -> filter -
 | filter | code | inside radius, new launch / under construction only, possession after today, some BHK overlap |
 | score | code | completeness x/6 -> COMPARABLE / PARTIAL / THIN; conflicts; match score for 6/6 only |
 | narrate | Claude, template fallback | One sentence per card and per comparison section, from computed numbers only |
+
+A finished scan also carries `compare_columns` -- `{own, competitors:{<id>: column}}` -- the comparable fact set
+per project, for the projects a rep can actually analyse. The cards cannot stand in for these: a card carries no
+amenities at any depth, no RERA phase list, and two of structure's seven fields, so a comparison built from cards
+would quietly answer a different question. Both compare routes run the same code under `columns`, and a test
+asserts the two return the same body. Every compare response carries `insight_source` (`llm` or `template`) and a
+`cost` block, on the happy path too: an absent field would read as the pessimistic answer and label a real model
+insight a template.
 
 The six fields that make a project COMPARABLE: configurations, carpet area, rate per sq ft (with basis), possession,
 structure, RERA phase numbers. A field is a `FieldReport`: a **list** of observations, one per source, **or** a reason
