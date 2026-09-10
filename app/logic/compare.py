@@ -94,7 +94,23 @@ def _column_from_project(p: Project) -> dict[str, Any]:
 
 
 def build(own: OwnProject, competitors: list[Project], radius_km: float) -> dict[str, Any]:
-    cols = [_column_from_own(own)] + [_column_from_project(p) for p in competitors]
+    """The live path: build the columns from the run still in memory, then compare them."""
+    return build_from_columns([_column_from_own(own)] + [_column_from_project(p) for p in competitors], radius_km)
+
+
+def build_from_columns(cols: list[dict[str, Any]], radius_km: float) -> dict[str, Any]:
+    """Everything below this line reads `cols` and nothing else, which is what makes a
+    stateless compare possible at all.
+
+    A column is the whole comparable fact set for one project. The card in the scan list
+    is NOT one: it carries no amenities at any depth, no rera phase list, and two of
+    structure's seven fields. Comparing from cards would quietly answer a different
+    question, so the columns are computed once at scan time and stored beside the cards.
+
+    cols[0] is the own project. Every downstream section assumes that.
+    """
+    own_name, n_comp = cols[0]["name"], len(cols) - 1
+
 
     # --- common BHK ---------------------------------------------------------
     sets = [set(c["configurations"]) for c in cols if c["configurations"]]
@@ -183,10 +199,10 @@ def build(own: OwnProject, competitors: list[Project], radius_km: float) -> dict
                       "stale": [{"id": c["id"], "days": c["amenity_age_days"]} for c in cols if c["amenity_age_days"] and c["amenity_age_days"] > 90]}
 
     return {
-        "own_id": own.id, "radius_km": radius_km,
+        "own_id": cols[0]["id"], "radius_km": radius_km,
         "headline": {
-            "title": f"{len(competitors)} competitor{'s' if len(competitors) != 1 else ''} against {own.name}",
-            "subtitle": f"All within {radius_km} km of {own.name}, all handing over after today."
+            "title": f"{n_comp} competitor{'s' if n_comp != 1 else ''} against {own_name}",
+            "subtitle": f"All within {radius_km} km of {own_name}, all handing over after today."
                         + (f" Compared on a {common_bhk} BHK basis." if common_bhk else " No configuration is shared by every project."),
         },
         "columns": cols,

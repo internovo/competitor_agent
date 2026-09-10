@@ -207,6 +207,41 @@ class CompareRequest(BaseModel):
     competitor_ids: list[str]
 
 
+class StatelessCompareRequest(BaseModel):
+    """The same comparison, from columns the caller stored, with no run in memory.
+
+    A run lives here for two hours and is lost on restart; propOG keeps every finished
+    scan forever. Without this route a rep opening last month's scan and clicking
+    Compare would get a 404 from us for a scan we did produce.
+    """
+    columns: list[dict[str, Any]]
+    radius_km: float = Field(gt=0, le=25)
+
+
+def _guard(col: dict[str, Any]) -> None:
+    """The same two refusals as the run-scoped route, off the column's own label."""
+    name = col.get("name") or col.get("id") or "this project"
+    if col.get("label") == "UNVERIFIED":
+        raise HTTPException(422, f"'{name}' has no lifecycle on record; confirm it is still selling before comparing")
+    if col.get("label") == "THIN":
+        raise HTTPException(422, f"'{name}' is THIN ({col.get('completeness')}/6) and cannot be analysed")
+
+
+@app.post("/compare")
+async def compare_stateless(body: StatelessCompareRequest) -> dict:
+    """columns[0] is the own project, then one or two competitors."""
+    if not 2 <= len(body.columns) <= 3:
+        raise HTTPException(422, "send the own column first, then one or two competitor columns")
+    for col in body.columns[1:]:
+        _guard(col)
+    try:
+        return await service.compare_from_columns(body.columns, body.radius_km, get_llm())
+    except (KeyError, TypeError) as e:
+        # A column that did not come from compare_columns. Name what was missing rather
+        # than 500ing, so the caller can see which column it sent is the wrong shape.
+        raise HTTPException(400, f"a column is not the shape compare_columns produces: {type(e).__name__} {e}") from e
+
+
 @app.post("/scans/{run_id}/compare")
 async def compare(run_id: str, body: CompareRequest) -> dict:
     run = _finished(run_id)

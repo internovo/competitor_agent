@@ -190,10 +190,16 @@ class LLM:
         out = out if isinstance(out, CardInsights) else CardInsights(**out)
         return {i.id: i.sentence for i in out.insights}
 
-    async def narrate_compare(self, own: OwnProject, payload: dict[str, Any]) -> dict[str, str]:
+    async def narrate_compare(self, own: dict[str, Any], payload: dict[str, Any]) -> dict[str, str]:
+        """`own` is own_facts() output, from either an OwnProject or the stored own column.
+
+        Taking the dict rather than the model is what lets a compare run months after the
+        scan, with no run in memory and no subject resent -- and it guarantees the
+        narration describes the same own project the columns were built from.
+        """
         slim = {k: payload[k] for k in ("headline", "common_bhk", "rate_axis", "possession", "carpet", "config_matrix", "structure", "amenities")}
         slim["amenities"] = {k: v for k, v in slim["amenities"].items() if k != "rows"} | {"top_rows": payload["amenities"]["rows"][:12]}
-        user = prompts.NARRATE_COMPARE_USER.format(own=json.dumps(own_facts(own)), payload=json.dumps(slim, default=str))
+        user = prompts.NARRATE_COMPARE_USER.format(own=json.dumps(own), payload=json.dumps(slim, default=str))
         out = await self._call(self._sections, [("system", prompts.NARRATE_SYSTEM), ("human", user)], "narrate")
         out = out if isinstance(out, SectionInsights) else SectionInsights(**out)
         return out.model_dump()
@@ -206,6 +212,16 @@ def own_facts(own: OwnProject) -> dict:
             "rate_psf": [r.min_psf, r.max_psf, r.basis] if r else None,
             "possession": own.possession.isoformat() if own.possession else None,
             "building_type": st.building_type if st else None, "towers": st.towers if st else None}
+
+
+def own_facts_from_column(col: dict[str, Any]) -> dict:
+    """own_facts() again, off a stored compare column. Same keys, same shapes."""
+    c, r, st = col.get("carpet"), col.get("rate"), col.get("structure")
+    return {"name": col.get("name"), "builder": col.get("builder"), "configurations": col.get("configurations") or [],
+            "carpet_sqft": [c["min"], c["max"]] if c else None,
+            "rate_psf": [r["min"], r["max"], r["basis"]] if r else None,
+            "possession": col["possession"]["date"] if col.get("possession") else None,
+            "building_type": st.get("building_type") if st else None, "towers": st.get("towers") if st else None}
 
 
 def card_facts(p: Project) -> dict:

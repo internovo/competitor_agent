@@ -20,7 +20,7 @@
     },
     "radius_km": 1.5,
     "mode": "replay",
-    "created_at": "2026-09-09T11:29:03.102265+00:00",
+    "created_at": "2026-09-10T13:34:08.621067+00:00",
     "cost": {
       "llm_calls": 0,
       "input_tokens": 0,
@@ -40,12 +40,12 @@
       "deterministic_fields": 707
     },
     "timing": {
-      "started_at": "2026-09-09T11:29:03.102265+00:00",
-      "finished_at": "2026-09-09T11:29:03.129398+00:00",
+      "started_at": "2026-09-10T13:34:08.621067+00:00",
+      "finished_at": "2026-09-10T13:34:08.629032+00:00",
       "duration_s": 0.0,
       "per_stage_s": {}
     },
-    "scan_id": "fe94c93fa045",
+    "scan_id": "1105a70be7e8",
     "counts": {
       "candidates_seen": 43,
       "eligible": 4,
@@ -324,6 +324,527 @@
         "data_note": null
       }
     ],
+    "compare_columns": {
+      "own": {
+        "id": "marina64",
+        "name": "Marina64",
+        "builder": "Mahindra Lifespaces",
+        "is_own": true,
+        "distance_km": 0.0,
+        "label": "OWN",
+        "match_score": null,
+        "tags": [
+          "OWN PROJECT"
+        ],
+        "configurations": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "carpet": {
+          "min": 450,
+          "max": 1650,
+          "source": "propog"
+        },
+        "rate": {
+          "min": 37500,
+          "max": 38500,
+          "basis": "base",
+          "source": "propog",
+          "conflict": null
+        },
+        "possession": {
+          "date": "2029-12-01",
+          "source": "propog"
+        },
+        "structure": {
+          "building_type": "multi_tower",
+          "towers": 3,
+          "floors_min": 30,
+          "floors_max": 35,
+          "land_acres": 2.5,
+          "total_units": 640,
+          "open_space_pct": null
+        },
+        "rera_phases": [
+          {
+            "number": "P51800055512",
+            "verified": true,
+            "label": "Phase 1"
+          }
+        ],
+        "rera_verified_count": 1,
+        "amenities": [
+          {
+            "name": "Swimming Pool",
+            "category": "sport_fitness",
+            "scope": "project"
+          },
+          {
+            "name": "Gymnasium",
+            "category": "sport_fitness",
+            "scope": "project"
+          },
+          {
+            "name": "Jogging Track",
+            "category": "sport_fitness",
+            "scope": "project"
+          },
+          {
+            "name": "Yoga Deck",
+            "category": "sport_fitness",
+            "scope": "project"
+          },
+          {
+            "name": "Kids Pool",
+            "category": "sport_fitness",
+            "scope": "project"
+          },
+          {
+            "name": "Clubhouse",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Sky Deck",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Multipurpose Hall",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Kids Play Area",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Landscaped Garden",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Co-Working Lounge",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "Mini Theatre",
+            "category": "social_leisure",
+            "scope": "project"
+          },
+          {
+            "name": "EV Charging Bay",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "CCTV Surveillance",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "Power Backup",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "Rain Water Harvesting",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "Visitor Parking",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "24x7 Security",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "High Speed Lifts",
+            "category": "convenience_safety",
+            "scope": "project"
+          },
+          {
+            "name": "Solar Panels",
+            "category": "convenience_safety",
+            "scope": "project"
+          }
+        ],
+        "amenity_age_days": 0
+      },
+      "competitors": {
+        "harshail-hornbill-malad-west": {
+          "id": "harshail-hornbill-malad-west",
+          "name": "Harshail Hornbill",
+          "builder": "Harshail Group",
+          "is_own": false,
+          "distance_km": 0.37,
+          "label": "COMPARABLE",
+          "completeness": 6,
+          "match_score": 14,
+          "tags": [
+            "COMPARABLE 6/6"
+          ],
+          "configurations": [
+            1
+          ],
+          "carpet": {
+            "min": 335,
+            "max": 335,
+            "source": "tavily"
+          },
+          "rate": {
+            "min": 27404,
+            "max": 32350,
+            "basis": "undisclosed",
+            "source": "multiple",
+            "conflict": "builder_site says 28,642; squareyards says 32,350, tavily says 27,404"
+          },
+          "possession": {
+            "date": "2026-12-01",
+            "source": "builder_site"
+          },
+          "structure": {
+            "building_type": null,
+            "towers": null,
+            "floors_min": null,
+            "floors_max": null,
+            "land_acres": null,
+            "total_units": 95,
+            "open_space_pct": null
+          },
+          "rera_phases": [
+            {
+              "number": "P51800029350",
+              "verified": false,
+              "label": "Phase 1"
+            }
+          ],
+          "rera_verified_count": 0,
+          "amenities": [
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Indoor Games",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Party Lawn",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Senior Citizen Area",
+              "category": "social_leisure",
+              "scope": "project"
+            }
+          ],
+          "amenity_age_days": 2
+        },
+        "shreeji-eternity-by-shreeji-group": {
+          "id": "shreeji-eternity-by-shreeji-group",
+          "name": "Shreeji Eternity by Shreeji Group",
+          "builder": "Shreeji Group",
+          "is_own": false,
+          "distance_km": 1.17,
+          "label": "COMPARABLE",
+          "completeness": 6,
+          "match_score": 21,
+          "tags": [
+            "COMPARABLE 6/6"
+          ],
+          "configurations": [
+            1,
+            2,
+            3
+          ],
+          "carpet": {
+            "min": 822,
+            "max": 822,
+            "source": "tavily"
+          },
+          "rate": {
+            "min": 27000,
+            "max": 31900,
+            "basis": "undisclosed",
+            "source": "multiple",
+            "conflict": "squareyards says 31,900; tavily says 27,000"
+          },
+          "possession": {
+            "date": "2027-01-01",
+            "source": "squareyards"
+          },
+          "structure": {
+            "building_type": "single",
+            "towers": null,
+            "floors_min": 20,
+            "floors_max": 20,
+            "land_acres": 0.85,
+            "total_units": 3502,
+            "open_space_pct": null
+          },
+          "rera_phases": [
+            {
+              "number": "P51800054310",
+              "verified": false,
+              "label": "Phase 1"
+            },
+            {
+              "number": "P51800054233",
+              "verified": false,
+              "label": "Phase 2"
+            }
+          ],
+          "rera_verified_count": 0,
+          "amenities": [
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Indoor Games",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Library",
+              "category": "social_leisure",
+              "scope": "project"
+            }
+          ],
+          "amenity_age_days": 0
+        },
+        "P51800051004": {
+          "id": "P51800051004",
+          "name": "Kalpataru Aurum",
+          "builder": "Kalpataru Ltd",
+          "is_own": false,
+          "distance_km": 0.7,
+          "label": "PARTIAL",
+          "completeness": 6,
+          "match_score": null,
+          "tags": [
+            "PARTIAL 6/6",
+            "ON propOG"
+          ],
+          "configurations": null,
+          "carpet": null,
+          "rate": {
+            "min": 11744,
+            "max": 41200,
+            "basis": "base",
+            "source": "multiple",
+            "conflict": "propog says 41,200; squareyards says 11,744"
+          },
+          "possession": {
+            "date": "2030-09-01",
+            "source": "propog"
+          },
+          "structure": {
+            "building_type": "multi_tower",
+            "towers": 3,
+            "floors_min": 28,
+            "floors_max": 34,
+            "land_acres": 1.8,
+            "total_units": 420,
+            "open_space_pct": null
+          },
+          "rera_phases": [
+            {
+              "number": "P51800051004",
+              "verified": false,
+              "label": "Phase 1"
+            },
+            {
+              "number": "P51800053377",
+              "verified": false,
+              "label": "Phase 2"
+            }
+          ],
+          "rera_verified_count": 0,
+          "amenities": [
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Jogging Track",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Squash Court",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Badminton Court",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Yoga Deck",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Tennis Court",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Clubhouse",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Kids Play Area",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Co-Working Lounge",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Amphitheatre",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Landscaped Garden",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Party Lawn",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Library",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Barbecue Deck",
+              "category": "social_leisure",
+              "scope": "project"
+            },
+            {
+              "name": "Ev Charging Bay",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Cctv Surveillance",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Power Backup",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Rain Water Harvesting",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Visitor Parking",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "24X7 Security",
+              "category": "convenience_safety",
+              "scope": "project"
+            },
+            {
+              "name": "Intercom",
+              "category": "convenience_safety",
+              "scope": "project"
+            }
+          ],
+          "amenity_age_days": 0
+        },
+        "raghav-utopia-new-launch-project-goregaon-west": {
+          "id": "raghav-utopia-new-launch-project-goregaon-west",
+          "name": "Raghav UTOPIA Goregaon West",
+          "builder": "Raghav Group",
+          "is_own": false,
+          "distance_km": 0.66,
+          "label": "PARTIAL",
+          "completeness": 5,
+          "match_score": null,
+          "tags": [
+            "PARTIAL 5/6"
+          ],
+          "configurations": [
+            2,
+            3
+          ],
+          "carpet": null,
+          "rate": null,
+          "possession": null,
+          "structure": {
+            "building_type": "single",
+            "towers": 1,
+            "floors_min": 17,
+            "floors_max": 17,
+            "land_acres": 0.8,
+            "total_units": 80,
+            "open_space_pct": null
+          },
+          "rera_phases": [
+            {
+              "number": "P51800045996",
+              "verified": false,
+              "label": "Phase 1"
+            }
+          ],
+          "rera_verified_count": 0,
+          "amenities": [
+            {
+              "name": "Gymnasium",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Jogging Track",
+              "category": "sport_fitness",
+              "scope": "project"
+            },
+            {
+              "name": "Swimming Pool",
+              "category": "sport_fitness",
+              "scope": "project"
+            }
+          ],
+          "amenity_age_days": 0
+        }
+      }
+    },
     "also_found": [
       {
         "id": "P51800047374",
@@ -883,7 +1404,7 @@
       "extract[P51800051004]: status ready declared, votes {'ready': 1} (rtments | Apartments | Apartments | Apartments |\n| Status | Ready to Move | Ready to Move | Ready to Move | Ready to Move |\n| Configu)",
       "extract[P51800051004]: a source called this ready, but possession is stated as 2030-09-01, 48 months out; read as under construction",
       "extract[P51800051004]: 6 pages, 34 fields deterministic, 0 from Claude, sources ['tavily', 'squareyards', 'builder_site', 'propog']",
-      "persist: scan fe94c93fa045 complete with 39 projects"
+      "persist: scan 1105a70be7e8 complete with 39 projects"
     ]
   },
   "GET /scans/{run_id}/competitors/{competitor_id}": {
@@ -916,7 +1437,7 @@
           ]
         },
         "source": "builder_site",
-        "age_days": 1,
+        "age_days": 2,
         "scope_note": "All 4 are project-level. No unit-level features published, so in-flat comparisons are not possible."
       },
       "building": {
@@ -1026,7 +1547,7 @@
             "detail": "builder_site says 2026-12-01; tavily says 2026-01-01, tavily says 2026-12-01"
           }
         ],
-        "oldest_source_days": 1,
+        "oldest_source_days": 2,
         "could_not_verify": [],
         "note": "Shown as empty rather than estimated. A rep who learns any of these from a site visit can record it here."
       },
@@ -1045,7 +1566,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177016+00:00",
             "method": "deterministic"
           },
           {
@@ -1054,7 +1575,7 @@
             ],
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177027+00:00",
             "method": "deterministic"
           },
           {
@@ -1063,7 +1584,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177033+00:00",
             "method": "deterministic"
           },
           {
@@ -1084,7 +1605,7 @@
             },
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177027+00:00",
             "method": "deterministic"
           }
         ],
@@ -1097,7 +1618,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177030+00:00",
             "method": "deterministic"
           },
           {
@@ -1108,7 +1629,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177033+00:00",
             "method": "deterministic"
           },
           {
@@ -1128,14 +1649,14 @@
             "value": "2026-01-01",
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177016+00:00",
             "method": "deterministic"
           },
           {
             "value": "2026-12-01",
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177033+00:00",
             "method": "deterministic"
           },
           {
@@ -1159,7 +1680,7 @@
             },
             "source": "tavily",
             "url": "https://houssed.com/mumbai/harshail-group/harshail-hornbill-3484",
-            "fetched_at": "2026-09-09T11:28:47.265085+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177027+00:00",
             "method": "deterministic"
           },
           {
@@ -1174,7 +1695,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177030+00:00",
             "method": "deterministic"
           },
           {
@@ -1189,7 +1710,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177033+00:00",
             "method": "deterministic"
           }
         ],
@@ -1200,7 +1721,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/harshail-hornbill-malad-west-pid-4453",
-            "fetched_at": "2026-09-09T11:28:47.265069+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177016+00:00",
             "method": "deterministic"
           },
           {
@@ -1209,7 +1730,7 @@
             ],
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/harshail-hornbill/143102/project",
-            "fetched_at": "2026-09-09T11:28:47.265090+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177030+00:00",
             "method": "deterministic"
           },
           {
@@ -1225,7 +1746,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/harshail-hornbill-malad-west/29147",
-            "fetched_at": "2026-09-09T11:28:47.265096+00:00",
+            "fetched_at": "2026-09-10T13:33:54.177033+00:00",
             "method": "deterministic"
           },
           {
@@ -1401,7 +1922,7 @@
             ],
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764577+00:00",
             "method": "deterministic"
           },
           {
@@ -1411,7 +1932,7 @@
             ],
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764577+00:00",
             "method": "deterministic"
           },
           {
@@ -1421,7 +1942,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764582+00:00",
             "method": "deterministic"
           },
           {
@@ -1431,7 +1952,7 @@
             ],
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764614+00:00",
             "method": "deterministic"
           },
           {
@@ -1441,7 +1962,7 @@
             ],
             "source": "tavily",
             "url": "https://keystonerealestateadvisory.com/buy/new/shreeji-eternity-project-malad-west-mumbai/1049",
-            "fetched_at": "2026-09-09T11:28:49.782865+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764619+00:00",
             "method": "deterministic"
           }
         ],
@@ -1453,7 +1974,7 @@
             },
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764614+00:00",
             "method": "deterministic"
           }
         ],
@@ -1466,7 +1987,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764582+00:00",
             "method": "deterministic"
           },
           {
@@ -1477,7 +1998,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764586+00:00",
             "method": "deterministic"
           }
         ],
@@ -1486,28 +2007,28 @@
             "value": "2027-06-01",
             "source": "magicbricks",
             "url": "https://www.magicbricks.com/shreeji-eternity-malad-west-mumbai-pdpid-4d4235343230363633",
-            "fetched_at": "2026-09-09T11:28:49.782815+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764577+00:00",
             "method": "deterministic"
           },
           {
             "value": "2027-06-01",
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764582+00:00",
             "method": "deterministic"
           },
           {
             "value": "2027-01-01",
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764586+00:00",
             "method": "deterministic"
           },
           {
             "value": "2028-06-01",
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764614+00:00",
             "method": "deterministic"
           }
         ],
@@ -1524,7 +2045,7 @@
             },
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764582+00:00",
             "method": "deterministic"
           },
           {
@@ -1539,7 +2060,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764586+00:00",
             "method": "deterministic"
           },
           {
@@ -1554,7 +2075,7 @@
             },
             "source": "tavily",
             "url": "https://keystonerealestateadvisory.com/buy/new/shreeji-eternity-project-malad-west-mumbai/1049",
-            "fetched_at": "2026-09-09T11:28:49.782865+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764619+00:00",
             "method": "deterministic"
           }
         ],
@@ -1576,7 +2097,7 @@
             ],
             "source": "tavily",
             "url": "https://www.mumbaipropertyexchange.com/project/shreeji-eternity-malad-west/33212",
-            "fetched_at": "2026-09-09T11:28:49.782820+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764582+00:00",
             "method": "deterministic"
           },
           {
@@ -1586,7 +2107,7 @@
             ],
             "source": "squareyards",
             "url": "https://www.squareyards.com/mumbai-residential-property/shreeji-eternity/240917/project",
-            "fetched_at": "2026-09-09T11:28:49.782825+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764586+00:00",
             "method": "deterministic"
           },
           {
@@ -1595,7 +2116,7 @@
             ],
             "source": "tavily",
             "url": "https://www.realestateindia.com/projects/shreeji-eternity-in-malad-west-mumbai-pjid-46504",
-            "fetched_at": "2026-09-09T11:28:49.782860+00:00",
+            "fetched_at": "2026-09-10T13:33:56.764614+00:00",
             "method": "deterministic"
           }
         ]
@@ -1774,7 +2295,7 @@
             "detail": "4 sources span 1-4 BHK, too wide for one building"
           }
         ],
-        "oldest_source_days": 1,
+        "oldest_source_days": 2,
         "could_not_verify": [],
         "note": "Shown as empty rather than estimated. A rep who learns any of these from a site visit can record it here."
       },
@@ -1806,7 +2327,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169655+00:00",
             "method": "deterministic"
           },
           {
@@ -1815,7 +2336,7 @@
             ],
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169667+00:00",
             "method": "deterministic"
           },
           {
@@ -1835,7 +2356,7 @@
             ],
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ],
@@ -1847,7 +2368,7 @@
             },
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169667+00:00",
             "method": "deterministic"
           },
           {
@@ -1857,7 +2378,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ],
@@ -1870,7 +2391,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169673+00:00",
             "method": "deterministic"
           },
           {
@@ -1881,7 +2402,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ],
@@ -1890,28 +2411,28 @@
             "value": "2026-12-01",
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169655+00:00",
             "method": "deterministic"
           },
           {
             "value": "2008-07-01",
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169667+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-06-01",
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169673+00:00",
             "method": "deterministic"
           },
           {
             "value": "2030-09-01",
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ],
@@ -1928,7 +2449,7 @@
             },
             "source": "tavily",
             "url": "https://www.propertycrow.com/mumbai/propertyview_kalpataru-regalia-malad-west-malad-west_1068.html",
-            "fetched_at": "2026-09-09T11:28:56.123416+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169655+00:00",
             "method": "deterministic"
           },
           {
@@ -1943,7 +2464,7 @@
             },
             "source": "tavily",
             "url": "https://www.addressofchoice.com/kalpataru-shravasti-malad-west-mumbai-p41660",
-            "fetched_at": "2026-09-09T11:28:56.123445+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169667+00:00",
             "method": "deterministic"
           },
           {
@@ -1958,7 +2479,7 @@
             },
             "source": "squareyards",
             "url": "https://www.squareyards.com/pune-residential-property/kalpataru-aurum/129646/project",
-            "fetched_at": "2026-09-09T11:28:56.123461+00:00",
+            "fetched_at": "2026-09-10T13:34:04.169673+00:00",
             "method": "deterministic"
           },
           {
@@ -1988,7 +2509,7 @@
             },
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ],
@@ -2009,7 +2530,7 @@
             ],
             "source": "propog",
             "url": "propog://projects/kalpataru-aurum",
-            "fetched_at": "2026-09-09T11:28:56.790419+00:00",
+            "fetched_at": "2026-09-10T13:34:05.013698+00:00",
             "method": "deterministic"
           }
         ]
@@ -2137,7 +2658,7 @@
             "detail": "2 sources give different carpet ranges"
           }
         ],
-        "oldest_source_days": 1,
+        "oldest_source_days": 2,
         "could_not_verify": [
           "rate_psf"
         ],
@@ -2179,7 +2700,7 @@
             ],
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/raghav-utopia-malad-west-pid-21430",
-            "fetched_at": "2026-09-09T11:28:53.743550+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015846+00:00",
             "method": "deterministic"
           },
           {
@@ -2189,7 +2710,7 @@
             ],
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015857+00:00",
             "method": "deterministic"
           },
           {
@@ -2200,7 +2721,7 @@
             ],
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015860+00:00",
             "method": "deterministic"
           },
           {
@@ -2210,7 +2731,7 @@
             ],
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015863+00:00",
             "method": "deterministic"
           },
           {
@@ -2232,7 +2753,7 @@
             },
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015860+00:00",
             "method": "deterministic"
           },
           {
@@ -2242,7 +2763,7 @@
             },
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015863+00:00",
             "method": "deterministic"
           }
         ],
@@ -2252,28 +2773,28 @@
             "value": "2027-01-01",
             "source": "tavily",
             "url": "https://www.propertypistol.com/projects/raghav-utopia-malad-west-pid-21430",
-            "fetched_at": "2026-09-09T11:28:53.743550+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015846+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-12-01",
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015857+00:00",
             "method": "deterministic"
           },
           {
             "value": "2029-12-01",
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015860+00:00",
             "method": "deterministic"
           },
           {
             "value": "2028-12-01",
             "source": "tavily",
             "url": "https://housiey.com/projects/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743581+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015866+00:00",
             "method": "deterministic"
           }
         ],
@@ -2290,7 +2811,7 @@
             },
             "source": "tavily",
             "url": "https://www.nobroker.in/raghav-utopia-goregaon-west_mumbai-prjt-8a9f9184994bc29401994c06ac411b68",
-            "fetched_at": "2026-09-09T11:28:53.743567+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015857+00:00",
             "method": "deterministic"
           },
           {
@@ -2305,7 +2826,7 @@
             },
             "source": "tavily",
             "url": "https://raghavutopia-goregaon.in",
-            "fetched_at": "2026-09-09T11:28:53.743576+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015863+00:00",
             "method": "deterministic"
           },
           {
@@ -2320,7 +2841,7 @@
             },
             "source": "tavily",
             "url": "https://housiey.com/projects/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743581+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015866+00:00",
             "method": "deterministic"
           }
         ],
@@ -2331,7 +2852,7 @@
             ],
             "source": "tavily",
             "url": "https://www.beyondwalls.com/property/mumbai/goregaon/raghav-utopia",
-            "fetched_at": "2026-09-09T11:28:53.743572+00:00",
+            "fetched_at": "2026-09-10T13:34:01.015860+00:00",
             "method": "deterministic"
           }
         ]
@@ -2570,7 +3091,7 @@
             "scope": "project"
           }
         ],
-        "amenity_age_days": 1
+        "amenity_age_days": 2
       },
       {
         "id": "shreeji-eternity-by-shreeji-group",
@@ -3091,6 +3612,14 @@
       "structure": "Building types differ, which changes the buyer profile as much as price does.",
       "amenities": "24 distinct amenities across the set; counts range 3 to 20."
     },
-    "insight_source": "template"
+    "insight_source": "template",
+    "cost": {
+      "llm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_inr": 0.0,
+      "model": null,
+      "note": "no model configured; insights are template-written"
+    }
   }
 }

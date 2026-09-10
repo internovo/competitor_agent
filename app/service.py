@@ -9,10 +9,10 @@ from collections.abc import Callable
 from typing import Any
 
 from app.config import settings
-from app.cost import NodeSpans
+from app.cost import NodeSpans, tokens_inr
 from app.graph.build import graph
 from app.llm import templates
-from app.llm.client import LLM, get_llm
+from app.llm.client import LLM, get_llm, own_facts, own_facts_from_column
 from app.logic import compare as compare_logic
 from app.logic import completeness, conflicts, match_score
 from app.models.schema import (REPORTED_FIELDS, FieldValue, OwnProject, Project, Provenance, ScanRecord,
@@ -209,6 +209,16 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
                    "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
         "extraction": meta.get("extraction", {}),
         "competitors": [card(p, i + 1) for i, p in enumerate(ranked[: settings.max_table_rows])],
+        # The comparable fact set per project, computed once here so a compare can run
+        # months later with no run in memory. The cards cannot stand in for these: they
+        # carry no amenities at all, no rera phase list, and two of structure's seven
+        # fields. Only projects a rep can actually select and analyse get one, so an
+        # absent id and a disabled Analyse button say the same thing.
+        "compare_columns": {
+            "own": compare_logic._column_from_own(own),
+            "competitors": {p.id: compare_logic._column_from_project(p)
+                            for p in ranked[: settings.max_table_rows] if p.label not in ("THIN", "UNVERIFIED")},
+        },
         "also_found": [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
                         "completeness": p.completeness, "reason": None} for p in ranked[settings.max_table_rows:]]
                       + [{"id": p.id, "name": p.name, "distance_km": p.distance_km, "label": p.label,
@@ -332,8 +342,24 @@ def apply_override(p: Project, own: OwnProject, radius_km: float, field: str, va
 
 # --------------------------------------------------------------- compare
 async def compare_payload(own: OwnProject, competitors: list[Project], radius_km: float, llm: LLM | None) -> dict[str, Any]:
-    payload = compare_logic.build(own, competitors, radius_km)
+    """The live path, from a run still in memory."""
+    cols = [compare_logic._column_from_own(own)] + [compare_logic._column_from_project(p) for p in competitors]
+    return await compare_from_columns(cols, radius_km, llm, own_facts(own))
+
+
+async def compare_from_columns(cols: list[dict[str, Any]], radius_km: float, llm: LLM | None,
+                               own: dict[str, Any] | None = None) -> dict[str, Any]:
+    """One code path under both compare routes. `cols[0]` is the own project.
+
+    `own` is the narration's view of the own project; from the OwnProject on the live
+    path, off cols[0] on the stateless one. Same keys either way.
+    """
+    own = own if own is not None else own_facts_from_column(cols[0])
+    payload = compare_logic.build_from_columns(cols, radius_km)
     payload["insights"] = templates.compare_insights(payload, own)
+    # ALWAYS emitted, on both paths. A template sentence and a model sentence are
+    # different claims, and an absent field reads as the pessimistic one -- which would
+    # label a real model insight a template. The screen shows which it has.
     payload["insight_source"] = "template"
     if llm is not None:
         try:
@@ -341,4 +367,18 @@ async def compare_payload(own: OwnProject, competitors: list[Project], radius_km
             payload["insight_source"] = "llm"
         except Exception as e:  # noqa: BLE001
             payload["insight_error"] = f"{type(e).__name__}"
+    payload["cost"] = compare_cost(llm)
     return payload
+
+
+def compare_cost(llm: LLM | None) -> dict[str, Any]:
+    """What this one compare spent. About Rs 2, and reported for the same reason the
+    scan's cost is: a spend nobody counts is a spend nobody notices, and one project's
+    forty compares stop being Rs 2 quite quickly. An estimate from the price table,
+    never a bill -- same caveat as the scan."""
+    if llm is None:
+        return {"llm_calls": 0, "input_tokens": 0, "output_tokens": 0, "estimated_inr": 0.0, "model": None,
+                "note": "no model configured; insights are template-written"}
+    return {"llm_calls": llm.calls_attempted, "input_tokens": llm.input_tokens, "output_tokens": llm.output_tokens,
+            "estimated_inr": tokens_inr(llm.model, llm.input_tokens, llm.output_tokens), "model": llm.model,
+            "note": "estimated from token counts and the configured price table, not a bill"}

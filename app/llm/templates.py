@@ -50,13 +50,15 @@ def card_insight(p: Project, own: OwnProject, eligible: list[Project]) -> str:
     return s[0].upper() + s[1:] + "."
 
 
-def compare_insights(payload: dict, own: OwnProject) -> dict[str, str]:
+def compare_insights(payload: dict, own: dict) -> dict[str, str]:
+    """`own` is own_facts() output, the same dict the model narration gets, so the
+    template and the model describe the same own project on both compare paths."""
     out = {}
     ra = payload["rate_axis"]
     others = [x for x in ra["points"] if x["delta_pct"] is not None and x["id"] != payload["own_id"]]
     if others:
         w = max(others, key=lambda x: abs(x["delta_pct"]))
-        out["rate"] = (f"{w['name']} is priced {abs(w['delta_pct'])}% {'above' if w['delta_pct'] > 0 else 'below'} {own.name} on base rate, "
+        out["rate"] = (f"{w['name']} is priced {abs(w['delta_pct'])}% {'above' if w['delta_pct'] > 0 else 'below'} {own['name']} on base rate, "
                        f"the widest on the axis. {len(ra['off_axis'])} project(s) cannot be placed on it.")
     else:
         out["rate"] = f"Only {len(ra['points'])} project has a base rate on record, so rates cannot be compared on one axis."
