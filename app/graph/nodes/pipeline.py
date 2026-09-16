@@ -342,8 +342,13 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             merge_facts(project, facts, page, method="deterministic")
             filled = _fills(facts)
             n_det += len(filled)
-            # A form that does not state a field is a source that did not publish it.
-            why |= {f: ("NOT_PUBLISHED", None) for f in FILLABLE if f not in filled}
+            # A form that does not state a field is a source that did not publish it --
+            # true of a fixture or a propOG row, which are the whole form by definition.
+            # A portal's listing card is not: it carries five fields and has no opinion
+            # about carpet, so reading its silence as "not published" would put an
+            # absence reason in front of a rep that the source never claimed.
+            if page.source in ("fixture", "propog"):
+                why |= {f: ("NOT_PUBLISHED", None) for f in FILLABLE if f not in filled}
             continue
         if page.url not in keep:
             log.append(f"extract[{project.id}]: {page.url} never names the project; not read")
@@ -360,11 +365,15 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     if read_pages:
         lifecycle, evidence, votes = deterministic.vote_lifecycle(
             [deterministic.focus_on_project(p.text, project.match_name) for p in read_pages])
-        register_said = project.status != "unknown" and any(pg.source == "maharera" for pg in pages)
+        # The vote exists to overrule a status inferred from prose. A structured record --
+        # the register, or a portal's own `projectStatus` field -- is a declaration, not an
+        # inference, so it survives a prose vote that declared nothing.
+        declared = project.status != "unknown" and any(
+            pg.source == "maharera" or pg.kind == "json_facts" for pg in pages)
         if lifecycle not in deterministic.UNMAPPED_LIFECYCLES | {"unknown"}:
             project.status = lifecycle
             log.append(f"extract[{project.id}]: status {lifecycle} declared, votes {votes} ({evidence})")
-        elif not register_said and project.status != "unknown":
+        elif not declared and project.status != "unknown":
             log.append(f"extract[{project.id}]: status '{project.status}' had no declared statement behind it; unknown")
             project.status = "unknown"
 

@@ -1,0 +1,568 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "ApartmentComplex",
+    "Product"
+   ],
+   "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#project",
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "projectId",
+    "value": 128046
+   },
+   "name": "Raj Ratna CHS",
+   "url": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project",
+   "mainEntityOfPage": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project",
+   "image": [
+    "https://static.squareyards.com/resources/images/mumbai/project-image/raj-ratna-chs-project-project-large-image1-8680-opt-47f88623-c145-4f2a-b5b1-7e1de2618886.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/raj-ratna-chs-project-amenities-features1-5093-opt-7c627b14-efc2-4e99-8717-cfbdd8091842.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/raj-ratna-chs-project-gymnasium-image1-6613-opt-bc4a30e0-af25-4a87-8f09-a9d255f5255c.jpg?aio=w-800;h-600;crop;"
+   ],
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Borivali West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+   },
+   "accommodationFloorPlan": [
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-152648",
+     "name": "1 BHK - 302 sq. ft.",
+     "numberOfBedrooms": 1,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 302,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 9896000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-326813",
+     "name": "1 BHK - 341 sq. ft.",
+     "numberOfBedrooms": 1,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 341,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 11174000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-326814",
+     "name": "2 BHK - 624 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 624,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 20447500,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-326815",
+     "name": "2 BHK - 759 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 759,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 24871200,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-326817",
+     "name": "3 BHK - 848 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 848,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 27787600,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#unit-326818",
+     "name": "3 BHK - 917 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 917,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 30048600,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    }
+   ],
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "propertyID": "projectStatus",
+     "name": "Project status",
+     "value": "New Launch"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "possessionDate",
+     "name": "Possession",
+     "value": "Dec 2029"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "totalArea",
+     "name": "Total project area",
+     "value": 0.23,
+     "unitCode": "ACR",
+     "unitText": "acre"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "additionalCharges",
+     "name": "Charges",
+     "value": "Additional charges apply"
+    }
+   ],
+   "description": "Raj Ratna CHS is a well designed, comfortable and accessible apartment that offers a perfect blend of contemporary living and all the modern amenities. It is located in the Mumbai Western Suburbs, Mumbai and offers 620 sqft of well designed living space.",
+   "brand": {
+    "@type": "Organization",
+    "name": "DGS Group"
+   },
+   "releaseDate": "2026-07",
+   "numberOfAccommodationUnits": {
+    "@type": "QuantitativeValue",
+    "value": 55
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "@id": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project#offers",
+    "priceCurrency": "INR",
+    "lowPrice": 9896000,
+    "highPrice": 30048600,
+    "offerCount": 6,
+    "url": "https://www.squareyards.com/mumbai-residential-property/raj-ratna-chs/128046/project",
+    "seller": {
+     "@id": "https://www.squareyards.com#organization"
+    }
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.235271,
+    "longitude": 72.845861
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&query=19.235271%2C72.845861"
+  },
+  {
+   "@type": [
+    "ApartmentComplex",
+    "Product"
+   ],
+   "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#project",
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "projectId",
+    "value": 345222
+   },
+   "name": "Veena Celestia",
+   "url": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222",
+   "mainEntityOfPage": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222",
+   "image": [
+    "https://static.squareyards.com/resources/images/mumbai/project-image/veena-celestia-project-project-large-image1-4098-opt-86929a8e-13fa-44a5-b416-621a36eb49f2.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/veena-celestia-project-apartment-interiors1-6186-opt-06d392f9-9eae-4e8e-b0bc-b354e9f45ae0.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/veena-celestia-project-gymnasium-image1-5141-opt-8e3950df-5bdd-47db-947d-da9b261063a5.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/veena-celestia-project-amenities-features1-2555-opt-d9e5d939-b620-4abc-b386-5faa8338e9d6.jpg?aio=w-800;h-600;crop;"
+   ],
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Borivali West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+   },
+   "accommodationFloorPlan": [
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#unit-324511",
+     "name": "2 BHK - 548 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 548,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 27034700,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#unit-324512",
+     "name": "2 BHK - 775 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 775,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 38233300,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#unit-324513",
+     "name": "3 BHK - 909 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 909,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 44844000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#unit-324514",
+     "name": "3 BHK - 1064 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 1064,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 52490700,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    }
+   ],
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "propertyID": "projectStatus",
+     "name": "Project status",
+     "value": "New Launch"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "possessionDate",
+     "name": "Possession",
+     "value": "Dec 2030"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "totalArea",
+     "name": "Total project area",
+     "value": 1.87,
+     "unitCode": "ACR",
+     "unitText": "acre"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "additionalCharges",
+     "name": "Charges",
+     "value": "Additional charges apply"
+    }
+   ],
+   "brand": {
+    "@type": "Organization",
+    "name": "Veena Developers"
+   },
+   "releaseDate": "2026-05",
+   "numberOfAccommodationUnits": {
+    "@type": "QuantitativeValue",
+    "value": 159
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "@id": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222#offers",
+    "priceCurrency": "INR",
+    "lowPrice": 27034700,
+    "highPrice": 52490700,
+    "offerCount": 4,
+    "url": "https://www.squareyards.com/veena-celestia-borivali-west-mumbai-npd-345222",
+    "seller": {
+     "@id": "https://www.squareyards.com#organization"
+    }
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.231384,
+    "longitude": 72.854403
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&query=19.231384%2C72.854403"
+  },
+  {
+   "@type": [
+    "ApartmentComplex",
+    "Product"
+   ],
+   "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#project",
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "projectId",
+    "value": 324237
+   },
+   "name": "Nicco Vanashri Heights",
+   "url": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project",
+   "mainEntityOfPage": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project",
+   "image": [
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-project-large-image1-6125.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-floor-plans1-7132.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-floor-plans5-5815.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-floor-plans6-5784.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-floor-plans7-3397.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features1-7850.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features9-9144.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features10-7651.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features11-2145.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features12-3753.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-amenities-features13-5135.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-sports-facilities-image1-7105.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-sports-facilities-image15-6004.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-gymnasium-image1-3686.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-waiting-lounge1-4831.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-apartment-exteriors1-3434.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-apartment-exteriors19-8692.jpg?aio=w-800;h-600;crop;",
+    "https://static.squareyards.com/resources/images/mumbai/project-image/nicco-vanashri-heights-project-tower-view1-2331.jpg?aio=w-800;h-600;crop;"
+   ],
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Borivali West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+   },
+   "accommodationFloorPlan": [
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#unit-271581",
+     "name": "2 BHK - 732 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 732,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 25864000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#unit-271582",
+     "name": "2 BHK - 750 sq. ft.",
+     "numberOfBedrooms": 2,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 750,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 26500000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#unit-271583",
+     "name": "3 BHK - 1035 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 1035,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 36570000,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    },
+    {
+     "@type": [
+      "FloorPlan",
+      "Product"
+     ],
+     "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#unit-271584",
+     "name": "3 BHK - 1591 sq. ft.",
+     "numberOfBedrooms": 3,
+     "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 1591,
+      "unitCode": "FTK",
+      "unitText": "sq ft"
+     },
+     "offers": {
+      "@type": "Offer",
+      "price": 56215332,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+     }
+    }
+   ],
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "propertyID": "projectStatus",
+     "name": "Project status",
+     "value": "Under Construction"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "possessionDate",
+     "name": "Possession",
+     "value": "Dec 2028"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "totalArea",
+     "name": "Total project area",
+     "value": 1.55,
+     "unitCode": "ACR",
+     "unitText": "acre"
+    },
+    {
+     "@type": "PropertyValue",
+     "propertyID": "additionalCharges",
+     "name": "Charges",
+     "value": "Additional charges apply"
+    }
+   ],
+   "brand": {
+    "@type": "Organization",
+    "name": "New India Construction Company"
+   },
+   "releaseDate": "2024-11",
+   "numberOfAccommodationUnits": {
+    "@type": "QuantitativeValue",
+    "value": 264
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "@id": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project#offers",
+    "priceCurrency": "INR",
+    "lowPrice": 25864000,
+    "highPrice": 56215332,
+    "offerCount": 4,
+    "url": "https://www.squareyards.com/mumbai-residential-property/nicco-vanashri-heights/324237/project",
+    "seller": {
+     "@id": "https://www.squareyards.com#organization"
+    }
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.228614,
+    "longitude": 72.853901
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&query=19.228614%2C72.853901"
+  }
+ ]
+}

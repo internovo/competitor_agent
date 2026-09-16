@@ -6,7 +6,7 @@ from app.sources.fixture import FixtureSource
 from app.sources.maharera_legacy import MahaReraSource
 from app.sources.osm import OsmSource
 from app.sources.places import PlacesSource
-from app.sources.portals import BuilderSiteSource, HousingSource, SquareYardsSource
+from app.sources.portals import BuilderSiteSource, HousingSource, SquareYardsListingSource, SquareYardsSource
 from app.sources.propog import PropOGSource
 from app.sources.tavily_web import TavilySource
 
@@ -18,6 +18,7 @@ def build_sources(mode: str, names: list[str] | None = None) -> list[Source]:
     tavily = TavilySource()
     table = {
         "maharera": MahaReraSource(), "places": PlacesSource(), "osm": OsmSource(), "tavily": tavily, "squareyards": SquareYardsSource(),
+        "squareyards_list": SquareYardsListingSource(),
         "housing": HousingSource(), "builder_site": BuilderSiteSource(tavily), "propog": PropOGSource(),
     }
     return [table[n] for n in names if n in table]

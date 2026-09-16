@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     # housing is OFF: housing.com answers every search with an Imperva interstitial
     # (2.7 KB, one <a>, zero project links), so the adapter spent 38 fetches a scan and
     # returned nothing. The adapter is kept; re-enable it behind a real browser.
-    sources: str = "maharera,places,osm,tavily,squareyards,builder_site,propog"
+    sources: str = "maharera,places,osm,tavily,squareyards,squareyards_list,builder_site,propog"
 
     # Which chat model does the extraction / matching / narration work.
     llm_provider: LLMProvider = "anthropic"
