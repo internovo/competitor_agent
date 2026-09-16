@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJde5KbCyx5zsRwn7ATDPQWi0",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Babhai Naka, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.223945,
+        "longitude": 72.84470850000001
+      },
+      "displayName": {
+        "text": "Datta Mandir (Shimpoli)",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJoSF1biyx5zsRSKaYHm3Pm7w",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22352,
+        "longitude": 72.84468
+      },
+      "displayName": {
+        "text": "Datta Mandir (Shimpavali)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJzaO8tS2x5zsRW8eCwJiZvPM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.223879999999998,
+        "longitude": 72.84245
+      },
+      "displayName": {
+        "text": "Shimpavali Village",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

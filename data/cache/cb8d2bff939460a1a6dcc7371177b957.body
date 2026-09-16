@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body><script type="text/javascript" src="/iMTxaC/of/MH/72gq/WCaDP0tXvSaL8/fkOztQX9c97z/Uz4_AQ/UkFDXF1f/UDw5?v=e4f01ae6-aef4-3dfe-5bc4-23efb9e31737&amp;t=25076417"></script>
+<div id="sec-if-cpt-container" role="main" style="display: none">
+    <div class="behavioral-content">
+        <div id="sec-bc-text-container"></div>
+        <div id="sec-bc-tile-parent">
+            <div id="sec-bc-tile-container"></div>
+        </div>
+        <div class="sec-bc-button-parent">
+            <div class="behavioral-button progress-btn-disabled">
+                <div class="btn" id="progress-button" role="button" tabindex="0"  disabled></div>
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="scf-akamai-logo-sec-abc">
+            <div class="scf-akamai-logo-msg">
+                <p class ="scf-akamai-protected-by">Powered and protected by</p>
+            </div>
+            <div class="scf-akamai-logo-img">
+                <img src="https://www.akamai.com/site/ko/images/logo/akamai-logo1.svg" class="scf-akamai-logo" loading="lazy" alt="Akamai">
+            </div>
+            <div class="akamai-privacy" ><a href="https://www.akamai.com/privacy" target="_blank">Privacy<span class="_hidden"></span></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function() {
+        var chlgeId = '';
+        var context = 't';
+        var scripts = document.getElementsByTagName('script');
+        for (var i = 0; i < scripts.length; i++) {
+            if (scripts[i].src && scripts[i].src.match(/t=([^&#]*)/)) {
+                chlgeId = scripts[i].src.match(/t=([^&#]*)/)[1];
+                context = /[?&]ch=true/.test(scripts[i].src) ? 'i' : 't';
+            }
+        }
+        var proxied = window.XMLHttpRequest.prototype.send;
+        window.XMLHttpRequest.prototype.send = function() {
+            var pointer = this
+            var intervalId = window.setInterval(function() {
+                if (pointer.readyState === 4 && pointer.responseURL && pointer.responseURL.indexOf('t=' + chlgeId) > -1) {
+                    if (context === 't') {
+                        location.reload(true);
+                    }
+                    clearInterval(intervalId);
+                }
+            }, 1);
+            return proxied.apply(this, [].slice.call(arguments));
+        };
+    })();
+</script>
+<script type="text/javascript"  src="/iMTxaC/of/MH/72gq/WCaDP0tXvSaL8/fkOztQX9c97zrV9paO/LGE4AQ/IHZ0dms8/W10"></script><noscript><img src="https://housing.com/akam/13/pixel_538df0de?a=dD1hZjRiOTZlNjI0NjRmMzdjYjQ5ZmI5YTg1MGJlYmY5NGU3ZjQ4YWRhJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>
+
+

@@ -70,6 +70,10 @@ async def test_page_is_a_form_the_extractor_already_understands():
     project = Project(id="p", name="Veena Celestia", name_raw="Veena Celestia")
     pages = await src.pages_for(project, ctx)
     assert len(pages) == 1 and pages[0].kind == "json_facts"
+    # The seed page is the project page, fetched under its own URL, and extract drops a
+    # second page carrying a URL it already has. A record filed under the project's URL
+    # is therefore a record nobody reads -- it must be filed under the listing's.
+    assert pages[0].url == "https://www.squareyards.com/projects-in-borivali-west-mumbai"
     facts = ExtractedFacts(**json.loads(pages[0].text))   # the shape the pipeline merges
     assert facts.status == "new_launch" and facts.possession == "2030-12"
     assert facts.carpet_min_sqft is None and facts.rate_min_psf is None

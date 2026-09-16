@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJZ-nABSKx5zsRlcwfk99aJxw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devki Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24248,
+        "longitude": 72.84501
+      },
+      "displayName": {
+        "text": "Shanti Ashram Junction",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJy1EDjiGx5zsRWH7p-LkaGDU",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Devki Nagar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2412119,
+        "longitude": 72.8463579
+      },
+      "displayName": {
+        "text": "Kalpana Chawla Chowk",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    },
+    {
+      "id": "ChIJ7algDyKx5zsRXC-jXKXK5fg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Eksar Village, Eksar, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.242459999999998,
+        "longitude": 72.84488
+      },
+      "displayName": {
+        "text": "Shanti Ashram Junction",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

@@ -40,25 +40,6 @@
       "primaryType": "housing_complex"
     },
     {
-      "id": "ChIJ8wo5ZJ2x5zsRBmjTvcTKtNw",
-      "types": [
-        "association_or_organization",
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "formattedAddress": "Shimpoli, Cross Rd, behind Reliance Mall, Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
-      "location": {
-        "latitude": 19.224268,
-        "longitude": 72.8504273
-      },
-      "displayName": {
-        "text": "Aura by DSD GROUP",
-        "languageCode": "en"
-      },
-      "primaryType": "association_or_organization"
-    },
-    {
       "id": "ChIJA0AbwNew5zsR9I9QBTQTYoo",
       "types": [
         "condominium_complex",
@@ -78,23 +59,42 @@
       "primaryType": "condominium_complex"
     },
     {
-      "id": "ChIJ0cJI79S25zsRDKdxerqLM9c",
+      "id": "ChIJ8wo5ZJ2x5zsRBmjTvcTKtNw",
       "types": [
-        "apartment_building",
+        "association_or_organization",
         "service",
         "point_of_interest",
         "establishment"
       ],
-      "formattedAddress": "sealord building, 1, Sai Baba Nagar Ln, Om Shree Geetanjali Nagar, Ram Nagar, Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "formattedAddress": "Shimpoli, Cross Rd, behind Reliance Mall, Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
       "location": {
-        "latitude": 19.2184061,
-        "longitude": 72.8477805
+        "latitude": 19.224268,
+        "longitude": 72.8504273
       },
       "displayName": {
-        "text": "Sealord Apartment",
+        "text": "Aura by DSD GROUP",
         "languageCode": "en"
       },
-      "primaryType": "apartment_building"
+      "primaryType": "association_or_organization"
+    },
+    {
+      "id": "ChIJ62cAt42x5zsRtWC8oYf9bG4",
+      "types": [
+        "association_or_organization",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Neelkanth Nagar, Neelkanth Nagar, CHSL, Swami Vivekanand Rd, Meghdoot, Hari Om Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2217409,
+        "longitude": 72.85387879999999
+      },
+      "displayName": {
+        "text": "Neelkanth Nagar CHSL",
+        "languageCode": "en"
+      },
+      "primaryType": "association_or_organization"
     },
     {
       "id": "ChIJI5DLc7Gx5zsR3hxnwORjats",
@@ -133,25 +133,6 @@
         "languageCode": "en"
       },
       "primaryType": "clothing_store"
-    },
-    {
-      "id": "ChIJ62cAt42x5zsRtWC8oYf9bG4",
-      "types": [
-        "association_or_organization",
-        "service",
-        "point_of_interest",
-        "establishment"
-      ],
-      "formattedAddress": "Neelkanth Nagar, Neelkanth Nagar, CHSL, Swami Vivekanand Rd, Meghdoot, Hari Om Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
-      "location": {
-        "latitude": 19.2217409,
-        "longitude": 72.85387879999999
-      },
-      "displayName": {
-        "text": "Neelkanth Nagar CHSL",
-        "languageCode": "en"
-      },
-      "primaryType": "association_or_organization"
     },
     {
       "id": "ChIJbR2gv6qx5zsRFSDcW3W5olw",
@@ -246,20 +227,21 @@
       "primaryType": "general_contractor"
     },
     {
-      "id": "ChIJe67vlJax5zsRBVUPMPn0_mk",
+      "id": "ChIJxTQM5Fux5zsRsUaOCJYR218",
       "types": [
         "apartment_building",
+        "general_contractor",
         "service",
         "point_of_interest",
         "establishment"
       ],
-      "formattedAddress": "Shiv Tapasya, opp. Sushrut Hospital, off Eksar Road, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "formattedAddress": "A/004, Prathamesh Horizon, New MHB Colony, New Link Rd, opposite DON Bosco School, New MHB Colony, Ashtavinayak Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
       "location": {
-        "latitude": 19.2348829,
-        "longitude": 72.8468844
+        "latitude": 19.2277736,
+        "longitude": 72.840586700000017
       },
       "displayName": {
-        "text": "Shiv Tapasya",
+        "text": "SAILEE DEVELOPERS",
         "languageCode": "en"
       },
       "primaryType": "apartment_building"
@@ -284,38 +266,39 @@
       "primaryType": "apartment_building"
     },
     {
-      "id": "ChIJBSR8k9ew5zsRAJASazM8vWg",
-      "types": [
-        "premise",
-        "street_address"
-      ],
-      "formattedAddress": "New Tashkent Terrace, Chandavarkar Rd, Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
-      "location": {
-        "latitude": 19.2311232,
-        "longitude": 72.8531488
-      },
-      "displayName": {
-        "text": "New Tashkent Terrace",
-        "languageCode": "en"
-      },
-      "primaryType": "premise"
-    },
-    {
-      "id": "ChIJxTQM5Fux5zsRsUaOCJYR218",
+      "id": "ChIJe67vlJax5zsRBVUPMPn0_mk",
       "types": [
         "apartment_building",
-        "general_contractor",
         "service",
         "point_of_interest",
         "establishment"
       ],
-      "formattedAddress": "A/004, Prathamesh Horizon, New MHB Colony, New Link Rd, opposite DON Bosco School, New MHB Colony, Ashtavinayak Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "formattedAddress": "Shiv Tapasya, opp. Sushrut Hospital, off Eksar Road, Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
       "location": {
-        "latitude": 19.2277736,
-        "longitude": 72.840586700000017
+        "latitude": 19.2348829,
+        "longitude": 72.8468844
       },
       "displayName": {
-        "text": "SAILEE DEVELOPERS",
+        "text": "Shiv Tapasya",
+        "languageCode": "en"
+      },
+      "primaryType": "apartment_building"
+    },
+    {
+      "id": "ChIJ16WA-iqx5zsRJXUkfdwhTOE",
+      "types": [
+        "apartment_building",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli Rd, opp. Rayanigram, Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2227721,
+        "longitude": 72.8494025
+      },
+      "displayName": {
+        "text": "Mayfair Shyam Apartment",
         "languageCode": "en"
       },
       "primaryType": "apartment_building"
@@ -340,23 +323,40 @@
       "primaryType": "apartment_building"
     },
     {
-      "id": "ChIJ16WA-iqx5zsRJXUkfdwhTOE",
+      "id": "ChIJ_-0EImq35zsRoyAi0-pQb3Q",
       "types": [
-        "apartment_building",
+        "general_contractor",
         "service",
         "point_of_interest",
         "establishment"
       ],
-      "formattedAddress": "Shimpoli Rd, opp. Rayanigram, Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "formattedAddress": "Ram Baug Lane, Swami Vivekanand Rd, Poisar, Borivali, W, Mumbai, Maharashtra 400092, India",
       "location": {
-        "latitude": 19.2227721,
-        "longitude": 72.8494025
+        "latitude": 19.2162908,
+        "longitude": 72.8531248
       },
       "displayName": {
-        "text": "Mayfair Shyam Apartment",
+        "text": "Garuda Shatrunjay",
         "languageCode": "en"
       },
-      "primaryType": "apartment_building"
+      "primaryType": "general_contractor"
+    },
+    {
+      "id": "ChIJBSR8k9ew5zsRAJASazM8vWg",
+      "types": [
+        "premise",
+        "street_address"
+      ],
+      "formattedAddress": "New Tashkent Terrace, Chandavarkar Rd, Roshan Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2311232,
+        "longitude": 72.8531488
+      },
+      "displayName": {
+        "text": "New Tashkent Terrace",
+        "languageCode": "en"
+      },
+      "primaryType": "premise"
     },
     {
       "id": "ChIJg0hhGyGx5zsROML0f-ryW5s",

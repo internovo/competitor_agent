@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJxc5R3t6w5zsRdQyJcdi2AHA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sardar Vallabhbhai Patel Rd, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2395036,
+        "longitude": 72.8548181
+      },
+      "displayName": {
+        "text": "Bhagwati Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJVfbiAd-w5zsR3AFZIRHxu2Y",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Cosmos Gardens, Borivali West, Thane, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2406327,
+        "longitude": 72.8544594
+      },
+      "displayName": {
+        "text": "Bhagwati Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJU-rbUt6w5zsR97ViXbk3zXo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24063,
+        "longitude": 72.854692
+      },
+      "displayName": {
+        "text": "Bhagwati Hospital",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

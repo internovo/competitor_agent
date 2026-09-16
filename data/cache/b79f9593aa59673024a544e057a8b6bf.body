@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJFSmS39K25zsRsljFM00nbJ8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21837,
+        "longitude": 72.84263
+      },
+      "displayName": {
+        "text": "Shripal Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJUQzh39K25zsR0MMDsiB4tmc",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Kandivali, Satya Nagar, Kandivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21827,
+        "longitude": 72.842610000000008
+      },
+      "displayName": {
+        "text": "Shripal Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJEdNhMy2x5zsRYiqXYZ5j5Nk",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Shimpoli, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.219696799999998,
+        "longitude": 72.84158
+      },
+      "displayName": {
+        "text": "Chikuwadi Borivali Biryani Centre",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

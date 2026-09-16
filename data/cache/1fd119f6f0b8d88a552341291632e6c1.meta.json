@@ -1,6 +1,6 @@
 {
   "url": "https://housing.com/in/buy/searches/paradigm-anantaara-shimpoli-borivali-w-borivali-west",
-  "status": 406,
-  "fetched_at": "2026-09-08T11:09:25.637303+00:00",
+  "status": 200,
+  "fetched_at": "2026-09-16T12:32:57.161515+00:00",
   "fetcher": "curl_cffi"
 }

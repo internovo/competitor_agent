@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJ6Yc-XyWx5zsR0_b-d8fLGzI",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Yoganand Society, Ashok Nagar, Vazira, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.2323636,
+        "longitude": 72.840918899999991
+      },
+      "displayName": {
+        "text": "Don Bosco School (Borivali )",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJgaG2XiWx5zsR8nS5eATN2P4",
+      "types": [
+        "subway_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mhada Colony, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.231312,
+        "longitude": 72.840864
+      },
+      "displayName": {
+        "text": "Borivali (West)",
+        "languageCode": "en"
+      },
+      "primaryType": "subway_station"
+    },
+    {
+      "id": "ChIJ-ez2OSWx5zsRECFXUnZdKOM",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mhada Colony, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.23247,
+        "longitude": 72.84073
+      },
+      "displayName": {
+        "text": "M.H.B.Police Station (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

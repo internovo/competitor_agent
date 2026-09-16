@@ -1,0 +1,65 @@
+{
+  "places": [
+    {
+      "id": "ChIJxY0wjR6x5zsRNCY3JWR7vsg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24756,
+        "longitude": 72.84798
+      },
+      "displayName": {
+        "text": "I.C.Colony (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJOz7iNh6x5zsR11r3fXXtVI0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.24684,
+        "longitude": 72.85032
+      },
+      "displayName": {
+        "text": "Citizen Bank",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ8bjXNh6x5zsRnjV0SvPrzJA",
+      "types": [
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "I C Colony, Borivali West, Mumbai, Maharashtra 400103, India",
+      "location": {
+        "latitude": 19.2468476,
+        "longitude": 72.8504018
+      },
+      "displayName": {
+        "text": "Citizen Bank",
+        "languageCode": "en"
+      },
+      "primaryType": "transit_station"
+    }
+  ]
+}

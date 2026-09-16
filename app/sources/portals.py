@@ -197,7 +197,10 @@ class SquareYardsListingSource(NullSource):
                 continue
             facts = {k: v for k, v in r.items() if k not in ("name", "url", "lat", "lng") and v is not None}
             facts |= {"name": r["name"], "lat": r["lat"], "lng": r["lng"]}
-            return [Page(url=r["url"], source="squareyards", kind="json_facts",
+            # The listing page, not the project page. It is where these values were
+            # published, and the project page is usually fetched as the seed already --
+            # a page carrying its URL is dropped as a duplicate before it is read.
+            return [Page(url=self._url(ctx), source="squareyards", kind="json_facts",
                          text=json.dumps({k: v for k, v in facts.items() if v is not None}))]
         return []
 

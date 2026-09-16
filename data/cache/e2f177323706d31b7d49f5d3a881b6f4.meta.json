@@ -1,6 +1,6 @@
 {
   "url": "https://housing.com/in/buy/searches/mahendra-jamnadas-kara-borivali-west",
-  "status": 406,
-  "fetched_at": "2026-09-08T11:09:08.658544+00:00",
+  "status": 200,
+  "fetched_at": "2026-09-16T12:32:55.946600+00:00",
   "fetcher": "curl_cffi"
 }

@@ -4,8 +4,8 @@
       "id": "ChIJo6tzLo-x5zsRYKmmB-RbGkA",
       "types": [
         "condominium_complex",
-        "association_or_organization",
         "service",
+        "association_or_organization",
         "point_of_interest",
         "establishment"
       ],
@@ -24,12 +24,12 @@
       "id": "ChIJN64Yzyy35zsRBrAQkreOceo",
       "types": [
         "apartment_building",
+        "apartment_complex",
         "housing_complex",
         "condominium_complex",
-        "apartment_complex",
         "finance",
-        "association_or_organization",
         "service",
+        "association_or_organization",
         "point_of_interest",
         "establishment"
       ],
@@ -88,8 +88,8 @@
       "id": "ChIJiQTBY86w5zsR89RwbgVQMYg",
       "types": [
         "condominium_complex",
-        "association_or_organization",
         "service",
+        "association_or_organization",
         "point_of_interest",
         "establishment"
       ],
@@ -279,8 +279,8 @@
       "id": "ChIJg0hhGyGx5zsROML0f-ryW5s",
       "types": [
         "apartment_building",
-        "association_or_organization",
         "service",
+        "association_or_organization",
         "point_of_interest",
         "establishment"
       ],

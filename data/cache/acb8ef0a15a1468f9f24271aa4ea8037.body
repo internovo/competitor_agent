@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJmShOsCq35zsRHWRt_V0sxXE",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, Gokul Dham Society, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.220048,
+        "longitude": 72.852671
+      },
+      "displayName": {
+        "text": "Kora Kendra",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJB7KzgSq35zsR6Ydsu9KIEF0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Swami Vivekanand Rd, Dattani Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.217892,
+        "longitude": 72.851771
+      },
+      "displayName": {
+        "text": "Shastri Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJEcQEgiq35zsRiKDN3eiqJp4",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Mulji Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21807,
+        "longitude": 72.85159
+      },
+      "displayName": {
+        "text": "Shastri Nagar (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

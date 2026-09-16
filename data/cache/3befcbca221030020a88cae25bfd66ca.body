@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJic0BX9S25zsR-EPjKTz4Aew",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.217074999999998,
+        "longitude": 72.847377
+      },
+      "displayName": {
+        "text": "Saibaba Mandir (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJgbMTX9S25zsRCCMTs62Q4Cs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21717,
+        "longitude": 72.84736
+      },
+      "displayName": {
+        "text": "Saibaba Mandir (Kandivali-W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJT3spgNO25zsRI9Sx8KhOY4Q",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2171,
+        "longitude": 72.84517
+      },
+      "displayName": {
+        "text": "Saibaba Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

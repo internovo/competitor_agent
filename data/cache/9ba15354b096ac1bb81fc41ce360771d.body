@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJ900eGCux5zsRCh7OotAVebw",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Rayani Gram, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2216301,
+        "longitude": 72.8479004
+      },
+      "displayName": {
+        "text": "Haridas Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHaxfPSux5zsReAsAwSJvXy0",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Haridas Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.221696599999998,
+        "longitude": 72.847776
+      },
+      "displayName": {
+        "text": "Haridas Nagar",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJt0Ky3NS25zsRmkymTtC4cqs",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Saibaba Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.21907,
+        "longitude": 72.84787
+      },
+      "displayName": {
+        "text": "Ram Mandir (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

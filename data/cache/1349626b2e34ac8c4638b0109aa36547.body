@@ -1,0 +1,66 @@
+{
+  "places": [
+    {
+      "id": "ChIJpb0As9ew5zsRjGPnI9gzvG8",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sundar Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22948,
+        "longitude": 72.85365
+      },
+      "displayName": {
+        "text": "Vrundas Hotel",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ16Ap99aw5zsRNsvGuvObYcc",
+      "types": [
+        "bus_station",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Gyan Nagar, Mhatre Wadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22862,
+        "longitude": 72.854829999999993
+      },
+      "displayName": {
+        "text": "Borivali (W) Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_station"
+    },
+    {
+      "id": "ChIJERfA8Naw5zsREqRotBmG6bg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Sundar Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22869,
+        "longitude": 72.854959999999991
+      },
+      "displayName": {
+        "text": "Borivali (W) Station",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

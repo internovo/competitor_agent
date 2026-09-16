@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJUb24ddWw5zsRIPkqA50oaPA",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "OPP, Meghdoot, Vivekanand Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.223399,
+        "longitude": 72.852857
+      },
+      "displayName": {
+        "text": "Shimpavali Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJHyyYCNWw5zsRvyE3tTGgKBg",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Meghdoot, Mhatre Wadi, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.223398800000002,
+        "longitude": 72.8533542
+      },
+      "displayName": {
+        "text": "Shimpavali Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJS86YfCqx5zsRUhLJvvXzxiY",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Gautam Nagar, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.2237726,
+        "longitude": 72.8510752
+      },
+      "displayName": {
+        "text": "Gokhale High School (Borivali -W)",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

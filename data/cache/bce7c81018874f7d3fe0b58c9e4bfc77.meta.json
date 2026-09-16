@@ -1,6 +1,6 @@
 {
   "url": "https://housing.com/in/buy/searches/bharat-v-kenny-borivali-west",
-  "status": 406,
-  "fetched_at": "2026-09-08T11:09:25.552069+00:00",
+  "status": 200,
+  "fetched_at": "2026-09-16T12:33:12.752841+00:00",
   "fetcher": "curl_cffi"
 }

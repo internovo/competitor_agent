@@ -1,0 +1,67 @@
+{
+  "places": [
+    {
+      "id": "ChIJXcpFIS-x5zsR_PpwpW37t1c",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Lokmanya Tilak Road, Prerna Nagar, Babhai, Borivali West, Vazira, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.228883,
+        "longitude": 72.844653
+      },
+      "displayName": {
+        "text": "Vazira Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJW-Z-Cy-x5zsRTzjkFW2_r4U",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Amarkant Jha Marg, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400091, India",
+      "location": {
+        "latitude": 19.229163,
+        "longitude": 72.844467
+      },
+      "displayName": {
+        "text": "Vazira Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    },
+    {
+      "id": "ChIJ_bMsASmx5zsR8HLQULNLFGo",
+      "types": [
+        "bus_stop",
+        "transit_stop",
+        "transit_station",
+        "transportation_service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Babhai Naka, Borivali West, Mumbai, Maharashtra 400092, India",
+      "location": {
+        "latitude": 19.22852,
+        "longitude": 72.848469
+      },
+      "displayName": {
+        "text": "Babhai Naka",
+        "languageCode": "en"
+      },
+      "primaryType": "bus_stop"
+    }
+  ]
+}

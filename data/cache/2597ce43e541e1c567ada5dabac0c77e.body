@@ -749,7 +749,7 @@
       <label for="edit-summary-district">District</label>
         <select class="select1 form-select" data-drupal-selector="edit-summary-district" id="edit-summary-district" name="summary_district"><option value="" selected="selected">District</option></select>
         </div>
-</div></div><input autocomplete="off" data-drupal-selector="form-l5w1rtweah9lkkohviiy1mvdrgg16niz-d-2igdo-bs" type="hidden" name="form_build_id" value="form-L5W1rtweaH9LkkOhVIIy1MvDRGG16nIZ_D-2igDo_Bs" />
+</div></div><input autocomplete="off" data-drupal-selector="form-wu2uhodczx72uwmbxrp6cxspyw4mdts7qewzgj4sn5i" type="hidden" name="form_build_id" value="form-wU2UHodczX72UwmBxRP6cxspyw4MDtS7QEWZgj4Sn5I" />
 <input data-drupal-selector="edit-project-summary-form" type="hidden" name="form_id" value="project_summary_form" />
 <div class="row"><div class="btn-group" role="group" aria-label="Basic example"><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="btn-default small title7 me-2 button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" />
 <input class="btn-default small grey button js-form-submit form-submit" data-drupal-selector="edit-reset" type="submit" id="edit-reset" name="op" value="Reset" />
@@ -835,7 +835,7 @@
     <div id="block-visitorstotalcountsfooterblock">
   
     
-      <p>Total Visitors : <span class="counterPerDay">87211528</span></p>
+      <p>Total Visitors : <span class="counterPerDay">88097040</span></p>
   </div>
 
   </div>
@@ -844,7 +844,7 @@
     <div id="block-visitorscountsfooterblock">
   
     
-      <p>Today's Count : <span class="counterPerDay">78002</span></p>
+      <p>Today's Count : <span class="counterPerDay">72287</span></p>
   </div>
 
   </div>
@@ -853,7 +853,7 @@
     <div class="views-element-container" id="block-views-block-page-last-updated-block-1">
   
     
-      <div><div class="js-view-dom-id-7c61c594d63476b550ea1f05d9ff33ee5536e6095c553b4b904e80591f785095">
+      <div><div class="js-view-dom-id-d10252a57f11a571163bdc533acee9e554aa5801046fbcf6178ce52f1aea0e88">
   
   
   
@@ -862,7 +862,7 @@
   
   
 
-      <div class="views-row"><div class="views-field views-field-changed"><div class="field-content"><p class="last-update">Last Updated : 03/09/2026</p></div></div></div>
+      <div class="views-row"><div class="views-field views-field-changed"><div class="field-content"><p class="last-update">Last Updated : 11/09/2026</p></div></div></div>
 
     
 
