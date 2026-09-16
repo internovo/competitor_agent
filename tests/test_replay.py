@@ -45,10 +45,15 @@ def test_no_key_is_needed_and_no_model_is_built(borivali):
 
 
 def test_the_borivali_table_is_the_one_the_anthropic_budget_paid_for(borivali):
+    """Re-baselined on 16 Sep from 4 eligible / 2 comparable. Two changes, both real:
+    the SquareYards locality page put another nine buildings in the circle, and the
+    register-listing guard stopped hiding projects whose form is filled. The corpus
+    itself grew -- a live run writes into the same data/cache the frozen suburbs read
+    -- so these numbers are the richer recording, not a different rule."""
     _, _, _, payload = borivali
-    assert payload["counts"]["eligible"] == 4      # was 5; the clothing shop left
-    assert payload["counts"]["comparable"] == 2
-    assert [c["name"] for c in payload["competitors"][:2]] == ["Sanghvi Horizon", "Avyukta Neelkamal"]
+    assert payload["counts"]["eligible"] == 14
+    assert payload["counts"]["comparable"] == 11
+    assert [c["name"] for c in payload["competitors"][:2]] == ["Nicco Vanashri Heights", "Sanghvi Horizon"]
     assert payload["competitors"][0]["match_score"] is not None
 
 
@@ -85,13 +90,21 @@ def test_the_frozen_compare_contract_survives_the_replay(borivali):
 
 
 def test_the_carpet_band_refuses_exactly_the_ranges_it_should(borivali):
-    """Two in Borivali, both read off pages listing something larger than the
-    building. Nothing plausible was taken."""
+    """One in Borivali, read off a page listing something larger than the building.
+    Nothing plausible was taken.
+
+    Two projects left this list on 16 Sep, and that is the band working rather than
+    weakening: Airavat and Phoenix were refused at 1184-3734 and 1161-5031 because the
+    only pages we had quoted saleable areas across a whole society. SquareYards' own
+    project page states each one's carpet range, so both now have a figure a rep can
+    use -- 772-1182 and 850-1918 -- and neither needed the band to save it."""
     _, rec, _, _ = borivali
     refused = {p.name: p.carpet_sqft.span for p in rec.projects
                if p.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"}
-    assert refused == {"Airavat By Bhoomi Group": [1184, 3734],
-                       "H. Rishabraj Phoenix": [1161, 5031]}
+    assert refused == {"Mayfair 14": [680, 8452]}
+    for name, lo in (("Airavat By Bhoomi Group", 772), ("H. Rishabraj Phoenix", 850)):
+        p = next(x for x in rec.projects if x.name == name)
+        assert p.carpet_sqft.absent is None and p.carpet_sqft.value.min_sqft == lo
 
 
 def test_the_other_two_suburbs_replay_too_so_the_surface_is_not_one_locality():

@@ -57,10 +57,21 @@ def not_a_project(project: Project) -> str | None:
     with.
     """
     phases = project.value("rera_phases") or []
-    if len(phases) >= MAX_RERA_PHASES:
-        return (f"{len(phases)} RERA numbers on one candidate: the page behind this name is a "
-                f"register listing, not a project")
-    return None
+    if len(phases) < MAX_RERA_PHASES:
+        return None
+    # The count was measured when pages came from search snippets, where no real project
+    # carried more than two numbers. Reading a portal's own project page changed that: it
+    # lists the builder's other work down the side, which put 5, 6 and 7 numbers on three
+    # genuine under-construction launches in Borivali West and hid all three.
+    #
+    # What a register listing cannot do is carry ONE carpet range, ONE rate and ONE
+    # possession date, because those belong to individual projects and a listing is a page
+    # of many. A candidate holding all three has a form filled from a project's own page,
+    # and the extra numbers beside it are a sidebar.
+    if all(project.value(f) is not None for f in ("carpet_sqft", "rate_psf", "possession")):
+        return None
+    return (f"{len(phases)} RERA numbers on one candidate: the page behind this name is a "
+            f"register listing, not a project")
 
 
 def apply(projects: list[Project], own: OwnProject, radius_km: float, today: date | None = None) -> list[Project]:

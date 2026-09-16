@@ -412,12 +412,20 @@ def test_a_tower_with_a_shop_downstairs_is_still_a_tower():
 
 
 def test_a_candidate_carrying_a_registers_worth_of_rera_numbers_is_a_listing(full_project):
+    """Many numbers AND a form nobody could fill. A portal's project page lists the
+    builder's other work down the side, so the count alone hid three genuine 6/6
+    launches in Borivali West; what a register listing cannot do is carry one carpet
+    range, one rate and one possession date."""
     from app.logic import eligibility
     from app.models.schema import ReraPhase
 
     assert eligibility.not_a_project(full_project) is None      # one phase, a real project
     full_project.rera_phases = fr("rera_phases", fv([ReraPhase(number=f"P5180000000{i}") for i in range(6)]))
-    assert "register listing" in eligibility.not_a_project(full_project)
+    assert eligibility.not_a_project(full_project) is None      # six, but the form is filled
+
+    listing = full_project.model_copy(deep=True)
+    listing.carpet_sqft = fr("carpet_sqft")     # nothing published a carpet range
+    assert "register listing" in eligibility.not_a_project(listing)
 
 
 # --- a subject propOG has not filled in yet ---------------------------------
