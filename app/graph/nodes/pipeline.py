@@ -17,7 +17,7 @@ from app.llm.client import ExtractionDegraded, FatalLLMError
 from app.logic import completeness, conflicts, eligibility, match_score, resolve
 from app.logic.geo import haversine_km
 from app.extract import deterministic
-from app.logic.merge import consolidate_configurations, consolidate_rera, merge_facts
+from app.logic.merge import consolidate_configurations, consolidate_rera, merge_facts, strip_uncorroborated_rera
 from app.models.schema import (
     REPORTED_FIELDS, Candidate, ExtractedFacts, FieldValue, Page, Project, Provenance, ReraPhase, ScanRecord,
 )
@@ -322,6 +322,8 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             log.append(f"extract[{project.id}][{s.name}]: failed ({type(r).__name__}: {r})")
             continue
         for pg in r:
+            if deterministic.is_comparison_page(pg.url):
+                continue
             if pg.url not in seen_urls:
                 seen_urls.add(pg.url)
                 pages.append(pg)
@@ -481,6 +483,7 @@ async def filter_node(state: GraphState, config: RunnableConfig) -> dict:
     projects = eligibility.apply(state["projects"], state["own"], state["radius_km"], date.today())
     for p in projects:
         p.not_a_project = eligibility.not_a_project(p)
+        strip_uncorroborated_rera(p)
     return {"projects": projects}
 
 

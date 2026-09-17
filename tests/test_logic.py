@@ -309,15 +309,87 @@ def test_the_carpet_anchor_is_the_subjects_own_midpoint(own):
     assert conflicts.carpet_anchor_for(own) == CARPET_ANCHOR
 
 
-def test_an_implausible_carpet_beats_sources_disagreeing_about_it(full_project):
-    """Two refusals on one field is one reason too many; the stronger one is reported."""
+def test_an_implausible_carpet_is_set_aside_and_the_credible_one_stands(full_project):
+    """One bad page is a fact about that page. Withdrawing the field for it made every
+    page read past the first one more chance to lose a value."""
     from app.models.schema import CarpetRange
 
     full_project.carpet_sqft = fr("carpet_sqft", fv(CarpetRange(min_sqft=400, max_sqft=900)),
                                   fv(CarpetRange(min_sqft=1360, max_sqft=4218), source="tavily"))
     conflicts.apply(full_project, carpet_anchor=CARPET_ANCHOR)
-    assert full_project.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"
+    assert full_project.carpet_sqft.absent is None
+    assert full_project.carpet_sqft.value.max_sqft == 900
+    assert [fv.value.max_sqft for fv in full_project.carpet_sqft.disputed] == [4218]
     assert not [c for c in full_project.conflicts if c.field == "carpet_sqft"]
+
+
+def test_one_off_band_rate_does_not_withdraw_the_projects_own(full_project):
+    """Ami One: its SquareYards page quotes 32,750, a comparison page 2,533."""
+    full_project.rate_psf = fr("rate_psf", fv(RateValue(min_psf=32750, max_psf=32750), source="squareyards"),
+                               fv(RateValue(min_psf=2533, max_psf=2533), source="tavily"))
+    conflicts.apply(full_project, ANCHOR)
+    assert full_project.rate_psf.absent is None and full_project.rate_psf.value.min_psf == 32750
+
+
+def test_a_shared_rate_is_set_aside_when_the_project_quotes_its_own():
+    """Mangalesh: 35,800 on its own page, the locality's 25,003 on MagicBricks."""
+    ps = [_at(f"p{i}", 25003) for i in range(3)]
+    ps[0].rate_psf.observe(fv(RateValue(min_psf=35800, max_psf=35800, basis="base"), source="squareyards"))
+    conflicts.apply(ps[0], 38000.0, conflicts.shared_rates(ps))
+    assert ps[0].rate_psf.absent is None and ps[0].rate_psf.value.min_psf == 35800
+
+
+def test_agreeing_top_sources_are_not_a_tie(full_project):
+    """Two SquareYards pages saying Dec 2028 beside aggregators saying 2028 and 2029
+    were withdrawn as a tie. Agreement at the top is the strongest case there is."""
+    full_project.possession = fr("possession", fv(date(2028, 12, 1), source="squareyards"),
+                                 fv(date(2028, 12, 1), source="squareyards"),
+                                 fv(date(2028, 1, 1), source="tavily"), fv(date(2029, 1, 1), source="tavily"))
+    conflicts.apply(full_project)
+    assert full_project.possession.value == date(2028, 12, 1)
+    assert "tavily says 2028-01-01" in full_project.conflicts[0].detail
+
+
+def test_overlapping_carpet_ranges_publish_the_better_source(full_project):
+    from app.models.schema import CarpetRange
+
+    full_project.carpet_sqft = fr("carpet_sqft", fv(CarpetRange(min_sqft=425, max_sqft=834), source="squareyards"),
+                                  fv(CarpetRange(min_sqft=726, max_sqft=877), source="tavily"))
+    conflicts.apply(full_project)
+    assert full_project.carpet_sqft.value.min_sqft == 425
+
+
+def test_disjoint_carpet_ranges_are_still_withdrawn(full_project):
+    """Ranges that never meet may be two buildings; no priority makes one of them ours."""
+    from app.models.schema import CarpetRange
+
+    full_project.carpet_sqft = fr("carpet_sqft", fv(CarpetRange(min_sqft=400, max_sqft=600), source="squareyards"),
+                                  fv(CarpetRange(min_sqft=900, max_sqft=1400), source="tavily"))
+    conflicts.apply(full_project)
+    assert full_project.carpet_sqft.absent == "SOURCES_DISAGREE"
+
+
+def test_a_sidebar_rera_number_is_dropped_and_a_corroborated_one_kept():
+    from app.logic.merge import strip_uncorroborated_rera
+    from app.models.schema import Project, Provenance, ReraPhase
+
+    def page(url, *nums, source="squareyards"):
+        return FieldValue(value=[ReraPhase(number=n) for n in nums], prov=Provenance(source=source, url=url),
+                          method="deterministic")
+
+    p = Project(id="h", name="Hirani Dollars Avenue", rera_phases=[
+        page("sy/hirani", "P51800076786", "P51800019624", "P51800048237"),
+        page("houssed/hirani", "P51800076786", "P51800048237", source="tavily")])
+    strip_uncorroborated_rera(p)
+    assert [[ph.number for ph in v.value] for v in p.rera_phases.values] == [
+        ["P51800076786", "P51800048237"], ["P51800076786", "P51800048237"]]
+
+
+def test_a_comparison_page_is_recognised_by_its_url():
+    from app.extract.deterministic import is_comparison_page
+
+    assert is_comparison_page("https://www.mumbaipropertyexchange.com/compare/one-borivali-vs-kamla-rajesh/1-2")
+    assert not is_comparison_page("https://www.squareyards.com/mumbai-residential-property/kamla-rajesh/234573/project")
 
 
 # --- promoter rows vs projects ---------------------------------------------

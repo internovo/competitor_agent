@@ -805,6 +805,17 @@ def mentions_project(text: str, name: str) -> bool:
     return len(rarest) >= 5 and bool(re.search(re.escape(rarest), text, re.IGNORECASE))
 
 
+COMPARISON_URL = re.compile(r"/compare/|-vs-", re.IGNORECASE)
+
+
+def is_comparison_page(url: str | None) -> bool:
+    """A head-to-head page ("one-borivali-vs-kamla-rajesh") states two projects' facts
+    side by side, and nothing on it says which column is ours. Kamla Rajesh took One
+    Borivali's carpet range, rate and RERA number off one, and lost its own carpet to
+    the disagreement."""
+    return bool(url and COMPARISON_URL.search(url))
+
+
 def relevant_pages(pages: list, name: str | None, text_of=lambda p: p.text) -> list:
     """Pages that actually mention the project.
 

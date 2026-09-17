@@ -121,6 +121,27 @@ def consolidate_configurations(project: Project) -> Project:
     return project
 
 
+def strip_uncorroborated_rera(project: Project) -> Project:
+    """Keep the registration numbers something vouches for; drop the sidebar.
+
+    A portal project page lists its own number first and the builder's -- or the
+    portal's -- other projects down the side. Borivali West put P51800019624,
+    P51800019677, P51800019693 and P51800019658 on Hirani, Kamla, Shraddha, Mangalesh and
+    Gautam Prabhu: five builders, one sidebar. A number stays when a page led with it,
+    MahaRERA verified it, or two pages about this project both carry it.
+
+    Runs after not_a_project, which needs the raw count to recognise a register listing.
+    Nothing is ever emptied: every observation keeps the number it led with.
+    """
+    pages: dict[str, set[str]] = {}
+    for v in project.rera_phases.values:
+        for ph in v.value:
+            pages.setdefault(ph.number, set()).add(v.prov.url or v.prov.source)
+    for v in project.rera_phases.values:
+        v.value = [ph for i, ph in enumerate(v.value) if i == 0 or ph.verified or len(pages[ph.number]) > 1]
+    return project
+
+
 def consolidate_rera(project: Project) -> Project:
     """If several sources mention RERA numbers, a number seen on MahaRERA counts as verified everywhere."""
     verified = {ph.number for v in project.rera_phases.values if v.prov.source == "maharera" for ph in v.value}

@@ -11,7 +11,7 @@ from collections import Counter
 from statistics import median
 
 from app.config import settings
-from app.models.schema import Conflict, FieldReport, FieldValue, OwnProject, Project, _priority
+from app.models.schema import CONFIDENCE_RANK, Conflict, FieldReport, FieldValue, OwnProject, Project, _priority
 
 RANGE_FIELDS = (("rate_psf", "min_psf", "max_psf"), ("carpet_sqft", "min_sqft", "max_sqft"))
 
@@ -25,69 +25,75 @@ def detect(project: Project) -> list[Conflict]:
     return [c for c, _ in _detect_with_spans(project)]
 
 
-def _detect_with_spans(project: Project) -> list[tuple[Conflict, list]]:
-    out: list[tuple[Conflict, list]] = []
-
-    rates = project.rate_psf.observations
-    if len(rates) > 1:
-        lows = [fv.value.min_psf for fv in rates]
-        highs = [fv.value.max_psf for fv in rates]
-        bases = {fv.value.basis for fv in rates}
+def _disagreement(field: str, obs: list[FieldValue]) -> tuple[Conflict, list] | None:
+    """(conflict, span) when these observations of one field do not agree, else None."""
+    if len(obs) < 2:
+        return None
+    if field == "rate_psf":
+        lows = [fv.value.min_psf for fv in obs]
+        highs = [fv.value.max_psf for fv in obs]
+        bases = {fv.value.basis for fv in obs}
         spread = max(highs) / max(1, min(lows))
         if spread > settings.rate_conflict_ratio or len(bases) > 1:
             pct = round((spread - 1) * 100)
-            detail = f"{len(rates)} sources disagree by {pct}%"
+            detail = f"{len(obs)} sources disagree by {pct}%"
             if len(bases) > 1:
                 detail += "; basis not consistent (" + ", ".join(sorted(bases)) + ")"
-            out.append((Conflict(field="rate_psf", n_sources=len(rates), detail=detail), [min(lows), max(highs)]))
-
-    poss = project.possession.observations
-    if len(poss) > 1:
-        dates = [fv.value for fv in poss]
+            return Conflict(field=field, n_sources=len(obs), detail=detail), [min(lows), max(highs)]
+    elif field == "possession":
+        dates = [fv.value for fv in obs]
         gap = _months_between(min(dates), max(dates))
         if gap > settings.possession_conflict_months:
-            out.append((Conflict(field="possession", n_sources=len(poss), detail=f"{len(poss)} sources differ by {gap} months"),
-                        [min(dates).isoformat(), max(dates).isoformat()]))
-
-    carpets = project.carpet_sqft.observations
-    if len(carpets) > 1:
-        mins = {fv.value.min_sqft for fv in carpets}
-        maxs = {fv.value.max_sqft for fv in carpets}
-        if len(mins) > 1 or len(maxs) > 1:
-            lo, hi = min(mins), max(mins)
-            if hi / max(1, lo) > settings.rate_conflict_ratio:
-                out.append((Conflict(field="carpet_sqft", n_sources=len(carpets), detail=f"{len(carpets)} sources give different carpet ranges"),
-                            [min(mins), max(maxs)]))
-
-    # A range that arrived inverted and too wide to be an assignment slip (those are
-    # sorted in the model). Two numbers from two places, and we cannot tell which is the
-    # floor, so neither is published.
-    for field, lo_at, hi_at in RANGE_FIELDS:
-        for fv in project.report(field).observations:
-            lo, hi = getattr(fv.value, lo_at), getattr(fv.value, hi_at)
-            if lo > hi and not any(c.field == field for c, _ in out):
-                out.append((Conflict(field=field, n_sources=1, detail=f"one source gave an inverted range ({hi}-{lo})"),
-                            [hi, lo]))
-
-    configs = project.configurations.observations
-    if len(configs) > 1:
+            return (Conflict(field=field, n_sources=len(obs), detail=f"{len(obs)} sources differ by {gap} months"),
+                    [min(dates).isoformat(), max(dates).isoformat()])
+    elif field == "carpet_sqft":
+        mins = {fv.value.min_sqft for fv in obs}
+        maxs = {fv.value.max_sqft for fv in obs}
+        if (len(mins) > 1 or len(maxs) > 1) and max(mins) / max(1, min(mins)) > settings.rate_conflict_ratio:
+            return (Conflict(field=field, n_sources=len(obs), detail=f"{len(obs)} sources give different carpet ranges"),
+                    [min(mins), max(maxs)])
+    elif field == "configurations":
         from app.extract.deterministic import UNDECLARED_CONFIG_LIMIT
 
         # Partial lists are merged into their union in logic/merge.py. What is left here
         # is a span too wide to be one building's inventory -- the signature of several
         # projects' listings read off one page.
-        union = sorted({b for fv in configs for b in fv.value})
+        union = sorted({b for fv in obs for b in fv.value})
         if len(union) >= UNDECLARED_CONFIG_LIMIT:
-            out.append((Conflict(field="configurations", n_sources=len(configs),
-                                 detail=f"{len(configs)} sources span {union[0]}-{union[-1]} BHK, too wide for one building"),
-                        [union[0], union[-1]]))
+            return (Conflict(field=field, n_sources=len(obs),
+                             detail=f"{len(obs)} sources span {union[0]}-{union[-1]} BHK, too wide for one building"),
+                    [union[0], union[-1]])
+    return None
 
+
+def _inverted(project: Project) -> list[tuple[Conflict, list]]:
+    """A range that arrived inverted and too wide to be an assignment slip (those are
+    sorted in the model). Two numbers from two places, and we cannot tell which is the
+    floor, so neither is published -- and no priority can pick a side of it."""
+    out = []
+    for field, lo_at, hi_at in RANGE_FIELDS:
+        for fv in project.report(field).observations:
+            lo, hi = getattr(fv.value, lo_at), getattr(fv.value, hi_at)
+            if lo > hi:
+                out.append((Conflict(field=field, n_sources=1, detail=f"one source gave an inverted range ({hi}-{lo})"),
+                            [hi, lo]))
+                break
     return out
 
 
-# Scalars SOURCE_PRIORITY can arbitrate. Sets are merged in logic/merge.py instead, and
-# carpet ranges are left withdrawn: two different ranges are two different unit mixes.
-DECIDABLE_FIELDS = ("possession", "rate_psf")
+def _detect_with_spans(project: Project) -> list[tuple[Conflict, list]]:
+    out = [d for f in ("rate_psf", "possession", "carpet_sqft")
+           if (d := _disagreement(f, project.report(f).observations))]
+    out += [(c, s) for c, s in _inverted(project) if not any(x.field == c.field for x, _ in out)]
+    if d := _disagreement("configurations", project.configurations.observations):
+        out.append(d)
+    return out
+
+
+# Fields SOURCE_PRIORITY can arbitrate. Configuration sets are merged in logic/merge.py
+# instead. Carpet is decidable only when the ranges overlap: two overlapping ranges are
+# two views of one unit mix, two disjoint ones may be two buildings.
+DECIDABLE_FIELDS = ("possession", "rate_psf", "carpet_sqft")
 
 
 def _show(value) -> str:
@@ -95,10 +101,16 @@ def _show(value) -> str:
         return value.isoformat()
     if hasattr(value, "min_psf"):
         return f"{value.min_psf:,}" if value.min_psf == value.max_psf else f"{value.min_psf:,}-{value.max_psf:,}"
+    if hasattr(value, "min_sqft"):
+        return f"{value.min_sqft:,}-{value.max_sqft:,} sqft"
     return str(value)
 
 
-def pick_by_priority(report: FieldReport) -> FieldValue | None:
+def _overlap(a, b) -> bool:
+    return a.min_sqft <= b.max_sqft and b.min_sqft <= a.max_sqft
+
+
+def pick_by_priority(report: FieldReport, field: str) -> FieldValue | None:
     """The observation SOURCE_PRIORITY chooses, when it can choose at all.
 
     Withdrawing a field because two sources differ threw away 36 of 58 possession dates
@@ -106,11 +118,19 @@ def pick_by_priority(report: FieldReport) -> FieldValue | None:
     priority order already records which source we trust; using it is selection, not
     correction, and the published value is still one a named source stated.
 
-    Two sources at the same priority give no basis to prefer either, so the field stays
-    withdrawn. That is the only case where "we do not know" is still the honest answer.
+    Sources at the top priority that disagree with EACH OTHER give no basis to prefer
+    one, so the field stays withdrawn. Sources there that agree are not a tie: a
+    SquareYards project page and the SquareYards locality page both saying Dec 2028
+    were withdrawn beside two aggregators saying 2028 and 2029, which made every page
+    read past the first a reason to publish less.
     """
-    ranked = sorted(report.observations, key=lambda fv: _priority(fv.prov.source))
-    if len(ranked) < 2 or _priority(ranked[0].prov.source) == _priority(ranked[1].prov.source):
+    ranked = sorted(report.observations, key=lambda fv: (_priority(fv.prov.source), CONFIDENCE_RANK[fv.confidence]))
+    if len(ranked) < 2:
+        return None
+    top = [fv for fv in ranked if _priority(fv.prov.source) == _priority(ranked[0].prov.source)]
+    if len(top) == len(ranked) or _disagreement(field, top):
+        return None
+    if field == "carpet_sqft" and not all(_overlap(ranked[0].value, fv.value) for fv in ranked[1:]):
         return None
     return ranked[0]
 
@@ -145,22 +165,41 @@ def carpet_anchor_for(own: OwnProject) -> float | None:
     return (c.min_sqft + c.max_sqft) / 2 if c else None
 
 
-def _outside_band(observations, lo_at: str, hi_at: str, anchor: float | None,
-                  min_ratio: float, max_ratio: float) -> list[int] | None:
-    """The observed span, when it sits outside the believable band. Never adjusted.
+def _outside_band(lo_at: str, hi_at: str, anchor: float | None, min_ratio: float, max_ratio: float):
+    """Is this one observation outside the believable band? Never adjusted.
 
     Both bounds must hold: Raghav UTOPIA quoted 295-26,412, where the top is credible
     and the bottom is not, and half a rate is not a rate. The whole range goes, for the
     same reason -- one end being readable does not make the other one true.
     """
     if anchor is None:
-        return None
+        return lambda fv: False
     floor, ceiling = anchor * min_ratio, anchor * max_ratio
-    for fv in observations:
+
+    def bad(fv) -> bool:
         lo, hi = sorted((getattr(fv.value, lo_at), getattr(fv.value, hi_at)))
-        if lo < floor or hi > ceiling:
-            return [lo, hi]
-    return None
+        return lo < floor or hi > ceiling
+    return bad
+
+
+def _set_aside(report: FieldReport, bad) -> FieldValue | None:
+    """Take the observations `bad` rejects out of the published set. The first one, or None.
+
+    A bad reading is a fact about one page, not about the field. Refusing the whole
+    field for it meant every page read past the first was one more chance to lose a
+    value: Ami One's own SquareYards page quotes 32,750, and a comparison page quoting
+    2,533 withdrew it. The rejected readings stay in `disputed`, where the card can
+    still show them, and the field is withdrawn only when nothing credible is left.
+    """
+    gone = [fv for fv in report.values if bad(fv)]
+    if gone:
+        report.values = [fv for fv in report.values if not bad(fv)]
+        report.disputed = gone
+    return gone[0] if gone else None
+
+
+def _span(fv, lo_at: str, hi_at: str) -> list[int]:
+    return sorted((getattr(fv.value, lo_at), getattr(fv.value, hi_at)))
 
 
 def shared_rates(projects: list[Project]) -> dict[tuple[int, int], int]:
@@ -178,44 +217,42 @@ def shared_rates(projects: list[Project]) -> dict[tuple[int, int], int]:
     return {pair: n for pair, n in seen.items() if n >= settings.shared_rate_min_projects}
 
 
-def _shared(project: Project, shared: dict[tuple[int, int], int]) -> list[int] | None:
-    """[value, how many projects quoted it] when this project's rate is not its own."""
-    for fv in project.rate_psf.observations:
-        pair = (fv.value.min_psf, fv.value.max_psf)
-        if pair in shared:
-            return [pair[0], shared[pair]]
-    return None
+REFUSALS = ("IMPLAUSIBLE_RATE", "SHARED_ACROSS_PROJECTS", "IMPLAUSIBLE_CARPET")
 
 
 def apply(project: Project, anchor: float | None = None,
           shared: dict[tuple[int, int], int] | None = None,
           carpet_anchor: float | None = None) -> Project:
-    found = _detect_with_spans(project)
-    # Strongest refusal wins: a figure we cannot credit at all, then one that is not this
-    # project's to claim, then sources that merely disagree.
-    refused = _outside_band(project.rate_psf.observations, "min_psf", "max_psf", anchor,
-                            settings.rate_plausible_min_ratio, settings.rate_plausible_max_ratio)
-    borrowed = _shared(project, shared or {}) if refused is None else None
-    carpet_refused = _outside_band(project.carpet_sqft.observations, "min_sqft", "max_sqft", carpet_anchor,
-                                   settings.carpet_plausible_min_ratio, settings.carpet_plausible_max_ratio)
-    if refused is not None or borrowed is not None:
-        found = [(c, s) for c, s in found if c.field != "rate_psf"]
-    if carpet_refused is not None:
-        found = [(c, s) for c, s in found if c.field != "carpet_sqft"]
+    # Readings that cannot be this project's are set aside one by one before anything is
+    # compared, so a bad page can neither withdraw a good value nor start a disagreement.
+    # Strongest refusal wins when nothing is left: a figure we cannot credit at all, then
+    # one that is not this project's to claim.
+    rate = project.rate_psf
+    if first := _set_aside(rate, _outside_band("min_psf", "max_psf", anchor, settings.rate_plausible_min_ratio,
+                                               settings.rate_plausible_max_ratio)):
+        if not rate.values:
+            rate.mark_absent("IMPLAUSIBLE_RATE", span=_span(first, "min_psf", "max_psf"))
+    shared = shared or {}
+    if rate.values and (first := _set_aside(rate, lambda fv: (fv.value.min_psf, fv.value.max_psf) in shared)):
+        if not rate.values:
+            rate.mark_absent("SHARED_ACROSS_PROJECTS", span=[first.value.min_psf, shared[(first.value.min_psf, first.value.max_psf)]])
+    carpet = project.carpet_sqft
+    if first := _set_aside(carpet, _outside_band("min_sqft", "max_sqft", carpet_anchor, settings.carpet_plausible_min_ratio,
+                                                 settings.carpet_plausible_max_ratio)):
+        if not carpet.values:
+            carpet.mark_absent("IMPLAUSIBLE_CARPET", span=_span(first, "min_sqft", "max_sqft"))
+
+    found = [(c, s) for c, s in _detect_with_spans(project) if project.report(c.field).absent not in REFUSALS]
+    inverted = {c.field for c, _ in _inverted(project)}
     project.conflicts = [c for c, _ in found]
     for conflict, span in found:
         report = project.report(conflict.field)
-        winner = pick_by_priority(report) if conflict.field in DECIDABLE_FIELDS else None
+        decidable = conflict.field in DECIDABLE_FIELDS and conflict.field not in inverted
+        winner = pick_by_priority(report, conflict.field) if decidable else None
         if winner is not None:
             # The best source's value stands and the disagreement travels beside it.
             conflict.detail = _stated_beside_it(report, winner)
             continue
         # No basis to choose: we saw several values and publish none of them as the answer.
         report.mark_absent("SOURCES_DISAGREE", span=span)
-    if refused is not None:
-        project.rate_psf.mark_absent("IMPLAUSIBLE_RATE", span=refused)
-    elif borrowed is not None:
-        project.rate_psf.mark_absent("SHARED_ACROSS_PROJECTS", span=borrowed)
-    if carpet_refused is not None:
-        project.carpet_sqft.mark_absent("IMPLAUSIBLE_CARPET", span=carpet_refused)
     return project
