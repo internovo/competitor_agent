@@ -95,6 +95,10 @@ geocode -> discover -> resolve -> [extract per project, in parallel] -> filter -
 | score | code | completeness x/6 -> COMPARABLE / PARTIAL / THIN; conflicts; match score for 6/6 only |
 | narrate | Claude, template fallback | One sentence per card and per comparison section, from computed numbers only |
 
+A finished scan carries `incomplete` and `sources_unavailable` -- `[{source, status, reason}]` -- when a paid API
+(Tavily, Google Places) refused our key or quota. The scan still returns what the other sources found; the client
+must show that the list is short because a source did not run, not because the neighbourhood is empty.
+
 A finished scan also carries `compare_columns` -- `{own, competitors:{<id>: column}}` -- the comparable fact set
 per project, for the projects a rep can actually analyse. The cards cannot stand in for these: a card carries no
 amenities at any depth, no RERA phase list, and two of structure's seven fields, so a comparison built from cards

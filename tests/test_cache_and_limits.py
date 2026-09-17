@@ -174,3 +174,38 @@ def test_live_mode_boots_with_the_secret_set(monkeypatch):
     monkeypatch.setattr(settings, "agent_token", "s3cret")
     with TestClient(app) as c:
         assert c.get("/health").status_code == 200
+
+
+# --- a refused key is a source that did not run, not an empty neighbourhood ---
+
+def test_a_refused_search_quota_marks_the_scan_incomplete(tmp_path):
+    """17 Sep: Tavily answered 432 to every call and the scan looked normal."""
+    f = _fetcher(tmp_path, "live", status=432, text='{"detail":{"error":"This request exceeds your plan\'s set usage limit."}}')
+    res = asyncio.run(f.post("https://api.tavily.com/search", json_body={"query": "x"}))
+    assert not res.ok
+    assert f.refused == {"tavily": {"source": "tavily", "status": 432, "reason": "usage limit reached"}}
+
+
+def test_a_bad_places_key_is_named_even_as_a_400(tmp_path):
+    f = _fetcher(tmp_path, "live", status=400, text=BAD_KEY)
+    asyncio.run(f.post(URL, json_body={}))
+    assert f.refused["places"]["reason"] == "API key rejected"
+
+
+def test_a_page_that_errors_is_not_a_source_outage(tmp_path):
+    """A builder site returning 403 is one thin project, not an incomplete scan."""
+    f = _fetcher(tmp_path, "live", status=403, text="Forbidden")
+    asyncio.run(f.get("https://www.some-builder.com/project"))
+    assert f.refused == {}
+
+
+def test_the_scan_payload_says_which_source_did_not_run():
+    from app import service
+    from app.models.schema import OwnProject, ScanRecord
+
+    own = OwnProject(id="o", name="Marina64")
+    rec = ScanRecord(scan_id="s", own_id="o", radius_km=1.5, mode="live", projects=[])
+    down = [{"source": "tavily", "status": 432, "reason": "usage limit reached"}]
+    payload = service.list_payload(rec, own, {"sources_unavailable": down})
+    assert payload["incomplete"] is True and payload["sources_unavailable"] == down
+    assert service.list_payload(rec, own, {})["incomplete"] is False

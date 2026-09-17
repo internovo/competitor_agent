@@ -156,8 +156,10 @@ def stats(rec, meta, payload, stage_s: dict[str, float], total: float) -> str:
                     for p in rec.projects if not p.eligible)
     also = Counter(a.get("reason") or "outside the top rows" for a in payload["also_found"])
     c = payload["counts"]
+    down = [f"INCOMPLETE: {u['source']} unavailable ({u['reason']}, HTTP {u['status']})"
+            for u in payload.get("sources_unavailable", [])]
     return "\n".join([
-        "### Run stats", "", "```",
+        "### Run stats", "", "```", *down,
         f"discovered {c['candidates_seen']}  .  register-only {len(meta['register_filings'])}"
         f"  .  societies {len(meta['societies'])}  .  researched {len(rec.projects)}"
         f"  .  read pages {meta['pages_fetched']}",

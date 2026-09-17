@@ -50,6 +50,13 @@ DEFAULT_HEADERS = {
 }
 
 
+# The paid APIs a scan depends on, by host. A refusal from one of these is not "no results":
+# it is a source that did not run, and the scan is incomplete.
+API_SOURCES = {"api.tavily.com": "tavily", "places.googleapis.com": "places", "maps.googleapis.com": "places"}
+KEY_REFUSED = {401: "API key rejected", 403: "API key rejected", 402: "usage limit reached",
+               429: "rate limited", 432: "usage limit reached"}
+
+
 class Fetcher:
     def __init__(self, mode: str, cache_dir: Path = CACHE_DIR, timeout: float = 30.0):
         assert mode in ("live", "replay", "fixture")
@@ -58,6 +65,19 @@ class Fetcher:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.timeout = timeout
         self.calls: list[str] = []
+        # source -> {"status", "reason"}, first refusal only. Tavily answered 432 to every
+        # call on 17 Sep and the search code read that as an empty result list: the scan
+        # finished, looked normal, and two localities lost every Tavily page unannounced.
+        self.refused: dict[str, dict] = {}
+
+    def _note(self, res: FetchResult) -> FetchResult:
+        host = res.url.split("//")[-1].split("/")[0]
+        source = API_SOURCES.get(host)
+        if source and not res.ok and source not in self.refused:
+            reason = KEY_REFUSED.get(res.status) or ("API key rejected" if "api key" in res.text.lower() else None)
+            if reason:
+                self.refused[source] = {"source": source, "status": res.status, "reason": reason}
+        return res
 
     # ---- cache -----------------------------------------------------------
     @staticmethod
@@ -99,7 +119,7 @@ class Fetcher:
         self.calls.append(url)
         cached = self._read(key)
         if cached is not None and self._usable(cached):
-            return cached
+            return self._note(cached)
         if self.mode != "live":
             raise CacheMiss(f"{method} {url} not in cache (mode={self.mode})")
 
@@ -113,7 +133,7 @@ class Fetcher:
         # permanent, and the next scan should get to try the network again.
         if res.ok:
             self._write(key, res, fetcher)
-        return res
+        return self._note(res)
 
     async def get(self, url: str, **kw) -> FetchResult:
         return await self.request(url, method="GET", **kw)

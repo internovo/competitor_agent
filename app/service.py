@@ -61,7 +61,11 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
                 for node, update in chunk.items():
                     on_stage(node, update or {})
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
-    meta = {"nearest_metro": final.get("nearest_metro"), "log": final.get("log", []), "http_calls": len(fetcher.calls),
+    unavailable = list(fetcher.refused.values())
+    log = final.get("log", []) + [f"source unavailable: {u['source']} ({u['reason']}, HTTP {u['status']}); "
+                                  f"results are incomplete" for u in unavailable]
+    meta = {"nearest_metro": final.get("nearest_metro"), "log": log, "http_calls": len(fetcher.calls),
+            "sources_unavailable": unavailable,
             "register_filings": final.get("register_filings", []),
             "societies": final.get("societies", []),
             "urls": list(fetcher.calls), "pages_fetched": final.get("pages_fetched", 0),
@@ -204,6 +208,10 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
     return {
         "scan_id": rec.scan_id, "own": {"id": own.id, "name": own.name, "locality": own.locality}, "radius_km": rec.radius_km,
         "mode": rec.mode, "created_at": rec.created_at.isoformat(),
+        # A source whose key or quota was refused did not run. A shorter list is then a
+        # fact about our account, not about the neighbourhood, and the client must say so.
+        "incomplete": bool(meta.get("sources_unavailable")),
+        "sources_unavailable": meta.get("sources_unavailable", []),
         "counts": {"candidates_seen": len(rec.projects) + len(rec.dropped), "eligible": len(ranked),
                    "comparable": sum(1 for p in ranked if p.label == "COMPARABLE"), "partial": sum(1 for p in ranked if p.label == "PARTIAL"),
                    "thin": sum(1 for p in ranked if p.label == "THIN"),
