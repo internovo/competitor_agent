@@ -20,6 +20,13 @@ def test_builder_name_inside_project_name_is_noise():
     assert resolve.decide(c("Runwal Vertex", "Runwal Group"), c("Vertex by Runwal")) is True
 
 
+def test_digits_glued_to_a_name_are_the_same_name():
+    """Malad West, 17 Sep: the subject Marina64 came back as "Mahindra Marina 64", 0.12 km away."""
+    assert resolve.decide(c("Marina64", "Mahindra Lifespaces"), c("Mahindra Marina 64")) is True
+    # A different number is never called the same building; at most it is left for the model to look at.
+    assert resolve.decide(c("Marina64", "Mahindra Lifespaces"), c("Marina 65", "Mahindra Lifespaces")) is not True
+
+
 def test_same_builder_different_project():
     assert resolve.decide(c("Runwal Vertex", "Runwal Group"), c("Runwal Elegante", "Runwal Group")) is False
 
@@ -76,6 +83,7 @@ def test_the_subject_is_excluded_by_identity_not_by_lifecycle():
 
     own = OwnProject(**json.loads((FIXTURE_DIR / "marina64.json").read_text(encoding="utf-8")))
     cands = [
+        Candidate(name="Mahindra Marina 64", lat=own.lat + 0.001, lng=own.lng, source="squareyards"),  # 17 Sep live
         Candidate(name=own.name, lat=own.lat, lng=own.lng, source="tavily"),                       # by name
         Candidate(name="Marina 64 Phase 2", rera_no=own.rera_phases[0].number, lat=own.lat, lng=own.lng, source="maharera"),
         Candidate(name="Mahindra Lifespace Developers limited", rera_no="P51800099999",

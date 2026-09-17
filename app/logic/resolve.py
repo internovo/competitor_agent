@@ -104,7 +104,10 @@ def clean_project_name(name: str, builder: str | None = None, locality: str | No
 
 
 def tokens(s: str | None) -> set[str]:
-    return {t for t in re.findall(r"[a-z0-9]+", (s or "").lower()) if t not in STOP and len(t) > 1}
+    # Letters and digits split apart: "Marina64" and "Mahindra Marina 64" are one building,
+    # and as {marina64} against {marina, 64} they shared nothing -- so on 17 Sep the
+    # builder's own project came back 0.12 km away as its closest competitor.
+    return {t for t in re.findall(r"[a-z]+|[0-9]+", (s or "").lower()) if t not in STOP and len(t) > 1}
 
 
 def builder_tokens(*builders: str | None) -> set[str]:
