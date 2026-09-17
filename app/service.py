@@ -44,7 +44,8 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
              "projects": [], "dropped": [], "retry_done": False, "log": []}
     # One span per node, one per candidate at the fan-out. Exported only when a
     # collector endpoint is configured; otherwise the no-op tracer costs a dict write.
-    config = {"configurable": deps, "recursion_limit": 50,
+    # max_concurrency caps the extract fan-out; every other node runs alone anyway.
+    config = {"configurable": deps, "recursion_limit": 50, "max_concurrency": settings.candidates_at_once,
               "callbacks": [NodeSpans(llm, scan_id, own.locality or "")]}
     if on_stage is None:
         final = await graph.ainvoke(state, config=config)

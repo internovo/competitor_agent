@@ -135,6 +135,11 @@ class Settings(BaseSettings):
     # same locality read 18. Raise the pair together; the fetch timeout alone is not enough.
     fetch_timeout_s: int = 30         # per HTTP fetch
     candidate_budget_s: int = 90      # wall clock per candidate, then move on with what it got
+    # How many candidates research at once. Uncapped, ~60 started together and their
+    # clocks ran out in our own queue: on 17 Sep, ~370 of ~460 failed fetches across
+    # Kandivali, Malad and Goregaon were the 90s budget expiring, and none was a block.
+    # A candidate's budget starts when its research does, so waiting here costs nothing.
+    candidates_at_once: int = 8
 
     @property
     def source_list(self) -> list[str]:
