@@ -209,3 +209,51 @@ def test_the_scan_payload_says_which_source_did_not_run():
     payload = service.list_payload(rec, own, {"sources_unavailable": down})
     assert payload["incomplete"] is True and payload["sources_unavailable"] == down
     assert service.list_payload(rec, own, {})["incomplete"] is False
+
+
+# --- live pages and the frozen corpus live apart ------------------------------
+
+def test_live_scans_write_their_own_folder_and_replay_reads_the_corpus(tmp_path, monkeypatch):
+    """17 Sep: a live Borivali scan rewrote 198 files of the corpus the slow tests replay."""
+    from app.config import CACHE_DIR
+
+    monkeypatch.setattr(settings, "live_cache_dir", tmp_path / "live")
+    assert Fetcher("live").cache_dir == tmp_path / "live"
+    assert Fetcher("replay").cache_dir == CACHE_DIR
+
+
+def _entry(folder, name, hours_old):
+    import os, time
+
+    for ext in (".meta.json", ".body"):
+        p = folder / f"{name}{ext}"
+        p.write_text("{}")
+        t = time.time() - hours_old * 3600
+        os.utime(p, (t, t))
+
+
+def test_a_live_scan_deletes_pages_past_the_keep_window(tmp_path, monkeypatch):
+    live = tmp_path / "live"
+    live.mkdir()
+    _entry(live, "old", hours_old=24 * 5)
+    _entry(live, "recent", hours_old=2)
+    monkeypatch.setattr(settings, "live_cache_dir", live)
+    monkeypatch.setattr(settings, "live_cache_keep_days", 3)
+    Fetcher("live")
+    assert sorted(p.name for p in live.iterdir()) == ["recent.body", "recent.meta.json"]
+
+
+def test_the_keep_window_never_undercuts_the_reuse_window(tmp_path):
+    """A page still eligible for reuse is never deleted, whatever keep_days says."""
+    from app.sources.fetch import prune
+
+    _entry(tmp_path, "reusable", hours_old=settings.cache_max_age_hours / 2)
+    assert prune(tmp_path, keep_hours=0) == 0
+
+
+def test_the_frozen_corpus_is_never_pruned(monkeypatch):
+    """Recording a new suburb points the live folder at data/cache; nothing there may go."""
+    from app.config import CACHE_DIR
+    from app.sources.fetch import prune
+
+    assert prune(CACHE_DIR, keep_hours=0) == 0

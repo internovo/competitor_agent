@@ -74,10 +74,12 @@ Interactive docs at `http://localhost:8000/docs`.
 |---|---|---|---|
 | `fixture` (default) | none | not needed | Hand-written Malad West competitor set in `data/fixtures/`. Every stage after discovery runs for real. |
 | `replay` | none | optional | Serves every HTTP call from `data/cache/`. With a model, Claude still extracts from the cached pages; with `llm=None` the deterministic half runs alone and the scan costs nothing. A cache miss is a loud error. |
-| `live` | yes | needed | Hits MahaRERA, Google Places, Tavily, SquareYards, Housing.com and builder sites, and writes `data/cache/`. |
+| `live` | yes | needed | Hits MahaRERA, Google Places, Tavily, SquareYards, Housing.com and builder sites, and writes `LIVE_CACHE_DIR` (default `~/.cache/competitor_agent/pages`). Pages are reused for 24 h and deleted after `LIVE_CACHE_KEEP_DAYS` (3). |
 
 Copy `.env.example` to `.env` and add `ANTHROPIC_API_KEY`, `GOOGLE_MAPS_API_KEY`, `TAVILY_API_KEY` for replay/live.
-Run a live scan once, commit `data/cache/`, and the demo can replay it forever.
+`data/cache/` is the frozen corpus replay and the tests read, and live scans never write to it. To freeze a new suburb,
+run that one live scan with `LIVE_CACHE_DIR=data/cache`, commit the new files, and it can replay forever; nothing
+in `data/cache/` is ever pruned.
 
 ## Pipeline
 
@@ -164,7 +166,7 @@ app/
   storage/runs.py    in-memory run store: bounded, TTL, lost on restart
 data/fixtures/       marina64.json, competitors_malad_west.json, propog_projects.json, scan_request.json,
                      pages/ (prose pages the extractors are measured on)
-data/cache/          every response the live runs fetched; what replay serves
+data/cache/          the frozen corpus: what replay and the slow tests serve; live scans never write here
 scripts/replay.py    one frozen suburb, offline, no keys, no model -> table + cost + API payloads
 tests/fixtures/replay/  one subject per frozen suburb; the free regression surface
 docs/                reference screenshots

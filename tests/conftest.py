@@ -23,6 +23,13 @@ def _no_keys():
     yield
 
 
+@pytest.fixture(autouse=True, scope="session")
+def _live_pages_in_a_temp_folder(tmp_path_factory):
+    """A test that builds a live fetcher must not create or prune the developer's real live cache."""
+    settings.live_cache_dir = tmp_path_factory.mktemp("live_pages")
+    yield
+
+
 @pytest.fixture
 def own() -> OwnProject:
     return OwnProject(**json.loads((FIXTURE_DIR / "marina64.json").read_text()))

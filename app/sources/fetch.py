@@ -1,7 +1,7 @@
 """One door for every HTTP call, with a live/replay cache behind it.
 
-live   -> hit the network, write data/cache/<key>.body + .meta.json
-replay -> read only from the cache; a miss is a loud error, never a silent empty page
+live   -> hit the network, write <LIVE_CACHE_DIR>/<key>.body + .meta.json, prune old entries
+replay -> read only from data/cache, the frozen corpus; a miss is a loud error, never a silent empty page
 
 Live reuses a cached page only while it is younger than CACHE_MAX_AGE_HOURS and only
 if it was a success. An error was cached the same as a page until Sep 2026, so 31
@@ -57,12 +57,36 @@ KEY_REFUSED = {401: "API key rejected", 403: "API key rejected", 402: "usage lim
                429: "rate limited", 432: "usage limit reached"}
 
 
+def prune(cache_dir: Path, keep_hours: float) -> int:
+    """Delete cached responses older than `keep_hours`. Returns how many were removed.
+
+    Never the frozen corpus, whatever the settings say: a live cache pointed at
+    data/cache to record a new suburb must not delete the suburbs already recorded.
+    """
+    if cache_dir.resolve() == CACHE_DIR.resolve():
+        return 0
+    cutoff = datetime.now(timezone.utc).timestamp() - max(keep_hours, settings.cache_max_age_hours) * 3600
+    removed = 0
+    for meta in cache_dir.glob("*.meta.json"):
+        try:
+            if meta.stat().st_mtime < cutoff:
+                meta.unlink(missing_ok=True)
+                (cache_dir / meta.name.replace(".meta.json", ".body")).unlink(missing_ok=True)
+                removed += 1
+        except OSError:
+            continue   # another scan removed or is writing it; not worth failing a scan over
+    return removed
+
+
 class Fetcher:
-    def __init__(self, mode: str, cache_dir: Path = CACHE_DIR, timeout: float = 30.0):
+    def __init__(self, mode: str, cache_dir: Path | None = None, timeout: float = 30.0):
         assert mode in ("live", "replay", "fixture")
         self.mode = mode
-        self.cache_dir = cache_dir
+        # Live scans read and write their own folder; replay reads the frozen corpus.
+        self.cache_dir = cache_dir or (settings.live_cache_dir if mode == "live" else CACHE_DIR)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        if mode == "live" and cache_dir is None:
+            prune(self.cache_dir, settings.live_cache_keep_days * 24)
         self.timeout = timeout
         self.calls: list[str] = []
         # source -> {"status", "reason"}, first refusal only. Tavily answered 432 to every

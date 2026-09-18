@@ -5,7 +5,7 @@
     uv run python scripts/replay.py borivali-west-2026-09-08 --json out.json
 
 Every fixture under tests/fixtures/replay/ is a subject project whose scan was run
-live once; `data/cache/` holds the pages that run fetched. Replay mode reads only
+live once with LIVE_CACHE_DIR=data/cache; `data/cache/` holds the pages that run fetched. Replay mode reads only
 from that cache -- a miss raises rather than fetching -- and `llm=None` means no
 model is constructed, so this runs with every API key unset and costs nothing.
 

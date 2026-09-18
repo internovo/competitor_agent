@@ -60,6 +60,13 @@ class Settings(BaseSettings):
     # possession dates move; a rep pressing re-scan and being handed last week's
     # table is a bug wearing a saving's clothes. Replay ignores this entirely.
     cache_max_age_hours: float = 24.0
+    # Where live scans keep those pages. Never data/cache: that is the frozen corpus
+    # replay and the tests read, and a live run writing into it rewrote 198 of its files
+    # on 17 Sep. On a server, point this at the data disk.
+    live_cache_dir: Path = Path.home() / ".cache" / "competitor_agent" / "pages"
+    # Live pages older than this are deleted when a live scan starts. Only pages younger
+    # than cache_max_age_hours are ever reused; the rest is kept to debug a recent scan.
+    live_cache_keep_days: float = 3.0
     # Every POST used to spawn a scan immediately. One scan fans out to
     # extract_concurrency fetches per candidate across ~40 candidates, so two reps
     # scanning at once was already hundreds of sockets and no ceiling above that.
