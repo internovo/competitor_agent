@@ -360,6 +360,22 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
         n_det += len(filled)
         why |= page_why
 
+    # A propOG record is a builder's declaration about someone else's building, so it
+    # is the least checked thing on the screen and it currently outscores researched
+    # competitors because its form is always complete. Before it can be scored, one
+    # outside page has to name it in the locality propOG claims for it. The locality
+    # half is the whole point: pages for "Kalpataru Aurum" exist, they are all about
+    # the Baner, Pune project, and none of them is evidence of a Malad West building.
+    # Re-checked against the page text rather than trusting `keep`, which falls back
+    # to every page when none matches the name.
+    if project.on_propog and not project.propog_corroborated:
+        loc = (project.locality or ctx.own.locality or "").lower()
+        project.propog_corroborated = any(
+            pg.source not in ("propog", "fixture")
+            and deterministic.mentions_project(pg.text, project.match_name)
+            and (not loc or loc in pg.text.lower())
+            for pg in prose)
+
     # Lifecycle across ALL pages, from the pages that DECLARE one. The vote is
     # authoritative rather than first-writer-wins: a status set from prose, or by the model
     # reading prose, is exactly what this is here to overrule.

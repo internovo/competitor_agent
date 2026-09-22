@@ -26,7 +26,7 @@ CATEGORY_LABELS = compare_logic.CATEGORY_LABELS
 
 async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None = None,
                    sources: list[str] | None = None, on_stage: Callable[[str, dict], None] | None = None,
-                   ) -> tuple[ScanRecord, dict]:
+                   nearby: list | None = None) -> tuple[ScanRecord, dict]:
     """Run the graph. Nothing is persisted here -- the caller owns the answer.
 
     `on_stage(node, update)` is called as each node finishes, so a polling client
@@ -38,7 +38,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     constructed a client off whatever key was in .env and spent on it.
     """
     fetcher = Fetcher(mode, timeout=settings.fetch_timeout_s)
-    deps = {"sources": build_sources(mode, sources), "fetcher": fetcher, "llm": llm}
+    deps = {"sources": build_sources(mode, sources, nearby), "fetcher": fetcher, "llm": llm}
     scan_id = uuid.uuid4().hex[:12]
     state = {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [],
              "projects": [], "dropped": [], "retry_done": False, "log": []}
@@ -108,7 +108,7 @@ async def _execute(run) -> "RunRecord":
         run.note(update.get("log", []) or [])
 
     try:
-        rec, meta = await run_scan(run.own, run.radius_km, run.mode, llm=llm, on_stage=on_stage)
+        rec, meta = await run_scan(run.own, run.radius_km, run.mode, llm=llm, on_stage=on_stage, nearby=run.nearby)
     except Exception as e:  # noqa: BLE001 - the record is the only place this can be reported
         run.tally(llm, {})
         run.fail(e)
@@ -178,6 +178,17 @@ def absence_block(p: Project) -> dict[str, dict[str, Any]]:
     return out
 
 
+def propog_note(p: Project) -> str | None:
+    """What the ON propOG badge means for this project, in the rep's words.
+
+    "Builder-declared" was said of every propOG row, including one no outside source
+    has ever mentioned. The two are not the same claim and no longer read the same.
+    """
+    if not p.on_propog:
+        return None
+    return "builder-declared data" if p.propog_corroborated else "Listed on propOG, not found in public sources"
+
+
 def card(p: Project, rank_no: int) -> dict[str, Any]:
     carpet, rate, poss, struct, phases = (p.display(f) for f in ("carpet_sqft", "rate_psf", "possession", "structure", "rera_phases"))
     rate_conflict = next((c for c in p.conflicts if c.field == "rate_psf"), None)
@@ -199,7 +210,7 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
         "conflicts": [{"field": c.field, "detail": c.detail} for c in p.conflicts],
         "status_note": p.status_note,
         "absent": absence_block(p),
-        "data_note": "builder-declared data" if p.on_propog else ("RERA verified" if rera_verified else None),
+        "data_note": propog_note(p) or ("RERA verified" if rera_verified else None),
     }
 
 
@@ -285,7 +296,8 @@ def detail_payload(p: Project, own: OwnProject, rec: ScanRecord) -> dict[str, An
 
     return {
         "id": p.id, "name": p.name, "builder": p.builder, "status": _status_label(p), "label": p.label, "completeness": p.completeness,
-        "match_score": p.match_score, "score_breakdown": p.score_breakdown, "on_propog": p.on_propog, "insight": p.insight,
+        "match_score": p.match_score, "score_breakdown": p.score_breakdown, "on_propog": p.on_propog,
+        "data_note": propog_note(p), "insight": p.insight,
         "amenities": {
             "count": len(amen.value) if amen else 0, "groups": grouped,
             "source": amen.prov.source if amen else None, "age_days": amen.prov.age_days if amen else None,
