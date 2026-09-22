@@ -43,7 +43,8 @@ def card_insight(p: Project, own: OwnProject, eligible: list[Project]) -> str:
     if c and all_c and c.max_sqft == max(x.max_sqft for x in all_c):
         bits.append("largest flats in the set")
     if p.on_propog:
-        bits.append("figures are builder-declared on propOG rather than researched")
+        bits.append("figures are builder-declared on propOG rather than researched" if p.propog_corroborated
+                    else "listed on propOG, but no public source names this project in this locality")
     if not bits:
         bits.append(f"closest like-for-like match at {p.distance_km} km")
     s = "; ".join(bits)

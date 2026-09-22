@@ -145,7 +145,7 @@ def test_every_stated_basis_on_a_fixture_page_carries_its_evidence():
 
 # --- 6: ordering ------------------------------------------------------------
 
-TIER_RANK = {"COMPARABLE": 0, "PARTIAL": 1, "THIN": 2}
+TIER_RANK = service.LABEL_ORDER   # COMPARABLE, PARTIAL, THIN, UNVERIFIED
 
 
 def test_tier_ordering_holds(scanned):
@@ -166,10 +166,19 @@ def test_a_match_score_exists_exactly_for_comparable_projects(scanned):
 
 
 def test_the_tier_matches_its_own_count(scanned):
+    """Coverage decides the tier -- unless something outranks coverage.
+
+    Two things do, and both mean "we do not know that this is a live building":
+    no source stated a lifecycle, and a propOG row nothing outside propOG names.
+    Six filled fields do not answer either question, so UNVERIFIED wins over the count.
+    """
     _, rec, _ = scanned
     for p in rec.projects:
         known = sum(1 for f in COMPLETENESS_FIELDS if p.report(f).observations)
-        expected = "COMPARABLE" if known >= 6 else "PARTIAL" if known >= 4 else "THIN"
+        if p.status == "unknown" or (p.on_propog and not p.propog_corroborated):
+            expected = "UNVERIFIED"
+        else:
+            expected = "COMPARABLE" if known >= 6 else "PARTIAL" if known >= 4 else "THIN"
         assert p.completeness == known and p.label == expected, f"{p.name}: {known} known, tier {p.label}"
 
 

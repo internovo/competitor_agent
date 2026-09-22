@@ -7,7 +7,6 @@ only long enough to be polled.
 from __future__ import annotations
 
 import asyncio
-import re
 from contextlib import asynccontextmanager
 from typing import Any
 
@@ -18,6 +17,7 @@ from app import service
 from app.config import settings
 from app.llm.client import get_llm
 from app.models.schema import OwnProject, Project
+from app.sources.propog import bhk, published_only
 from app.storage.runs import RunRecord, RunStore
 
 @asynccontextmanager
@@ -99,22 +99,12 @@ class AgentScanRequest(BaseModel):
     builder_id: str
     radius_km: float = Field(gt=0, le=10)
     subject: dict[str, Any]
-
-
-def _bhk(values: list) -> list[int]:
-    """propOG's inventory carries "2 BHK" strings; this form counts bedrooms.
-
-    Anything without a number in it is dropped rather than guessed at.
-    """
-    out = set()
-    for v in values or []:
-        if isinstance(v, int):
-            out.add(v)
-            continue
-        digits = re.search(r"\d+", str(v))
-        if digits:
-            out.add(int(digits.group()))
-    return sorted(out)
+    # The published projects propOG holds near the subject, in the subject's own
+    # shape plus `status` and `builder_id`. The agent has no database credentials
+    # and asks for none: tenancy and the publication flag stay in propOG, and what
+    # is not on the wire is not a competitor. Absent means none were sent, which is
+    # a scan with no propOG competitors, not an error.
+    nearby: list[dict[str, Any]] = Field(default_factory=list)
 
 
 def _own_from_subject(subject: dict, project_id: str) -> OwnProject:
@@ -132,7 +122,7 @@ def _own_from_subject(subject: dict, project_id: str) -> OwnProject:
         address=subject.get("address") or subject.get("city"),
         locality=subject.get("locality"),
         lat=subject.get("latitude"), lng=subject.get("longitude"),
-        configurations=_bhk(subject.get("configurations") or []),
+        configurations=bhk(subject.get("configurations") or []),
         carpet_sqft=subject.get("carpet_sqft"), rate_psf=subject.get("rate_psf"),
         possession=subject.get("possession"), structure=subject.get("structure"),
     )
@@ -157,10 +147,14 @@ async def scan(body: AgentScanRequest, request: Request) -> dict:
     if own.lat is None and not own.address:
         raise HTTPException(422, "subject needs latitude and longitude, or a city to geocode from")
 
-    run = runs.create(own, body.radius_km, settings.fetch_mode, run_id=body.run_id)
+    # Checked here rather than deeper in, because this is the door: a row that is not
+    # PUBLISHED, or belongs to the builder asking, never becomes a candidate at all.
+    nearby = published_only(body.nearby, body.builder_id)
+    run = runs.create(own, body.radius_km, settings.fetch_mode, run_id=body.run_id, nearby=nearby)
     request_id = request.headers.get("x-request-id")
     run.note([f"scan: accepted for project {body.project_id}, builder {body.builder_id}"
-              + (f", request {request_id}" if request_id else "")])
+              + (f", request {request_id}" if request_id else ""),
+              f"scan: propOG sent {len(body.nearby)} nearby projects, {len(nearby)} published and not this builder's"])
     task = asyncio.create_task(service.execute(run))
     _tasks.add(task)
     task.add_done_callback(_tasks.discard)

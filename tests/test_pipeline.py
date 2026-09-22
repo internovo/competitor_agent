@@ -19,12 +19,38 @@ def scan():
 def test_counts_and_labels(scan):
     own, rec, meta, _ = scan
     pl = service.list_payload(rec, own, meta)
-    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 3, "partial": 2, "thin": 1, "unverified": 0}
+    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 2, "partial": 2, "thin": 1, "unverified": 1}
     by = {c["name"]: c for c in pl["competitors"]}
     assert by["Runwal Vertex"]["label"] == "COMPARABLE" and by["Runwal Vertex"]["match_score"] is not None
     assert by["Rustomjee Crest"]["completeness"] == 4 and by["Rustomjee Crest"]["match_score"] is None
     assert by["Sheth Nova"]["label"] == "THIN" and by["Sheth Nova"]["analyse_enabled"] is False
     assert by["Kalpataru Aurum"]["on_propog"] is True
+
+
+def test_a_propog_row_no_outside_source_names_is_unverified_and_unranked(scan):
+    """Malad West, 21 September: "Kalpataru Aurum" was the #1 competitor at 54/80.
+
+    It does not exist. The only project with that name is in Baner, Pune. It was a
+    hand-written demo record in the propOG fixture, and it won because `on_propog`
+    meant "trusted, not researched": its form was complete while real competitors'
+    public data is patchy, so a fabrication outscored every building that is real.
+
+    The fixture entry is deliberately still here. It is the case, and this is it
+    turned into a test: complete, 0.54 km away, inside the radius, and no outside
+    source names it in Malad West -- so it is shown and never scored.
+    """
+    own, rec, meta, _ = scan
+    pl = service.list_payload(rec, own, meta)
+    k = next(c for c in pl["competitors"] if c["name"] == "Kalpataru Aurum")
+    assert k["completeness"] == 6          # the form is full, and it still does not count
+    assert k["label"] == "UNVERIFIED"
+    assert k["match_score"] is None and k["score_note"] == "not scored at this coverage"
+    assert k["rank"] != 1
+    assert k["data_note"] == "Listed on propOG, not found in public sources"
+    assert k["analyse_enabled"] is False
+    assert k["id"] not in pl["compare_columns"]["competitors"]
+    # Nothing above it in the table is worse than it is.
+    assert [c["label"] for c in pl["competitors"]][: k["rank"]] ==            sorted([c["label"] for c in pl["competitors"]][: k["rank"]], key=service.LABEL_ORDER.get)
 
 
 def test_duplicate_candidate_merged(scan):

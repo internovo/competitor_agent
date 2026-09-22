@@ -367,6 +367,9 @@ class Project(BaseModel):
     nearest_metro: str | None = None
     status: Status = "unknown"
     on_propog: bool = False
+    # An outside source named this project in this locality. Only consulted when
+    # `on_propog` is true: everything else is found by outside sources by definition.
+    propog_corroborated: bool = False
     status_note: str | None = None  # why the lifecycle is not what a page said it was
     source_url: str | None = None   # the page discovery pulled this name from
     researched: bool = True         # False when the run's research budget did not reach it
