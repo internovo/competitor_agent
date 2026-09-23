@@ -61,8 +61,7 @@ def _partial_meta(fetcher, budget, final: dict | None = None) -> dict:
             "model_pages": final.get("model_pages", 0),
             "prompt_chars": final.get("prompt_chars", 0),
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0}),
-            "token_budget": {"max_tokens": budget.max_tokens, "used": budget.used,
-                             "candidates_not_asked": budget.skipped}}
+            "token_budget": budget.body()}
 
 
 async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None = None,
@@ -109,8 +108,7 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
             "model_pages": final.get("model_pages", 0), "prompt_chars": final.get("prompt_chars", 0),
             "untrimmed_chars": final.get("untrimmed_chars", 0),
             "ambiguous_pairs": final.get("ambiguous_pairs", 0),
-            "token_budget": {"max_tokens": budget.max_tokens, "used": budget.used,
-                             "candidates_not_asked": budget.skipped}}
+            "token_budget": budget.body()}
     return rec, meta
 
 
@@ -328,7 +326,9 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
         # dimensions stand behind it. The portal displays these rather than recomputing.
         "score_100": p.score_100, "earned": p.match_score, "available": p.score_max,
         "coverage": p.score_coverage, "score_breakdown": p.score_breakdown,
-        "score_note": None if p.match_score is not None else "not scored at this coverage",
+        "score_note": ("not scored at this coverage" if p.match_score is None else
+                       (f"compared on only {p.score_coverage} of 6 dimensions; no percentage shown"
+                        if p.score_100 is None else None)),
         # A3. Who, other than us, says this building exists here.
         "confirmed": confirmed(p), "confirmed_by": p.confirmed_by,
         "confirmed_note": (f"Confirmed by {len(p.confirmed_by)} sources: {', '.join(p.confirmed_by)}"
@@ -409,6 +409,8 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
                    "thin": sum(1 for p in ranked if p.label == "THIN"),
                    "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
         "extraction": meta.get("extraction", {}),
+        # So the portal can say a row went unasked rather than silently thin.
+        "token_budget": meta.get("token_budget", {}),
         "scoring": scoring_note(own, [p for p in ranked if p.match_score is not None]),
         "competitors": [_timed(card(p, i + 1), p, own)
                         for i, p in enumerate(ranked[: settings.max_table_rows])],

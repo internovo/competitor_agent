@@ -92,14 +92,23 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
     return int(round(total)), {k: round(v, 3) for k, v in b.items()}, score_max, excluded
 
 
+# Below this many comparable dimensions a percentage is arithmetic, not a judgement.
+# On 23 Sep a row scored 100% on two: configurations and distance, both perfect because
+# the row WAS the subject. Even with that row gone, two trivial dimensions cannot carry
+# a number a rep will read as a perfect match. `earned`, `available` and `coverage` are
+# still published, so the portal can say "compared on 2 of 6" instead of showing 100%.
+MIN_SCORED_DIMENSIONS = 3
+
+
 def apply(project: Project, own: OwnProject, radius_km: float) -> Project:
     project.match_score, project.score_breakdown, project.score_max, project.score_excluded = compute(project, own, radius_km)
     # Presentation only: nothing about how a point is earned changes here. A rep was
     # reading 30/50 beside 48/70 and concluding the first was the weaker match.
     # Nothing scored means no percentage -- never 0, which reads as "scored badly".
-    if project.match_score is not None and project.score_max:
+    project.score_coverage = len(project.score_breakdown)
+    if (project.match_score is not None and project.score_max
+            and project.score_coverage >= MIN_SCORED_DIMENSIONS):
         project.score_100 = max(0, min(100, round(100 * project.match_score / project.score_max)))
-        project.score_coverage = len(project.score_breakdown)
     else:
-        project.score_100, project.score_coverage = None, 0
+        project.score_100 = None
     return project

@@ -25,6 +25,10 @@ from app.models.schema import (
 from app.sources.base import ScanContext
 from app.sources.fetch import CacheMiss
 
+# Closer than this to the subject, with the subject's name in it, is the subject. Two
+# genuinely different buildings are never this close AND named the same thing.
+OWN_PROJECT_KM = 0.08
+
 COORD_PRIORITY = ["manual", "propog", "places", "maharera", "fixture", "osm", "builder_site", "squareyards", "housing", "99acres", "magicbricks", "tavily"]
 
 
@@ -164,8 +168,21 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
         pid = rep.rera_no or resolve.slug(rep.name)
         # The register and the portals both list the builder's own project; it is the baseline, not a competitor.
         # Identity only -- RERA number or name. A shared lifecycle or builder is not identity.
-        if (rep.rera_no and rep.rera_no in own_reras) or resolve.slug(rep.name) == own_slug or resolve.decide(own_card, rep) is True:
+        # The subject, under any name. Identity by name alone missed "Priyam Residency
+        # vs Silicon Park 3 - Compare Price Location", which stood at 0.00 km from the
+        # subject because it WAS the subject, and went out as the #1 competitor at 100%.
+        # Coordinates settle it: a candidate on top of the subject whose name carries the
+        # subject's name is the subject, whatever else the title says.
+        on_top = (rep.lat is not None and own.lat is not None
+                  and haversine_km(own.lat, own.lng, rep.lat, rep.lng) <= OWN_PROJECT_KM
+                  and deterministic.mentions_project(rep.name, own.name))
+        if (rep.rera_no and rep.rera_no in own_reras) or resolve.slug(rep.name) == own_slug                 or on_top or resolve.decide(own_card, rep) is True:
             dropped.append({"id": pid, "name": rep.name, "reason": "own project"})
+            continue
+        if resolve.looks_like_a_page(rep.name):
+            societies.append({"id": pid, "name": rep.name, "label": "UNVERIFIED", "completeness": 0,
+                              "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
+                              "reason": "a portal page title, not a project: nothing here names a building"})
             continue
         # A promoter's register filing is not a competitor a rep can use, and researching
         # it cannot make it one: the name is unsearchable. It is reported, not researched.
@@ -497,7 +514,10 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
                for pg in read_pages] if want else []
     n_llm = 0
     timed_out = deadline is not None and deadline - time.monotonic() <= 0
-    budget = d.get("token_budget")
+    # Nothing is sent when there is no model, so there is nothing to budget. Charging
+    # anyway made a model-free replay report candidates "not asked", which is true of
+    # all of them and useful about none.
+    budget = d.get("token_budget") if llm is not None else None
     if trimmed and budget is not None and not budget.take(sum(len(pg.text) for pg in trimmed)):
         # The ceiling, not a failure: everything the regexes read is already merged.
         log.append(f"extract[{project.id}]: run token budget spent; not asking the model "
@@ -527,6 +547,10 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             before = {f for f in FILLABLE if _has(project, f)}
             merge_facts(project, _only(facts, want), page, method="llm")
             n_llm += len({f for f in FILLABLE if _has(project, f)} - before)
+
+    # What the provider actually billed, replacing the guess the budget was admitted on.
+    if budget is not None and llm is not None:
+        budget.observe(llm.input_tokens + llm.output_tokens)
 
     consolidate_rera(project)
     consolidate_configurations(project)
