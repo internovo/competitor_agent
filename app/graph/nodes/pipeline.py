@@ -357,6 +357,14 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
             if host and host not in project.confirmed_by:
                 project.confirmed_by.append(host)
     project.confirmed_by.sort()
+    # A1: attach the builder's brand to the display name only where the pages put it
+    # there. "Ruparel Mumbai XL" is on every page about it; "Maharashtra Sanghvi
+    # Horizon" is on none, because that builder field is an agency's name.
+    brand = (project.builder or "").split()[0] if project.builder else ""
+    if brand and brand.lower() not in project.name.lower():
+        combined = f"{brand} {project.name}"
+        if any(deterministic.mentions_project(pg.text, combined) for pg in prose if pg.url in keep):
+            project.display_brand = brand
     project.unnamed_pages = len(prose) - len(keep)
     if prose and not keep:
         # Not a licence to read them anyway. The row survives and is published

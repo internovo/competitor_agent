@@ -376,6 +376,9 @@ class Project(BaseModel):
     # the check we can actually make.
     confirmed_by: list[str] = Field(default_factory=list)
     unnamed_pages: int = 0          # pages fetched for it that name a different project
+    # The builder's brand, but only when a page about this project actually uses it
+    # in front of the name. Evidence, not assumption.
+    display_brand: str | None = None
     status_note: str | None = None  # why the lifecycle is not what a page said it was
     source_url: str | None = None   # the page discovery pulled this name from
     researched: bool = True         # False when the run's research budget did not reach it
@@ -428,11 +431,13 @@ class Project(BaseModel):
         collapse to one row. That is right for identity and wrong on screen: "Mumbai XL"
         is nobody's project and a rep cannot act on it, while "Ruparel Mumbai XL" is on
         every hoarding.
+
+        The brand is only attached when the pages actually call it that -- see
+        `display_brand`. Prefixing whatever sits in `builder` produced "Maharashtra
+        Sanghvi Horizon" and "Nearby Bhattad Aurus", because that field is often an
+        agency scraped off a listing rather than the developer.
         """
-        if not self.builder:
-            return self.name
-        brand = self.builder.split()[0]
-        return self.name if brand.lower() in self.name.lower() else f"{brand} {self.name}"
+        return f"{self.display_brand} {self.name}" if self.display_brand else self.name
 
     @property
     def match_name(self) -> str:
