@@ -344,16 +344,46 @@ RATE_RE = re.compile(
 )
 PLAUSIBLE_RATE = range(1_000, 200_001)
 
+# A price is quoted in money. Without a currency anywhere near it, "1630/sqft" is a
+# size -- "3 BHK with Size 1630/sqft-carpet" offered Rs 1,630 per sq ft to a Kandivali
+# table. Looked for just before the figure as well as inside the match, because
+# "Rate: Rs 29,900 per sq ft" and "Rs 29,900/sqft" both read naturally.
+MONEY_NEAR = re.compile(r"(?:\u20b9|\bRs\.?|\bINR\b|\bprice\b|\brate\b)[^\n]{0,40}$", re.IGNORECASE)
+
+# A market report's number is about a city or a locality, never about this building:
+# "Average residential prices increased from Rs 6,002/sq.ft. (2019)" is Bangalore, and
+# "Zone Avg Rate Rs 30,626/sq.ft - 371 projects" is every project in Kandivali West.
+# Both sat in pages a candidate legitimately read.
+AGGREGATE_RATE = re.compile(
+    r"\baverage\b|\bavg\b|\bmedian\b|\bzone\b|\bcity\b|\btrend|\bappreciat|"
+    r"\bincreased\s+from\b|\blocality\s+rate",
+    re.IGNORECASE)
+AGGREGATE_WINDOW = 90
+
+
+def _is_a_rate_for_this_building(text: str, m: re.Match) -> bool:
+    """Is this figure money, and is it about one building rather than a market?"""
+    if m.group(1) is None and not MONEY_NEAR.search(text[max(0, m.start() - 45):m.start()]):
+        return False
+    window = text[max(0, m.start() - AGGREGATE_WINDOW):m.end() + AGGREGATE_WINDOW]
+    return not AGGREGATE_RATE.search(window)
+
 
 def extract_rate(text: str, *, source: Source = "tavily", url: str | None = None,
                  first_party: bool = False) -> FieldReport:
+    """The first figure that is a price, for this building, in a plausible band.
+
+    All three conditions are load-bearing and each was added after a wrong number
+    reached a table: a carpet area with no currency, a city average lifted from a
+    market report, and a figure outside any believable range.
+    """
     for m in RATE_RE.finditer(text or ""):
         raw = m.group(1) or m.group(2)
         try:
             value = int(raw.replace(",", ""))
         except ValueError:
             continue
-        if value in PLAUSIBLE_RATE:
+        if value in PLAUSIBLE_RATE and _is_a_rate_for_this_building(text, m):
             return found("rate_psf", value, source=source, url=url, confidence=_conf(first_party),
                          evidence=_evidence(text, m.start(), m.end()))
     return missing("rate_psf", "RATE_NOT_PUBLISHED")
@@ -788,6 +818,18 @@ def _significant(name: str) -> list[str]:
             if t not in _NAME_STOP]
 
 
+def _name_phrase(name: str) -> list[str]:
+    """Every word of the name, letters and digits kept apart, nothing dropped.
+
+    `_significant` exists to find a rare word to search on, so it throws away short
+    and common ones. That is right for a fallback and wrong for identity: "XL" is two
+    characters and is the whole of what separates Ruparel Mumbai XL from Ruparel
+    Optima, and "64" is the whole of Marina64. A name made only of those reduces to
+    no tokens at all, matches no page, and then every page looks equally relevant.
+    """
+    return re.findall(r"[A-Za-z]+|\d+", (name or "").lower())
+
+
 def mentions_project(text: str, name: str) -> bool:
     """Does this page mention the project at all?
 
@@ -795,8 +837,18 @@ def mentions_project(text: str, name: str) -> bool:
     Chandak Treesourus and Ajmera Boulevard as rental on the same quote, which
     came from a page about K Raheja Interface Heights.
     """
+    if not text or not name:
+        return False
+    # The whole name, in order, tolerant of punctuation between words. This is the
+    # strong signal and it is tried first: "Mumbai XL" is present in "Ruparel Mumbai
+    # XL" and absent from "Ruparel Optima". On 23 Sep the name reduced to zero
+    # significant tokens, every page scored equally irrelevant, and the pipeline read
+    # a different Ruparel building's page into the #1 row of a live table.
+    words = _name_phrase(name)
+    if words and re.search(r"\W{0,3}".join(re.escape(w) for w in words), text, re.IGNORECASE):
+        return True
     tokens = _significant(name)
-    if not tokens or not text:
+    if not tokens:
         return False
     full = re.compile(r"\W{0,3}".join(re.escape(t) for t in tokens), re.IGNORECASE)
     if full.search(text):
@@ -817,16 +869,22 @@ def is_comparison_page(url: str | None) -> bool:
 
 
 def relevant_pages(pages: list, name: str | None, text_of=lambda p: p.text) -> list:
-    """Pages that actually mention the project.
+    """Pages that actually mention the project, and only those.
 
-    If NONE do, return them all rather than nothing: a builder's own site may
-    spell the name differently, and losing every page is worse than admitting a
-    few foreign ones.
+    This used to return every page when none matched, on the reasoning that losing
+    every page is worse than admitting a few foreign ones. It is not. On 23 Sep the
+    #1 competitor on a live table carried configurations, carpet, rate and possession
+    read off a different building's page, because its name matched nothing and the
+    fallback then let all seven pages through. A blank field with a reason beside it
+    is safe; a field blended from two buildings is not, and nothing downstream can
+    tell that it happened.
+
+    Nothing matching is a fact about the candidate. The caller records it and the
+    project is published unconfirmed rather than filled in from strangers.
     """
     if not name:
         return pages
-    kept = [p for p in pages if mentions_project(text_of(p), name)]
-    return kept or pages
+    return [p for p in pages if mentions_project(text_of(p), name)]
 
 
 def focus_on_project(text: str, name: str, window: int = FOCUS_WINDOW) -> str:

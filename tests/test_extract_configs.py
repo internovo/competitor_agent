@@ -281,11 +281,25 @@ def test_relevant_pages_drops_the_foreign_ones():
     assert len(relevant_pages(pages, "Chandak Treesourus", text_of=lambda p: p)) == 1
 
 
-def test_when_no_page_names_the_project_we_keep_them_all():
-    """A builder's own site may spell it differently; losing every page is worse
-    than admitting a few foreign ones."""
+def test_when_no_page_names_the_project_we_keep_none():
+    """Reversed on 23 Sep, deliberately.
+
+    Keeping every page when none matched put a different Ruparel building's
+    configurations, carpet, rate and possession into the #1 row of a live table.
+    Nothing naming the candidate is a fact about the candidate: the row survives
+    and is published unconfirmed, with empty fields and a reason.
+    """
     pages = ["some page", "another"]
-    assert len(relevant_pages(pages, "Totally Absent Name", text_of=lambda p: p)) == 2
+    assert relevant_pages(pages, "Totally Absent Name", text_of=lambda p: p) == []
+
+
+def test_a_two_letter_name_still_identifies_its_own_pages():
+    """"Mumbai XL" reduced to zero significant tokens -- "XL" is too short and
+    "mumbai" is a stop word -- so it matched nothing and every page looked equal."""
+    assert mentions_project("Ruparel Mumbai XL, Kandivali West. 1 BHK.", "Mumbai XL")
+    assert not mentions_project("Ruparel Optima Kandivali West. 2 BHK.", "Mumbai XL")
+    # Same shape, digits: "64" carries the identity of Marina64.
+    assert mentions_project("Mahindra Marina 64 at Malad West", "Marina 64")
 
 
 def test_focus_narrows_a_page_to_its_own_project():

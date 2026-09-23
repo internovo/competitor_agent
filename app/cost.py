@@ -194,3 +194,39 @@ class NodeSpans(AsyncCallbackHandler):
     def _tokens(self, node: str) -> tuple[int, int]:
         counter = getattr(self.llm, "usage", {}).get(node) if self.llm is not None else None
         return (counter.input_tokens, counter.output_tokens) if counter else (0, 0)
+
+
+# Roughly how many characters make a token across the models this runs on. Used only
+# to keep a scan inside a ceiling, so being a little pessimistic is the safe direction.
+CHARS_PER_TOKEN = 4
+
+
+class TokenBudget:
+    """A hard ceiling on what one scan may send to a model.
+
+    Groq's free tier allows 200,000 tokens a day. One Kandivali West scan wanted about
+    640,000 and died in `extract` with 17 of 60 candidates researched -- and because it
+    died, the run kept nothing. Stopping asking is not the same as failing: every
+    deterministic field already read survives, the table is published, and the run says
+    how many candidates went unasked.
+
+    Shared across the extract fan-out through the same dict that carries the fetcher,
+    so the ceiling is per scan rather than per candidate.
+    """
+
+    def __init__(self, max_tokens: int):
+        self.max_tokens = max_tokens
+        self.used = 0
+        self.skipped = 0
+
+    def take(self, chars: int) -> bool:
+        want = max(1, chars // CHARS_PER_TOKEN)
+        if self.max_tokens and self.used + want > self.max_tokens:
+            self.skipped += 1
+            return False
+        self.used += want
+        return True
+
+    @property
+    def stopped(self) -> bool:
+        return self.skipped > 0

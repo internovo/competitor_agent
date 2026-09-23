@@ -186,7 +186,8 @@ class SquareYardsListingSource(NullSource):
 
     async def discover(self, ctx: ScanContext) -> list[Candidate]:
         return [Candidate(name=r["name"], builder=r["builder"], lat=r["lat"], lng=r["lng"],
-                          locality=ctx.own.locality, source="squareyards", source_url=r["url"])
+                          locality=ctx.own.locality, source="squareyards", source_url=r["url"],
+                          status=r.get("status") or "unknown", possession=r.get("possession"))
                 for r in await self._load(ctx)]
 
     async def pages_for(self, project: Project, ctx: ScanContext) -> list[Page]:

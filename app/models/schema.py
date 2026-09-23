@@ -301,6 +301,12 @@ class Candidate(BaseModel):
     on_propog: bool = False
     nearest_metro: str | None = None
     register_only: bool = False   # a MahaRERA row whose name is the promoter, not a project
+    # Declared by the source that found it, where the source states it as a field
+    # rather than as prose. SquareYards' locality listing carries both in its JSON-LD;
+    # they were parsed and then dropped on the floor, so every finished building in the
+    # circle was researched in full before `filter` threw it away.
+    status: Status = "unknown"
+    possession: str | None = None   # as the source spells it: "2029-12" or "2029-12-01"
     # What Google Places calls this pin. Requested in the field mask and then dropped
     # on the floor until now, which is why a clothing shop reached rank 4 of a
     # competitor table: the data saying it was a clothing shop was already in hand.
@@ -370,6 +376,15 @@ class Project(BaseModel):
     # An outside source named this project in this locality. Only consulted when
     # `on_propog` is true: everything else is found by outside sources by definition.
     propog_corroborated: bool = False
+    # Distinct domains that name this project in its own locality. MahaRERA sits
+    # behind a captcha and cannot be read, so "verified" has to be replaced rather
+    # than sourced: two independent publishers saying the same building exists is
+    # the check we can actually make.
+    confirmed_by: list[str] = Field(default_factory=list)
+    unnamed_pages: int = 0          # pages fetched for it that name a different project
+    # The builder's brand, but only when a page about this project actually uses it
+    # in front of the name. Evidence, not assumption.
+    display_brand: str | None = None
     status_note: str | None = None  # why the lifecycle is not what a page said it was
     source_url: str | None = None   # the page discovery pulled this name from
     researched: bool = True         # False when the run's research budget did not reach it
@@ -398,6 +413,11 @@ class Project(BaseModel):
     conflicts: list[Conflict] = Field(default_factory=list)
     match_score: int | None = None
     score_max: int | None = None            # the weights that could actually be evaluated
+    # earned/available as a percentage, so two projects compared on different
+    # dimensions can be read against each other. `score_coverage` travels with it
+    # because 62% of 3 dimensions is not 62% of 6, and a bare percentage hides that.
+    score_100: int | None = None
+    score_coverage: int = 0
     score_excluded: list[str] = Field(default_factory=list)
     score_breakdown: dict[str, float] = Field(default_factory=dict)
     unresolved: list[str] = Field(default_factory=list)   # counted for coverage, no value to show
@@ -408,6 +428,22 @@ class Project(BaseModel):
     insight: str | None = None
     insight_source: Literal["llm", "template"] | None = None
     retried: bool = False
+
+    @property
+    def display_name(self) -> str:
+        """Builder and project together, which is how a rep recognises a building.
+
+        `name` is deliberately stripped of the builder so two spellings of one project
+        collapse to one row. That is right for identity and wrong on screen: "Mumbai XL"
+        is nobody's project and a rep cannot act on it, while "Ruparel Mumbai XL" is on
+        every hoarding.
+
+        The brand is only attached when the pages actually call it that -- see
+        `display_brand`. Prefixing whatever sits in `builder` produced "Maharashtra
+        Sanghvi Horizon" and "Nearby Bhattad Aurus", because that field is often an
+        agency scraped off a listing rather than the developer.
+        """
+        return f"{self.display_brand} {self.name}" if self.display_brand else self.name
 
     @property
     def match_name(self) -> str:
