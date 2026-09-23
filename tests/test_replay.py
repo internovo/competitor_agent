@@ -51,21 +51,24 @@ def test_the_borivali_table_is_the_one_the_anthropic_budget_paid_for(borivali):
     itself grew -- a live run writes into the same data/cache the frozen suburbs read
     -- so these numbers are the richer recording, not a different rule.
 
-    Re-split on 23 Sep, not re-baselined: the same 14 projects are published, but 9 of
-    them hand over 23 to 36 months before Link Horizon does and now sit in
-    `handing_over_before` rather than the main ranking. Link Horizon completes in Dec
-    2029; a building handing over in Dec 2026 is keys-in-hand stock by then, not what
-    it is competing against. The total is the number to hold, and it has not moved."""
+    Re-split on 23 Sep, not re-baselined: the same 14 projects are published, 5 of them
+    outside the main ranking. Those 5 hand over between Dec 2026 and Mar 2027 -- ready
+    stock a buyer treats as a different purchase. The ones finishing 2027-04 to 2028-12
+    stay in the table with a tag saying how much earlier they finish, because a 2028
+    building is real competition for a 2029 one. The total is the number to hold."""
     _, _, _, payload = borivali
     shown = payload["competitors"] + payload["handing_over_before"]
     assert len(shown) == 14, "no project may be lost, only regrouped"
-    assert payload["counts"]["eligible"] == 5
-    assert payload["counts"]["handing_over_before"] == 9
+    assert payload["counts"]["eligible"] == 9
+    assert payload["counts"]["handing_over_before"] == 5
     assert sum(1 for c in shown if c["label"] == "COMPARABLE") == 11
-    assert [c["name"] for c in payload["competitors"][:2]] == ["Sanghvi Horizon", "New Nicco Vanashri Heights"]
+    assert [c["name"] for c in payload["competitors"][:2]] == ["Sanghvi Horizon", "Neev Horizon"]
     assert payload["competitors"][0]["match_score"] is not None
-    # Every one of the nine says how far ahead of the subject it hands over.
-    assert all(c["months_before"] > 12 for c in payload["handing_over_before"])
+    # Demoted only when it is BOTH well ahead of the subject and ready now.
+    assert all(c["months_before"] >= 12 for c in payload["handing_over_before"])
+    assert all(c["possession"] < "2027-04" for c in payload["handing_over_before"])
+    # And a row that stays still tells the rep about the gap.
+    assert any(c["early_note"] for c in payload["competitors"])
 
 
 def test_the_clothing_shop_is_beside_the_table_with_its_reason_not_deleted(borivali):

@@ -9,7 +9,8 @@ job, not a unit test -- see the PR body for where it lives.
 """
 from datetime import date
 
-from app.extract.deterministic import mentions_project, relevant_pages
+from app import service
+from app.extract.deterministic import extract_rate, mentions_project, relevant_pages
 from app.logic import completeness, match_score
 from app.models.schema import Project
 from app.service import confirmed, hands_over_before, rank, scoring_note
@@ -127,3 +128,79 @@ def test_a_field_the_subject_lacks_is_named_so_the_builder_can_fix_it(own, full_
     note = scoring_note(own, [p])
     assert note["subject_missing"] == ["rate_psf"]
     assert "rate_psf" in note["note"]
+
+
+# --- A2 second net: a rate is money, for this building --------------------------
+
+def test_a_size_with_no_currency_is_not_a_rate():
+    """'3 BHK+3T Apartments with Size 1630/sqft-carpet' offered Rs 1,630 per sq ft."""
+    r = extract_rate("3 BHK+3T Apartments with Size 1630/sqft-carpet for sale at Rs 4.4 Cr "
+                     "in Chandak Eden Gardens, Kandivali West Mumbai.")
+    assert r.values == []
+    assert r.absent == "RATE_NOT_PUBLISHED"
+
+
+def test_a_city_average_from_a_market_report_is_not_this_buildings_rate():
+    """Bangalore, lifted off a trends page a Kandivali candidate legitimately read."""
+    r = extract_rate("Average residential prices increased from \u20b96,002 /sq.ft. (2019) "
+                     "to \u20b99,963 /sq.ft. (2025) representing 66% appreciation.")
+    assert r.values == []
+
+
+def test_a_zone_average_is_not_this_buildings_rate():
+    r = extract_rate("Zone Avg Rate \u20b930,626/sq.ft \u00b7 371 projects in Kandivali West")
+    assert r.values == []
+
+
+def test_an_ordinary_quoted_rate_is_still_read():
+    """The guards must not cost a real figure -- with a symbol, with 'Rs', and with
+    the currency a few words back."""
+    assert extract_rate("Runwal Vertex. \u20b935,400 per sq.ft.").values[0].value == 35400
+    assert extract_rate("Price: Rs 29,900 per sq ft").values[0].value == 29900
+    assert extract_rate("The quoted rate is about 21,300 per sq ft.").values[0].value == 21300
+
+
+# --- A4: ready stock, not merely earlier ----------------------------------------
+
+def _at(name: str, when: date) -> Project:
+    p = Project(id=name, name=name, status="under_construction", distance_km=0.5,
+                completeness=6, label="COMPARABLE", pages_seen=["u"],
+                confirmed_by=["a.com", "b.com"])
+    p.possession.observe(fv(when))
+    return p
+
+
+def test_earlier_but_years_away_stays_in_the_table(own):
+    """A 2028 building is real competition for a 2029 one. The first cut of this rule
+    moved 9 of 14 Borivali rows out for exactly this reason."""
+    own.possession = date(2029, 12, 1)
+    p = _at("2028er", date(2028, 1, 1))
+    main, early = service.split_early([p], own, today=date(2026, 9, 23))
+    assert [x.id for x in main] == ["2028er"] and early == []
+    assert service.hands_over_before(p, own) == 23     # still tagged with the gap
+
+
+def test_earlier_and_ready_now_is_demoted(own):
+    own.possession = date(2029, 12, 1)
+    ready = _at("ready", date(2026, 12, 1))
+    others = [_at(f"f{i}", date(2029, 1, 1)) for i in range(5)]
+    main, early = service.split_early([*others, ready], own, today=date(2026, 9, 23))
+    assert [x.id for x in early] == ["ready"]
+    assert len(main) == 5
+
+
+def test_ready_now_but_not_far_ahead_of_the_subject_stays(own):
+    """A subject handing over next year is competing with ready stock."""
+    own.possession = date(2027, 3, 1)
+    main, early = service.split_early([_at("ready", date(2026, 12, 1))], own,
+                                      today=date(2026, 9, 23))
+    assert early == [] and len(main) == 1
+
+
+def test_the_table_never_drops_below_five_rows(own):
+    """A short table is a worse answer than a tagged one; the strongest come back."""
+    own.possession = date(2029, 12, 1)
+    rows = [_at(f"r{i}", date(2026, 12, 1)) for i in range(6)]
+    main, early = service.split_early(rows, own, today=date(2026, 9, 23))
+    assert len(main) == 5 and len(early) == 1
+    assert [x.id for x in main] == ["r0", "r1", "r2", "r3", "r4"]   # strongest-first

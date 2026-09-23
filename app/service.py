@@ -137,20 +137,53 @@ def unclassified(projects: list[Project]) -> list[Project]:
     return [p for p in projects if p.eligible and p.pages_seen and p.status == "unknown"]
 
 
-# A competitor handing over this long before the subject is selling into a different
-# quarter's market: by the time the subject is ready, its flats are keys-in-hand stock.
-# Measured against the SUBJECT, not today -- "still selling" and "still comparable" are
-# different questions, and only the first one has anything to do with today's date.
-EARLY_HANDOVER_MONTHS = 12
+# Handing over earlier than the subject is not the same as being out of the market.
+# A 2027 project competes perfectly well with a 2028 one -- buyers cross-shop across a
+# year or two, and the first cut of this rule moved 9 of 14 Borivali rows out of the
+# table for exactly that reason. What a buyer does not cross-shop is a building that
+# is ready now: that is a different purchase, not a cheaper version of the same one.
+# So both have to be true before a row leaves the main ranking.
+EARLY_HANDOVER_MONTHS = 12      # this far ahead of the subject
+READY_SOON_MONTHS = 6           # ...and handing over within this long from today
+MIN_MAIN_TABLE = 5              # and never leave a rep fewer rows than this
+
+
+def _months(a: date, b: date) -> int:
+    return (b.year - a.year) * 12 + (b.month - a.month)
 
 
 def hands_over_before(p: Project, own: OwnProject) -> int | None:
-    """Months this project hands over ahead of the subject, or None if not comparable."""
+    """Months this project hands over ahead of the subject, if it is a long way ahead.
+
+    Reported for every row that qualifies, whether or not the row is demoted: a rep
+    comparing a 2027 building with a 2028 one should see the gap, not lose the row.
+    """
     poss, own_poss = p.value("possession"), own.possession
     if poss is None or own_poss is None:
         return None
-    months = (own_poss.year - poss.year) * 12 + (own_poss.month - poss.month)
-    return months if months > EARLY_HANDOVER_MONTHS else None
+    months = _months(poss, own_poss)
+    return months if months >= EARLY_HANDOVER_MONTHS else None
+
+
+def is_ready_stock(p: Project, today: date) -> bool:
+    """Handing over soon enough that a buyer treats it as finished, not forthcoming."""
+    poss = p.value("possession")
+    return poss is not None and _months(today, poss) <= READY_SOON_MONTHS
+
+
+def split_early(ranked: list[Project], own: OwnProject,
+                today: date | None = None) -> tuple[list[Project], list[Project]]:
+    """(main table, handing over before you). `ranked` arrives strongest-first."""
+    today = today or date.today()
+    demoted = [p for p in ranked
+               if hands_over_before(p, own) is not None and is_ready_stock(p, today)]
+    # The floor is on the table a rep reads, not on the rule. If honouring the rule
+    # would leave fewer than five rows, the strongest demoted ones come back and keep
+    # their tag -- a short table is a worse answer than a tagged one.
+    short_by = MIN_MAIN_TABLE - (len(ranked) - len(demoted))
+    if short_by > 0:
+        demoted = demoted[short_by:]
+    return [p for p in ranked if p not in demoted], demoted
 
 
 def rank(projects: list[Project]) -> list[Project]:
@@ -286,11 +319,19 @@ def scoring_note(own: OwnProject, scored: list[Project]) -> dict[str, Any]:
     }
 
 
+def _timed(row: dict[str, Any], p: Project, own: OwnProject) -> dict[str, Any]:
+    """Attach the handover gap to a row that has one, wherever it ends up.
+
+    A row that stays in the table still says how much earlier it finishes; that is
+    the fact a rep needs, and losing the row was never the way to deliver it.
+    """
+    months = hands_over_before(p, own)
+    return dict(row, months_before=months,
+                early_note=f"hands over {months} months before you" if months else None)
+
+
 def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]:
-    ranked = rank(rec.projects)
-    # A4: shown in full, with their data, but out of the main ranking.
-    early = [p for p in ranked if hands_over_before(p, own) is not None]
-    ranked = [p for p in ranked if p not in early]
+    ranked, early = split_early(rank(rec.projects), own)
     return {
         "scan_id": rec.scan_id, "own": {"id": own.id, "name": own.name, "locality": own.locality}, "radius_km": rec.radius_km,
         "mode": rec.mode, "created_at": rec.created_at.isoformat(),
@@ -305,12 +346,12 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
                    "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
         "extraction": meta.get("extraction", {}),
         "scoring": scoring_note(own, [p for p in ranked if p.match_score is not None]),
-        "competitors": [card(p, i + 1) for i, p in enumerate(ranked[: settings.max_table_rows])],
+        "competitors": [_timed(card(p, i + 1), p, own)
+                        for i, p in enumerate(ranked[: settings.max_table_rows])],
         # Real projects, fully researched, that hand over more than a year before the
         # subject does. A rep still wants to see them; they are just not what the
         # subject is competing against for the same buyer.
-        "handing_over_before": [dict(card(p, i + 1),
-                                     months_before=hands_over_before(p, own)) for i, p in enumerate(early)],
+        "handing_over_before": [_timed(card(p, i + 1), p, own) for i, p in enumerate(early)],
         # The comparable fact set per project, computed once here so a compare can run
         # months later with no run in memory. The cards cannot stand in for these: they
         # carry no amenities at all, no rera phase list, and two of structure's seven

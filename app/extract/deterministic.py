@@ -344,16 +344,46 @@ RATE_RE = re.compile(
 )
 PLAUSIBLE_RATE = range(1_000, 200_001)
 
+# A price is quoted in money. Without a currency anywhere near it, "1630/sqft" is a
+# size -- "3 BHK with Size 1630/sqft-carpet" offered Rs 1,630 per sq ft to a Kandivali
+# table. Looked for just before the figure as well as inside the match, because
+# "Rate: Rs 29,900 per sq ft" and "Rs 29,900/sqft" both read naturally.
+MONEY_NEAR = re.compile(r"(?:\u20b9|\bRs\.?|\bINR\b|\bprice\b|\brate\b)[^\n]{0,40}$", re.IGNORECASE)
+
+# A market report's number is about a city or a locality, never about this building:
+# "Average residential prices increased from Rs 6,002/sq.ft. (2019)" is Bangalore, and
+# "Zone Avg Rate Rs 30,626/sq.ft - 371 projects" is every project in Kandivali West.
+# Both sat in pages a candidate legitimately read.
+AGGREGATE_RATE = re.compile(
+    r"\baverage\b|\bavg\b|\bmedian\b|\bzone\b|\bcity\b|\btrend|\bappreciat|"
+    r"\bincreased\s+from\b|\blocality\s+rate",
+    re.IGNORECASE)
+AGGREGATE_WINDOW = 90
+
+
+def _is_a_rate_for_this_building(text: str, m: re.Match) -> bool:
+    """Is this figure money, and is it about one building rather than a market?"""
+    if m.group(1) is None and not MONEY_NEAR.search(text[max(0, m.start() - 45):m.start()]):
+        return False
+    window = text[max(0, m.start() - AGGREGATE_WINDOW):m.end() + AGGREGATE_WINDOW]
+    return not AGGREGATE_RATE.search(window)
+
 
 def extract_rate(text: str, *, source: Source = "tavily", url: str | None = None,
                  first_party: bool = False) -> FieldReport:
+    """The first figure that is a price, for this building, in a plausible band.
+
+    All three conditions are load-bearing and each was added after a wrong number
+    reached a table: a carpet area with no currency, a city average lifted from a
+    market report, and a figure outside any believable range.
+    """
     for m in RATE_RE.finditer(text or ""):
         raw = m.group(1) or m.group(2)
         try:
             value = int(raw.replace(",", ""))
         except ValueError:
             continue
-        if value in PLAUSIBLE_RATE:
+        if value in PLAUSIBLE_RATE and _is_a_rate_for_this_building(text, m):
             return found("rate_psf", value, source=source, url=url, confidence=_conf(first_party),
                          evidence=_evidence(text, m.start(), m.end()))
     return missing("rate_psf", "RATE_NOT_PUBLISHED")
