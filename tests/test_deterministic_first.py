@@ -118,9 +118,11 @@ def test_a_page_about_another_project_is_not_read_at_all(vertex_page, own):
     llm = CountingLLM()
     project, out = run_extract("K Raheja Interface Heights, 3 BHK flats on rent. Rs 9,000 per sq.ft.",
                                own, llm, name="Chandak Treesourus")
-    # The page names no project we asked about, so it is the only page and is
-    # kept -- losing every page is worse than admitting one foreign page.
-    assert project.pages_seen or project.report("rate_psf").values
+    # The test's own name is the rule now: a page about another project is not read.
+    # It used to be read whenever it was the only page, which is how ₹9,000 from a
+    # rental listing could become a competitor's published rate.
+    assert project.report("rate_psf").values == []
+    assert project.unnamed_pages == 1
 
 
 def test_a_foreign_page_beside_a_real_one_is_dropped(vertex_page, own):

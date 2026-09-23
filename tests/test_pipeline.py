@@ -19,7 +19,8 @@ def scan():
 def test_counts_and_labels(scan):
     own, rec, meta, _ = scan
     pl = service.list_payload(rec, own, meta)
-    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 2, "partial": 2, "thin": 1, "unverified": 1}
+    assert pl["counts"] == {"candidates_seen": 9, "eligible": 6, "handing_over_before": 0,
+                              "comparable": 2, "partial": 2, "thin": 1, "unverified": 1}
     by = {c["name"]: c for c in pl["competitors"]}
     assert by["Runwal Vertex"]["label"] == "COMPARABLE" and by["Runwal Vertex"]["match_score"] is not None
     assert by["Rustomjee Crest"]["completeness"] == 4 and by["Rustomjee Crest"]["match_score"] is None

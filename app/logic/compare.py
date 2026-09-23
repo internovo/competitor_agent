@@ -79,7 +79,7 @@ def _column_from_project(p: Project) -> dict[str, Any]:
     if p.on_propog:
         tags.append("ON propOG")
     return {
-        "id": p.id, "name": p.name, "builder": p.builder, "is_own": False, "distance_km": p.distance_km,
+        "id": p.id, "name": p.display_name, "builder": p.builder, "is_own": False, "distance_km": p.distance_km,
         "label": p.label, "completeness": p.completeness, "match_score": p.match_score, "tags": tags,
         "configurations": p.value("configurations"),
         "carpet": {"min": carpet.value.min_sqft, "max": carpet.value.max_sqft, "source": carpet.prov.source} if carpet else None,

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import time
 import uuid
 from datetime import date
@@ -231,6 +232,15 @@ FACT_KEYS: dict[str, tuple[str, ...]] = {
 }
 
 
+def _registrable(url: str) -> str:
+    """The domain a page belongs to, near enough for "are these two sources the same
+    publisher". www and a country suffix are not a different publisher."""
+    host = re.sub(r"^https?://", "", url or "").split("/")[0].lower()
+    host = re.sub(r"^www\.", "", host)
+    parts = host.split(".")
+    return ".".join(parts[-3:]) if len(parts) > 2 and parts[-2] in ("co", "com", "net", "org") else ".".join(parts[-2:])
+
+
 def _has(project: Project, field: str) -> bool:
     if field == "builder":
         return bool(project.builder)
@@ -336,6 +346,23 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
     # Pages that never name the project are about a neighbour, and with twenty
     # pages per project those foreign pages decide the answer.
     keep = {p.url for p in deterministic.relevant_pages(prose, project.match_name)}
+    # Who, independently, says this building exists where we think it does. The
+    # register would answer this and cannot be read, so the answer is "two unrelated
+    # publishers agree" instead. Locality is required: "Kalpataru Aurum" is published
+    # all over the web and every one of those pages is about Pune.
+    loc = (project.locality or ctx.own.locality or "").lower()
+    for pg in prose:
+        if pg.url in keep and (not loc or loc in pg.text.lower()):
+            host = _registrable(pg.url)
+            if host and host not in project.confirmed_by:
+                project.confirmed_by.append(host)
+    project.confirmed_by.sort()
+    project.unnamed_pages = len(prose) - len(keep)
+    if prose and not keep:
+        # Not a licence to read them anyway. The row survives and is published
+        # unconfirmed; its fields stay empty with this as the reason.
+        log.append(f"extract[{project.id}]: none of {len(prose)} pages name "
+                   f"{project.match_name!r}; nothing published from them")
     n_det = 0
     for page in pages:
         if page.kind == "json_facts":

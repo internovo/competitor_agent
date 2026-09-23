@@ -100,7 +100,8 @@ def test_the_subject_arrives_in_the_request_not_from_a_lookup(client):
 def test_a_finished_run_carries_the_whole_list_payload(client, run_id):
     body = client.get(f"/scans/{run_id}").json()
     assert body["status"] == "done" and body["stage"] is None
-    assert body["counts"] == {"candidates_seen": 9, "eligible": 6, "comparable": 2, "partial": 2, "thin": 1, "unverified": 1}
+    assert body["counts"] == {"candidates_seen": 9, "eligible": 6, "handing_over_before": 0,
+                              "comparable": 2, "partial": 2, "thin": 1, "unverified": 1}
     assert body["stages_done"] and any("discover[fixture]" in s for s in body["stages_done"])
     assert body["elapsed_s"] >= 0
 

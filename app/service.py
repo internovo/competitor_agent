@@ -137,13 +137,41 @@ def unclassified(projects: list[Project]) -> list[Project]:
     return [p for p in projects if p.eligible and p.pages_seen and p.status == "unknown"]
 
 
+# A competitor handing over this long before the subject is selling into a different
+# quarter's market: by the time the subject is ready, its flats are keys-in-hand stock.
+# Measured against the SUBJECT, not today -- "still selling" and "still comparable" are
+# different questions, and only the first one has anything to do with today's date.
+EARLY_HANDOVER_MONTHS = 12
+
+
+def hands_over_before(p: Project, own: OwnProject) -> int | None:
+    """Months this project hands over ahead of the subject, or None if not comparable."""
+    poss, own_poss = p.value("possession"), own.possession
+    if poss is None or own_poss is None:
+        return None
+    months = (own_poss.year - poss.year) * 12 + (own_poss.month - poss.month)
+    return months if months > EARLY_HANDOVER_MONTHS else None
+
+
 def rank(projects: list[Project]) -> list[Project]:
     """Label, then coverage, then distance. Coverage before distance is the point: sorting
     an UNVERIFIED 0/6 register row above a filled launch because it is 200 m closer put
     the emptiest rows at the top of the table."""
     eligible = [p for p in projects if p.eligible and p.pages_seen and p.status != "unknown"
                 and not p.not_a_project]
-    return sorted(eligible, key=lambda p: (LABEL_ORDER[p.label], -p.completeness, p.distance_km or 99))
+    # Confirmation outranks everything. MahaRERA cannot be read, so "two independent
+    # publishers name this building here" is the strongest check available, and a row
+    # only one source has heard of must not sit above one that two agree on however
+    # complete its form looks.
+    return sorted(eligible, key=lambda p: (not confirmed(p), LABEL_ORDER[p.label],
+                                           -p.completeness, p.distance_km or 99))
+
+
+CONFIRMING_SOURCES_MIN = 2
+
+
+def confirmed(p: Project) -> bool:
+    return len(p.confirmed_by) >= CONFIRMING_SOURCES_MIN
 
 
 # ------------------------------------------------------------------ list
@@ -194,11 +222,25 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
     rate_conflict = next((c for c in p.conflicts if c.field == "rate_psf"), None)
     rera_verified = bool(phases and any(ph.verified for ph in phases.value))
     return {
-        "rank": rank_no, "id": p.id, "name": p.name, "builder": p.builder, "distance_km": p.distance_km, "status": _status_label(p),
+        "rank": rank_no, "id": p.id, "name": p.display_name, "builder": p.builder, "distance_km": p.distance_km, "status": _status_label(p),
         "rera_verified": rera_verified, "on_propog": p.on_propog,
         "label": p.label, "completeness": p.completeness, "completeness_text": f"{p.label} · {p.completeness} of 6" if p.label != "COMPARABLE" else "COMPARABLE",
         "match_score": p.match_score, "score_max": p.score_max, "score_excluded": p.score_excluded,
+        # A5. `earned`/`available` are the same two numbers match_score has always
+        # produced; score_100 is their ratio and coverage is how many of the six
+        # dimensions stand behind it. The portal displays these rather than recomputing.
+        "score_100": p.score_100, "earned": p.match_score, "available": p.score_max,
+        "coverage": p.score_coverage, "score_breakdown": p.score_breakdown,
         "score_note": None if p.match_score is not None else "not scored at this coverage",
+        # A3. Who, other than us, says this building exists here.
+        "confirmed": confirmed(p), "confirmed_by": p.confirmed_by,
+        "confirmed_note": (f"Confirmed by {len(p.confirmed_by)} sources: {', '.join(p.confirmed_by)}"
+                           if confirmed(p) else
+                           (f"Only {p.confirmed_by[0]} names this project in {p.locality or 'this locality'}"
+                            if p.confirmed_by else "No public source names this project in this locality")),
+        # RERA numbers read off a listing are not register-verified, and must never read as if they were.
+        "rera_note": ("RERA number taken from a listing, not checked on the register"
+                      if (phases and not rera_verified) else None),
         "unresolved": p.unresolved,
         "analyse_enabled": p.label not in ("THIN", "UNVERIFIED"),
         "configurations": p.value("configurations"),
@@ -214,8 +256,41 @@ def card(p: Project, rank_no: int) -> dict[str, Any]:
     }
 
 
+# Which subject field feeds which scoring dimension, for the note that tells a
+# builder why nobody could be scored on price.
+OWN_FIELD_FOR_DIM = {"config": "configurations", "carpet": "carpet_sqft", "rate": "rate_psf",
+                     "possession": "possession", "structure": "structure"}
+SORT_DESCRIPTION = "confirmed first, then tier, then coverage, then distance"
+
+
+def scoring_note(own: OwnProject, scored: list[Project]) -> dict[str, Any]:
+    """The weights, the sort, and which subject fields cost everybody a dimension.
+
+    A dimension is dropped when EITHER side lacks the value, so a subject with no
+    rate silently costs 20 points of denominator on every row in the table. The
+    portal can only tell the builder to fill it in if we say which field it was.
+    """
+    always_out = set.intersection(*(set(p.score_excluded) for p in scored)) if scored else set()
+    missing = sorted(OWN_FIELD_FOR_DIM[d] for d in always_out
+                     if d in OWN_FIELD_FOR_DIM and not getattr(own, OWN_FIELD_FOR_DIM[d], None))
+    return {
+        "weights": {"config": settings.w_config, "carpet": settings.w_carpet, "rate": settings.w_rate,
+                    "possession": settings.w_possession, "distance": settings.w_distance,
+                    "structure": settings.w_structure},
+        "total_weight": sum((settings.w_config, settings.w_carpet, settings.w_rate,
+                             settings.w_possession, settings.w_distance, settings.w_structure)),
+        "sort": SORT_DESCRIPTION,
+        "subject_missing": missing,
+        "note": (f"{own.name} has no {', '.join(missing)} on file, so that dimension is "
+                 f"excluded from every score in this table." if missing else None),
+    }
+
+
 def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]:
     ranked = rank(rec.projects)
+    # A4: shown in full, with their data, but out of the main ranking.
+    early = [p for p in ranked if hands_over_before(p, own) is not None]
+    ranked = [p for p in ranked if p not in early]
     return {
         "scan_id": rec.scan_id, "own": {"id": own.id, "name": own.name, "locality": own.locality}, "radius_km": rec.radius_km,
         "mode": rec.mode, "created_at": rec.created_at.isoformat(),
@@ -224,11 +299,18 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
         "incomplete": bool(meta.get("sources_unavailable")),
         "sources_unavailable": meta.get("sources_unavailable", []),
         "counts": {"candidates_seen": len(rec.projects) + len(rec.dropped), "eligible": len(ranked),
+                   "handing_over_before": len(early),
                    "comparable": sum(1 for p in ranked if p.label == "COMPARABLE"), "partial": sum(1 for p in ranked if p.label == "PARTIAL"),
                    "thin": sum(1 for p in ranked if p.label == "THIN"),
                    "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
         "extraction": meta.get("extraction", {}),
+        "scoring": scoring_note(own, [p for p in ranked if p.match_score is not None]),
         "competitors": [card(p, i + 1) for i, p in enumerate(ranked[: settings.max_table_rows])],
+        # Real projects, fully researched, that hand over more than a year before the
+        # subject does. A rep still wants to see them; they are just not what the
+        # subject is competing against for the same buyer.
+        "handing_over_before": [dict(card(p, i + 1),
+                                     months_before=hands_over_before(p, own)) for i, p in enumerate(early)],
         # The comparable fact set per project, computed once here so a compare can run
         # months later with no run in memory. The cards cannot stand in for these: they
         # carry no amenities at all, no rera phase list, and two of structure's seven

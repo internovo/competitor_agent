@@ -94,4 +94,12 @@ def compute(project: Project, own: OwnProject, radius_km: float) -> tuple[int | 
 
 def apply(project: Project, own: OwnProject, radius_km: float) -> Project:
     project.match_score, project.score_breakdown, project.score_max, project.score_excluded = compute(project, own, radius_km)
+    # Presentation only: nothing about how a point is earned changes here. A rep was
+    # reading 30/50 beside 48/70 and concluding the first was the weaker match.
+    # Nothing scored means no percentage -- never 0, which reads as "scored badly".
+    if project.match_score is not None and project.score_max:
+        project.score_100 = max(0, min(100, round(100 * project.match_score / project.score_max)))
+        project.score_coverage = len(project.score_breakdown)
+    else:
+        project.score_100, project.score_coverage = None, 0
     return project

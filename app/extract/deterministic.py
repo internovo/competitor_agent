@@ -788,6 +788,18 @@ def _significant(name: str) -> list[str]:
             if t not in _NAME_STOP]
 
 
+def _name_phrase(name: str) -> list[str]:
+    """Every word of the name, letters and digits kept apart, nothing dropped.
+
+    `_significant` exists to find a rare word to search on, so it throws away short
+    and common ones. That is right for a fallback and wrong for identity: "XL" is two
+    characters and is the whole of what separates Ruparel Mumbai XL from Ruparel
+    Optima, and "64" is the whole of Marina64. A name made only of those reduces to
+    no tokens at all, matches no page, and then every page looks equally relevant.
+    """
+    return re.findall(r"[A-Za-z]+|\d+", (name or "").lower())
+
+
 def mentions_project(text: str, name: str) -> bool:
     """Does this page mention the project at all?
 
@@ -795,8 +807,18 @@ def mentions_project(text: str, name: str) -> bool:
     Chandak Treesourus and Ajmera Boulevard as rental on the same quote, which
     came from a page about K Raheja Interface Heights.
     """
+    if not text or not name:
+        return False
+    # The whole name, in order, tolerant of punctuation between words. This is the
+    # strong signal and it is tried first: "Mumbai XL" is present in "Ruparel Mumbai
+    # XL" and absent from "Ruparel Optima". On 23 Sep the name reduced to zero
+    # significant tokens, every page scored equally irrelevant, and the pipeline read
+    # a different Ruparel building's page into the #1 row of a live table.
+    words = _name_phrase(name)
+    if words and re.search(r"\W{0,3}".join(re.escape(w) for w in words), text, re.IGNORECASE):
+        return True
     tokens = _significant(name)
-    if not tokens or not text:
+    if not tokens:
         return False
     full = re.compile(r"\W{0,3}".join(re.escape(t) for t in tokens), re.IGNORECASE)
     if full.search(text):
@@ -817,16 +839,22 @@ def is_comparison_page(url: str | None) -> bool:
 
 
 def relevant_pages(pages: list, name: str | None, text_of=lambda p: p.text) -> list:
-    """Pages that actually mention the project.
+    """Pages that actually mention the project, and only those.
 
-    If NONE do, return them all rather than nothing: a builder's own site may
-    spell the name differently, and losing every page is worse than admitting a
-    few foreign ones.
+    This used to return every page when none matched, on the reasoning that losing
+    every page is worse than admitting a few foreign ones. It is not. On 23 Sep the
+    #1 competitor on a live table carried configurations, carpet, rate and possession
+    read off a different building's page, because its name matched nothing and the
+    fallback then let all seven pages through. A blank field with a reason beside it
+    is safe; a field blended from two buildings is not, and nothing downstream can
+    tell that it happened.
+
+    Nothing matching is a fact about the candidate. The caller records it and the
+    project is published unconfirmed rather than filled in from strangers.
     """
     if not name:
         return pages
-    kept = [p for p in pages if mentions_project(text_of(p), name)]
-    return kept or pages
+    return [p for p in pages if mentions_project(text_of(p), name)]
 
 
 def focus_on_project(text: str, name: str, window: int = FOCUS_WINDOW) -> str:
