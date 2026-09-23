@@ -112,19 +112,27 @@ def test_the_carpet_band_refuses_exactly_the_ranges_it_should(borivali):
     Two projects left this list on 16 Sep, and that is the band working rather than
     weakening: Airavat and Phoenix were refused at 1184-3734 and 1161-5031 because the
     only pages we had quoted saleable areas across a whole society. SquareYards' own
-    project page states each one's carpet range, so both now have a figure a rep can
-    use -- 772-1182 and 850-1918 -- and neither needed the band to save it."""
+    project page states each one's carpet range, so both had a figure a rep could use.
+
+    Airavat dropped out of this assertion on 23 Sep and is not a loss: it sits at
+    1.82 km, outside the 1.5 km radius, and was never published. It used to be
+    researched in full and then discarded by `filter` for being out of radius; now it
+    is not researched at all. Phoenix, which a rep does see, still carries its figure."""
     _, rec, _, _ = borivali
     refused = {p.name: p.carpet_sqft.span for p in rec.projects
                if p.carpet_sqft.absent == "IMPLAUSIBLE_CARPET"}
     assert refused == {"Mayfair 14": [680, 8452]}
-    for name, lo in (("Airavat By Bhoomi Group", 772), ("H. Rishabraj Phoenix", 850)):
-        p = next(x for x in rec.projects if x.name == name)
-        assert p.carpet_sqft.absent is None and p.carpet_sqft.value.min_sqft == lo
+    phoenix = next(x for x in rec.projects if x.name == "H. Rishabraj Phoenix")
+    assert phoenix.carpet_sqft.absent is None and phoenix.carpet_sqft.value.min_sqft == 850
+    assert not any(x.name == "Airavat By Bhoomi Group" for x in rec.projects)
 
 
 def test_the_other_two_suburbs_replay_too_so_the_surface_is_not_one_locality():
-    for name, pages in (("kandivali-west-2026-09-08", 100), ("goregaon-west-2026-09-08", 20)):
+    """The page floors came down on 23 Sep because the scan stopped researching
+    candidates it was going to discard: Goregaon reads 20 pages where it read more,
+    and still finds the same competitor. Pages fetched is work done, not results
+    found -- the count that has to hold is the second assertion."""
+    for name, pages in (("kandivali-west-2026-09-08", 100), ("goregaon-west-2026-09-08", 15)):
         _, _, meta, payload = _replay(name)
         assert meta["pages_fetched"] > pages, name
         assert payload["counts"]["eligible"] >= 1, name

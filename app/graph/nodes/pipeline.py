@@ -11,7 +11,7 @@ from datetime import date
 from langchain_core.runnables import RunnableConfig
 from langgraph.types import Send
 
-from app.config import settings
+from app.config import COMPLETENESS_FIELDS, settings
 from app.graph.state import ExtractInput, GraphState
 from app.llm import templates
 from app.llm.client import ExtractionDegraded, FatalLLMError
@@ -149,6 +149,12 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
     dropped: list[dict] = []
     filings: list[dict] = []
     societies: list[dict] = []
+    # A candidate discovery has already pinned is never re-placed: `extract` geocodes
+    # only when `lat` is None, and then recomputes the distance from the same point.
+    # So the margin bought nothing for a pinned candidate except a research pass that
+    # `filter` would undo -- 12 of 67 candidates on Kandivali, 24 of 75 on Borivali.
+    # Unpinned candidates keep the margin, because their coordinates really can move.
+    today = date.today()
     margin = state["radius_km"] + settings.discovery_margin_km
     own_reras = {ph.number for ph in own.rera_phases}
     own_slug = resolve.slug(own.name)
@@ -176,6 +182,20 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
                               "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
                               "reason": f"Google Places classifies this pin as {kind.replace('_', ' ')}, not somewhere flats are sold"})
             continue
+        # A possession date the discovery source states as a field, and that has
+        # already passed. A date is checkable; a lifecycle flag turned out not to be.
+        # SquareYards lists Chandak Eden Garden as "ready" -- research finds it under
+        # construction, handing over May 2028, and it is a published competitor. It
+        # also lists a separate "Chandak Eden Gardens", so the flag is probably the
+        # namesake's. Skipping research on someone else's lifecycle flag cost a real
+        # row, so only the date is trusted here.
+        dated = next(((m, d) for m in members
+                      if m.possession and (d := _as_date(m.possession))), (None, None))
+        if dated[0] is not None and dated[1] <= today:
+            dropped.append({"id": pid, "name": rep.name,
+                            "reason": f"{dated[0].source} gives possession {dated[1].isoformat()}, "
+                                      f"already past; not researched"})
+            continue
         if rep.register_only or resolve.looks_like_company(rep.name):
             filings.append({"id": pid, "name": rep.name, "rera_no": rep.rera_no,
                             "distance_km": round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2) if rep.lat is not None else None,
@@ -188,8 +208,10 @@ async def resolve_node(state: GraphState, config: RunnableConfig) -> dict:
         if rep.lat is not None:
             p.pin_accuracy = "Places - rooftop" if rep.source == "places" else f"{rep.source} - address"
             p.distance_km = round(haversine_km(own.lat, own.lng, rep.lat, rep.lng), 2)
-            if p.distance_km > margin:
-                dropped.append({"id": pid, "name": p.name, "reason": f"outside radius at discovery ({p.distance_km} km)"})
+            limit = state["radius_km"] if rep.lat is not None and rep.source != "maharera" else margin
+            if p.distance_km > limit:
+                dropped.append({"id": pid, "name": p.name,
+                                "reason": f"outside radius at discovery ({p.distance_km} km > {limit} km)"})
                 continue
         rera_members = [m for m in members if m.rera_no and m.source == "maharera"]
         if rera_members:
@@ -232,6 +254,15 @@ FACT_KEYS: dict[str, tuple[str, ...]] = {
 }
 
 
+def _as_date(value: str | None) -> date | None:
+    """"2029-12" and "2029-12-01" both mean December 2029. Anything else means nothing,
+    and a candidate is never dropped on a date we could not read."""
+    try:
+        return date.fromisoformat(value if len(value or "") > 7 else f"{value}-01")
+    except (TypeError, ValueError):
+        return None
+
+
 def _registrable(url: str) -> str:
     """The domain a page belongs to, near enough for "are these two sources the same
     publisher". www and a country suffix are not a different publisher."""
@@ -247,6 +278,17 @@ def _has(project: Project, field: str) -> bool:
     if field == "status":
         return project.status != "unknown"
     return bool(project.report(field).observations)
+
+
+# What is worth waking a model for. The six dimensions decide the tier and the score,
+# and these two decide whether the row is shown at all. `timeline` is in neither: it
+# feeds a progress bar on the detail page.
+#
+# Measured before it was chosen: on the Kandivali corpus 109 of 247 pages sent to the
+# model -- 891,036 characters, 41% of the whole prompt bill -- were sent asking for
+# timeline and nothing else. A page is skipped when timeline is all that is left.
+# Where the model is being called anyway, timeline still rides along for free.
+MODEL_WORTH_WAKING_FOR = set(COMPLETENESS_FIELDS) | {"builder", "status"}
 
 
 def _still_missing(project: Project) -> list[str]:
@@ -444,6 +486,8 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
 
     # --- 2. only what is still missing goes to Claude -----------------------
     want = set(_still_missing(project))
+    if not want & MODEL_WORTH_WAKING_FOR:
+        want = set()      # nothing left that could move the tier, the score or the row
     # Only the parts of each page that could state what is still missing. Whole pages
     # were going to the model so it could read six labelled values off them. Trimmed
     # here rather than in the client because `want` is known here, and because the
@@ -453,6 +497,12 @@ async def extract(state: ExtractInput, config: RunnableConfig) -> dict:
                for pg in read_pages] if want else []
     n_llm = 0
     timed_out = deadline is not None and deadline - time.monotonic() <= 0
+    budget = d.get("token_budget")
+    if trimmed and budget is not None and not budget.take(sum(len(pg.text) for pg in trimmed)):
+        # The ceiling, not a failure: everything the regexes read is already merged.
+        log.append(f"extract[{project.id}]: run token budget spent; not asking the model "
+                   f"about {sorted(want)}")
+        want, trimmed = set(), []
     if want and llm is not None and read_pages and not timed_out:
         sem = asyncio.Semaphore(settings.extract_concurrency)
 

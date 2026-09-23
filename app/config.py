@@ -52,6 +52,12 @@ class Settings(BaseSettings):
     groq_max_output_tokens: int = 2048
     default_radius_km: float = 1.5
 
+    # Where finished and failed runs are written, atomically, if anywhere. Unset means
+    # nowhere, which is the documented design: Postgres holds the canonical scan. Set
+    # it and a payload survives the process that produced it -- which is what was
+    # missing when a completed scan was lost to a file-permission error on 23 Sep.
+    run_dump_dir: Path | None = None
+
     # Runs are held in memory only. The canonical copy of a scan is written by the
     # Node API, against Postgres, where tenancy is enforced in one place.
     max_runs_held: int = 50
@@ -132,6 +138,13 @@ class Settings(BaseSettings):
 
     # The table a rep reads. Everything else is returned under `also_found`.
     max_table_rows: int = 10
+
+    # The most a single scan may send to the model, across every candidate. Groq's
+    # free tier allows 200,000 tokens a DAY, and one Kandivali scan wanted 640,000:
+    # it died in extract with 17 of 60 candidates done and kept nothing. Under a
+    # ceiling the same scan stops asking, keeps every deterministic field, and says
+    # how many candidates it could not ask about. 0 disables the ceiling.
+    max_run_tokens: int = 150_000
 
     # Extraction
     max_page_chars: int = 40_000

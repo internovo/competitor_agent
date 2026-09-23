@@ -2,14 +2,16 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import time
 import uuid
 from datetime import date
+from pathlib import Path
 from collections.abc import Callable
 from typing import Any
 
 from app.config import settings
-from app.cost import NodeSpans, tokens_inr
+from app.cost import NodeSpans, TokenBudget, classify, tokens_inr
 from app.graph.build import graph
 from app.llm import templates
 from app.llm.client import LLM, get_llm, own_facts, own_facts_from_column
@@ -22,6 +24,45 @@ from app.sources.registry import build_sources
 
 LABEL_ORDER = {"COMPARABLE": 0, "PARTIAL": 1, "THIN": 2, "UNVERIFIED": 3}
 CATEGORY_LABELS = compare_logic.CATEGORY_LABELS
+
+
+async def _invoke(graph, state, config, on_stage):
+    """The graph, streamed or not. Split out so `run_scan` can wrap it in one try."""
+    if on_stage is None:
+        final = await graph.ainvoke(state, config=config)
+    else:
+        final = dict(state)
+        on_stage("", {})   # start the clock after setup, so the first node is not billed for it
+        # not `mode`: that is the fetch mode, and shadowing it recorded every streamed
+        # scan as mode "values".
+        async for stream, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
+            if stream == "values":
+                final = chunk
+            else:
+                for node, update in chunk.items():
+                    on_stage(node, update or {})
+    return final
+
+
+def _partial_meta(fetcher, budget, final: dict | None = None) -> dict:
+    """The cost and coverage a run had accumulated when it stopped, however it stopped.
+
+    A failed run used to tally against an empty dict, because the only place the call
+    counts lived was a local in `run_scan` that the exception unwound past. Three runs
+    on 22-23 Sep reported Rs 0.67 of LLM and nothing else while having spent real money
+    on Places and Tavily, so a day's true spend could not be reconstructed afterwards.
+    """
+    searches, places, _ = classify(fetcher.calls)
+    final = final or {}
+    return {"http_calls": len(fetcher.calls), "urls": list(fetcher.calls),
+            "searches": searches, "places_calls": places,
+            "sources_unavailable": list(fetcher.refused.values()),
+            "pages_fetched": final.get("pages_fetched", 0),
+            "model_pages": final.get("model_pages", 0),
+            "prompt_chars": final.get("prompt_chars", 0),
+            "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0}),
+            "token_budget": {"max_tokens": budget.max_tokens, "used": budget.used,
+                             "candidates_not_asked": budget.skipped}}
 
 
 async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None = None,
@@ -38,7 +79,9 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     constructed a client off whatever key was in .env and spent on it.
     """
     fetcher = Fetcher(mode, timeout=settings.fetch_timeout_s)
-    deps = {"sources": build_sources(mode, sources, nearby), "fetcher": fetcher, "llm": llm}
+    budget = TokenBudget(settings.max_run_tokens)
+    deps = {"sources": build_sources(mode, sources, nearby), "fetcher": fetcher, "llm": llm,
+            "token_budget": budget}
     scan_id = uuid.uuid4().hex[:12]
     state = {"own": own, "radius_km": radius_km, "mode": mode, "scan_id": scan_id, "candidates": [],
              "projects": [], "dropped": [], "retry_done": False, "log": []}
@@ -47,19 +90,11 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     # max_concurrency caps the extract fan-out; every other node runs alone anyway.
     config = {"configurable": deps, "recursion_limit": 50, "max_concurrency": settings.candidates_at_once,
               "callbacks": [NodeSpans(llm, scan_id, own.locality or "")]}
-    if on_stage is None:
-        final = await graph.ainvoke(state, config=config)
-    else:
-        final = dict(state)
-        on_stage("", {})   # start the clock after setup, so the first node is not billed for it
-        # not `mode`: that is the fetch mode, and shadowing it recorded every streamed
-        # scan as mode "values".
-        async for stream, chunk in graph.astream(state, config=config, stream_mode=["updates", "values"]):
-            if stream == "values":
-                final = chunk
-            else:
-                for node, update in chunk.items():
-                    on_stage(node, update or {})
+    try:
+        final = await _invoke(graph, state, config, on_stage)
+    except Exception as e:   # noqa: BLE001 - re-raised; this only attaches what was spent
+        e.partial_meta = _partial_meta(fetcher, budget)
+        raise
     rec = ScanRecord(scan_id=scan_id, own_id=own.id, radius_km=radius_km, mode=mode, projects=final["projects"], dropped=final.get("dropped", []))
     unavailable = list(fetcher.refused.values())
     log = final.get("log", []) + [f"source unavailable: {u['source']} ({u['reason']}, HTTP {u['status']}); "
@@ -73,13 +108,38 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
             "candidates_researched": len(final["projects"]),
             "model_pages": final.get("model_pages", 0), "prompt_chars": final.get("prompt_chars", 0),
             "untrimmed_chars": final.get("untrimmed_chars", 0),
-            "ambiguous_pairs": final.get("ambiguous_pairs", 0)}
+            "ambiguous_pairs": final.get("ambiguous_pairs", 0),
+            "token_budget": {"max_tokens": budget.max_tokens, "used": budget.used,
+                             "candidates_not_asked": budget.skipped}}
     return rec, meta
 
 
 # Concurrency is bounded here rather than in the route, so both entry points -- ours
 # and propOG's /scan -- queue against the same slots.
 _slots = asyncio.Semaphore(settings.max_concurrent_scans)
+
+
+def _dump(run) -> None:
+    """Write the run out, atomically, the moment there is anything to write.
+
+    Off unless RUN_DUMP_DIR is set, and never a second source of truth: the canonical
+    copy of a scan is still the Node API's row in Postgres. This is for the case that
+    actually bit us -- a finished scan whose payload existed and was then lost, with
+    no way to get it back short of paying for the scan again.
+
+    Written to a temporary name in the same directory and moved into place, so a reader
+    never sees half a file, and a failure here never fails a scan that has succeeded.
+    """
+    if not settings.run_dump_dir:
+        return
+    try:
+        out = Path(settings.run_dump_dir)
+        out.mkdir(parents=True, exist_ok=True)
+        tmp = out / f".{run.run_id}.partial"
+        tmp.write_text(json.dumps(run.body(), indent=2, default=str), encoding="utf-8")
+        tmp.replace(out / f"run_{run.run_id}_{run.status}.json")
+    except Exception as e:  # noqa: BLE001 - a dump that fails must not lose the run
+        run.note([f"run dump failed ({type(e).__name__}); the payload is still in memory"])
 
 
 async def execute(run) -> "RunRecord":
@@ -110,11 +170,15 @@ async def _execute(run) -> "RunRecord":
     try:
         rec, meta = await run_scan(run.own, run.radius_km, run.mode, llm=llm, on_stage=on_stage, nearby=run.nearby)
     except Exception as e:  # noqa: BLE001 - the record is the only place this can be reported
-        run.tally(llm, {})
+        # Everything spent before it broke. Without this the run reported no Places
+        # and no Tavily calls at all, and the day's real bill could not be added up.
+        run.tally(llm, getattr(e, "partial_meta", {}))
         run.fail(e)
+        _dump(run)
         return run
     run.tally(llm, meta)
     run.finish(rec, meta, list_payload(rec, run.own, meta))
+    _dump(run)
     return run
 
 

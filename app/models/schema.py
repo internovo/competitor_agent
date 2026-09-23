@@ -301,6 +301,12 @@ class Candidate(BaseModel):
     on_propog: bool = False
     nearest_metro: str | None = None
     register_only: bool = False   # a MahaRERA row whose name is the promoter, not a project
+    # Declared by the source that found it, where the source states it as a field
+    # rather than as prose. SquareYards' locality listing carries both in its JSON-LD;
+    # they were parsed and then dropped on the floor, so every finished building in the
+    # circle was researched in full before `filter` threw it away.
+    status: Status = "unknown"
+    possession: str | None = None   # as the source spells it: "2029-12" or "2029-12-01"
     # What Google Places calls this pin. Requested in the field mask and then dropped
     # on the floor until now, which is why a clothing shop reached rank 4 of a
     # competitor table: the data saying it was a clothing shop was already in hand.
