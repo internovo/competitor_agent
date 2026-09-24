@@ -84,6 +84,7 @@ class RunRecord:
             candidates=meta.get("candidates_researched", 0),
             by_stage=llm.usage_by_stage() if llm is not None else {},
         )
+        self.cost.cache_hits = meta.get("cache_hits", 0)
         self.extraction = meta.get("extraction", self.extraction)
 
     def timing(self) -> dict[str, Any]:

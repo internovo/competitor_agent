@@ -88,7 +88,17 @@ class Fetcher:
         if mode == "live" and cache_dir is None:
             prune(self.cache_dir, settings.live_cache_keep_days * 24)
         self.timeout = timeout
+        # Every request that was made, and -- separately -- the ones that actually left
+        # the machine. Billing on `calls` charged for cache hits: a Malad West rerun on
+        # 24 Sep reported Rs 209.22 against a real spend of zero, because every page came
+        # off disk. Every cost figure this project has given the business came from that
+        # count, so the two are kept apart now.
         self.calls: list[str] = []
+        # Not `network`: the cache tests already bind that name to their own recorder.
+        self.outbound: list[str] = []
+        # Counted, not derived: a replay miss is neither a hit nor a call that went out,
+        # and `calls - outbound` quietly counted every one of them as a hit.
+        self.hits = 0
         # source -> {"status", "reason"}, first refusal only. Tavily answered 432 to every
         # call on 17 Sep and the search code read that as an empty result list: the scan
         # finished, looked normal, and two localities lost every Tavily page unannounced.
@@ -143,9 +153,14 @@ class Fetcher:
         self.calls.append(url)
         cached = self._read(key)
         if cached is not None and self._usable(cached):
+            self.hits += 1
             return self._note(cached)
         if self.mode != "live":
             raise CacheMiss(f"{method} {url} not in cache (mode={self.mode})")
+        # Recorded here, past the point of no return: a replay miss never reaches the
+        # network, and counting it as outbound would bill a replay for a call it could
+        # not have made.
+        self.outbound.append(url)
 
         if impersonate:
             res = await self._curl_cffi(url, method, params, json_body, headers)

@@ -82,6 +82,9 @@ class Cost:
     places_calls: int = 0
     model: str = ""
     candidates: int = 0                                        # how many the tokens were spent on
+    # Requests answered from disk. Reported so the cache can be seen working, and never
+    # billed: a rerun on 24 Sep charged Rs 209.22 for a run that made no network calls.
+    cache_hits: int = 0
     by_stage: dict[str, dict[str, Any]] = field(default_factory=dict)
 
     @property
@@ -203,6 +206,11 @@ class NodeSpans(AsyncCallbackHandler):
 # estimate only ever decides whether to attempt the next one.
 CHARS_PER_TOKEN = 4
 
+# How much of the ceiling is kept back so the call that crosses the line does not cross
+# the ceiling. Sized as one extract batch against a 150,000 run: a fan-out of 2 or 3
+# candidates has never billed more than about 12,000 tokens between them.
+BUDGET_HEADROOM = 0.10
+
 
 class TokenBudget:
     """A hard ceiling on what one scan may send to a model, enforced on real usage.
@@ -230,11 +238,22 @@ class TokenBudget:
 
     def take(self, chars: int) -> bool:
         want = max(1, chars // CHARS_PER_TOKEN)
-        if self.max_tokens and self.used + self.reserved + want > self.max_tokens:
+        if self.max_tokens and self.used + self.reserved + want > self.admit_below:
             self.skipped += 1
             return False
         self.reserved += want
         return True
+
+    @property
+    def admit_below(self) -> int:
+        """The line new work is admitted under, which sits below the hard ceiling.
+
+        A count that only arrives when a call returns can always be crossed by the call
+        that crosses it -- on 24 Sep `used` finished at 154,160 against a ceiling of
+        150,000, because `observe` brings in resolve and narrate, which nothing reserved.
+        Leaving one batch of headroom is what makes the hard number hold.
+        """
+        return max(1, int(self.max_tokens * (1 - BUDGET_HEADROOM)))
 
     def observe(self, actual_tokens: int) -> None:
         """What the provider says has been spent, across every stage, so far."""
