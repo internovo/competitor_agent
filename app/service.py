@@ -52,9 +52,10 @@ def _partial_meta(fetcher, budget, final: dict | None = None) -> dict:
     on 22-23 Sep reported Rs 0.67 of LLM and nothing else while having spent real money
     on Places and Tavily, so a day's true spend could not be reconstructed afterwards.
     """
-    searches, places, _ = classify(fetcher.calls)
+    searches, places, _ = classify(fetcher.outbound)
     final = final or {}
-    return {"http_calls": len(fetcher.calls), "urls": list(fetcher.calls),
+    return {"http_calls": len(fetcher.calls), "urls": list(fetcher.outbound),
+            "cache_hits": fetcher.hits,
             "searches": searches, "places_calls": places,
             "sources_unavailable": list(fetcher.refused.values()),
             "pages_fetched": final.get("pages_fetched", 0),
@@ -99,10 +100,13 @@ async def run_scan(own: OwnProject, radius_km: float, mode: str, llm: LLM | None
     log = final.get("log", []) + [f"source unavailable: {u['source']} ({u['reason']}, HTTP {u['status']}); "
                                   f"results are incomplete" for u in unavailable]
     meta = {"nearest_metro": final.get("nearest_metro"), "log": log, "http_calls": len(fetcher.calls),
+            # Requests served from disk. Reported so the cache can be seen working, and
+            # kept out of the cost, because nothing was paid for them.
+            "cache_hits": fetcher.hits,
             "sources_unavailable": unavailable,
             "register_filings": final.get("register_filings", []),
             "societies": final.get("societies", []),
-            "urls": list(fetcher.calls), "pages_fetched": final.get("pages_fetched", 0),
+            "urls": list(fetcher.outbound), "pages_fetched": final.get("pages_fetched", 0),
             "extraction": final.get("extraction", {"deterministic_fields": 0, "llm_fields": 0}),
             "candidates_researched": len(final["projects"]),
             "model_pages": final.get("model_pages", 0), "prompt_chars": final.get("prompt_chars", 0),
@@ -394,8 +398,27 @@ def _timed(row: dict[str, Any], p: Project, own: OwnProject) -> dict[str, Any]:
                 early_note=f"hands over {months} months before you" if months else None)
 
 
+# `eligibility.check` returns on the first rule a candidate fails, so a configuration
+# reason means every earlier rule passed: it is in radius, still selling, and handing
+# over in the future. The only thing wrong with it is that it sells something else.
+CONFIG_DROP = "no configuration overlap"
+
+
+def nearby_other_configurations(rec: ScanRecord) -> list[Project]:
+    """Researched, in radius, still selling -- and selling a different size of flat.
+
+    A 1 BHK subject excludes almost everything around it: 10 of 59 candidates on the
+    Malad West run, against 0 on Kandivali and 0 on Borivali, both of which have a
+    1/2/3 BHK subject. Dropping them silently leaves a rep with a one-row table and no
+    way to see the neighbourhood behind it.
+    """
+    return [p for p in rec.projects
+            if not p.eligible and (p.drop_reason or "").startswith(CONFIG_DROP) and p.pages_seen]
+
+
 def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]:
     ranked, early = split_early(rank(rec.projects), own)
+    other_config = nearby_other_configurations(rec)
     return {
         "scan_id": rec.scan_id, "own": {"id": own.id, "name": own.name, "locality": own.locality}, "radius_km": rec.radius_km,
         "mode": rec.mode, "created_at": rec.created_at.isoformat(),
@@ -405,6 +428,7 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
         "sources_unavailable": meta.get("sources_unavailable", []),
         "counts": {"candidates_seen": len(rec.projects) + len(rec.dropped), "eligible": len(ranked),
                    "handing_over_before": len(early),
+                   "nearby_other_configurations": len(other_config),
                    "comparable": sum(1 for p in ranked if p.label == "COMPARABLE"), "partial": sum(1 for p in ranked if p.label == "PARTIAL"),
                    "thin": sum(1 for p in ranked if p.label == "THIN"),
                    "unverified": sum(1 for p in ranked if p.label == "UNVERIFIED")},
@@ -418,6 +442,15 @@ def list_payload(rec: ScanRecord, own: OwnProject, meta: dict) -> dict[str, Any]
         # subject does. A rep still wants to see them; they are just not what the
         # subject is competing against for the same buyer.
         "handing_over_before": [_timed(card(p, i + 1), p, own) for i, p in enumerate(early)],
+        # Full cards, no rank and no score: they are the neighbourhood, not the ranking.
+        # Same shape as `handing_over_before[]` so the portal can render them the same way.
+        "nearby_other_configurations": [dict(card(p, 0), rank=None) for p in other_config],
+        "nearby_other_configurations_note": (
+            f"{len(other_config)} project{'s' if len(other_config) != 1 else ''} within "
+            f"{rec.radius_km} km sell no "
+            f"{' or '.join(str(b) for b in own.configurations)} BHK, so they are not "
+            f"comparable to {own.name} and are not ranked. Shown because they are the "
+            f"neighbourhood." if other_config else None),
         # The comparable fact set per project, computed once here so a compare can run
         # months later with no run in memory. The cards cannot stand in for these: they
         # carry no amenities at all, no rera phase list, and two of structure's seven

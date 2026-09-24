@@ -21,12 +21,23 @@ def test_an_estimate_admits_a_call_and_the_provider_settles_it():
     onto a run the provider billed at 35,426, and 8 candidates were skipped for
     budget the run still had."""
     b = TokenBudget(100_000)
-    assert b.take(400_000)                 # guess: 100,000 tokens, admitted
-    assert b.reserved == 100_000 and b.used == 0
+    assert b.take(320_000)                 # guess: 80,000 tokens, under the admission line
+    assert b.reserved == 80_000 and b.used == 0
     b.observe(24_000)                      # what the provider actually charged
     assert b.used == 24_000 and b.reserved == 0
     assert b.take(200_000)                 # room again, because the guess was wrong
     assert not b.stopped
+
+
+def test_new_work_is_admitted_below_the_ceiling_not_at_it():
+    """`used` finished at 154,160 against a 150,000 ceiling on 24 Sep, because the
+    count only arrives when the call returns and `observe` also brings in resolve and
+    narrate, which nothing reserved. The admission line sits a batch lower."""
+    b = TokenBudget(100_000)
+    assert b.admit_below < b.max_tokens
+    b.observe(b.admit_below)
+    assert not b.take(4_000), "nothing new once the admission line is reached"
+    assert b.used < b.max_tokens
 
 
 def test_the_ceiling_still_stops_a_runaway():
@@ -183,13 +194,20 @@ def test_a_failed_run_still_reports_what_it_spent():
     from app import service
 
     class _Fetcher:
+        # `calls` is every request; `outbound` is the ones that actually left. A cache
+        # hit is a call that cost nothing, and billing the difference is what reported
+        # Rs 209.22 for a run that made no network calls at all.
         calls = ["https://places.googleapis.com/v1/places:searchText",
-                 "https://api.tavily.com/search", "https://example.com/a"]
+                 "https://api.tavily.com/search", "https://example.com/a",
+                 "https://api.tavily.com/search"]
+        outbound = ["https://places.googleapis.com/v1/places:searchText",
+                    "https://api.tavily.com/search", "https://example.com/a"]
+        hits = 1
         refused: dict = {}
 
     meta = service._partial_meta(_Fetcher(), TokenBudget(100))
     assert meta["places_calls"] == 1 and meta["searches"] == 1
-    assert meta["http_calls"] == 3
+    assert meta["http_calls"] == 4 and meta["cache_hits"] == 1
     assert meta["token_budget"]["max_tokens"] == 100
 
 
