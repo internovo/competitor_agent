@@ -196,13 +196,16 @@ class NodeSpans(AsyncCallbackHandler):
         return (counter.input_tokens, counter.output_tokens) if counter else (0, 0)
 
 
-# Roughly how many characters make a token across the models this runs on. Used only
-# to keep a scan inside a ceiling, so being a little pessimistic is the safe direction.
+# Characters per token, used ONLY to guess the size of a call before making it. It is
+# a poor guess -- on 23 Sep it read 150,000 tokens onto a run the provider billed at
+# 35,426 -- so it is no longer what the ceiling is enforced against. `observe` replaces
+# the guess with what the provider actually reported as soon as a call returns, and the
+# estimate only ever decides whether to attempt the next one.
 CHARS_PER_TOKEN = 4
 
 
 class TokenBudget:
-    """A hard ceiling on what one scan may send to a model.
+    """A hard ceiling on what one scan may send to a model, enforced on real usage.
 
     Groq's free tier allows 200,000 tokens a day. One Kandivali West scan wanted about
     640,000 and died in `extract` with 17 of 60 candidates researched -- and because it
@@ -210,23 +213,38 @@ class TokenBudget:
     deterministic field already read survives, the table is published, and the run says
     how many candidates went unasked.
 
+    Charging a character estimate alone was too cautious in the other direction: it
+    skipped 8 candidates on a run that had used a quarter of its budget, and one of them
+    was a published row whose RERA number then went unasked. So the estimate admits a
+    call and the provider's own count settles it.
+
     Shared across the extract fan-out through the same dict that carries the fetcher,
     so the ceiling is per scan rather than per candidate.
     """
 
     def __init__(self, max_tokens: int):
         self.max_tokens = max_tokens
-        self.used = 0
+        self.used = 0          # provider-reported once anything has been observed
+        self.reserved = 0      # estimate for calls in flight, cleared by `observe`
         self.skipped = 0
 
     def take(self, chars: int) -> bool:
         want = max(1, chars // CHARS_PER_TOKEN)
-        if self.max_tokens and self.used + want > self.max_tokens:
+        if self.max_tokens and self.used + self.reserved + want > self.max_tokens:
             self.skipped += 1
             return False
-        self.used += want
+        self.reserved += want
         return True
+
+    def observe(self, actual_tokens: int) -> None:
+        """What the provider says has been spent, across every stage, so far."""
+        self.used = max(self.used, actual_tokens)
+        self.reserved = 0
 
     @property
     def stopped(self) -> bool:
         return self.skipped > 0
+
+    def body(self) -> dict:
+        return {"max_tokens": self.max_tokens, "used": self.used,
+                "candidates_not_asked": self.skipped}

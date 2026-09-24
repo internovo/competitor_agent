@@ -16,11 +16,23 @@ from app.models.schema import Candidate, Page, Project
 
 # --- B5: a hard ceiling on what one scan may send ---------------------------
 
-def test_a_budget_lets_work_through_until_it_is_spent():
-    b = TokenBudget(100)
-    assert b.take(200) and b.used == 50          # 4 chars to a token
-    assert b.take(200) and b.used == 100
-    assert not b.take(4)
+def test_an_estimate_admits_a_call_and_the_provider_settles_it():
+    """The estimate is a guess for admission only. On 23 Sep it read 150,000 tokens
+    onto a run the provider billed at 35,426, and 8 candidates were skipped for
+    budget the run still had."""
+    b = TokenBudget(100_000)
+    assert b.take(400_000)                 # guess: 100,000 tokens, admitted
+    assert b.reserved == 100_000 and b.used == 0
+    b.observe(24_000)                      # what the provider actually charged
+    assert b.used == 24_000 and b.reserved == 0
+    assert b.take(200_000)                 # room again, because the guess was wrong
+    assert not b.stopped
+
+
+def test_the_ceiling_still_stops_a_runaway():
+    b = TokenBudget(100_000)
+    b.observe(99_000)
+    assert not b.take(40_000)
     assert b.stopped and b.skipped == 1
 
 
@@ -30,11 +42,18 @@ def test_a_budget_of_zero_is_no_budget_at_all():
     assert b.take(10_000_000) and not b.stopped
 
 
-def test_refusing_a_candidate_does_not_lose_what_it_already_read():
-    b = TokenBudget(1)
-    b.take(4)
-    assert not b.take(40_000)
-    assert b.used == 1                            # the refused page is not billed
+def test_observed_usage_never_walks_backwards():
+    """The fan-out settles out of order; a later, smaller reading must not credit back."""
+    b = TokenBudget(100_000)
+    b.observe(50_000)
+    b.observe(10_000)
+    assert b.used == 50_000
+
+
+def test_the_budget_is_reported_for_the_portal():
+    b = TokenBudget(150_000)
+    b.observe(1_234)
+    assert b.body() == {"max_tokens": 150_000, "used": 1_234, "candidates_not_asked": 0}
 
 
 # --- B5: what is worth waking a model for -----------------------------------
@@ -68,8 +87,13 @@ class _Pages:
 
 
 class _CountingLLM:
+    """Stands in for the real client, counters included -- the budget settles against
+    them after every candidate."""
+
     def __init__(self):
         self.asked = []
+        self.input_tokens = 0
+        self.output_tokens = 0
 
     async def extract_facts(self, page, project, locality, wanted=None):
         from app.models.schema import ExtractedFacts
@@ -113,7 +137,7 @@ def test_a_page_that_could_still_fill_a_scored_field_is_sent(own):
 def test_a_spent_budget_stops_the_asking_and_keeps_the_reading(own):
     """The scan that died on Groq kept nothing. A scan that stops asking keeps it all."""
     llm, budget = _CountingLLM(), TokenBudget(1)
-    budget.take(4)
+    budget.observe(1)
     p = _extract(own, Project(id="p", name="Nowhere Tower"), "Nowhere Tower, Malad West. 2 BHK.",
                  llm=llm, budget=budget)
     assert llm.asked == []

@@ -132,6 +132,29 @@ def slug(s: str) -> str:
 _SOCIETY = re.compile(r"\b(chsl?|co[\s\-]?op(?:erative)?\s+housing\s+society|sahakari)\b", re.I)
 
 
+# A search result whose title describes a PAGE, not a building. Portal titles become
+# candidate names, and two got into a live Malad West table on 23 Sep: a comparison
+# page, "Priyam Residency vs Silicon Park 3 - Compare Price Location", which was the
+# subject itself and scored 100%, and a price filter, "75 Lakhs to 1 Crore".
+#
+# Only phrases a developer would never put in a building's name are listed, and the
+# list got shorter after it was measured. "apartments in", "flats in" and "projects in"
+# were in it and threw away four real buildings -- "Jaswanti Jewel | Apartments In
+# Kandivali West", "La Serena", "Shreeji Skyrise", "Royal Lagoon" -- because that is how
+# portals suffix a perfectly good project title. "vs" needs whitespace on both sides for
+# the same reason: "VS DEVELOPERS" is a promoter, not a comparison.
+_PAGE_TITLE = re.compile(
+    r"\s+v/?s\.?\s+|\bversus\s|\bcompare\b|\bcomparison\b"
+    r"|\b\d+\s*(?:lakhs?|crores?|cr)\s+to\b|\bto\s+\d+\s*(?:lakhs?|crores?|cr)\b"
+    r"|\bfor\s+(?:sale|rent|resale)\b|\bproperty\s+rates?\b|\bprice\s+trends?\b",
+    re.IGNORECASE)
+
+
+def looks_like_a_page(name: str) -> bool:
+    """True when the name is a portal page's title rather than a project's name."""
+    return bool(_PAGE_TITLE.search(name or ""))
+
+
 def looks_like_society(name: str) -> bool:
     """A registered co-operative housing society, not a project anyone is selling."""
     return bool(_SOCIETY.search(name or ""))
